@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>i秘書 - 專屬串接碼領取中心</title>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <style>
+        body {
+            background-color: #0D1B2A; /* 深藍色底 */
+            color: #FFFFFF;
+            font-family: 'Helvetica Neue', Helvetica, Arial, '微軟正黑體', sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .header-icon {
+            font-size: 50px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .card {
+            background-color: #1B263B;
+            border-radius: 12px;
+            padding: 25px 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            margin-top: 20px;
+        }
+        .greeting {
+            font-size: 1.1em;
+            color: #A8DADC;
+            margin-bottom: 15px;
+        }
+        .uid-box {
+            background-color: #E0E1DD;
+            color: #0D1B2A;
+            padding: 15px 10px;
+            font-family: monospace;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: 20px 0;
+            word-break: break-all;
+            border: 2px dashed #415A77;
+        }
+        .copy-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .copy-btn:active {
+            background-color: #45a049;
+        }
+        .instructions {
+            text-align: left;
+            margin-top: 25px;
+            font-size: 0.9em;
+            color: #E0E1DD;
+            line-height: 1.6;
+            background-color: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .loading {
+            color: #A8DADC;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-icon">🛡️</div>
+    <h2>i秘書 服務開通中心</h2>
+    
+    <div class="card">
+        <div id="greetingMsg" class="greeting">讀取使用者資料中... <span class="loading">⏳</span></div>
+        <div style="font-size: 0.9em; color: #778DA9;">您的專屬系統串接碼為：</div>
+        
+        <div id="uidDisplay" class="uid-box">讀取中...</div>
+        
+        <button id="copyBtn" class="copy-btn" onclick="copyUID()">點我複製串接碼</button>
+    </div>
+
+    <div class="instructions">
+        <strong>📌 下一步怎麼做？</strong><br>
+        1. 點擊上方綠色按鈕複製您的串接碼。<br>
+        2. 將「串接碼」連同「欲開通日期」透過 Email 寄給管理員：<br>
+        📧 <strong>gary172.leejpa@gmail.com</strong><br>
+        3. 系統將於 24 小時內為您完成開通。
+    </div>
+</div>
+
+<script>
+    // ⚠️ 替換成您在 LINE Developers 後台申請的 LIFF ID
+    const myLiffId = "2009535679"; 
+    let currentUID = "";
+
+    // 初始化 LIFF
+    liff.init({ liffId: myLiffId })
+        .then(() => {
+            if (!liff.isLoggedIn()) {
+                // 如果是在外部瀏覽器打開，強制要求登入 LINE
+                liff.login();
+            } else {
+                // 成功登入後，抓取使用者 Profile
+                liff.getProfile().then(profile => {
+                    document.getElementById('greetingMsg').innerHTML = `親愛的 <strong>${profile.displayName}</strong> 您好：`;
+                    currentUID = profile.userId;
+                    document.getElementById('uidDisplay').innerText = currentUID;
+                }).catch(err => {
+                    document.getElementById('uidDisplay').innerText = "讀取失敗，請重新開啟";
+                    console.error('getProfile failed', err);
+                });
+            }
+        })
+        .catch((err) => {
+            document.getElementById('uidDisplay').innerText = "系統初始化失敗";
+            console.error('LIFF init failed', err);
+        });
+
+    // 複製到剪貼簿功能
+    function copyUID() {
+        if (!currentUID) return;
+        
+        navigator.clipboard.writeText(currentUID).then(() => {
+            const btn = document.getElementById('copyBtn');
+            btn.innerText = "✅ 複製成功！請至信箱貼上";
+            btn.style.backgroundColor = "#1E90FF"; // 變色給予回饋
+            
+            // 3秒後變回原樣
+            setTimeout(() => {
+                btn.innerText = "點我複製串接碼";
+                btn.style.backgroundColor = "#4CAF50";
+            }, 3000);
+        }).catch(err => {
+            alert("複製失敗，請手動選取複製");
+        });
+    }
+</script>
+
+</body>
+</html>
