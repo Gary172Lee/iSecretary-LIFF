@@ -6,10 +6,10 @@
     
     <meta http-equiv="Content-Security-Policy" 
           content="default-src 'self'; 
-                   script-src 'self' https://static.line-scdn.net; 
+                   script-src 'self' 'unsafe-inline' https://static.line-scdn.net; 
                    style-src 'self' 'unsafe-inline'; 
-                   img-src 'self' data:; 
-                   connect-src 'self' https://api.line.me https://access.line.me;">
+                   img-src 'self' data: https://profile.line-scdn.net; 
+                   connect-src 'self' https://*.line.me https://*.line-apps.com https://*.line-scdn.net;">
 
     <title>i秘書 - 專屬串接碼領取中心</title>
     
@@ -89,15 +89,16 @@
     <div class="instructions">
         <strong>📌 下一步開通流程：</strong><br>
         1. 點擊上方綠色按鈕複製串接碼。<br>
-        2. 將「串接碼」連同「欲開通日期」透過 Email 寄送。<br>
+        2. 將「串接碼」貼入信件中並寄送。<br>
         📧 <strong>gary172.leejpa@gmail.com</strong><br>
         3. 信件主旨請註明：<strong>開通 i秘書</strong>
     </div>
 </div>
 
 <script>
-    // ⚠️ 這裡請填入您的 LIFF ID
-    const myLiffId = "您的_LIFF_ID_填在這裡"; 
+    // ⚠️ 請務必將下方的字串替換為您專屬的 LIFF ID (例如: 2006xxxxxx-xxxxxxx)
+    const myLiffId = "2009535679-qOnxrVXQ"; 
+    
     let currentUID = "";
 
     liff.init({ liffId: myLiffId })
@@ -106,17 +107,18 @@
                 liff.login();
             } else {
                 liff.getProfile().then(profile => {
-                    // 使用 textContent 替代 innerHTML 以防禦注入攻擊
                     document.getElementById('greetingMsg').textContent = `親愛的 ${profile.displayName} 您好：`;
                     currentUID = profile.userId;
                     document.getElementById('uidDisplay').textContent = currentUID;
                 }).catch(err => {
                     document.getElementById('uidDisplay').textContent = "讀取失敗";
+                    console.error("取得 Profile 失敗:", err);
                 });
             }
         })
         .catch((err) => {
             document.getElementById('uidDisplay').textContent = "系統初始化失敗";
+            console.error("LIFF 初始化失敗:", err);
         });
 
     function copyUID() {
