@@ -13,7 +13,7 @@
         .target-card-web { background: rgba(0,0,0,0.1); padding: 15px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid #4CAF50; }
         .target-title-web { color: #FFFFFF; font-size: 1.2em; font-weight: bold; margin-bottom: 10px; display: flex; justify-content: space-between; }
         .target-price-web { font-size: 1.1em; }
-        details { background: rgba(255,255,255,0.03); border-radius: 8px; margin-top: 10px; cursor: pointer; transition: background-color 0.3s; }
+        details { background: rgba(255,255,255,0.03); border-radius: 8px; margin-top: 10px; cursor: pointer; transition: background-color 0.3s; scroll-margin-top: 20px; }
         details:hover { background: rgba(255,255,255,0.06); }
         summary { font-weight: bold; color: #FFFFFF; padding: 12px; font-size: 0.95em; outline: none; border-radius: 8px; list-style-position: inside; }
         details[open] summary { border-bottom: 1px dashed #415A77; border-radius: 8px 8px 0 0; }
@@ -26,15 +26,15 @@
 </head>
 <body>
     <div class='container'>
-        <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-23 16:48</p></div>
-<div class='target-card-web'>
+        <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-23 16:55</p></div>
+<div class='target-card-web' id='CTBB-card'>
 <div class='target-title-web'><span>📌 CTBB</span><span class='target-price-web'>18.72 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='CTBB-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='CTBB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -43,7 +43,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -55,7 +55,7 @@ MACD Histogram: -0.0888
 Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
-<details>
+<details id='CTBB-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -74,7 +74,7 @@ today_close: 18.72
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 43.24
 macd_hist: -0.0888
 bb_status: 溫和下跌 (區間下方)
@@ -84,14 +84,14 @@ bb_status: 溫和下跌 (區間下方)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='BHFAL-card'>
 <div class='target-title-web'><span>📌 BHFAL</span><span class='target-price-web'>16.43 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='BHFAL-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='BHFAL-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -100,7 +100,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -112,7 +112,7 @@ MACD Histogram: -0.0980
 Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
-<details>
+<details id='BHFAL-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -131,7 +131,7 @@ today_close: 16.43
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 30.69
 macd_hist: -0.0980
 bb_status: 溫和下跌 (區間下方)
@@ -141,14 +141,14 @@ bb_status: 溫和下跌 (區間下方)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='AXS-PE-card'>
 <div class='target-title-web'><span>📌 AXS-PE</span><span class='target-price-web'>20.15 (Ex-Date: 2026-03-31)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='AXS-PE-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='AXS-PE-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -157,7 +157,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -169,7 +169,7 @@ MACD Histogram: -0.0099
 Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
-<details>
+<details id='AXS-PE-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -188,7 +188,7 @@ today_close: 20.15
 ex_dividend_date: 2026-03-31
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 42.46
 macd_hist: -0.0099
 bb_status: 溫和下跌 (區間下方)
@@ -198,14 +198,14 @@ bb_status: 溫和下跌 (區間下方)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='SOJD-card'>
 <div class='target-title-web'><span>📌 SOJD</span><span class='target-price-web'>19.65 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='SOJD-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='SOJD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -214,7 +214,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -226,7 +226,7 @@ MACD Histogram: -0.1352
 Bollinger Bands Status: 強勢突破下軌 (弱勢)
   </div>
 </details>
-<details>
+<details id='SOJD-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -245,7 +245,7 @@ today_close: 19.65
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 18.05
 macd_hist: -0.1352
 bb_status: 強勢突破下軌 (弱勢)
@@ -255,14 +255,14 @@ bb_status: 強勢突破下軌 (弱勢)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='QVCD-card'>
 <div class='target-title-web'><span>📌 QVCD</span><span class='target-price-web'>10.50 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='QVCD-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='QVCD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -271,7 +271,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -283,7 +283,7 @@ MACD Histogram: 0.0942
 Bollinger Bands Status: 溫和上漲 (區間上方)
   </div>
 </details>
-<details>
+<details id='QVCD-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -302,7 +302,7 @@ today_close: 10.50
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 79.84
 macd_hist: 0.0942
 bb_status: 溫和上漲 (區間上方)
@@ -312,14 +312,14 @@ bb_status: 溫和上漲 (區間上方)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='BEPH-card'>
 <div class='target-title-web'><span>📌 BEPH</span><span class='target-price-web'>14.80 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='BEPH-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='BEPH-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -328,7 +328,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -340,7 +340,7 @@ MACD Histogram: -0.0277
 Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
-<details>
+<details id='BEPH-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -359,7 +359,7 @@ today_close: 14.80
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 35.76
 macd_hist: -0.0277
 bb_status: 溫和下跌 (區間下方)
@@ -369,14 +369,14 @@ bb_status: 溫和下跌 (區間下方)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='UZD-card'>
 <div class='target-title-web'><span>📌 UZD</span><span class='target-price-web'>19.80 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='UZD-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='UZD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -385,7 +385,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -397,7 +397,7 @@ MACD Histogram: -0.1274
 Bollinger Bands Status: 強勢突破下軌 (弱勢)
   </div>
 </details>
-<details>
+<details id='UZD-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -416,7 +416,7 @@ today_close: 19.80
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 28.10
 macd_hist: -0.1274
 bb_status: 強勢突破下軌 (弱勢)
@@ -426,14 +426,14 @@ bb_status: 強勢突破下軌 (弱勢)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='MGR-card'>
 <div class='target-title-web'><span>📌 MGR</span><span class='target-price-web'>20.24 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='MGR-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='MGR-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -442,7 +442,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -454,7 +454,7 @@ MACD Histogram: -0.0412
 Bollinger Bands Status: 強勢突破下軌 (弱勢)
   </div>
 </details>
-<details>
+<details id='MGR-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -473,7 +473,7 @@ today_close: 20.24
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 26.98
 macd_hist: -0.0412
 bb_status: 強勢突破下軌 (弱勢)
@@ -483,14 +483,14 @@ bb_status: 強勢突破下軌 (弱勢)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='AFGC-card'>
 <div class='target-title-web'><span>📌 AFGC</span><span class='target-price-web'>18.25 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='AFGC-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='AFGC-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -499,7 +499,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -511,7 +511,7 @@ MACD Histogram: -0.0414
 Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
-<details>
+<details id='AFGC-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -530,7 +530,7 @@ today_close: 18.25
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 24.61
 macd_hist: -0.0414
 bb_status: 溫和下跌 (區間下方)
@@ -540,14 +540,14 @@ bb_status: 溫和下跌 (區間下方)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='ALL-PB-card'>
 <div class='target-title-web'><span>📌 ALL-PB</span><span class='target-price-web'>25.99 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='ALL-PB-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='ALL-PB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -556,7 +556,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -568,7 +568,7 @@ MACD Histogram: -0.0118
 Bollinger Bands Status: 強勢突破下軌 (弱勢)
   </div>
 </details>
-<details>
+<details id='ALL-PB-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -587,7 +587,7 @@ today_close: 25.99
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 40.65
 macd_hist: -0.0118
 bb_status: 強勢突破下軌 (弱勢)
@@ -597,14 +597,14 @@ bb_status: 強勢突破下軌 (弱勢)
   </div>
 </details>
 </div>
-<div class='target-card-web'>
+<div class='target-card-web' id='HWCPZ-card'>
 <div class='target-title-web'><span>📌 HWCPZ</span><span class='target-price-web'>21.82 (Ex-Date: N/A)</span></div>
 <div style='font-size:0.9em; color:#1E90FF; font-weight:bold; margin-bottom:10px;'>综合評分：N/A</div>
-<details>
+<details id='HWCPZ-analysis'>
   <summary>🧠 點我看深度動態分析 (JSON 讀取)</summary>
   <div class='folding-content ai-content-web'>今日未有符合標的之情報。</div>
 </details>
-<details>
+<details id='HWCPZ-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
 <b>=== 市場 Context ===</b>
@@ -613,7 +613,7 @@ S&P500 Close: 6506.48 (change: -1.51%)
 
 10Y Bond Close: 4.39bp (change: 11.00bp)
 
-VIX Close: 29.91 (change: 3.13)
+VIX Close: 29.85 (change: 3.07)
 
 
 <b>=== 技術指標 ===</b>
@@ -625,7 +625,7 @@ MACD Histogram: -0.1454
 Bollinger Bands Status: 強勢突破下軌 (弱勢)
   </div>
 </details>
-<details>
+<details id='HWCPZ-prompt'>
   <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
   <div class='folding-content'>
     <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是一位具備 IT 自動化思維的客戶「個人投資顧問」。
@@ -644,7 +644,7 @@ today_close: 21.82
 ex_dividend_date: N/A
 gspc_close: 6506.48 (change: -1.51%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 11.00bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 29.91 (change: 3.13) (市場Context: 市場波動率恐慌指數)
+vix_close: 29.85 (change: 3.07) (市場Context: 市場波動率恐慌指數)
 rsi_14: 23.47
 macd_hist: -0.1454
 bb_status: 強勢突破下軌 (弱勢)
@@ -655,4 +655,26 @@ bb_status: 強勢突破下軌 (弱勢)
 </details>
 </div>
 <div class='footer-web'>💡 本站僅顯示公開熱門標的。<br>欲客製化監控私人持股？歡迎訂閱：【i秘書】服務。<br>🤖 本頻道為自動發送，無回覆功能。<br>📧 聯絡信箱：gary172.leejpa@gmail.com</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var hash = window.location.hash;
+            if (hash) {
+                var targetElement = document.querySelector(hash);
+                if (targetElement && targetElement.tagName === 'DETAILS') {
+                    // 1. 強制展開該區塊
+                    targetElement.setAttribute('open', '');
+                    // 2. 稍微延遲後，平滑滾動到該區塊，並將其置於畫面中央
+                    setTimeout(function() {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        // 3. 加入短暫的高亮閃爍特效，引導用戶視線
+                        targetElement.style.transition = "background-color 0.8s";
+                        targetElement.style.backgroundColor = "rgba(30, 144, 255, 0.3)";
+                        setTimeout(() => { targetElement.style.backgroundColor = "transparent"; }, 1500);
+                    }, 300);
+                }
+            }
+        });
+    </script>
+    
     </div></body></html>
