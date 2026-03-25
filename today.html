@@ -6,6 +6,9 @@
     <title>i秘書 - 今日特別股深度情報</title>
     <style>
         body { background-color: #0D1B2A; color: #E0E1DD; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 20px; line-height: 1.6; margin: 0; }
+        /* 🌟 防護機制：預設隱藏主內容，顯示拒絕存取畫面 */
+        #main-content { display: none; }
+        #access-denied { display: block; text-align: center; margin-top: 100px; color: #FF5252; font-family: sans-serif; }
         .container { max-width: 700px; margin: 0 auto; background: #1B263B; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .header { text-align: center; border-bottom: 2px solid #415A77; padding-bottom: 15px; margin-bottom: 25px; }
         .header h2 { color: #A8DADC; margin: 0 0 5px 0; }
@@ -25,13 +28,20 @@
     </style>
 </head>
 <body>
-    <div class='container'>
-        <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-25 16:40</p></div>
+    
+    <div id='access-denied'>
+        <h2>🚫 拒絕存取</h2>
+        <p>本資料為專屬情報，請由「i秘書」或「美國特別股情報站」<br>的 LINE 機器人內點擊按鈕開啟。</p>
+    </div>
+    
+    <div id='main-content'>
+        <div class='container'>
+            <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-25 17:19</p></div>
 <div class='target-card-web' id='CTBB-card'>
 <div class='target-title-web'><span>📌 CTBB</span><span class='target-price-web'>18.92 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.02</span></span></div>
 <details id='CTBB-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，Qwest Corporation 6.5% 2056年到期票據 (CTBB) 的市場表現呈現波動。在3月23日，該票據價格上漲0.96%至18.90美元，為連續第三個交易日上漲。然而，截至3月24日的過去七天，CTBB票據整體下跌了2.13%。此外，其母公司Lumen Technologies在3月17日宣布了董事會領導層和高管角色的變動，並在3月24日被Fast Company評為全球最具創新力公司之一，這些事件可能對CTBB的長期前景產生間接影響。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='CTBB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -42,7 +52,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -72,7 +82,7 @@ target_name: CTBB
 today_close: 18.92
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 48.26
 macd_hist: -0.0440
 bb_status: 溫和下跌 (區間下方)
@@ -97,7 +107,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -127,7 +137,7 @@ target_name: BHFAL
 today_close: 16.60
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 37.06
 macd_hist: -0.0696
 bb_status: 溫和下跌 (區間下方)
@@ -141,7 +151,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 F-PB</span><span class='target-price-web'>20.62 <span style='font-size:0.85em; color:#999999;'>■ 0.00</span></span></div>
 <details id='F-PB-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，福特汽車（F-PB）公布了多項動態。公司宣布召回超過25.4萬輛SUV，涉及後視鏡頭軟體問題，以及召回約2.9萬輛F-150 Lightning電動車，原因是控制臂可能鬆脫。同時，福特發布了2026年第一季度財報電話會議的詳情。營運長Kumar Galhotra則表示伊朗戰爭目前未影響供應鏈，且Novelis鋁廠預計在年中恢復全面生產。此外，福特與美國職業棒球大聯盟（MLB）建立了多年獨家合作夥伴關係，並計劃投資20億美元將肯塔基州的BlueOval SK電池廠改造為生產儲能用鋰鐵磷電池。</div>
+  <div class='folding-content ai-content-web'>福特汽車近期動態顯示，該公司正調整其電動車策略，包括於3月24日停止生產F-150 Lightning電動皮卡，並於3月23日宣布BlueOval SK延遲肯塔基電池廠裁員，同時縮減整體電動車生產計劃。同日，福特也宣布將於4月29日發布2026年第一季財報。在其他業務方面，福特於3月24日宣布將召回美國境內逾25.4萬輛SUV，以解決軟體問題。此外，公司於3月20日宣布將導入新AI技術以擴大其Ford Pro商用車部門，並於3月23日與美國職棒大聯盟達成獨家合作夥伴關係。</div>
 </details>
 <details id='F-PB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -152,7 +162,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -182,7 +192,7 @@ target_name: F-PB
 today_close: 20.62
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 50.00
 macd_hist: 0.0000
 bb_status: 資料累積中 (上市天數不足)
@@ -207,7 +217,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -237,7 +247,7 @@ target_name: F-PC
 today_close: 20.24
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 50.00
 macd_hist: 0.0000
 bb_status: 資料累積中 (上市天數不足)
@@ -251,7 +261,7 @@ bb_status: 資料累積中 (上市天數不足)
 <div class='target-title-web'><span>📌 AXS-PE</span><span class='target-price-web'>20.17 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.05</span></span></div>
 <details id='AXS-PE-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>AXIS Capital Holdings Limited (AXS-E的母公司) 近期公布了強勁的2025年第四季度財報，錄得顯著的淨利潤、營運收入和承保收入增長，以及每股稀釋普通股帳面價值的提升。隨後公布的財報電話會議記錄進一步強調了公司強勁的財務表現，包括17%的普通股股東權益報酬率及創紀錄的總承保保費。此外，AXIS Capital將其循環信用額度縮減至2.5億美元並延長至2028年。同時，AXS-E系列優先股也宣布了將於2026年3月31日除息，預計派發每股0.3438美元的季度股息，並於4月15日支付。這些事件共同描繪了公司穩健的財務狀況和優先股持續的股息派發。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='AXS-PE-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -262,7 +272,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -292,7 +302,7 @@ target_name: AXS-PE
 today_close: 20.17
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 44.15
 macd_hist: -0.0016
 bb_status: 溫和下跌 (區間下方)
@@ -306,7 +316,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 SOJD</span><span class='target-price-web'>19.58 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.09</span></span></div>
 <details id='SOJD-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，Southern Company及其子公司有多項重要動態。公司於3月19日宣布發行13億美元的次級債券，可能對公司槓桿產生影響。同日，一份SEC文件顯示公司內部人士出售了價值超過120萬美元的股票。在積極面，Southern Company的子公司Georgia Power於3月24日簽署了公司史上最大的分佈式太陽能採購合約，以推進清潔能源目標。此外，公司於3月23日提交了2026年度股東大會的初步委託書，並於3月24日宣布將在4月30日發布2026年第一季度財報。</div>
+  <div class='folding-content ai-content-web'>Southern Company（SOJD的發行公司）近期發布了數項重要訊息。財務方面，公司宣布計劃發行13億美元的次級債券，其6.00%的重置利率高於SOJD現有票息。另一方面，南方公司公布2025年第四季度及全年調整後每股盈餘表現強勁，全年達到指導區間上限。受此影響，Evercore ISI和TD Cowen等機構上調了該公司的評級與目標價。此外，美國核能管理委員會批准了一項新的核反應爐設計，這被視為可能有利於南方公司未來的能源發展策略。</div>
 </details>
 <details id='SOJD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -317,7 +327,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -347,7 +357,7 @@ target_name: SOJD
 today_close: 19.58
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 17.97
 macd_hist: -0.1363
 bb_status: 溫和下跌 (區間下方)
@@ -361,7 +371,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 QVCD</span><span class='target-price-web'>10.39 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.01</span></span></div>
 <details id='QVCD-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，QVCD的母公司QVC Group公布了多項動態。QVC Group宣布延遲發布其2025年第四季度及全年財報，並將延遲提交其Form 10-K，同時報告了公司內部人股權交易。此外，有報導指出QVC Group面臨66億美元的債務危機，並提到儘管與債權人進行談判，破產的可能性日益增加。針對QVCD本身，其價格在3月20日下跌後，前兩週累積上漲16.15%，並在截至3月25日的七天內實現2.82%的漲幅。同時，QVCD也於3月23日宣布了每股0.40美元的股息資訊。</div>
+  <div class='folding-content ai-content-web'>近期，QVC集團面臨嚴峻的財務困境，其債務危機不斷加劇，據報導稱破產可能性增加，公司背負66億美元債務且債務規模已超出其總價值。同時，有分析指出QVC的衰退是2026年『傳統品牌零售業大崩盤』的一部分，並傳出潛在裁員消息。其子公司HSN的相關新聞發布日，QVCGA股價曾顯著下跌37.76%。此外，集團高階主管近期進行了常規的股權獎勵相關申報。</div>
 </details>
 <details id='QVCD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -372,7 +382,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -402,7 +412,7 @@ target_name: QVCD
 today_close: 10.39
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 74.71
 macd_hist: 0.0249
 bb_status: 溫和上漲 (區間上方)
@@ -416,7 +426,7 @@ bb_status: 溫和上漲 (區間上方)
 <div class='target-title-web'><span>📌 BEPH</span><span class='target-price-web'>14.90 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.02</span></span></div>
 <details id='BEPH-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，BEPH的母公司Brookfield Corporation向SEC提交了2025財年40-F年度報告。報告顯示，截至2025年12月31日財年，該公司錄得創紀錄的可分配收益，並宣布將股息提高17%，同時維持穩健的資本狀況。此報告反映了Brookfield整體企業的財務表現和戰略方向。</div>
+  <div class='folding-content ai-content-web'>近期，BEPH 債券的擔保實體 Brookfield Renewable Partners L.P. (BEP) 已於 2026 年 3 月 19 日完成其 2025 財政年度的年度報告提交，包括向美國 SEC 和加拿大監管機構提交 Form 20-F 報告。此舉提升了該實體的財務透明度。</div>
 </details>
 <details id='BEPH-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -427,7 +437,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -457,7 +467,7 @@ target_name: BEPH
 today_close: 14.90
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 42.49
 macd_hist: -0.0133
 bb_status: 溫和下跌 (區間下方)
@@ -471,7 +481,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 UZD</span><span class='target-price-web'>20.29 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.12</span></span></div>
 <details id='UZD-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>在 2026 年 3 月 12 日至 3 月 25 日期間，Array Digital Infrastructure, Inc. 公布了多項企業動態。公司於 3 月 24 日批准了 2026 年度激勵計畫，該計畫將高階主管及員工的獎金與調整後營收、OIBDA 等公司績效指標掛鉤，旨在激勵員工實現業務目標。此外，3 月 18 日的 Form 4 內部人交易報告顯示，總裁兼執行長 Anthony J. Carlson 獲授價值約 28 萬美元的股票，被解讀為內部人對公司的正面信心。更早於 3 月 13 日，公司提交了 2026 年度股東大會的初步代理聲明，內容涵蓋董事選舉、會計師事務所批准及高階主管免責修正案等治理事項。</div>
+  <div class='folding-content ai-content-web'>Array Digital Infrastructure, Inc.於2026年3月24日宣布，已批准其2026年度激勵計畫。此計畫將主管及員工獎金與公司績效指標掛鉤，包括調整後營收及營運收入等，相關細節已透過美國證券交易委員會（SEC）文件揭露。</div>
 </details>
 <details id='UZD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -482,7 +492,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -512,7 +522,7 @@ target_name: UZD
 today_close: 20.29
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 44.01
 macd_hist: -0.0813
 bb_status: 溫和下跌 (區間下方)
@@ -526,7 +536,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 MGR</span><span class='target-price-web'>20.26 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.01</span></span></div>
 <details id='MGR-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，多家機構如Millennium Management LLC和Goodman Financial Corp分別於2025年第三及第四季度減持了在Affiliated Managers Group的股份。此外，公司內部高層，包括營運長和法務長，也在2026年3月初出售了部分持股。Affiliated Managers Group並於2026年3月19日提交了涵蓋2025財政年度的年度10-K報告，提供了詳細的財務概況。</div>
+  <div class='folding-content ai-content-web'>近期，Affiliated Managers Group (AMG) 公佈了2025年第四季度業績，儘管每股盈餘超出預期，但營收未達標。同時有報導指出，部分機構投資者減持了AMG股份，且營運長亦有內部人賣股行為。此外，廣泛的債券市場也面臨壓力，主因是市場對利率預期轉向「長期維持高位」，導致前端公債殖利率上升，加上地緣政治緊張局勢，均對固定收益市場造成影響。</div>
 </details>
 <details id='MGR-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -537,7 +547,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -567,7 +577,7 @@ target_name: MGR
 today_close: 20.26
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 28.15
 macd_hist: -0.0555
 bb_status: 溫和下跌 (區間下方)
@@ -581,7 +591,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 AFGC</span><span class='target-price-web'>18.24 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.01</span></span></div>
 <details id='AFGC-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>AFGC近期動態顯示，其所屬的美國金融集團（American Financial Group Inc.）旗下一家保險單位，於2026年3月24日在加州一場污染保險糾紛案中，獲得了聯邦法官的有利裁決。此為該標的在指定期間內唯一的公開重大新聞事件。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='AFGC-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -592,7 +602,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -622,7 +632,7 @@ target_name: AFGC
 today_close: 18.24
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 25.00
 macd_hist: -0.0404
 bb_status: 溫和下跌 (區間下方)
@@ -636,7 +646,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 ALL-PB</span><span class='target-price-web'>26.09 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.01</span></span></div>
 <details id='ALL-PB-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>在2026年3月12日至3月25日期間，ALL-B (Allstate Corp. 5.10% Fixed-To-Floating Rate Sub Debentures due 1/15/2053) 的主要動態包括：AM Best於3月21日將The Allstate Corporation的長期發行人信用評級從「a」下調至「a-」，但展望穩定；隨後於3月24日確認了Allstate Insurance Group成員的A+財務實力評級和「aa」長期發行人信用評級，展望亦穩定。Allstate報告2026年2月預估稅前巨災損失為1.4億美元，1月和2月合計為3.15億美元。此外，公司宣佈ALL-B的季度股息將下調至每股0.4437美元，並於4月15日支付。Allstate執行長也申報了員工股票選擇權的間接贈與。</div>
+  <div class='folding-content ai-content-web'>在2026年3月20日，針對ALL-PB的相關發行主體Allstate Corporation及其主要子公司，信用評級機構AM Best確認其財務實力評級為A+（優異），並將長期發行人信用評級維持在「a」級，展望為穩定。此評級的確認反映了Allstate Corporation穩健的財務健康狀況，顯示其財務體質良好。</div>
 </details>
 <details id='ALL-PB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -647,7 +657,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -677,7 +687,7 @@ target_name: ALL-PB
 today_close: 26.09
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 47.34
 macd_hist: -0.0088
 bb_status: 溫和下跌 (區間下方)
@@ -691,7 +701,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 HWCPZ</span><span class='target-price-web'>21.71 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.31</span></span></div>
 <details id='HWCPZ-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>Hancock Whitney Corporation (HWCPZ) 在2026年3月12日至3月25日期間有多項動態。公司於3月17日提交了DEF 14A代理聲明與年度報告，揭示2025年強勁業績，包括7%的每股收益成長、淨利息收益率改善、12%的費用收入成長，以及季度股息增至每股0.50美元和約5%的股票回購。3月21日，Zacks Investment Research建議「逢低買入」。公司也在3月24日宣布將於4月21日發布2026年第一季度財報並召開電話會議。同日，Murphy Middleton Hinkle & Parker Inc.被報導於2025年第四季度增持該公司股份，分析師普遍維持「買入」評級。</div>
+  <div class='folding-content ai-content-web'>Hancock Whitney Corporation宣布將於2026年4月21日市場收盤後公布2026年第一季財報，並將於同日舉行電話會議討論業績。此外，Murphy Middleton Hinkle & Parker Inc.在第四季度取得了Hancock Whitney Corporation的新部位，購買了17,181股，價值約109萬美元。</div>
 </details>
 <details id='HWCPZ-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -702,7 +712,7 @@ S&P500 Close: 6556.37 (change: -0.37%)
 
 10Y Bond Close: 4.39bp (change: 5.80bp)
 
-VIX Close: 24.97 (change: -1.98)
+VIX Close: 25.71 (change: -1.24)
 
 
 <b>=== 技術指標 ===</b>
@@ -732,7 +742,7 @@ target_name: HWCPZ
 today_close: 21.71
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 24.97 (change: -1.98) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.71 (change: -1.24) (市場Context: 市場波動率恐慌指數)
 rsi_14: 26.01
 macd_hist: -0.1508
 bb_status: 溫和下跌 (區間下方)
@@ -744,22 +754,42 @@ bb_status: 溫和下跌 (區間下方)
 </div>
 <div class='footer-web'>💡 本站僅顯示公開熱門標的。<br>欲客製化監控私人持股？歡迎訂閱：【i秘書】服務。<br>🤖 本頻道為自動發送，無回覆功能。<br>📧 聯絡信箱：gary172.leejpa@gmail.com</div>
 
+        </div>
+    </div> <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var hash = window.location.hash;
-            if (hash) {
-                var targetElement = document.querySelector(hash);
-                if (targetElement && targetElement.tagName === 'DETAILS') {
-                    targetElement.setAttribute('open', '');
-                    setTimeout(function() {
-                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        targetElement.style.transition = "background-color 0.8s";
-                        targetElement.style.backgroundColor = "rgba(30, 144, 255, 0.3)";
-                        setTimeout(() => { targetElement.style.backgroundColor = "transparent"; }, 1500);
-                    }, 300);
+            // 初始化 LIFF
+            liff.init({
+                liffId: "2009601567-8u1tCcO5"
+            }).then(() => {
+                // 檢查是否在 LINE 用戶端內開啟
+                if (liff.isInClient()) {
+                    // ✅ 驗證通過：隱藏拒絕畫面，顯示主要內容
+                    document.getElementById("access-denied").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                    
+                    // 處理點擊按鈕後要捲動到特定區塊的特效 (維持您原本的優良邏輯)
+                    var hash = window.location.hash;
+                    if (hash) {
+                        var targetElement = document.querySelector(hash);
+                        if (targetElement && targetElement.tagName === 'DETAILS') {
+                            targetElement.setAttribute('open', '');
+                            setTimeout(function() {
+                                targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                targetElement.style.transition = "background-color 0.8s";
+                                targetElement.style.backgroundColor = "rgba(30, 144, 255, 0.3)";
+                                setTimeout(() => { targetElement.style.backgroundColor = "transparent"; }, 1500);
+                            }, 300);
+                        }
+                    }
+                } else {
+                    // ❌ 驗證失敗：直接開瀏覽器，什麼都不做，讓畫面繼續顯示「拒絕存取」
                 }
-            }
+            }).catch((err) => {
+                console.error("LIFF 初始化失敗", err);
+                document.getElementById("access-denied").innerHTML = "<h2>⚠️ 系統異常</h2><p>無法驗證您的身分，請稍後再試或檢查網路連線。</p>";
+            });
         });
     </script>
     
-    </div></body></html>
+</body></html>
