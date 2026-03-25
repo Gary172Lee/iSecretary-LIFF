@@ -5,47 +5,59 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>i秘書 - 今日特別股深度情報</title>
     <style>
-        body { background-color: #0D1B2A; color: #E0E1DD; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 0; margin: 0; line-height: 1.6; }
-        #main-content, #access-denied { display: none; }
-        #loading-screen { display: block; text-align: center; margin-top: 100px; font-size: 1.2em; color: #A8DADC; }
-        .container { max-width: 700px; margin: 20px auto; background: #1B263B; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        body { background-color: #0D1B2A; color: #E0E1DD; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 20px; line-height: 1.6; margin: 0; }
+        .container { max-width: 700px; margin: 0 auto; background: #1B263B; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .header { text-align: center; border-bottom: 2px solid #415A77; padding-bottom: 15px; margin-bottom: 25px; }
         .header h2 { color: #A8DADC; margin: 0 0 5px 0; }
         .header p { color: #FFFFFF; font-size: 1.2em; font-weight: bold; margin: 10px 0 0 0; }
         .target-card-web { background: rgba(0,0,0,0.1); padding: 15px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid #4CAF50; }
         .target-title-web { color: #FFFFFF; font-size: 1.2em; font-weight: bold; margin-bottom: 10px; display: flex; justify-content: space-between; }
-        details { background: rgba(255,255,255,0.03); border-radius: 8px; margin-top: 10px; cursor: pointer; scroll-margin-top: 50px; }
+        .target-price-web { font-size: 1.1em; }
+        details { background: rgba(255,255,255,0.03); border-radius: 8px; margin-top: 10px; cursor: pointer; transition: background-color 0.3s; scroll-margin-top: 20px; }
+        details:hover { background: rgba(255,255,255,0.06); }
         summary { font-weight: bold; color: #FFFFFF; padding: 12px; font-size: 0.95em; outline: none; border-radius: 8px; list-style-position: inside; }
+        details[open] summary { border-bottom: 1px dashed #415A77; border-radius: 8px 8px 0 0; }
         .folding-content { padding: 15px; color: #A8DADC; font-size: 0.9em; }
         .ai-content-web { white-space: pre-wrap; color: #1E90FF; font-weight: bold; }
         .tech-data-web { white-space: pre-wrap; font-family: 'Courier New', monospace; color: #43A047; }
-        .prompt-data-web { white-space: pre-wrap; font-family: 'Courier New', monospace; color: #999999; border: 1px solid #415A77; padding: 10px; border-radius: 4px; background: rgba(0,0,0,0.1); user-select: text; }
+        .prompt-data-web { white-space: pre-wrap; font-family: 'Courier New', monospace; color: #999999; border: 1px solid #415A77; padding: 10px; border-radius: 4px; background: rgba(0,0,0,0.1); cursor: text; -webkit-user-select: text; user-select: text; }
         .footer-web { margin-top: 40px; font-size: 0.8em; color: #778DA9; text-align: center; border-top: 1px dashed #415A77; padding-top: 15px; }
-        #access-denied { text-align: center; margin-top: 100px; color: #FF5252; padding: 20px; }
     </style>
 </head>
 <body>
-    <div id='loading-screen'>🛡️ 身份安全驗證中...</div>
-    <div id='access-denied'>
-        <h2>🚫 拒絕存取</h2>
-        <p>本資料為專屬情報，請由「i秘書」或「美國特別股情報站」<br>的 LINE 機器人內點擊按鈕開啟。</p>
-    </div>
-    <div id='main-content'>
-        <div class='container'>
-            <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-25 17:57</p></div>
+    <div class='container'>
+        <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-25 18:07</p></div>
 <div class='target-card-web' id='CTBB-card'>
-<div class='target-title-web'><span>📌 CTBB</span><span>18.92 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.02</span></span></div>
-<details id='CTBB-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div></details>
-<details id='CTBB-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 CTBB</span><span class='target-price-web'>18.92 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.02</span></span></div>
+<details id='CTBB-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
+</details>
+<details id='CTBB-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 48.26
-MACD: -0.0440
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='CTBB-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.0440
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='CTBB-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 CTBB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -60,26 +72,47 @@ target_name: CTBB
 today_close: 18.92
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 48.26
 macd_hist: -0.0440
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='BHFAL-card'>
-<div class='target-title-web'><span>📌 BHFAL</span><span>16.60 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.06</span></span></div>
-<details id='BHFAL-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div></details>
-<details id='BHFAL-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 BHFAL</span><span class='target-price-web'>16.60 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.06</span></span></div>
+<details id='BHFAL-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
+</details>
+<details id='BHFAL-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 37.06
-MACD: -0.0696
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='BHFAL-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.0696
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='BHFAL-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 BHFAL 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -94,26 +127,47 @@ target_name: BHFAL
 today_close: 16.60
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 37.06
 macd_hist: -0.0696
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='F-PB-card'>
-<div class='target-title-web'><span>📌 F-PB</span><span>20.62 <span style='font-size:0.85em; color:#999999;'>■ 0.00</span></span></div>
-<details id='F-PB-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>福特汽車近期動態顯示，該公司正調整其電動車策略，包括於3月24日停止生產F-150 Lightning電動皮卡，並於3月23日宣布BlueOval SK延遲肯塔基電池廠裁員，同時縮減整體電動車生產計劃。同日，福特也宣布將於4月29日發布2026年第一季財報。在其他業務方面，福特於3月24日宣布將召回美國境內逾25.4萬輛SUV，以解決軟體問題。此外，公司於3月20日宣布將導入新AI技術以擴大其Ford Pro商用車部門，並於3月23日與美國職棒大聯盟達成獨家合作夥伴關係。</div></details>
-<details id='F-PB-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 F-PB</span><span class='target-price-web'>20.62 <span style='font-size:0.85em; color:#999999;'>■ 0.00</span></span></div>
+<details id='F-PB-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>福特汽車近期動態顯示，該公司正調整其電動車策略，包括於3月24日停止生產F-150 Lightning電動皮卡，並於3月23日宣布BlueOval SK延遲肯塔基電池廠裁員，同時縮減整體電動車生產計劃。同日，福特也宣布將於4月29日發布2026年第一季財報。在其他業務方面，福特於3月24日宣布將召回美國境內逾25.4萬輛SUV，以解決軟體問題。此外，公司於3月20日宣布將導入新AI技術以擴大其Ford Pro商用車部門，並於3月23日與美國職棒大聯盟達成獨家合作夥伴關係。</div>
+</details>
+<details id='F-PB-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 50.00
-MACD: 0.0000
-BB: 資料累積中 (上市天數不足)</div></details>
-<details id='F-PB-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: 0.0000
+
+Bollinger Bands Status: 資料累積中 (上市天數不足)
+  </div>
+</details>
+<details id='F-PB-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 F-PB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -128,26 +182,47 @@ target_name: F-PB
 today_close: 20.62
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 50.00
 macd_hist: 0.0000
 bb_status: 資料累積中 (上市天數不足)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='F-PC-card'>
-<div class='target-title-web'><span>📌 F-PC</span><span>20.24 <span style='font-size:0.85em; color:#999999;'>■ 0.00</span></span></div>
-<details id='F-PC-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>⏳ 系統尚未生成此標的的最新 AI 深度分析。</div></details>
-<details id='F-PC-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 F-PC</span><span class='target-price-web'>20.24 <span style='font-size:0.85em; color:#999999;'>■ 0.00</span></span></div>
+<details id='F-PC-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>⏳ 系統尚未生成此標的的最新 AI 深度分析。</div>
+</details>
+<details id='F-PC-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 50.00
-MACD: 0.0000
-BB: 資料累積中 (上市天數不足)</div></details>
-<details id='F-PC-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: 0.0000
+
+Bollinger Bands Status: 資料累積中 (上市天數不足)
+  </div>
+</details>
+<details id='F-PC-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 F-PC 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -162,26 +237,47 @@ target_name: F-PC
 today_close: 20.24
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 50.00
 macd_hist: 0.0000
 bb_status: 資料累積中 (上市天數不足)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='AXS-PE-card'>
-<div class='target-title-web'><span>📌 AXS-PE</span><span>20.17 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.05</span></span></div>
-<details id='AXS-PE-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div></details>
-<details id='AXS-PE-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 AXS-PE</span><span class='target-price-web'>20.17 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.05</span></span></div>
+<details id='AXS-PE-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
+</details>
+<details id='AXS-PE-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 44.15
-MACD: -0.0016
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='AXS-PE-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.0016
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='AXS-PE-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 AXS-PE 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -196,26 +292,47 @@ target_name: AXS-PE
 today_close: 20.17
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 44.15
 macd_hist: -0.0016
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='SOJD-card'>
-<div class='target-title-web'><span>📌 SOJD</span><span>19.58 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.09</span></span></div>
-<details id='SOJD-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>Southern Company（SOJD的發行公司）近期發布了數項重要訊息。財務方面，公司宣布計劃發行13億美元的次級債券，其6.00%的重置利率高於SOJD現有票息。另一方面，南方公司公布2025年第四季度及全年調整後每股盈餘表現強勁，全年達到指導區間上限。受此影響，Evercore ISI和TD Cowen等機構上調了該公司的評級與目標價。此外，美國核能管理委員會批准了一項新的核反應爐設計，這被視為可能有利於南方公司未來的能源發展策略。</div></details>
-<details id='SOJD-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 SOJD</span><span class='target-price-web'>19.58 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.09</span></span></div>
+<details id='SOJD-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>Southern Company（SOJD的發行公司）近期發布了數項重要訊息。財務方面，公司宣布計劃發行13億美元的次級債券，其6.00%的重置利率高於SOJD現有票息。另一方面，南方公司公布2025年第四季度及全年調整後每股盈餘表現強勁，全年達到指導區間上限。受此影響，Evercore ISI和TD Cowen等機構上調了該公司的評級與目標價。此外，美國核能管理委員會批准了一項新的核反應爐設計，這被視為可能有利於南方公司未來的能源發展策略。</div>
+</details>
+<details id='SOJD-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 17.97
-MACD: -0.1363
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='SOJD-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.1363
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='SOJD-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 SOJD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -230,26 +347,47 @@ target_name: SOJD
 today_close: 19.58
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 17.97
 macd_hist: -0.1363
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='QVCD-card'>
-<div class='target-title-web'><span>📌 QVCD</span><span>10.39 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.01</span></span></div>
-<details id='QVCD-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>近期，QVC集團面臨嚴峻的財務困境，其債務危機不斷加劇，據報導稱破產可能性增加，公司背負66億美元債務且債務規模已超出其總價值。同時，有分析指出QVC的衰退是2026年『傳統品牌零售業大崩盤』的一部分，並傳出潛在裁員消息。其子公司HSN的相關新聞發布日，QVCGA股價曾顯著下跌37.76%。此外，集團高階主管近期進行了常規的股權獎勵相關申報。</div></details>
-<details id='QVCD-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 QVCD</span><span class='target-price-web'>10.39 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.01</span></span></div>
+<details id='QVCD-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>近期，QVC集團面臨嚴峻的財務困境，其債務危機不斷加劇，據報導稱破產可能性增加，公司背負66億美元債務且債務規模已超出其總價值。同時，有分析指出QVC的衰退是2026年『傳統品牌零售業大崩盤』的一部分，並傳出潛在裁員消息。其子公司HSN的相關新聞發布日，QVCGA股價曾顯著下跌37.76%。此外，集團高階主管近期進行了常規的股權獎勵相關申報。</div>
+</details>
+<details id='QVCD-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 74.71
-MACD: 0.0249
-BB: 溫和上漲 (區間上方)</div></details>
-<details id='QVCD-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: 0.0249
+
+Bollinger Bands Status: 溫和上漲 (區間上方)
+  </div>
+</details>
+<details id='QVCD-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 QVCD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -264,26 +402,47 @@ target_name: QVCD
 today_close: 10.39
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 74.71
 macd_hist: 0.0249
 bb_status: 溫和上漲 (區間上方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='BEPH-card'>
-<div class='target-title-web'><span>📌 BEPH</span><span>14.90 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.02</span></span></div>
-<details id='BEPH-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>近期，BEPH 債券的擔保實體 Brookfield Renewable Partners L.P. (BEP) 已於 2026 年 3 月 19 日完成其 2025 財政年度的年度報告提交，包括向美國 SEC 和加拿大監管機構提交 Form 20-F 報告。此舉提升了該實體的財務透明度。</div></details>
-<details id='BEPH-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 BEPH</span><span class='target-price-web'>14.90 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.02</span></span></div>
+<details id='BEPH-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>近期，BEPH 債券的擔保實體 Brookfield Renewable Partners L.P. (BEP) 已於 2026 年 3 月 19 日完成其 2025 財政年度的年度報告提交，包括向美國 SEC 和加拿大監管機構提交 Form 20-F 報告。此舉提升了該實體的財務透明度。</div>
+</details>
+<details id='BEPH-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 42.49
-MACD: -0.0133
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='BEPH-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.0133
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='BEPH-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 BEPH 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -298,26 +457,47 @@ target_name: BEPH
 today_close: 14.90
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 42.49
 macd_hist: -0.0133
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='UZD-card'>
-<div class='target-title-web'><span>📌 UZD</span><span>20.29 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.12</span></span></div>
-<details id='UZD-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>Array Digital Infrastructure, Inc.於2026年3月24日宣布，已批准其2026年度激勵計畫。此計畫將主管及員工獎金與公司績效指標掛鉤，包括調整後營收及營運收入等，相關細節已透過美國證券交易委員會（SEC）文件揭露。</div></details>
-<details id='UZD-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 UZD</span><span class='target-price-web'>20.29 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.12</span></span></div>
+<details id='UZD-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>Array Digital Infrastructure, Inc.於2026年3月24日宣布，已批准其2026年度激勵計畫。此計畫將主管及員工獎金與公司績效指標掛鉤，包括調整後營收及營運收入等，相關細節已透過美國證券交易委員會（SEC）文件揭露。</div>
+</details>
+<details id='UZD-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 44.01
-MACD: -0.0813
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='UZD-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.0813
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='UZD-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 UZD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -332,26 +512,47 @@ target_name: UZD
 today_close: 20.29
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 44.01
 macd_hist: -0.0813
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='MGR-card'>
-<div class='target-title-web'><span>📌 MGR</span><span>20.26 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.01</span></span></div>
-<details id='MGR-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>近期，Affiliated Managers Group (AMG) 公佈了2025年第四季度業績，儘管每股盈餘超出預期，但營收未達標。同時有報導指出，部分機構投資者減持了AMG股份，且營運長亦有內部人賣股行為。此外，廣泛的債券市場也面臨壓力，主因是市場對利率預期轉向「長期維持高位」，導致前端公債殖利率上升，加上地緣政治緊張局勢，均對固定收益市場造成影響。</div></details>
-<details id='MGR-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 MGR</span><span class='target-price-web'>20.26 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.01</span></span></div>
+<details id='MGR-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>近期，Affiliated Managers Group (AMG) 公佈了2025年第四季度業績，儘管每股盈餘超出預期，但營收未達標。同時有報導指出，部分機構投資者減持了AMG股份，且營運長亦有內部人賣股行為。此外，廣泛的債券市場也面臨壓力，主因是市場對利率預期轉向「長期維持高位」，導致前端公債殖利率上升，加上地緣政治緊張局勢，均對固定收益市場造成影響。</div>
+</details>
+<details id='MGR-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 28.15
-MACD: -0.0555
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='MGR-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.0555
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='MGR-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 MGR 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -366,26 +567,47 @@ target_name: MGR
 today_close: 20.26
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 28.15
 macd_hist: -0.0555
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='AFGC-card'>
-<div class='target-title-web'><span>📌 AFGC</span><span>18.24 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.01</span></span></div>
-<details id='AFGC-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div></details>
-<details id='AFGC-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 AFGC</span><span class='target-price-web'>18.24 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.01</span></span></div>
+<details id='AFGC-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
+</details>
+<details id='AFGC-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 25.00
-MACD: -0.0404
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='AFGC-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.0404
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='AFGC-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 AFGC 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -400,26 +622,47 @@ target_name: AFGC
 today_close: 18.24
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 25.00
 macd_hist: -0.0404
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='ALL-PB-card'>
-<div class='target-title-web'><span>📌 ALL-PB</span><span>26.09 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.01</span></span></div>
-<details id='ALL-PB-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>在2026年3月20日，針對ALL-PB的相關發行主體Allstate Corporation及其主要子公司，信用評級機構AM Best確認其財務實力評級為A+（優異），並將長期發行人信用評級維持在「a」級，展望為穩定。此評級的確認反映了Allstate Corporation穩健的財務健康狀況，顯示其財務體質良好。</div></details>
-<details id='ALL-PB-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 ALL-PB</span><span class='target-price-web'>26.09 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.01</span></span></div>
+<details id='ALL-PB-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>在2026年3月20日，針對ALL-PB的相關發行主體Allstate Corporation及其主要子公司，信用評級機構AM Best確認其財務實力評級為A+（優異），並將長期發行人信用評級維持在「a」級，展望為穩定。此評級的確認反映了Allstate Corporation穩健的財務健康狀況，顯示其財務體質良好。</div>
+</details>
+<details id='ALL-PB-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 47.34
-MACD: -0.0088
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='ALL-PB-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.0088
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='ALL-PB-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 ALL-PB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -434,26 +677,47 @@ target_name: ALL-PB
 today_close: 26.09
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 47.34
 macd_hist: -0.0088
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
 <div class='target-card-web' id='HWCPZ-card'>
-<div class='target-title-web'><span>📌 HWCPZ</span><span>21.71 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.31</span></span></div>
-<details id='HWCPZ-analysis'><summary>🧠 點我看深度動態分析</summary><div class='folding-content ai-content-web'>Hancock Whitney Corporation宣布將於2026年4月21日市場收盤後公布2026年第一季財報，並將於同日舉行電話會議討論業績。此外，Murphy Middleton Hinkle & Parker Inc.在第四季度取得了Hancock Whitney Corporation的新部位，購買了17,181股，價值約109萬美元。</div></details>
-<details id='HWCPZ-tech'><summary>📊 點我看技術指標數據</summary><div class='folding-content tech-data-web'><b>=== 市場 Context ===</b>
-S&P500: 6556.37
-10Y Bond: 4.39bp
-VIX: 25.74
+<div class='target-title-web'><span>📌 HWCPZ</span><span class='target-price-web'>21.71 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.31</span></span></div>
+<details id='HWCPZ-analysis'>
+  <summary>🧠 點我看深度動態分析</summary>
+  <div class='folding-content ai-content-web'>Hancock Whitney Corporation宣布將於2026年4月21日市場收盤後公布2026年第一季財報，並將於同日舉行電話會議討論業績。此外，Murphy Middleton Hinkle & Parker Inc.在第四季度取得了Hancock Whitney Corporation的新部位，購買了17,181股，價值約109萬美元。</div>
+</details>
+<details id='HWCPZ-tech'>
+  <summary>📊 點我看客觀技術指標與 Context 數據</summary>
+  <div class='folding-content tech-data-web'>
+<b>=== 市場 Context ===</b>
+
+S&P500 Close: 6556.37 (change: -0.37%)
+
+10Y Bond Close: 4.39bp (change: 5.80bp)
+
+VIX Close: 25.98 (change: -0.97)
+
 
 <b>=== 技術指標 ===</b>
+
 RSI (14): 26.01
-MACD: -0.1508
-BB: 溫和下跌 (區間下方)</div></details>
-<details id='HWCPZ-prompt'><summary>📋 點我給 AI 提示詞範本</summary><div class='folding-content'><div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+
+MACD Histogram: -0.1508
+
+Bollinger Bands Status: 溫和下跌 (區間下方)
+  </div>
+</details>
+<details id='HWCPZ-prompt'>
+  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <div class='folding-content'>
+    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 HWCPZ 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -468,59 +732,34 @@ target_name: HWCPZ
 today_close: 21.71
 gspc_close: 6556.37 (change: -0.37%) (市場Context: S&P500指數)
 tnx_close: 4.39 (change: 5.80bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.74 (change: -1.21) (市場Context: 市場波動率恐慌指數)
+vix_close: 25.98 (change: -0.97) (市場Context: 市場波動率恐慌指數)
 rsi_14: 26.01
 macd_hist: -0.1508
 bb_status: 溫和下跌 (區間下方)
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div></div></details>
+請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+    <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
+  </div>
+</details>
 </div>
-<div class='footer-web'>💡 本站僅顯示公開熱門標的。<br>🤖 本頻道自動發送，無回覆功能。</div>
+<div class='footer-web'>💡 本站僅顯示公開熱門標的。<br>欲客製化監控私人持股？歡迎訂閱：【i秘書】服務。<br>🤖 本頻道為自動發送，無回覆功能。<br>📧 聯絡信箱：gary172.leejpa@gmail.com</div>
 
-    </div></div>
-    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
-        // 設定 LIFF ID
-        const liffId = "2009601567-8u1tCcO5";
-
-        liff.init({ liffId: liffId }).then(() => {
-            // 優先判斷是否正在 App 內或已經登入
-            const isInLine = liff.isInClient() || /Line/i.test(navigator.userAgent);
-            
-            if (isInLine || liff.isLoggedIn()) {
-                // 通過驗證，顯示內容
-                showContent();
-            } else {
-                // 否則嘗試自動登入 (PC 版會在此進行驗證跳轉)
-                liff.login();
-            }
-        }).catch((err) => {
-            console.error("LIFF Init Error:", err);
-            // 發生錯誤時，如果已經登入仍嘗試顯示，否則才擋掉
-            if (liff.isLoggedIn()) {
-                showContent();
-            } else {
-                document.getElementById("loading-screen").style.display = "none";
-                document.getElementById("access-denied").style.display = "block";
-            }
-        });
-
-        function showContent() {
-            document.getElementById("loading-screen").style.display = "none";
-            document.getElementById("main-content").style.display = "block";
-            
-            // 錨點自動展開與捲動
-            const hash = window.location.hash;
+        document.addEventListener("DOMContentLoaded", function() {
+            var hash = window.location.hash;
             if (hash) {
-                const target = document.querySelector(hash);
-                if (target && target.tagName === 'DETAILS') {
-                    target.setAttribute('open', '');
-                    setTimeout(() => {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 500);
+                var targetElement = document.querySelector(hash);
+                if (targetElement && targetElement.tagName === 'DETAILS') {
+                    targetElement.setAttribute('open', '');
+                    setTimeout(function() {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        targetElement.style.transition = "background-color 0.8s";
+                        targetElement.style.backgroundColor = "rgba(30, 144, 255, 0.3)";
+                        setTimeout(() => { targetElement.style.backgroundColor = "transparent"; }, 1500);
+                    }, 300);
                 }
             }
-        }
+        });
     </script>
-    </body></html>
     
+    </div></body></html>
