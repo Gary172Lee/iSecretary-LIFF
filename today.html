@@ -6,6 +6,9 @@
     <title>i秘書 - 今日特別股深度情報</title>
     <style>
         body { background-color: #0D1B2A; color: #E0E1DD; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 20px; line-height: 1.6; margin: 0; }
+        /* 🌟 防護機制 CSS */
+        #main-content, #access-denied { display: none; }
+        #loading-screen { display: block; text-align: center; margin-top: 100px; font-size: 1.2em; color: #A8DADC; }
         .container { max-width: 700px; margin: 0 auto; background: #1B263B; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .header { text-align: center; border-bottom: 2px solid #415A77; padding-bottom: 15px; margin-bottom: 25px; }
         .header h2 { color: #A8DADC; margin: 0 0 5px 0; }
@@ -15,23 +18,32 @@
         .target-price-web { font-size: 1.1em; }
         details { background: rgba(255,255,255,0.03); border-radius: 8px; margin-top: 10px; cursor: pointer; transition: background-color 0.3s; scroll-margin-top: 20px; }
         details:hover { background: rgba(255,255,255,0.06); }
-        summary { font-weight: bold; color: #FFFFFF; padding: 12px; font-size: 0.95em; outline: none; border-radius: 8px; list-style-position: inside; }
+        summary { font-weight: bold; color: #FFFFFF; padding: 12px; font-size: 0.95em; outline: none; border-radius: 8px; list-style-position: inside; display: flex; align-items: center; }
         details[open] summary { border-bottom: 1px dashed #415A77; border-radius: 8px 8px 0 0; }
         .folding-content { padding: 15px; color: #A8DADC; font-size: 0.9em; }
         .ai-content-web { white-space: pre-wrap; color: #1E90FF; font-weight: bold; }
         .tech-data-web { white-space: pre-wrap; font-family: 'Courier New', monospace; color: #43A047; }
         .prompt-data-web { white-space: pre-wrap; font-family: 'Courier New', monospace; color: #999999; border: 1px solid #415A77; padding: 10px; border-radius: 4px; background: rgba(0,0,0,0.1); cursor: text; -webkit-user-select: text; user-select: text; }
+        /* 🌟 複製按鈕專屬樣式 */
+        .copy-btn { cursor: pointer; background: #415A77; color: #FFFFFF; border: none; border-radius: 5px; padding: 4px 10px; margin-left: 12px; font-size: 0.85em; display: inline-flex; align-items: center; transition: background 0.3s; }
+        .copy-btn:hover { background: #1E90FF; }
         .footer-web { margin-top: 40px; font-size: 0.8em; color: #778DA9; text-align: center; border-top: 1px dashed #415A77; padding-top: 15px; }
     </style>
 </head>
 <body>
+    <div id='loading-screen'>🛡️ 網址驗證中...</div>
+    <div id='access-denied' style='text-align: center; margin-top: 100px;'>
+        <h2 style='color: #FF5252;'>🚫 連結已失效或拒絕存取</h2>
+        <p style='color: #E0E1DD;'>本資料為每日更新之專屬情報。<br>您目前使用的連結可能已過期，請回到 LINE 機器人內重新點擊「今日最新按鈕」。</p>
+    </div>
+    <div id='main-content'>
     <div class='container'>
-        <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-26 05:57</p></div>
+        <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-26 10:00</p></div>
 <div class='target-card-web' id='CTBB-card'>
 <div class='target-title-web'><span>📌 CTBB</span><span class='target-price-web'>18.92 <span style='font-size:0.85em; color:#999999;'>■ 0.00</span></span></div>
 <details id='CTBB-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，CTBB（Qwest 6.5% Notes Exp 01 Sept 2056）的相關新聞主要圍繞其母公司 Lumen Technologies。3月24日，Lumen Technologies 獲 Fast Company 評選為2026年全球最具創新力公司之一。次日，Lumen 在其2026年投資者日上宣布，自2025年1月以來已大幅削減超過50億美元總債務，並將每年利息支出減少近5億美元，同時也闡述了以AI就緒網絡為核心的多年期增長策略。此外，CTBB 債券價格在3月23日上漲了0.96%。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='CTBB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -55,9 +67,10 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
 <details id='CTBB-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-CTBB")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-CTBB'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 CTBB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -86,7 +99,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 BHFAL</span><span class='target-price-web'>16.68 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.08</span></span></div>
 <details id='BHFAL-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>Brighthouse Financial近期宣布將於2026年3月25日支付優先股股息，履行其財務義務。同日，有報導指出該公司股價自上次財報以來有所下跌，主要受到2025年全年調整後收益和總調整後營收下降以及總費用增加的影響。儘管如此，AM Best於3月23日確認了Brighthouse Financial及其子公司的A（優秀）信用評級，並給予穩定展望，顯示了對其財務實力的信心。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='BHFAL-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -110,9 +123,10 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
 <details id='BHFAL-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-BHFAL")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-BHFAL'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 BHFAL 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -141,7 +155,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 F-PB</span><span class='target-price-web'>20.55 <span style='font-size:0.85em; color:#999999;'>■ 0.00</span></span></div>
 <details id='F-PB-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>Ford近期動態顯示多方面發展。3月中旬，公司宣布對電動車資產計入155億美元的巨額減值費用，並將戰略轉向「混合動力優先」。同時，Ford Pro AI計畫啟動以強化商用車業務，並採用「一體式鑄造」技術提升電動皮卡生產效率。在市場方面，Ford股價一度下跌，但隨後因第四季度業績超出預期及內部人士增持而上漲2.1%。然而，公司也面臨挑戰，包括召回超過25萬輛SUV的軟體問題，歐洲市場銷量在2026年初大幅下滑21.5%，以及來自Scout Motors新興競爭者的壓力。此外，福特將在4月29日公布第一季財報，並成為美國職棒大聯盟的官方汽車合作夥伴。</div>
+  <div class='folding-content ai-content-web'>福特汽車近期動態顯示，該公司正調整其電動車策略，包括於3月24日停止生產F-150 Lightning電動皮卡，並於3月23日宣布BlueOval SK延遲肯塔基電池廠裁員，同時縮減整體電動車生產計劃。同日，福特也宣布將於4月29日發布2026年第一季財報。在其他業務方面，福特於3月24日宣布將召回美國境內逾25.4萬輛SUV，以解決軟體問題。此外，公司於3月20日宣布將導入新AI技術以擴大其Ford Pro商用車部門，並於3月23日與美國職棒大聯盟達成獨家合作夥伴關係。</div>
 </details>
 <details id='F-PB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -165,9 +179,10 @@ Bollinger Bands Status: 資料累積中 (上市天數不足)
   </div>
 </details>
 <details id='F-PB-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-F-PB")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-F-PB'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 F-PB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -220,9 +235,10 @@ Bollinger Bands Status: 資料累積中 (上市天數不足)
   </div>
 </details>
 <details id='F-PC-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-F-PC")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-F-PC'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 F-PC 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -251,7 +267,7 @@ bb_status: 資料累積中 (上市天數不足)
 <div class='target-title-web'><span>📌 AXS-PE</span><span class='target-price-web'>20.26 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.09</span></span></div>
 <details id='AXS-PE-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>在2026年3月13日至2026年3月26日期間，AXS-PE的母公司AXIS Capital及其自身有兩項主要動態。AXIS Capital的子公司於3月23日修正並延長與花旗銀行的擔保信用額度，將總額度從3億美元調整至2.5億美元，但將到期日延長至2028年3月31日，此舉旨在增強長期融資彈性。此外，AXS-PE本身在3月18日發布了關於其即將到來的除息日期資訊，確認其5.50% E系列優先股將於2026年3月31日除息，預計於2026年4月15日支付股息。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='AXS-PE-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -275,9 +291,10 @@ Bollinger Bands Status: 溫和上漲 (區間上方)
   </div>
 </details>
 <details id='AXS-PE-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-AXS-PE")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-AXS-PE'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 AXS-PE 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -306,7 +323,7 @@ bb_status: 溫和上漲 (區間上方)
 <div class='target-title-web'><span>📌 SOJD</span><span class='target-price-web'>19.69 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.11</span></span></div>
 <details id='SOJD-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>Southern Company近期動態顯示，公司於3月19日發行了13億美元的次級票據，並提交了相關SEC文件。隨後在3月20日獲得Evercore ISI和KeyBanc的分析師評級上調。此外，一份報告確認了公司265億美元電力項目貸款擔保的推進，其子公司Georgia Power也宣布了史上最大規模的分布式太陽能採購，顯示其在再生能源領域的持續投入。公司已訂於4月30日發布2026年第一季財報。然而，受伊朗戰爭影響，全球能源市場混亂及油氣價格上漲，可能為公用事業運營帶來潛在的成本壓力。</div>
+  <div class='folding-content ai-content-web'>Southern Company（SOJD的發行公司）近期發布了數項重要訊息。財務方面，公司宣布計劃發行13億美元的次級債券，其6.00%的重置利率高於SOJD現有票息。另一方面，南方公司公布2025年第四季度及全年調整後每股盈餘表現強勁，全年達到指導區間上限。受此影響，Evercore ISI和TD Cowen等機構上調了該公司的評級與目標價。此外，美國核能管理委員會批准了一項新的核反應爐設計，這被視為可能有利於南方公司未來的能源發展策略。</div>
 </details>
 <details id='SOJD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -330,9 +347,10 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
 <details id='SOJD-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-SOJD")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-SOJD'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 SOJD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -361,7 +379,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 QVCD</span><span class='target-price-web'>10.37 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.02</span></span></div>
 <details id='QVCD-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，QVC Inc.的母公司Qurate Retail Group面臨嚴峻財務挑戰。該公司背負高達66億美元的債務，並在2025年前三季度出現巨額虧損。為應對此困境，Qurate Retail Group正與債權人進行機密談判，旨在重組債務，並已提及可能申請美國破產法第11章保護。此外，標普全球評級（S&P Global Ratings）於3月25日將Qurate Retail Inc.的信用評級從「B-」下調至「CCC+」，進一步反映了市場對其債務管理能力和營運壓力的擔憂，顯示其破產風險正在加劇。</div>
+  <div class='folding-content ai-content-web'>近期，QVC集團面臨嚴峻的財務困境，其債務危機不斷加劇，據報導稱破產可能性增加，公司背負66億美元債務且債務規模已超出其總價值。同時，有分析指出QVC的衰退是2026年『傳統品牌零售業大崩盤』的一部分，並傳出潛在裁員消息。其子公司HSN的相關新聞發布日，QVCGA股價曾顯著下跌37.76%。此外，集團高階主管近期進行了常規的股權獎勵相關申報。</div>
 </details>
 <details id='QVCD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -385,9 +403,10 @@ Bollinger Bands Status: 溫和上漲 (區間上方)
   </div>
 </details>
 <details id='QVCD-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-QVCD")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-QVCD'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 QVCD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -416,7 +435,7 @@ bb_status: 溫和上漲 (區間上方)
 <div class='target-title-web'><span>📌 BEPH</span><span class='target-price-web'>14.96 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.06</span></span></div>
 <details id='BEPH-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，BEPH的母公司與相關實體展開多項策略性活動。Brookfield Asset Management及其子公司Brookfield Renewable Partners宣布將與La Caisse共同以約90億加幣收購加拿大再生能源公司Boralex Inc.，擴大其在再生能源領域的版圖。此外，Brookfield Asset Management正與OpenAI洽談成立企業AI工具合資企業，並據報導與Ardian探討共同收購義大利電信塔公司Inwit。在此期間，Brookfield Corporation亦完成了2025年度報告Form 40-F的提交。</div>
+  <div class='folding-content ai-content-web'>近期，BEPH 債券的擔保實體 Brookfield Renewable Partners L.P. (BEP) 已於 2026 年 3 月 19 日完成其 2025 財政年度的年度報告提交，包括向美國 SEC 和加拿大監管機構提交 Form 20-F 報告。此舉提升了該實體的財務透明度。</div>
 </details>
 <details id='BEPH-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -440,9 +459,10 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
 <details id='BEPH-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-BEPH")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-BEPH'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 BEPH 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -471,7 +491,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 UZD</span><span class='target-price-web'>20.38 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.09</span></span></div>
 <details id='UZD-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，Array Digital Infrastructure（UZD的發行公司）於2026年3月24日批准了其2026年高階主管年度獎勵計畫，旨在將高階主管績效與公司調整後營收、OIBDA及新租賃網站營收等財務目標掛鉤。同日，Stock Traders Daily對UZD高級債券進行了技術分析，指出近期及中期情緒疲弱可能對中立的長期展望造成壓力，但也提及潛在短期收益的風險回報設置。此外，2026年3月19日的報導提及，公司於1月13日完成了向AT&T出售部分頻譜資產的交易，獲利10.18億美元，此舉顯著增強了公司流動性並發放特別股息，對其財務健康產生正面影響。</div>
+  <div class='folding-content ai-content-web'>Array Digital Infrastructure, Inc.於2026年3月24日宣布，已批准其2026年度激勵計畫。此計畫將主管及員工獎金與公司績效指標掛鉤，包括調整後營收及營運收入等，相關細節已透過美國證券交易委員會（SEC）文件揭露。</div>
 </details>
 <details id='UZD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -495,9 +515,10 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
 <details id='UZD-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-UZD")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-UZD'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 UZD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -526,7 +547,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 MGR</span><span class='target-price-web'>20.38 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.12</span></span></div>
 <details id='MGR-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期， Affiliated Managers Group (AMG) 的嬰兒債券（如MGR）獲得市場正面評價，有報告指出其表現強勁且市場情緒樂觀，顯示出投資者對此類債券的看好情緒。與此同時，其母公司AMG的股票則出現持股變動。Goodman Financial Corp 減少了其在AMG的持股，出售超過12,700股。AMG的總法律顧問和營運長也分別報告了內部人股票出售。此外，JPMorgan Chase & Co. 亦在第三季度削減了其在AMG的持股比例。</div>
+  <div class='folding-content ai-content-web'>近期，Affiliated Managers Group (AMG) 公佈了2025年第四季度業績，儘管每股盈餘超出預期，但營收未達標。同時有報導指出，部分機構投資者減持了AMG股份，且營運長亦有內部人賣股行為。此外，廣泛的債券市場也面臨壓力，主因是市場對利率預期轉向「長期維持高位」，導致前端公債殖利率上升，加上地緣政治緊張局勢，均對固定收益市場造成影響。</div>
 </details>
 <details id='MGR-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -550,9 +571,10 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
 <details id='MGR-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-MGR")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-MGR'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 MGR 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -581,7 +603,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 AFGC</span><span class='target-price-web'>18.22 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.02</span></span></div>
 <details id='AFGC-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>美國金融集團（AFGC）近期動態顯示，Victory Capital Management Inc.於2026年3月25日披露，其已在2026年3月3日購入了American Financial Group (AFG) 的股份。此機構投資者的買入行動，反映了市場對該標的的潛在看法。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='AFGC-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -605,9 +627,10 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
 <details id='AFGC-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-AFGC")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-AFGC'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 AFGC 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -636,7 +659,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 ALL-PB</span><span class='target-price-web'>26.10 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.01</span></span></div>
 <details id='ALL-PB-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>Allstate Corporation在2026年3月19日報告了2月份的預估巨災損失為1.4億美元，使得1月和2月的總損失達到3.15億美元。儘管有這些損失，部分分析師維持或提高了對Allstate未來盈利的預期，並認為這些損失不會實質改變公司以數據驅動定價的長期敘事。此外，公司在3月18日宣布將支付每股0.4437美元的季度股息，相較於前一次支付有所減少。同日，AM Best確認了Allstate Corporation的長期發行人信用評級為「a-」(優秀)且展望穩定，但下調了部分子公司的評級，並將其展望調整為負面。</div>
+  <div class='folding-content ai-content-web'>在2026年3月20日，針對ALL-PB的相關發行主體Allstate Corporation及其主要子公司，信用評級機構AM Best確認其財務實力評級為A+（優異），並將長期發行人信用評級維持在「a」級，展望為穩定。此評級的確認反映了Allstate Corporation穩健的財務健康狀況，顯示其財務體質良好。</div>
 </details>
 <details id='ALL-PB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -660,9 +683,10 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
 <details id='ALL-PB-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-ALL-PB")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-ALL-PB'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 ALL-PB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -691,7 +715,7 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 HWCPZ</span><span class='target-price-web'>21.77 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.06</span></span></div>
 <details id='HWCPZ-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>在2026年3月13日至3月26日期間，Hancock Whitney Corporation (HWCPZ) 經歷了數項重要動態。其中，公司宣布計劃於2026年4月21日市場收盤後發布其2026年第一季度財務業績，並將隨後舉行電話會議供分析師和投資者參與。此外，Hancock Whitney Corporation已向美國證券交易委員會提交了一份最終委託書（DEF 14A）。同期，一份技術分析報告指出，HWCPZ可能正處於短期下跌趨勢。</div>
+  <div class='folding-content ai-content-web'>Hancock Whitney Corporation宣布將於2026年4月21日市場收盤後公布2026年第一季財報，並將於同日舉行電話會議討論業績。此外，Murphy Middleton Hinkle & Parker Inc.在第四季度取得了Hancock Whitney Corporation的新部位，購買了17,181股，價值約109萬美元。</div>
 </details>
 <details id='HWCPZ-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
@@ -715,9 +739,10 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
   </div>
 </details>
 <details id='HWCPZ-prompt'>
-  <summary>📋 點我給 AI 提示詞範本 (一鍵複製)</summary>
+  <summary>📋 點我給 AI 提示詞範本 <button class='copy-btn' onclick='copyPrompt(event, "prompt-HWCPZ")'>📋 點此複製</button></summary>
   <div class='folding-content'>
-    <div class='prompt-data-web'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
+    <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
+    <div class='prompt-data-web' id='prompt-HWCPZ'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
 你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 HWCPZ 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
 
@@ -744,22 +769,50 @@ bb_status: 溫和下跌 (區間下方)
 </div>
 <div class='footer-web'>💡 本站僅顯示公開熱門標的。<br>欲客製化監控私人持股？歡迎訂閱：【i秘書】服務。<br>🤖 本頻道為自動發送，無回覆功能。<br>📧 聯絡信箱：gary172.leejpa@gmail.com</div>
 
+    </div></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var hash = window.location.hash;
-            if (hash) {
-                var targetElement = document.querySelector(hash);
-                if (targetElement && targetElement.tagName === 'DETAILS') {
-                    targetElement.setAttribute('open', '');
-                    setTimeout(function() {
-                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        targetElement.style.transition = "background-color 0.8s";
-                        targetElement.style.backgroundColor = "rgba(30, 144, 255, 0.3)";
-                        setTimeout(() => { targetElement.style.backgroundColor = "transparent"; }, 1500);
-                    }, 300);
+            // 驗證日拋金鑰
+            const expectedToken = "35f0b811";
+            const urlParams = new URLSearchParams(window.location.search);
+            const userToken = urlParams.get('token');
+            
+            if (userToken === expectedToken) {
+                // 驗證成功，顯示內容
+                document.getElementById("loading-screen").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+                
+                var hash = window.location.hash;
+                if (hash) {
+                    var targetElement = document.querySelector(hash);
+                    if (targetElement && targetElement.tagName === 'DETAILS') {
+                        targetElement.setAttribute('open', '');
+                        setTimeout(function() {
+                            targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            targetElement.style.transition = "background-color 0.8s";
+                            targetElement.style.backgroundColor = "rgba(30, 144, 255, 0.3)";
+                            setTimeout(() => { targetElement.style.backgroundColor = "transparent"; }, 1500);
+                        }, 300);
+                    }
                 }
+            } else {
+                // 驗證失敗 (可能是沒帶 Token，或是使用了昨天的過期書籤)
+                document.getElementById("loading-screen").style.display = "none";
+                document.getElementById("access-denied").style.display = "block";
             }
         });
+
+        // 一鍵複製功能
+        function copyPrompt(event, elementId) {
+            event.stopPropagation(); // 防止點擊按鈕時開關摺疊面板
+            var promptText = document.getElementById(elementId).innerText;
+            
+            navigator.clipboard.writeText(promptText).then(function() {
+                alert('✅ 提示詞已成功複製到剪貼簿！');
+            }).catch(function(err) {
+                alert('❌ 複製失敗，請手動選取文字進行複製。');
+            });
+        }
     </script>
     
-    </div></body></html>
+</body></html>
