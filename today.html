@@ -6,7 +6,6 @@
     <title>i秘書 - 今日特別股深度情報</title>
     <style>
         body { background-color: #0D1B2A; color: #E0E1DD; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 20px; line-height: 1.6; margin: 0; }
-        /* 🌟 防護機制 CSS */
         #main-content, #access-denied { display: none; }
         #loading-screen { display: block; text-align: center; margin-top: 100px; font-size: 1.2em; color: #A8DADC; }
         .container { max-width: 700px; margin: 0 auto; background: #1B263B; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
@@ -23,8 +22,8 @@
         .folding-content { padding: 15px; color: #A8DADC; font-size: 0.9em; }
         .ai-content-web { white-space: pre-wrap; color: #1E90FF; font-weight: bold; }
         .tech-data-web { white-space: pre-wrap; font-family: 'Courier New', monospace; color: #43A047; }
+        .tech-data-title { color: #FCA311; font-weight: bold; margin-top: 10px; display: block; }
         .prompt-data-web { white-space: pre-wrap; font-family: 'Courier New', monospace; color: #999999; border: 1px solid #415A77; padding: 10px; border-radius: 4px; background: rgba(0,0,0,0.1); cursor: text; -webkit-user-select: text; user-select: text; }
-        /* 🌟 複製按鈕專屬樣式 */
         .copy-btn { cursor: pointer; background: #415A77; color: #FFFFFF; border: none; border-radius: 5px; padding: 4px 10px; margin-left: 12px; font-size: 0.85em; display: inline-flex; align-items: center; transition: background 0.3s; }
         .copy-btn:hover { background: #1E90FF; }
         .footer-web { margin-top: 40px; font-size: 0.8em; color: #778DA9; text-align: center; border-top: 1px dashed #415A77; padding-top: 15px; }
@@ -38,7 +37,7 @@
     </div>
     <div id='main-content'>
     <div class='container'>
-        <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-26 10:00</p></div>
+        <div class='header'><h2>🇺🇸 特別股深度情報中心</h2><p>更新時間：2026-03-26 11:10</p></div>
 <div class='target-card-web' id='CTBB-card'>
 <div class='target-title-web'><span>📌 CTBB</span><span class='target-price-web'>18.92 <span style='font-size:0.85em; color:#999999;'>■ 0.00</span></span></div>
 <details id='CTBB-analysis'>
@@ -48,22 +47,47 @@
 <details id='CTBB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 48.26
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 48.26
 
 MACD Histogram: -0.0286
 
-Bollinger Bands Status: 溫和下跌 (區間下方)
+Bollinger Position (%B): 0.40
+
+Bollinger Width: 0.0596
+
+SMA20: 19.03
+
+SMA60: 18.80
+
+SMA200: 18.55
+
+Price vs SMA20: -0.57%
+
+20 Day Return: -2.14%
+
+ATR(14): 0.3471
+
+Volume Trend (均量比): 0.32x
+
   </div>
 </details>
 <details id='CTBB-prompt'>
@@ -72,7 +96,12 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-CTBB'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 CTBB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 CTBB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -80,17 +109,34 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: CTBB
-today_close: 18.92
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 48.26
-macd_hist: -0.0286
-bb_status: 溫和下跌 (區間下方)
+=== CTBB 量化數據 ===
+現價 (Close): 18.92
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 48.26
+MACD Histogram: -0.0286
+Bollinger Position (%B): 0.40
+Bollinger Width: 0.0596
+SMA20: 19.03
+SMA60: 18.80
+SMA200: 18.55
+Price vs SMA20: -0.57%
+20 Day Return: -2.14%
+ATR(14): 0.3471
+Volume Trend (均量比): 0.32x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -104,22 +150,47 @@ bb_status: 溫和下跌 (區間下方)
 <details id='BHFAL-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 39.99
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 39.99
 
 MACD Histogram: -0.0488
 
-Bollinger Bands Status: 溫和下跌 (區間下方)
+Bollinger Position (%B): 0.30
+
+Bollinger Width: 0.1044
+
+SMA20: 17.04
+
+SMA60: 17.19
+
+SMA200: 17.39
+
+Price vs SMA20: -2.13%
+
+20 Day Return: -7.28%
+
+ATR(14): 0.2900
+
+Volume Trend (均量比): 0.70x
+
   </div>
 </details>
 <details id='BHFAL-prompt'>
@@ -128,7 +199,12 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-BHFAL'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 BHFAL 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 BHFAL 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -136,17 +212,34 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: BHFAL
-today_close: 16.68
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 39.99
-macd_hist: -0.0488
-bb_status: 溫和下跌 (區間下方)
+=== BHFAL 量化數據 ===
+現價 (Close): 16.68
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 39.99
+MACD Histogram: -0.0488
+Bollinger Position (%B): 0.30
+Bollinger Width: 0.1044
+SMA20: 17.04
+SMA60: 17.19
+SMA200: 17.39
+Price vs SMA20: -2.13%
+20 Day Return: -7.28%
+ATR(14): 0.2900
+Volume Trend (均量比): 0.70x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -155,27 +248,52 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 F-PB</span><span class='target-price-web'>20.55 <span style='font-size:0.85em; color:#999999;'>■ 0.00</span></span></div>
 <details id='F-PB-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>福特汽車近期動態顯示，該公司正調整其電動車策略，包括於3月24日停止生產F-150 Lightning電動皮卡，並於3月23日宣布BlueOval SK延遲肯塔基電池廠裁員，同時縮減整體電動車生產計劃。同日，福特也宣布將於4月29日發布2026年第一季財報。在其他業務方面，福特於3月24日宣布將召回美國境內逾25.4萬輛SUV，以解決軟體問題。此外，公司於3月20日宣布將導入新AI技術以擴大其Ford Pro商用車部門，並於3月23日與美國職棒大聯盟達成獨家合作夥伴關係。</div>
+  <div class='folding-content ai-content-web'>近期福特汽車(F-PB)公佈了多項營運發展。在電動車戰略方面，由於需求放緩，福特調整了其電動車電池計畫及成本，解散了與SK On的BlueOval SK電池合資企業，並縮減了電動車擴張規模。另一方面，福特宣布將在位於密西根州的Marshall電池廠推動AI驅動的永續發展計畫，同時也為其Pro商用車部門引入新的人工智慧技術，以期促進業務增長。在投資者方面，近期有多家財富管理公司，如MFG Wealth Management Inc.和Mirabella Financial Services LLP，增加了對福特股票的持倉。此外，一份公民聯盟報告發布了追蹤政府支出的數據，其中提及了福特。</div>
 </details>
 <details id='F-PB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 50.00
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 50.00
 
 MACD Histogram: 0.0000
 
-Bollinger Bands Status: 資料累積中 (上市天數不足)
+Bollinger Position (%B): 0.50
+
+Bollinger Width: 0.0000
+
+SMA20: 20.55
+
+SMA60: N/A
+
+SMA200: N/A
+
+Price vs SMA20: +0.00%
+
+20 Day Return: +0.00%
+
+ATR(14): 0.0000
+
+Volume Trend (均量比): 1.00x
+
   </div>
 </details>
 <details id='F-PB-prompt'>
@@ -184,7 +302,12 @@ Bollinger Bands Status: 資料累積中 (上市天數不足)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-F-PB'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 F-PB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 F-PB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -192,17 +315,34 @@ Bollinger Bands Status: 資料累積中 (上市天數不足)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: F-PB
-today_close: 20.55
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 50.00
-macd_hist: 0.0000
-bb_status: 資料累積中 (上市天數不足)
+=== F-PB 量化數據 ===
+現價 (Close): 20.55
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 50.00
+MACD Histogram: 0.0000
+Bollinger Position (%B): 0.50
+Bollinger Width: 0.0000
+SMA20: 20.55
+SMA60: N/A
+SMA200: N/A
+Price vs SMA20: +0.00%
+20 Day Return: +0.00%
+ATR(14): 0.0000
+Volume Trend (均量比): 1.00x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -216,22 +356,47 @@ bb_status: 資料累積中 (上市天數不足)
 <details id='F-PC-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 50.00
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 50.00
 
 MACD Histogram: 0.0000
 
-Bollinger Bands Status: 資料累積中 (上市天數不足)
+Bollinger Position (%B): 0.50
+
+Bollinger Width: 0.0000
+
+SMA20: 20.13
+
+SMA60: N/A
+
+SMA200: N/A
+
+Price vs SMA20: +0.00%
+
+20 Day Return: +0.00%
+
+ATR(14): 0.0000
+
+Volume Trend (均量比): 1.00x
+
   </div>
 </details>
 <details id='F-PC-prompt'>
@@ -240,7 +405,12 @@ Bollinger Bands Status: 資料累積中 (上市天數不足)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-F-PC'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 F-PC 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 F-PC 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -248,17 +418,34 @@ Bollinger Bands Status: 資料累積中 (上市天數不足)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: F-PC
-today_close: 20.13
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 50.00
-macd_hist: 0.0000
-bb_status: 資料累積中 (上市天數不足)
+=== F-PC 量化數據 ===
+現價 (Close): 20.13
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 50.00
+MACD Histogram: 0.0000
+Bollinger Position (%B): 0.50
+Bollinger Width: 0.0000
+SMA20: 20.13
+SMA60: N/A
+SMA200: N/A
+Price vs SMA20: +0.00%
+20 Day Return: +0.00%
+ATR(14): 0.0000
+Volume Trend (均量比): 1.00x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -272,22 +459,47 @@ bb_status: 資料累積中 (上市天數不足)
 <details id='AXS-PE-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 49.29
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 49.29
 
 MACD Histogram: 0.0059
 
-Bollinger Bands Status: 溫和上漲 (區間上方)
+Bollinger Position (%B): 0.54
+
+Bollinger Width: 0.0268
+
+SMA20: 20.24
+
+SMA60: 20.30
+
+SMA200: 20.30
+
+Price vs SMA20: +0.11%
+
+20 Day Return: -1.84%
+
+ATR(14): 0.1983
+
+Volume Trend (均量比): 0.82x
+
   </div>
 </details>
 <details id='AXS-PE-prompt'>
@@ -296,7 +508,12 @@ Bollinger Bands Status: 溫和上漲 (區間上方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-AXS-PE'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 AXS-PE 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 AXS-PE 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -304,17 +521,34 @@ Bollinger Bands Status: 溫和上漲 (區間上方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: AXS-PE
-today_close: 20.26
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 49.29
-macd_hist: 0.0059
-bb_status: 溫和上漲 (區間上方)
+=== AXS-PE 量化數據 ===
+現價 (Close): 20.26
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 49.29
+MACD Histogram: 0.0059
+Bollinger Position (%B): 0.54
+Bollinger Width: 0.0268
+SMA20: 20.24
+SMA60: 20.30
+SMA200: 20.30
+Price vs SMA20: +0.11%
+20 Day Return: -1.84%
+ATR(14): 0.1983
+Volume Trend (均量比): 0.82x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -323,27 +557,52 @@ bb_status: 溫和上漲 (區間上方)
 <div class='target-title-web'><span>📌 SOJD</span><span class='target-price-web'>19.69 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.11</span></span></div>
 <details id='SOJD-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>Southern Company（SOJD的發行公司）近期發布了數項重要訊息。財務方面，公司宣布計劃發行13億美元的次級債券，其6.00%的重置利率高於SOJD現有票息。另一方面，南方公司公布2025年第四季度及全年調整後每股盈餘表現強勁，全年達到指導區間上限。受此影響，Evercore ISI和TD Cowen等機構上調了該公司的評級與目標價。此外，美國核能管理委員會批准了一項新的核反應爐設計，這被視為可能有利於南方公司未來的能源發展策略。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='SOJD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 24.77
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 24.77
 
 MACD Histogram: -0.1206
 
-Bollinger Bands Status: 溫和下跌 (區間下方)
+Bollinger Position (%B): 0.14
+
+Bollinger Width: 0.1045
+
+SMA20: 20.45
+
+SMA60: 20.46
+
+SMA200: 20.23
+
+Price vs SMA20: -3.72%
+
+20 Day Return: -5.79%
+
+ATR(14): 0.2066
+
+Volume Trend (均量比): 1.32x
+
   </div>
 </details>
 <details id='SOJD-prompt'>
@@ -352,7 +611,12 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-SOJD'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 SOJD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 SOJD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -360,17 +624,34 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: SOJD
-today_close: 19.69
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 24.77
-macd_hist: -0.1206
-bb_status: 溫和下跌 (區間下方)
+=== SOJD 量化數據 ===
+現價 (Close): 19.69
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 24.77
+MACD Histogram: -0.1206
+Bollinger Position (%B): 0.14
+Bollinger Width: 0.1045
+SMA20: 20.45
+SMA60: 20.46
+SMA200: 20.23
+Price vs SMA20: -3.72%
+20 Day Return: -5.79%
+ATR(14): 0.2066
+Volume Trend (均量比): 1.32x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -379,27 +660,52 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 QVCD</span><span class='target-price-web'>10.37 <span style='font-size:0.85em; color:#4CAF50;'>▼ 0.02</span></span></div>
 <details id='QVCD-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，QVC集團面臨嚴峻的財務困境，其債務危機不斷加劇，據報導稱破產可能性增加，公司背負66億美元債務且債務規模已超出其總價值。同時，有分析指出QVC的衰退是2026年『傳統品牌零售業大崩盤』的一部分，並傳出潛在裁員消息。其子公司HSN的相關新聞發布日，QVCGA股價曾顯著下跌37.76%。此外，集團高階主管近期進行了常規的股權獎勵相關申報。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='QVCD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 73.77
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 73.77
 
 MACD Histogram: -0.0020
 
-Bollinger Bands Status: 溫和上漲 (區間上方)
+Bollinger Position (%B): 0.67
+
+Bollinger Width: 0.2990
+
+SMA20: 9.86
+
+SMA60: 8.72
+
+SMA200: 8.92
+
+Price vs SMA20: +5.19%
+
+20 Day Return: +20.00%
+
+ATR(14): 0.2714
+
+Volume Trend (均量比): 0.95x
+
   </div>
 </details>
 <details id='QVCD-prompt'>
@@ -408,7 +714,12 @@ Bollinger Bands Status: 溫和上漲 (區間上方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-QVCD'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 QVCD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 QVCD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -416,17 +727,34 @@ Bollinger Bands Status: 溫和上漲 (區間上方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: QVCD
-today_close: 10.37
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 73.77
-macd_hist: -0.0020
-bb_status: 溫和上漲 (區間上方)
+=== QVCD 量化數據 ===
+現價 (Close): 10.37
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 73.77
+MACD Histogram: -0.0020
+Bollinger Position (%B): 0.67
+Bollinger Width: 0.2990
+SMA20: 9.86
+SMA60: 8.72
+SMA200: 8.92
+Price vs SMA20: +5.19%
+20 Day Return: +20.00%
+ATR(14): 0.2714
+Volume Trend (均量比): 0.95x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -435,27 +763,52 @@ bb_status: 溫和上漲 (區間上方)
 <div class='target-title-web'><span>📌 BEPH</span><span class='target-price-web'>14.96 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.06</span></span></div>
 <details id='BEPH-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，BEPH 債券的擔保實體 Brookfield Renewable Partners L.P. (BEP) 已於 2026 年 3 月 19 日完成其 2025 財政年度的年度報告提交，包括向美國 SEC 和加拿大監管機構提交 Form 20-F 報告。此舉提升了該實體的財務透明度。</div>
+  <div class='folding-content ai-content-web'>近期，BEPH的擔保方Brookfield Renewable Partners (BEP) 已與Boralex達成最終收購協議。此項收購旨在支持Boralex作為獨立私營公司的未來增長。此發展潛在強化了BEP的財務狀況，可能間接對BEPH的次級債券產生助益。</div>
 </details>
 <details id='BEPH-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 46.13
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 46.13
 
 MACD Histogram: -0.0045
 
-Bollinger Bands Status: 溫和下跌 (區間下方)
+Bollinger Position (%B): 0.42
+
+Bollinger Width: 0.0381
+
+SMA20: 15.01
+
+SMA60: 15.13
+
+SMA200: 15.16
+
+Price vs SMA20: -0.32%
+
+20 Day Return: -2.32%
+
+ATR(14): 0.1961
+
+Volume Trend (均量比): 0.19x
+
   </div>
 </details>
 <details id='BEPH-prompt'>
@@ -464,7 +817,12 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-BEPH'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 BEPH 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 BEPH 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -472,17 +830,34 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: BEPH
-today_close: 14.96
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 46.13
-macd_hist: -0.0045
-bb_status: 溫和下跌 (區間下方)
+=== BEPH 量化數據 ===
+現價 (Close): 14.96
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 46.13
+MACD Histogram: -0.0045
+Bollinger Position (%B): 0.42
+Bollinger Width: 0.0381
+SMA20: 15.01
+SMA60: 15.13
+SMA200: 15.16
+Price vs SMA20: -0.32%
+20 Day Return: -2.32%
+ATR(14): 0.1961
+Volume Trend (均量比): 0.19x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -491,27 +866,52 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 UZD</span><span class='target-price-web'>20.38 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.09</span></span></div>
 <details id='UZD-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>Array Digital Infrastructure, Inc.於2026年3月24日宣布，已批准其2026年度激勵計畫。此計畫將主管及員工獎金與公司績效指標掛鉤，包括調整後營收及營運收入等，相關細節已透過美國證券交易委員會（SEC）文件揭露。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='UZD-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 46.49
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 46.49
 
 MACD Histogram: -0.0541
 
-Bollinger Bands Status: 溫和下跌 (區間下方)
+Bollinger Position (%B): 0.36
+
+Bollinger Width: 0.0747
+
+SMA20: 20.60
+
+SMA60: 20.50
+
+SMA200: 20.89
+
+Price vs SMA20: -1.07%
+
+20 Day Return: -3.86%
+
+ATR(14): 0.3456
+
+Volume Trend (均量比): 0.37x
+
   </div>
 </details>
 <details id='UZD-prompt'>
@@ -520,7 +920,12 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-UZD'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 UZD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 UZD 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -528,17 +933,34 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: UZD
-today_close: 20.38
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 46.49
-macd_hist: -0.0541
-bb_status: 溫和下跌 (區間下方)
+=== UZD 量化數據 ===
+現價 (Close): 20.38
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 46.49
+MACD Histogram: -0.0541
+Bollinger Position (%B): 0.36
+Bollinger Width: 0.0747
+SMA20: 20.60
+SMA60: 20.50
+SMA200: 20.89
+Price vs SMA20: -1.07%
+20 Day Return: -3.86%
+ATR(14): 0.3456
+Volume Trend (均量比): 0.37x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -547,27 +969,52 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 MGR</span><span class='target-price-web'>20.38 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.12</span></span></div>
 <details id='MGR-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>近期，Affiliated Managers Group (AMG) 公佈了2025年第四季度業績，儘管每股盈餘超出預期，但營收未達標。同時有報導指出，部分機構投資者減持了AMG股份，且營運長亦有內部人賣股行為。此外，廣泛的債券市場也面臨壓力，主因是市場對利率預期轉向「長期維持高位」，導致前端公債殖利率上升，加上地緣政治緊張局勢，均對固定收益市場造成影響。</div>
+  <div class='folding-content ai-content-web'>近期無重大相關公開新聞或事件。</div>
 </details>
 <details id='MGR-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 33.82
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 33.82
 
 MACD Histogram: -0.0453
 
-Bollinger Bands Status: 溫和下跌 (區間下方)
+Bollinger Position (%B): 0.19
+
+Bollinger Width: 0.0626
+
+SMA20: 20.78
+
+SMA60: 21.20
+
+SMA200: 21.01
+
+Price vs SMA20: -1.93%
+
+20 Day Return: -4.77%
+
+ATR(14): 0.2625
+
+Volume Trend (均量比): 0.37x
+
   </div>
 </details>
 <details id='MGR-prompt'>
@@ -576,7 +1023,12 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-MGR'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 MGR 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 MGR 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -584,17 +1036,34 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: MGR
-today_close: 20.38
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 33.82
-macd_hist: -0.0453
-bb_status: 溫和下跌 (區間下方)
+=== MGR 量化數據 ===
+現價 (Close): 20.38
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 33.82
+MACD Histogram: -0.0453
+Bollinger Position (%B): 0.19
+Bollinger Width: 0.0626
+SMA20: 20.78
+SMA60: 21.20
+SMA200: 21.01
+Price vs SMA20: -1.93%
+20 Day Return: -4.77%
+ATR(14): 0.2625
+Volume Trend (均量比): 0.37x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -608,22 +1077,47 @@ bb_status: 溫和下跌 (區間下方)
 <details id='AFGC-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 24.32
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 24.32
 
 MACD Histogram: -0.0368
 
-Bollinger Bands Status: 溫和下跌 (區間下方)
+Bollinger Position (%B): 0.16
+
+Bollinger Width: 0.0573
+
+SMA20: 18.58
+
+SMA60: 18.78
+
+SMA200: 18.78
+
+Price vs SMA20: -1.95%
+
+20 Day Return: -3.93%
+
+ATR(14): 0.2031
+
+Volume Trend (均量比): 0.26x
+
   </div>
 </details>
 <details id='AFGC-prompt'>
@@ -632,7 +1126,12 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-AFGC'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 AFGC 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 AFGC 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -640,17 +1139,34 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: AFGC
-today_close: 18.22
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 24.32
-macd_hist: -0.0368
-bb_status: 溫和下跌 (區間下方)
+=== AFGC 量化數據 ===
+現價 (Close): 18.22
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 24.32
+MACD Histogram: -0.0368
+Bollinger Position (%B): 0.16
+Bollinger Width: 0.0573
+SMA20: 18.58
+SMA60: 18.78
+SMA200: 18.78
+Price vs SMA20: -1.95%
+20 Day Return: -3.93%
+ATR(14): 0.2031
+Volume Trend (均量比): 0.26x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -659,27 +1175,52 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 ALL-PB</span><span class='target-price-web'>26.10 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.01</span></span></div>
 <details id='ALL-PB-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>在2026年3月20日，針對ALL-PB的相關發行主體Allstate Corporation及其主要子公司，信用評級機構AM Best確認其財務實力評級為A+（優異），並將長期發行人信用評級維持在「a」級，展望為穩定。此評級的確認反映了Allstate Corporation穩健的財務健康狀況，顯示其財務體質良好。</div>
+  <div class='folding-content ai-content-web'>Allstate Corp.近期公布，2026年2月預估巨災損失為1.4億美元，使得1月至2月的總損失達到3.15億美元（稅前）。此財務資訊已於3月19日透過8-K文件正式披露，該文件亦包含保單生效數等資料。此外，Allstate旗下一單位因涉嫌拒絕支付500萬美元的石棉相關訴訟索賠，遭到破產受託人起訴。</div>
 </details>
 <details id='ALL-PB-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 47.99
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 47.99
 
 MACD Histogram: -0.0070
 
-Bollinger Bands Status: 溫和下跌 (區間下方)
+Bollinger Position (%B): 0.37
+
+Bollinger Width: 0.0092
+
+SMA20: 26.13
+
+SMA60: 26.10
+
+SMA200: 26.09
+
+Price vs SMA20: -0.12%
+
+20 Day Return: -0.15%
+
+ATR(14): 0.1605
+
+Volume Trend (均量比): 1.26x
+
   </div>
 </details>
 <details id='ALL-PB-prompt'>
@@ -688,7 +1229,12 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-ALL-PB'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 ALL-PB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 ALL-PB 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -696,17 +1242,34 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: ALL-PB
-today_close: 26.10
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 47.99
-macd_hist: -0.0070
-bb_status: 溫和下跌 (區間下方)
+=== ALL-PB 量化數據 ===
+現價 (Close): 26.10
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 47.99
+MACD Histogram: -0.0070
+Bollinger Position (%B): 0.37
+Bollinger Width: 0.0092
+SMA20: 26.13
+SMA60: 26.10
+SMA200: 26.09
+Price vs SMA20: -0.12%
+20 Day Return: -0.15%
+ATR(14): 0.1605
+Volume Trend (均量比): 1.26x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -715,27 +1278,52 @@ bb_status: 溫和下跌 (區間下方)
 <div class='target-title-web'><span>📌 HWCPZ</span><span class='target-price-web'>21.77 <span style='font-size:0.85em; color:#FF5252;'>▲ 0.06</span></span></div>
 <details id='HWCPZ-analysis'>
   <summary>🧠 點我看深度動態分析</summary>
-  <div class='folding-content ai-content-web'>Hancock Whitney Corporation宣布將於2026年4月21日市場收盤後公布2026年第一季財報，並將於同日舉行電話會議討論業績。此外，Murphy Middleton Hinkle & Parker Inc.在第四季度取得了Hancock Whitney Corporation的新部位，購買了17,181股，價值約109萬美元。</div>
+  <div class='folding-content ai-content-web'>Hancock Whitney Corporation近期動態顯示，公司已宣布將於2026年4月21日市場收盤後公布2026年第一季度財務業績，並隨後舉行電話會議。此外，公司於3月17日向SEC提交了例行的DEF 14A代理聲明。在市場方面，Hancock Whitney Corporation的6.25%次級債券（HWCPZ）近期做空興趣有所增加，反映出部分投資者看跌情緒。同時，技術分析指出HWCPZ短期內呈現下降趨勢。</div>
 </details>
 <details id='HWCPZ-tech'>
   <summary>📊 點我看客觀技術指標與 Context 數據</summary>
   <div class='folding-content tech-data-web'>
-<b>=== 市場 Context ===</b>
+<span class='tech-data-title'>=== 市場利率 / 信用環境 ===</span>
+10Y Treasury Yield: 4.33%
 
-S&P500 Close: 6591.90 (change: 0.54%)
+TLT Trend (20日): -3.48%
 
-10Y Bond Close: 4.33bp (change: -6.40bp)
+HYG Trend (20日): -1.29%
 
-VIX Close: 25.33 (change: -1.62)
+LQD Trend (20日): -2.34%
 
+PFF Trend (20日): -3.13%
 
-<b>=== 技術指標 ===</b>
+<span class='tech-data-title'>=== 市場風險情緒 ===</span>
+S&P500: 6591.90
 
-RSI (14): 27.65
+VIX: 25.33
+
+Dollar Index (UUP): 27.70
+
+<span class='tech-data-title'>=== 個股技術面 ===</span>
+RSI(14): 27.65
 
 MACD Histogram: -0.1414
 
-Bollinger Bands Status: 溫和下跌 (區間下方)
+Bollinger Position (%B): 0.10
+
+Bollinger Width: 0.1258
+
+SMA20: 22.93
+
+SMA60: 23.35
+
+SMA200: 23.10
+
+Price vs SMA20: -5.04%
+
+20 Day Return: -9.68%
+
+ATR(14): 0.5200
+
+Volume Trend (均量比): 1.12x
+
   </div>
 </details>
 <details id='HWCPZ-prompt'>
@@ -744,7 +1332,12 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
     <p style='font-size:0.85em; color:#A8DADC; margin-top:0;'>💡 點擊上方的【📋 點此複製】按鈕，即可將下方完整提示詞複製到剪貼簿，方便您直接貼上使用。</p>
     <div class='prompt-data-web' id='prompt-HWCPZ'>你是一位資深且專精於美國特別股投資的法人級證券分析師，同時也是客戶的「個人投資顧問」。
 
-你的任務是**綜合分析**以下提供的客觀技術面量化數據與市場 context。你需要根據這些數據，跳過模糊言論，直接對 HWCPZ 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+你的任務是綜合分析以下提供的量化數據與市場 Context。跳過模糊言論，直接對 HWCPZ 這檔特別股給出未來 3 個交易日的「專業趨勢走向預測與分析」。
+
+⚠️ 【重要分析權重排序】：
+請務必依照以下由大到小的邏輯權重進行評估：
+利率方向 > 信用風險 > 市場恐慌 > 特別股ETF趨勢 > 個股技術面
+（若大環境如利率或信用為負面，即便個股技術面轉強，也應給予較保守的評分與建議。）
 
 請依照以下結構撰寫法人級分析報告（限制 150 字內，繁體中文）：
 1. 法人級綜合評分 (0-100)：
@@ -752,17 +1345,34 @@ Bollinger Bands Status: 溫和下跌 (區間下方)
 3. 關鍵分析依據 (條列式核心依據):
 4. 給客戶的一句話建議：
 
-=== 📊 技術面量化數據 ===
-target_name: HWCPZ
-today_close: 21.77
-gspc_close: 6591.90 (change: 0.54%) (市場Context: S&P500指數)
-tnx_close: 4.33 (change: -6.40bp) (市場Context: 10年期美債殖利率，特別股敏感度高)
-vix_close: 25.33 (change: -1.62) (市場Context: 市場波動率恐慌指數)
-rsi_14: 27.65
-macd_hist: -0.1414
-bb_status: 溫和下跌 (區間下方)
+=== HWCPZ 量化數據 ===
+現價 (Close): 21.77
 
-請注意：分析應側重利率變化對特別股的影響，並給出明確專業判斷。</div>
+=== 市場利率 / 信用環境 ===
+10Y Treasury Yield: 4.33%
+TLT Trend (20日): -3.48%
+HYG Trend (20日): -1.29%
+LQD Trend (20日): -2.34%
+PFF Trend (20日): -3.13%
+
+=== 市場風險情緒 ===
+S&P500: 6591.90
+VIX: 25.33
+Dollar Index (UUP): 27.70
+
+=== 個股技術面 ===
+RSI(14): 27.65
+MACD Histogram: -0.1414
+Bollinger Position (%B): 0.10
+Bollinger Width: 0.1258
+SMA20: 22.93
+SMA60: 23.35
+SMA200: 23.10
+Price vs SMA20: -5.04%
+20 Day Return: -9.68%
+ATR(14): 0.5200
+Volume Trend (均量比): 1.12x
+</div>
     <p style='font-size:0.8em; color:#999999; margin-top:5px; text-align:center;'>欲客製化監控，請訂閱【i秘書】服務。</p>
   </div>
 </details>
@@ -772,13 +1382,11 @@ bb_status: 溫和下跌 (區間下方)
     </div></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // 驗證日拋金鑰
             const expectedToken = "35f0b811";
             const urlParams = new URLSearchParams(window.location.search);
             const userToken = urlParams.get('token');
             
             if (userToken === expectedToken) {
-                // 驗證成功，顯示內容
                 document.getElementById("loading-screen").style.display = "none";
                 document.getElementById("main-content").style.display = "block";
                 
@@ -796,15 +1404,13 @@ bb_status: 溫和下跌 (區間下方)
                     }
                 }
             } else {
-                // 驗證失敗 (可能是沒帶 Token，或是使用了昨天的過期書籤)
                 document.getElementById("loading-screen").style.display = "none";
                 document.getElementById("access-denied").style.display = "block";
             }
         });
 
-        // 一鍵複製功能
         function copyPrompt(event, elementId) {
-            event.stopPropagation(); // 防止點擊按鈕時開關摺疊面板
+            event.stopPropagation();
             var promptText = document.getElementById(elementId).innerText;
             
             navigator.clipboard.writeText(promptText).then(function() {
