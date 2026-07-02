@@ -1,0 +1,275 @@
+{
+    "metadata": {
+        "version": "Integrated_Forecast_v7.16_Parabolic_Wedge_Edition",
+        "run_datetime": "2026-07-02T11:46:29",
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "ticker": "2382.TW",
+        "raw_ohlcv_file": "2382_廣達_20260702_114629_ohlcv.json",
+        "chart_file": "2382_廣達_Chart_20260702_114629.png",
+        "pdf_file": "2382_廣達_PA_Analysis_20260702_114718.pdf"
+    },
+    "stock_profile": {
+        "stock_type": "大型權值波段股",
+        "market_cap_profile": "大型權值股",
+        "liquidity_profile": "流動性佳，適合分批布局與波段操作",
+        "volatility_profile": "中高波動，但通常較中小型題材股穩定",
+        "trading_style_bias": "波段、分批、順勢，不宜頻繁短打",
+        "theme_tags": [
+            "AI伺服器",
+            "雲端資料中心",
+            "大型權值股",
+            "外資指標股"
+        ],
+        "key_drivers": [
+            "NVDA 與美股 AI 伺服器供應鏈",
+            "外資買賣超",
+            "台股伺服器族群",
+            "大盤與電子權值股資金流"
+        ],
+        "risk_rules": [
+            "若外資連續賣超且跌破月線，降低波段評等",
+            "若美股 AI 供應鏈轉弱，避免追高",
+            "法人買超搭配價量突破時，可提高順勢權重"
+        ],
+        "analysis_weighting": {
+            "price_action": 0.25,
+            "chip": 0.3,
+            "sector_momentum": 0.2,
+            "macro_us_peer": 0.25
+        },
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "stock_eng_name": "Quanta",
+        "ticker": "2382.TW",
+        "core_business": "AI 伺服器、雲端資料中心、筆記型電腦代工、車用電子",
+        "industry_context": "廣達為全球 AI 伺服器與筆記型電腦代工龍頭，走勢受外資、投信、NVDA 與美系 CSP 資本支出影響。",
+        "us_peer_name": "AI 伺服器",
+        "tw_peer_name": "伺服器代工",
+        "negative_keywords": [
+            "面板",
+            "被動元件",
+            "記憶體",
+            "生技",
+            "營建",
+            "IC設計"
+        ],
+        "profile_source": "STOCK_CONFIGS",
+        "runtime_liquidity_filter_pass": true,
+        "runtime_avg_turnover_value": 13336729774.0,
+        "runtime_volatility_climax_flag": 0,
+        "runtime_gap_type": "Measuring(測量型缺口候選)",
+        "runtime_parabolic_wedge_flag": false,
+        "runtime_climax_type": "None"
+    },
+    "analysis_data": {
+        "current_close": 372.0,
+        "latest_trade_date": "2026-07-01",
+        "price_data_source": "FUGLEAPI",
+        "price_data_ticker": "2382",
+        "expected_latest_trade_date": "2026-07-01",
+        "actual_latest_trade_date": "2026-07-01",
+        "price_data_is_stale": false,
+        "price_data_warning": null,
+        "price_source_attempts": [
+            {
+                "source": "FUGLEAPI",
+                "status": "ok",
+                "rows": 240,
+                "latest_trade_date": "2026-07-01",
+                "is_stale": false,
+                "from": "2025-07-07",
+                "to": "2026-07-02"
+            }
+        ],
+        "limit_up_10_pct": 409.2,
+        "limit_down_10_pct": 334.8,
+        "sma_5": 367.1,
+        "sma_10": 371.0,
+        "sma_20": 376.4,
+        "sma_50": 346.66,
+        "sma_200": 300.4275,
+        "ema_20": 366.6010806249809,
+        "closing_strength_CLV": 0.44,
+        "volume_ratio": 0.98,
+        "price_action_overlap_ratio": 0.41,
+        "volatility_climax_flag": 0,
+        "pa_push_count": 1,
+        "ema20_gap": "無/區間震盪",
+        "micro_wedge": "無明顯特徵",
+        "bar_body_MM_Target_Up": "未觸發高潮K線",
+        "bar_body_MM_Target_Down": "未觸發高潮K線",
+        "truncated_structure": "多頭次級推動失敗 (Lower High 雙頂潛力)",
+        "gap_any_type": true,
+        "gap_density_score": 0.25,
+        "gap_direction": "Up",
+        "gap_size_pct": 0.27,
+        "gap_midpoint": 371.5,
+        "wick_gap_status": "無近期影線缺口",
+        "wick_gap_fill_status": "無",
+        "body_gap_status": "未回補Up實體缺口",
+        "body_gap_fill_status": "未回補",
+        "close_confirmed_gap_flag": true,
+        "line_chart_gap_flag": true,
+        "gap_status": "有未回補Up向實體缺口",
+        "gap_fill_speed": null,
+        "exhaustion_gap_flag": false,
+        "gap_type": "Measuring(測量型缺口候選)",
+        "gap_classification_reason": "Up向實體缺口尚未回補，未符合快速回補竭盡條件，且暫無明確區間突破脈絡；暫列測量型缺口候選。缺口大小約 0.27%。",
+        "gap_failure_condition": {
+            "direction": "Up",
+            "price": 371.0,
+            "midpoint": 371.5,
+            "condition": "若收盤跌破缺口下緣 371.0，或快速回補缺口中點 371.5 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。",
+            "action_hint": "多方缺口失效時，應降低追價權重，檢查 EMA20 與前低防守。"
+        },
+        "gap_MM_Target_Up": 409.2,
+        "gap_MM_Target_Down": "不適用",
+        "gap_support_resistance_level": 371.0,
+        "near_gap_target_flag": true,
+        "countertrend_forbidden_flag": false,
+        "broad_channel_flag": false,
+        "channel_start_target": "不適用",
+        "trend_control_shift": "未確認",
+        "first_reversal_warning": "無明顯第一次反轉警示",
+        "second_entry_signal": "可能空方 Second Entry / Lower High",
+        "second_entry_reason": "最近第二個有效高點 385.0 低於前一高點 386.5，屬 Lower High 二次進場候選；仍需後續 K 棒確認。",
+        "neckline_break_gap_flag": false,
+        "gap_retest_support_flag": false,
+        "avg_turnover_value": 13336729774.0,
+        "liquidity_filter_pass": true,
+        "parabolic_wedge_flag": false,
+        "climax_type": "None",
+        "follow_through_quality": "Unknown(未觸發拋物線/高潮候選)",
+        "max_loss_point": {
+            "price": null,
+            "condition": "未觸發拋物線楔型候選，暫不適用。",
+            "action_hint": "不適用"
+        },
+        "climax_bar_flag": false,
+        "climax_bar_body_ratio": 0.21,
+        "slope_acceleration_score": 0,
+        "post_climax_mode": "None",
+        "parabolic_wedge_reason": "未觸發拋物線楔型候選；trend=Sideways, body_ratio=0.21, CLV=0.44, slope_score=0, push=1, gap_type=Measuring(測量型缺口候選)。",
+        "us_peer_avg_pct": -2.75,
+        "NVDA_pct": -1.25,
+        "SMCI_pct": -5.73,
+        "DELL_pct": -1.44,
+        "HPE_pct": -2.57,
+        "tw_peer_avg_pct": -0.12,
+        "2317_pct": -0.55,
+        "3231_pct": -0.63,
+        "2356_pct": 0.3,
+        "6669_pct": 0.4,
+        "institutional_net_buy": 4669.6,
+        "margin_balance_change": 0.0
+    },
+    "portfolio": {
+        "total_shares": 200,
+        "avg_buy_price": 353.355,
+        "cash_balance": 86319.0
+    },
+    "prediction_tracker": {
+        "version": "Integrated_Forecast_v7.16_Parabolic_Wedge_Edition",
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "ticker": "2382.TW",
+        "run_datetime": "2026-07-02T11:46:29",
+        "base_date": "2026-07-01",
+        "base_close": 372.0,
+        "status": "pending",
+        "items": {
+            "T+1": {
+                "prediction_price": 372.0,
+                "prediction_direction": "Flat",
+                "actual_date": null,
+                "actual_close": null,
+                "actual_direction": null,
+                "actual_source": null,
+                "price_error": null,
+                "price_error_pct": null,
+                "direction_hit": null,
+                "updated_at": null
+            },
+            "T+2": {
+                "prediction_price": 373.0,
+                "prediction_direction": "Up",
+                "actual_date": null,
+                "actual_close": null,
+                "actual_direction": null,
+                "actual_source": null,
+                "price_error": null,
+                "price_error_pct": null,
+                "direction_hit": null,
+                "updated_at": null
+            },
+            "T+3": {
+                "prediction_price": 372.5,
+                "prediction_direction": "Flat",
+                "actual_date": null,
+                "actual_close": null,
+                "actual_direction": null,
+                "actual_source": null,
+                "price_error": null,
+                "price_error_pct": null,
+                "direction_hit": null,
+                "updated_at": null
+            }
+        },
+        "summary": {
+            "available_count": 0,
+            "direction_hit_count": 0,
+            "direction_hit_rate": null,
+            "avg_abs_price_error_pct": null
+        }
+    },
+    "news": {
+        "news_report_title": "廣達 (2382) 產業地位與未來展望預設分析",
+        "overall_sentiment": "中性偏樂觀",
+        "key_takeaways": [
+            "**核心業務穩固，AI伺服器為成長引擎**：廣達作為全球AI伺服器與筆記型電腦代工龍頭，其核心業務涵蓋AI伺服器、雲端資料中心、筆記型電腦代工及車用電子。尤其AI伺服器業務是未來主要成長動能。",
+            "**受外資與AI供應鏈影響深遠**：股價走勢高度受外資買賣超、NVIDIA (NVDA) 及美系雲端服務供應商 (CSP) 資本支出影響，為外資指標股。",
+            "**適合波段操作，留意法人動向**：屬於大型權值波段股，流動性佳，適合分批布局與波段操作，不宜頻繁短打。法人買超搭配價量突破時，可提高順勢權重。",
+            "**風險因子需關注**：需留意若外資連續賣超且跌破月線，或美股AI供應鏈轉弱，可能影響股價表現。"
+        ],
+        "events_summary": [
+            "本報告為廣達 (2382) 的預設摘要，基於其產業特性與市場定位進行分析，目前尚未有具體新聞事件拋轉。",
+            "廣達作為AI伺服器與雲端資料中心領域的關鍵供應商，其營運表現與全球科技趨勢，特別是AI產業發展息息相關。",
+            "後續將依據實際市場動態與公司公告更新具體新聞事件與分析。"
+        ]
+    },
+    "price": {
+        "prediction_T+1": {
+            "price_range": "369.0 - 375.0",
+            "outlook": "預期開盤受美股AI供應鏈疲軟影響，可能測試測量型缺口下緣371.0支撐。若支撐守穩，有望在法人買盤支撐下於此區間震盪或小幅反彈；若跌破，則壓力增加。",
+            "key_levels": {
+                "support": "371.0 (測量型缺口下緣)",
+                "resistance": "376.4 (SMA20)"
+            }
+        },
+        "prediction_T+2": {
+            "price_range": "368.0 - 378.0",
+            "outlook": "走勢將取決於T+1對371.0支撐的測試結果。若守穩，可能嘗試挑戰SMA20 (376.4)；若跌破，則可能進一步下探EMA20 (366.6)。考量潛在的空方Lower High訊號，上檔壓力較重。",
+            "key_levels": {
+                "support": "366.6 (EMA20)",
+                "resistance": "385.0 (潛在Lower High高點)"
+            }
+        },
+        "prediction_T+3": {
+            "price_range": "365.0 - 380.0",
+            "outlook": "若空方Lower High訊號確認（即股價未能突破385.0並持續走弱），則可能進入盤整或修正階段。反之，若市場情緒穩定且美股AI供應鏈止跌回穩，廣達有望在法人買盤推動下緩步築底或嘗試收復失地，但需觀察量能配合。",
+            "key_levels": {
+                "support": "360.0 (心理關卡)",
+                "resistance": "385.0 (Lower High)"
+            }
+        },
+        "portfolio_advice": {
+            "layout_strategy": {
+                "action": "減碼部分持股 / 嚴守停損",
+                "suggested_price_range": "372.0 - 375.0",
+                "stop_loss": "369.5",
+                "rationale": "廣達作為大型權值波段股，應以保護利潤和順勢操作為主。目前持股獲利，但面臨多空交錯訊號：\n\n1.  **利多因素**：存在一個測量型缺口(371.0為下緣支撐)，且近期法人買超金額達46.69億元，顯示機構資金仍有佈局意願。\n2.  **利空/警示因素**：美股AI伺服器供應鏈（如NVDA、SMCI）普遍走弱，對廣達形成外部壓力。技術面上出現『可能空方 Second Entry / Lower High』訊號（385.0低於前高386.5），以及『多頭次級推動失敗 (Lower High 雙頂潛力)』的截斷結構，暗示短期上漲動能受阻，存在回檔風險，且股價已跌破SMA20。\n\n綜合考量，雖然法人買超提供支撐，但美股連動性高，且技術面出現潛在反轉警示，建議採取保守策略，保護現有獲利。在372.0-375.0區間可考慮減碼部分持股，降低風險。對於剩餘部位，應將停損點設定在369.5，此價位略低於測量型缺口下緣371.0，一旦收盤跌破，表示缺口支撐失效，且空方Second Entry訊號可能確認，應果斷停損出場，避免獲利回吐甚至虧損。目前不建議追高或加碼，應等待市場情緒穩定、美股AI供應鏈止跌回穩，或股價突破385.0並站穩後再評估。"
+            }
+        }
+    }
+}
