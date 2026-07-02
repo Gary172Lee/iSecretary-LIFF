@@ -1,6 +1,6 @@
 {
-    "version": "Integrated_Forecast_v7.14_Fugle_360D_MinRows_Edition",
-    "updated_at": "2026-07-02T09:36:29",
+    "version": "Integrated_Forecast_v7.16_Parabolic_Wedge_Edition",
+    "updated_at": "2026-07-02T11:48:16",
     "timezone": "Asia/Taipei",
     "description": "固定入口檔。ChatGPT 排程請先讀取本檔，再依 files[].analysis_json 與 files[].chart_png 讀取當日最新資料。",
     "github_repo": "Gary172Lee/iSecretary-LIFF",
@@ -18,7 +18,7 @@
             "stock_code": "2382",
             "stock_name": "廣達",
             "ticker": "2382.TW",
-            "run_datetime": "2026-07-02T09:34:32",
+            "run_datetime": "2026-07-02T11:46:29",
             "file_date": "2026-07-02",
             "latest_trade_date": "2026-07-01",
             "expected_latest_trade_date": "2026-07-01",
@@ -29,24 +29,41 @@
             "current_close": 372.0,
             "limit_up_10_pct": 409.2,
             "limit_down_10_pct": 334.8,
+            "gap_type": "Measuring(測量型缺口候選)",
+            "gap_failure_condition": {
+                "direction": "Up",
+                "price": 371.0,
+                "midpoint": 371.5,
+                "condition": "若收盤跌破缺口下緣 371.0，或快速回補缺口中點 371.5 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。",
+                "action_hint": "多方缺口失效時，應降低追價權重，檢查 EMA20 與前低防守。"
+            },
+            "second_entry_signal": "可能空方 Second Entry / Lower High",
+            "parabolic_wedge_flag": false,
+            "climax_type": "None",
+            "follow_through_quality": "Unknown(未觸發拋物線/高潮候選)",
+            "max_loss_point": {
+                "price": null,
+                "condition": "未觸發拋物線楔型候選，暫不適用。",
+                "action_hint": "不適用"
+            },
             "profile_source": "STOCK_CONFIGS",
             "stock_type": "大型權值波段股",
-            "analysis_json": "IntegratedForecast/json/2382_廣達_20260702_093432_analysis.json",
-            "chart_png": "IntegratedForecast/png/2382_廣達_Chart_20260702_093432.png",
-            "raw_ohlcv": "IntegratedForecast/raw_ohlcv/2382_廣達_20260702_093432_ohlcv.json",
-            "pdf_file": "2382_廣達_PA_Analysis_20260702_093533.pdf",
+            "analysis_json": "IntegratedForecast/json/2382_廣達_20260702_114629_analysis.json",
+            "chart_png": "IntegratedForecast/png/2382_廣達_Chart_20260702_114629.png",
+            "raw_ohlcv": "IntegratedForecast/raw_ohlcv/2382_廣達_20260702_114629_ohlcv.json",
+            "pdf_file": "2382_廣達_PA_Analysis_20260702_114718.pdf",
             "local_files": {
-                "analysis_json": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\json\\2382_廣達_20260702_093432_analysis.json",
-                "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\2382_廣達_Chart_20260702_093432.png",
-                "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\2382_廣達_20260702_093432_ohlcv.json",
-                "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\2382_廣達_PA_Analysis_20260702_093533.pdf"
+                "analysis_json": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\json\\2382_廣達_20260702_114629_analysis.json",
+                "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\2382_廣達_Chart_20260702_114629.png",
+                "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\2382_廣達_20260702_114629_ohlcv.json",
+                "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\2382_廣達_PA_Analysis_20260702_114718.pdf"
             }
         },
         {
             "stock_code": "3081",
             "stock_name": "聯亞",
             "ticker": "3081.TWO",
-            "run_datetime": "2026-07-02T09:35:39",
+            "run_datetime": "2026-07-02T11:47:25",
             "file_date": "2026-07-02",
             "latest_trade_date": "2026-07-01",
             "expected_latest_trade_date": "2026-07-01",
@@ -57,17 +74,34 @@
             "current_close": 1980.0,
             "limit_up_10_pct": 2178.0,
             "limit_down_10_pct": 1782.0,
+            "gap_type": "Measuring(測量型缺口候選)",
+            "gap_failure_condition": {
+                "direction": "Down",
+                "price": 2120.0,
+                "midpoint": 2100.0,
+                "condition": "若收盤站回缺口上緣 2120.0，或快速回補缺口中點 2100.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。",
+                "action_hint": "空方缺口失效時，應降低續跌權重，檢查是否形成反彈或反向缺口。"
+            },
+            "second_entry_signal": "可能空方 Second Entry / Lower High",
+            "parabolic_wedge_flag": false,
+            "climax_type": "None",
+            "follow_through_quality": "Unknown(未觸發拋物線/高潮候選)",
+            "max_loss_point": {
+                "price": null,
+                "condition": "未觸發拋物線楔型候選，暫不適用。",
+                "action_hint": "不適用"
+            },
             "profile_source": "STOCK_CONFIGS",
             "stock_type": "中小型高波動題材股",
-            "analysis_json": "IntegratedForecast/json/3081_聯亞_20260702_093539_analysis.json",
-            "chart_png": "IntegratedForecast/png/3081_聯亞_Chart_20260702_093540.png",
-            "raw_ohlcv": "IntegratedForecast/raw_ohlcv/3081_聯亞_20260702_093539_ohlcv.json",
-            "pdf_file": "3081_聯亞_PA_Analysis_20260702_093622.pdf",
+            "analysis_json": "IntegratedForecast/json/3081_聯亞_20260702_114725_analysis.json",
+            "chart_png": "IntegratedForecast/png/3081_聯亞_Chart_20260702_114726.png",
+            "raw_ohlcv": "IntegratedForecast/raw_ohlcv/3081_聯亞_20260702_114725_ohlcv.json",
+            "pdf_file": "3081_聯亞_PA_Analysis_20260702_114809.pdf",
             "local_files": {
-                "analysis_json": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\json\\3081_聯亞_20260702_093539_analysis.json",
-                "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\3081_聯亞_Chart_20260702_093540.png",
-                "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\3081_聯亞_20260702_093539_ohlcv.json",
-                "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\3081_聯亞_PA_Analysis_20260702_093622.pdf"
+                "analysis_json": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\json\\3081_聯亞_20260702_114725_analysis.json",
+                "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\3081_聯亞_Chart_20260702_114726.png",
+                "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\3081_聯亞_20260702_114725_ohlcv.json",
+                "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\3081_聯亞_PA_Analysis_20260702_114809.pdf"
             }
         }
     ]
