@@ -1,7 +1,8 @@
 {
-    "update_time": "2026-07-06 14:31:12",
+    "update_time": "2026-07-06 15:00:28",
     "timezone": "Asia/Taipei",
     "strategy_version": "v3.3_Direct_Buy_Only_Shared_PA",
+    "engine_generation": "fetch_and_filter_v3.3_direct_buy",
     "price_action_engine_enabled": true,
     "candidate_policy": "direct_buy_only",
     "direct_buy_gate": {
@@ -30,14 +31,6 @@
                 "count": 2
             },
             {
-                "reason": "風險報酬比不足或缺值：0.74",
-                "count": 1
-            },
-            {
-                "reason": "NeedSecondEntry 但尚未 Second Entry Confirmed",
-                "count": 1
-            },
-            {
                 "reason": "分數低於 70",
                 "count": 1
             },
@@ -52,6 +45,18 @@
             {
                 "reason": "Engine 要求等待",
                 "count": 1
+            },
+            {
+                "reason": "風險報酬比不足或缺值：0.74",
+                "count": 1
+            },
+            {
+                "reason": "NeedSecondEntry 但尚未 Second Entry Confirmed",
+                "count": 1
+            },
+            {
+                "reason": "risk_reward_ratio_below_1",
+                "count": 1
             }
         ],
         "top_rejected_candidates": [
@@ -64,14 +69,84 @@
                 "pattern": "Sell Climax V-Reversal (恐慌高潮)",
                 "entry_type": "Fast Entry",
                 "direction_alignment": "BullishAligned",
-                "wedge_entry_permission": "NeedSecondEntry",
-                "entry_timing_mode": "SecondEntry",
+                "engine_generation": "fetch_and_filter_v3.3_direct_buy",
+                "direct_buy_signal": false,
+                "direct_buy_blocker": true,
+                "direct_buy_blockers": [
+                    "風險報酬比不足或缺值：0.74",
+                    "NeedSecondEntry 但尚未 Second Entry Confirmed",
+                    "尚未達到可直接進場的 First/Second Entry 條件",
+                    "risk_reward_ratio_below_1"
+                ],
+                "direct_buy_reason": "",
+                "direct_buy_reject_reason": "風險報酬比不足或缺值：0.74 | NeedSecondEntry 但尚未 Second Entry Confirmed | 尚未達到可直接進場的 First/Second Entry 條件",
+                "price_action_engine_version": "0.1.0",
+                "price_action_knowledge_version": "1.3",
+                "price_action_engine_status": "success",
                 "wedge_quality_score": 57,
+                "wedge_quality_subscores": {
+                    "three_push_score": 25,
+                    "overlap_score": 12,
+                    "push_shrinking_score": 0,
+                    "second_entry_score": 20,
+                    "signal_bar_score": 0,
+                    "narrow_channel_penalty": 0,
+                    "total_score": 57,
+                    "notes": [
+                        "三推結構分數=25",
+                        "重疊率分數=12",
+                        "Second Entry 結構加分"
+                    ]
+                },
+                "wedge_overlap_quality": "Medium",
+                "narrow_channel_wedge_invalid_flag": false,
                 "signal_bar_quality": "None",
+                "entry_timing_mode": "SecondEntry",
+                "wedge_entry_permission": "NeedSecondEntry",
+                "wedge_confluence_type": "None",
+                "first_entry_allowed_reason": [],
+                "first_entry_block_reason": [
+                    "WedgeQualityScore<70",
+                    "OverlapNotHigh",
+                    "SignalBarNotStrong",
+                    "EngineDidNotAllowFirstEntry"
+                ],
+                "second_leg_trap_flag": false,
+                "mm_before_countertrend_required": false,
+                "stop_loss_reference": {
+                    "price": 380.5,
+                    "basis": "gap_failure_condition",
+                    "condition": "若收盤跌破缺口下緣 380.5，或快速回補缺口中點 383.5 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。"
+                },
                 "risk_reward_ratio": 0.74,
                 "target_return_pct": 10.0,
+                "position_sizing_hint": "訊號未完整，建議觀察或小部位，避免追價與一次滿倉。",
+                "gap_type": "Measuring(測量型缺口候選)",
+                "gap_classification_reason": "未回補缺口但重疊率不足以確認 Breakaway，暫歸類測量型候選；ATR ratio=0.18。",
+                "gap_failure_condition": {
+                    "direction": "Up",
+                    "price": 380.5,
+                    "midpoint": 383.5,
+                    "condition": "若收盤跌破缺口下緣 380.5，或快速回補缺口中點 383.5 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。",
+                    "action_hint": "多方缺口失效時，應降低追價權重。"
+                },
+                "gap_atr_ratio": 0.18,
+                "gap_direction": null,
+                "gap_fill_speed": null,
+                "breakout_context_flag": false,
                 "second_entry_signal": "可能多方 Second Entry / Higher Low",
-                "direct_buy_reject_reason": "風險報酬比不足或缺值：0.74 | NeedSecondEntry 但尚未 Second Entry Confirmed | 尚未達到可直接進場的 First/Second Entry 條件"
+                "second_entry_reason": "最近第二個有效低點 332.5 高於前一低點 283.5，屬 Higher Low 二次進場候選；仍需後續 K 棒確認。",
+                "parabolic_wedge_flag": false,
+                "climax_type": "None",
+                "follow_through_quality": "Unknown(未觸發拋物線/高潮候選)",
+                "max_loss_point": {
+                    "price": null,
+                    "condition": "未觸發拋物線楔型候選，暫不適用。",
+                    "action_hint": "不適用"
+                },
+                "slippage_warning": "Low/Normal",
+                "liquidity_filter_pass": true,
+                "avg_turnover_value": 865297534.0
             },
             {
                 "ticker": "2409",
@@ -82,16 +157,92 @@
                 "pattern": "⚡ Micro Wedge (微型衰竭底)",
                 "entry_type": "Second Entry Required",
                 "direction_alignment": "BullishAligned",
-                "wedge_entry_permission": "NoCountertrend",
-                "entry_timing_mode": "Wait",
+                "engine_generation": "fetch_and_filter_v3.3_direct_buy",
+                "direct_buy_signal": false,
+                "direct_buy_blocker": true,
+                "direct_buy_blockers": [
+                    "分數低於 70",
+                    "楔型失敗 MM 到達前不宜逆勢",
+                    "NoCountertrend 禁止逆勢",
+                    "Engine 要求等待",
+                    "尚未達到可直接進場的 First/Second Entry 條件"
+                ],
+                "direct_buy_reason": "",
+                "direct_buy_reject_reason": "分數低於 70 | 楔型失敗 MM 到達前不宜逆勢 | NoCountertrend 禁止逆勢 | Engine 要求等待 | 尚未達到可直接進場的 First/Second Entry 條件",
+                "price_action_engine_version": "0.1.0",
+                "price_action_knowledge_version": "1.3",
+                "price_action_engine_status": "success",
                 "wedge_quality_score": 57,
+                "wedge_quality_subscores": {
+                    "three_push_score": 25,
+                    "overlap_score": 12,
+                    "push_shrinking_score": 0,
+                    "second_entry_score": 20,
+                    "signal_bar_score": 0,
+                    "narrow_channel_penalty": 0,
+                    "total_score": 57,
+                    "notes": [
+                        "三推結構分數=25",
+                        "重疊率分數=12",
+                        "Second Entry 結構加分"
+                    ]
+                },
+                "wedge_overlap_quality": "Medium",
+                "narrow_channel_wedge_invalid_flag": false,
                 "signal_bar_quality": "None",
+                "entry_timing_mode": "Wait",
+                "wedge_entry_permission": "NoCountertrend",
+                "wedge_confluence_type": "None",
+                "first_entry_allowed_reason": [],
+                "first_entry_block_reason": [
+                    "WedgeQualityScore<70",
+                    "OverlapNotHigh",
+                    "SignalBarNotStrong",
+                    "CountertrendForbiddenByStrongTrendOrLowOverlap",
+                    "MeasuredMoveRequiredBeforeCountertrend",
+                    "EngineTimingModeWait",
+                    "EnginePermissionNoCountertrend",
+                    "EngineDidNotAllowFirstEntry"
+                ],
+                "second_leg_trap_flag": false,
+                "mm_before_countertrend_required": true,
+                "stop_loss_reference": {
+                    "price": 30.05,
+                    "basis": "gap_failure_condition",
+                    "condition": "若收盤跌破缺口下緣 30.05，或快速回補缺口中點 30.22 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。"
+                },
                 "risk_reward_ratio": 1.92,
                 "target_return_pct": 13.09,
+                "position_sizing_hint": "訊號未完整，建議觀察或小部位，避免追價與一次滿倉。",
+                "gap_type": "Measuring(測量型缺口候選)",
+                "gap_classification_reason": "未回補缺口但重疊率不足以確認 Breakaway，暫歸類測量型候選；ATR ratio=0.14。",
+                "gap_failure_condition": {
+                    "direction": "Up",
+                    "price": 30.05,
+                    "midpoint": 30.22,
+                    "condition": "若收盤跌破缺口下緣 30.05，或快速回補缺口中點 30.22 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。",
+                    "action_hint": "多方缺口失效時，應降低追價權重。"
+                },
+                "gap_atr_ratio": 0.14,
+                "gap_direction": null,
+                "gap_fill_speed": null,
+                "breakout_context_flag": false,
                 "second_entry_signal": "可能多方 Second Entry / Higher Low",
-                "direct_buy_reject_reason": "分數低於 70 | 楔型失敗 MM 到達前不宜逆勢 | NoCountertrend 禁止逆勢 | Engine 要求等待 | 尚未達到可直接進場的 First/Second Entry 條件"
+                "second_entry_reason": "最近第二個有效低點 29.6 高於前一低點 27.6，屬 Higher Low 二次進場候選；仍需後續 K 棒確認。",
+                "parabolic_wedge_flag": false,
+                "climax_type": "None",
+                "follow_through_quality": "Unknown(未觸發拋物線/高潮候選)",
+                "max_loss_point": {
+                    "price": null,
+                    "condition": "未觸發拋物線楔型候選，暫不適用。",
+                    "action_hint": "不適用"
+                },
+                "slippage_warning": "Low/Normal",
+                "liquidity_filter_pass": true,
+                "avg_turnover_value": 13878002440.0
             }
-        ]
+        ],
+        "field_policy": "top_rejected_candidates includes full PriceAction Engine fields for near-miss analysis"
     },
     "price_action_candidates": []
 }
