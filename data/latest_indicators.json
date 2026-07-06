@@ -1,5 +1,5 @@
 {
-    "update_time": "2026-07-06 11:12:52",
+    "update_time": "2026-07-06 13:58:36",
     "timezone": "Asia/Taipei",
     "strategy_version": "v3.3_Direct_Buy_Only_Shared_PA",
     "price_action_engine_enabled": true,
@@ -18,9 +18,80 @@
     },
     "scan_summary": {
         "universe_count": 125,
-        "raw_candidate_count": 5,
+        "raw_candidate_count": 2,
         "direct_buy_candidate_count": 0,
-        "filtered_out_count": 5
+        "filtered_out_count": 2
+    },
+    "rejected_candidate_summary": {
+        "rejected_count": 2,
+        "top_reject_reasons": [
+            {
+                "reason": "尚未達到可直接進場的 First/Second Entry 條件",
+                "count": 2
+            },
+            {
+                "reason": "風險報酬比不足或缺值：0.74",
+                "count": 1
+            },
+            {
+                "reason": "NeedSecondEntry 但尚未 Second Entry Confirmed",
+                "count": 1
+            },
+            {
+                "reason": "分數低於 70",
+                "count": 1
+            },
+            {
+                "reason": "楔型失敗 MM 到達前不宜逆勢",
+                "count": 1
+            },
+            {
+                "reason": "NoCountertrend 禁止逆勢",
+                "count": 1
+            },
+            {
+                "reason": "Engine 要求等待",
+                "count": 1
+            }
+        ],
+        "top_rejected_candidates": [
+            {
+                "ticker": "6138",
+                "stock_code": "6138",
+                "stock_name": "茂達",
+                "score": 84,
+                "candidate_score": 84,
+                "pattern": "Sell Climax V-Reversal (恐慌高潮)",
+                "entry_type": "Fast Entry",
+                "direction_alignment": "BullishAligned",
+                "wedge_entry_permission": "NeedSecondEntry",
+                "entry_timing_mode": "SecondEntry",
+                "wedge_quality_score": 57,
+                "signal_bar_quality": "None",
+                "risk_reward_ratio": 0.74,
+                "target_return_pct": 10.0,
+                "second_entry_signal": "可能多方 Second Entry / Higher Low",
+                "direct_buy_reject_reason": "風險報酬比不足或缺值：0.74 | NeedSecondEntry 但尚未 Second Entry Confirmed | 尚未達到可直接進場的 First/Second Entry 條件"
+            },
+            {
+                "ticker": "2409",
+                "stock_code": "2409",
+                "stock_name": "友達",
+                "score": 14,
+                "candidate_score": 14,
+                "pattern": "⚡ Micro Wedge (微型衰竭底)",
+                "entry_type": "Second Entry Required",
+                "direction_alignment": "BullishAligned",
+                "wedge_entry_permission": "NoCountertrend",
+                "entry_timing_mode": "Wait",
+                "wedge_quality_score": 57,
+                "signal_bar_quality": "None",
+                "risk_reward_ratio": 1.92,
+                "target_return_pct": 13.09,
+                "second_entry_signal": "可能多方 Second Entry / Higher Low",
+                "direct_buy_reject_reason": "分數低於 70 | 楔型失敗 MM 到達前不宜逆勢 | NoCountertrend 禁止逆勢 | Engine 要求等待 | 尚未達到可直接進場的 First/Second Entry 條件"
+            }
+        ]
     },
     "price_action_candidates": []
 }
