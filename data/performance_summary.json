@@ -1,21 +1,24 @@
 {
-    "last_updated": "2026-07-07 14:31:07",
+    "last_updated": "2026-07-07 15:04:54",
     "timezone": "Asia/Taipei",
     "strategy_version": "v3.3_Direct_Buy_Only_Shared_PA",
     "engine_generation": "fetch_and_filter_v3.3_direct_buy",
-    "total_records": 0,
-    "tracking_records": 0,
+    "total_records": 2,
+    "tracking_records": 2,
     "completed_records": 0,
     "sample_status": {
         "engine_generation": "fetch_and_filter_v3.3_direct_buy",
-        "current_generation_records": 0,
+        "current_generation_records": 2,
         "current_generation_completed_records": 0,
         "direct_buy_records": 0,
         "direct_buy_completed_records": 0,
+        "top_rejected_tracking_records": 2,
+        "top_rejected_completed_records": 0,
         "legacy_versions_removed": true,
         "min_completed_sample": 30,
         "current_generation_sample_warning": true,
         "direct_buy_sample_warning": true,
+        "rejected_sample_warning": true,
         "warning_message": "目前只保留 fetch_and_filter_v3.3_direct_buy；完成樣本未達 30 筆，分組勝率僅供結構檢查，不可作為策略有效性結論。"
     },
     "overall": {
@@ -25,22 +28,246 @@
         "avg_mfe_5d_pct": null,
         "avg_mae_5d_pct": null
     },
-    "by_direct_buy_signal": {},
-    "by_direct_buy_blocker": {},
-    "by_direction_alignment": {},
-    "by_target_return_bucket": {},
-    "by_entry_type": {},
-    "by_score_bucket": {},
-    "by_pattern": {},
-    "by_trend_regime": {},
-    "by_wedge_entry_permission": {},
-    "by_entry_timing_mode": {},
-    "by_wedge_quality_bucket": {},
-    "by_signal_bar_quality": {},
-    "by_second_entry_signal": {},
-    "by_narrow_channel_wedge_invalid_flag": {},
-    "by_risk_reward_bucket": {},
-    "by_gap_type": {},
-    "by_breakout_context_flag": {},
-    "by_climax_type": {}
+    "by_tracking_source": {
+        "raw_rejected_candidate": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_direct_buy_signal": {
+        "False": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_direct_buy_blocker": {
+        "True": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_rejected_bucket": {
+        "bearish_conflict": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_target_return_bucket": {
+        "target_return_pct_negative": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_target_return_negative": {
+        "True": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_bearish_conflict_blocker": {
+        "True": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_second_entry_unconfirmed_blocker": {
+        "True": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_direction_alignment": {
+        "BearishConflict": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_entry_type": {
+        "Second Entry Required": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_score_bucket": {
+        "score_below_60": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_pattern": {
+        "Second Entry": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_trend_regime": {
+        "Unknown": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_wedge_entry_permission": {
+        "NeedSecondEntry": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_entry_timing_mode": {
+        "SecondEntry": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        },
+        "Wait": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_wedge_quality_bucket": {
+        "Low_below_40": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        },
+        "Medium_40_69": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_signal_bar_quality": {
+        "None": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_second_entry_signal": {
+        "Bearish": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_narrow_channel_wedge_invalid_flag": {
+        "False": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_risk_reward_bucket": {
+        "RR_1_5_to_2": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        },
+        "Unknown": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_gap_type": {
+        "Breakaway(突破型缺口)": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        },
+        "Measuring(測量型缺口候選)": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_breakout_context_flag": {
+        "False": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        },
+        "True": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    },
+    "by_climax_type": {
+        "None": {
+            "completed": 0,
+            "win_rate": null,
+            "avg_return_5d_pct": null,
+            "avg_mfe_5d_pct": null,
+            "avg_mae_5d_pct": null
+        }
+    }
 }

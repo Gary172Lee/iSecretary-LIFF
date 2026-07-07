@@ -1,5 +1,5 @@
 {
-    "update_time": "2026-07-07 14:31:07",
+    "update_time": "2026-07-07 15:04:54",
     "timezone": "Asia/Taipei",
     "strategy_version": "v3.3_Direct_Buy_Only_Shared_PA",
     "engine_generation": "fetch_and_filter_v3.3_direct_buy",
@@ -43,6 +43,26 @@
                 "count": 2
             },
             {
+                "reason": "target_return_pct_negative",
+                "count": 2
+            },
+            {
+                "reason": "target_return_negative_blocker",
+                "count": 2
+            },
+            {
+                "reason": "bearish_conflict_blocker",
+                "count": 2
+            },
+            {
+                "reason": "second_entry_unconfirmed_blocker",
+                "count": 2
+            },
+            {
+                "reason": "low_quality_wedge_blocker",
+                "count": 2
+            },
+            {
                 "reason": "風險報酬比不足或缺值：None",
                 "count": 1
             },
@@ -53,22 +73,12 @@
             {
                 "reason": "risk_reward_ratio_null",
                 "count": 1
-            },
+            }
+        ],
+        "rejected_bucket_counts": [
             {
-                "reason": "MM 目標報酬未達 10.0%：-14.9",
-                "count": 1
-            },
-            {
-                "reason": "楔型失敗 MM 到達前不宜逆勢",
-                "count": 1
-            },
-            {
-                "reason": "Engine 要求等待",
-                "count": 1
-            },
-            {
-                "reason": "楔型品質低且無 Signal Bar",
-                "count": 1
+                "bucket": "bearish_conflict",
+                "count": 2
             }
         ],
         "top_rejected_candidates": [
@@ -81,7 +91,10 @@
                 "pattern": "🎯 Second Entry (雙底二次確認)",
                 "entry_type": "Second Entry Required",
                 "direction_alignment": "BearishConflict",
+                "symbol": "2881.TW",
+                "t0_close": 123.0,
                 "engine_generation": "fetch_and_filter_v3.3_direct_buy",
+                "tracking_source": "raw_rejected_candidate",
                 "direct_buy_signal": false,
                 "direct_buy_blocker": true,
                 "direct_buy_blockers": [
@@ -91,7 +104,24 @@
                     "MM 目標報酬未達 10.0%：-8.0",
                     "NeedSecondEntry 但尚未 Second Entry Confirmed",
                     "尚未達到可直接進場的 First/Second Entry 條件",
-                    "risk_reward_ratio_null"
+                    "risk_reward_ratio_null",
+                    "target_return_pct_negative",
+                    "target_return_negative_blocker",
+                    "bearish_conflict_blocker",
+                    "second_entry_unconfirmed_blocker",
+                    "low_quality_wedge_blocker"
+                ],
+                "bearish_conflict_blocker": true,
+                "target_return_negative_blocker": true,
+                "second_entry_unconfirmed_blocker": true,
+                "target_return_pct_negative": true,
+                "target_return_pct_bucket": "target_return_pct_negative",
+                "rejected_bucket": "bearish_conflict",
+                "rejected_bucket_reasons": [
+                    "方向/目標與做多假設衝突",
+                    "RR 缺值或低於 1",
+                    "Second Entry 尚未確認",
+                    "分數或楔型品質不足"
                 ],
                 "direct_buy_reason": "",
                 "direct_buy_reject_reason": "方向未對齊做多：BearishConflict | 分數低於 70 | 風險報酬比不足或缺值：None | MM 目標報酬未達 10.0%：-8.0 | NeedSecondEntry 但尚未 Second Entry Confirmed | 尚未達到可直接進場的 First/Second Entry 條件",
@@ -172,7 +202,10 @@
                 "pattern": "🎯 Second Entry (雙底二次確認)",
                 "entry_type": "Second Entry Required",
                 "direction_alignment": "BearishConflict",
+                "symbol": "2882.TW",
+                "t0_close": 97.0,
                 "engine_generation": "fetch_and_filter_v3.3_direct_buy",
+                "tracking_source": "raw_rejected_candidate",
                 "direct_buy_signal": false,
                 "direct_buy_blocker": true,
                 "direct_buy_blockers": [
@@ -183,7 +216,25 @@
                     "NeedSecondEntry 但尚未 Second Entry Confirmed",
                     "Engine 要求等待",
                     "楔型品質低且無 Signal Bar",
-                    "尚未達到可直接進場的 First/Second Entry 條件"
+                    "尚未達到可直接進場的 First/Second Entry 條件",
+                    "target_return_pct_negative",
+                    "target_return_negative_blocker",
+                    "bearish_conflict_blocker",
+                    "second_entry_unconfirmed_blocker",
+                    "no_countertrend_blocker",
+                    "low_quality_wedge_blocker"
+                ],
+                "bearish_conflict_blocker": true,
+                "target_return_negative_blocker": true,
+                "second_entry_unconfirmed_blocker": true,
+                "target_return_pct_negative": true,
+                "target_return_pct_bucket": "target_return_pct_negative",
+                "rejected_bucket": "bearish_conflict",
+                "rejected_bucket_reasons": [
+                    "方向/目標與做多假設衝突",
+                    "NoCountertrend / Wait / MM before countertrend",
+                    "Second Entry 尚未確認",
+                    "分數或楔型品質不足"
                 ],
                 "direct_buy_reason": "",
                 "direct_buy_reject_reason": "方向未對齊做多：BearishConflict | 分數低於 70 | MM 目標報酬未達 10.0%：-14.9 | 楔型失敗 MM 到達前不宜逆勢 | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件",
@@ -257,7 +308,8 @@
                 "avg_turnover_value": 4647558232.0
             }
         ],
-        "field_policy": "top_rejected_candidates includes full PriceAction Engine fields for near-miss analysis"
+        "field_policy": "top_rejected_candidates includes full PriceAction Engine fields and rejected_bucket for near-miss analysis",
+        "tracking_policy": "performance_audit tracks top_rejected_candidates for T+1~T+5 follow-up"
     },
     "price_action_candidates": []
 }
