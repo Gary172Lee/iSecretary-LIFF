@@ -8,7 +8,7 @@
         "raw_ohlcv_file": "2382_廣達_20260707_171756_ohlcv.json",
         "chart_file": "2382_廣達_Chart_20260707_171756.png",
         "pdf_file": "2382_廣達_PA_Analysis_20260707_171840.pdf",
-        "last_tracker_update": "2026-07-13T08:11:44",
+        "last_tracker_update": "2026-07-14T08:11:33",
         "tracker_backfill_source": "GitHub",
         "tracker_backfill_version": "v7.24_Gap_Entry_ActualDate_Repair"
     },
@@ -416,30 +416,31 @@
             "T+3": {
                 "prediction_price": 377.0,
                 "prediction_direction": "Up",
-                "actual_date": null,
-                "actual_close": null,
-                "actual_direction": null,
-                "actual_source": null,
-                "price_error": null,
-                "price_error_pct": null,
-                "direction_hit": null,
-                "updated_at": null
+                "actual_date": "2026-07-13",
+                "actual_close": 378.0,
+                "actual_direction": "Up",
+                "actual_source": "FUGLEAPI:2382",
+                "price_error": 1.0,
+                "price_error_pct": 0.26,
+                "direction_hit": true,
+                "updated_at": "2026-07-14T08:11:33",
+                "actual_return_pct": 1.34
             }
         },
         "summary": {
-            "available_count": 2,
-            "direction_hit_count": 1,
-            "direction_hit_rate": 0.5,
-            "avg_abs_price_error_pct": 0.67,
-            "observed_return_count": 1,
-            "avg_return_pct": 0.13,
-            "mfe_5d_pct": 0.13,
+            "available_count": 3,
+            "direction_hit_count": 2,
+            "direction_hit_rate": 0.6667,
+            "avg_abs_price_error_pct": 0.53,
+            "observed_return_count": 2,
+            "avg_return_pct": 0.74,
+            "mfe_5d_pct": 1.34,
             "mae_5d_pct": 0.13
         },
         "breakout_backtest": {
-            "observed_return_count": 1,
-            "avg_return_pct": 0.13,
-            "mfe_5d_pct": 0.13,
+            "observed_return_count": 2,
+            "avg_return_pct": 0.74,
+            "mfe_5d_pct": 1.34,
             "mae_5d_pct": 0.13,
             "status": "ready_for_aggregation",
             "analysis_hint": "用於後續彙總比較 breakout_follow_through_score、FadeBreakout、counterparty_profitability_score>=70 之 T+1~T+5 平均報酬與最大回撤。"

@@ -10,7 +10,7 @@
         "raw_ohlcv_file": "3081_聯亞_20260709_ohlcv.json",
         "chart_file": "3081_聯亞_Chart_20260709.png",
         "pdf_file": "3081_聯亞_PA_Analysis_20260709.pdf",
-        "last_tracker_update": "2026-07-13T08:10:49",
+        "last_tracker_update": "2026-07-14T08:11:14",
         "tracker_backfill_source": "GitHub",
         "tracker_backfill_version": "v7.24_Gap_Entry_ActualDate_Repair"
     },
@@ -433,15 +433,15 @@
             "T+2": {
                 "prediction_price": 2060.0,
                 "prediction_direction": "Down",
-                "actual_date": null,
-                "actual_close": null,
-                "actual_direction": null,
-                "actual_source": null,
-                "actual_return_pct": null,
-                "price_error": null,
-                "price_error_pct": null,
-                "direction_hit": null,
-                "updated_at": null
+                "actual_date": "2026-07-13",
+                "actual_close": 1990.0,
+                "actual_direction": "Down",
+                "actual_source": "FUGLEAPI:3081",
+                "actual_return_pct": -5.01,
+                "price_error": -70.0,
+                "price_error_pct": -3.52,
+                "direction_hit": true,
+                "updated_at": "2026-07-14T08:11:14"
             },
             "T+3": {
                 "prediction_price": 2000.0,
@@ -484,14 +484,14 @@
             }
         },
         "summary": {
-            "available_count": 1,
-            "direction_hit_count": 0,
-            "direction_hit_rate": 0.0,
-            "avg_abs_price_error_pct": 5.24,
-            "observed_return_count": 1,
-            "avg_return_pct": -4.3,
+            "available_count": 2,
+            "direction_hit_count": 1,
+            "direction_hit_rate": 0.5,
+            "avg_abs_price_error_pct": 4.38,
+            "observed_return_count": 2,
+            "avg_return_pct": -4.65,
             "mfe_5d_pct": -4.3,
-            "mae_5d_pct": -4.3
+            "mae_5d_pct": -5.01
         },
         "breakout_backtest": {
             "version": "v7.25d_breakout_t1_t5",
@@ -503,10 +503,10 @@
             "fade_high_counterparty_flag": true,
             "status": "ready_for_aggregation",
             "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。",
-            "observed_return_count": 1,
-            "avg_return_pct": -4.3,
+            "observed_return_count": 2,
+            "avg_return_pct": -4.65,
             "mfe_5d_pct": -4.3,
-            "mae_5d_pct": -4.3,
+            "mae_5d_pct": -5.01,
             "analysis_hint": "用於後續彙總比較 breakout_follow_through_score、FadeBreakout、counterparty_profitability_score>=70 之 T+1~T+5 平均報酬與最大回撤。"
         }
     },

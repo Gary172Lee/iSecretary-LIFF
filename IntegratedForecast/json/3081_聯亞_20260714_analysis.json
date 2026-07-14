@@ -1,0 +1,583 @@
+{
+    "metadata": {
+        "version": "Integrated_Forecast_v7.25d1_Manifest_ActionZone_Repair_Edition",
+        "run_datetime": "2026-07-14T08:12:49",
+        "daily_output_tag": "20260714",
+        "output_naming_policy": "daily_stable_overwrite",
+        "stock_code": "3081",
+        "stock_name": "聯亞",
+        "ticker": "3081.TWO",
+        "raw_ohlcv_file": "3081_聯亞_20260714_ohlcv.json",
+        "chart_file": "3081_聯亞_Chart_20260714.png",
+        "pdf_file": "3081_聯亞_PA_Analysis_20260714.pdf"
+    },
+    "stock_profile": {
+        "stock_type": "中小型高波動題材股",
+        "market_cap_profile": "中小型",
+        "liquidity_profile": "高價股，需注意流動性、滑價與籌碼退潮",
+        "volatility_profile": "高波動，容易跳空、長黑長紅與快速反轉",
+        "trading_style_bias": "短線、防守優先、嚴格停損、避免追高",
+        "theme_tags": [
+            "矽光子",
+            "CPO",
+            "光通訊",
+            "中小型題材股"
+        ],
+        "theme_cooling_risk": "題材退潮或族群資金降溫時，估值與股價易快速修正。",
+        "financing_crowding_risk": "若股價下跌但融資增加，代表籌碼擁擠，反彈應以降風險優先。",
+        "high_price_gap_risk": "高價股出現未回補缺口或跌破缺口上緣時，滑價與停損風險放大。",
+        "key_drivers": [
+            "美股光通訊與矽光子族群",
+            "台股矽光子族群資金流",
+            "三大法人與融資變化",
+            "缺口與高價股量縮風險"
+        ],
+        "risk_rules": [
+            "不可用大型權值股邏輯低接",
+            "若跌破前低或缺口下緣，應嚴格停損",
+            "若法人賣超且融資增加，降低信心評等",
+            "未站回缺口上緣前不得建議攤平，高價題材股反彈以減碼或降風險優先"
+        ],
+        "analysis_weighting": {
+            "price_action": 0.35,
+            "chip": 0.25,
+            "sector_momentum": 0.25,
+            "macro_us_peer": 0.15
+        },
+        "stock_code": "3081",
+        "stock_name": "聯亞",
+        "stock_eng_name": "Landmark",
+        "ticker": "3081.TWO",
+        "core_business": "光通訊磊晶片、雷射二極體 LD、矽光子",
+        "industry_context": "聯亞為光通訊磊晶大廠，股性活潑，易受美股網通與台股矽光子族群資金影響。",
+        "us_peer_name": "矽光子與網通",
+        "tw_peer_name": "矽光子",
+        "negative_keywords": [
+            "載板",
+            "ABF",
+            "PCB",
+            "散熱",
+            "封測",
+            "日月光"
+        ],
+        "profile_source": "STOCK_CONFIGS",
+        "runtime_liquidity_filter_pass": true,
+        "runtime_avg_turnover_value": 4524937817.0,
+        "runtime_volatility_climax_flag": 0,
+        "runtime_gap_type": "Measuring(測量型缺口候選)",
+        "runtime_parabolic_wedge_flag": false,
+        "runtime_climax_type": "None",
+        "runtime_wedge_quality_score": 12,
+        "runtime_wedge_overlap_quality": "Medium",
+        "runtime_narrow_channel_wedge_invalid_flag": false,
+        "runtime_signal_bar_quality": "None",
+        "runtime_position_sizing_hint": "高價或流動性風險標的，僅允許小部位或分批限價單；不得一次滿倉追價。",
+        "runtime_slippage_warning": "Medium：高價股，分批與限價單優先。",
+        "runtime_entry_timing_mode": "Wait",
+        "runtime_wedge_entry_permission": "NoCountertrend",
+        "runtime_wedge_confluence_type": "None",
+        "runtime_second_leg_trap_flag": false,
+        "runtime_mm_before_countertrend_required": true,
+        "runtime_signal_bar_follow_through_bars": {
+            "status": "NotApplicable",
+            "bars_checked": 0,
+            "direction": null,
+            "details": "沒有強 Signal Bar，暫不檢查後續延續。"
+        },
+        "runtime_gap_atr_ratio": 0.48,
+        "runtime_stock_profile_risk_triggered": true,
+        "runtime_profile_risk_triggered_summary": "尚未站回缺口上緣前，不得建議攤平；反彈以減碼或降風險優先。",
+        "runtime_chart_validation_summary": {
+            "status": "pass",
+            "method": "data_pipeline_consistency_check",
+            "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
+            "chart_read_status": "success",
+            "current_close": 1990.0,
+            "ema20": 2134.15,
+            "gap_type": "Measuring(測量型缺口候選)",
+            "gap_status": "有未回補Down向實體缺口",
+            "body_gap_status": "未回補Down實體缺口",
+            "wick_gap_status": "未回補Down影線缺口",
+            "support_resistance_reference": 2285.0,
+            "checks": [
+                {
+                    "item": "chart_file",
+                    "status": "pass",
+                    "chart_path": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\3081_聯亞_Chart_20260714.png"
+                },
+                {
+                    "item": "current_close",
+                    "status": "pass",
+                    "json_value": 1990.0
+                },
+                {
+                    "item": "ema20",
+                    "status": "pass",
+                    "json_value": 2134.15
+                },
+                {
+                    "item": "gap",
+                    "status": "pass",
+                    "gap_type": "Measuring(測量型缺口候選)",
+                    "gap_status": "有未回補Down向實體缺口",
+                    "body_gap_status": "未回補Down實體缺口",
+                    "wick_gap_status": "未回補Down影線缺口",
+                    "gap_failure_price": 2285.0
+                },
+                {
+                    "item": "limit_bounds",
+                    "status": "pass",
+                    "limit_up_10_pct": 2189.0,
+                    "limit_down_10_pct": 1791.0
+                }
+            ]
+        },
+        "runtime_wedge_context_confidence": {
+            "score": 0,
+            "level": "Low",
+            "basis": "wedge_quality_score + signal_bar_quality + second_entry_signal + trading_range_edge_flag - countertrend/narrow_channel_penalty"
+        },
+        "runtime_always_in_direction": "Short",
+        "runtime_trading_range_edge_flag": false
+    },
+    "analysis_data": {
+        "current_close": 1990.0,
+        "latest_trade_date": "2026-07-13",
+        "price_data_source": "FUGLEAPI",
+        "price_data_ticker": "3081",
+        "expected_latest_trade_date": "2026-07-13",
+        "actual_latest_trade_date": "2026-07-13",
+        "price_data_is_stale": false,
+        "price_data_warning": null,
+        "price_source_attempts": [
+            {
+                "source": "FUGLEAPI",
+                "status": "ok",
+                "rows": 237,
+                "latest_trade_date": "2026-07-13",
+                "is_stale": false,
+                "from": "2025-07-19",
+                "to": "2026-07-14"
+            }
+        ],
+        "limit_up_10_pct": 2189.0,
+        "limit_down_10_pct": 1791.0,
+        "sma_5": 1999.0,
+        "sma_10": 2007.0,
+        "sma_20": 2126.75,
+        "sma_50": 2458.8,
+        "sma_200": 1337.815,
+        "ema_20": 2134.15,
+        "mag_bar_count": 14,
+        "mag_direction": "Down",
+        "closing_strength_CLV": 0.31,
+        "volume_ratio": 0.63,
+        "price_action_overlap_ratio": 0.35,
+        "volatility_climax_flag": 0,
+        "pa_push_count": 1,
+        "ema20_gap": "強勢空頭(近14根未觸碰EMA20)",
+        "micro_wedge": "無明顯特徵",
+        "bar_body_MM_Target_Up": "未觸發高潮K線",
+        "bar_body_MM_Target_Down": "未觸發高潮K線",
+        "truncated_structure": "正常",
+        "gap_any_type": true,
+        "gap_density_score": 0.1,
+        "gap_direction": "Down",
+        "gap_size_pct": 3.72,
+        "gap_midpoint": 2242.5,
+        "wick_gap_status": "未回補Down影線缺口",
+        "wick_gap_fill_status": "未回補",
+        "body_gap_status": "未回補Down實體缺口",
+        "body_gap_fill_status": "未回補",
+        "close_confirmed_gap_flag": true,
+        "line_chart_gap_flag": true,
+        "gap_status": "有未回補Down向實體缺口",
+        "gap_fill_speed": 1,
+        "opposite_gap_created_flag": false,
+        "exhaustion_gap_flag": false,
+        "gap_type": "Measuring(測量型缺口候選)",
+        "gap_classification_reason": "Down向缺口狀態仍顯示未回補，gap_status=有未回補Down向實體缺口，body_gap_status=未回補Down實體缺口，wick_gap_status=未回補Down影線缺口；依 v7.24 P0 規則，不得判定為已回補或中性，暫列 Measuring(測量型缺口候選)。測量目標：上行目標=None；下行目標=1791.0。失敗條件：若收盤站回缺口上緣 2285.0，或快速回補缺口中點 2242.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。",
+        "gap_failure_condition": {
+            "direction": "Down",
+            "price": 2285.0,
+            "midpoint": 2242.5,
+            "condition": "若收盤站回缺口上緣 2285.0，或快速回補缺口中點 2242.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。",
+            "action_hint": "空方缺口失效時，應降低續跌權重。"
+        },
+        "gap_MM_Target_Up": null,
+        "gap_MM_Target_Down": 1791.0,
+        "gap_support_resistance_level": 2285.0,
+        "near_gap_target_flag": false,
+        "countertrend_forbidden_flag": true,
+        "broad_channel_flag": false,
+        "channel_start_target": "不適用",
+        "trend_control_shift": "未確認",
+        "first_reversal_warning": "強趨勢中第一次逆勢反轉易失敗，需等待 Second Entry",
+        "second_entry_signal": "尚未確認",
+        "second_entry_reason": "尚未確認 Higher Low / Lower High / 反向缺口 等二次進場結構。",
+        "neckline_break_gap_flag": false,
+        "gap_retest_support_flag": false,
+        "avg_turnover_value": 4524937817.0,
+        "liquidity_filter_pass": true,
+        "parabolic_wedge_flag": false,
+        "climax_type": "None",
+        "follow_through_quality": "Unknown(未觸發拋物線/高潮候選)",
+        "max_loss_point": {
+            "price": null,
+            "condition": "未觸發拋物線楔型候選，暫不適用。",
+            "action_hint": "不適用"
+        },
+        "climax_bar_flag": false,
+        "climax_bar_body_ratio": 0.52,
+        "slope_acceleration_score": 0,
+        "post_climax_mode": "None",
+        "post_climax_pullback_pct": null,
+        "parabolic_wedge_reason": "未觸發拋物線楔型候選；trend=Down, body_ratio=0.52, CLV=0.31, slope_score=0, push=1, gap_type=Measuring(測量型缺口候選)。",
+        "wedge_quality_score": 12,
+        "wedge_overlap_quality": "Medium",
+        "narrow_channel_wedge_invalid_flag": false,
+        "signal_bar_quality": "None",
+        "push_direction": "Down",
+        "push_magnitude_shrinking_flag": false,
+        "failed_breakout_flag": false,
+        "wedge_failure_measured_move_target": {
+            "target": 1791.0,
+            "direction": "Down",
+            "basis": "近20日區間MM估算"
+        },
+        "stop_loss_reference": {
+            "price": 2285.0,
+            "basis": "gap_failure_condition",
+            "condition": "若收盤站回缺口上緣 2285.0，或快速回補缺口中點 2242.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
+        },
+        "counterparty_profitability_flag": false,
+        "nested_wedge_flag": false,
+        "wedge_line_fit_quality": "Low",
+        "wedge_context_type": "No Clear Wedge",
+        "trend_age_bars": 26,
+        "risk_reward_ratio": 0.67,
+        "position_sizing_hint": "高價或流動性風險標的，僅允許小部位或分批限價單；不得一次滿倉追價。",
+        "slippage_warning": "Medium：高價股，分批與限價單優先。",
+        "fundamental_quality_required": true,
+        "entry_timing_mode": "Wait",
+        "wedge_entry_permission": "NoCountertrend",
+        "wedge_confluence_type": "None",
+        "second_leg_trap_flag": false,
+        "mm_before_countertrend_required": true,
+        "signal_bar_follow_through_bars": {
+            "status": "NotApplicable",
+            "bars_checked": 0,
+            "direction": null,
+            "details": "沒有強 Signal Bar，暫不檢查後續延續。"
+        },
+        "failed_breakout_direction": "None",
+        "price_action_engine_version": "0.1.2a",
+        "price_action_knowledge_version": "1.4",
+        "mode": "swing",
+        "direction_bias": "long",
+        "gap_primary_basis": "latest_unfilled_gap",
+        "gap_atr_ratio": 0.48,
+        "breakout_context_type": "FailedBreakout",
+        "breakout_direction": "Down",
+        "breakout_follow_through_score": 52,
+        "breakout_follow_through_bars": {
+            "bars_checked": 3,
+            "strong_close_count": 2,
+            "overlap_back_inside_count": 3,
+            "opposite_strong_count": 1,
+            "prior_high": 2550.0,
+            "prior_low": 1835.0,
+            "details": "Down breakout; strong_close=2, overlap_back_inside=3, opposite_strong=1."
+        },
+        "breakout_gap_pressure_flag": true,
+        "breakout_gap_pressure_reason": "未回補缺口與突破方向一致，對逆勢方形成壓力。",
+        "counterparty_trapped_flag": false,
+        "counterparty_profitability_score": 70,
+        "counterparty_profitability_reason": "突破後回到突破點/區間內或缺少有效跟隨，對手方仍可解套或獲利；不得視為對手方被困住。",
+        "breakout_entry_permission": "FadeBreakout",
+        "breakout_failure_warning": "突破跟隨不足或對手方仍可解套，不得列為強突破追價。",
+        "measured_move_context": "StrongBarsBody",
+        "measured_move_target_up": 2189.0,
+        "measured_move_target_down": 1791.0,
+        "measured_move_probability_hint": "Measure Move 僅為參考目標，非精準預測。",
+        "near_measured_move_target_flag": false,
+        "measured_move_target_reaction": "NoReaction",
+        "failed_breakout_watch_flag": true,
+        "failed_breakout_watch_reason": "弱突破/假突破觀察候選，不得混入 direct-buy。",
+        "trading_range_edge_flag": false,
+        "always_in_direction": "Short",
+        "wedge_context_confidence": {
+            "score": 0,
+            "level": "Low",
+            "basis": "wedge_quality_score + signal_bar_quality + second_entry_signal + trading_range_edge_flag - countertrend/narrow_channel_penalty"
+        },
+        "price_action_engine_status": "success",
+        "us_peer_avg_pct": -4.87,
+        "NVDA_pct": -3.52,
+        "MRVL_pct": -7.75,
+        "LITE_pct": -4.22,
+        "AVGO_pct": -3.98,
+        "tw_peer_avg_pct": -0.89,
+        "3450_pct": 2.59,
+        "3163_pct": 0.54,
+        "4979_pct": -3.12,
+        "3234_pct": -3.57,
+        "institutional_net_buy": -218.2,
+        "margin_balance_change": 0.0,
+        "gap_consistency_status": "pass_repaired_unfilled_gap",
+        "gap_consistency_rule": "v7.24：未回補缺口不得輸出已回補/中性；Measuring Gap 必須說明測量目標與失敗條件。",
+        "gap_text_cleanup_status": "repaired_residual_filled_neutral_text",
+        "gap_text_cleanup_rule": "v7.25b：未回補/Measuring Gap 情境下，敘述欄位不得殘留 Filled/Neutral/已回補/中性 字樣。",
+        "stock_profile_risk_triggered": true,
+        "stock_profile_risk_details": [
+            {
+                "rule": "HIGH_PRICE_THEME_NOT_BACK_ABOVE_GAP_UPPER",
+                "message": "尚未站回缺口上緣前，不得建議攤平；反彈以減碼或降風險優先。",
+                "value": {
+                    "current_close": 1990.0,
+                    "gap_upper": 2285.0
+                }
+            }
+        ],
+        "profile_risk_triggered_summary": "尚未站回缺口上緣前，不得建議攤平；反彈以減碼或降風險優先。",
+        "chart_validation_summary": {
+            "status": "pass",
+            "method": "data_pipeline_consistency_check",
+            "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
+            "chart_read_status": "success",
+            "current_close": 1990.0,
+            "ema20": 2134.15,
+            "gap_type": "Measuring(測量型缺口候選)",
+            "gap_status": "有未回補Down向實體缺口",
+            "body_gap_status": "未回補Down實體缺口",
+            "wick_gap_status": "未回補Down影線缺口",
+            "support_resistance_reference": 2285.0,
+            "checks": [
+                {
+                    "item": "chart_file",
+                    "status": "pass",
+                    "chart_path": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\3081_聯亞_Chart_20260714.png"
+                },
+                {
+                    "item": "current_close",
+                    "status": "pass",
+                    "json_value": 1990.0
+                },
+                {
+                    "item": "ema20",
+                    "status": "pass",
+                    "json_value": 2134.15
+                },
+                {
+                    "item": "gap",
+                    "status": "pass",
+                    "gap_type": "Measuring(測量型缺口候選)",
+                    "gap_status": "有未回補Down向實體缺口",
+                    "body_gap_status": "未回補Down實體缺口",
+                    "wick_gap_status": "未回補Down影線缺口",
+                    "gap_failure_price": 2285.0
+                },
+                {
+                    "item": "limit_bounds",
+                    "status": "pass",
+                    "limit_up_10_pct": 2189.0,
+                    "limit_down_10_pct": 1791.0
+                }
+            ]
+        },
+        "portfolio_unrealized_pnl_pct": -12.11,
+        "portfolio_unrealized_pnl_value": -16444.0,
+        "rebound_reduce_zone": {
+            "lower_price": 2242.5,
+            "upper_price": 2285.0,
+            "source": "gap_midpoint_to_gap_failure_price",
+            "action": "反彈至此區間以減碼 / 降風險優先，不作為攤平買點。",
+            "reason": "高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。"
+        },
+        "risk_first_action": true,
+        "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。",
+        "portfolio_action_priority": "risk_first_reduce_or_no_average_down",
+        "action_zone_summary": "操作優先級=risk_first_reduce_or_no_average_down；帳面損益=-12.11%；支撐/停損參考={'price': 2285.0, 'basis': 'gap_failure_condition', 'condition': '若收盤站回缺口上緣 2285.0，或快速回補缺口中點 2242.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。'}；壓力/缺口失效參考=2285.0；反彈減碼區={'lower_price': 2242.5, 'upper_price': 2285.0, 'source': 'gap_midpoint_to_gap_failure_price', 'action': '反彈至此區間以減碼 / 降風險優先，不作為攤平買點。', 'reason': '高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。'}；禁止追價/攤平原因=breakout_entry_permission=FadeBreakout；突破跟隨不足或對手方仍可解套，不得列為強突破追價。；risk_first_action=true，禁止攤平；rebound_reduce_zone=2242.5~2285.0。"
+    },
+    "portfolio": {
+        "total_shares": 60,
+        "avg_buy_price": 2264.0666666666666,
+        "cash_balance": 86319.0
+    },
+    "prediction_tracker": {
+        "version": "Integrated_Forecast_v7.25d1_Manifest_ActionZone_Repair_Edition",
+        "stock_code": "3081",
+        "stock_name": "聯亞",
+        "ticker": "3081.TWO",
+        "run_datetime": "2026-07-14T08:12:49",
+        "base_date": "2026-07-13",
+        "base_close": 1990.0,
+        "status": "pending",
+        "items": {
+            "T+1": {
+                "prediction_price": 1925.0,
+                "prediction_direction": "Down",
+                "actual_date": null,
+                "actual_close": null,
+                "actual_direction": null,
+                "actual_source": null,
+                "actual_return_pct": null,
+                "price_error": null,
+                "price_error_pct": null,
+                "direction_hit": null,
+                "updated_at": null
+            },
+            "T+2": {
+                "prediction_price": 1870.5,
+                "prediction_direction": "Down",
+                "actual_date": null,
+                "actual_close": null,
+                "actual_direction": null,
+                "actual_source": null,
+                "actual_return_pct": null,
+                "price_error": null,
+                "price_error_pct": null,
+                "direction_hit": null,
+                "updated_at": null
+            },
+            "T+3": {
+                "prediction_price": 1845.5,
+                "prediction_direction": "Down",
+                "actual_date": null,
+                "actual_close": null,
+                "actual_direction": null,
+                "actual_source": null,
+                "actual_return_pct": null,
+                "price_error": null,
+                "price_error_pct": null,
+                "direction_hit": null,
+                "updated_at": null
+            },
+            "T+4": {
+                "prediction_price": null,
+                "prediction_direction": null,
+                "actual_date": null,
+                "actual_close": null,
+                "actual_direction": null,
+                "actual_source": null,
+                "actual_return_pct": null,
+                "price_error": null,
+                "price_error_pct": null,
+                "direction_hit": null,
+                "updated_at": null
+            },
+            "T+5": {
+                "prediction_price": null,
+                "prediction_direction": null,
+                "actual_date": null,
+                "actual_close": null,
+                "actual_direction": null,
+                "actual_source": null,
+                "actual_return_pct": null,
+                "price_error": null,
+                "price_error_pct": null,
+                "direction_hit": null,
+                "updated_at": null
+            }
+        },
+        "summary": {
+            "available_count": 0,
+            "direction_hit_count": 0,
+            "direction_hit_rate": null,
+            "avg_abs_price_error_pct": null,
+            "observed_return_count": 0,
+            "avg_return_pct": null,
+            "mfe_5d_pct": null,
+            "mae_5d_pct": null
+        },
+        "breakout_backtest": {
+            "version": "v7.25d_breakout_t1_t5",
+            "breakout_follow_through_score": 52,
+            "breakout_context_type": "FailedBreakout",
+            "breakout_entry_permission": "FadeBreakout",
+            "counterparty_profitability_score": 70,
+            "counterparty_trapped_flag": false,
+            "fade_high_counterparty_flag": true,
+            "status": "pending_actuals",
+            "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。"
+        }
+    },
+    "news": {
+        "news_report_title": "聯亞(3081)預設觀察報告：矽光子題材股波動加劇，留意技術面與籌碼風險",
+        "overall_sentiment": "謹慎偏空 (Cautious/Bearish)",
+        "key_takeaways": [
+            "聯亞為光通訊磊晶片、雷射二極體 LD 及矽光子領域的關鍵業者，屬中小型高波動題材股。",
+            "目前股價 (1990.0) 位於短期均線 (EMA20: 2134.15) 之下，且存在未回補的向下實體缺口，技術面顯示短期壓力。",
+            "鑑於其高價股特性，需特別留意流動性、滑價與籌碼退潮風險，嚴格停損為首要原則。",
+            "在股價未能站回缺口上緣 (2285.0) 前，不建議攤平；反彈應以減碼或降低風險為優先考量。",
+            "股價易受美股光通訊與矽光子族群、台股矽光子族群資金流向，以及三大法人與融資變化影響。"
+        ],
+        "events_summary": "聯亞(3081)作為光通訊磊晶片、雷射二極體LD及矽光子領域的關鍵業者，其股性活潑，屬中小型高波動題材股，易受美股與台股矽光子族群資金流向影響。根據最新市場觀察，聯亞目前股價收於1990.0元，已跌破短期均線EMA20 (2134.15元)，且圖形上存在一個未回補的向下實體缺口，顯示短期技術面偏弱。此缺口上緣2285.0元構成重要的壓力位，若未能有效站回，則上檔壓力沉重。\n\n鑑於聯亞的高價股特性，投資人需特別留意其流動性與潛在的滑價風險。當前市場訊號顯示，在股價尚未站回缺口上緣前，不宜考慮攤平操作；若股價出現反彈，應優先考量減碼或降低整體持倉風險。此外，三大法人與融資餘額的變化將是判斷籌碼穩定性的重要指標。若法人持續賣超而融資不減反增，則可能代表籌碼面趨於擁擠，進一步增加股價修正的風險。投資人應保持高度警惕，並嚴格執行停損紀律。"
+    },
+    "price": {
+        "prediction_T+1": {
+            "date": "2026-07-14",
+            "price_range": "1850.0 - 2000.0",
+            "direction_bias": "Down",
+            "rationale": "聯亞目前處於強勢空頭趨勢，EMA20 乖離大，且存在未回補的測量型向下缺口，下行目標指向 1791.0。美股矽光子族群普遍走弱，三大法人亦呈賣超，籌碼面不利多方。預計股價將持續承壓，可能向下測試近期低點或測量型缺口下行目標 1791.0。需注意 1791.0 為 T+1 的跌停價，若觸及可能引發停損賣壓。"
+        },
+        "prediction_T+2": {
+            "date": "2026-07-15",
+            "price_range": "1791.0 - 1950.0",
+            "direction_bias": "Down",
+            "rationale": "若 T+1 跌破 1900.0 支撐，則下行壓力將進一步增強，可能觸及甚至短暫跌破 1791.0 (測量型缺口目標)。若在 1791.0 附近獲得支撐，可能出現短暫技術性反彈，但鑒於整體空頭趨勢與 `NoCountertrend` 限制，反彈空間預期有限，多為減碼機會而非買進時機。"
+        },
+        "prediction_T+3": {
+            "date": "2026-07-16",
+            "price_range": "1791.0 - 1900.0",
+            "direction_bias": "Down",
+            "rationale": "在空頭趨勢和測量型缺口壓力下，即使出現反彈也多為減碼機會。若未能有效站穩 1900.0 以上，股價將維持弱勢震盪或繼續探底。需密切觀察美股同業動態與法人籌碼變化，以及是否出現明確的 `Second Entry` 買入訊號，在此之前不宜逆勢操作。"
+        },
+        "portfolio_advice": {
+            "layout_strategy": {
+                "action": "風險優先：反彈減碼 / 觀望，禁止攤平或低接加碼；但需等待 Second Entry 或確認 K 棒，避免左側反轉操作",
+                "suggested_price_range": {
+                    "reduce_zone": {
+                        "lower_price": 2242.5,
+                        "upper_price": 2285.0,
+                        "action": "若股價反彈至此區間，應優先考慮減碼或降低持股風險，不作為等待確認後再評估或加碼買點。",
+                        "reason": "高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險；此區間為系統定義的反彈減碼區。"
+                    },
+                    "observe_and_risk_control": {
+                        "lower_price": 1791.0,
+                        "upper_price": 1990.0,
+                        "action": "由於目前股價 (1990.0) 遠低於減碼區間，應專注於風險控制。密切觀察股價是否能守住 1791.0 (測量型缺口下行目標與 T+1 跌停價)。"
+                    }
+                },
+                "stop_loss": {
+                    "price": 1791.0,
+                    "condition": "若收盤價跌破 1791.0 (測量型缺口下行目標與 T+1 跌停價)，應嚴格執行停損以控制風險，避免損失擴大。",
+                    "action_hint": "考量到高波動性與帳面虧損已觸發 `risk_first_action`，若股價在 T+1 觸及跌停 1791.0 且未能迅速反彈站回，應評估部分或全部停損。"
+                },
+                "rationale": "1. **強勢空頭趨勢與未回補缺口：** 聯亞處於強勢空頭趨勢，EMA20 乖離大，且存在未回補的測量型向下缺口，下行目標指向 1791.0。2. **風險優先原則：** 帳面虧損已達 -12.11%，已觸發 `risk_first_action`，禁止等待確認後再評估或低接加碼。反彈應以減碼或降風險為優先考量。3. **假突破與對手方未被困：** 近期向下突破被判定為 `FailedBreakout` 且 `FadeBreakout`，對手方仍可解套 (`counterparty_profitability_score=70`)，顯示空方追價動能不足以形成強勢突破，但整體趨勢仍偏空。4. **無二次進場訊號與逆勢禁止：** 系統未確認 `Second Entry` 訊號，且 `wedge_entry_permission=NoCountertrend`，禁止逆勢操作。5. **同業與法人動態：** 美股矽光子族群普遍下跌，三大法人持續賣超，籌碼面不利多方。6. **高價股特性：** 高價股波動大，應嚴格停損，避免追高或盲目等待確認後再評估。\nrisk_first_action=true：標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。 action_zone_summary=操作優先級=risk_first_reduce_or_no_average_down；帳面損益=-12.11%；支撐/停損參考={'price': 2285.0, 'basis': 'gap_failure_condition', 'condition': '若收盤站回缺口上緣 2285.0，或快速回補缺口中點 2242.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。'}；壓力/缺口失效參考=2285.0；反彈減碼區={'lower_price': 2242.5, 'upper_price': 2285.0, 'source': 'gap_midpoint_to_gap_failure_price', 'action': '反彈至此區間以減碼 / 降風險優先，不作為攤平買點。', 'reason': '高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。'}；禁止追價/攤平原因=breakout_entry_permission=FadeBreakout；突破跟隨不足或對手方仍可解套，不得列為強突破追價。；risk_first_action=true，禁止攤平；rebound_reduce_zone=2242.5~2285.0。\n系統入場權限限制：wedge_entry_permission=NoCountertrend，entry_timing_mode=Wait，signal_bar_quality=None，wedge_quality_score=12，countertrend_forbidden_flag=True，risk_first_action=True。因此本報告自動降權高風險左側操作，需等待 Second Entry、確認 K 棒或風險報酬改善後再評估。"
+            },
+            "portfolio_unrealized_pnl_pct": -12.11,
+            "portfolio_action_priority": "risk_first_reduce_or_no_average_down",
+            "risk_first_action": true,
+            "rebound_reduce_zone": {
+                "lower_price": 2242.5,
+                "upper_price": 2285.0,
+                "action": "反彈至此區間以減碼 / 降風險優先，不作為等待確認後再評估買點。",
+                "reason": "高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。"
+            },
+            "action_zone_summary": "操作優先級=risk_first_reduce_or_no_average_down；帳面損益=-12.11%；支撐/停損參考={'price': 2285.0, 'basis': 'gap_failure_condition', 'condition': '若收盤站回缺口上緣 2285.0，或快速回補缺口中點 2242.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。'}；壓力/缺口失效參考=2285.0；反彈減碼區={'lower_price': 2242.5, 'upper_price': 2285.0, 'source': 'gap_midpoint_to_gap_failure_price', 'action': '反彈至此區間以減碼 / 降風險優先，不作為等待確認後再評估買點。', 'reason': '高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。'}；禁止追價/等待確認後再評估原因=breakout_entry_permission=FadeBreakout；突破跟隨不足或對手方仍可解套，不得列為強突破追價。；risk_first_action=true，禁止等待確認後再評估；rebound_reduce_zone=2242.5~2285.0。"
+        },
+        "entry_permission_guardrail": {
+            "status": "triggered",
+            "reason": "v7.24 P1 deterministic output guardrail",
+            "wedge_entry_permission": "NoCountertrend",
+            "entry_timing_mode": "Wait",
+            "signal_bar_quality": "None",
+            "wedge_quality_score": 12,
+            "countertrend_forbidden_flag": true,
+            "risk_first_action": true,
+            "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。",
+            "guardrail_note": "已自動清理高風險左側用語，並強制要求等待 Second Entry 或確認 K 棒。"
+        }
+    }
+}
