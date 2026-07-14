@@ -1,7 +1,7 @@
 {
     "metadata": {
-        "version": "Integrated_Forecast_v7.25d1_Manifest_ActionZone_Repair_Edition",
-        "run_datetime": "2026-07-14T08:11:48",
+        "version": "Integrated_Forecast_v7.25e_ActionZone_Semantic_Reachability_Guardrail_Edition",
+        "run_datetime": "2026-07-14T09:12:24",
         "daily_output_tag": "20260714",
         "output_naming_policy": "daily_stable_overwrite",
         "stock_code": "2382",
@@ -385,11 +385,42 @@
         },
         "portfolio_unrealized_pnl_pct": 6.97,
         "portfolio_unrealized_pnl_value": 4929.0,
+        "current_support": {
+            "price": 340.2,
+            "role": "current_support_below_market",
+            "basis": "measured_move_target_down",
+            "note": "目前股價下方較接近的可量化支撐/風控參考。"
+        },
+        "long_position_stop": {
+            "price": 340.2,
+            "role": "long_position_stop_below_market",
+            "basis": "measured_move_target_down",
+            "note": "多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。"
+        },
+        "gap_invalidation_price": {
+            "price": 362.0,
+            "role": "gap_invalidation_price",
+            "basis": "gap_failure_condition.price",
+            "note": "若收盤跌破缺口下緣 362.0，或快速回補缺口中點 364.5 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。"
+        },
         "rebound_reduce_zone": null,
+        "rebound_resistance": {
+            "price": 362.0,
+            "role": "rebound_resistance",
+            "basis": "gap_failure_condition.price",
+            "note": "反彈壓力或缺口失效確認價，不是多單停損支撐。"
+        },
+        "zone_reachable_today": null,
+        "nearest_reachable_action_price": null,
+        "days_to_zone_minimum": null,
+        "effective_today_action_zone": {
+            "zone_type": "no_rebound_reduce_zone",
+            "action": "未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。"
+        },
         "risk_first_action": false,
         "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
         "portfolio_action_priority": "observe_or_reduce",
-        "action_zone_summary": "操作優先級=observe_or_reduce；帳面損益=6.97%；支撐/停損參考={'price': 362.0, 'basis': 'gap_failure_condition', 'condition': '若收盤跌破缺口下緣 362.0，或快速回補缺口中點 364.5 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。'}；壓力/缺口失效參考=362.0；反彈減碼區=N/A；禁止追價/攤平原因=breakout_entry_permission=FadeBreakout；突破跟隨不足或對手方仍可解套，不得列為強突破追價。。"
+        "action_zone_summary": "操作優先級=observe_or_reduce；帳面損益=6.97%；多單停損/風控={'price': 340.2, 'role': 'long_position_stop_below_market', 'basis': 'measured_move_target_down', 'note': '多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。'}；目前支撐={'price': 340.2, 'role': 'current_support_below_market', 'basis': 'measured_move_target_down', 'note': '目前股價下方較接近的可量化支撐/風控參考。'}；反彈壓力={'price': 362.0, 'role': 'rebound_resistance', 'basis': 'gap_failure_condition.price', 'note': '反彈壓力或缺口失效確認價，不是多單停損支撐。'}；缺口失效確認價={'price': 362.0, 'role': 'gap_invalidation_price', 'basis': 'gap_failure_condition.price', 'note': '若收盤跌破缺口下緣 362.0，或快速回補缺口中點 364.5 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。'}；反彈減碼區=N/A；今日可達=None；今日最近有效操作價=None；最快到達結構區天數=None；今日有效操作區={'zone_type': 'no_rebound_reduce_zone', 'action': '未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。'}；禁止追價/攤平原因=breakout_entry_permission=FadeBreakout；突破跟隨不足或對手方仍可解套，不得列為強突破追價。。"
     },
     "portfolio": {
         "total_shares": 200,
@@ -397,18 +428,18 @@
         "cash_balance": 86319.0
     },
     "prediction_tracker": {
-        "version": "Integrated_Forecast_v7.25d1_Manifest_ActionZone_Repair_Edition",
+        "version": "Integrated_Forecast_v7.25e_ActionZone_Semantic_Reachability_Guardrail_Edition",
         "stock_code": "2382",
         "stock_name": "廣達",
         "ticker": "2382.TW",
-        "run_datetime": "2026-07-14T08:11:48",
+        "run_datetime": "2026-07-14T09:12:24",
         "base_date": "2026-07-13",
         "base_close": 378.0,
         "status": "pending",
         "items": {
             "T+1": {
-                "prediction_price": 375.0,
-                "prediction_direction": "Down",
+                "prediction_price": null,
+                "prediction_direction": null,
                 "actual_date": null,
                 "actual_close": null,
                 "actual_direction": null,
@@ -420,8 +451,8 @@
                 "updated_at": null
             },
             "T+2": {
-                "prediction_price": 371.5,
-                "prediction_direction": "Down",
+                "prediction_price": null,
+                "prediction_direction": null,
                 "actual_date": null,
                 "actual_close": null,
                 "actual_direction": null,
@@ -433,8 +464,8 @@
                 "updated_at": null
             },
             "T+3": {
-                "prediction_price": 378.0,
-                "prediction_direction": "Flat",
+                "prediction_price": null,
+                "prediction_direction": null,
                 "actual_date": null,
                 "actual_close": null,
                 "actual_direction": null,
@@ -495,49 +526,68 @@
         }
     },
     "news": {
-        "news_report_title": "廣達 (2382) 預設市場觀察：AI伺服器與雲端資料中心龍頭動態",
-        "overall_sentiment": "謹慎樂觀",
+        "news_report_title": "廣達 (2382) 預設市場觀察：AI伺服器與雲端資料中心動能持續，外資動向與美股AI供應鏈為關鍵指標",
+        "overall_sentiment": "Neutral to Positive",
         "key_takeaways": [
-            "廣達為全球AI伺服器與雲端資料中心領域的領導廠商，同時也是筆記型電腦代工及車用電子領域的重要供應商，其核心業務與全球科技趨勢高度連結。",
-            "作為大型權值股，廣達具備良好流動性，適合波段操作與分批布局，不建議進行頻繁的短線交易。",
-            "股價走勢高度受NVIDIA、美股AI伺服器同業（如DELL、HPE、SMCI）表現、外資買賣超以及整體台股伺服器族群資金流向的影響。",
-            "投資人需密切關注美股AI伺服器同業盤前變化，若DELL、HPE、SMCI平均跌幅逾3%，應降低追價權重以規避潛在風險。",
-            "目前技術訊號尚未完全確立，建議投資人保持觀察或以小部位試單，避免追高或一次性滿倉，等待更明確的進場時機。"
+            "廣達作為全球AI伺服器與筆記型電腦代工龍頭，核心業務受惠於AI與雲端資料中心長期成長趨勢，基本面具備穩固支撐。",
+            "公司走勢與NVIDIA及美系CSP（雲端服務供應商）資本支出高度相關，為外資在台股AI供應鏈中的重要指標股。",
+            "技術面顯示股價位於短期均線之上，並出現向上實體缺口，顯示市場對其AI題材仍抱持期待，但目前訊號未完全確立，建議觀察或小部位操作。",
+            "操作上建議以波段、分批布局為主，順勢操作，避免頻繁短線進出；需密切留意美股AI伺服器同業表現及外資買賣超動向。"
         ],
-        "events_summary": "目前尚未有廣達 (2382) 具體新聞事件拋轉，本摘要為基於其市場特性與潛在影響因素的預設評估。\n\n廣達作為全球AI伺服器與筆記型電腦代工龍頭，其營運展望與股價表現與全球AI產業發展、雲端服務供應商（CSP）資本支出及NVIDIA等關鍵供應商動態緊密相關。公司在AI伺服器、雲端資料中心、筆記型電腦代工及車用電子等核心業務領域持續深耕，受益於AI浪潮帶來的產業升級。\n\n市場關注焦點主要集中在外資買賣超動向，以及美股AI伺服器供應鏈的整體表現。特別是美股AI同業（如DELL、HPE、SMCI）的盤前走勢，將作為判斷市場情緒與追價策略的重要參考指標。若美股AI供應鏈轉弱，應避免追高。\n\n考量廣達為大型權值波段股，具備中高波動度但相對穩定，投資策略上建議採取波段、分批布局並順勢操作。當前技術面提示訊號未完全確立，建議投資人保持謹慎，等待更明確的進場時機，避免一次性重倉或頻繁短打。"
+        "events_summary": [
+            "全球AI伺服器需求持續增長，廣達作為主要供應商，預期將持續受惠於大型雲端服務供應商的資本支出擴張與新訂單挹注。",
+            "市場將持續關注NVIDIA財報與展望，以及美系AI伺服器同業（如DELL、HPE、SMCI）的營運狀況，這些將直接影響廣達的訂單能見度與股價表現。",
+            "外資法人買賣超動向是廣達股價的重要驅動力，其連續買超或賣超將對股價形成關鍵影響，投資人應密切追蹤。",
+            "車用電子與筆記型電腦代工業務作為廣達的多元化佈局，其發展亦將為公司營運提供額外支撐，但短期市場焦點仍集中於AI伺服器相關業務。"
+        ]
     },
     "price": {
-        "prediction_T+1": {
-            "price_range": "370.0 - 380.0",
-            "direction_bias": "震盪偏弱",
-            "rationale": "廣達目前股價雖位於EMA20之上，且有未回補的測量型缺口提供潛在上行目標，但近期價格行為顯示為假突破/跟隨不足 (breakout_context_type=FailedBreakout, breakout_entry_permission=FadeBreakout)，且美股AI伺服器同業（如NVDA、SMCI）前一日表現疲弱，平均跌幅達-2.58%。這些因素將壓抑短期追價動能，預期股價將呈現震盪或小幅回檔。"
-        },
-        "prediction_T+2": {
-            "price_range": "365.0 - 378.0",
-            "direction_bias": "區間震盪",
-            "rationale": "在假突破訊號未被有效化解前，市場觀望氣氛濃厚。股價可能持續在區間內震盪，並可能測試EMA20（約371.0）或測量型缺口下緣（362.0）的支撐。雖然存在Higher Low的二次進場候選訊號，但仍需後續K棒確認，在此之前不宜過度樂觀追價。"
-        },
-        "prediction_T+3": {
-            "price_range": "368.0 - 388.0",
-            "direction_bias": "震盪偏多（需確認）",
-            "rationale": "若多方二次進場訊號（Higher Low）能獲得後續K棒的確認，且股價能守穩367.0（第二個有效低點）之上，則有望重新積蓄上攻動能，挑戰近期高點。反之，若跌破362.0的缺口下緣，則多方缺口假設失效，股價可能進一步向下尋求支撐。操作上仍需等待確認，避免盲目追高。"
-        },
+        "prediction_T+1": "廣達在美股AI伺服器同業普遍下跌（尤其NVDA跌幅較大）以及自身出現「假突破」(FailedBreakout)訊號的雙重壓力下，預計T+1交易日開盤可能承壓。儘管存在一個未回補的多方測量型缺口（目標415.8），但假突破訊號優先，且入場權限為等待確認。股價可能在370.0至380.0區間震盪，測試短期均線支撐。若能守穩370.0，則有機會在盤中嘗試反彈，但上方壓力較大，追價意願將受限。",
+        "prediction_T+2": "若T+1交易日能守住370.0附近支撐，且美股AI氛圍有所改善，廣達可能嘗試溫和反彈。然而，由於「假突破」的限制，反彈空間可能有限，預計將在380.0至390.0區間面臨壓力。若未能有效反彈或跌破370.0，則可能回測362.0的缺口失效價。多方二次進場（Higher Low）訊號仍需後續K棒確認，在此之前不宜過度樂觀。",
+        "prediction_T+3": "未來走勢將取決於T+1、T+2交易日的K棒確認。若能有效站穩並出現強勢K棒確認Higher Low二次進場訊號，則有望挑戰390.0至400.0區間，甚至測試測量型缺口的上行目標。反之，若股價持續疲軟並跌破362.0（缺口失效價），則多方缺口假設失效，股價可能轉為弱勢，並有回測340.2（Measured Move下行目標）的風險。整體而言，在假突破訊號未解除前，操作應保持謹慎。",
         "portfolio_advice": {
             "layout_strategy": {
-                "action": "觀察或減碼；但需等待 Second Entry 或確認 K 棒，避免左側反轉操作",
-                "suggested_price_range": "目前持股獲利6.97%，操作優先級為觀察或減碼。若欲減碼，可於目前價位378.0附近或反彈至380.0-385.0區間分批執行。",
-                "stop_loss": "362.0 (若收盤跌破測量型缺口下緣，則多方缺口假設失效，應嚴格停損。)",
-                "rationale": "目前持股處於獲利狀態，但考量到近期價格行為顯示為假突破/跟隨不足 (breakout_entry_permission=FadeBreakout)，且美股AI伺服器同業普遍走弱，追價風險偏高。系統入場權限為 'NeedSecondEntry' 且 'entry_timing_mode=Wait'，禁止建議逆勢或追價。雖然有未回補的測量型缺口提供潛在上行目標415.8，但需等待多方二次進場訊號確認後，方能考慮進一步操作。在確認訊號出現前，建議維持觀察或適度減碼以降低風險，並嚴守362.0的停損點。禁止等待確認後再評估、等待確認、等待確認、避免增加逆向部位、小部位或觀察等高風險建議。\n系統入場權限限制：wedge_entry_permission=NeedSecondEntry，entry_timing_mode=Wait，signal_bar_quality=None，wedge_quality_score=32，countertrend_forbidden_flag=False，risk_first_action=False。因此本報告自動降權高風險左側操作，需等待 Second Entry、確認 K 棒或風險報酬改善後再評估。"
-            },
-            "portfolio_unrealized_pnl_pct": 6.97,
-            "portfolio_action_priority": "observe_or_reduce",
-            "risk_first_action": false,
-            "rebound_reduce_zone": null,
-            "action_zone_summary": "操作優先級=observe_or_reduce；帳面損益=6.97%；支撐/停損參考={'price': 362.0, 'basis': 'gap_failure_condition', 'condition': '若收盤跌破缺口下緣 362.0，或快速回補缺口中點 364.5 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。'}；壓力/缺口失效參考=362.0；反彈減碼區=N/A；禁止追價/等待確認後再評估原因=breakout_entry_permission=FadeBreakout；突破跟隨不足或對手方仍可解套，不得列為強突破追價。"
+                "action": "觀察 / 等待 Second Entry 或確認 K 棒；原始AI建議僅供參考：觀察或減碼",
+                "suggested_price_range": {
+                    "減碼/獲利了結": "385.0 - 395.0",
+                    "觀察/等待確認": "370.0 - 380.0",
+                    "支撐/風控": "362.0"
+                },
+                "stop_loss": "340.2 (若收盤跌破此價位，應嚴格停損)",
+                "rationale": "目前持有廣達獲利6.97%，但系統發出「假突破」(FailedBreakout)警示，且「突破入場權限」為「逆勢操作」(FadeBreakout)，明確禁止追價。對手方獲利分數(counterparty_profitability_score)達70，顯示對手方仍有解套空間，進一步降低順勢追價信心。雖然存在一個未回補的多方測量型缺口（目標415.8）和Higher Low二次進場候選訊號，但入場時機模式(entry_timing_mode)為「等待」(Wait)，且楔型入場權限(wedge_entry_permission)為「需要二次進場」(NeedSecondEntry)，均要求等待後續K棒確認，不宜貿然進場或加碼。考量美股AI伺服器同業（特別是NVDA）普遍下跌，對廣達構成短期壓力，建議優先觀察。若股價反彈至385.0-395.0區間，可考慮減碼部分持股以鎖定獲利並降低風險。若收盤跌破362.0（多方缺口失效價），應考慮進一步減碼；若跌破340.2（Measured Move下行目標），則應嚴格停損，以控制風險。目前不建議攤平、摸底、猜頂或逆勢加碼。\n系統入場權限限制：wedge_entry_permission=NeedSecondEntry，entry_timing_mode=Wait，signal_bar_quality=None，wedge_quality_score=32，countertrend_forbidden_flag=False，risk_first_action=False，portfolio_action_priority=observe_or_reduce。blocked_actions=['未確認前進場', '以低品質楔型作為進場主理由']；required_actions=['等待 Second Entry / 後續確認 K 棒', '等待風險報酬改善']。本 guardrail 採結構化規則，不再用全域字串替換清理 rationale。",
+                "effective_today_action_zone": {
+                    "zone_type": "no_rebound_reduce_zone",
+                    "action": "未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。"
+                },
+                "long_position_stop": {
+                    "price": 340.2,
+                    "role": "long_position_stop_below_market",
+                    "basis": "measured_move_target_down",
+                    "note": "多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。"
+                },
+                "current_support": {
+                    "price": 340.2,
+                    "role": "current_support_below_market",
+                    "basis": "measured_move_target_down",
+                    "note": "目前股價下方較接近的可量化支撐/風控參考。"
+                },
+                "rebound_resistance": {
+                    "price": 362.0,
+                    "role": "rebound_resistance",
+                    "basis": "gap_failure_condition.price",
+                    "note": "反彈壓力或缺口失效確認價，不是多單停損支撐。"
+                },
+                "gap_invalidation_price": {
+                    "price": 362.0,
+                    "role": "gap_invalidation_price",
+                    "basis": "gap_failure_condition.price",
+                    "note": "若收盤跌破缺口下緣 362.0，或快速回補缺口中點 364.5 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。"
+                }
+            }
         },
         "entry_permission_guardrail": {
             "status": "triggered",
-            "reason": "v7.24 P1 deterministic output guardrail",
+            "reason": "v7.25e structural output guardrail",
             "wedge_entry_permission": "NeedSecondEntry",
             "entry_timing_mode": "Wait",
             "signal_bar_quality": "None",
@@ -545,7 +595,17 @@
             "countertrend_forbidden_flag": false,
             "risk_first_action": false,
             "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
-            "guardrail_note": "已自動清理高風險左側用語，並強制要求等待 Second Entry 或確認 K 棒。"
+            "portfolio_action_priority": "observe_or_reduce",
+            "blocked_actions": [
+                "未確認前進場",
+                "以低品質楔型作為進場主理由"
+            ],
+            "required_actions": [
+                "等待 Second Entry / 後續確認 K 棒",
+                "等待風險報酬改善"
+            ],
+            "final_action_template": "觀察 / 等待 Second Entry 或確認 K 棒",
+            "guardrail_note": "系統入場權限限制：wedge_entry_permission=NeedSecondEntry，entry_timing_mode=Wait，signal_bar_quality=None，wedge_quality_score=32，countertrend_forbidden_flag=False，risk_first_action=False，portfolio_action_priority=observe_or_reduce。blocked_actions=['未確認前進場', '以低品質楔型作為進場主理由']；required_actions=['等待 Second Entry / 後續確認 K 棒', '等待風險報酬改善']。本 guardrail 採結構化規則，不再用全域字串替換清理 rationale。"
         }
     }
 }
