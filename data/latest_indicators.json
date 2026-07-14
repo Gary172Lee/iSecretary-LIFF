@@ -1,5 +1,5 @@
 {
-    "update_time": "2026-07-13 14:31:35",
+    "update_time": "2026-07-14 11:29:17",
     "timezone": "Asia/Taipei",
     "strategy_version": "v3.3_Direct_Buy_Only_Shared_PA",
     "engine_generation": "fetch_and_filter_v3.3_direct_buy",
@@ -33,219 +33,20 @@
     },
     "scan_summary": {
         "universe_count": 125,
-        "raw_candidate_count": 1,
+        "raw_candidate_count": 0,
         "direct_buy_candidate_count": 0,
-        "filtered_out_count": 1
+        "filtered_out_count": 0
     },
     "rejected_candidate_summary": {
-        "rejected_count": 1,
-        "top_reject_reasons": [
-            {
-                "reason": "Breakout context blocked：FailedBreakout",
-                "count": 1
-            },
-            {
-                "reason": "Breakout entry permission blocked：FadeBreakout",
-                "count": 1
-            },
-            {
-                "reason": "Failed Breakout Watch：弱突破/假突破觀察候選，不得混入 direct-buy。",
-                "count": 1
-            },
-            {
-                "reason": "Breakout context not allowed for Direct Buy：FailedBreakout",
-                "count": 1
-            },
-            {
-                "reason": "Breakout follow-through score < 60：42.0",
-                "count": 1
-            },
-            {
-                "reason": "Counterparty trapped flag is false",
-                "count": 1
-            },
-            {
-                "reason": "Breakout entry permission is not AllowBreakoutEntry：FadeBreakout",
-                "count": 1
-            },
-            {
-                "reason": "Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破觀察候選，不得混入 direct-buy。",
-                "count": 1
-            },
-            {
-                "reason": "方向未對齊做多：BearishConflict",
-                "count": 1
-            },
-            {
-                "reason": "分數低於 70",
-                "count": 1
-            },
-            {
-                "reason": "風險報酬比不足或缺值：None",
-                "count": 1
-            },
-            {
-                "reason": "NeedSecondEntry 但尚未 Second Entry Confirmed",
-                "count": 1
-            }
-        ],
-        "rejected_bucket_counts": [
-            {
-                "bucket": "failed_breakout",
-                "count": 1
-            }
-        ],
-        "top_rejected_candidates": [
-            {
-                "ticker": "4958",
-                "stock_code": "4958",
-                "stock_name": "臻鼎-KY",
-                "score": 38,
-                "candidate_score": 38,
-                "pattern": "⭐ Nested Wedge (嵌套共振底)",
-                "entry_type": "Second Entry Required",
-                "direction_alignment": "BearishConflict",
-                "symbol": "4958.TW",
-                "t0_close": 646.0,
-                "engine_generation": "fetch_and_filter_v3.3_direct_buy",
-                "tracking_source": "top_rejected_candidate",
-                "direct_buy_signal": false,
-                "direct_buy_blocker": true,
-                "direct_buy_blockers": [
-                    "Breakout context blocked：FailedBreakout",
-                    "Breakout entry permission blocked：FadeBreakout",
-                    "Failed Breakout Watch：弱突破/假突破觀察候選，不得混入 direct-buy。",
-                    "Breakout context not allowed for Direct Buy：FailedBreakout",
-                    "Breakout follow-through score < 60：42.0",
-                    "Counterparty trapped flag is false",
-                    "Breakout entry permission is not AllowBreakoutEntry：FadeBreakout",
-                    "Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破觀察候選，不得混入 direct-buy。",
-                    "方向未對齊做多：BearishConflict",
-                    "分數低於 70",
-                    "風險報酬比不足或缺值：None",
-                    "NeedSecondEntry 但尚未 Second Entry Confirmed",
-                    "Engine 要求等待",
-                    "楔型品質低且無 Signal Bar",
-                    "尚未達到可直接進場的 First/Second Entry 條件",
-                    "risk_reward_ratio_null",
-                    "bearish_conflict_blocker",
-                    "second_entry_unconfirmed_blocker",
-                    "no_countertrend_blocker",
-                    "low_quality_wedge_blocker"
-                ],
-                "bearish_conflict_blocker": true,
-                "target_return_negative_blocker": false,
-                "second_entry_unconfirmed_blocker": true,
-                "target_return_pct_negative": false,
-                "target_return_pct_bucket": "target_return_pct_10_to_20",
-                "rejected_bucket": "failed_breakout",
-                "rejected_bucket_reasons": [
-                    "FailedBreakout / WeakBreakout / FadeBreakout，不得視為 near_miss"
-                ],
-                "direct_buy_reason": "",
-                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：42.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破觀察候選，不得混入 direct-buy。 | 方向未對齊做多：BearishConflict | 分數低於 70 | 風險報酬比不足或缺值：None | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件",
-                "price_action_engine_version": "0.1.2a",
-                "price_action_knowledge_version": "1.4",
-                "price_action_engine_status": "success",
-                "wedge_quality_score": 32,
-                "wedge_quality_subscores": {
-                    "three_push_score": 0,
-                    "overlap_score": 12,
-                    "push_shrinking_score": 0,
-                    "second_entry_score": 20,
-                    "signal_bar_score": 0,
-                    "narrow_channel_penalty": 0,
-                    "total_score": 32,
-                    "notes": [
-                        "重疊率分數=12",
-                        "Second Entry 結構加分"
-                    ]
-                },
-                "wedge_overlap_quality": "Medium",
-                "narrow_channel_wedge_invalid_flag": false,
-                "signal_bar_quality": "None",
-                "entry_timing_mode": "Wait",
-                "wedge_entry_permission": "NeedSecondEntry",
-                "wedge_confluence_type": "None",
-                "first_entry_allowed_reason": [],
-                "first_entry_block_reason": [
-                    "WedgeQualityScore<70",
-                    "OverlapNotHigh",
-                    "SignalBarNotStrong",
-                    "EngineTimingModeWait",
-                    "EngineDidNotAllowFirstEntry"
-                ],
-                "second_leg_trap_flag": false,
-                "mm_before_countertrend_required": false,
-                "stop_loss_reference": {
-                    "price": 588.0,
-                    "basis": "gap_failure_condition",
-                    "condition": "若收盤跌破缺口下緣 588.0，或快速回補缺口中點 602.0 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。"
-                },
-                "risk_reward_ratio": null,
-                "target_return_pct": 18.27,
-                "position_sizing_hint": "訊號未完整，建議觀察或小部位，避免追價與一次滿倉。",
-                "gap_type": "Measuring(測量型缺口候選)",
-                "gap_classification_reason": "未回補缺口但重疊率不足以確認 Breakaway，暫歸類測量型候選；ATR ratio=0.66。",
-                "gap_failure_condition": {
-                    "direction": "Up",
-                    "price": 588.0,
-                    "midpoint": 602.0,
-                    "condition": "若收盤跌破缺口下緣 588.0，或快速回補缺口中點 602.0 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。",
-                    "action_hint": "多方缺口失效時，應降低追價權重。"
-                },
-                "gap_atr_ratio": 0.66,
-                "gap_direction": null,
-                "gap_fill_speed": null,
-                "breakout_context_flag": false,
-                "second_entry_signal": "可能空方 Second Entry / Lower High",
-                "second_entry_reason": "最近第二個有效高點 604.0 低於前一高點 659.0，屬 Lower High 二次進場候選；仍需後續 K 棒確認。",
-                "parabolic_wedge_flag": false,
-                "climax_type": "None",
-                "follow_through_quality": "Unknown(未觸發拋物線/高潮候選)",
-                "max_loss_point": {
-                    "price": null,
-                    "condition": "未觸發拋物線楔型候選，暫不適用。",
-                    "action_hint": "不適用"
-                },
-                "slippage_warning": "Low/Normal",
-                "liquidity_filter_pass": true,
-                "avg_turnover_value": 21977651732.0,
-                "breakout_context_type": "FailedBreakout",
-                "breakout_direction": "Up",
-                "breakout_follow_through_score": 42,
-                "breakout_follow_through_bars": {
-                    "bars_checked": 3,
-                    "strong_close_count": 1,
-                    "overlap_back_inside_count": 3,
-                    "opposite_strong_count": 0,
-                    "prior_high": 659.0,
-                    "prior_low": 495.5,
-                    "details": "Up breakout; strong_close=1, overlap_back_inside=3, opposite_strong=0."
-                },
-                "breakout_gap_pressure_flag": true,
-                "counterparty_trapped_flag": false,
-                "counterparty_profitability_score": 70,
-                "counterparty_profitability_reason": "突破後回到突破點/區間內或缺少有效跟隨，對手方仍可解套或獲利；不得視為對手方被困住。",
-                "breakout_entry_permission": "FadeBreakout",
-                "breakout_failure_warning": "突破跟隨不足或對手方仍可解套，不得列為強突破追價。",
-                "measured_move_context": "SwingRange",
-                "measured_move_target_up": 710.6,
-                "measured_move_target_down": 581.4,
-                "near_measured_move_target_flag": false,
-                "measured_move_target_reaction": "NoReaction",
-                "failed_breakout_watch_flag": true,
-                "failed_breakout_watch_reason": "弱突破/假突破觀察候選，不得混入 direct-buy。",
-                "breakout_score_bucket": "Medium",
-                "failed_breakout_list_flag": true,
-                "failed_breakout_blocker": true
-            }
-        ],
+        "rejected_count": 0,
+        "top_reject_reasons": [],
+        "rejected_bucket_counts": [],
+        "top_rejected_candidates": [],
         "field_policy": "top_rejected_candidates includes full PriceAction Engine fields and rejected_bucket for near-miss analysis",
         "tracking_policy": "performance_audit tracks top_rejected_candidates for T+1~T+5 follow-up"
     },
     "failed_breakout_watchlist_summary": {
-        "watchlist_count": 1,
+        "watchlist_count": 0,
         "output_file": "data/failed_breakout_watchlist.json"
     },
     "price_action_candidates": []
