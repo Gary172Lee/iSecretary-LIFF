@@ -10,7 +10,7 @@
         "raw_ohlcv_file": "3081_聯亞_20260709_ohlcv.json",
         "chart_file": "3081_聯亞_Chart_20260709.png",
         "pdf_file": "3081_聯亞_PA_Analysis_20260709.pdf",
-        "last_tracker_update": "2026-07-14T15:06:01",
+        "last_tracker_update": "2026-07-15T16:53:40",
         "tracker_backfill_source": "GitHub",
         "tracker_backfill_version": "v7.24_Gap_Entry_ActualDate_Repair"
     },
@@ -459,15 +459,15 @@
             "T+4": {
                 "prediction_price": null,
                 "prediction_direction": null,
-                "actual_date": null,
-                "actual_close": null,
-                "actual_direction": null,
-                "actual_source": null,
-                "actual_return_pct": null,
+                "actual_date": "2026-07-15",
+                "actual_close": 1755.0,
+                "actual_direction": "Down",
+                "actual_source": "FUGLEAPI:3081",
+                "actual_return_pct": -16.23,
                 "price_error": null,
                 "price_error_pct": null,
                 "direction_hit": null,
-                "updated_at": null
+                "updated_at": "2026-07-15T16:53:40"
             },
             "T+5": {
                 "prediction_price": null,
@@ -484,14 +484,14 @@
             }
         },
         "summary": {
-            "available_count": 3,
+            "available_count": 4,
             "direction_hit_count": 2,
             "direction_hit_rate": 0.6667,
             "avg_abs_price_error_pct": 4.22,
-            "observed_return_count": 3,
-            "avg_return_pct": -5.81,
+            "observed_return_count": 4,
+            "avg_return_pct": -8.41,
             "mfe_5d_pct": -4.3,
-            "mae_5d_pct": -8.11
+            "mae_5d_pct": -16.23
         },
         "breakout_backtest": {
             "version": "v7.25d_breakout_t1_t5",
@@ -503,11 +503,18 @@
             "fade_high_counterparty_flag": true,
             "status": "ready_for_aggregation",
             "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。",
-            "observed_return_count": 3,
-            "avg_return_pct": -5.81,
+            "observed_return_count": 4,
+            "avg_return_pct": -8.41,
             "mfe_5d_pct": -4.3,
-            "mae_5d_pct": -8.11,
+            "mae_5d_pct": -16.23,
             "analysis_hint": "用於後續彙總比較 breakout_follow_through_score、FadeBreakout、counterparty_profitability_score>=70 之 T+1~T+5 平均報酬與最大回撤。"
+        },
+        "position_lifecycle_backtest": {
+            "observed_return_count": 4,
+            "avg_return_pct_after_decision": -8.41,
+            "mfe_5d_pct_after_decision": -4.3,
+            "mae_5d_pct_after_decision": -16.23,
+            "status": "ready_for_aggregation"
         }
     },
     "news": {
