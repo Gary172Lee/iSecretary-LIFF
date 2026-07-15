@@ -1,5 +1,5 @@
 {
-    "update_time": "2026-07-15 09:06:27",
+    "update_time": "2026-07-15 09:15:38",
     "timezone": "Asia/Taipei",
     "strategy_version": "v3.3_Direct_Buy_Only_Shared_PA",
     "engine_generation": "fetch_and_filter_v3.3_direct_buy",
@@ -135,6 +135,8 @@
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
                     "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0",
                     "Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。",
                     "分數低於 70",
                     "low_quality_wedge_blocker"
@@ -149,8 +151,8 @@
                     "FailedBreakout / WeakBreakout / FadeBreakout，不得視為 near_miss"
                 ],
                 "direct_buy_reason": "",
-                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：8.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：32.0 | Breakout follow-through quality blocked：Poor | Second Leg Trap：breakout_second_leg_trap_flag=true | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：TradingRangeTrap | Second Leg trap action blocked：NoChaseNoAdd | Trading range second-leg risk is High | Breakout Second Leg Trap：breakout_second_leg_trap_flag=true | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 分數低於 70",
-                "price_action_engine_version": "0.1.4a",
+                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：8.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：32.0 | Breakout follow-through quality blocked：Poor | Second Leg Trap：breakout_second_leg_trap_flag=true | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：TradingRangeTrap | Second Leg trap action blocked：NoChaseNoAdd | Trading range second-leg risk is High | Breakout Second Leg Trap：breakout_second_leg_trap_flag=true | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。 | Second Leg risk/reward quality blocked：Blocked | Tradeable Second Leg probability < 60：0.0 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 分數低於 70",
+                "price_action_engine_version": "0.1.4b",
                 "price_action_knowledge_version": "1.6",
                 "price_action_engine_status": "success",
                 "wedge_quality_score": 45,
@@ -279,14 +281,15 @@
                 "pullback_buy_sell_pressure": "Low",
                 "prior_impulse_50pct_price": 116.0,
                 "pullback_entry_zone": {
-                    "preferred_action": "等待回調買進觀察，不追高；若未回調則寧可錯過。",
+                    "preferred_action": "等待結構確認，不得因觸及50%回調價而加碼。",
                     "price": 116.0,
                     "zone_type": "prior_impulse_50pct_pullback",
                     "direction": "Long",
                     "note": "強突破後第二段可能存在，但追價風報比可能變差；此區僅為限價觀察區。",
                     "zone_role": "observation_only",
                     "buy_permission": "blocked",
-                    "entry_permission": "blocked"
+                    "entry_permission": "blocked",
+                    "guardrail_reason": "second_leg_no_add_guardrail=true；50% pullback 只作觀察，不構成買點或加碼點。"
                 },
                 "second_leg_risk_reward_warning": "震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
                 "second_leg_no_add_guardrail": true,
@@ -314,12 +317,14 @@
                     "Second Leg blocked by follow-through quality：Poor",
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
-                    "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。"
+                    "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0"
                 ],
-                "trend_second_leg_background_strength": null,
-                "tradeable_second_leg_probability": null,
-                "second_leg_entry_permission": null,
-                "second_leg_risk_reward_quality": null,
+                "trend_second_leg_background_strength": 25,
+                "tradeable_second_leg_probability": 0,
+                "second_leg_entry_permission": "BlockedByGuardrail",
+                "second_leg_risk_reward_quality": "Blocked",
                 "stop_at_limit_down_warning": null,
                 "gap_down_execution_risk": null,
                 "executable_pre_stop_zone": null,
@@ -331,8 +336,8 @@
                     "1.5",
                     "1.4"
                 ],
-                "trend_second_leg_background_strength_bucket": "None",
-                "tradeable_second_leg_probability_bucket": "None",
+                "trend_second_leg_background_strength_bucket": "Low",
+                "tradeable_second_leg_probability_bucket": "Low",
                 "stop_execution_risk_blocker": false
             },
             {
@@ -375,6 +380,8 @@
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
                     "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0",
                     "Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。",
                     "方向未對齊做多：BearishConflict",
                     "分數低於 70",
@@ -398,8 +405,8 @@
                     "FailedBreakout / WeakBreakout / FadeBreakout，不得視為 near_miss"
                 ],
                 "direct_buy_reason": "",
-                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：0.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：13.0 | Breakout follow-through quality blocked：Poor | Second Leg Trap：breakout_second_leg_trap_flag=true | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | BroadChannel with low urgency：0.0 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：TradingRangeTrap | Second Leg trap action blocked：NoChaseNoAdd | Trading range second-leg risk is High | Breakout Second Leg Trap：breakout_second_leg_trap_flag=true | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 方向未對齊做多：BearishConflict | 分數低於 70 | 楔型失敗 MM 到達前不宜逆勢 | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件",
-                "price_action_engine_version": "0.1.4a",
+                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：0.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：13.0 | Breakout follow-through quality blocked：Poor | Second Leg Trap：breakout_second_leg_trap_flag=true | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | BroadChannel with low urgency：0.0 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：TradingRangeTrap | Second Leg trap action blocked：NoChaseNoAdd | Trading range second-leg risk is High | Breakout Second Leg Trap：breakout_second_leg_trap_flag=true | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。 | Second Leg risk/reward quality blocked：Blocked | Tradeable Second Leg probability < 60：0.0 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 方向未對齊做多：BearishConflict | 分數低於 70 | 楔型失敗 MM 到達前不宜逆勢 | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件",
+                "price_action_engine_version": "0.1.4b",
                 "price_action_knowledge_version": "1.6",
                 "price_action_engine_status": "success",
                 "wedge_quality_score": 32,
@@ -528,14 +535,15 @@
                 "pullback_buy_sell_pressure": "Low",
                 "prior_impulse_50pct_price": 155.29,
                 "pullback_entry_zone": {
-                    "preferred_action": "等待反彈放空觀察，不追空；若未反彈則寧可錯過。",
+                    "preferred_action": "等待結構確認，不得因觸及50%回調價而加碼。",
                     "price": 155.29,
                     "zone_type": "prior_impulse_50pct_pullback",
                     "direction": "Short",
                     "note": "強跌後第二段可能存在，但追空風報比可能變差；此區僅為限價觀察區。",
                     "zone_role": "observation_only",
                     "buy_permission": "blocked",
-                    "entry_permission": "blocked"
+                    "entry_permission": "blocked",
+                    "guardrail_reason": "second_leg_no_add_guardrail=true；50% pullback 只作觀察，不構成買點或加碼點。"
                 },
                 "second_leg_risk_reward_warning": "震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
                 "second_leg_no_add_guardrail": true,
@@ -563,12 +571,14 @@
                     "Second Leg blocked by follow-through quality：Poor",
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
-                    "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。"
+                    "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0"
                 ],
-                "trend_second_leg_background_strength": null,
-                "tradeable_second_leg_probability": null,
-                "second_leg_entry_permission": null,
-                "second_leg_risk_reward_quality": null,
+                "trend_second_leg_background_strength": 60,
+                "tradeable_second_leg_probability": 0,
+                "second_leg_entry_permission": "BlockedByGuardrail",
+                "second_leg_risk_reward_quality": "Blocked",
                 "stop_at_limit_down_warning": null,
                 "gap_down_execution_risk": null,
                 "executable_pre_stop_zone": null,
@@ -580,8 +590,8 @@
                     "1.5",
                     "1.4"
                 ],
-                "trend_second_leg_background_strength_bucket": "None",
-                "tradeable_second_leg_probability_bucket": "None",
+                "trend_second_leg_background_strength_bucket": "Medium",
+                "tradeable_second_leg_probability_bucket": "Low",
                 "stop_execution_risk_blocker": false
             },
             {
@@ -624,6 +634,8 @@
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
                     "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0",
                     "Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。",
                     "分數低於 70",
                     "風險報酬比不足或缺值：0.92",
@@ -647,8 +659,8 @@
                     "FailedBreakout / WeakBreakout / FadeBreakout，不得視為 near_miss"
                 ],
                 "direct_buy_reason": "",
-                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：0.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：19.0 | Breakout follow-through quality blocked：Poor | Second Leg Trap：breakout_second_leg_trap_flag=true | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | BroadChannel with low urgency：0.0 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：TradingRangeTrap | Second Leg trap action blocked：NoChaseNoAdd | Trading range second-leg risk is High | Breakout Second Leg Trap：breakout_second_leg_trap_flag=true | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 分數低於 70 | 風險報酬比不足或缺值：0.92 | 楔型失敗 MM 到達前不宜逆勢 | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件",
-                "price_action_engine_version": "0.1.4a",
+                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：0.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：19.0 | Breakout follow-through quality blocked：Poor | Second Leg Trap：breakout_second_leg_trap_flag=true | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | BroadChannel with low urgency：0.0 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：TradingRangeTrap | Second Leg trap action blocked：NoChaseNoAdd | Trading range second-leg risk is High | Breakout Second Leg Trap：breakout_second_leg_trap_flag=true | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。 | Second Leg risk/reward quality blocked：Blocked | Tradeable Second Leg probability < 60：0.0 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 分數低於 70 | 風險報酬比不足或缺值：0.92 | 楔型失敗 MM 到達前不宜逆勢 | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件",
+                "price_action_engine_version": "0.1.4b",
                 "price_action_knowledge_version": "1.6",
                 "price_action_engine_status": "success",
                 "wedge_quality_score": 32,
@@ -778,14 +790,15 @@
                 "pullback_buy_sell_pressure": "Low",
                 "prior_impulse_50pct_price": 490.27,
                 "pullback_entry_zone": {
-                    "preferred_action": "等待反彈放空觀察，不追空；若未反彈則寧可錯過。",
+                    "preferred_action": "等待結構確認，不得因觸及50%回調價而加碼。",
                     "price": 490.27,
                     "zone_type": "prior_impulse_50pct_pullback",
                     "direction": "Short",
                     "note": "強跌後第二段可能存在，但追空風報比可能變差；此區僅為限價觀察區。",
                     "zone_role": "observation_only",
                     "buy_permission": "blocked",
-                    "entry_permission": "blocked"
+                    "entry_permission": "blocked",
+                    "guardrail_reason": "second_leg_no_add_guardrail=true；50% pullback 只作觀察，不構成買點或加碼點。"
                 },
                 "second_leg_risk_reward_warning": "震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
                 "second_leg_no_add_guardrail": true,
@@ -813,12 +826,14 @@
                     "Second Leg blocked by follow-through quality：Poor",
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
-                    "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。"
+                    "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0"
                 ],
-                "trend_second_leg_background_strength": null,
-                "tradeable_second_leg_probability": null,
-                "second_leg_entry_permission": null,
-                "second_leg_risk_reward_quality": null,
+                "trend_second_leg_background_strength": 20,
+                "tradeable_second_leg_probability": 0,
+                "second_leg_entry_permission": "BlockedByGuardrail",
+                "second_leg_risk_reward_quality": "Blocked",
                 "stop_at_limit_down_warning": null,
                 "gap_down_execution_risk": null,
                 "executable_pre_stop_zone": null,
@@ -830,8 +845,8 @@
                     "1.5",
                     "1.4"
                 ],
-                "trend_second_leg_background_strength_bucket": "None",
-                "tradeable_second_leg_probability_bucket": "None",
+                "trend_second_leg_background_strength_bucket": "Low",
+                "tradeable_second_leg_probability_bucket": "Low",
                 "stop_execution_risk_blocker": false
             },
             {
@@ -874,6 +889,8 @@
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
                     "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0",
                     "Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。",
                     "方向未對齊做多：BearishConflict",
                     "分數低於 70",
@@ -902,8 +919,8 @@
                     "FailedBreakout / WeakBreakout / FadeBreakout，不得視為 near_miss"
                 ],
                 "direct_buy_reason": "",
-                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：6.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：25.0 | Breakout follow-through quality blocked：Poor | Second Leg Trap：breakout_second_leg_trap_flag=true | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | BroadChannel with low urgency：5.0 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：TradingRangeTrap | Second Leg trap action blocked：NoChaseNoAdd | Trading range second-leg risk is High | Breakout Second Leg Trap：breakout_second_leg_trap_flag=true | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 方向未對齊做多：BearishConflict | 分數低於 70 | 風險報酬比不足或缺值：None | MM 目標報酬未達 10.0%：-4.14 | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件 | 信號 K 強度不足",
-                "price_action_engine_version": "0.1.4a",
+                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：6.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：25.0 | Breakout follow-through quality blocked：Poor | Second Leg Trap：breakout_second_leg_trap_flag=true | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | BroadChannel with low urgency：5.0 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：TradingRangeTrap | Second Leg trap action blocked：NoChaseNoAdd | Trading range second-leg risk is High | Breakout Second Leg Trap：breakout_second_leg_trap_flag=true | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。 | Second Leg risk/reward quality blocked：Blocked | Tradeable Second Leg probability < 60：0.0 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 方向未對齊做多：BearishConflict | 分數低於 70 | 風險報酬比不足或缺值：None | MM 目標報酬未達 10.0%：-4.14 | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件 | 信號 K 強度不足",
+                "price_action_engine_version": "0.1.4b",
                 "price_action_knowledge_version": "1.6",
                 "price_action_engine_status": "success",
                 "wedge_quality_score": 32,
@@ -1031,14 +1048,15 @@
                 "pullback_buy_sell_pressure": "Low",
                 "prior_impulse_50pct_price": 40.81,
                 "pullback_entry_zone": {
-                    "preferred_action": "等待回調買進觀察，不追高；若未回調則寧可錯過。",
+                    "preferred_action": "等待結構確認，不得因觸及50%回調價而加碼。",
                     "price": 40.81,
                     "zone_type": "prior_impulse_50pct_pullback",
                     "direction": "Long",
                     "note": "強突破後第二段可能存在，但追價風報比可能變差；此區僅為限價觀察區。",
                     "zone_role": "observation_only",
                     "buy_permission": "blocked",
-                    "entry_permission": "blocked"
+                    "entry_permission": "blocked",
+                    "guardrail_reason": "second_leg_no_add_guardrail=true；50% pullback 只作觀察，不構成買點或加碼點。"
                 },
                 "second_leg_risk_reward_warning": "震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
                 "second_leg_no_add_guardrail": true,
@@ -1066,12 +1084,14 @@
                     "Second Leg blocked by follow-through quality：Poor",
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
-                    "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。"
+                    "Second Leg risk/reward warning：震盪區間或跟隨不足的第二段陷阱風險高；禁止追價或加倉，優先保護利潤或等待反轉訊號。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0"
                 ],
-                "trend_second_leg_background_strength": null,
-                "tradeable_second_leg_probability": null,
-                "second_leg_entry_permission": null,
-                "second_leg_risk_reward_quality": null,
+                "trend_second_leg_background_strength": 20,
+                "tradeable_second_leg_probability": 0,
+                "second_leg_entry_permission": "BlockedByGuardrail",
+                "second_leg_risk_reward_quality": "Blocked",
                 "stop_at_limit_down_warning": null,
                 "gap_down_execution_risk": null,
                 "executable_pre_stop_zone": null,
@@ -1083,8 +1103,8 @@
                     "1.5",
                     "1.4"
                 ],
-                "trend_second_leg_background_strength_bucket": "None",
-                "tradeable_second_leg_probability_bucket": "None",
+                "trend_second_leg_background_strength_bucket": "Low",
+                "tradeable_second_leg_probability_bucket": "Low",
                 "stop_execution_risk_blocker": false
             },
             {
@@ -1123,6 +1143,8 @@
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
                     "Second Leg risk/reward warning：雖可能存在強趨勢第二段背景，但突破權限/跟隨品質/對手方被困條件不足；不得以第二段作為追價或加倉理由。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0",
                     "Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。",
                     "滑價風險過高：Medium：高價股，分批與限價單優先。",
                     "方向未對齊做多：BearishConflict",
@@ -1149,8 +1171,8 @@
                     "FailedBreakout / WeakBreakout / FadeBreakout，不得視為 near_miss"
                 ],
                 "direct_buy_reason": "",
-                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：0.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：14.0 | Breakout follow-through quality blocked：Poor | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：StrongTrendNoTrade | Second Leg trap action blocked：NoChaseNoAdd | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：雖可能存在強趨勢第二段背景，但突破權限/跟隨品質/對手方被困條件不足；不得以第二段作為追價或加倉理由。 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 滑價風險過高：Medium：高價股，分批與限價單優先。 | 方向未對齊做多：BearishConflict | 分數低於 70 | 風險報酬比不足或缺值：None | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件 | 信號 K 強度不足",
-                "price_action_engine_version": "0.1.4a",
+                "direct_buy_reject_reason": "Breakout context blocked：FailedBreakout | Breakout entry permission blocked：FadeBreakout | Failed Breakout Watch：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | Breakout context not allowed for Direct Buy：FailedBreakout | Breakout follow-through score < 60：0.0 | Counterparty trapped flag is false | Breakout entry permission is not AllowBreakoutEntry：FadeBreakout | True breakout quality < 60：14.0 | Breakout follow-through quality blocked：Poor | Counterparty profitability score >= 70：70.0 | Breakout failure warning：突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。 | True Breakout v1.5 rejected context：FailedBreakout | Second Leg no-add guardrail：second_leg_no_add_guardrail=true | Second Leg context blocked：StrongTrendNoTrade | Second Leg trap action blocked：NoChaseNoAdd | Second Leg blocked by breakout permission：FadeBreakout | Second Leg blocked by follow-through quality：Poor | Second Leg blocked：counterparty_trapped_flag=false | Second Leg blocked：counterparty_profitability_score >= 70：70.0 | Second Leg risk/reward warning：雖可能存在強趨勢第二段背景，但突破權限/跟隨品質/對手方被困條件不足；不得以第二段作為追價或加倉理由。 | Second Leg risk/reward quality blocked：Blocked | Tradeable Second Leg probability < 60：0.0 | Failed Breakout Watch 不得列入 Direct Buy：弱突破/假突破/第二段陷阱觀察候選，不得混入 direct-buy。 | 滑價風險過高：Medium：高價股，分批與限價單優先。 | 方向未對齊做多：BearishConflict | 分數低於 70 | 風險報酬比不足或缺值：None | NeedSecondEntry 但尚未 Second Entry Confirmed | Engine 要求等待 | 楔型品質低且無 Signal Bar | 尚未達到可直接進場的 First/Second Entry 條件 | 信號 K 強度不足",
+                "price_action_engine_version": "0.1.4b",
                 "price_action_knowledge_version": "1.6",
                 "price_action_engine_status": "success",
                 "wedge_quality_score": 20,
@@ -1277,14 +1299,15 @@
                 "pullback_buy_sell_pressure": "Low",
                 "prior_impulse_50pct_price": 2417.5,
                 "pullback_entry_zone": {
-                    "preferred_action": "等待反彈放空觀察，不追空；若未反彈則寧可錯過。",
+                    "preferred_action": "等待結構確認，不得因觸及50%回調價而加碼。",
                     "price": 2417.5,
                     "zone_type": "prior_impulse_50pct_pullback",
                     "direction": "Short",
                     "note": "強跌後第二段可能存在，但追空風報比可能變差；此區僅為限價觀察區。",
                     "zone_role": "observation_only",
                     "buy_permission": "blocked",
-                    "entry_permission": "blocked"
+                    "entry_permission": "blocked",
+                    "guardrail_reason": "second_leg_no_add_guardrail=true；50% pullback 只作觀察，不構成買點或加碼點。"
                 },
                 "second_leg_risk_reward_warning": "雖可能存在強趨勢第二段背景，但突破權限/跟隨品質/對手方被困條件不足；不得以第二段作為追價或加倉理由。",
                 "second_leg_no_add_guardrail": true,
@@ -1310,12 +1333,14 @@
                     "Second Leg blocked by follow-through quality：Poor",
                     "Second Leg blocked：counterparty_trapped_flag=false",
                     "Second Leg blocked：counterparty_profitability_score >= 70：70.0",
-                    "Second Leg risk/reward warning：雖可能存在強趨勢第二段背景，但突破權限/跟隨品質/對手方被困條件不足；不得以第二段作為追價或加倉理由。"
+                    "Second Leg risk/reward warning：雖可能存在強趨勢第二段背景，但突破權限/跟隨品質/對手方被困條件不足；不得以第二段作為追價或加倉理由。",
+                    "Second Leg risk/reward quality blocked：Blocked",
+                    "Tradeable Second Leg probability < 60：0.0"
                 ],
-                "trend_second_leg_background_strength": null,
-                "tradeable_second_leg_probability": null,
-                "second_leg_entry_permission": null,
-                "second_leg_risk_reward_quality": null,
+                "trend_second_leg_background_strength": 60,
+                "tradeable_second_leg_probability": 0,
+                "second_leg_entry_permission": "BlockedByGuardrail",
+                "second_leg_risk_reward_quality": "Blocked",
                 "stop_at_limit_down_warning": null,
                 "gap_down_execution_risk": null,
                 "executable_pre_stop_zone": null,
@@ -1327,8 +1352,8 @@
                     "1.5",
                     "1.4"
                 ],
-                "trend_second_leg_background_strength_bucket": "None",
-                "tradeable_second_leg_probability_bucket": "None",
+                "trend_second_leg_background_strength_bucket": "Medium",
+                "tradeable_second_leg_probability_bucket": "Low",
                 "stop_execution_risk_blocker": false
             }
         ],
