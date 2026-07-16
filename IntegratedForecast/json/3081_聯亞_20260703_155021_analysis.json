@@ -8,9 +8,9 @@
         "raw_ohlcv_file": "3081_聯亞_20260703_155021_ohlcv.json",
         "chart_file": "3081_聯亞_Chart_20260703_155021.png",
         "pdf_file": "3081_聯亞_PA_Analysis_20260703_155109.pdf",
-        "last_tracker_update": "2026-07-09T08:11:24",
+        "last_tracker_update": "2026-07-16T09:25:23",
         "tracker_backfill_source": "GitHub",
-        "tracker_backfill_version": "v7.24_Gap_Entry_ActualDate_Repair"
+        "tracker_backfill_version": "v7.25j_ExecutionBasisBacktest"
     },
     "stock_profile": {
         "stock_type": "中小型高波動題材股",
@@ -252,7 +252,7 @@
         "run_datetime": "2026-07-03T15:50:21",
         "base_date": "2026-07-03",
         "base_close": 2100.0,
-        "status": "complete",
+        "status": "pending",
         "items": {
             "T+1": {
                 "prediction_price": null,
@@ -295,7 +295,61 @@
             "available_count": 3,
             "direction_hit_count": 0,
             "direction_hit_rate": null,
-            "avg_abs_price_error_pct": null
+            "avg_abs_price_error_pct": null,
+            "observed_return_count": 0,
+            "avg_return_pct": null,
+            "mfe_5d_pct": null,
+            "mae_5d_pct": null
+        },
+        "breakout_backtest": {
+            "observed_return_count": 0,
+            "avg_return_pct": null,
+            "mfe_5d_pct": null,
+            "mae_5d_pct": null,
+            "status": "pending_actuals",
+            "analysis_hint": "用於後續彙總比較 breakout_follow_through_score、FadeBreakout、counterparty_profitability_score>=70 之 T+1~T+5 平均報酬與最大回撤。"
+        },
+        "position_lifecycle_backtest": {
+            "observed_return_count": 0,
+            "avg_return_pct_after_decision": null,
+            "mfe_5d_pct_after_decision": null,
+            "mae_5d_pct_after_decision": null,
+            "status": "pending_actuals",
+            "execution_basis_version": "v7.25j_execution_basis_v1",
+            "decision_generated_at": "2026-07-03T15:50:21",
+            "decision_market_data_date": "2026-07-03",
+            "decision_timezone": "Asia/Taipei",
+            "decision_delivery_rule": "first_taiwan_trading_day_after_market_data_date_at_08_20",
+            "benchmark_execution_price_definition": "第一個後續交易日09:00開盤價；若開盤跌停、停牌或零成交量，不得假設已成交。",
+            "actual_user_execution_price_definition": "只有Portfolio.xlsx『買賣紀錄』中實際賣出交易的成交價，才可稱為actual_user_execution_price。",
+            "execution_priority": "actual_user_trade_over_benchmark_open_assumption",
+            "future_ohlcv_observed_count": 6,
+            "decision_delivery_date": "2026-07-06",
+            "decision_delivery_datetime": "2026-07-06T08:20:00+08:00",
+            "execution_eligibility_datetime": "2026-07-06T09:00:00+08:00",
+            "assumed_execution_date": "2026-07-06",
+            "benchmark_execution_date": "2026-07-06",
+            "benchmark_execution_price": 2175.0,
+            "benchmark_execution_price_source": "FUGLEAPI:3081:Open",
+            "recommended_immediate_sell_ratio_pct": 0.0,
+            "remaining_position_ratio_pct": 100.0,
+            "recommended_immediate_sell_shares": null,
+            "limit_up_down_fill_status": "not_applicable_no_immediate_sell",
+            "benchmark_fill_status": "not_applicable_no_immediate_sell",
+            "effective_execution_date": null,
+            "effective_execution_price": null,
+            "effective_execution_price_source": null,
+            "execution_status": "not_applicable_no_immediate_sell",
+            "remaining_floor_trigger": null,
+            "rebound_reduce_zone_hit": null,
+            "rebound_rejection": null,
+            "full_exit_trigger": null,
+            "remaining_floor_trigger_date": null,
+            "rebound_reduce_zone_hit_date": null,
+            "full_exit_trigger_date": null,
+            "full_exit_benchmark_price": null,
+            "execution_metrics_status": "pending_or_unconfirmed_fill",
+            "last_execution_backfill_at": "2026-07-16T09:25:23"
         }
     },
     "news": {

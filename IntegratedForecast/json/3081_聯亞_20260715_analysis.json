@@ -26,7 +26,10 @@
         "ticker": "3081.TWO",
         "raw_ohlcv_file": "3081_聯亞_20260715_ohlcv.json",
         "chart_file": "3081_聯亞_Chart_20260715.png",
-        "pdf_file": "3081_聯亞_PA_Analysis_20260715.pdf"
+        "pdf_file": "3081_聯亞_PA_Analysis_20260715.pdf",
+        "last_tracker_update": "2026-07-16T09:25:04",
+        "tracker_backfill_source": "GitHub",
+        "tracker_backfill_version": "v7.25j_ExecutionBasisBacktest"
     },
     "stock_profile": {
         "stock_type": "中小型高波動題材股",
@@ -1060,7 +1063,17 @@
             "max_profit_since_entry_pct": 9.54,
             "max_adverse_excursion_since_entry_pct": -22.93,
             "status": "pending_actuals",
-            "purpose": "比較各持倉生命週期出場狀態在 T+1~T+5 的後續報酬、MFE、MAE與賣飛/回吐風險。"
+            "purpose": "比較各持倉生命週期出場狀態在 T+1~T+5 的後續報酬、MFE、MAE與賣飛/回吐風險。",
+            "execution_basis_version": "v7.25j_execution_basis_v1",
+            "decision_generated_at": "2026-07-15T17:25:05",
+            "decision_market_data_date": "2026-07-15",
+            "decision_timezone": "Asia/Taipei",
+            "decision_delivery_rule": "first_taiwan_trading_day_after_market_data_date_at_08_20",
+            "benchmark_execution_price_definition": "第一個後續交易日09:00開盤價；若開盤跌停、停牌或零成交量，不得假設已成交。",
+            "actual_user_execution_price_definition": "只有Portfolio.xlsx『買賣紀錄』中實際賣出交易的成交價，才可稱為actual_user_execution_price。",
+            "execution_priority": "actual_user_trade_over_benchmark_open_assumption",
+            "future_ohlcv_observed_count": 0,
+            "execution_status": "pending_next_trading_day_ohlcv"
         }
     },
     "news": {
