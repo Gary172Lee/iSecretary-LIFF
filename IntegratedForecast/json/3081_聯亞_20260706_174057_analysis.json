@@ -8,9 +8,9 @@
         "raw_ohlcv_file": "3081_聯亞_20260706_174057_ohlcv.json",
         "chart_file": "3081_聯亞_Chart_20260706_174058.png",
         "pdf_file": "3081_聯亞_PA_Analysis_20260706_174139.pdf",
-        "last_tracker_update": "2026-07-16T09:25:18",
+        "last_tracker_update": "2026-07-16T10:03:27",
         "tracker_backfill_source": "GitHub",
-        "tracker_backfill_version": "v7.25j_ExecutionBasisBacktest"
+        "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
     "stock_profile": {
         "stock_type": "中小型高波動題材股",
@@ -430,14 +430,14 @@
             "mfe_5d_pct_after_decision": 0.25,
             "mae_5d_pct_after_decision": 0.25,
             "status": "ready_for_aggregation",
-            "execution_basis_version": "v7.25j_execution_basis_v1",
+            "execution_basis_version": "v7.25j1_execution_basis_v2",
             "decision_generated_at": "2026-07-06T17:40:57",
             "decision_market_data_date": "2026-07-06",
             "decision_timezone": "Asia/Taipei",
-            "decision_delivery_rule": "first_taiwan_trading_day_after_market_data_date_at_08_20",
-            "benchmark_execution_price_definition": "第一個後續交易日09:00開盤價；若開盤跌停、停牌或零成交量，不得假設已成交。",
-            "actual_user_execution_price_definition": "只有Portfolio.xlsx『買賣紀錄』中實際賣出交易的成交價，才可稱為actual_user_execution_price。",
-            "execution_priority": "actual_user_trade_over_benchmark_open_assumption",
+            "decision_delivery_rule": "next_not_missed_08_20_schedule_after_decision_generation_and_after_market_data_date",
+            "benchmark_execution_price_definition": "決策產生後下一個未錯過的08:20排程所對應交易日09:00開盤價；不得回溯使用決策產生前的開盤價。",
+            "actual_user_execution_price_definition": "只有Portfolio.xlsx『買賣紀錄』的實際賣出交易價，才可稱為actual_user_execution_price。",
+            "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
             "future_ohlcv_observed_count": 6,
             "decision_delivery_date": "2026-07-07",
             "decision_delivery_datetime": "2026-07-07T08:20:00+08:00",
@@ -464,7 +464,12 @@
             "full_exit_trigger_date": null,
             "full_exit_benchmark_price": null,
             "execution_metrics_status": "pending_or_unconfirmed_fill",
-            "last_execution_backfill_at": "2026-07-16T09:25:18"
+            "last_execution_backfill_at": "2026-07-16T10:03:27",
+            "version": "v7.25j1_position_lifecycle_execution_t1_t5",
+            "decision_delivery_candidate_date": "2026-07-07",
+            "decision_delivery_candidate_note": "候選日依08:20截止時間計算；國定假日由後續OHLCV第一個實際交易日校正。",
+            "execution_eligibility_rule": "resolved_delivery_trading_day_market_open_at_09_00",
+            "eligible_execution_ohlcv_observed_count": 6
         }
     },
     "news": {

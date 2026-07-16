@@ -27,9 +27,9 @@
         "raw_ohlcv_file": "3081_聯亞_20260715_ohlcv.json",
         "chart_file": "3081_聯亞_Chart_20260715.png",
         "pdf_file": "3081_聯亞_PA_Analysis_20260715.pdf",
-        "last_tracker_update": "2026-07-16T09:25:04",
+        "last_tracker_update": "2026-07-16T10:03:19",
         "tracker_backfill_source": "GitHub",
-        "tracker_backfill_version": "v7.25j_ExecutionBasisBacktest"
+        "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
     "stock_profile": {
         "stock_type": "中小型高波動題材股",
@@ -1044,7 +1044,7 @@
             "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。"
         },
         "position_lifecycle_backtest": {
-            "version": "v7.25i_position_lifecycle_t1_t5",
+            "version": "v7.25j1_position_lifecycle_execution_t1_t5",
             "position_buy_date": "2026-05-19",
             "base_profit_target_pct": 10.0,
             "base_profit_target_price": 2490.47,
@@ -1064,16 +1064,21 @@
             "max_adverse_excursion_since_entry_pct": -22.93,
             "status": "pending_actuals",
             "purpose": "比較各持倉生命週期出場狀態在 T+1~T+5 的後續報酬、MFE、MAE與賣飛/回吐風險。",
-            "execution_basis_version": "v7.25j_execution_basis_v1",
+            "execution_basis_version": "v7.25j1_execution_basis_v2",
             "decision_generated_at": "2026-07-15T17:25:05",
             "decision_market_data_date": "2026-07-15",
             "decision_timezone": "Asia/Taipei",
-            "decision_delivery_rule": "first_taiwan_trading_day_after_market_data_date_at_08_20",
-            "benchmark_execution_price_definition": "第一個後續交易日09:00開盤價；若開盤跌停、停牌或零成交量，不得假設已成交。",
-            "actual_user_execution_price_definition": "只有Portfolio.xlsx『買賣紀錄』中實際賣出交易的成交價，才可稱為actual_user_execution_price。",
-            "execution_priority": "actual_user_trade_over_benchmark_open_assumption",
+            "decision_delivery_rule": "next_not_missed_08_20_schedule_after_decision_generation_and_after_market_data_date",
+            "benchmark_execution_price_definition": "決策產生後下一個未錯過的08:20排程所對應交易日09:00開盤價；不得回溯使用決策產生前的開盤價。",
+            "actual_user_execution_price_definition": "只有Portfolio.xlsx『買賣紀錄』的實際賣出交易價，才可稱為actual_user_execution_price。",
+            "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
             "future_ohlcv_observed_count": 0,
-            "execution_status": "pending_next_trading_day_ohlcv"
+            "execution_status": "pending_delivery_trading_day_ohlcv",
+            "decision_delivery_candidate_date": "2026-07-16",
+            "decision_delivery_candidate_note": "候選日依08:20截止時間計算；國定假日由後續OHLCV第一個實際交易日校正。",
+            "execution_eligibility_rule": "resolved_delivery_trading_day_market_open_at_09_00",
+            "eligible_execution_ohlcv_observed_count": 0,
+            "last_execution_backfill_at": "2026-07-16T10:03:19"
         }
     },
     "news": {
