@@ -28,7 +28,10 @@
         "ticker": "2382.TW",
         "raw_ohlcv_file": "2382_廣達_20260716_ohlcv.json",
         "chart_file": "2382_廣達_Chart_20260716.png",
-        "pdf_file": "2382_廣達_PA_Analysis_20260716.pdf"
+        "pdf_file": "2382_廣達_PA_Analysis_20260716.pdf",
+        "last_tracker_update": "2026-07-17T08:11:54",
+        "tracker_backfill_source": "GitHub",
+        "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
     "stock_profile": {
         "stock_type": "大型權值波段股",
@@ -966,15 +969,15 @@
             "T+1": {
                 "prediction_price": 380.0,
                 "prediction_direction": "Down",
-                "actual_date": null,
-                "actual_close": null,
-                "actual_direction": null,
-                "actual_source": null,
-                "actual_return_pct": null,
-                "price_error": null,
-                "price_error_pct": null,
-                "direction_hit": null,
-                "updated_at": null
+                "actual_date": "2026-07-16",
+                "actual_close": 352.0,
+                "actual_direction": "Down",
+                "actual_source": "FUGLEAPI:2382",
+                "actual_return_pct": -7.61,
+                "price_error": -28.0,
+                "price_error_pct": -7.95,
+                "direction_hit": true,
+                "updated_at": "2026-07-17T08:11:54"
             },
             "T+2": {
                 "prediction_price": 376.0,
@@ -1030,14 +1033,14 @@
             }
         },
         "summary": {
-            "available_count": 0,
-            "direction_hit_count": 0,
-            "direction_hit_rate": null,
-            "avg_abs_price_error_pct": null,
-            "observed_return_count": 0,
-            "avg_return_pct": null,
-            "mfe_5d_pct": null,
-            "mae_5d_pct": null
+            "available_count": 1,
+            "direction_hit_count": 1,
+            "direction_hit_rate": 1.0,
+            "avg_abs_price_error_pct": 7.95,
+            "observed_return_count": 1,
+            "avg_return_pct": -7.61,
+            "mfe_5d_pct": -7.61,
+            "mae_5d_pct": -7.61
         },
         "breakout_backtest": {
             "version": "v7.25d_breakout_t1_t5",
@@ -1047,8 +1050,13 @@
             "counterparty_profitability_score": 70,
             "counterparty_trapped_flag": false,
             "fade_high_counterparty_flag": true,
-            "status": "pending_actuals",
-            "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。"
+            "status": "ready_for_aggregation",
+            "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。",
+            "observed_return_count": 1,
+            "avg_return_pct": -7.61,
+            "mfe_5d_pct": -7.61,
+            "mae_5d_pct": -7.61,
+            "analysis_hint": "用於後續彙總比較 breakout_follow_through_score、FadeBreakout、counterparty_profitability_score>=70 之 T+1~T+5 平均報酬與最大回撤。"
         },
         "position_lifecycle_backtest": {
             "version": "v7.25j1_position_lifecycle_execution_t1_t5",
@@ -1069,7 +1077,7 @@
             "current_position_profit_pct": 7.82,
             "max_profit_since_entry_pct": 11.22,
             "max_adverse_excursion_since_entry_pct": 1.03,
-            "status": "pending_actuals",
+            "status": "ready_for_aggregation",
             "purpose": "以實際買賣紀錄優先、下一交易日開盤基準次之，回測立即賣出比例、剩餘部位底線、反彈區與完整退出條件。",
             "execution_basis_version": "v7.25j1_execution_basis_v2",
             "decision_generated_at": "2026-07-16T10:19:46",
@@ -1099,9 +1107,13 @@
             "decision_delivery_candidate_date": "2026-07-17",
             "decision_delivery_candidate_note": "候選日依08:20截止時間計算；國定假日由後續OHLCV第一個實際交易日校正。",
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
-            "future_ohlcv_observed_count": 0,
+            "future_ohlcv_observed_count": 1,
             "eligible_execution_ohlcv_observed_count": 0,
-            "last_execution_backfill_at": "2026-07-16T10:21:08"
+            "last_execution_backfill_at": "2026-07-17T08:11:54",
+            "observed_return_count": 1,
+            "avg_return_pct_after_decision": -7.61,
+            "mfe_5d_pct_after_decision": -7.61,
+            "mae_5d_pct_after_decision": -7.61
         }
     },
     "news": {
