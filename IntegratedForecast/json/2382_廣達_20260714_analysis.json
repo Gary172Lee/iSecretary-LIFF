@@ -10,7 +10,7 @@
         "raw_ohlcv_file": "2382_廣達_20260714_ohlcv.json",
         "chart_file": "2382_廣達_Chart_20260714.png",
         "pdf_file": "2382_廣達_PA_Analysis_20260714.pdf",
-        "last_tracker_update": "2026-07-17T09:31:37",
+        "last_tracker_update": "2026-07-20T08:12:02",
         "tracker_backfill_source": "GitHub",
         "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
@@ -513,15 +513,15 @@
             "T+3": {
                 "prediction_price": null,
                 "prediction_direction": null,
-                "actual_date": null,
-                "actual_close": null,
-                "actual_direction": null,
-                "actual_source": null,
-                "actual_return_pct": null,
+                "actual_date": "2026-07-17",
+                "actual_close": 325.5,
+                "actual_direction": "Down",
+                "actual_source": "FUGLEAPI:2382",
+                "actual_return_pct": -14.34,
                 "price_error": null,
                 "price_error_pct": null,
                 "direction_hit": null,
-                "updated_at": null
+                "updated_at": "2026-07-20T08:12:02"
             },
             "T+4": {
                 "prediction_price": null,
@@ -551,14 +551,14 @@
             }
         },
         "summary": {
-            "available_count": 2,
+            "available_count": 3,
             "direction_hit_count": 0,
             "direction_hit_rate": null,
             "avg_abs_price_error_pct": null,
-            "observed_return_count": 2,
-            "avg_return_pct": -3.56,
+            "observed_return_count": 3,
+            "avg_return_pct": -7.15,
             "mfe_5d_pct": 0.26,
-            "mae_5d_pct": -7.37
+            "mae_5d_pct": -14.34
         },
         "breakout_backtest": {
             "version": "v7.25d_breakout_t1_t5",
@@ -570,17 +570,17 @@
             "fade_high_counterparty_flag": true,
             "status": "ready_for_aggregation",
             "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。",
-            "observed_return_count": 2,
-            "avg_return_pct": -3.56,
+            "observed_return_count": 3,
+            "avg_return_pct": -7.15,
             "mfe_5d_pct": 0.26,
-            "mae_5d_pct": -7.37,
+            "mae_5d_pct": -14.34,
             "analysis_hint": "用於後續彙總比較 breakout_follow_through_score、FadeBreakout、counterparty_profitability_score>=70 之 T+1~T+5 平均報酬與最大回撤。"
         },
         "position_lifecycle_backtest": {
-            "observed_return_count": 2,
-            "avg_return_pct_after_decision": -3.56,
+            "observed_return_count": 3,
+            "avg_return_pct_after_decision": -7.15,
             "mfe_5d_pct_after_decision": 0.26,
-            "mae_5d_pct_after_decision": -7.37,
+            "mae_5d_pct_after_decision": -14.34,
             "status": "ready_for_aggregation",
             "execution_basis_version": "v7.25j1_execution_basis_v2",
             "decision_generated_at": "2026-07-14T17:35:16",
@@ -590,7 +590,7 @@
             "benchmark_execution_price_definition": "決策產生後下一個未錯過的08:20排程所對應交易日09:00開盤價；不得回溯使用決策產生前的開盤價。",
             "actual_user_execution_price_definition": "只有Portfolio.xlsx『買賣紀錄』的實際賣出交易價，才可稱為actual_user_execution_price。",
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
-            "future_ohlcv_observed_count": 2,
+            "future_ohlcv_observed_count": 3,
             "decision_delivery_date": "2026-07-15",
             "decision_delivery_datetime": "2026-07-15T08:20:00+08:00",
             "execution_eligibility_datetime": "2026-07-15T09:00:00+08:00",
@@ -616,12 +616,12 @@
             "full_exit_trigger_date": null,
             "full_exit_benchmark_price": null,
             "execution_metrics_status": "pending_or_unconfirmed_fill",
-            "last_execution_backfill_at": "2026-07-17T09:31:37",
+            "last_execution_backfill_at": "2026-07-20T08:12:02",
             "version": "v7.25j1_position_lifecycle_execution_t1_t5",
             "decision_delivery_candidate_date": "2026-07-15",
             "decision_delivery_candidate_note": "候選日依08:20截止時間計算；國定假日由後續OHLCV第一個實際交易日校正。",
             "execution_eligibility_rule": "resolved_delivery_trading_day_market_open_at_09_00",
-            "eligible_execution_ohlcv_observed_count": 2,
+            "eligible_execution_ohlcv_observed_count": 3,
             "execution_pending_stage": "not_pending",
             "execution_pending_stage_description": "目前不是等待成交候選日行情的狀態。"
         }
