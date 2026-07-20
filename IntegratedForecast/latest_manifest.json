@@ -1,7 +1,7 @@
 {
-    "version": "Integrated_Forecast_v7.25k2_TargetObjectiveEffectivePrecedence_AutoOpenControl_Edition",
+    "version": "Integrated_Forecast_v7.25k3_DecisionReasonConsistency_ExecutionPrioritySchema_RemotePathValidation_Edition",
     "minimum_supported_version": "v7.25d1",
-    "current_rule_family": "v7.25k2",
+    "current_rule_family": "v7.25k3",
     "backward_compatible_with": [
         "v7.25d1",
         "v7.25e",
@@ -19,10 +19,11 @@
         "v7.25j",
         "v7.25j1",
         "v7.25k",
-        "v7.25k1"
+        "v7.25k1",
+        "v7.25k2"
     ],
     "version_policy": "minimum_supported_version",
-    "updated_at": "2026-07-20T08:14:24",
+    "updated_at": "2026-07-20T10:49:06",
     "timezone": "Asia/Taipei",
     "description": "固定入口檔。ChatGPT 排程請先讀取本檔，再依 files[].analysis_json 與 files[].chart_png 讀取當日最新資料。",
     "github_repo": "Gary172Lee/iSecretary-LIFF",
@@ -43,7 +44,7 @@
     "files": [
         {
             "minimum_supported_version": "v7.25d1",
-            "current_rule_family": "v7.25k2",
+            "current_rule_family": "v7.25k3",
             "backward_compatible_with": [
                 "v7.25d1",
                 "v7.25e",
@@ -61,13 +62,14 @@
                 "v7.25j",
                 "v7.25j1",
                 "v7.25k",
-                "v7.25k1"
+                "v7.25k1",
+                "v7.25k2"
             ],
             "version_policy": "minimum_supported_version",
             "stock_code": "2382",
             "stock_name": "廣達",
             "ticker": "2382.TW",
-            "run_datetime": "2026-07-20T08:12:34",
+            "run_datetime": "2026-07-20T10:46:14",
             "file_date": "2026-07-20",
             "daily_output_tag": "20260720",
             "output_naming_policy": "daily_stable_overwrite",
@@ -435,7 +437,14 @@
                     "conditional_additional_sell_ratio_pct": 0,
                     "new_entry_action": "not_specified",
                     "price_action_role": "effective_decision",
-                    "reason": "標的目標、準則與目前最終決策一致。"
+                    "reason": "標的目標、準則與目前最終決策一致。",
+                    "final_execution_schema_version": "v7.25k3_execution_priority_v1",
+                    "final_execution_priority": "structured_lifecycle_decision",
+                    "price_action_advisory_only": false,
+                    "risk_override_allowed": false,
+                    "risk_override_trigger_price": null,
+                    "risk_advisory_trigger_price": 424.03,
+                    "target_objective_conflict_status": "aligned"
                 },
                 "price_action_risk_advisory": {
                     "role": "price_action_risk_advisory_before_target_override",
@@ -618,7 +627,15 @@
                         },
                         "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標狀態=configured；目標與決策=aligned；處理原則=標的目標、準則與目前結構化決策一致。"
                     }
-                }
+                },
+                "final_execution_schema_version": "v7.25k3_execution_priority_v1",
+                "final_execution_priority": "structured_lifecycle_decision",
+                "final_execution_reason": "標的目標與結構化生命週期決策一致，依目前結構化決策執行。",
+                "price_action_advisory_only": false,
+                "risk_override_allowed": false,
+                "risk_override_trigger_price": null,
+                "risk_advisory_trigger_price": 424.03,
+                "target_objective_conflict_status": "aligned"
             },
             "portfolio_action_priority": "risk_control",
             "risk_first_action": false,
@@ -893,7 +910,14 @@
                 "conditional_additional_sell_ratio_pct": 0,
                 "new_entry_action": "not_specified",
                 "price_action_role": "effective_decision",
-                "reason": "標的目標、準則與目前最終決策一致。"
+                "reason": "標的目標、準則與目前最終決策一致。",
+                "final_execution_schema_version": "v7.25k3_execution_priority_v1",
+                "final_execution_priority": "structured_lifecycle_decision",
+                "price_action_advisory_only": false,
+                "risk_override_allowed": false,
+                "risk_override_trigger_price": null,
+                "risk_advisory_trigger_price": 424.03,
+                "target_objective_conflict_status": "aligned"
             },
             "target_objective_override_applied": false,
             "price_action_risk_advisory": {
@@ -1078,17 +1102,80 @@
                     "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標狀態=configured；目標與決策=aligned；處理原則=標的目標、準則與目前結構化決策一致。"
                 }
             },
+            "final_execution_schema_version": "v7.25k3_execution_priority_v1",
+            "final_execution_priority": "structured_lifecycle_decision",
+            "final_execution_reason": "標的目標與結構化生命週期決策一致，依目前結構化決策執行。",
+            "price_action_advisory_only": false,
+            "risk_override_allowed": false,
+            "risk_override_trigger_price": null,
+            "risk_advisory_trigger_price": 424.03,
+            "target_objective_conflict_status": "aligned",
+            "target_vs_price_action_conflict_summary": {
+                "status": "aligned",
+                "resolution": "aligned",
+                "resolution_text": "標的目標、準則與目前最終決策一致。",
+                "conflict_count": 0,
+                "final_execution_priority": "structured_lifecycle_decision",
+                "final_position_action": "follow_aligned_structured_decision",
+                "price_action_advisory_only": false,
+                "risk_override_allowed": false,
+                "risk_advisory_trigger_price": 424.03
+            },
+            "final_decision_reason_consistency_status": "pass",
+            "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
+            "backtest_cohort_tags": [
+                "follow_through_strong_immediate",
+                "near_measured_move_target_true",
+                "second_leg_entry_permission_pullback_only",
+                "surprise_breakout",
+                "true_breakout_quality_ge_70"
+            ],
+            "backtest_cohort_snapshot": {
+                "true_breakout_quality_score": 74,
+                "breakout_follow_through_quality": "StrongImmediate",
+                "surprise_breakout_flag": true,
+                "second_leg_context_type": "SurpriseBreakout",
+                "second_leg_entry_permission": "PullbackOnly",
+                "near_measured_move_target_flag": true,
+                "target_objective_override_applied": false,
+                "risk_first_action": false,
+                "final_execution_priority": "structured_lifecycle_decision",
+                "pullback_observation_zone": {
+                    "lower_price": 358.75,
+                    "upper_price": 358.75,
+                    "reference_price": 358.75,
+                    "direction": "Short",
+                    "zone_type": "prior_impulse_50pct_pullback",
+                    "preferred_action": "等待反彈放空觀察，不追空；若未反彈則寧可錯過。",
+                    "observation_role": "observation_only_no_fill_assumption"
+                }
+            },
+            "pullback_observation_zone": {
+                "lower_price": 358.75,
+                "upper_price": 358.75,
+                "reference_price": 358.75,
+                "direction": "Short",
+                "zone_type": "prior_impulse_50pct_pullback",
+                "preferred_action": "等待反彈放空觀察，不追空；若未反彈則寧可錯過。",
+                "observation_role": "observation_only_no_fill_assumption"
+            },
+            "artifact_validation_policy": {
+                "version": "v7.25k3_remote_path_validation_v1",
+                "local_validation": "before_manifest_commit",
+                "github_validation": "GitHub Contents API exact UTF-8 path readback against the candidate commit before branch update",
+                "pdf_remote_validation": "not_applicable_pdf_not_synced_to_github"
+            },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-07-20T08:12:34",
+                "decision_generated_at": "2026-07-20T10:46:14",
                 "decision_market_data_date": "2026-07-17",
-                "decision_delivery_candidate_date": "2026-07-20",
+                "decision_delivery_candidate_date": "2026-07-21",
                 "decision_delivery_date": null,
                 "decision_delivery_datetime": null,
                 "execution_eligibility_datetime": null,
                 "execution_status": "pending_delivery_trading_day_ohlcv",
-                "execution_pending_stage": "candidate_day_before_08_20_delivery",
-                "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
+                "execution_pending_stage": "before_delivery_candidate_date",
+                "execution_pending_stage_description": "尚未到08:20送達候選日。",
                 "limit_up_down_fill_status": null,
                 "benchmark_execution_date": null,
                 "benchmark_execution_price": null,
@@ -1106,13 +1193,33 @@
                 "full_exit_trigger_date": null,
                 "full_exit_benchmark_price": null,
                 "post_execution_mfe_5d_pct": null,
-                "post_execution_mae_5d_pct": null
+                "post_execution_mae_5d_pct": null,
+                "final_execution_priority": "structured_lifecycle_decision",
+                "price_action_advisory_only": false,
+                "risk_override_allowed": false,
+                "risk_override_trigger_price": null,
+                "risk_advisory_trigger_price": 424.03,
+                "target_objective_conflict_status": "aligned",
+                "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
+                "backtest_cohort_tags": [
+                    "follow_through_strong_immediate",
+                    "near_measured_move_target_true",
+                    "second_leg_entry_permission_pullback_only",
+                    "surprise_breakout",
+                    "true_breakout_quality_ge_70"
+                ],
+                "grouped_backtest_status": "pending_future_ohlcv",
+                "cohort_t1_t5_metrics": {},
+                "cohort_mfe_5d_pct": null,
+                "cohort_mae_5d_pct": null,
+                "pullback_zone_touch_status": "pending_future_ohlcv",
+                "pullback_zone_first_touch_date": null
             },
             "analysis_json": "IntegratedForecast/json/2382_廣達_20260720_analysis.json",
             "chart_png": "IntegratedForecast/png/2382_廣達_Chart_20260720.png",
             "raw_ohlcv": "IntegratedForecast/raw_ohlcv/2382_廣達_20260720_ohlcv.json",
             "pdf_file": "2382_廣達_PA_Analysis_20260720.pdf",
-            "json_sha": "48b7a0494546360225202a85aa88493e526d28113828d3eae4d463f4b4bfbbb0",
+            "json_sha": "d6895a6da9e8525b1d539e51acc464c4a8c64deb19a06f75b4ce5ae5f4ae4de9",
             "png_sha": "f6b4fd6170bc69abf6e29987cfd3052c20de165f7e81763c518b44bcfbd1a4e1",
             "chart_read_status": "success",
             "profile_risk_triggered_summary": "未觸發標的專屬風險規則",
@@ -1121,11 +1228,50 @@
                 "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\2382_廣達_Chart_20260720.png",
                 "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\2382_廣達_20260720_ohlcv.json",
                 "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\2382_廣達_PA_Analysis_20260720.pdf"
+            },
+            "json_local_validation_status": "pass",
+            "json_sync_queued": true,
+            "json_commit_included": true,
+            "json_path_exists": true,
+            "json_fetch_validation_status": "pass",
+            "json_remote_fetch_validation_status": "pass",
+            "json_fetch_http_status": 200,
+            "json_remote_blob_sha": "e3fa2c21e58ecf98a0b993810d223fb345c31f1d",
+            "json_remote_content_sha256": "d6895a6da9e8525b1d539e51acc464c4a8c64deb19a06f75b4ce5ae5f4ae4de9",
+            "json_sha256_match": true,
+            "png_local_validation_status": "pass",
+            "png_sync_queued": true,
+            "png_commit_included": true,
+            "png_path_exists": true,
+            "png_fetch_validation_status": "pass",
+            "png_remote_fetch_validation_status": "pass",
+            "png_fetch_http_status": 200,
+            "png_remote_blob_sha": "5468c8ab065fa742700e8c234bde80007fb13b9b",
+            "png_remote_content_sha256": "f6b4fd6170bc69abf6e29987cfd3052c20de165f7e81763c518b44bcfbd1a4e1",
+            "png_sha256_match": true,
+            "raw_ohlcv_sync_queued": true,
+            "raw_ohlcv_path_exists": true,
+            "raw_ohlcv_remote_fetch_validation_status": "pass",
+            "pdf_path_exists": true,
+            "pdf_path_scope": "local",
+            "pdf_local_validation_status": "pass",
+            "pdf_github_sync_enabled": false,
+            "pdf_remote_fetch_validation_status": "not_applicable_pdf_not_synced_to_github",
+            "artifact_validation_phase": "candidate_commit_remote_validation_completed",
+            "artifact_validation_ref": "699510f479ff4f8406ac13dbfda3a78e5364dfb1",
+            "artifact_validation_summary": {
+                "status": "pass",
+                "json": "pass",
+                "png": "pass",
+                "raw_ohlcv": "pass",
+                "pdf": "pass",
+                "validated_ref": "699510f479ff4f8406ac13dbfda3a78e5364dfb1",
+                "path_encoding": "utf8_percent_encoded_contents_api"
             }
         },
         {
             "minimum_supported_version": "v7.25d1",
-            "current_rule_family": "v7.25k2",
+            "current_rule_family": "v7.25k3",
             "backward_compatible_with": [
                 "v7.25d1",
                 "v7.25e",
@@ -1143,13 +1289,14 @@
                 "v7.25j",
                 "v7.25j1",
                 "v7.25k",
-                "v7.25k1"
+                "v7.25k1",
+                "v7.25k2"
             ],
             "version_policy": "minimum_supported_version",
             "stock_code": "3081",
             "stock_name": "聯亞",
             "ticker": "3081.TWO",
-            "run_datetime": "2026-07-20T08:13:36",
+            "run_datetime": "2026-07-20T10:47:13",
             "file_date": "2026-07-20",
             "daily_output_tag": "20260720",
             "output_naming_policy": "daily_stable_overwrite",
@@ -1333,8 +1480,8 @@
             "next_day_analysis_required_for_sell_permission": false,
             "next_day_analysis_role": "價格行為只更新風險警示及等待進場條件；目前標的目標不授權自動賣出。",
             "exit_trigger_reasons": [
-                "標的目標優先：現有持股不賣",
-                "PriceAction原始賣出建議已保留於price_action_risk_advisory，僅作警示"
+                "依標的目標優先：現有持股不賣，本次不執行自動賣出。",
+                "原PriceAction降低部位建議已移至price_action_risk_advisory，僅作風險警示。"
             ],
             "hold_extension_conditions": [
                 "依標的目標持有現有部位",
@@ -1368,10 +1515,13 @@
                 "momentum_extension_eligible": false,
                 "profit_protection_floor_price": null,
                 "reasons": [
-                    "risk_first_action=true，價格行為與標的風險要求立即降低部位"
+                    "依標的目標優先：現有持股不賣，本次不執行自動賣出。",
+                    "原PriceAction降低部位建議已移至price_action_risk_advisory，僅作風險警示。"
                 ],
-                "hold_conditions": [],
-                "plain_language": "依標的目標持有現有部位，不執行立即賣出；價格行為風險另列警示。等待合格進場時機，不代表現在買入。",
+                "hold_conditions": [
+                    "維持現有部位；等待合格進場時機，不代表現在立即買入。"
+                ],
+                "plain_language": "依標的目標持有現有部位，不執行立即賣出；原PriceAction減碼訊號僅作風險警示。等待合格進場時機，不代表現在買入。",
                 "position_buy_dates": [
                     "2026-05-19",
                     "2026-06-12"
@@ -1730,8 +1880,27 @@
                         },
                         "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。"
                     },
-                    "reason": "依準則『標的目標優先，價格行為僅作風險警示』，最終交易建議必須依標的目標執行；PriceAction賣出建議降為風險警示，不得仍顯示為立即賣出命令。"
-                }
+                    "reason": "依準則『標的目標優先，價格行為僅作風險警示』，最終交易建議必須依標的目標執行；PriceAction賣出建議降為風險警示，不得仍顯示為立即賣出命令。",
+                    "final_execution_schema_version": "v7.25k3_execution_priority_v1",
+                    "final_execution_priority": "target_objective",
+                    "price_action_advisory_only": true,
+                    "risk_override_allowed": false,
+                    "risk_override_trigger_price": null,
+                    "risk_advisory_trigger_price": 1450.66,
+                    "target_objective_conflict_status": "conflict"
+                },
+                "risk_warning_reasons": [
+                    "原始PriceAction狀態=RiskExitAfterPartialLotTargetGiveback",
+                    "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。"
+                ],
+                "final_execution_schema_version": "v7.25k3_execution_priority_v1",
+                "final_execution_priority": "target_objective",
+                "final_execution_reason": "標的目標已覆蓋原始PriceAction交易命令；PriceAction只保留為風險警示。",
+                "price_action_advisory_only": true,
+                "risk_override_allowed": false,
+                "risk_override_trigger_price": null,
+                "risk_advisory_trigger_price": 1450.66,
+                "target_objective_conflict_status": "conflict"
             },
             "portfolio_action_priority": "target_objective_hold_with_risk_warning",
             "risk_first_action": true,
@@ -2036,7 +2205,14 @@
                     },
                     "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。"
                 },
-                "reason": "依準則『標的目標優先，價格行為僅作風險警示』，最終交易建議必須依標的目標執行；PriceAction賣出建議降為風險警示，不得仍顯示為立即賣出命令。"
+                "reason": "依準則『標的目標優先，價格行為僅作風險警示』，最終交易建議必須依標的目標執行；PriceAction賣出建議降為風險警示，不得仍顯示為立即賣出命令。",
+                "final_execution_schema_version": "v7.25k3_execution_priority_v1",
+                "final_execution_priority": "target_objective",
+                "price_action_advisory_only": true,
+                "risk_override_allowed": false,
+                "risk_override_trigger_price": null,
+                "risk_advisory_trigger_price": 1450.66,
+                "target_objective_conflict_status": "conflict"
             },
             "target_objective_override_applied": true,
             "price_action_risk_advisory": {
@@ -2241,17 +2417,81 @@
                     "target_goal_summary": "準則=以標的目標優先，價格行為僅作風險警示；核心目標=1).現有持股不賣\n2).等待時機進場買入；基本獲利門檻=20.0%；允許動能延伸=True；目標狀態=configured；目標與決策=conflict；處理原則=以標的目標為核心，但不得隱藏價格行為風險；需列為人工決策衝突。"
                 }
             },
+            "final_execution_schema_version": "v7.25k3_execution_priority_v1",
+            "final_execution_priority": "target_objective",
+            "final_execution_reason": "標的目標已覆蓋原始PriceAction交易命令；PriceAction只保留為風險警示。",
+            "price_action_advisory_only": true,
+            "risk_override_allowed": false,
+            "risk_override_trigger_price": null,
+            "risk_advisory_trigger_price": 1450.66,
+            "target_objective_conflict_status": "conflict",
+            "target_vs_price_action_conflict_summary": {
+                "status": "conflict",
+                "resolution": "target_objective_effective_action_overrides_structured_trade_action",
+                "resolution_text": "依準則『標的目標優先，價格行為僅作風險警示』，最終交易建議必須依標的目標執行；PriceAction賣出建議降為風險警示，不得仍顯示為立即賣出命令。",
+                "conflict_count": 1,
+                "final_execution_priority": "target_objective",
+                "final_position_action": "hold_existing_position",
+                "price_action_advisory_only": true,
+                "risk_override_allowed": false,
+                "risk_advisory_trigger_price": 1450.66
+            },
+            "final_decision_reason_consistency_status": "pass",
+            "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
+            "backtest_cohort_tags": [
+                "follow_through_strong_immediate",
+                "near_measured_move_target_false",
+                "second_leg_entry_permission_pullback_only",
+                "surprise_breakout",
+                "target_objective_hold_with_risk_first",
+                "true_breakout_quality_ge_70"
+            ],
+            "backtest_cohort_snapshot": {
+                "true_breakout_quality_score": 73,
+                "breakout_follow_through_quality": "StrongImmediate",
+                "surprise_breakout_flag": true,
+                "second_leg_context_type": "SurpriseBreakout",
+                "second_leg_entry_permission": "PullbackOnly",
+                "near_measured_move_target_flag": false,
+                "target_objective_override_applied": true,
+                "risk_first_action": true,
+                "final_execution_priority": "target_objective",
+                "pullback_observation_zone": {
+                    "lower_price": 1817.5,
+                    "upper_price": 1817.5,
+                    "reference_price": 1817.5,
+                    "direction": "Short",
+                    "zone_type": "prior_impulse_50pct_pullback",
+                    "preferred_action": "等待反彈放空觀察，不追空；若未反彈則寧可錯過。",
+                    "observation_role": "observation_only_no_fill_assumption"
+                }
+            },
+            "pullback_observation_zone": {
+                "lower_price": 1817.5,
+                "upper_price": 1817.5,
+                "reference_price": 1817.5,
+                "direction": "Short",
+                "zone_type": "prior_impulse_50pct_pullback",
+                "preferred_action": "等待反彈放空觀察，不追空；若未反彈則寧可錯過。",
+                "observation_role": "observation_only_no_fill_assumption"
+            },
+            "artifact_validation_policy": {
+                "version": "v7.25k3_remote_path_validation_v1",
+                "local_validation": "before_manifest_commit",
+                "github_validation": "GitHub Contents API exact UTF-8 path readback against the candidate commit before branch update",
+                "pdf_remote_validation": "not_applicable_pdf_not_synced_to_github"
+            },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-07-20T08:13:36",
+                "decision_generated_at": "2026-07-20T10:47:13",
                 "decision_market_data_date": "2026-07-17",
-                "decision_delivery_candidate_date": "2026-07-20",
+                "decision_delivery_candidate_date": "2026-07-21",
                 "decision_delivery_date": null,
                 "decision_delivery_datetime": null,
                 "execution_eligibility_datetime": null,
                 "execution_status": "pending_delivery_trading_day_ohlcv",
-                "execution_pending_stage": "candidate_day_before_08_20_delivery",
-                "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
+                "execution_pending_stage": "before_delivery_candidate_date",
+                "execution_pending_stage_description": "尚未到08:20送達候選日。",
                 "limit_up_down_fill_status": null,
                 "benchmark_execution_date": null,
                 "benchmark_execution_price": null,
@@ -2269,13 +2509,34 @@
                 "full_exit_trigger_date": null,
                 "full_exit_benchmark_price": null,
                 "post_execution_mfe_5d_pct": null,
-                "post_execution_mae_5d_pct": null
+                "post_execution_mae_5d_pct": null,
+                "final_execution_priority": "target_objective",
+                "price_action_advisory_only": true,
+                "risk_override_allowed": false,
+                "risk_override_trigger_price": null,
+                "risk_advisory_trigger_price": 1450.66,
+                "target_objective_conflict_status": "conflict",
+                "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
+                "backtest_cohort_tags": [
+                    "follow_through_strong_immediate",
+                    "near_measured_move_target_false",
+                    "second_leg_entry_permission_pullback_only",
+                    "surprise_breakout",
+                    "target_objective_hold_with_risk_first",
+                    "true_breakout_quality_ge_70"
+                ],
+                "grouped_backtest_status": "pending_future_ohlcv",
+                "cohort_t1_t5_metrics": {},
+                "cohort_mfe_5d_pct": null,
+                "cohort_mae_5d_pct": null,
+                "pullback_zone_touch_status": "pending_future_ohlcv",
+                "pullback_zone_first_touch_date": null
             },
             "analysis_json": "IntegratedForecast/json/3081_聯亞_20260720_analysis.json",
             "chart_png": "IntegratedForecast/png/3081_聯亞_Chart_20260720.png",
             "raw_ohlcv": "IntegratedForecast/raw_ohlcv/3081_聯亞_20260720_ohlcv.json",
             "pdf_file": "3081_聯亞_PA_Analysis_20260720.pdf",
-            "json_sha": "5413af18969759ace016a9aa009bac1110ed12d2cbaa65faf87fb854d7ae26a5",
+            "json_sha": "4cac238d092a4cad1363a7ede376bd2e6311d23ce6a790e90ed4d533c0a6c85b",
             "png_sha": "d000e8edb9af4d2620ae451e260f6fec963cd06b160376f1c42f7363a00418f3",
             "chart_read_status": "success",
             "profile_risk_triggered_summary": "尚未站回缺口上緣前，不得建議攤平；反彈以減碼或降風險優先。",
@@ -2284,7 +2545,53 @@
                 "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\3081_聯亞_Chart_20260720.png",
                 "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\3081_聯亞_20260720_ohlcv.json",
                 "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\3081_聯亞_PA_Analysis_20260720.pdf"
+            },
+            "json_local_validation_status": "pass",
+            "json_sync_queued": true,
+            "json_commit_included": true,
+            "json_path_exists": true,
+            "json_fetch_validation_status": "pass",
+            "json_remote_fetch_validation_status": "pass",
+            "json_fetch_http_status": 200,
+            "json_remote_blob_sha": "e4032263efb2f3579b7cc20a66ee9fb38157a571",
+            "json_remote_content_sha256": "4cac238d092a4cad1363a7ede376bd2e6311d23ce6a790e90ed4d533c0a6c85b",
+            "json_sha256_match": true,
+            "png_local_validation_status": "pass",
+            "png_sync_queued": true,
+            "png_commit_included": true,
+            "png_path_exists": true,
+            "png_fetch_validation_status": "pass",
+            "png_remote_fetch_validation_status": "pass",
+            "png_fetch_http_status": 200,
+            "png_remote_blob_sha": "867acb8f7bb7d8ca4c4d0e26e032846855e63533",
+            "png_remote_content_sha256": "d000e8edb9af4d2620ae451e260f6fec963cd06b160376f1c42f7363a00418f3",
+            "png_sha256_match": true,
+            "raw_ohlcv_sync_queued": true,
+            "raw_ohlcv_path_exists": true,
+            "raw_ohlcv_remote_fetch_validation_status": "pass",
+            "pdf_path_exists": true,
+            "pdf_path_scope": "local",
+            "pdf_local_validation_status": "pass",
+            "pdf_github_sync_enabled": false,
+            "pdf_remote_fetch_validation_status": "not_applicable_pdf_not_synced_to_github",
+            "artifact_validation_phase": "candidate_commit_remote_validation_completed",
+            "artifact_validation_ref": "699510f479ff4f8406ac13dbfda3a78e5364dfb1",
+            "artifact_validation_summary": {
+                "status": "pass",
+                "json": "pass",
+                "png": "pass",
+                "raw_ohlcv": "pass",
+                "pdf": "pass",
+                "validated_ref": "699510f479ff4f8406ac13dbfda3a78e5364dfb1",
+                "path_encoding": "utf8_percent_encoded_contents_api"
             }
         }
-    ]
+    ],
+    "manifest_schema_version": "v7.25k3_execution_and_artifact_validation_v1",
+    "artifact_path_validation_version": "v7.25k3_remote_path_validation_v1",
+    "artifact_path_validation_status": "pass",
+    "artifact_path_validation_ref": "699510f479ff4f8406ac13dbfda3a78e5364dfb1",
+    "artifact_path_validation_phase": "candidate_commit_remote_validation_completed",
+    "artifact_path_validation_method": "GitHub Contents API exact UTF-8 path readback against candidate commit",
+    "artifact_path_validation_candidate_commit": "699510f479ff4f8406ac13dbfda3a78e5364dfb1"
 }
