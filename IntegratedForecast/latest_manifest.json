@@ -22,7 +22,7 @@
         "v7.25k1"
     ],
     "version_policy": "minimum_supported_version",
-    "updated_at": "2026-07-17T10:28:23",
+    "updated_at": "2026-07-20T08:14:24",
     "timezone": "Asia/Taipei",
     "description": "固定入口檔。ChatGPT 排程請先讀取本檔，再依 files[].analysis_json 與 files[].chart_png 讀取當日最新資料。",
     "github_repo": "Gary172Lee/iSecretary-LIFF",
@@ -67,21 +67,21 @@
             "stock_code": "2382",
             "stock_name": "廣達",
             "ticker": "2382.TW",
-            "run_datetime": "2026-07-17T10:26:35",
-            "file_date": "2026-07-17",
-            "daily_output_tag": "20260717",
+            "run_datetime": "2026-07-20T08:12:34",
+            "file_date": "2026-07-20",
+            "daily_output_tag": "20260720",
             "output_naming_policy": "daily_stable_overwrite",
             "profile_source": "STOCK_CONFIGS",
             "stock_type": "大型權值波段股",
-            "latest_trade_date": "2026-07-16",
-            "expected_latest_trade_date": "2026-07-16",
-            "actual_latest_trade_date": "2026-07-16",
+            "latest_trade_date": "2026-07-17",
+            "expected_latest_trade_date": "2026-07-17",
+            "actual_latest_trade_date": "2026-07-17",
             "price_data_source": "FUGLEAPI",
             "price_data_is_stale": false,
             "price_data_warning": null,
-            "current_close": 352.0,
-            "portfolio_unrealized_pnl_pct": -0.38,
-            "portfolio_unrealized_pnl_value": -271.0,
+            "current_close": 325.5,
+            "portfolio_unrealized_pnl_pct": -7.88,
+            "portfolio_unrealized_pnl_value": -5571.0,
             "position_lifecycle_version": "1.0",
             "position_lifecycle_anchor": "fifo_open_lots_and_weighted_remaining_cost",
             "position_lifecycle_data_quality": "full_open_lot_history_and_target_objective",
@@ -121,22 +121,19 @@
             "lifecycle_parameter_date": null,
             "momentum_score_source": "price_action_and_market_structure",
             "momentum_price_action_evidence": {
-                "score": 0,
-                "state": "Weak",
+                "score": 56,
+                "state": "Moderate",
                 "positive_reasons": [
-                    "真突破品質中等",
+                    "真突破品質 >=70",
+                    "Follow-through 強且即時",
+                    "StrongBreakout",
+                    "對手方被困住",
+                    "可交易第二段機率 >=60",
                     "量能高於 5 日均量"
                 ],
                 "blockers": [
                     "股價未站上 EMA20",
-                    "Follow-through=Poor",
-                    "breakout_context_type=FailedBreakout",
-                    "breakout_entry_permission=FadeBreakout",
-                    "counterparty_trapped_flag=false",
-                    "second_leg_no_add_guardrail=true",
-                    "second_leg_context_type=BlockedWeakSecondLeg",
-                    "收盤位置偏弱",
-                    "risk_first_action=true"
+                    "收盤位置偏弱"
                 ],
                 "price_action_fields_used": [
                     "ema_20",
@@ -159,8 +156,8 @@
                     "measured_move_target_reaction"
                 ]
             },
-            "position_holding_calendar_days": 23,
-            "position_holding_trading_days": 17,
+            "position_holding_calendar_days": 24,
+            "position_holding_trading_days": 18,
             "position_avg_cost": 353.36,
             "base_profit_target_pct": 20.0,
             "base_profit_target_price": 424.03,
@@ -168,48 +165,45 @@
             "profit_target_ever_reached": false,
             "first_profit_target_reached_date": null,
             "days_since_profit_target_reached": null,
-            "current_position_profit_pct": -0.38,
+            "current_position_profit_pct": -7.88,
             "highest_price_since_entry": 393.0,
-            "lowest_price_since_entry": 349.0,
+            "lowest_price_since_entry": 324.5,
             "max_profit_since_entry_pct": 11.22,
-            "max_adverse_excursion_since_entry_pct": -1.23,
-            "profit_giveback_from_peak_pct_points": 11.6,
-            "drawdown_from_post_entry_high_pct": -10.43,
-            "anchored_vwap_since_entry": 371.85,
-            "momentum_hold_score": 0,
-            "momentum_hold_state": "Weak",
+            "max_adverse_excursion_since_entry_pct": -8.17,
+            "profit_giveback_from_peak_pct_points": 19.1,
+            "drawdown_from_post_entry_high_pct": -17.18,
+            "anchored_vwap_since_entry": 367.86,
+            "momentum_hold_score": 56,
+            "momentum_hold_state": "Moderate",
             "momentum_extension_allowed_by_user": true,
             "momentum_extension_eligible": false,
             "momentum_extension_positive_reasons": [
-                "真突破品質中等",
+                "真突破品質 >=70",
+                "Follow-through 強且即時",
+                "StrongBreakout",
+                "對手方被困住",
+                "可交易第二段機率 >=60",
                 "量能高於 5 日均量"
             ],
             "momentum_extension_blockers": [
                 "股價未站上 EMA20",
-                "Follow-through=Poor",
-                "breakout_context_type=FailedBreakout",
-                "breakout_entry_permission=FadeBreakout",
-                "counterparty_trapped_flag=false",
-                "second_leg_no_add_guardrail=true",
-                "second_leg_context_type=BlockedWeakSecondLeg",
-                "收盤位置偏弱",
-                "risk_first_action=true"
+                "收盤位置偏弱"
             ],
             "profit_protection_floor_price": null,
             "historical_profit_protection_floor_price": null,
             "historical_profit_protection_breached": false,
             "active_profit_protection_floor_price": null,
             "active_profit_protection_triggered": false,
-            "remaining_position_exit_floor_price": 321.0,
+            "remaining_position_exit_floor_price": null,
             "remaining_position_exit_floor_basis": {
-                "source": "current_support",
-                "price": 321.0,
-                "note": "measured_move_target_down"
+                "source": "not_available",
+                "price": null,
+                "note": "目前沒有可量化的剩餘部位執行底線。"
             },
             "profit_protection_profile": "large_cap_swing_2ATR_4pct",
-            "recommended_immediate_sell_ratio_pct": 50,
-            "conditional_additional_sell_ratio_pct": 50,
-            "full_exit_condition": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
+            "recommended_immediate_sell_ratio_pct": 0,
+            "conditional_additional_sell_ratio_pct": 0,
+            "full_exit_condition": null,
             "position_composite_start_date": "2026-06-23",
             "position_composite_target_ever_reached": false,
             "position_target_evaluation_rule": "目前綜合持倉以最近一批未平倉買入日為起點；各批另依自己的買入日及批次成本判斷20.0%達標，不得用最終加權成本回溯到後續批次尚未買入的日期。",
@@ -222,7 +216,7 @@
                     "target_price": 385.75,
                     "target_reached": true,
                     "first_target_reached_date": "2026-06-02",
-                    "current_profit_pct": 9.5,
+                    "current_profit_pct": 1.26,
                     "highest_price_since_lot_entry": 438.0,
                     "lowest_price_since_lot_entry": 308.5,
                     "max_profit_since_lot_entry_pct": 36.25
@@ -235,9 +229,9 @@
                     "target_price": 444.64,
                     "target_reached": false,
                     "first_target_reached_date": null,
-                    "current_profit_pct": -5.0,
+                    "current_profit_pct": -12.15,
                     "highest_price_since_lot_entry": 393.0,
-                    "lowest_price_since_lot_entry": 349.0,
+                    "lowest_price_since_lot_entry": 324.5,
                     "max_profit_since_lot_entry_pct": 6.06
                 }
             ],
@@ -245,59 +239,61 @@
             "position_lots_target_reached_shares": 70,
             "position_lots_target_reached_ratio": 0.35,
             "profit_protection_triggered": false,
-            "sell_now_permission": true,
-            "sell_permission_basis": "RiskFirstAfterPartialLotTargetGiveback",
+            "sell_now_permission": false,
+            "sell_permission_basis": "PriceTriggerPending",
             "recommended_sell_ratio_pct": {
-                "lower": 50,
-                "upper": 50,
-                "default": 50
+                "lower": 0,
+                "upper": 0,
+                "default": 0
             },
-            "position_lifecycle_state": "RiskExitAfterPartialLotTargetGiveback",
-            "lifecycle_action_priority": "risk_exit",
-            "sell_trigger_price": 352.0,
+            "position_lifecycle_state": "BelowTargetHoldUntilPriceTrigger",
+            "lifecycle_action_priority": "hold_until_target_or_risk",
+            "sell_trigger_price": 424.03,
             "sell_trigger_mode": "price_trigger_not_next_day",
             "next_day_analysis_required_for_sell_permission": false,
             "next_day_analysis_role": "下一交易日分析只更新動能與保護價，不是取得賣出許可的必要條件。",
-            "exit_trigger_reasons": [
-                "risk_first_action=true，價格行為與標的風險要求立即降低部位"
+            "exit_trigger_reasons": [],
+            "hold_extension_conditions": [
+                "股價到達 424.03 元即開啟賣出權限，不需等待下一交易日報告",
+                "若先觸發risk_first_action或重大結構轉弱，風控優先"
             ],
-            "hold_extension_conditions": [],
             "remaining_position_protection": {
                 "historical_profit_protection_floor_price": null,
                 "historical_profit_protection_breached": false,
                 "active_profit_protection_floor_price": null,
                 "active_profit_protection_triggered": false,
-                "remaining_position_exit_floor_price": 321.0,
+                "remaining_position_exit_floor_price": null,
                 "remaining_position_exit_floor_basis": {
-                    "source": "current_support",
-                    "price": 321.0,
-                    "note": "measured_move_target_down"
+                    "source": "not_available",
+                    "price": null,
+                    "note": "目前沒有可量化的剩餘部位執行底線。"
                 },
-                "action_if_broken": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。"
+                "action_if_broken": "跌破目前可執行底線時，優先退出剩餘部位。"
             },
-            "exit_decision_summary": "持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-0.38%；基本門檻=20.00% / 424.03元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=0；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=321.0；剩餘部位底線來源=current_support；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
+            "exit_decision_summary": "持倉狀態=BelowTargetHoldUntilPriceTrigger；目前報酬=-7.88%；基本門檻=20.00% / 424.03元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=56；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=not_available；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=尚未觸發。",
             "position_exit_decision": {
-                "can_sell_now": true,
-                "state": "RiskExitAfterPartialLotTargetGiveback",
-                "action_priority": "risk_exit",
+                "can_sell_now": false,
+                "state": "BelowTargetHoldUntilPriceTrigger",
+                "action_priority": "hold_until_target_or_risk",
                 "recommended_sell_ratio_pct": {
-                    "lower": 50,
-                    "upper": 50,
-                    "default": 50
+                    "lower": 0,
+                    "upper": 0,
+                    "default": 0
                 },
-                "current_price": 352.0,
-                "current_profit_pct": -0.38,
+                "current_price": 325.5,
+                "current_profit_pct": -7.88,
                 "base_profit_target_pct": 20.0,
                 "base_profit_target_price": 424.03,
-                "sell_trigger_price": 352.0,
-                "momentum_hold_score": 0,
+                "sell_trigger_price": 424.03,
+                "momentum_hold_score": 56,
                 "momentum_extension_eligible": false,
                 "profit_protection_floor_price": null,
-                "reasons": [
-                    "risk_first_action=true，價格行為與標的風險要求立即降低部位"
+                "reasons": [],
+                "hold_conditions": [
+                    "股價到達 424.03 元即開啟賣出權限，不需等待下一交易日報告",
+                    "若先觸發risk_first_action或重大結構轉弱，風控優先"
                 ],
-                "hold_conditions": [],
-                "plain_language": "現在先賣出 50%；跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
+                "plain_language": "股價達 424.03 元即開啟賣出權限，不必等隔日報告。",
                 "position_buy_dates": [
                     "2026-05-26",
                     "2026-06-23"
@@ -323,22 +319,19 @@
                 ],
                 "momentum_score_source": "price_action_and_market_structure",
                 "momentum_price_action_evidence": {
-                    "score": 0,
-                    "state": "Weak",
+                    "score": 56,
+                    "state": "Moderate",
                     "positive_reasons": [
-                        "真突破品質中等",
+                        "真突破品質 >=70",
+                        "Follow-through 強且即時",
+                        "StrongBreakout",
+                        "對手方被困住",
+                        "可交易第二段機率 >=60",
                         "量能高於 5 日均量"
                     ],
                     "blockers": [
                         "股價未站上 EMA20",
-                        "Follow-through=Poor",
-                        "breakout_context_type=FailedBreakout",
-                        "breakout_entry_permission=FadeBreakout",
-                        "counterparty_trapped_flag=false",
-                        "second_leg_no_add_guardrail=true",
-                        "second_leg_context_type=BlockedWeakSecondLeg",
-                        "收盤位置偏弱",
-                        "risk_first_action=true"
+                        "收盤位置偏弱"
                     ],
                     "price_action_fields_used": [
                         "ema_20",
@@ -361,8 +354,8 @@
                         "measured_move_target_reaction"
                     ]
                 },
-                "recommended_immediate_sell_ratio_pct": 50,
-                "conditional_additional_sell_ratio_pct": 50,
+                "recommended_immediate_sell_ratio_pct": 0,
+                "conditional_additional_sell_ratio_pct": 0,
                 "position_composite_start_date": "2026-06-23",
                 "position_composite_target_ever_reached": false,
                 "position_lot_target_summary": [
@@ -374,7 +367,7 @@
                         "target_price": 385.75,
                         "target_reached": true,
                         "first_target_reached_date": "2026-06-02",
-                        "current_profit_pct": 9.5,
+                        "current_profit_pct": 1.26,
                         "highest_price_since_lot_entry": 438.0,
                         "lowest_price_since_lot_entry": 308.5,
                         "max_profit_since_lot_entry_pct": 36.25
@@ -387,116 +380,110 @@
                         "target_price": 444.64,
                         "target_reached": false,
                         "first_target_reached_date": null,
-                        "current_profit_pct": -5.0,
+                        "current_profit_pct": -12.15,
                         "highest_price_since_lot_entry": 393.0,
-                        "lowest_price_since_lot_entry": 349.0,
+                        "lowest_price_since_lot_entry": 324.5,
                         "max_profit_since_lot_entry_pct": 6.06
                     }
                 ],
                 "historical_profit_protection_floor_price": null,
                 "active_profit_protection_floor_price": null,
-                "remaining_position_exit_floor_price": 321.0,
-                "full_exit_condition": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
-                "sell_permission_basis": "RiskFirstAfterPartialLotTargetGiveback",
+                "remaining_position_exit_floor_price": null,
+                "full_exit_condition": null,
+                "sell_permission_basis": "PriceTriggerPending",
                 "historical_profit_protection_breached": false,
                 "active_profit_protection_triggered": false,
                 "remaining_position_exit_floor_basis": {
-                    "source": "current_support",
-                    "price": 321.0,
-                    "note": "measured_move_target_down"
+                    "source": "not_available",
+                    "price": null,
+                    "note": "目前沒有可量化的剩餘部位執行底線。"
                 },
                 "position_lots_target_reached_shares": 70,
                 "position_lots_target_giveback_shares": 70,
                 "position_lots_target_giveback_ratio": 0.35,
-                "exit_decision_summary": "持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-0.38%；基本門檻=20.00% / 424.03元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=0；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=321.0；剩餘部位底線來源=current_support；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
+                "exit_decision_summary": "持倉狀態=BelowTargetHoldUntilPriceTrigger；目前報酬=-7.88%；基本門檻=20.00% / 424.03元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=56；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=not_available；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=尚未觸發。",
                 "remaining_position_protection": {
                     "historical_profit_protection_floor_price": null,
                     "historical_profit_protection_breached": false,
                     "active_profit_protection_floor_price": null,
                     "active_profit_protection_triggered": false,
-                    "remaining_position_exit_floor_price": 321.0,
+                    "remaining_position_exit_floor_price": null,
                     "remaining_position_exit_floor_basis": {
-                        "source": "current_support",
-                        "price": 321.0,
-                        "note": "measured_move_target_down"
+                        "source": "not_available",
+                        "price": null,
+                        "note": "目前沒有可量化的剩餘部位執行底線。"
                     },
-                    "action_if_broken": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。"
+                    "action_if_broken": "跌破目前可執行底線時，優先退出剩餘部位。"
                 },
                 "target_criterion": "嚴格遵守價格行為",
                 "target_objective": "達到 \"基本獲利門檻%\" 賣出",
                 "target_goal_status": "configured",
                 "target_goal_alignment": {
-                    "status": "conflict",
-                    "conflicts": [
-                        {
-                            "type": "sell_before_composite_profit_target_due_risk",
-                            "objective": "達到基本獲利門檻後賣出",
-                            "composite_profit_target_reached": false,
-                            "risk_advisory_state": "RiskExitAfterPartialLotTargetGiveback"
-                        }
-                    ],
-                    "conflict_count": 1,
-                    "resolution": "criterion_first_price_action_risk_control_overrides_conflicting_objective",
-                    "resolution_text": "標的目標與價格行為風控衝突；依『嚴格遵守價格行為』準則，風控建議維持有效，但必須明確揭露提前偏離目標。",
+                    "status": "aligned",
+                    "conflicts": [],
+                    "conflict_count": 0,
+                    "resolution": "aligned",
+                    "resolution_text": "標的目標、準則與目前最終決策一致。",
                     "entry_goal_state": "not_specified",
                     "criterion_precedence": "準則是同一筆標的目標設定的最高執行約束；最終操作不得與準則宣告的優先順序相反。"
                 },
-                "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=conflict；最終處理原則=標的目標與價格行為風控衝突；依『嚴格遵守價格行為』準則，風控建議維持有效，但必須明確揭露提前偏離目標。",
+                "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。",
                 "target_goal_effective_action": {
-                    "position_action": "follow_price_action_risk_control",
-                    "can_sell_now": true,
-                    "recommended_immediate_sell_ratio_pct": 50,
-                    "conditional_additional_sell_ratio_pct": 50,
+                    "position_action": "follow_aligned_structured_decision",
+                    "can_sell_now": false,
+                    "recommended_immediate_sell_ratio_pct": 0,
+                    "conditional_additional_sell_ratio_pct": 0,
                     "new_entry_action": "not_specified",
                     "price_action_role": "effective_decision",
-                    "reason": "標的目標與價格行為風控衝突；依『嚴格遵守價格行為』準則，風控建議維持有效，但必須明確揭露提前偏離目標。"
+                    "reason": "標的目標、準則與目前最終決策一致。"
                 },
                 "price_action_risk_advisory": {
                     "role": "price_action_risk_advisory_before_target_override",
-                    "position_lifecycle_state": "RiskExitAfterPartialLotTargetGiveback",
-                    "sell_now_permission": true,
-                    "sell_permission_basis": "RiskFirstAfterPartialLotTargetGiveback",
-                    "recommended_immediate_sell_ratio_pct": 50,
-                    "conditional_additional_sell_ratio_pct": 50,
+                    "position_lifecycle_state": "BelowTargetHoldUntilPriceTrigger",
+                    "sell_now_permission": false,
+                    "sell_permission_basis": "PriceTriggerPending",
+                    "recommended_immediate_sell_ratio_pct": 0,
+                    "conditional_additional_sell_ratio_pct": 0,
                     "recommended_sell_ratio_pct": {
-                        "lower": 50,
-                        "upper": 50,
-                        "default": 50
+                        "lower": 0,
+                        "upper": 0,
+                        "default": 0
                     },
-                    "sell_trigger_price": 352.0,
-                    "remaining_position_exit_floor_price": 321.0,
+                    "sell_trigger_price": 424.03,
+                    "remaining_position_exit_floor_price": null,
                     "remaining_position_exit_floor_basis": {
-                        "source": "current_support",
-                        "price": 321.0,
-                        "note": "measured_move_target_down"
+                        "source": "not_available",
+                        "price": null,
+                        "note": "目前沒有可量化的剩餘部位執行底線。"
                     },
                     "rebound_reduce_zone": null,
-                    "full_exit_condition": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
-                    "portfolio_action_priority": "risk_exit",
-                    "risk_first_action": true,
-                    "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。",
+                    "full_exit_condition": null,
+                    "portfolio_action_priority": "risk_control",
+                    "risk_first_action": false,
+                    "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
                     "position_exit_decision": {
-                        "can_sell_now": true,
-                        "state": "RiskExitAfterPartialLotTargetGiveback",
-                        "action_priority": "risk_exit",
+                        "can_sell_now": false,
+                        "state": "BelowTargetHoldUntilPriceTrigger",
+                        "action_priority": "hold_until_target_or_risk",
                         "recommended_sell_ratio_pct": {
-                            "lower": 50,
-                            "upper": 50,
-                            "default": 50
+                            "lower": 0,
+                            "upper": 0,
+                            "default": 0
                         },
-                        "current_price": 352.0,
-                        "current_profit_pct": -0.38,
+                        "current_price": 325.5,
+                        "current_profit_pct": -7.88,
                         "base_profit_target_pct": 20.0,
                         "base_profit_target_price": 424.03,
-                        "sell_trigger_price": 352.0,
-                        "momentum_hold_score": 0,
+                        "sell_trigger_price": 424.03,
+                        "momentum_hold_score": 56,
                         "momentum_extension_eligible": false,
                         "profit_protection_floor_price": null,
-                        "reasons": [
-                            "risk_first_action=true，價格行為與標的風險要求立即降低部位"
+                        "reasons": [],
+                        "hold_conditions": [
+                            "股價到達 424.03 元即開啟賣出權限，不需等待下一交易日報告",
+                            "若先觸發risk_first_action或重大結構轉弱，風控優先"
                         ],
-                        "hold_conditions": [],
-                        "plain_language": "現在先賣出 50%；跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
+                        "plain_language": "股價達 424.03 元即開啟賣出權限，不必等隔日報告。",
                         "position_buy_dates": [
                             "2026-05-26",
                             "2026-06-23"
@@ -522,22 +509,19 @@
                         ],
                         "momentum_score_source": "price_action_and_market_structure",
                         "momentum_price_action_evidence": {
-                            "score": 0,
-                            "state": "Weak",
+                            "score": 56,
+                            "state": "Moderate",
                             "positive_reasons": [
-                                "真突破品質中等",
+                                "真突破品質 >=70",
+                                "Follow-through 強且即時",
+                                "StrongBreakout",
+                                "對手方被困住",
+                                "可交易第二段機率 >=60",
                                 "量能高於 5 日均量"
                             ],
                             "blockers": [
                                 "股價未站上 EMA20",
-                                "Follow-through=Poor",
-                                "breakout_context_type=FailedBreakout",
-                                "breakout_entry_permission=FadeBreakout",
-                                "counterparty_trapped_flag=false",
-                                "second_leg_no_add_guardrail=true",
-                                "second_leg_context_type=BlockedWeakSecondLeg",
-                                "收盤位置偏弱",
-                                "risk_first_action=true"
+                                "收盤位置偏弱"
                             ],
                             "price_action_fields_used": [
                                 "ema_20",
@@ -560,8 +544,8 @@
                                 "measured_move_target_reaction"
                             ]
                         },
-                        "recommended_immediate_sell_ratio_pct": 50,
-                        "conditional_additional_sell_ratio_pct": 50,
+                        "recommended_immediate_sell_ratio_pct": 0,
+                        "conditional_additional_sell_ratio_pct": 0,
                         "position_composite_start_date": "2026-06-23",
                         "position_composite_target_ever_reached": false,
                         "position_lot_target_summary": [
@@ -573,7 +557,7 @@
                                 "target_price": 385.75,
                                 "target_reached": true,
                                 "first_target_reached_date": "2026-06-02",
-                                "current_profit_pct": 9.5,
+                                "current_profit_pct": 1.26,
                                 "highest_price_since_lot_entry": 438.0,
                                 "lowest_price_since_lot_entry": 308.5,
                                 "max_profit_since_lot_entry_pct": 36.25
@@ -586,40 +570,40 @@
                                 "target_price": 444.64,
                                 "target_reached": false,
                                 "first_target_reached_date": null,
-                                "current_profit_pct": -5.0,
+                                "current_profit_pct": -12.15,
                                 "highest_price_since_lot_entry": 393.0,
-                                "lowest_price_since_lot_entry": 349.0,
+                                "lowest_price_since_lot_entry": 324.5,
                                 "max_profit_since_lot_entry_pct": 6.06
                             }
                         ],
                         "historical_profit_protection_floor_price": null,
                         "active_profit_protection_floor_price": null,
-                        "remaining_position_exit_floor_price": 321.0,
-                        "full_exit_condition": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
-                        "sell_permission_basis": "RiskFirstAfterPartialLotTargetGiveback",
+                        "remaining_position_exit_floor_price": null,
+                        "full_exit_condition": null,
+                        "sell_permission_basis": "PriceTriggerPending",
                         "historical_profit_protection_breached": false,
                         "active_profit_protection_triggered": false,
                         "remaining_position_exit_floor_basis": {
-                            "source": "current_support",
-                            "price": 321.0,
-                            "note": "measured_move_target_down"
+                            "source": "not_available",
+                            "price": null,
+                            "note": "目前沒有可量化的剩餘部位執行底線。"
                         },
                         "position_lots_target_reached_shares": 70,
                         "position_lots_target_giveback_shares": 70,
                         "position_lots_target_giveback_ratio": 0.35,
-                        "exit_decision_summary": "持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-0.38%；基本門檻=20.00% / 424.03元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=0；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=321.0；剩餘部位底線來源=current_support；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。。",
+                        "exit_decision_summary": "持倉狀態=BelowTargetHoldUntilPriceTrigger；目前報酬=-7.88%；基本門檻=20.00% / 424.03元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=56；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=not_available；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=尚未觸發。",
                         "remaining_position_protection": {
                             "historical_profit_protection_floor_price": null,
                             "historical_profit_protection_breached": false,
                             "active_profit_protection_floor_price": null,
                             "active_profit_protection_triggered": false,
-                            "remaining_position_exit_floor_price": 321.0,
+                            "remaining_position_exit_floor_price": null,
                             "remaining_position_exit_floor_basis": {
-                                "source": "current_support",
-                                "price": 321.0,
-                                "note": "measured_move_target_down"
+                                "source": "not_available",
+                                "price": null,
+                                "note": "目前沒有可量化的剩餘部位執行底線。"
                             },
-                            "action_if_broken": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。"
+                            "action_if_broken": "跌破目前可執行底線時，優先退出剩餘部位。"
                         },
                         "target_criterion": "嚴格遵守價格行為",
                         "target_objective": "達到 \"基本獲利門檻%\" 賣出",
@@ -636,9 +620,9 @@
                     }
                 }
             },
-            "portfolio_action_priority": "risk_exit",
-            "risk_first_action": true,
-            "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。",
+            "portfolio_action_priority": "risk_control",
+            "risk_first_action": false,
+            "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
             "long_position_stop": {
                 "price": 321.0,
                 "role": "long_position_stop_below_market",
@@ -652,16 +636,16 @@
                 "note": "目前股價下方較接近的可量化支撐/風控參考。"
             },
             "rebound_resistance": {
-                "price": 381.0,
+                "price": 352.0,
                 "role": "rebound_resistance_above_market",
                 "basis": "gap_failure_condition.price",
                 "note": "現價上方反彈壓力或缺口失效確認價，不是多單停損支撐。"
             },
             "gap_invalidation_price": {
-                "price": 381.0,
+                "price": 352.0,
                 "role": "gap_invalidation_price",
                 "basis": "gap_failure_condition.price",
-                "note": "若收盤站回缺口上緣 381.0，或快速回補缺口中點 370.75 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
+                "note": "若收盤站回缺口上緣 352.0，或快速回補缺口中點 349.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
             },
             "rebound_reduce_zone": null,
             "zone_reachable_today": null,
@@ -671,17 +655,17 @@
                 "zone_type": "no_rebound_reduce_zone",
                 "action": "未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。"
             },
-            "action_zone_summary": "操作優先級=risk_first_reduce_or_no_average_down；帳面損益=-0.38%；多單停損/風控={'price': 321.0, 'role': 'long_position_stop_below_market', 'basis': 'measured_move_target_down', 'note': '多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。'}；目前支撐={'price': 321.0, 'role': 'current_support_below_market', 'basis': 'measured_move_target_down', 'note': '目前股價下方較接近的可量化支撐/風控參考。'}；反彈壓力={'price': 381.0, 'role': 'rebound_resistance_above_market', 'basis': 'gap_failure_condition.price', 'note': '現價上方反彈壓力或缺口失效確認價，不是多單停損支撐。'}；缺口失效確認價={'price': 381.0, 'role': 'gap_invalidation_price', 'basis': 'gap_failure_condition.price', 'note': '若收盤站回缺口上緣 381.0，或快速回補缺口中點 370.75 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。'}；反彈減碼區=N/A；今日可達=None；今日最近有效操作價=None；最快到達結構區天數=None；今日有效操作區={'zone_type': 'no_rebound_reduce_zone', 'action': '未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。'}；禁止追價/攤平原因=breakout_entry_permission=FadeBreakout；突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。；risk_first_action=true，禁止攤平。；PositionLifecycle：持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-0.38%；基本門檻=20.00% / 424.03元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=0；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=321.0；剩餘部位底線來源=current_support；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。。",
-            "limit_up_10_pct": 387.2,
-            "limit_down_10_pct": 316.8,
+            "action_zone_summary": "操作優先級=risk_control；帳面損益=-7.88%；多單停損/風控={'price': 321.0, 'role': 'long_position_stop_below_market', 'basis': 'measured_move_target_down', 'note': '多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。'}；目前支撐={'price': 321.0, 'role': 'current_support_below_market', 'basis': 'measured_move_target_down', 'note': '目前股價下方較接近的可量化支撐/風控參考。'}；反彈壓力={'price': 352.0, 'role': 'rebound_resistance_above_market', 'basis': 'gap_failure_condition.price', 'note': '現價上方反彈壓力或缺口失效確認價，不是多單停損支撐。'}；缺口失效確認價={'price': 352.0, 'role': 'gap_invalidation_price', 'basis': 'gap_failure_condition.price', 'note': '若收盤站回缺口上緣 352.0，或快速回補缺口中點 349.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。'}；反彈減碼區=N/A；今日可達=None；今日最近有效操作價=None；最快到達結構區天數=None；今日有效操作區={'zone_type': 'no_rebound_reduce_zone', 'action': '未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。'}；禁止追價/攤平原因=突破跟隨尚可，仍需依風控與 MM 目標判斷。。；PositionLifecycle：持倉狀態=BelowTargetHoldUntilPriceTrigger；目前報酬=-7.88%；基本門檻=20.00% / 424.03元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=56；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=not_available；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=尚未觸發。",
+            "limit_up_10_pct": 358.05,
+            "limit_down_10_pct": 292.95,
             "ema20_gap": "無/區間震盪",
-            "mag_bar_count": 1,
+            "mag_bar_count": 2,
             "gap_type": "Measuring(測量型缺口候選)",
             "gap_failure_condition": {
                 "direction": "Down",
-                "price": 381.0,
-                "midpoint": 370.75,
-                "condition": "若收盤站回缺口上緣 381.0，或快速回補缺口中點 370.75 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。",
+                "price": 352.0,
+                "midpoint": 349.0,
+                "condition": "若收盤站回缺口上緣 352.0，或快速回補缺口中點 349.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。",
                 "action_hint": "空方缺口失效時，應降低續跌權重。"
             },
             "second_entry_signal": "可能空方 Second Entry / Lower High",
@@ -701,18 +685,18 @@
             "push_magnitude_shrinking_flag": false,
             "failed_breakout_flag": false,
             "wedge_failure_measured_move_target": {
-                "target": 316.8,
+                "target": 292.95,
                 "direction": "Down",
                 "basis": "近20日區間MM估算"
             },
             "stop_loss_reference": {
-                "price": 381.0,
+                "price": 352.0,
                 "basis": "gap_failure_condition",
-                "condition": "若收盤站回缺口上緣 381.0，或快速回補缺口中點 370.75 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
+                "condition": "若收盤站回缺口上緣 352.0，或快速回補缺口中點 349.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
             },
             "opposite_gap_created_flag": false,
             "wedge_context_type": "No Clear Wedge",
-            "risk_reward_ratio": 1.21,
+            "risk_reward_ratio": 1.23,
             "position_sizing_hint": "訊號未完整，建議觀察或小部位，避免追價與一次滿倉。",
             "slippage_warning": "Low/Normal",
             "fundamental_quality_required": false,
@@ -727,88 +711,84 @@
                 "direction": null,
                 "details": "沒有強 Signal Bar，暫不檢查後續延續。"
             },
-            "gap_atr_ratio": 1.5,
-            "breakout_context_type": "FailedBreakout",
+            "gap_atr_ratio": 0.41,
+            "breakout_context_type": "StrongBreakout",
             "breakout_direction": "Down",
-            "breakout_follow_through_score": 22,
+            "breakout_follow_through_score": 79,
             "breakout_follow_through_bars": {
                 "bars_checked": 3,
-                "strong_close_count": 1,
+                "strong_close_count": 2,
                 "weak_same_direction_count": 0,
-                "overlap_back_inside_count": 3,
-                "opposite_strong_count": 1,
-                "first_follow_through_bar_index": null,
-                "follow_through_timing": "None",
-                "follow_through_quality": "Poor",
+                "overlap_back_inside_count": 2,
+                "opposite_strong_count": 0,
+                "first_follow_through_bar_index": 1,
+                "follow_through_timing": "Immediate",
+                "follow_through_quality": "StrongImmediate",
                 "prior_high": 393.0,
                 "prior_low": 357.0,
-                "details": "Down breakout; strong_close=1, weak_same_direction=0, overlap_back_inside=3, opposite_strong=1, true_quality=66."
+                "details": "Down breakout; strong_close=2, weak_same_direction=0, overlap_back_inside=2, opposite_strong=0, true_quality=74."
             },
-            "true_breakout_quality_score": 66,
+            "true_breakout_quality_score": 74,
             "breakout_bar_strength_score": 100,
             "breakout_close_extreme_score": 74,
             "breakout_displacement_score": 75,
             "breakout_bars_broken_count": 20,
-            "breakout_urgency_score": 3,
-            "breakout_urgency_reason": "至少一根突破方向強收盤。；突破方向存在未回補缺口，逆勢方承壓。；突破後多次回到被突破區間內，急迫感下降。；出現反向強 K，突破急迫感被破壞。",
-            "breakout_follow_through_quality": "Poor",
-            "breakout_follow_through_timing": "None",
-            "breakout_second_leg_expectation": "Possible",
-            "breakout_second_leg_reason": "突破或跟隨尚可，可能有小第二段，但需防震盪或假突破。",
+            "breakout_urgency_score": 37,
+            "breakout_urgency_reason": "最近三根中至少兩根為突破方向強收盤。；突破方向存在未回補缺口，逆勢方承壓。；突破後多次回到被突破區間內，急迫感下降。",
+            "breakout_follow_through_quality": "StrongImmediate",
+            "breakout_follow_through_timing": "Immediate",
+            "breakout_second_leg_expectation": "Likely",
+            "breakout_second_leg_reason": "真突破分數高且跟隨有效，至少小第二段順勢推進機率提高。",
             "breakout_sell_buy_close_mode": "None",
             "breakout_reversal_attempt_flag": false,
             "breakout_second_leg_trap_flag": false,
             "breakout_environment_type": "Unknown",
-            "surprise_breakout_flag": false,
-            "second_leg_expected_after_surprise_flag": false,
-            "second_leg_expectation_score": 15,
-            "second_leg_context_type": "BlockedWeakSecondLeg",
-            "second_leg_strength_score": 40,
+            "surprise_breakout_flag": true,
+            "second_leg_expected_after_surprise_flag": true,
+            "second_leg_expectation_score": 85,
+            "second_leg_context_type": "SurpriseBreakout",
+            "second_leg_strength_score": 60,
             "second_leg_continuation_quality": "Moderate",
-            "second_leg_channel_mode": "Unknown",
-            "trapped_participants_bias": "Neutral",
-            "pullback_buy_sell_pressure": "Low",
-            "prior_impulse_50pct_price": 371.0,
+            "second_leg_channel_mode": "NormalTrend",
+            "trapped_participants_bias": "BothNeedToSell",
+            "pullback_buy_sell_pressure": "High",
+            "prior_impulse_50pct_price": 358.75,
             "pullback_entry_zone": {
-                "preferred_action": "等待結構確認，不得因觸及50%回調價而加碼。",
-                "price": 371.0,
+                "preferred_action": "等待反彈放空觀察，不追空；若未反彈則寧可錯過。",
+                "price": 358.75,
                 "zone_type": "prior_impulse_50pct_pullback",
                 "direction": "Short",
-                "note": "強跌後第二段可能存在，但追空風報比可能變差；此區僅為限價觀察區。",
-                "zone_role": "observation_only",
-                "buy_permission": "blocked",
-                "entry_permission": "blocked",
-                "guardrail_reason": "second_leg_no_add_guardrail=true；50% pullback 只作觀察，不構成買點或加碼點。"
+                "note": "強跌後第二段可能存在，但追空風報比可能變差；此區僅為限價觀察區。"
             },
-            "second_leg_risk_reward_warning": "雖可能存在強趨勢第二段背景，但突破權限/跟隨品質/對手方被困條件不足；不得以第二段作為追價或加倉理由。",
-            "second_leg_no_add_guardrail": true,
-            "second_leg_trap_action": "NoChaseNoAdd",
-            "trading_range_second_leg_risk": "Unknown",
-            "trap_reversal_1r_target": 361.9,
-            "trap_reversal_2r_target": 371.8,
-            "trap_reversal_profit_protection_hint": "震盪區間第二段陷阱若反轉，可用 1R/2R 作停利參考；已有利潤者至少保護部分利潤。",
+            "second_leg_risk_reward_warning": "第二段機率較高，但仍需檢查風報比；若停損過大，應等待 pullback_entry_zone，不宜追價。",
+            "second_leg_no_add_guardrail": false,
+            "second_leg_trap_action": "None",
+            "trading_range_second_leg_risk": "Low",
+            "trap_reversal_1r_target": null,
+            "trap_reversal_2r_target": null,
+            "trap_reversal_profit_protection_hint": "未觸發震盪區間第二段陷阱反轉目標。",
             "timeframe_alignment_hint": "目前僅使用本週期資料；若小週期窄通道對應大週期強突破，第二段預期可提高，但本系統尚未直接驗證多週期。",
             "higher_timeframe_second_leg_bias": "NotAvailable",
             "multi_timeframe_confirmation_status": "NotAvailable",
             "climax_profit_taking_flag": false,
             "climax_not_reversal_warning": "未偵測到強突破後停利踩踏長影線情境。",
             "post_climax_second_leg_possible": false,
-            "trend_second_leg_background_strength": 40,
-            "tradeable_second_leg_probability": 0,
-            "second_leg_entry_permission": "BlockedByGuardrail",
-            "second_leg_risk_reward_quality": "Blocked",
+            "trend_second_leg_background_strength": 60,
+            "tradeable_second_leg_probability": 85,
+            "second_leg_entry_permission": "PullbackOnly",
+            "second_leg_risk_reward_quality": "AcceptableOnlyAfterPullback",
             "breakout_gap_pressure_flag": true,
-            "counterparty_trapped_flag": false,
-            "counterparty_profitability_score": 70,
-            "counterparty_profitability_reason": "突破後回到突破點/區間內、缺少有效跟隨或屬第二段陷阱，對手方仍可解套或獲利；不得視為對手方被困住。",
-            "breakout_entry_permission": "FadeBreakout",
-            "breakout_failure_warning": "突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。",
-            "measured_move_context": "SwingRange",
-            "measured_move_target_up": 387.2,
+            "counterparty_trapped_flag": true,
+            "counterparty_profitability_score": 10,
+            "counterparty_profitability_reason": "對手方被缺口、強跟隨或真突破急迫感困住，解套難度高。",
+            "breakout_entry_permission": "AllowBreakoutEntry",
+            "breakout_failure_warning": "突破跟隨尚可，仍需依風控與 MM 目標判斷。",
+            "measured_move_context": "StrongBarsBody",
+            "measured_move_target_up": 358.05,
             "measured_move_target_down": 321.0,
-            "near_measured_move_target_flag": false,
-            "measured_move_target_reaction": "NoReaction",
-            "failed_breakout_watch_flag": true,
+            "near_measured_move_target_flag": true,
+            "measured_move_target_reaction": "StrongContinuation",
+            "failed_breakout_watch_flag": false,
             "gap_text_cleanup_status": "pass_no_residual_gap_text",
             "gap_text_cleanup_rule": null,
             "chart_validation_summary": {
@@ -816,28 +796,28 @@
                 "method": "data_pipeline_consistency_check",
                 "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
                 "chart_read_status": "success",
-                "current_close": 352.0,
-                "ema20": 370.75,
+                "current_close": 325.5,
+                "ema20": 366.44,
                 "gap_type": "Measuring(測量型缺口候選)",
                 "gap_status": "有未回補Down向實體缺口",
                 "body_gap_status": "未回補Down實體缺口",
                 "wick_gap_status": "未回補Down影線缺口",
-                "support_resistance_reference": 381.0,
+                "support_resistance_reference": 352.0,
                 "checks": [
                     {
                         "item": "chart_file",
                         "status": "pass",
-                        "chart_path": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\2382_廣達_Chart_20260717.png"
+                        "chart_path": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\2382_廣達_Chart_20260720.png"
                     },
                     {
                         "item": "current_close",
                         "status": "pass",
-                        "json_value": 352.0
+                        "json_value": 325.5
                     },
                     {
                         "item": "ema20",
                         "status": "pass",
-                        "json_value": 370.75
+                        "json_value": 366.44
                     },
                     {
                         "item": "gap",
@@ -846,13 +826,13 @@
                         "gap_status": "有未回補Down向實體缺口",
                         "body_gap_status": "未回補Down實體缺口",
                         "wick_gap_status": "未回補Down影線缺口",
-                        "gap_failure_price": 381.0
+                        "gap_failure_price": 352.0
                     },
                     {
                         "item": "limit_bounds",
                         "status": "pass",
-                        "limit_up_10_pct": 387.2,
-                        "limit_down_10_pct": 316.8
+                        "limit_up_10_pct": 358.05,
+                        "limit_down_10_pct": 292.95
                     }
                 ]
             },
@@ -863,26 +843,19 @@
             },
             "always_in_direction": "Short",
             "trading_range_edge_flag": false,
-            "stock_profile_risk_triggered": true,
+            "stock_profile_risk_triggered": false,
             "price_action_engine_version": "0.1.4b",
             "price_action_knowledge_version": "1.6",
             "target_criterion": "嚴格遵守價格行為",
             "target_objective": "達到 \"基本獲利門檻%\" 賣出",
             "target_goal_status": "configured",
-            "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=conflict；最終處理原則=標的目標與價格行為風控衝突；依『嚴格遵守價格行為』準則，風控建議維持有效，但必須明確揭露提前偏離目標。",
+            "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。",
             "target_goal_alignment": {
-                "status": "conflict",
-                "conflicts": [
-                    {
-                        "type": "sell_before_composite_profit_target_due_risk",
-                        "objective": "達到基本獲利門檻後賣出",
-                        "composite_profit_target_reached": false,
-                        "risk_advisory_state": "RiskExitAfterPartialLotTargetGiveback"
-                    }
-                ],
-                "conflict_count": 1,
-                "resolution": "criterion_first_price_action_risk_control_overrides_conflicting_objective",
-                "resolution_text": "標的目標與價格行為風控衝突；依『嚴格遵守價格行為』準則，風控建議維持有效，但必須明確揭露提前偏離目標。",
+                "status": "aligned",
+                "conflicts": [],
+                "conflict_count": 0,
+                "resolution": "aligned",
+                "resolution_text": "標的目標、準則與目前最終決策一致。",
                 "entry_goal_state": "not_specified",
                 "criterion_precedence": "準則是同一筆標的目標設定的最高執行約束；最終操作不得與準則宣告的優先順序相反。"
             },
@@ -903,79 +876,73 @@
                     "classification_version": "v7.25k1_target_goal_precedence_v2"
                 },
                 "alignment": {
-                    "status": "conflict",
-                    "conflicts": [
-                        {
-                            "type": "sell_before_composite_profit_target_due_risk",
-                            "objective": "達到基本獲利門檻後賣出",
-                            "composite_profit_target_reached": false,
-                            "risk_advisory_state": "RiskExitAfterPartialLotTargetGiveback"
-                        }
-                    ],
-                    "conflict_count": 1,
-                    "resolution": "criterion_first_price_action_risk_control_overrides_conflicting_objective",
-                    "resolution_text": "標的目標與價格行為風控衝突；依『嚴格遵守價格行為』準則，風控建議維持有效，但必須明確揭露提前偏離目標。",
+                    "status": "aligned",
+                    "conflicts": [],
+                    "conflict_count": 0,
+                    "resolution": "aligned",
+                    "resolution_text": "標的目標、準則與目前最終決策一致。",
                     "entry_goal_state": "not_specified",
                     "criterion_precedence": "準則是同一筆標的目標設定的最高執行約束；最終操作不得與準則宣告的優先順序相反。"
                 },
                 "source": "Portfolio.xlsx:標的目標"
             },
             "target_goal_effective_action": {
-                "position_action": "follow_price_action_risk_control",
-                "can_sell_now": true,
-                "recommended_immediate_sell_ratio_pct": 50,
-                "conditional_additional_sell_ratio_pct": 50,
+                "position_action": "follow_aligned_structured_decision",
+                "can_sell_now": false,
+                "recommended_immediate_sell_ratio_pct": 0,
+                "conditional_additional_sell_ratio_pct": 0,
                 "new_entry_action": "not_specified",
                 "price_action_role": "effective_decision",
-                "reason": "標的目標與價格行為風控衝突；依『嚴格遵守價格行為』準則，風控建議維持有效，但必須明確揭露提前偏離目標。"
+                "reason": "標的目標、準則與目前最終決策一致。"
             },
             "target_objective_override_applied": false,
             "price_action_risk_advisory": {
                 "role": "price_action_risk_advisory_before_target_override",
-                "position_lifecycle_state": "RiskExitAfterPartialLotTargetGiveback",
-                "sell_now_permission": true,
-                "sell_permission_basis": "RiskFirstAfterPartialLotTargetGiveback",
-                "recommended_immediate_sell_ratio_pct": 50,
-                "conditional_additional_sell_ratio_pct": 50,
+                "position_lifecycle_state": "BelowTargetHoldUntilPriceTrigger",
+                "sell_now_permission": false,
+                "sell_permission_basis": "PriceTriggerPending",
+                "recommended_immediate_sell_ratio_pct": 0,
+                "conditional_additional_sell_ratio_pct": 0,
                 "recommended_sell_ratio_pct": {
-                    "lower": 50,
-                    "upper": 50,
-                    "default": 50
+                    "lower": 0,
+                    "upper": 0,
+                    "default": 0
                 },
-                "sell_trigger_price": 352.0,
-                "remaining_position_exit_floor_price": 321.0,
+                "sell_trigger_price": 424.03,
+                "remaining_position_exit_floor_price": null,
                 "remaining_position_exit_floor_basis": {
-                    "source": "current_support",
-                    "price": 321.0,
-                    "note": "measured_move_target_down"
+                    "source": "not_available",
+                    "price": null,
+                    "note": "目前沒有可量化的剩餘部位執行底線。"
                 },
                 "rebound_reduce_zone": null,
-                "full_exit_condition": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
-                "portfolio_action_priority": "risk_exit",
-                "risk_first_action": true,
-                "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。",
+                "full_exit_condition": null,
+                "portfolio_action_priority": "risk_control",
+                "risk_first_action": false,
+                "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
                 "position_exit_decision": {
-                    "can_sell_now": true,
-                    "state": "RiskExitAfterPartialLotTargetGiveback",
-                    "action_priority": "risk_exit",
+                    "can_sell_now": false,
+                    "state": "BelowTargetHoldUntilPriceTrigger",
+                    "action_priority": "hold_until_target_or_risk",
                     "recommended_sell_ratio_pct": {
-                        "lower": 50,
-                        "upper": 50,
-                        "default": 50
+                        "lower": 0,
+                        "upper": 0,
+                        "default": 0
                     },
-                    "current_price": 352.0,
-                    "current_profit_pct": -0.38,
+                    "current_price": 325.5,
+                    "current_profit_pct": -7.88,
                     "base_profit_target_pct": 20.0,
                     "base_profit_target_price": 424.03,
-                    "sell_trigger_price": 352.0,
-                    "momentum_hold_score": 0,
+                    "sell_trigger_price": 424.03,
+                    "momentum_hold_score": 56,
                     "momentum_extension_eligible": false,
                     "profit_protection_floor_price": null,
-                    "reasons": [
-                        "risk_first_action=true，價格行為與標的風險要求立即降低部位"
+                    "reasons": [],
+                    "hold_conditions": [
+                        "股價到達 424.03 元即開啟賣出權限，不需等待下一交易日報告",
+                        "若先觸發risk_first_action或重大結構轉弱，風控優先"
                     ],
-                    "hold_conditions": [],
-                    "plain_language": "現在先賣出 50%；跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
+                    "plain_language": "股價達 424.03 元即開啟賣出權限，不必等隔日報告。",
                     "position_buy_dates": [
                         "2026-05-26",
                         "2026-06-23"
@@ -1001,22 +968,19 @@
                     ],
                     "momentum_score_source": "price_action_and_market_structure",
                     "momentum_price_action_evidence": {
-                        "score": 0,
-                        "state": "Weak",
+                        "score": 56,
+                        "state": "Moderate",
                         "positive_reasons": [
-                            "真突破品質中等",
+                            "真突破品質 >=70",
+                            "Follow-through 強且即時",
+                            "StrongBreakout",
+                            "對手方被困住",
+                            "可交易第二段機率 >=60",
                             "量能高於 5 日均量"
                         ],
                         "blockers": [
                             "股價未站上 EMA20",
-                            "Follow-through=Poor",
-                            "breakout_context_type=FailedBreakout",
-                            "breakout_entry_permission=FadeBreakout",
-                            "counterparty_trapped_flag=false",
-                            "second_leg_no_add_guardrail=true",
-                            "second_leg_context_type=BlockedWeakSecondLeg",
-                            "收盤位置偏弱",
-                            "risk_first_action=true"
+                            "收盤位置偏弱"
                         ],
                         "price_action_fields_used": [
                             "ema_20",
@@ -1039,8 +1003,8 @@
                             "measured_move_target_reaction"
                         ]
                     },
-                    "recommended_immediate_sell_ratio_pct": 50,
-                    "conditional_additional_sell_ratio_pct": 50,
+                    "recommended_immediate_sell_ratio_pct": 0,
+                    "conditional_additional_sell_ratio_pct": 0,
                     "position_composite_start_date": "2026-06-23",
                     "position_composite_target_ever_reached": false,
                     "position_lot_target_summary": [
@@ -1052,7 +1016,7 @@
                             "target_price": 385.75,
                             "target_reached": true,
                             "first_target_reached_date": "2026-06-02",
-                            "current_profit_pct": 9.5,
+                            "current_profit_pct": 1.26,
                             "highest_price_since_lot_entry": 438.0,
                             "lowest_price_since_lot_entry": 308.5,
                             "max_profit_since_lot_entry_pct": 36.25
@@ -1065,40 +1029,40 @@
                             "target_price": 444.64,
                             "target_reached": false,
                             "first_target_reached_date": null,
-                            "current_profit_pct": -5.0,
+                            "current_profit_pct": -12.15,
                             "highest_price_since_lot_entry": 393.0,
-                            "lowest_price_since_lot_entry": 349.0,
+                            "lowest_price_since_lot_entry": 324.5,
                             "max_profit_since_lot_entry_pct": 6.06
                         }
                     ],
                     "historical_profit_protection_floor_price": null,
                     "active_profit_protection_floor_price": null,
-                    "remaining_position_exit_floor_price": 321.0,
-                    "full_exit_condition": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。",
-                    "sell_permission_basis": "RiskFirstAfterPartialLotTargetGiveback",
+                    "remaining_position_exit_floor_price": null,
+                    "full_exit_condition": null,
+                    "sell_permission_basis": "PriceTriggerPending",
                     "historical_profit_protection_breached": false,
                     "active_profit_protection_triggered": false,
                     "remaining_position_exit_floor_basis": {
-                        "source": "current_support",
-                        "price": 321.0,
-                        "note": "measured_move_target_down"
+                        "source": "not_available",
+                        "price": null,
+                        "note": "目前沒有可量化的剩餘部位執行底線。"
                     },
                     "position_lots_target_reached_shares": 70,
                     "position_lots_target_giveback_shares": 70,
                     "position_lots_target_giveback_ratio": 0.35,
-                    "exit_decision_summary": "持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-0.38%；基本門檻=20.00% / 424.03元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=0；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=321.0；剩餘部位底線來源=current_support；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。。",
+                    "exit_decision_summary": "持倉狀態=BelowTargetHoldUntilPriceTrigger；目前報酬=-7.88%；基本門檻=20.00% / 424.03元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=56；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=not_available；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=尚未觸發。",
                     "remaining_position_protection": {
                         "historical_profit_protection_floor_price": null,
                         "historical_profit_protection_breached": false,
                         "active_profit_protection_floor_price": null,
                         "active_profit_protection_triggered": false,
-                        "remaining_position_exit_floor_price": 321.0,
+                        "remaining_position_exit_floor_price": null,
                         "remaining_position_exit_floor_basis": {
-                            "source": "current_support",
-                            "price": 321.0,
-                            "note": "measured_move_target_down"
+                            "source": "not_available",
+                            "price": null,
+                            "note": "目前沒有可量化的剩餘部位執行底線。"
                         },
-                        "action_if_broken": "跌破跌停前可執行風控區或風險持續惡化時，退出其餘部位。"
+                        "action_if_broken": "跌破目前可執行底線時，優先退出剩餘部位。"
                     },
                     "target_criterion": "嚴格遵守價格行為",
                     "target_objective": "達到 \"基本獲利門檻%\" 賣出",
@@ -1116,15 +1080,15 @@
             },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-07-17T10:26:35",
-                "decision_market_data_date": "2026-07-16",
+                "decision_generated_at": "2026-07-20T08:12:34",
+                "decision_market_data_date": "2026-07-17",
                 "decision_delivery_candidate_date": "2026-07-20",
                 "decision_delivery_date": null,
                 "decision_delivery_datetime": null,
                 "execution_eligibility_datetime": null,
                 "execution_status": "pending_delivery_trading_day_ohlcv",
-                "execution_pending_stage": "before_delivery_candidate_date",
-                "execution_pending_stage_description": "尚未到08:20送達候選日。",
+                "execution_pending_stage": "candidate_day_before_08_20_delivery",
+                "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
                 "limit_up_down_fill_status": null,
                 "benchmark_execution_date": null,
                 "benchmark_execution_price": null,
@@ -1135,7 +1099,7 @@
                 "effective_execution_date": null,
                 "effective_execution_price": null,
                 "effective_execution_price_source": null,
-                "recommended_immediate_sell_ratio_pct": 50,
+                "recommended_immediate_sell_ratio_pct": 0,
                 "remaining_position_ratio_pct": null,
                 "remaining_floor_trigger_date": null,
                 "rebound_reduce_zone_hit_date": null,
@@ -1144,19 +1108,19 @@
                 "post_execution_mfe_5d_pct": null,
                 "post_execution_mae_5d_pct": null
             },
-            "analysis_json": "IntegratedForecast/json/2382_廣達_20260717_analysis.json",
-            "chart_png": "IntegratedForecast/png/2382_廣達_Chart_20260717.png",
-            "raw_ohlcv": "IntegratedForecast/raw_ohlcv/2382_廣達_20260717_ohlcv.json",
-            "pdf_file": "2382_廣達_PA_Analysis_20260717.pdf",
-            "json_sha": "0106b79b0d6b4b2b3e8d887c3235c4ad2316dd1876e447d47798af3b98371a32",
-            "png_sha": "ed8d948c6c31ddb1471e990c007270ab505926f3a33022b105e77359a575bde7",
+            "analysis_json": "IntegratedForecast/json/2382_廣達_20260720_analysis.json",
+            "chart_png": "IntegratedForecast/png/2382_廣達_Chart_20260720.png",
+            "raw_ohlcv": "IntegratedForecast/raw_ohlcv/2382_廣達_20260720_ohlcv.json",
+            "pdf_file": "2382_廣達_PA_Analysis_20260720.pdf",
+            "json_sha": "48b7a0494546360225202a85aa88493e526d28113828d3eae4d463f4b4bfbbb0",
+            "png_sha": "f6b4fd6170bc69abf6e29987cfd3052c20de165f7e81763c518b44bcfbd1a4e1",
             "chart_read_status": "success",
-            "profile_risk_triggered_summary": "DELL/HPE/SMCI 單日平均跌幅逾 3%，盤前追價降權。",
+            "profile_risk_triggered_summary": "未觸發標的專屬風險規則",
             "local_files": {
-                "analysis_json": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\json\\2382_廣達_20260717_analysis.json",
-                "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\2382_廣達_Chart_20260717.png",
-                "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\2382_廣達_20260717_ohlcv.json",
-                "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\2382_廣達_PA_Analysis_20260717.pdf"
+                "analysis_json": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\json\\2382_廣達_20260720_analysis.json",
+                "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\2382_廣達_Chart_20260720.png",
+                "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\2382_廣達_20260720_ohlcv.json",
+                "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\2382_廣達_PA_Analysis_20260720.pdf"
             }
         },
         {
@@ -1185,21 +1149,21 @@
             "stock_code": "3081",
             "stock_name": "聯亞",
             "ticker": "3081.TWO",
-            "run_datetime": "2026-07-17T10:27:32",
-            "file_date": "2026-07-17",
-            "daily_output_tag": "20260717",
+            "run_datetime": "2026-07-20T08:13:36",
+            "file_date": "2026-07-20",
+            "daily_output_tag": "20260720",
             "output_naming_policy": "daily_stable_overwrite",
             "profile_source": "STOCK_CONFIGS",
             "stock_type": "中小型高波動題材股",
-            "latest_trade_date": "2026-07-16",
-            "expected_latest_trade_date": "2026-07-16",
-            "actual_latest_trade_date": "2026-07-16",
+            "latest_trade_date": "2026-07-17",
+            "expected_latest_trade_date": "2026-07-17",
+            "actual_latest_trade_date": "2026-07-17",
             "price_data_source": "FUGLEAPI",
             "price_data_is_stale": false,
             "price_data_warning": null,
-            "current_close": 1620.0,
-            "portfolio_unrealized_pnl_pct": -28.45,
-            "portfolio_unrealized_pnl_value": -38644.0,
+            "current_close": 1480.0,
+            "portfolio_unrealized_pnl_pct": -34.63,
+            "portfolio_unrealized_pnl_value": -47044.0,
             "position_lifecycle_version": "1.0",
             "position_lifecycle_anchor": "fifo_open_lots_and_weighted_remaining_cost",
             "position_lifecycle_data_quality": "full_open_lot_history_and_target_objective",
@@ -1250,7 +1214,7 @@
                 ],
                 "blockers": [
                     "股價未站上 EMA20",
-                    "空頭 MAG 17 根",
+                    "空頭 MAG 18 根",
                     "收盤位置偏弱",
                     "risk_first_action=true"
                 ],
@@ -1275,8 +1239,8 @@
                     "measured_move_target_reaction"
                 ]
             },
-            "position_holding_calendar_days": 34,
-            "position_holding_trading_days": 23,
+            "position_holding_calendar_days": 35,
+            "position_holding_trading_days": 24,
             "position_avg_cost": 2264.07,
             "base_profit_target_pct": 20.0,
             "base_profit_target_price": 2716.88,
@@ -1284,14 +1248,14 @@
             "profit_target_ever_reached": false,
             "first_profit_target_reached_date": null,
             "days_since_profit_target_reached": null,
-            "current_position_profit_pct": -28.45,
+            "current_position_profit_pct": -34.63,
             "highest_price_since_entry": 2480.0,
-            "lowest_price_since_entry": 1615.0,
+            "lowest_price_since_entry": 1460.0,
             "max_profit_since_entry_pct": 9.54,
-            "max_adverse_excursion_since_entry_pct": -28.67,
-            "profit_giveback_from_peak_pct_points": 37.98,
-            "drawdown_from_post_entry_high_pct": -34.68,
-            "anchored_vwap_since_entry": 2101.34,
+            "max_adverse_excursion_since_entry_pct": -35.51,
+            "profit_giveback_from_peak_pct_points": 44.17,
+            "drawdown_from_post_entry_high_pct": -40.32,
+            "anchored_vwap_since_entry": 2077.59,
             "momentum_hold_score": 1,
             "momentum_hold_state": "Weak",
             "momentum_extension_allowed_by_user": true,
@@ -1305,7 +1269,7 @@
             ],
             "momentum_extension_blockers": [
                 "股價未站上 EMA20",
-                "空頭 MAG 17 根",
+                "空頭 MAG 18 根",
                 "收盤位置偏弱",
                 "risk_first_action=true"
             ],
@@ -1332,9 +1296,9 @@
                     "target_price": 3082.44,
                     "target_reached": true,
                     "first_target_reached_date": "2026-05-26",
-                    "current_profit_pct": -36.93,
+                    "current_profit_pct": -42.38,
                     "highest_price_since_lot_entry": 3215.0,
-                    "lowest_price_since_lot_entry": 1615.0,
+                    "lowest_price_since_lot_entry": 1460.0,
                     "max_profit_since_lot_entry_pct": 25.16
                 },
                 {
@@ -1345,9 +1309,9 @@
                     "target_price": 2643.77,
                     "target_reached": false,
                     "first_target_reached_date": null,
-                    "current_profit_pct": -26.47,
+                    "current_profit_pct": -32.82,
                     "highest_price_since_lot_entry": 2480.0,
-                    "lowest_price_since_lot_entry": 1615.0,
+                    "lowest_price_since_lot_entry": 1460.0,
                     "max_profit_since_lot_entry_pct": 12.57
                 }
             ],
@@ -1385,7 +1349,7 @@
                 "remaining_position_exit_floor_basis": null,
                 "action_if_broken": "依標的目標不自動退出；PriceAction原風控價僅作風險警示。"
             },
-            "exit_decision_summary": "持倉狀態=TargetObjectiveHoldWithPriceActionRiskWarning；目前報酬=-28.45%；基本門檻=20.00% / 2716.88元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=None；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=依目前標的目標，現有持股不自動賣出；價格行為僅作風險警示。若要授權風控減碼或退出，請修改Portfolio.xlsx『標的目標』的準則或標的目標。",
+            "exit_decision_summary": "持倉狀態=TargetObjectiveHoldWithPriceActionRiskWarning；目前報酬=-34.63%；基本門檻=20.00% / 2716.88元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=None；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=依目前標的目標，現有持股不自動賣出；價格行為僅作風險警示。若要授權風控減碼或退出，請修改Portfolio.xlsx『標的目標』的準則或標的目標。",
             "position_exit_decision": {
                 "can_sell_now": false,
                 "state": "TargetObjectiveHoldWithPriceActionRiskWarning",
@@ -1395,8 +1359,8 @@
                     "upper": 0,
                     "default": 0
                 },
-                "current_price": 1620.0,
-                "current_profit_pct": -28.45,
+                "current_price": 1480.0,
+                "current_profit_pct": -34.63,
                 "base_profit_target_pct": 20.0,
                 "base_profit_target_price": 2716.88,
                 "sell_trigger_price": null,
@@ -1444,7 +1408,7 @@
                     ],
                     "blockers": [
                         "股價未站上 EMA20",
-                        "空頭 MAG 17 根",
+                        "空頭 MAG 18 根",
                         "收盤位置偏弱",
                         "risk_first_action=true"
                     ],
@@ -1482,9 +1446,9 @@
                         "target_price": 3082.44,
                         "target_reached": true,
                         "first_target_reached_date": "2026-05-26",
-                        "current_profit_pct": -36.93,
+                        "current_profit_pct": -42.38,
                         "highest_price_since_lot_entry": 3215.0,
-                        "lowest_price_since_lot_entry": 1615.0,
+                        "lowest_price_since_lot_entry": 1460.0,
                         "max_profit_since_lot_entry_pct": 25.16
                     },
                     {
@@ -1495,9 +1459,9 @@
                         "target_price": 2643.77,
                         "target_reached": false,
                         "first_target_reached_date": null,
-                        "current_profit_pct": -26.47,
+                        "current_profit_pct": -32.82,
                         "highest_price_since_lot_entry": 2480.0,
-                        "lowest_price_since_lot_entry": 1615.0,
+                        "lowest_price_since_lot_entry": 1460.0,
                         "max_profit_since_lot_entry_pct": 12.57
                     }
                 ],
@@ -1512,7 +1476,7 @@
                 "position_lots_target_reached_shares": 10,
                 "position_lots_target_giveback_shares": 10,
                 "position_lots_target_giveback_ratio": 0.1667,
-                "exit_decision_summary": "持倉狀態=TargetObjectiveHoldWithPriceActionRiskWarning；目前報酬=-28.45%；基本門檻=20.00% / 2716.88元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=None；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=依目前標的目標，現有持股不自動賣出；價格行為僅作風險警示。若要授權風控減碼或退出，請修改Portfolio.xlsx『標的目標』的準則或標的目標。",
+                "exit_decision_summary": "持倉狀態=TargetObjectiveHoldWithPriceActionRiskWarning；目前報酬=-34.63%；基本門檻=20.00% / 2716.88元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=None；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=依目前標的目標，現有持股不自動賣出；價格行為僅作風險警示。若要授權風控減碼或退出，請修改Portfolio.xlsx『標的目標』的準則或標的目標。",
                 "remaining_position_protection": {
                     "historical_profit_protection_floor_price": null,
                     "historical_profit_protection_breached": false,
@@ -1555,21 +1519,21 @@
                         "upper": 50,
                         "default": 50
                     },
-                    "sell_trigger_price": 1620.0,
-                    "remaining_position_exit_floor_price": 1578.27,
+                    "sell_trigger_price": 1480.0,
+                    "remaining_position_exit_floor_price": 1450.66,
                     "remaining_position_exit_floor_basis": {
                         "source": "executable_pre_stop_zone.upper_price",
-                        "price": 1578.27,
+                        "price": 1450.66,
                         "note": "ATR14 / 跌停價前緩衝區 / 理論停損與跌停價重合"
                     },
                     "rebound_reduce_zone": {
-                        "lower_price": 1735.0,
-                        "upper_price": 1755.0,
+                        "lower_price": 1567.5,
+                        "upper_price": 1620.0,
                         "source": "gap_midpoint_to_gap_failure_price",
                         "action": "反彈至此區間以減碼 / 降風險優先，不作為攤平買點。",
                         "reason": "高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。"
                     },
-                    "full_exit_condition": "反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。",
+                    "full_exit_condition": "反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。",
                     "portfolio_action_priority": "risk_exit",
                     "risk_first_action": true,
                     "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。",
@@ -1582,11 +1546,11 @@
                             "upper": 50,
                             "default": 50
                         },
-                        "current_price": 1620.0,
-                        "current_profit_pct": -28.45,
+                        "current_price": 1480.0,
+                        "current_profit_pct": -34.63,
                         "base_profit_target_pct": 20.0,
                         "base_profit_target_price": 2716.88,
-                        "sell_trigger_price": 1620.0,
+                        "sell_trigger_price": 1480.0,
                         "momentum_hold_score": 1,
                         "momentum_extension_eligible": false,
                         "profit_protection_floor_price": null,
@@ -1594,7 +1558,7 @@
                             "risk_first_action=true，價格行為與標的風險要求立即降低部位"
                         ],
                         "hold_conditions": [],
-                        "plain_language": "現在先賣出 50%；反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。",
+                        "plain_language": "現在先賣出 50%；反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。",
                         "position_buy_dates": [
                             "2026-05-19",
                             "2026-06-12"
@@ -1631,7 +1595,7 @@
                             ],
                             "blockers": [
                                 "股價未站上 EMA20",
-                                "空頭 MAG 17 根",
+                                "空頭 MAG 18 根",
                                 "收盤位置偏弱",
                                 "risk_first_action=true"
                             ],
@@ -1669,9 +1633,9 @@
                                 "target_price": 3082.44,
                                 "target_reached": true,
                                 "first_target_reached_date": "2026-05-26",
-                                "current_profit_pct": -36.93,
+                                "current_profit_pct": -42.38,
                                 "highest_price_since_lot_entry": 3215.0,
-                                "lowest_price_since_lot_entry": 1615.0,
+                                "lowest_price_since_lot_entry": 1460.0,
                                 "max_profit_since_lot_entry_pct": 25.16
                             },
                             {
@@ -1682,40 +1646,40 @@
                                 "target_price": 2643.77,
                                 "target_reached": false,
                                 "first_target_reached_date": null,
-                                "current_profit_pct": -26.47,
+                                "current_profit_pct": -32.82,
                                 "highest_price_since_lot_entry": 2480.0,
-                                "lowest_price_since_lot_entry": 1615.0,
+                                "lowest_price_since_lot_entry": 1460.0,
                                 "max_profit_since_lot_entry_pct": 12.57
                             }
                         ],
                         "historical_profit_protection_floor_price": null,
                         "active_profit_protection_floor_price": null,
-                        "remaining_position_exit_floor_price": 1578.27,
-                        "full_exit_condition": "反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。",
+                        "remaining_position_exit_floor_price": 1450.66,
+                        "full_exit_condition": "反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。",
                         "sell_permission_basis": "RiskFirstAfterPartialLotTargetGiveback",
                         "historical_profit_protection_breached": false,
                         "active_profit_protection_triggered": false,
                         "remaining_position_exit_floor_basis": {
                             "source": "executable_pre_stop_zone.upper_price",
-                            "price": 1578.27,
+                            "price": 1450.66,
                             "note": "ATR14 / 跌停價前緩衝區 / 理論停損與跌停價重合"
                         },
                         "position_lots_target_reached_shares": 10,
                         "position_lots_target_giveback_shares": 10,
                         "position_lots_target_giveback_ratio": 0.1667,
-                        "exit_decision_summary": "持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-28.45%；基本門檻=20.00% / 2716.88元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=1578.27；剩餘部位底線來源=executable_pre_stop_zone.upper_price；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。。",
+                        "exit_decision_summary": "持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-34.63%；基本門檻=20.00% / 2716.88元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=1450.66；剩餘部位底線來源=executable_pre_stop_zone.upper_price；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。。",
                         "remaining_position_protection": {
                             "historical_profit_protection_floor_price": null,
                             "historical_profit_protection_breached": false,
                             "active_profit_protection_floor_price": null,
                             "active_profit_protection_triggered": false,
-                            "remaining_position_exit_floor_price": 1578.27,
+                            "remaining_position_exit_floor_price": 1450.66,
                             "remaining_position_exit_floor_basis": {
                                 "source": "executable_pre_stop_zone.upper_price",
-                                "price": 1578.27,
+                                "price": 1450.66,
                                 "note": "ATR14 / 跌停價前緩衝區 / 理論停損與跌停價重合"
                             },
-                            "action_if_broken": "反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。"
+                            "action_if_broken": "反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。"
                         },
                         "target_criterion": "以標的目標優先，價格行為僅作風險警示",
                         "target_objective": "1).現有持股不賣\n2).等待時機進場買入",
@@ -1756,10 +1720,10 @@
                     "risk_warning_reference": {
                         "risk_advisory_state": "RiskExitAfterPartialLotTargetGiveback",
                         "risk_advisory_immediate_sell_ratio_pct": 50,
-                        "remaining_position_exit_floor_price": 1578.27,
+                        "remaining_position_exit_floor_price": 1450.66,
                         "rebound_reduce_zone": {
-                            "lower_price": 1735.0,
-                            "upper_price": 1755.0,
+                            "lower_price": 1567.5,
+                            "upper_price": 1620.0,
                             "source": "gap_midpoint_to_gap_failure_price",
                             "action": "反彈至此區間以減碼 / 降風險優先，不作為攤平買點。",
                             "reason": "高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。"
@@ -1773,30 +1737,30 @@
             "risk_first_action": true,
             "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。",
             "long_position_stop": {
-                "price": 1458.0,
+                "price": 1332.0,
                 "role": "long_position_stop_below_market",
                 "basis": "gap_MM_Target_Down",
                 "note": "多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。"
             },
             "current_support": {
-                "price": 1458.0,
+                "price": 1332.0,
                 "role": "current_support_below_market",
                 "basis": "gap_MM_Target_Down",
                 "note": "目前股價下方較接近的可量化支撐/風控參考。"
             },
             "rebound_resistance": {
-                "lower_price": 1735.0,
-                "upper_price": 1755.0,
-                "main_price": 1755.0,
+                "lower_price": 1567.5,
+                "upper_price": 1620.0,
+                "main_price": 1620.0,
                 "role": "rebound_resistance_and_reduce_zone",
                 "basis": "gap_midpoint_to_gap_failure_price",
                 "note": "這是反彈壓力與減碼區，不是目前股價下方的多單停損支撐。"
             },
             "gap_invalidation_price": {
-                "price": 1755.0,
+                "price": 1620.0,
                 "role": "gap_invalidation_price",
                 "basis": "gap_failure_condition.price",
-                "note": "若收盤站回缺口上緣 1755.0，或快速回補缺口中點 1735.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
+                "note": "若收盤站回缺口上緣 1620.0，或快速回補缺口中點 1567.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
             },
             "rebound_reduce_zone": null,
             "zone_reachable_today": null,
@@ -1806,17 +1770,17 @@
                 "zone_type": "target_objective_hold_risk_warning_only",
                 "action": "依標的目標不執行自動賣出；原PriceAction價位僅保留於price_action_risk_advisory。"
             },
-            "action_zone_summary": "最終操作優先級=target_objective_hold；現有持股不賣；新進場=等待合格時機；價格行為僅作風險警示。 PriceAction風險警示：操作優先級=risk_first_reduce_or_no_average_down；帳面損益=-28.45%；多單停損/風控={'price': 1458.0, 'role': 'long_position_stop_below_market', 'basis': 'gap_MM_Target_Down', 'note': '多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。'}；目前支撐={'price': 1458.0, 'role': 'current_support_below_market', 'basis': 'gap_MM_Target_Down', 'note': '目前股價下方較接近的可量化支撐/風控參考。'}；反彈壓力={'lower_price': 1735.0, 'upper_price': 1755.0, 'main_price': 1755.0, 'role': 'rebound_resistance_and_reduce_zone', 'basis': 'gap_midpoint_to_gap_failure_price', 'note': '這是反彈壓力與減碼區，不是目前股價下方的多單停損支撐。'}；缺口失效確認價={'price': 1755.0, 'role': 'gap_invalidation_price', 'basis': 'gap_failure_condition.price', 'note': '若收盤站回缺口上緣 1755.0，或快速回補缺口中點 1735.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。'}；反彈減碼區={'lower_price': 1735.0, 'upper_price': 1755.0, 'source': 'gap_midpoint_to_gap_failure_price', 'action': '反彈至此區間以減碼 / 降風險優先，不作為攤平買點。', 'reason': '高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。'}；今日可達=True；今日最近有效操作價=1735.0；最快到達結構區天數=1；今日有效操作區={'zone_type': 'rebound_reduce_zone_reachable_today', 'lower_price': 1735.0, 'upper_price': 1755.0, 'action': '今日有機會觸及反彈減碼區；若觸及，優先減碼或降風險，不得作為攤平買點。'}；禁止追價/攤平原因=突破跟隨尚可，仍需依風控與 MM 目標判斷。；risk_first_action=true，禁止攤平；rebound_reduce_zone=1735.0~1755.0。；PositionLifecycle：持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-28.45%；基本門檻=20.00% / 2716.88元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=1578.27；剩餘部位底線來源=executable_pre_stop_zone.upper_price；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。。",
-            "limit_up_10_pct": 1782.0,
-            "limit_down_10_pct": 1458.0,
-            "ema20_gap": "強勢空頭(近17根未觸碰EMA20)",
-            "mag_bar_count": 17,
+            "action_zone_summary": "最終操作優先級=target_objective_hold；現有持股不賣；新進場=等待合格時機；價格行為僅作風險警示。 PriceAction風險警示：操作優先級=risk_first_reduce_or_no_average_down；帳面損益=-34.63%；多單停損/風控={'price': 1332.0, 'role': 'long_position_stop_below_market', 'basis': 'gap_MM_Target_Down', 'note': '多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。'}；目前支撐={'price': 1332.0, 'role': 'current_support_below_market', 'basis': 'gap_MM_Target_Down', 'note': '目前股價下方較接近的可量化支撐/風控參考。'}；反彈壓力={'lower_price': 1567.5, 'upper_price': 1620.0, 'main_price': 1620.0, 'role': 'rebound_resistance_and_reduce_zone', 'basis': 'gap_midpoint_to_gap_failure_price', 'note': '這是反彈壓力與減碼區，不是目前股價下方的多單停損支撐。'}；缺口失效確認價={'price': 1620.0, 'role': 'gap_invalidation_price', 'basis': 'gap_failure_condition.price', 'note': '若收盤站回缺口上緣 1620.0，或快速回補缺口中點 1567.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。'}；反彈減碼區={'lower_price': 1567.5, 'upper_price': 1620.0, 'source': 'gap_midpoint_to_gap_failure_price', 'action': '反彈至此區間以減碼 / 降風險優先，不作為攤平買點。', 'reason': '高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。'}；今日可達=True；今日最近有效操作價=1567.5；最快到達結構區天數=1；今日有效操作區={'zone_type': 'rebound_reduce_zone_reachable_today', 'lower_price': 1567.5, 'upper_price': 1620.0, 'action': '今日有機會觸及反彈減碼區；若觸及，優先減碼或降風險，不得作為攤平買點。'}；禁止追價/攤平原因=突破跟隨尚可，仍需依風控與 MM 目標判斷。；risk_first_action=true，禁止攤平；rebound_reduce_zone=1567.5~1620.0。；PositionLifecycle：持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-34.63%；基本門檻=20.00% / 2716.88元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=1450.66；剩餘部位底線來源=executable_pre_stop_zone.upper_price；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。。",
+            "limit_up_10_pct": 1628.0,
+            "limit_down_10_pct": 1332.0,
+            "ema20_gap": "強勢空頭(近18根未觸碰EMA20)",
+            "mag_bar_count": 18,
             "gap_type": "Measuring(測量型缺口候選)",
             "gap_failure_condition": {
                 "direction": "Down",
-                "price": 1755.0,
-                "midpoint": 1735.0,
-                "condition": "若收盤站回缺口上緣 1755.0，或快速回補缺口中點 1735.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。",
+                "price": 1620.0,
+                "midpoint": 1567.5,
+                "condition": "若收盤站回缺口上緣 1620.0，或快速回補缺口中點 1567.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。",
                 "action_hint": "空方缺口失效時，應降低續跌權重。"
             },
             "second_entry_signal": "尚未確認",
@@ -1836,18 +1800,18 @@
             "push_magnitude_shrinking_flag": false,
             "failed_breakout_flag": false,
             "wedge_failure_measured_move_target": {
-                "target": 1458.0,
+                "target": 1332.0,
                 "direction": "Down",
                 "basis": "近20日區間MM估算"
             },
             "stop_loss_reference": {
-                "price": 1755.0,
+                "price": 1620.0,
                 "basis": "gap_failure_condition",
-                "condition": "若收盤站回缺口上緣 1755.0，或快速回補缺口中點 1735.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
+                "condition": "若收盤站回缺口上緣 1620.0，或快速回補缺口中點 1567.5 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
             },
             "opposite_gap_created_flag": false,
             "wedge_context_type": "No Clear Wedge",
-            "risk_reward_ratio": 1.2,
+            "risk_reward_ratio": 1.06,
             "position_sizing_hint": "高價或流動性風險標的，僅允許小部位或分批限價單；不得一次滿倉追價。",
             "slippage_warning": "Medium：高價股，分批與限價單優先。",
             "fundamental_quality_required": true,
@@ -1862,51 +1826,51 @@
                 "direction": null,
                 "details": "沒有強 Signal Bar，暫不檢查後續延續。"
             },
-            "gap_atr_ratio": 0.23,
+            "gap_atr_ratio": 0.6,
             "breakout_context_type": "StrongBreakout",
             "breakout_direction": "Down",
-            "breakout_follow_through_score": 78,
+            "breakout_follow_through_score": 100,
             "breakout_follow_through_bars": {
                 "bars_checked": 3,
-                "strong_close_count": 2,
+                "strong_close_count": 3,
                 "weak_same_direction_count": 0,
-                "overlap_back_inside_count": 2,
+                "overlap_back_inside_count": 1,
                 "opposite_strong_count": 0,
                 "first_follow_through_bar_index": 1,
                 "follow_through_timing": "Immediate",
                 "follow_through_quality": "StrongImmediate",
                 "prior_high": 2480.0,
-                "prior_low": 1835.0,
-                "details": "Down breakout; strong_close=2, weak_same_direction=0, overlap_back_inside=2, opposite_strong=0, true_quality=70."
+                "prior_low": 1795.0,
+                "details": "Down breakout; strong_close=3, weak_same_direction=0, overlap_back_inside=1, opposite_strong=0, true_quality=73."
             },
-            "true_breakout_quality_score": 70,
+            "true_breakout_quality_score": 73,
             "breakout_bar_strength_score": 60,
             "breakout_close_extreme_score": 93,
-            "breakout_displacement_score": 75,
+            "breakout_displacement_score": 50,
             "breakout_bars_broken_count": 20,
-            "breakout_urgency_score": 37,
-            "breakout_urgency_reason": "最近三根中至少兩根為突破方向強收盤。；突破方向存在未回補缺口，逆勢方承壓。；突破後多次回到被突破區間內，急迫感下降。",
+            "breakout_urgency_score": 70,
+            "breakout_urgency_reason": "最近三根皆接近突破方向極端收盤，接近 Sell/Buy Close 模式。；突破方向存在未回補缺口，逆勢方承壓。",
             "breakout_follow_through_quality": "StrongImmediate",
             "breakout_follow_through_timing": "Immediate",
             "breakout_second_leg_expectation": "Likely",
             "breakout_second_leg_reason": "真突破分數高且跟隨有效，至少小第二段順勢推進機率提高。",
-            "breakout_sell_buy_close_mode": "None",
+            "breakout_sell_buy_close_mode": "SellClose",
             "breakout_reversal_attempt_flag": false,
             "breakout_second_leg_trap_flag": false,
             "breakout_environment_type": "StrongTrend",
             "surprise_breakout_flag": true,
             "second_leg_expected_after_surprise_flag": true,
-            "second_leg_expectation_score": 95,
+            "second_leg_expectation_score": 100,
             "second_leg_context_type": "SurpriseBreakout",
             "second_leg_strength_score": 85,
             "second_leg_continuation_quality": "Strong",
             "second_leg_channel_mode": "TightChannel",
             "trapped_participants_bias": "BothNeedToSell",
             "pullback_buy_sell_pressure": "High",
-            "prior_impulse_50pct_price": 1895.0,
+            "prior_impulse_50pct_price": 1817.5,
             "pullback_entry_zone": {
                 "preferred_action": "等待反彈放空觀察，不追空；若未反彈則寧可錯過。",
-                "price": 1895.0,
+                "price": 1817.5,
                 "zone_type": "prior_impulse_50pct_pullback",
                 "direction": "Short",
                 "note": "強跌後第二段可能存在，但追空風報比可能變差；此區僅為限價觀察區。"
@@ -1925,7 +1889,7 @@
             "climax_not_reversal_warning": "未偵測到強突破後停利踩踏長影線情境。",
             "post_climax_second_leg_possible": false,
             "trend_second_leg_background_strength": 85,
-            "tradeable_second_leg_probability": 95,
+            "tradeable_second_leg_probability": 100,
             "second_leg_entry_permission": "PullbackOnly",
             "second_leg_risk_reward_quality": "AcceptableOnlyAfterPullback",
             "breakout_gap_pressure_flag": true,
@@ -1935,8 +1899,8 @@
             "breakout_entry_permission": "AllowBreakoutEntry",
             "breakout_failure_warning": "突破跟隨尚可，仍需依風控與 MM 目標判斷。",
             "measured_move_context": "StrongBarsBody",
-            "measured_move_target_up": 1782.0,
-            "measured_move_target_down": 1458.0,
+            "measured_move_target_up": 1628.0,
+            "measured_move_target_down": 1332.0,
             "near_measured_move_target_flag": false,
             "measured_move_target_reaction": "NoReaction",
             "failed_breakout_watch_flag": false,
@@ -1947,28 +1911,28 @@
                 "method": "data_pipeline_consistency_check",
                 "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
                 "chart_read_status": "success",
-                "current_close": 1620.0,
-                "ema20": 2036.21,
+                "current_close": 1480.0,
+                "ema20": 1983.23,
                 "gap_type": "Measuring(測量型缺口候選)",
                 "gap_status": "有未回補Down向實體缺口",
                 "body_gap_status": "未回補Down實體缺口",
                 "wick_gap_status": "未回補Down影線缺口",
-                "support_resistance_reference": 1755.0,
+                "support_resistance_reference": 1620.0,
                 "checks": [
                     {
                         "item": "chart_file",
                         "status": "pass",
-                        "chart_path": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\3081_聯亞_Chart_20260717.png"
+                        "chart_path": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\3081_聯亞_Chart_20260720.png"
                     },
                     {
                         "item": "current_close",
                         "status": "pass",
-                        "json_value": 1620.0
+                        "json_value": 1480.0
                     },
                     {
                         "item": "ema20",
                         "status": "pass",
-                        "json_value": 2036.21
+                        "json_value": 1983.23
                     },
                     {
                         "item": "gap",
@@ -1977,13 +1941,13 @@
                         "gap_status": "有未回補Down向實體缺口",
                         "body_gap_status": "未回補Down實體缺口",
                         "wick_gap_status": "未回補Down影線缺口",
-                        "gap_failure_price": 1755.0
+                        "gap_failure_price": 1620.0
                     },
                     {
                         "item": "limit_bounds",
                         "status": "pass",
-                        "limit_up_10_pct": 1782.0,
-                        "limit_down_10_pct": 1458.0
+                        "limit_up_10_pct": 1628.0,
+                        "limit_down_10_pct": 1332.0
                     }
                 ]
             },
@@ -2062,10 +2026,10 @@
                 "risk_warning_reference": {
                     "risk_advisory_state": "RiskExitAfterPartialLotTargetGiveback",
                     "risk_advisory_immediate_sell_ratio_pct": 50,
-                    "remaining_position_exit_floor_price": 1578.27,
+                    "remaining_position_exit_floor_price": 1450.66,
                     "rebound_reduce_zone": {
-                        "lower_price": 1735.0,
-                        "upper_price": 1755.0,
+                        "lower_price": 1567.5,
+                        "upper_price": 1620.0,
                         "source": "gap_midpoint_to_gap_failure_price",
                         "action": "反彈至此區間以減碼 / 降風險優先，不作為攤平買點。",
                         "reason": "高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。"
@@ -2087,21 +2051,21 @@
                     "upper": 50,
                     "default": 50
                 },
-                "sell_trigger_price": 1620.0,
-                "remaining_position_exit_floor_price": 1578.27,
+                "sell_trigger_price": 1480.0,
+                "remaining_position_exit_floor_price": 1450.66,
                 "remaining_position_exit_floor_basis": {
                     "source": "executable_pre_stop_zone.upper_price",
-                    "price": 1578.27,
+                    "price": 1450.66,
                     "note": "ATR14 / 跌停價前緩衝區 / 理論停損與跌停價重合"
                 },
                 "rebound_reduce_zone": {
-                    "lower_price": 1735.0,
-                    "upper_price": 1755.0,
+                    "lower_price": 1567.5,
+                    "upper_price": 1620.0,
                     "source": "gap_midpoint_to_gap_failure_price",
                     "action": "反彈至此區間以減碼 / 降風險優先，不作為攤平買點。",
                     "reason": "高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。"
                 },
-                "full_exit_condition": "反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。",
+                "full_exit_condition": "反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。",
                 "portfolio_action_priority": "risk_exit",
                 "risk_first_action": true,
                 "risk_first_action_reason": "標的專屬風險已觸發且持股處於帳面虧損；未解除風險前禁止攤平，反彈以減碼或降風險優先。",
@@ -2114,11 +2078,11 @@
                         "upper": 50,
                         "default": 50
                     },
-                    "current_price": 1620.0,
-                    "current_profit_pct": -28.45,
+                    "current_price": 1480.0,
+                    "current_profit_pct": -34.63,
                     "base_profit_target_pct": 20.0,
                     "base_profit_target_price": 2716.88,
-                    "sell_trigger_price": 1620.0,
+                    "sell_trigger_price": 1480.0,
                     "momentum_hold_score": 1,
                     "momentum_extension_eligible": false,
                     "profit_protection_floor_price": null,
@@ -2126,7 +2090,7 @@
                         "risk_first_action=true，價格行為與標的風險要求立即降低部位"
                     ],
                     "hold_conditions": [],
-                    "plain_language": "現在先賣出 50%；反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。",
+                    "plain_language": "現在先賣出 50%；反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。",
                     "position_buy_dates": [
                         "2026-05-19",
                         "2026-06-12"
@@ -2163,7 +2127,7 @@
                         ],
                         "blockers": [
                             "股價未站上 EMA20",
-                            "空頭 MAG 17 根",
+                            "空頭 MAG 18 根",
                             "收盤位置偏弱",
                             "risk_first_action=true"
                         ],
@@ -2201,9 +2165,9 @@
                             "target_price": 3082.44,
                             "target_reached": true,
                             "first_target_reached_date": "2026-05-26",
-                            "current_profit_pct": -36.93,
+                            "current_profit_pct": -42.38,
                             "highest_price_since_lot_entry": 3215.0,
-                            "lowest_price_since_lot_entry": 1615.0,
+                            "lowest_price_since_lot_entry": 1460.0,
                             "max_profit_since_lot_entry_pct": 25.16
                         },
                         {
@@ -2214,40 +2178,40 @@
                             "target_price": 2643.77,
                             "target_reached": false,
                             "first_target_reached_date": null,
-                            "current_profit_pct": -26.47,
+                            "current_profit_pct": -32.82,
                             "highest_price_since_lot_entry": 2480.0,
-                            "lowest_price_since_lot_entry": 1615.0,
+                            "lowest_price_since_lot_entry": 1460.0,
                             "max_profit_since_lot_entry_pct": 12.57
                         }
                     ],
                     "historical_profit_protection_floor_price": null,
                     "active_profit_protection_floor_price": null,
-                    "remaining_position_exit_floor_price": 1578.27,
-                    "full_exit_condition": "反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。",
+                    "remaining_position_exit_floor_price": 1450.66,
+                    "full_exit_condition": "反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。",
                     "sell_permission_basis": "RiskFirstAfterPartialLotTargetGiveback",
                     "historical_profit_protection_breached": false,
                     "active_profit_protection_triggered": false,
                     "remaining_position_exit_floor_basis": {
                         "source": "executable_pre_stop_zone.upper_price",
-                        "price": 1578.27,
+                        "price": 1450.66,
                         "note": "ATR14 / 跌停價前緩衝區 / 理論停損與跌停價重合"
                     },
                     "position_lots_target_reached_shares": 10,
                     "position_lots_target_giveback_shares": 10,
                     "position_lots_target_giveback_ratio": 0.1667,
-                    "exit_decision_summary": "持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-28.45%；基本門檻=20.00% / 2716.88元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=1578.27；剩餘部位底線來源=executable_pre_stop_zone.upper_price；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。。",
+                    "exit_decision_summary": "持倉狀態=RiskExitAfterPartialLotTargetGiveback；目前報酬=-34.63%；基本門檻=20.00% / 2716.88元；現在可賣=True；立即賣出=50%；條件式追加賣出=50%；動能評分=1；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=1450.66；剩餘部位底線來源=executable_pre_stop_zone.upper_price；批次曾達標股數=10/60；批次已回吐股數=10/60；完整退出條件=反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。。",
                     "remaining_position_protection": {
                         "historical_profit_protection_floor_price": null,
                         "historical_profit_protection_breached": false,
                         "active_profit_protection_floor_price": null,
                         "active_profit_protection_triggered": false,
-                        "remaining_position_exit_floor_price": 1578.27,
+                        "remaining_position_exit_floor_price": 1450.66,
                         "remaining_position_exit_floor_basis": {
                             "source": "executable_pre_stop_zone.upper_price",
-                            "price": 1578.27,
+                            "price": 1450.66,
                             "note": "ATR14 / 跌停價前緩衝區 / 理論停損與跌停價重合"
                         },
-                        "action_if_broken": "反彈無法站回 1735.0～1755.0，或跌破1578.27，退出其餘部位。"
+                        "action_if_broken": "反彈無法站回 1567.5～1620.0，或跌破1450.66，退出其餘部位。"
                     },
                     "target_criterion": "以標的目標優先，價格行為僅作風險警示",
                     "target_objective": "1).現有持股不賣\n2).等待時機進場買入",
@@ -2279,15 +2243,15 @@
             },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-07-17T10:27:32",
-                "decision_market_data_date": "2026-07-16",
+                "decision_generated_at": "2026-07-20T08:13:36",
+                "decision_market_data_date": "2026-07-17",
                 "decision_delivery_candidate_date": "2026-07-20",
                 "decision_delivery_date": null,
                 "decision_delivery_datetime": null,
                 "execution_eligibility_datetime": null,
                 "execution_status": "pending_delivery_trading_day_ohlcv",
-                "execution_pending_stage": "before_delivery_candidate_date",
-                "execution_pending_stage_description": "尚未到08:20送達候選日。",
+                "execution_pending_stage": "candidate_day_before_08_20_delivery",
+                "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
                 "limit_up_down_fill_status": null,
                 "benchmark_execution_date": null,
                 "benchmark_execution_price": null,
@@ -2307,19 +2271,19 @@
                 "post_execution_mfe_5d_pct": null,
                 "post_execution_mae_5d_pct": null
             },
-            "analysis_json": "IntegratedForecast/json/3081_聯亞_20260717_analysis.json",
-            "chart_png": "IntegratedForecast/png/3081_聯亞_Chart_20260717.png",
-            "raw_ohlcv": "IntegratedForecast/raw_ohlcv/3081_聯亞_20260717_ohlcv.json",
-            "pdf_file": "3081_聯亞_PA_Analysis_20260717.pdf",
-            "json_sha": "a3b1af8c6c226d9d79e5c1b97d0f8cbe95b70144b5a998383d90e8df8590be73",
-            "png_sha": "1dad0759af12058080deff570621b93b0dc0b890fad940bbe71c46d64d5a4f97",
+            "analysis_json": "IntegratedForecast/json/3081_聯亞_20260720_analysis.json",
+            "chart_png": "IntegratedForecast/png/3081_聯亞_Chart_20260720.png",
+            "raw_ohlcv": "IntegratedForecast/raw_ohlcv/3081_聯亞_20260720_ohlcv.json",
+            "pdf_file": "3081_聯亞_PA_Analysis_20260720.pdf",
+            "json_sha": "5413af18969759ace016a9aa009bac1110ed12d2cbaa65faf87fb854d7ae26a5",
+            "png_sha": "d000e8edb9af4d2620ae451e260f6fec963cd06b160376f1c42f7363a00418f3",
             "chart_read_status": "success",
             "profile_risk_triggered_summary": "尚未站回缺口上緣前，不得建議攤平；反彈以減碼或降風險優先。",
             "local_files": {
-                "analysis_json": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\json\\3081_聯亞_20260717_analysis.json",
-                "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\3081_聯亞_Chart_20260717.png",
-                "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\3081_聯亞_20260717_ohlcv.json",
-                "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\3081_聯亞_PA_Analysis_20260717.pdf"
+                "analysis_json": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\json\\3081_聯亞_20260720_analysis.json",
+                "chart_png": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\png\\3081_聯亞_Chart_20260720.png",
+                "raw_ohlcv": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\raw_ohlcv\\3081_聯亞_20260720_ohlcv.json",
+                "pdf_file": "d:\\Users\\a00443.GEMFONT\\Documents\\python生成檔案\\logs台股\\pdf\\3081_聯亞_PA_Analysis_20260720.pdf"
             }
         }
     ]
