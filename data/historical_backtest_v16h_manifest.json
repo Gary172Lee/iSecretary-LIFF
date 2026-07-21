@@ -1,27 +1,29 @@
 {
   "status": "complete",
-  "generated_at_taipei": "2026-07-20 18:36:39",
-  "backtest_version": "walk_forward_v1.0_v16h",
+  "generated_at_taipei": "2026-07-21 12:07:08",
+  "backtest_version": "walk_forward_v1.1_p1_feasibility",
   "strategy_version": "v3.3_Direct_Buy_Only_Shared_PA",
   "engine_generation": "fetch_and_filter_v3.3_direct_buy",
   "current_rule_family": "second_leg_v16h",
-  "start_date": "2023-07-20",
-  "end_date": "2026-07-20",
+  "start_date": "2023-07-21",
+  "end_date": "2026-07-21",
   "summary_path": "data/historical_backtest_v16h/summary.json",
   "samples_path": "data/historical_backtest_v16h/samples.jsonl",
   "sample_counts": {
-    "all_completed_raw_samples": 7527,
+    "all_completed_raw_samples": 7506,
     "direct_buy_completed": 0,
-    "rejected_completed": 7527,
-    "single_blocker_family_relaxation_completed": 0,
-    "near_policy_max_2_families_completed": 0,
+    "reconstructed_direct_buy_completed": 0,
+    "rejected_completed": 7506,
+    "single_gate_relaxation_completed": 0,
+    "near_policy_max_2_failed_gates_completed": 8,
     "minimum_sample_for_preliminary_evaluation": 30,
     "recommended_direct_buy_sample": 50
   },
   "evaluation_readiness": {
     "direct_buy": "insufficient_below_30",
+    "reconstructed_direct_buy": "insufficient_below_30",
     "all_raw": "moderate_100_plus",
-    "single_blocker_relaxation": "insufficient_below_30",
+    "single_gate_relaxation": "insufficient_below_30",
     "can_compare_direct_vs_rejected": false,
     "warning": "Do not lower gates solely from groups below 30 completed samples. Compare net return, MFE and MAE, not win rate alone."
   }
