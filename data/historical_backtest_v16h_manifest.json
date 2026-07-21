@@ -1,7 +1,7 @@
 {
   "status": "complete",
-  "generated_at_taipei": "2026-07-21 14:50:56",
-  "backtest_version": "walk_forward_v1.2_dual_path_or",
+  "generated_at_taipei": "2026-07-21 18:07:48",
+  "backtest_version": "walk_forward_v1.3_independent_dual_scanner",
   "strategy_version": "v3.3_Direct_Buy_Only_Shared_PA",
   "engine_generation": "fetch_and_filter_v3.3_direct_buy",
   "current_rule_family": "second_leg_v16h",
@@ -10,25 +10,25 @@
   "summary_path": "data/historical_backtest_v16h/summary.json",
   "samples_path": "data/historical_backtest_v16h/samples.jsonl",
   "sample_counts": {
-    "all_completed_raw_samples": 7512,
-    "direct_buy_completed": 0,
-    "confirmed_breakout_direct_buy_completed": 0,
+    "all_completed_raw_samples": 17148,
+    "direct_buy_completed": 244,
+    "confirmed_breakout_direct_buy_completed": 244,
     "tradeable_second_leg_direct_buy_completed": 0,
-    "reconstructed_direct_buy_completed": 0,
-    "rejected_completed": 7512,
-    "single_gate_relaxation_completed": 8,
-    "near_policy_max_2_failed_gates_completed": 35,
+    "reconstructed_direct_buy_completed": 244,
+    "rejected_completed": 16904,
+    "single_gate_relaxation_completed": 942,
+    "near_policy_max_2_failed_gates_completed": 2143,
     "minimum_sample_for_preliminary_evaluation": 30,
     "recommended_direct_buy_sample": 50
   },
   "evaluation_readiness": {
-    "direct_buy": "insufficient_below_30",
-    "confirmed_breakout_direct_buy": "insufficient_below_30",
+    "direct_buy": "moderate_100_plus",
+    "confirmed_breakout_direct_buy": "moderate_100_plus",
     "tradeable_second_leg_direct_buy": "insufficient_below_30",
-    "reconstructed_direct_buy": "insufficient_below_30",
+    "reconstructed_direct_buy": "moderate_100_plus",
     "all_raw": "moderate_100_plus",
-    "single_gate_relaxation": "insufficient_below_30",
-    "can_compare_direct_vs_rejected": false,
+    "single_gate_relaxation": "moderate_100_plus",
+    "can_compare_direct_vs_rejected": true,
     "warning": "Do not change gates from groups below 30 completed samples. Compare net return, MFE and MAE, not win rate alone."
   }
 }
