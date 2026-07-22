@@ -1,20 +1,20 @@
 {
   "status": "complete",
-  "generated_at_taipei": "2026-07-22 12:28:09",
-  "backtest_version": "event_trade_v1.7_p12_subgroup_oos",
+  "generated_at_taipei": "2026-07-22 14:41:30",
+  "backtest_version": "event_trade_v1.8_five_year_rolling_oos_triage",
   "shadow_mode_version": "independent_dual_scanner_shadow_v2",
-  "start_date": "2023-07-22",
+  "start_date": "2021-07-22",
   "end_date": "2026-07-22",
   "summary_path": "data/historical_event_trade_v14/summary.json",
   "events_path": "data/historical_event_trade_v14/events.jsonl",
   "trades_path": "data/historical_event_trade_v14/trades.jsonl",
   "sample_counts": {
-    "unique_events": 233,
+    "unique_events": 469,
     "by_path": {
-      "confirmed_breakout": 184,
-      "tradeable_second_leg": 49
+      "confirmed_breakout": 372,
+      "tradeable_second_leg": 97
     },
-    "scenario_rows_before_non_overlap_filter": 1631
+    "scenario_rows_before_non_overlap_filter": 3283
   },
   "p0_shadow_safety": {
     "production_direct_buy_leak_count": 0,
@@ -22,10 +22,28 @@
     "all_independent_events_shadow_only": true
   },
   "production_decision": {
-    "status": "shadow_only_pending_subgroup_validation",
+    "status": "shadow_only_p13_falsification",
     "statistically_qualified_scenarios": [],
-    "robust_subgroup_rule_count": 0,
+    "stable_rolling_oos_rule_count": 0,
+    "path_disposition": {
+      "confirmed_breakout": {
+        "unique_event_count": 372,
+        "stable_rule_count": 0,
+        "baseline_fold_pass_count": 0,
+        "baseline_fold_test_count": 21,
+        "status": "retire_or_redesign_current_entry_hypothesis",
+        "next_action": "Stop tuning this scanner formulation. Redesign the entry hypothesis before any further backtest."
+      },
+      "tradeable_second_leg": {
+        "unique_event_count": 97,
+        "stable_rule_count": 0,
+        "baseline_fold_pass_count": 0,
+        "baseline_fold_test_count": 21,
+        "status": "insufficient_event_sample_continue_shadow_without_more_rule_mining",
+        "next_action": "Accumulate at least 100 independent events or extend unchanged history; do not tune additional factors."
+      }
+    },
     "automatic_promotion_allowed": false,
-    "rule": "P1.2 subgroup results are research-only. No rule changes production or Shadow Mode automatically."
+    "rule": "P1.3 is a stopping-rule stage. No result changes production or Shadow Mode automatically."
   }
 }
