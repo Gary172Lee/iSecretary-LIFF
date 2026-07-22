@@ -1,5 +1,5 @@
 {
-  "status": "complete",
+  "status": "invalidated",
   "generated_at_taipei": "2026-07-22 16:52:43",
   "backtest_version": "event_trade_v1.9_seven_year_frozen_baseline_adjudication",
   "shadow_mode_version": "independent_dual_scanner_shadow_v2",
@@ -8,13 +8,17 @@
   "summary_path": "data/historical_event_trade_v14/summary.json",
   "events_path": "data/historical_event_trade_v14/events.jsonl",
   "trades_path": "data/historical_event_trade_v14/trades.jsonl",
+  "validation_status": "invalidated_path_selection_bug",
+  "invalid_reason": "Historical scan selected candidates with live experimental_shadow_signal after Confirmed Breakout was retired from live research governance. This excluded confirmed-only technical events and duplicated active Second Leg candidates across both technical paths.",
+  "superseded_by": "event_trade_v2.0_path_provenance_selection_repair",
   "sample_counts": {
     "unique_events": 292,
     "by_path": {
       "confirmed_breakout": 146,
       "tradeable_second_leg": 146
     },
-    "scenario_rows_before_non_overlap_filter": 2044
+    "scenario_rows_before_non_overlap_filter": 2044,
+    "valid_for_path_adjudication": false
   },
   "p0_shadow_safety": {
     "production_direct_buy_leak_count": 0,
@@ -22,25 +26,10 @@
     "all_independent_events_shadow_only": true
   },
   "production_decision": {
-    "status": "shadow_only_p14_final_path_adjudication",
+    "status": "invalidated_path_selection_bug",
     "statistically_qualified_scenarios": [],
-    "path_disposition": {
-      "confirmed_breakout": {
-        "unique_event_count": 146,
-        "stable_baseline_scenarios": [],
-        "stable_baseline_scenario_count": 0,
-        "status": "retire_or_redesign_current_entry_hypothesis",
-        "next_action": "Retire this scanner formulation from active Shadow signals and redesign the entry hypothesis before any new backtest."
-      },
-      "tradeable_second_leg": {
-        "unique_event_count": 146,
-        "stable_baseline_scenarios": [],
-        "stable_baseline_scenario_count": 0,
-        "status": "retire_or_redesign_current_entry_hypothesis",
-        "next_action": "Retire this scanner formulation from active Shadow signals and redesign the entry hypothesis before any new backtest."
-      }
-    },
+    "path_disposition": {},
     "automatic_promotion_allowed": false,
-    "rule": "P1.4 performs frozen baseline adjudication only. Production and Shadow Mode cannot be promoted automatically."
+    "rule": "Do not use v1.9 for either path disposition. Keep the last valid governance until v2.0 completes with a passing path provenance audit."
   }
 }
