@@ -1,7 +1,7 @@
 {
   "status": "complete",
-  "generated_at_taipei": "2026-07-22 11:01:18",
-  "backtest_version": "event_trade_v1.6_path_overlap_scenario_rr_repair",
+  "generated_at_taipei": "2026-07-22 12:28:09",
+  "backtest_version": "event_trade_v1.7_p12_subgroup_oos",
   "shadow_mode_version": "independent_dual_scanner_shadow_v2",
   "start_date": "2023-07-22",
   "end_date": "2026-07-22",
@@ -9,12 +9,12 @@
   "events_path": "data/historical_event_trade_v14/events.jsonl",
   "trades_path": "data/historical_event_trade_v14/trades.jsonl",
   "sample_counts": {
-    "unique_events": 232,
+    "unique_events": 233,
     "by_path": {
       "confirmed_breakout": 184,
-      "tradeable_second_leg": 48
+      "tradeable_second_leg": 49
     },
-    "scenario_rows_before_non_overlap_filter": 1624
+    "scenario_rows_before_non_overlap_filter": 1631
   },
   "p0_shadow_safety": {
     "production_direct_buy_leak_count": 0,
@@ -22,9 +22,10 @@
     "all_independent_events_shadow_only": true
   },
   "production_decision": {
-    "status": "shadow_only_pending_human_review",
+    "status": "shadow_only_pending_subgroup_validation",
     "statistically_qualified_scenarios": [],
+    "robust_subgroup_rule_count": 0,
     "automatic_promotion_allowed": false,
-    "rule": "Independent scanner remains Shadow Mode. Statistical qualification never changes production fields automatically."
+    "rule": "P1.2 subgroup results are research-only. No rule changes production or Shadow Mode automatically."
   }
 }
