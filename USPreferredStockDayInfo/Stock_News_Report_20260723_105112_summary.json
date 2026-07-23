@@ -1,0 +1,259 @@
+{
+  "report_type": "USPreferredStockDayInfoScheduleSummary",
+  "schema_version": "1.0",
+  "report_payload_patch_version": "1.3.2",
+  "stage2_resilience_patch_version": "1.3.2",
+  "generated_at_taipei": "2026-07-23 10:51:12",
+  "report_stem": "Stock_News_Report_20260723_105112",
+  "source_full_json": "Stock_News_Report_20260723_105112.json",
+  "target_count": 7,
+  "total_event_count": 51,
+  "total_warning_count": 10,
+  "stage2_fallback_used": true,
+  "stage2_fallback_tickers": [
+    "CTGG",
+    "BHFAL",
+    "OPI",
+    "AXS-E",
+    "F-B",
+    "UZD",
+    "QVCD"
+  ],
+  "ticker_summary": [
+    {
+      "ticker": "CTGG",
+      "event_merge_source": "stage1_deterministic_fallback",
+      "event_score": "正向2 / 負向0 / 總分+2",
+      "conclusion": "Stage 2 AI 合併未完成；已由程式保留 Stage 1 近期事件，事件權重偏正面（+2）。",
+      "event_count": 3,
+      "events": [
+        "2026-07-21｜Lumen Technologies獲得Gartner報告肯定，肯定其在企業AI WAN和連接服務領域的領導地位｜中性偏正向｜2｜高｜Lumen Investor Relations,GuruFocus,BusinessWire",
+        "2026-07-21｜Lumen Technologies宣布第三季度將舉行多場投資者會議｜中性｜1｜高｜GuruFocus,Business Wire,Lumen Investor Relations",
+        "2026-07-14｜Lumen Technologies宣布將於2026年8月4日發布第二季度財報並舉行電話會議｜中性｜1｜高｜BusinessWire,Lumen Investor Relations,Webull,ScanX"
+      ],
+      "key_metrics": [
+        "P0｜Credit rating / outlook｜Moody's: B2 (穩定); Fitch: B (穩定); S&P: B- (發行人信評), B (高級無擔保債務)｜2026年2月/4月｜verified｜fresh｜consistent",
+        "P0｜Debt maturity and exchange offer terms｜2051年到期高級債券，未有針對CTGG的最新交換要約影響。Lumen整體債務仍面臨再融資壓力。｜截至2026Q1｜verified｜fresh｜consistent",
+        "P0｜Free cash flow｜-100,000,000｜2026Q1｜verified｜fresh｜consistent"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "verification_counts": {
+        "verified": 3,
+        "partially_verified": 0,
+        "unverified": 0,
+        "data_missing": 0
+      },
+      "integrity_issue_count": 0,
+      "consistency_conflict_count": 0
+    },
+    {
+      "ticker": "BHFAL",
+      "event_merge_source": "stage1_deterministic_fallback",
+      "event_score": "正向5 / 負向14 / 總分-9",
+      "conclusion": "Stage 2 AI 合併未完成；已由程式保留 Stage 1 近期事件，事件權重偏負面（-9）。",
+      "event_count": 9,
+      "events": [
+        "2026-07-22｜Brighthouse Financial普通股股價觸及52週新低｜負向｜3｜高｜Investing.com",
+        "2026-07-21｜Brighthouse Financial因Guggenheim Partners相關調查而面臨壓力｜負向｜4｜中｜GuruFocus",
+        "2026-07-21｜BHFAL 付息狀態確認｜正向｜3｜高｜TradingView,Digrin,FXEmpire",
+        "2026-07-21｜Kapitalo Investimentos Ltda增持Brighthouse Financial股份｜正向｜2｜中｜MarketBeat",
+        "2026-07-20｜Simply Wall St 提及 Aquarian 收購案的監管風險｜負向｜3｜中｜Simply Wall St",
+        "2026-07-20｜J.P. Morgan 維持 Brighthouse Financial「賣出」評級｜負向｜2｜中｜Markets Insider",
+        "2026-07-14｜Benzinga 警示 Brighthouse Financial 股票面臨短期超買｜負向｜2｜中｜Benzinga",
+        "2026-07-14｜Brighthouse Financial 提交 SCHEDULE 13G/A SEC文件｜中性｜1｜高｜MarketBeat,SEC Filing"
+      ],
+      "key_metrics": [
+        "P0｜Aquarian merger / change-of-control treatment｜債務將繼續作為 Brighthouse Financial 的義務並維持上市｜公告日：2025年11月6日, 股東批准：2026年2月12日｜partially_verified｜fresh｜conflict_with_missing_data",
+        "P0｜BHFAL interest payment status｜正常支付｜2026Q2 (last paid June 15, 2026)｜partially_verified｜fresh｜consistent",
+        "P0｜Credit rating / outlook｜S&P: 'BBB' CreditWatch Negative; AM Best: A Stable; Fitch: A- Stable; Moody's: A3 Stable｜S&P: Nov 2025; Others: Mar 2026 / Nov 2025｜verified｜acceptable_recent｜consistent",
+        "P0｜Holding company cash and liquid assets｜0.9 billion｜2026Q1 (截至3月31日)｜verified｜fresh｜consistent",
+        "P0｜RBC ratio｜430%-450%｜2026Q1 (截至3月31日)｜verified｜fresh｜consistent",
+        "P0｜Statutory capital and surplus｜5.0 billion｜2026Q1 (截至3月31日)｜verified｜fresh｜consistent",
+        "P1｜Financial leverage｜0.57｜2026Q1 TTM｜partially_verified｜fresh｜consistent"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        "P0｜Aquarian merger / change-of-control treatment｜metric_consistency｜缺乏BHFAL次順位債券在Aquarian收購後的具體存續、掛牌、贖回或付息條款細節。",
+        "P0｜Aquarian merger / change-of-control treatment｜metric_consistency｜本次搜尋未找到 Brighthouse Financial Aquarian 收購案關於 BHFAL 次順位債券存續、掛牌、贖回或付息條款的明確說明。"
+      ],
+      "verification_counts": {
+        "verified": 4,
+        "partially_verified": 3,
+        "unverified": 0,
+        "data_missing": 0
+      },
+      "integrity_issue_count": 0,
+      "consistency_conflict_count": 2
+    },
+    {
+      "ticker": "OPI",
+      "event_merge_source": "stage1_deterministic_fallback",
+      "event_score": "正向8 / 負向15 / 總分-7",
+      "conclusion": "Stage 2 AI 合併未完成；已由程式保留 Stage 1 近期事件，事件權重偏負面（-7）。",
+      "event_count": 10,
+      "events": [
+        "2026-07-21｜OPI 股價下跌，被標記為潛在超買｜負向｜3｜中｜Perplexity,Quiver Quantitative",
+        "2026-07-20｜OPI股價上漲與內部人買入｜正向｜3｜中｜StockInvest.us",
+        "2026-07-17｜重組後交易分析顯示基本面挑戰｜負向｜4｜高｜StocksToTrade",
+        "2026-07-17｜OPI完成重整後股價波動劇烈，流動性緊張且現金流為負｜負向｜4｜高｜StocksToTrade,MarketBeat,SeekingAlpha",
+        "2026-07-17｜OPI 股價波動並面臨基本面挑戰｜負向｜4｜中｜Timothy Sykes,StocksToTrade,Quiver Quantitative,MarketWatch",
+        "2026-07-17｜Cushman & Wakefield報告：美國辦公室市場復甦範圍擴大｜正向｜2｜中｜SeekingAlpha",
+        "2026-07-16｜空頭頭寸增加及分析師評級分歧｜中性｜3｜中｜MarketBeat,TipRanks",
+        "2026-07-15｜交易量激增與分析師評級上調｜正向｜3｜中｜MarketBeat"
+      ],
+      "key_metrics": [
+        "P0｜AFFO / FFO｜淨虧損 -$93.0M｜2026Q1｜partially_verified｜fresh｜conflict_with_missing_data",
+        "P0｜Debt maturity schedule｜總債務 17 億美元 (重整後)。主要債務到期：4.25億美元循環信用額度 (9.1%利率)，3億美元9.0%優先擔保票據 (2029年3月到期)，1.77億美元抵押債務。新發行8.375%優先擔保票據 (2029年12月到期) 約3.85億美元，本金支付時間為2026年2千萬美元、2027年3千萬美元、2028年4.5千萬美元、2029年4.5千萬美元。新發行10.0%優先擔保票據 (2031年6月到期) 約4.2億美元。｜重整後 (2026年6月17日生效)｜partially_verified｜fresh｜consistent",
+        "P0｜Liquidity / cash availability｜$26.3M｜2026Q1 (推測)｜unverified｜fresh｜conflict_with_missing_data",
+        "P0｜Occupancy rate｜81.3%｜截至 2026年6月 (重組時點)｜verified｜fresh｜consistent"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        "P0｜AFFO / FFO｜metric_consistency｜本次搜尋未找到官方最新數據，因公司近期完成破產重組。",
+        "P0｜Liquidity / cash availability｜metric_consistency｜本次搜尋未找到官方最新數據，因公司近期完成破產重組。"
+      ],
+      "verification_counts": {
+        "verified": 1,
+        "partially_verified": 2,
+        "unverified": 1,
+        "data_missing": 0
+      },
+      "integrity_issue_count": 0,
+      "consistency_conflict_count": 2
+    },
+    {
+      "ticker": "AXS-E",
+      "event_merge_source": "stage1_deterministic_fallback",
+      "event_score": "正向12 / 負向6 / 總分+6",
+      "conclusion": "Stage 2 AI 合併未完成；已由程式保留 Stage 1 近期事件，事件權重偏正面（+6）。",
+      "event_count": 7,
+      "events": [
+        "2026-07-21｜CRC Group報告第二季度財產再保險續保率加速軟化｜負向｜3｜中｜CRC Group",
+        "2026-07-21｜AXIS Capital 第二季財報預期消息｜中性｜2｜高｜MarketBeat,AXIS Capital Investor Relations",
+        "2026-07-21｜AXIS Capital預計於7月28日發布2026年第二季度財報｜中性｜2｜高｜AXIS Capital Investor Relations,MarketBeat",
+        "2026-07-17｜地緣政治緊張及再保險業績擔憂導致AXIS Capital股價下跌｜負向｜3｜中｜TipRanks.com",
+        "2026-07-15｜AXS-E 系列E優先股季度股息已支付｜正向｜5｜高｜AXIS Capital Investor Relations",
+        "2026-07-15｜AXIS Capital Series E 優先股股息已支付｜正向｜4｜高｜AXIS Capital Investor Relations,Pluang,Preferred Stock Channel,Dividend.com",
+        "2026-07-15｜AXS-E Series E 優先股股息支付｜正向｜3｜高｜AXIS Capital Investor Relations,MarketBeat"
+      ],
+      "key_metrics": [
+        "P0｜Preferred dividend status｜已支付｜2026Q2｜verified｜fresh｜consistent",
+        "P1｜Catastrophe losses｜48 million｜2026Q1｜partially_verified｜fresh｜conflict_with_missing_data",
+        "P1｜Combined ratio｜89.8%｜2026Q1｜verified｜fresh｜consistent"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        "P1｜Catastrophe losses｜metric_consistency｜最近期的2026年第一季財報中，未提供具體的美元計價巨災損失數據，僅涵蓋於綜合比率內。公司有提及減少高波動性再保險業務。"
+      ],
+      "verification_counts": {
+        "verified": 2,
+        "partially_verified": 1,
+        "unverified": 0,
+        "data_missing": 0
+      },
+      "integrity_issue_count": 0,
+      "consistency_conflict_count": 1
+    },
+    {
+      "ticker": "F-B",
+      "event_merge_source": "stage1_deterministic_fallback",
+      "event_score": "正向13 / 負向11 / 總分+2",
+      "conclusion": "Stage 2 AI 合併未完成；已由程式保留 Stage 1 近期事件，事件權重偏正面（+2）。",
+      "event_count": 12,
+      "events": [
+        "2026-07-22｜福特召回約38.8萬輛Explorer和Aviator，因第二排座椅恐鬆脫｜負向｜4｜高｜CBS News,CarBuzz,VitalLaw.com,KVUE",
+        "2026-07-21｜分析師預期福特Q2 2026財報將於7月28日公布｜中性｜3｜高｜MarketBeat,Benzinga",
+        "2026-07-21｜福特確認Q2 2026財報於7月28日發布，分析師預期EPS和營收年減｜中性｜3｜高｜MarketBeat,Benzinga,Zacks.com,Barchart.com",
+        "2026-07-21｜福特、BlackRock、Google等成立美國技能行業聯盟｜正向｜2｜高｜Work Truck Online",
+        "2026-07-20｜福特召回近38.8萬輛SUV，座椅存意外移動風險｜負向｜4｜高｜AutoGuide.com,5NEWS,VitalLaw.com,9News",
+        "2026-07-20｜福特新低成本電動皮卡被目擊測試，公司重申電動車盈利策略｜正向｜3｜中｜Electrek,The National News",
+        "2026-07-18｜福特召回近28.8萬輛Explorer，因車頂行李架蓋恐脫落｜負向｜3｜高｜BizzyCar",
+        "2026-07-17｜JP Morgan上調福特目標價至16美元｜正向｜2｜中｜Benzinga"
+      ],
+      "key_metrics": [
+        "P0｜Industrial free cash flow｜0.8 billion｜2026Q1｜partially_verified｜fresh｜conflict_with_missing_data",
+        "P1｜Ford Credit delinquencies｜0.48%｜近期數據 (Ford Credit 2026-A)｜verified｜fresh｜consistent",
+        "P1｜Ford Credit delinquencies (60+ days)｜0.21%｜2026Q1｜verified｜fresh｜consistent",
+        "P1｜Ford Credit delinquencies / credit losses｜0.48%｜2026-A ABS (截至2026年7月9日)｜partially_verified｜fresh｜conflict_with_missing_data",
+        "P1｜Recall / warranty cost｜None｜latest｜data_missing｜unknown_period｜consistent"
+      ],
+      "warning_count": 3,
+      "warnings": [
+        "P0｜Industrial free cash flow｜metric_consistency｜2026年第二季度（Q2 2026）的工業自由現金流數據尚未公布，將在7月28日隨財報發布。",
+        "P1｜Ford Credit delinquencies / credit losses｜metric_consistency｜2026年第二季度（Q2 2026）的整體Ford Credit逾期率/信用損失數據尚未公布，將在7月28日隨財報發布。",
+        "P1｜Recall / warranty cost｜metric_value｜Stage 1 已主動搜尋，但尚未取得官方量化數值。"
+      ],
+      "verification_counts": {
+        "verified": 2,
+        "partially_verified": 2,
+        "unverified": 0,
+        "data_missing": 1
+      },
+      "integrity_issue_count": 0,
+      "consistency_conflict_count": 2
+    },
+    {
+      "ticker": "UZD",
+      "event_merge_source": "stage1_deterministic_fallback",
+      "event_score": "正向3 / 負向2 / 總分+1",
+      "conclusion": "Stage 2 AI 合併未完成；已由程式保留 Stage 1 近期事件，事件權重偏正面（+1）。",
+      "event_count": 2,
+      "events": [
+        "2026-07-18｜Reddit用戶抱怨T-Mobile接管UScellular後客戶未獲益處｜負向｜2｜低｜Reddit",
+        "2026-07-14｜聯邦通訊委員會重點提及UScellular與AT&T和Verizon的頻譜收購案｜正向｜3｜高｜FCC"
+      ],
+      "key_metrics": [
+        "P0｜Asset sale proceeds and use of funds｜T-Mobile交易總對價43億美元（含26億美元現金及約17億美元債務承擔）；AT&T頻譜銷售10.18億美元；Verizon頻譜銷售10億美元。｜T-Mobile交易: 2025年8月1日；AT&T/Verizon頻譜銷售: 2026年1月13日｜verified｜acceptable_recent｜consistent",
+        "P0｜Debt assumption / redemption status｜T-Mobile承擔約17億美元債務；UZD債券可選擇性贖回日期為2025年9月1日。｜T-Mobile債務承擔: 2025年8月；UZD可贖回: 2025年9月起｜partially_verified｜acceptable_recent｜conflict_with_missing_data",
+        "P0｜Issuer / guarantor status｜Array Digital Infrastructure, Inc. (原United States Cellular Corporation)｜2026 Q2 (最新確認)｜verified｜fresh｜consistent"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        "P0｜Debt assumption / redemption status｜metric_consistency｜本次搜尋未找到UZD 6.25% NT REDEEM 01/09/2069 USD 25此特定債券是否被T-Mobile承擔或贖回的官方最新數值或明確資訊。"
+      ],
+      "verification_counts": {
+        "verified": 2,
+        "partially_verified": 1,
+        "unverified": 0,
+        "data_missing": 0
+      },
+      "integrity_issue_count": 0,
+      "consistency_conflict_count": 1
+    },
+    {
+      "ticker": "QVCD",
+      "event_merge_source": "stage1_deterministic_fallback",
+      "event_score": "正向9 / 負向6 / 總分+3",
+      "conclusion": "Stage 2 AI 合併未完成；已由程式保留 Stage 1 近期事件，事件權重偏正面（+3）。",
+      "event_count": 8,
+      "events": [
+        "2026-07-22｜破產法院駁回優先股股東的上訴暫緩動議｜中性｜1｜高｜BankruptcyData",
+        "2026-07-17｜QVC 集團提交 2026 年 5 月月度營運報告並發布 8-K｜中性｜1｜高｜SEC Filing,Minichart,TradingView News",
+        "2026-07-16｜QVC Group優先股東對重組計畫提出緊急上訴｜負向｜1｜中｜BankruptcyData,Stretto",
+        "2026-07-15｜QVC集團重整計畫獲法院批准，預計將大幅降低債務並退出破產｜正向｜5｜高｜PRNewswire,Retail Dive,Digital Commerce 360,HomePage News",
+        "2026-07-15｜破產法院批准 QVC 集團（含 QVC Inc.）全面財務重組計劃｜負向｜5｜高｜PR Newswire,QVC Group Investor Relations,Retail Dive,Digital Commerce 360",
+        "2026-07-15｜破產法院批准QVC Group全面財務重組計畫｜中性偏正向｜4｜高｜PRNewswire,SEC Filing,Retail Dive,Inside Retail US",
+        "2026-07-13｜QVC集團提交五月份營運報告，揭示破產期間財務狀況｜中性｜2｜高｜SEC Filing,Minichart,TipRanks.com,TradingView",
+        "2026-07-13｜QVC Inc.向破產法院提交5月份月度營運報告｜中性｜1｜高｜SEC Filing"
+      ],
+      "key_metrics": [
+        "P0｜Bankruptcy case status｜重整計畫已獲美國破產法院批准，公司預計將很快脫離 Chapter 11。｜2026年7月15日｜verified｜fresh｜consistent",
+        "P0｜Recovery / exchange terms｜現有 QVCD 債券將被註銷，並根據重組計畫獲得分配。公司不保證分配金額等同或超過本金。QVC 債券持有人已以高比例接受該計畫。｜2026年7月15日｜partially_verified｜fresh｜conflict_with_missing_data",
+        "P0｜Trading status｜已於2026年4月17日從紐約證券交易所(NYSE)退市，並立即暫停交易。目前在 OTC Pink Limited Market 以股票代碼 \"QVCDQ\" 交易。｜2026年4月17日｜verified｜fresh｜consistent"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        "P0｜Recovery / exchange terms｜metric_consistency｜本次搜尋未找到 QVCD 票據在重組計劃下的具體回收百分比或金額。"
+      ],
+      "verification_counts": {
+        "verified": 2,
+        "partially_verified": 1,
+        "unverified": 0,
+        "data_missing": 0
+      },
+      "integrity_issue_count": 0,
+      "consistency_conflict_count": 1
+    }
+  ]
+}
