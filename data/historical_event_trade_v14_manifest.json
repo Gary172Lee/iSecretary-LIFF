@@ -1,24 +1,20 @@
 {
-  "status": "invalidated",
-  "generated_at_taipei": "2026-07-22 16:52:43",
-  "backtest_version": "event_trade_v1.9_seven_year_frozen_baseline_adjudication",
+  "status": "complete",
+  "generated_at_taipei": "2026-07-22 18:41:18",
+  "backtest_version": "event_trade_v2.0_path_provenance_selection_repair",
   "shadow_mode_version": "independent_dual_scanner_shadow_v2",
   "start_date": "2019-07-22",
   "end_date": "2026-07-22",
   "summary_path": "data/historical_event_trade_v14/summary.json",
   "events_path": "data/historical_event_trade_v14/events.jsonl",
   "trades_path": "data/historical_event_trade_v14/trades.jsonl",
-  "validation_status": "invalidated_path_selection_bug",
-  "invalid_reason": "Historical scan selected candidates with live experimental_shadow_signal after Confirmed Breakout was retired from live research governance. This excluded confirmed-only technical events and duplicated active Second Leg candidates across both technical paths.",
-  "superseded_by": "event_trade_v2.0_path_provenance_selection_repair",
   "sample_counts": {
-    "unique_events": 292,
+    "unique_events": 675,
     "by_path": {
-      "confirmed_breakout": 146,
+      "confirmed_breakout": 529,
       "tradeable_second_leg": 146
     },
-    "scenario_rows_before_non_overlap_filter": 2044,
-    "valid_for_path_adjudication": false
+    "scenario_rows_before_non_overlap_filter": 4725
   },
   "p0_shadow_safety": {
     "production_direct_buy_leak_count": 0,
@@ -26,10 +22,28 @@
     "all_independent_events_shadow_only": true
   },
   "production_decision": {
-    "status": "invalidated_path_selection_bug",
+    "status": "shadow_only_p14_final_path_adjudication",
     "statistically_qualified_scenarios": [],
-    "path_disposition": {},
+    "path_disposition": {
+      "confirmed_breakout": {
+        "unique_event_count": 529,
+        "stable_baseline_scenarios": [],
+        "stable_baseline_scenario_count": 0,
+        "status": "retire_or_redesign_current_entry_hypothesis",
+        "next_action": "Retire this scanner formulation from active Shadow signals and redesign the entry hypothesis before any new backtest."
+      },
+      "tradeable_second_leg": {
+        "unique_event_count": 146,
+        "stable_baseline_scenarios": [],
+        "stable_baseline_scenario_count": 0,
+        "status": "retire_or_redesign_current_entry_hypothesis",
+        "next_action": "Retire this scanner formulation from active Shadow signals and redesign the entry hypothesis before any new backtest."
+      }
+    },
     "automatic_promotion_allowed": false,
-    "rule": "Do not use v1.9 for either path disposition. Keep the last valid governance until v2.0 completes with a passing path provenance audit."
+    "rule": "P1.4 performs frozen baseline adjudication only. Production and Shadow Mode cannot be promoted automatically.",
+    "path_provenance_audit_pass": true,
+    "historical_selection_basis": "technical_path_pass_independent_of_live_research_governance",
+    "invalidated_prior_result_version": "event_trade_v1.9_seven_year_frozen_baseline_adjudication"
   }
 }
