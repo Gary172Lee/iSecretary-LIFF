@@ -1,19 +1,19 @@
 # 盤後選股分析
 
-> 報告狀態：**完成**｜產生時間：2026-08-04 14:31:38（Asia/Taipei）
+> 報告狀態：**完成**｜產生時間：2026-08-05 14:32:34（Asia/Taipei）
 
 ## 1. 今日結論
 
 **今日無可直接買進標的。**
-Raw候選 40 檔；舊路徑退役觀察 3 檔；新假設v2.1預先登記觀察 0 檔。
+Raw候選 19 檔；舊路徑退役觀察 0 檔；新假設v2.1預先登記觀察 0 檔。
 Full Validation已由使用者暫緩，不會自動執行，也不會耗用七年驗證的Actions額度。
 
 ## 2. 資料日期、版本、工具讀取結果、P0安全與歷史來源稽核
 
 - 報告版本：`daily_after_market_report_v1`
-- 產生時間：2026-08-04 14:31:38（Asia/Taipei）
-- latest_indicators：2026-08-04 14:31:24
-- gate_diagnostics：2026-08-04 14:31:37
+- 產生時間：2026-08-05 14:32:34（Asia/Taipei）
+- latest_indicators：2026-08-05 14:32:21
+- gate_diagnostics：2026-08-05 14:32:33
 - 資料為今日：是
 - 策略與引擎版本相容：是
 - Diagnostic版本：`gate_diagnostics_v20_preregistered_entry_hypotheses`
@@ -36,14 +36,12 @@ Full Validation已由使用者暫緩，不會自動執行，也不會耗用七�
 
 ## 4. 舊Confirmed Breakout退役觀察
 
-- **2357 華碩｜不可買**：階段 `research_retired_observation`；類型 `both_paths`；分數 99.55；RR 2.57；目標 12.03%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2618 長榮航｜不可買**：階段 `research_retired_observation`；類型 `confirmed_breakout`；分數 91.56；RR 1.54；目標 11.76%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2610 華航｜不可買**：階段 `research_retired_observation`；類型 `confirmed_breakout`；分數 87.81；RR 2.04；目標 12.25%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+今日沒有可辨識的舊Confirmed Breakout技術通過觀察。
 歷史治理：事件數 529；穩定情境 0；狀態 `retire_or_redesign_current_entry_hypothesis`。
 
 ## 5. 舊Tradeable Second Leg退役觀察
 
-- **2357 華碩｜不可買**：階段 `research_retired_observation`；類型 `both_paths`；分數 99.55；RR 2.57；目標 12.03%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+今日沒有可辨識的舊Tradeable Second Leg技術通過觀察。
 歷史治理：事件數 146；穩定情境 0；狀態 `retire_or_redesign_current_entry_hypothesis`。
 
 ## 6. 新假設v2.1研究觀察
@@ -62,58 +60,54 @@ Full Validation已由使用者暫緩，不會自動執行，也不會耗用七�
 - Universe：125
 - Volume通過：100
 - PA成功：100
-- Raw候選：40
+- Raw候選：19
 - 正式Direct Buy：0
-- 研究退役觀察：3
+- 研究退役觀察：0
 - 新假設候選：0
 - 主要排除原因：
-  - Tradeable Second Leg path 未通過：做多方向一致：33檔
-  - Tradeable Second Leg path 未通過：型態與分數品質：33檔
-  - Tradeable Second Leg path 未通過：進場確認：33檔
-  - Tradeable Second Leg path 未通過：合法突破情境：33檔
-  - Tradeable Second Leg path 未通過：突破跟隨：33檔
-  - Tradeable Second Leg path 未通過：對手方被困：33檔
-  - Tradeable Second Leg path 未通過：True Breakout 品質：33檔
-  - Tradeable Second Leg path 未通過：可交易第二段：33檔
+  - Tradeable Second Leg path 未通過：做多方向一致：12檔
+  - Tradeable Second Leg path 未通過：型態與分數品質：12檔
+  - Tradeable Second Leg path 未通過：合法突破情境：12檔
+  - Tradeable Second Leg path 未通過：突破跟隨：12檔
+  - Tradeable Second Leg path 未通過：對手方被困：12檔
+  - Tradeable Second Leg path 未通過：True Breakout 品質：12檔
+  - Tradeable Second Leg path 未通過：可交易第二段：12檔
+  - Tradeable Second Leg path 未通過：進場確認：11檔
 - Candidate Stage：
-  - setup_observation：34
-  - research_retired_observation：3
-  - bullish_setup_ready：2
+  - setup_observation：14
+  - bullish_setup_ready：4
   - entry_confirmed：1
 
 ## 8. True Breakout／Follow-through／停損與no-add風險
 
 - True Breakout：
-  - Low：92
+  - Low：89
   - Unknown：25
-  - High：5
-  - Medium：3
+  - High：6
+  - Medium：5
 - Follow-through：
-  - Poor：92
+  - Poor：97
   - Unknown：25
-  - StrongImmediate：3
   - None：2
-  - WeakButAcceptable：2
-  - DelayedStrong：1
+  - StrongImmediate：1
 - Second Leg Trap：
-  - True：39
-  - False：1
+  - True：19
 - Stop Execution Blocker：
   - False：100
   - Unknown：25
-- 候選資料中的no-add guardrail：59檔；停損執行阻擋：0檔。
+- 候選資料中的no-add guardrail：39檔；停損執行阻擋：0檔。
 - no-add=true時，任何pullback zone只可作`observation_only`，不得作買點或加碼點。
-- **3231 緯創｜不可買**：階段 `entry_confirmed`；類型 `confirmed_breakout`；分數 92.81；RR 1.05；目標 21.54%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2618 長榮航｜不可買**：階段 `research_retired_observation`；類型 `confirmed_breakout`；分數 91.56；RR 1.54；目標 11.76%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2610 華航｜不可買**：階段 `research_retired_observation`；類型 `confirmed_breakout`；分數 87.81；RR 2.04；目標 12.25%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2880 華南金｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 79.38；RR 1.98；目標 13.06%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2884 玉山金｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 76.00；RR 1.71；目標 10.53%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2892 第一金｜不可買**：階段 `entry_confirmed`；類型 `confirmed_breakout`；分數 86.35；RR 2.08；目標 9.47%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2301 光寶科｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 81.50；RR 0.52；目標 15.46%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2357 華碩｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 81.46；RR 0.53；目標 7.76%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **3231 緯創｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 80.62；RR 1.16；目標 22.80%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2880 華南金｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 79.38；RR 1.73；目標 11.64%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
 
 ## 9. 最值得追蹤1～3檔
 
-- **2357 華碩｜不可買**：階段 `research_retired_observation`；類型 `both_paths`；分數 99.55；RR 2.57；目標 12.03%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2618 長榮航｜不可買**：階段 `research_retired_observation`；類型 `confirmed_breakout`；分數 91.56；RR 1.54；目標 11.76%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2610 華航｜不可買**：階段 `research_retired_observation`；類型 `confirmed_breakout`；分數 87.81；RR 2.04；目標 12.25%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2892 第一金｜不可買**：階段 `entry_confirmed`；類型 `confirmed_breakout`；分數 86.35；RR 2.08；目標 9.47%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2301 光寶科｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 81.50；RR 0.52；目標 15.46%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2357 華碩｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 81.46；RR 0.53；目標 7.76%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
 本節全部是觀察資料，逐檔均為**不可買**，不得替代正式Direct Buy。
 
 ## 10. Performance Summary、Smoke限制與Full Validation狀態
