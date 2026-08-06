@@ -1,19 +1,19 @@
 # 盤後選股分析
 
-> 報告狀態：**完成**｜產生時間：2026-08-05 14:32:34（Asia/Taipei）
+> 報告狀態：**完成**｜產生時間：2026-08-06 14:32:10（Asia/Taipei）
 
 ## 1. 今日結論
 
 **今日無可直接買進標的。**
-Raw候選 19 檔；舊路徑退役觀察 0 檔；新假設v2.1預先登記觀察 0 檔。
+Raw候選 18 檔；舊路徑退役觀察 0 檔；新假設v2.1預先登記觀察 0 檔。
 Full Validation已由使用者暫緩，不會自動執行，也不會耗用七年驗證的Actions額度。
 
 ## 2. 資料日期、版本、工具讀取結果、P0安全與歷史來源稽核
 
 - 報告版本：`daily_after_market_report_v1`
-- 產生時間：2026-08-05 14:32:34（Asia/Taipei）
-- latest_indicators：2026-08-05 14:32:21
-- gate_diagnostics：2026-08-05 14:32:33
+- 產生時間：2026-08-06 14:32:10（Asia/Taipei）
+- latest_indicators：2026-08-06 14:31:57
+- gate_diagnostics：2026-08-06 14:32:09
 - 資料為今日：是
 - 策略與引擎版本相容：是
 - Diagnostic版本：`gate_diagnostics_v20_preregistered_entry_hypotheses`
@@ -60,54 +60,53 @@ Full Validation已由使用者暫緩，不會自動執行，也不會耗用七�
 - Universe：125
 - Volume通過：100
 - PA成功：100
-- Raw候選：19
+- Raw候選：18
 - 正式Direct Buy：0
 - 研究退役觀察：0
 - 新假設候選：0
 - 主要排除原因：
-  - Tradeable Second Leg path 未通過：做多方向一致：12檔
-  - Tradeable Second Leg path 未通過：型態與分數品質：12檔
-  - Tradeable Second Leg path 未通過：合法突破情境：12檔
-  - Tradeable Second Leg path 未通過：突破跟隨：12檔
-  - Tradeable Second Leg path 未通過：對手方被困：12檔
-  - Tradeable Second Leg path 未通過：True Breakout 品質：12檔
-  - Tradeable Second Leg path 未通過：可交易第二段：12檔
-  - Tradeable Second Leg path 未通過：進場確認：11檔
+  - Tradeable Second Leg path 未通過：型態與分數品質：9檔
+  - Tradeable Second Leg path 未通過：合法突破情境：9檔
+  - Tradeable Second Leg path 未通過：突破跟隨：9檔
+  - Tradeable Second Leg path 未通過：對手方被困：9檔
+  - Tradeable Second Leg path 未通過：True Breakout 品質：9檔
+  - Tradeable Second Leg path 未通過：可交易第二段：9檔
+  - Tradeable Second Leg path 未通過：做多方向一致：8檔
+  - Tradeable Second Leg path 未通過：進場確認：8檔
 - Candidate Stage：
-  - setup_observation：14
-  - bullish_setup_ready：4
-  - entry_confirmed：1
+  - setup_observation：15
+  - bullish_setup_ready：3
 
 ## 8. True Breakout／Follow-through／停損與no-add風險
 
 - True Breakout：
-  - Low：89
+  - Low：90
   - Unknown：25
-  - High：6
-  - Medium：5
+  - High：7
+  - Medium：3
 - Follow-through：
-  - Poor：97
+  - Poor：94
   - Unknown：25
-  - None：2
-  - StrongImmediate：1
+  - StrongImmediate：3
+  - None：3
 - Second Leg Trap：
-  - True：19
+  - True：18
 - Stop Execution Blocker：
   - False：100
   - Unknown：25
-- 候選資料中的no-add guardrail：39檔；停損執行阻擋：0檔。
+- 候選資料中的no-add guardrail：38檔；停損執行阻擋：0檔。
 - no-add=true時，任何pullback zone只可作`observation_only`，不得作買點或加碼點。
-- **2892 第一金｜不可買**：階段 `entry_confirmed`；類型 `confirmed_breakout`；分數 86.35；RR 2.08；目標 9.47%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2301 光寶科｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 81.50；RR 0.52；目標 15.46%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2357 華碩｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 81.46；RR 0.53；目標 7.76%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **3231 緯創｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 80.62；RR 1.16；目標 22.80%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2880 華南金｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 79.38；RR 1.73；目標 11.64%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **3017 奇鋐｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 92.50；RR 0.85；目標 20.24%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **3081 聯亞｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 90.31；RR 0.78；目標 25.68%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2301 光寶科｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 84.00；RR 0.75；目標 13.86%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2049 上銀｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 79.38；RR 0.94；目標 18.51%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **3231 緯創｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 75.75；RR 1.79；目標 25.07%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
 
 ## 9. 最值得追蹤1～3檔
 
-- **2892 第一金｜不可買**：階段 `entry_confirmed`；類型 `confirmed_breakout`；分數 86.35；RR 2.08；目標 9.47%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2301 光寶科｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 81.50；RR 0.52；目標 15.46%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
-- **2357 華碩｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 81.46；RR 0.53；目標 7.76%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **3017 奇鋐｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 92.50；RR 0.85；目標 20.24%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **3081 聯亞｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 90.31；RR 0.78；目標 25.68%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
+- **2301 光寶科｜不可買**：階段 `bullish_setup_ready`；類型 `confirmed_breakout`；分數 84.00；RR 0.75；目標 13.86%；原因：P0 Shadow Mode：獨立掃描器兩條現行進場假設均已退役，待重新設計與正式驗證
 本節全部是觀察資料，逐檔均為**不可買**，不得替代正式Direct Buy。
 
 ## 10. Performance Summary、Smoke限制與Full Validation狀態
