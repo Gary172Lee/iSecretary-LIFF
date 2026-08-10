@@ -1,20 +1,20 @@
 # 盤後選股分析
 
-> 報告狀態：**完成**｜產生時間：2026-08-07 14:56:35（Asia/Taipei）
+> 報告狀態：**完成**｜產生時間：2026-08-10 14:35:11（Asia/Taipei）
 
 ## 1. 今日結論
 
 **今日無可直接買進標的。**
-Raw候選 43 檔；舊路徑退役觀察 0 檔；新假設v2.1預先登記觀察 0 檔。
+Raw候選 53 檔；舊路徑退役觀察 0 檔；新假設v2.1預先登記觀察 0 檔。
 Full Validation已由使用者暫緩，不會自動執行，也不會耗用七年驗證的Actions額度。
-Swing Buy 20D：15 檔合格、20 檔觀察；與Direct Buy分開判定。
+Swing Buy 20D：22 檔合格、20 檔觀察；與Direct Buy分開判定。
 
 ## 2. 資料日期、版本、工具讀取結果、P0安全與歷史來源稽核
 
 - 報告版本：`daily_after_market_report_v2_swing_buy_20d`
-- 產生時間：2026-08-07 14:56:35（Asia/Taipei）
-- latest_indicators：2026-08-07 14:56:27
-- gate_diagnostics：2026-08-07 14:56:32
+- 產生時間：2026-08-10 14:35:11（Asia/Taipei）
+- latest_indicators：2026-08-10 14:35:01
+- gate_diagnostics：2026-08-10 14:35:06
 - 資料為今日：是
 - 策略與引擎版本相容：是
 - Diagnostic版本：`gate_diagnostics_v21_swing_buy_20d`
@@ -40,18 +40,18 @@ Swing Buy 20D：15 檔合格、20 檔觀察；與Direct Buy分開判定。
 
 本路徑獨立於 v3.3 Direct Buy；Swing Buy 不會改寫 `direct_buy_signal` 或繞過研究 Guard。
 - 政策版本：`v4.0_Swing_Buy_20D`
-- 今日合格：15 檔；觀察：20 檔
+- 今日合格：22 檔；觀察：20 檔
 - 持有與績效觀察期限：20個交易日；採分段進場與時間停損。
-- **2880 華南金｜Swing Buy 20D**：階段 `swing_buy_confirmed`；分數 82.11；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `finance`；起始部位 50%（分段進場）。
-- **2357 華碩｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 81.22；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `ai_hardware`；起始部位 25%（分段進場）。
-- **2395 研華｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 81.13；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `ai_hardware`；起始部位 25%（分段進場）。
-- **2618 長榮航｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 79.51；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `shipping`；起始部位 25%（分段進場）。
-- **9921 巨大｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 77.54；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `unclassified`；起始部位 25%（分段進場）。
-- **1590 亞德客-KY｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 77.16；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `industrial`；起始部位 25%（分段進場）。
-- **2886 兆豐金｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 77.10；預估20日報酬 14.90%；RR 2.67；停損風險 5.58%；市場 `RangeRotation`；產業 `finance`；起始部位 25%（分段進場）。
-- **3293 鈊象｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 76.11；預估20日報酬 14.96%；RR 2.14；停損風險 7.00%；市場 `RangeRotation`；產業 `unclassified`；起始部位 25%（分段進場）。
-- **2610 華航｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 74.84；預估20日報酬 17.72%；RR 2.53；停損風險 7.00%；市場 `RangeRotation`；產業 `unclassified`；起始部位 25%（分段進場）。
-- **2603 長榮｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 73.79；預估20日報酬 10.75%；RR 2.13；停損風險 5.06%；市場 `RangeRotation`；產業 `shipping`；起始部位 25%（分段進場）。
+- **2603 長榮｜Swing Buy 20D**：階段 `swing_buy_confirmed`；分數 84.12；預估20日報酬 13.55%；RR 1.94；停損風險 7.00%；市場 `RangeRotation`；產業 `shipping`；起始部位 50%（分段進場）。
+- **1590 亞德客-KY｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 83.96；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `industrial`；起始部位 25%（分段進場）。
+- **2615 萬海｜Swing Buy 20D**：階段 `swing_buy_confirmed`；分數 81.55；預估20日報酬 15.81%；RR 2.34；停損風險 6.75%；市場 `RangeRotation`；產業 `shipping`；起始部位 50%（分段進場）。
+- **2357 華碩｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 80.00；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `ai_hardware`；起始部位 25%（分段進場）。
+- **2880 華南金｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 79.47；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `finance`；起始部位 25%（分段進場）。
+- **2609 陽明｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 78.74；預估20日報酬 11.16%；RR 2.45；停損風險 4.55%；市場 `RangeRotation`；產業 `shipping`；起始部位 25%（分段進場）。
+- **2002 中鋼｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 77.02；預估20日報酬 11.47%；RR 2.06；停損風險 5.56%；市場 `RangeRotation`；產業 `materials`；起始部位 25%（分段進場）。
+- **2049 上銀｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 76.51；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `industrial`；起始部位 25%（分段進場）。
+- **3231 緯創｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 75.89；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `ai_hardware`；起始部位 25%（分段進場）。
+- **9914 美利達｜Swing Buy 20D**：階段 `swing_accumulation_ready`；分數 75.52；預估20日報酬 20.00%；RR 2.86；停損風險 7.00%；市場 `RangeRotation`；產業 `unclassified`；起始部位 25%（分段進場）。
 - T+20完成樣本：0；平均20日報酬：未載明；目標命中率：未載明。
 - 樣本限制：Swing Buy 20D完成樣本未達30筆，只可做結構檢查。
 
@@ -81,61 +81,60 @@ Swing Buy 20D：15 檔合格、20 檔觀察；與Direct Buy分開判定。
 - Universe：125
 - Volume通過：100
 - PA成功：100
-- Raw候選：43
+- Raw候選：53
 - 正式Direct Buy：0
 - 研究退役觀察：0
 - 新假設候選：0
 - 主要排除原因：
-  - Tradeable Second Leg path 未通過：做多方向一致：24檔
-  - Tradeable Second Leg path 未通過：型態與分數品質：24檔
-  - Tradeable Second Leg path 未通過：合法突破情境：24檔
-  - Tradeable Second Leg path 未通過：突破跟隨：24檔
-  - Tradeable Second Leg path 未通過：對手方被困：24檔
-  - Tradeable Second Leg path 未通過：True Breakout 品質：24檔
-  - Tradeable Second Leg path 未通過：可交易第二段：24檔
-  - Tradeable Second Leg path 未通過：進場確認：23檔
+  - Tradeable Second Leg path 未通過：型態與分數品質：29檔
+  - Tradeable Second Leg path 未通過：進場確認：29檔
+  - Tradeable Second Leg path 未通過：合法突破情境：29檔
+  - Tradeable Second Leg path 未通過：突破跟隨：29檔
+  - Tradeable Second Leg path 未通過：對手方被困：29檔
+  - Tradeable Second Leg path 未通過：True Breakout 品質：29檔
+  - Tradeable Second Leg path 未通過：可交易第二段：29檔
+  - Tradeable Second Leg path 未通過：做多方向一致：27檔
 - Candidate Stage：
-  - setup_observation：43
+  - setup_observation：53
 
 ## 8. True Breakout／Follow-through／停損與no-add風險
 
 - True Breakout：
-  - Low：96
-  - Unknown：20
-  - High：6
-  - Medium：3
+  - Low：94
+  - Unknown：18
+  - High：8
+  - Medium：5
 - Follow-through：
-  - Poor：94
-  - Unknown：20
-  - StrongImmediate：4
+  - Poor：100
+  - Unknown：18
   - WeakButAcceptable：3
-  - None：2
   - DelayedStrong：2
+  - StrongImmediate：2
 - Second Leg Trap：
-  - True：41
-  - False：2
+  - True：50
+  - False：3
 - Stop Execution Blocker：
-  - False：105
-  - Unknown：20
-- 候選資料中的no-add guardrail：61檔；停損執行阻擋：0檔。
+  - False：107
+  - Unknown：18
+- 候選資料中的no-add guardrail：70檔；停損執行阻擋：0檔。
 - no-add=true時，任何pullback zone只可作`observation_only`，不得作買點或加碼點。
-- **3045 台灣大｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 0.00；RR 15.00；目標 7.62%；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **2882 國泰金｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 99.40；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **2609 陽明｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 未載明；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **8069 元太｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 1.40；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **3529 力旺｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 4.19；目標 未載明；原因：Tradeable Second Leg path 未通過：資料、流動性與滑價 | Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **2883 開發金｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 7.00；RR 15.50；目標 9.66%；原因：Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **3529 力旺｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 2.58；目標 未載明；原因：Tradeable Second Leg path 未通過：資料、流動性與滑價 | Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **3260 威剛｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 2.11；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **9904 寶成｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 0.00；RR 未載明；目標 14.52%；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **1402 遠東新｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 未載明；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
 
 ## 9. 最值得追蹤1～3檔
 
-- **3045 台灣大｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 0.00；RR 15.00；目標 7.62%；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **2882 國泰金｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 99.40；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **2609 陽明｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 未載明；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **2883 開發金｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 7.00；RR 15.50；目標 9.66%；原因：Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **3529 力旺｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 2.58；目標 未載明；原因：Tradeable Second Leg path 未通過：資料、流動性與滑價 | Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **3260 威剛｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 2.11；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
 本節全部是觀察資料，逐檔均為**不可買**，不得替代正式Direct Buy。
 
 ## 10. Performance Summary、Smoke限制與Full Validation狀態
 
-- Performance完成樣本：124；正式Direct Buy完成樣本：0。
-- 被拒絕候選整體勝率：42.74%；T+5平均報酬：-2.10%；MFE：3.74%；MAE：-7.17%。
+- Performance完成樣本：139；正式Direct Buy完成樣本：0。
+- 被拒絕候選整體勝率：42.45%；T+5平均報酬：-1.78%；MFE：3.78%；MAE：-6.74%。
 - 上述績效主要來自被拒絕候選，不代表正式Direct Buy或新假設有效。
 - Smoke：事件數 3；正式買進洩漏 0。Smoke只證明程式與候選生成正常。
 - Full Validation狀態：已由使用者暫緩。
