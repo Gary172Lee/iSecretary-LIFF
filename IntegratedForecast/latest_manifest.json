@@ -25,7 +25,7 @@
         "v7.25k3.1"
     ],
     "version_policy": "minimum_supported_version",
-    "updated_at": "2026-08-11T08:14:53",
+    "updated_at": "2026-08-11T08:29:06",
     "timezone": "Asia/Taipei",
     "description": "固定入口檔。ChatGPT 排程請先讀取本檔，再依 files[].analysis_json 與 files[].chart_png 讀取當日最新資料。",
     "github_repo": "Gary172Lee/iSecretary-LIFF",
@@ -73,7 +73,7 @@
             "stock_code": "2382",
             "stock_name": "廣達",
             "ticker": "2382.TW",
-            "run_datetime": "2026-08-11T08:12:15",
+            "run_datetime": "2026-08-11T08:26:18",
             "file_date": "2026-08-11",
             "daily_output_tag": "20260811",
             "output_naming_policy": "daily_stable_overwrite",
@@ -1192,15 +1192,15 @@
             },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-08-11T08:12:15",
+                "decision_generated_at": "2026-08-11T08:26:18",
                 "decision_market_data_date": "2026-08-10",
-                "decision_delivery_candidate_date": "2026-08-11",
+                "decision_delivery_candidate_date": "2026-08-12",
                 "decision_delivery_date": null,
                 "decision_delivery_datetime": null,
                 "execution_eligibility_datetime": null,
                 "execution_status": "pending_delivery_trading_day_ohlcv",
-                "execution_pending_stage": "candidate_day_before_08_20_delivery",
-                "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
+                "execution_pending_stage": "before_delivery_candidate_date",
+                "execution_pending_stage_description": "尚未到08:20送達候選日。",
                 "limit_up_down_fill_status": null,
                 "benchmark_execution_date": null,
                 "benchmark_execution_price": null,
@@ -1243,7 +1243,7 @@
             "chart_png": "IntegratedForecast/png/2382_廣達_Chart_20260811.png",
             "raw_ohlcv": "IntegratedForecast/raw_ohlcv/2382_廣達_20260811_ohlcv.json",
             "pdf_file": "2382_廣達_PA_Analysis_20260811.pdf",
-            "json_sha": "a3a8901404257935a25be6890feb4bcb32fc60c1d9b6079409c8c09a2f3c7b8b",
+            "json_sha": "9b8b7c83c7fbd74abb0fe4c2bc3e4b6b2f689ade2593d8356612268b1531301c",
             "png_sha": "e41e1cc635a42ae68b471030c098c6ef1981a026b9c379b78cf907f89a9d05eb",
             "chart_read_status": "success",
             "profile_risk_triggered_summary": "未觸發標的專屬風險規則",
@@ -1260,8 +1260,8 @@
             "json_fetch_validation_status": "pass",
             "json_remote_fetch_validation_status": "pass",
             "json_fetch_http_status": 200,
-            "json_remote_blob_sha": "6aa4324a488826d6cb9dba2d868499cf292f5cad",
-            "json_remote_content_sha256": "a3a8901404257935a25be6890feb4bcb32fc60c1d9b6079409c8c09a2f3c7b8b",
+            "json_remote_blob_sha": "f672e9ad439409e5d14d6de24f856dff06d5db6e",
+            "json_remote_content_sha256": "9b8b7c83c7fbd74abb0fe4c2bc3e4b6b2f689ade2593d8356612268b1531301c",
             "json_sha256_match": true,
             "png_local_validation_status": "pass",
             "png_sync_queued": true,
@@ -1282,14 +1282,14 @@
             "pdf_github_sync_enabled": false,
             "pdf_remote_fetch_validation_status": "not_applicable_pdf_not_synced_to_github",
             "artifact_validation_phase": "candidate_commit_remote_validation_completed",
-            "artifact_validation_ref": "5348786918650aecd80e038b78ef8d801f8cdfd1",
+            "artifact_validation_ref": "b904f0c51b545fc4266620aed39d0d29b3a2a968",
             "artifact_validation_summary": {
                 "status": "pass",
                 "json": "pass",
                 "png": "pass",
                 "raw_ohlcv": "pass",
                 "pdf": "pass",
-                "validated_ref": "5348786918650aecd80e038b78ef8d801f8cdfd1",
+                "validated_ref": "b904f0c51b545fc4266620aed39d0d29b3a2a968",
                 "path_encoding": "utf8_percent_encoded_contents_api"
             }
         },
@@ -1322,7 +1322,7 @@
             "stock_code": "3081",
             "stock_name": "聯亞",
             "ticker": "3081.TWO",
-            "run_datetime": "2026-08-11T08:13:06",
+            "run_datetime": "2026-08-11T08:26:57",
             "file_date": "2026-08-11",
             "daily_output_tag": "20260811",
             "output_naming_policy": "daily_stable_overwrite",
@@ -1668,7 +1668,7 @@
                     "action_if_broken": "跌破目前可執行底線時，優先退出剩餘部位。"
                 },
                 "target_criterion": "嚴格遵守價格行為",
-                "target_objective": "達到 \"基本獲利門檻%\" 賣出",
+                "target_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
                 "target_goal_status": "configured",
                 "target_goal_alignment": {
                     "status": "aligned",
@@ -1679,7 +1679,7 @@
                     "entry_goal_state": "not_specified",
                     "criterion_precedence": "準則是同一筆標的目標設定的最高執行約束；最終操作不得與準則宣告的優先順序相反。"
                 },
-                "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。",
+                "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。",
                 "target_goal_effective_action": {
                     "position_action": "follow_aligned_structured_decision",
                     "can_sell_now": false,
@@ -1873,7 +1873,7 @@
                             "action_if_broken": "跌破目前可執行底線時，優先退出剩餘部位。"
                         },
                         "target_criterion": "嚴格遵守價格行為",
-                        "target_objective": "達到 \"基本獲利門檻%\" 賣出",
+                        "target_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
                         "target_goal_status": "configured",
                         "target_goal_alignment": {
                             "status": "aligned",
@@ -1883,7 +1883,7 @@
                             "resolution_text": "標的目標、準則與目前結構化決策一致。",
                             "criterion_precedence": "準則為標的目標頁籤內的最高執行約束；標的目標是分析與AI建言的核心方向。"
                         },
-                        "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標狀態=configured；目標與決策=aligned；處理原則=標的目標、準則與目前結構化決策一致。"
+                        "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？；基本獲利門檻=20.0%；允許動能延伸=True；目標狀態=configured；目標與決策=aligned；處理原則=標的目標、準則與目前結構化決策一致。"
                     }
                 },
                 "final_execution_schema_version": "v7.25k3.1_trigger_semantics_v2",
@@ -2135,9 +2135,9 @@
             "price_action_engine_version": "0.1.4b",
             "price_action_knowledge_version": "1.6",
             "target_criterion": "嚴格遵守價格行為",
-            "target_objective": "達到 \"基本獲利門檻%\" 賣出",
+            "target_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
             "target_goal_status": "configured",
-            "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。",
+            "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。",
             "target_goal_alignment": {
                 "status": "aligned",
                 "conflicts": [],
@@ -2149,7 +2149,7 @@
             },
             "analysis_core_objective": {
                 "criterion": "嚴格遵守價格行為",
-                "objective": "達到 \"基本獲利門檻%\" 賣出",
+                "objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
                 "profit_target_pct": 20.0,
                 "allow_momentum_extension": true,
                 "classification": {
@@ -2160,7 +2160,7 @@
                     "immediate_entry_requested": false,
                     "sell_when_profit_target_reached": true,
                     "raw_criterion": "嚴格遵守價格行為",
-                    "raw_objective": "達到 \"基本獲利門檻%\" 賣出",
+                    "raw_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
                     "classification_version": "v7.25k1_target_goal_precedence_v2"
                 },
                 "alignment": {
@@ -2368,7 +2368,7 @@
                         "action_if_broken": "跌破目前可執行底線時，優先退出剩餘部位。"
                     },
                     "target_criterion": "嚴格遵守價格行為",
-                    "target_objective": "達到 \"基本獲利門檻%\" 賣出",
+                    "target_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
                     "target_goal_status": "configured",
                     "target_goal_alignment": {
                         "status": "aligned",
@@ -2378,7 +2378,7 @@
                         "resolution_text": "標的目標、準則與目前結構化決策一致。",
                         "criterion_precedence": "準則為標的目標頁籤內的最高執行約束；標的目標是分析與AI建言的核心方向。"
                     },
-                    "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標狀態=configured；目標與決策=aligned；處理原則=標的目標、準則與目前結構化決策一致。"
+                    "target_goal_summary": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？；基本獲利門檻=20.0%；允許動能延伸=True；目標狀態=configured；目標與決策=aligned；處理原則=標的目標、準則與目前結構化決策一致。"
                 }
             },
             "final_execution_schema_version": "v7.25k3.1_trigger_semantics_v2",
@@ -2452,15 +2452,15 @@
             },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-08-11T08:13:06",
+                "decision_generated_at": "2026-08-11T08:26:57",
                 "decision_market_data_date": "2026-08-10",
-                "decision_delivery_candidate_date": "2026-08-11",
+                "decision_delivery_candidate_date": "2026-08-12",
                 "decision_delivery_date": null,
                 "decision_delivery_datetime": null,
                 "execution_eligibility_datetime": null,
                 "execution_status": "pending_delivery_trading_day_ohlcv",
-                "execution_pending_stage": "candidate_day_before_08_20_delivery",
-                "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
+                "execution_pending_stage": "before_delivery_candidate_date",
+                "execution_pending_stage_description": "尚未到08:20送達候選日。",
                 "limit_up_down_fill_status": null,
                 "benchmark_execution_date": null,
                 "benchmark_execution_price": null,
@@ -2506,7 +2506,7 @@
             "chart_png": "IntegratedForecast/png/3081_聯亞_Chart_20260811.png",
             "raw_ohlcv": "IntegratedForecast/raw_ohlcv/3081_聯亞_20260811_ohlcv.json",
             "pdf_file": "3081_聯亞_PA_Analysis_20260811.pdf",
-            "json_sha": "b3711e14ed0cc4c43f0b0910713f94d2d94ba65f583f08557ef33842463cc8f0",
+            "json_sha": "44dcf4af7719d898cd02a147a2c11cd52e3725887b85fcd89be820caf72f7496",
             "png_sha": "ef271073c990b4ad35478563bf7dbba7d13670d36d887375d4af62f4aff92f83",
             "chart_read_status": "success",
             "profile_risk_triggered_summary": "未觸發標的專屬風險規則",
@@ -2523,8 +2523,8 @@
             "json_fetch_validation_status": "pass",
             "json_remote_fetch_validation_status": "pass",
             "json_fetch_http_status": 200,
-            "json_remote_blob_sha": "fbeac518be73dd664ded13c0bd16b78ea4d73065",
-            "json_remote_content_sha256": "b3711e14ed0cc4c43f0b0910713f94d2d94ba65f583f08557ef33842463cc8f0",
+            "json_remote_blob_sha": "0c60519afe5517f57dcffcf92536fd73aad4a1e7",
+            "json_remote_content_sha256": "44dcf4af7719d898cd02a147a2c11cd52e3725887b85fcd89be820caf72f7496",
             "json_sha256_match": true,
             "png_local_validation_status": "pass",
             "png_sync_queued": true,
@@ -2545,14 +2545,14 @@
             "pdf_github_sync_enabled": false,
             "pdf_remote_fetch_validation_status": "not_applicable_pdf_not_synced_to_github",
             "artifact_validation_phase": "candidate_commit_remote_validation_completed",
-            "artifact_validation_ref": "5348786918650aecd80e038b78ef8d801f8cdfd1",
+            "artifact_validation_ref": "b904f0c51b545fc4266620aed39d0d29b3a2a968",
             "artifact_validation_summary": {
                 "status": "pass",
                 "json": "pass",
                 "png": "pass",
                 "raw_ohlcv": "pass",
                 "pdf": "pass",
-                "validated_ref": "5348786918650aecd80e038b78ef8d801f8cdfd1",
+                "validated_ref": "b904f0c51b545fc4266620aed39d0d29b3a2a968",
                 "path_encoding": "utf8_percent_encoded_contents_api"
             }
         },
@@ -2585,7 +2585,7 @@
             "stock_code": "7917",
             "stock_name": "源傑科技",
             "ticker": "7917",
-            "run_datetime": "2026-08-11T08:13:56",
+            "run_datetime": "2026-08-11T08:28:19",
             "file_date": "2026-08-11",
             "daily_output_tag": "20260811",
             "output_naming_policy": "daily_stable_overwrite",
@@ -3584,15 +3584,15 @@
             },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-08-11T08:13:56",
+                "decision_generated_at": "2026-08-11T08:28:19",
                 "decision_market_data_date": "2026-08-10",
-                "decision_delivery_candidate_date": "2026-08-11",
+                "decision_delivery_candidate_date": "2026-08-12",
                 "decision_delivery_date": null,
                 "decision_delivery_datetime": null,
                 "execution_eligibility_datetime": null,
                 "execution_status": "pending_delivery_trading_day_ohlcv",
-                "execution_pending_stage": "candidate_day_before_08_20_delivery",
-                "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
+                "execution_pending_stage": "before_delivery_candidate_date",
+                "execution_pending_stage_description": "尚未到08:20送達候選日。",
                 "limit_up_down_fill_status": null,
                 "benchmark_execution_date": null,
                 "benchmark_execution_price": null,
@@ -3635,7 +3635,7 @@
             "chart_png": null,
             "raw_ohlcv": "IntegratedForecast/raw_ohlcv/7917_源傑科技_20260811_ohlcv.json",
             "pdf_file": "7917_源傑科技_PA_Analysis_20260811.pdf",
-            "json_sha": "71dc6f7d803c6d06b258cf6935e53352aa6ca82426f047b7d7f2d7720e4c0435",
+            "json_sha": "cedafea15c4623106eb3a916a435b2d6a60b533e4cf30d8f0ba03000d6a72426",
             "png_sha": null,
             "chart_read_status": "missing",
             "profile_risk_triggered_summary": "未觸發標的專屬風險規則",
@@ -3652,8 +3652,8 @@
             "json_fetch_validation_status": "pass",
             "json_remote_fetch_validation_status": "pass",
             "json_fetch_http_status": 200,
-            "json_remote_blob_sha": "85a9ed8121fba62423f0cc6bc3a490ab7eba4ebd",
-            "json_remote_content_sha256": "71dc6f7d803c6d06b258cf6935e53352aa6ca82426f047b7d7f2d7720e4c0435",
+            "json_remote_blob_sha": "5d22b7492749f9d3eb17a5639a560fe749e91777",
+            "json_remote_content_sha256": "cedafea15c4623106eb3a916a435b2d6a60b533e4cf30d8f0ba03000d6a72426",
             "json_sha256_match": true,
             "png_local_validation_status": "not_applicable",
             "png_sync_queued": false,
@@ -3674,14 +3674,14 @@
             "pdf_github_sync_enabled": false,
             "pdf_remote_fetch_validation_status": "not_applicable_pdf_not_synced_to_github",
             "artifact_validation_phase": "candidate_commit_remote_validation_completed",
-            "artifact_validation_ref": "5348786918650aecd80e038b78ef8d801f8cdfd1",
+            "artifact_validation_ref": "b904f0c51b545fc4266620aed39d0d29b3a2a968",
             "artifact_validation_summary": {
                 "status": "pass",
                 "json": "pass",
                 "png": "not_applicable_no_png",
                 "raw_ohlcv": "pass",
                 "pdf": "pass",
-                "validated_ref": "5348786918650aecd80e038b78ef8d801f8cdfd1",
+                "validated_ref": "b904f0c51b545fc4266620aed39d0d29b3a2a968",
                 "path_encoding": "utf8_percent_encoded_contents_api"
             }
         }
@@ -3689,8 +3689,8 @@
     "manifest_schema_version": "v7.25k3_execution_and_artifact_validation_v1",
     "artifact_path_validation_version": "v7.25k3_remote_path_validation_v1",
     "artifact_path_validation_status": "pass",
-    "artifact_path_validation_ref": "5348786918650aecd80e038b78ef8d801f8cdfd1",
+    "artifact_path_validation_ref": "b904f0c51b545fc4266620aed39d0d29b3a2a968",
     "artifact_path_validation_phase": "candidate_commit_remote_validation_completed",
     "artifact_path_validation_method": "GitHub Contents API exact UTF-8 path readback against candidate commit",
-    "artifact_path_validation_candidate_commit": "5348786918650aecd80e038b78ef8d801f8cdfd1"
+    "artifact_path_validation_candidate_commit": "b904f0c51b545fc4266620aed39d0d29b3a2a968"
 }
