@@ -27,7 +27,7 @@
             "v7.25k3.1a"
         ],
         "version_policy": "minimum_supported_version",
-        "run_datetime": "2026-08-12T17:52:27",
+        "run_datetime": "2026-08-12T17:52:34",
         "daily_output_tag": "20260812",
         "output_naming_policy": "daily_stable_overwrite",
         "stock_code": "2382",
@@ -1453,7 +1453,7 @@
         "trigger_semantics_consistency_status": "pass",
         "execution_backtest_summary": {
             "execution_basis_version": "v7.25j1_execution_basis_v2",
-            "decision_generated_at": "2026-08-12T17:52:27",
+            "decision_generated_at": "2026-08-12T17:52:34",
             "decision_market_data_date": "2026-08-12",
             "decision_delivery_candidate_date": "2026-08-13",
             "decision_delivery_date": null,
@@ -1554,14 +1554,14 @@
         "stock_code": "2382",
         "stock_name": "廣達",
         "ticker": "2382.TW",
-        "run_datetime": "2026-08-12T17:52:27",
+        "run_datetime": "2026-08-12T17:52:34",
         "base_date": "2026-08-12",
         "base_close": 325.5,
         "status": "pending",
         "items": {
             "T+1": {
-                "prediction_price": 326.0,
-                "prediction_direction": "Flat",
+                "prediction_price": 322.75,
+                "prediction_direction": "Down",
                 "actual_date": null,
                 "actual_close": null,
                 "actual_direction": null,
@@ -1573,8 +1573,8 @@
                 "updated_at": null
             },
             "T+2": {
-                "prediction_price": 328.5,
-                "prediction_direction": "Up",
+                "prediction_price": 322.5,
+                "prediction_direction": "Down",
                 "actual_date": null,
                 "actual_close": null,
                 "actual_direction": null,
@@ -1586,7 +1586,7 @@
                 "updated_at": null
             },
             "T+3": {
-                "prediction_price": 330.5,
+                "prediction_price": 327.75,
                 "prediction_direction": "Up",
                 "actual_date": null,
                 "actual_close": null,
@@ -1668,7 +1668,7 @@
             "status": "pending_actuals",
             "purpose": "以實際買賣紀錄優先、下一交易日開盤基準次之，回測立即賣出比例、剩餘部位底線、反彈區與完整退出條件。",
             "execution_basis_version": "v7.25j1_execution_basis_v2",
-            "decision_generated_at": "2026-08-12T17:52:27",
+            "decision_generated_at": "2026-08-12T17:52:34",
             "decision_market_data_date": "2026-08-12",
             "decision_timezone": "Asia/Taipei",
             "decision_delivery_rule": "next_not_missed_08_20_schedule_after_decision_generation_and_after_market_data_date",
@@ -1757,7 +1757,7 @@
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
             "future_ohlcv_observed_count": 0,
             "eligible_execution_ohlcv_observed_count": 0,
-            "last_execution_backfill_at": "2026-08-12T17:53:07",
+            "last_execution_backfill_at": "2026-08-12T17:53:17",
             "execution_pending_stage": "before_delivery_candidate_date",
             "execution_pending_stage_description": "尚未到08:20送達候選日。",
             "cohort_observed_trading_days": 0,
@@ -1769,7 +1769,7 @@
             "pullback_zone_first_touch_t_index": null,
             "pullback_zone_post_touch_metrics": {},
             "grouped_backtest_sample_interpretation": "僅作分組資料蒐集；任一cohort完成樣本少於30筆時，不得宣稱策略有效。",
-            "cohort_metrics_updated_at": "2026-08-12T17:53:07"
+            "cohort_metrics_updated_at": "2026-08-12T17:53:17"
         },
         "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
         "backtest_cohort_tags": [
@@ -1803,35 +1803,43 @@
         "trigger_semantics_consistency_status": "pass"
     },
     "news": {
-        "news_report_title": "廣達 (2382) 盤前觀察：AI伺服器龍頭地位穩固，技術面現測量型缺口候選，留意美股AI同業動態",
-        "overall_sentiment": "Cautiously Optimistic",
+        "news_report_title": "廣達 (2382) AI伺服器與雲端資料中心業務穩健，市場關注外部動能",
+        "overall_sentiment": "Watchful",
         "key_takeaways": [
-            "廣達作為全球AI伺服器與筆記型電腦代工龍頭，其核心業務表現持續受市場高度關注，尤其在AI伺服器及雲端資料中心領域具關鍵地位。",
-            "技術面顯示，目前股價位於短期均線（EMA20）之上，並存在一個未回補的向上實體缺口，被判斷為測量型缺口候選，暗示短期動能偏多。",
-            "操作上，廣達屬於大型權值波段股，適合分批布局與波段操作。然而，鑑於目前訊號尚未完全確立，建議投資人觀察或以小部位試單，避免追價或一次性滿倉。",
-            "美股AI伺服器同業（如NVDA、SMCI、DELL、HPE）的盤前表現是廣達走勢的重要參考指標，若其平均跌幅逾3%，應降低追價權重。",
-            "外資買賣超動向及全球雲端服務供應商（CSP）的資本支出，將持續是影響廣達股價的兩大關鍵因素。"
+            "AI伺服器與雲端資料中心龍頭地位穩固：廣達作為全球AI伺服器與雲端資料中心代工領導廠商，核心業務動能強勁，筆記型電腦代工及車用電子亦為重要支撐。",
+            "高度受外部因素影響：股價走勢與NVIDIA、美股AI伺服器供應鏈（如DELL、HPE、SMCI）表現及外資買賣超高度相關，為主要驅動因子。",
+            "波段操作為宜，避免追高：考量其大型權值股特性及中高波動度，建議投資人採分批、順勢的波段操作策略，不宜頻繁短打，並應留意美股AI同業若出現顯著跌幅時的追價風險。",
+            "技術面觀察與訊號待確認：目前股價位於關鍵均線之上，並存在向上缺口，顯示短期動能偏多，但整體交易訊號尚未完全確立，建議保持觀察或小部位布局。"
         ],
-        "events_summary": "目前尚未有關於廣達的具體重大新聞事件拋轉。市場對廣達的關注主要聚焦於其在AI伺服器、雲端資料中心、筆記型電腦代工及車用電子等核心業務的發展潛力。作為大型權值股，廣達的股價走勢高度受外資買賣超、NVIDIA及美系AI伺服器供應鏈表現的影響。技術分析顯示，廣達股價目前站穩於EMA20之上，並出現一個向上跳空缺口，被視為測量型缺口候選，顯示短期市場情緒偏向樂觀。然而，考量到其中高波動特性，且目前訊號未完全確立，建議投資人採取謹慎的波段操作策略，密切留意美股AI同業的盤前變化，並避免在市場情緒過熱時盲目追高。若美股AI供應鏈轉弱，或外資出現連續賣超並跌破月線，則需降低波段評等。"
+        "events_summary": "廣達作為AI伺服器、雲端資料中心及筆記型電腦代工的全球領導者，其營運表現持續為市場焦點。公司在車用電子領域的布局亦逐步深化。近期市場對廣達的關注主要集中在其AI伺服器業務的成長潛力，這與NVIDIA的發展及美國主要雲端服務供應商（CSP）的資本支出息息相關。股價動態方面，廣達走勢受外資買賣超與台股伺服器族群表現影響顯著。技術分析顯示，目前股價位於20日移動平均線之上，並存在一個未回補的向上實體缺口，暗示短期內可能維持偏多格局。然而，鑑於美股AI伺服器同業（如DELL、HPE、SMCI）盤前表現對其股價的潛在影響，以及整體交易訊號尚未完全確立，市場建議投資人保持謹慎，避免在訊號不明朗時追高，並考慮分批、波段操作。"
     },
     "price": {
         "prediction_T+1": {
-            "date": "2026-08-13",
-            "price_range": "320.0 - 332.0",
-            "direction_bias": "Neutral to slightly positive, but range-bound",
-            "rationale": "廣達昨日收盤價 325.5 元，雖然站上 EMA20 且量能放大，但價格行為顯示為『假突破 (FailedBreakout)』，且後續跟隨力道不足。美股 AI 伺服器同業 DELL 跌幅超過 3%，依據標的特性規則，應降低追價權重。然而，外資仍呈現淨買超，且台股同業表現強勁，提供一定支撐。預計股價將在 320.0 至 332.0 區間震盪，上方壓力來自假突破後的賣壓，下方則有 EMA20 (319.0) 及缺口失效價 (315.5) 提供支撐。"
+            "direction": "Neutral_to_Slightly_Bearish",
+            "price_range": "315.5 - 330.0",
+            "rationale": "廣達昨日收盤價為 325.5 元。儘管股價站上 EMA20 且有法人買超支撐，但近期突破被判定為『假突破 (FailedBreakout)』，且缺乏有效跟隨 (Poor Follow-through)。此外，美股 AI 伺服器同業 DELL 跌幅超過 3%（-3.69%），依標的特性規則，應降低追價權重。技術面顯示可能出現『空方 Second Entry / Lower High』訊號，暗示短期上漲動能不足。預計今日股價可能在 315.5 元（缺口失效價/關鍵支撐）至 330.0 元之間震盪，上攻動能受限。",
+            "key_levels": {
+                "support": 315.5,
+                "resistance": 330.0
+            }
         },
         "prediction_T+2": {
-            "date": "2026-08-14",
-            "price_range": "322.0 - 335.0",
-            "direction_bias": "Slightly positive if 315.5 holds",
-            "rationale": "若 T+1 交易日 315.5 元的關鍵支撐 (缺口失效價) 能夠守穩，市場信心有望逐步恢復。在機構買盤和台股同業的帶動下，廣達有望嘗試向上挑戰，但因假突破的影響，上漲空間可能受限，難以出現強勁的單邊走勢。預計在 322.0 至 335.0 區間內緩步向上或持續盤整。"
+            "direction": "Range_Bound",
+            "price_range": "310.0 - 335.0",
+            "rationale": "若 T+1 守住 315.5 元支撐，T+2 有機會在該價位上方進行盤整。然而，由於缺乏強勁的突破延續訊號，且動能評分仍為『弱 (Weak)』，預計難以出現大幅度的上漲。若 315.5 元支撐失守，則可能進一步下探至 308.35 元（SMA200）附近尋求支撐。操作上仍需等待更明確的價格行為確認，避免盲目追價或低接。",
+            "key_levels": {
+                "support": 315.5,
+                "resistance": 335.0
+            }
         },
         "prediction_T+3": {
-            "date": "2026-08-15",
-            "price_range": "323.0 - 338.0",
-            "direction_bias": "Consolidation with potential for limited upside",
-            "rationale": "在缺乏明確的強勢突破訊號下，廣達在未來三個交易日仍可能以區間震盪為主。若能持續守住 315.5 元的支撐，並配合大盤及 AI 伺服器族群的整體表現，有機會向上測試 338.0 元附近的壓力。然而，由於『假突破』和『可能空方 Second Entry / Lower High』的警示，追價風險較高，需等待更明確的買入訊號或突破確認。預計在 323.0 至 338.0 區間內震盪整理，等待市場方向。"
+            "direction": "Neutral_to_Slightly_Bullish_if_support_holds",
+            "price_range": "315.5 - 340.0",
+            "rationale": "考量廣達為大型權值股，且有 AI 伺服器題材，若能有效守住 315.5 元的關鍵支撐，並配合外資持續買超，則有望逐步修復技術面。但由於目前『突破跟隨不足』且『對手方仍可解套』，短期內難以期待強勢上漲。測量型缺口的上漲目標 353.5 元仍是潛在目標，但需時間消化賣壓並建立新的上漲結構。若市場情緒轉佳，股價可能緩步向 340.0 元區間移動，但仍需留意 351.93 元（SMA50）的壓力。",
+            "key_levels": {
+                "support": 315.5,
+                "resistance": 340.0
+            }
         },
         "portfolio_advice": {
             "layout_strategy": {
@@ -1848,6 +1856,10 @@
                     "note": "多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。"
                 },
                 "rationale": "準則=嚴格遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 賣出；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。 持倉狀態=BelowTargetHoldUntilPriceTrigger；目前報酬=-7.88%；基本門檻=20.00% / 424.03元；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；動能評分=0；歷史保護價=None；歷史保護價已失守=False；目前有效保護價=None；目前有效保護價已觸發=False；剩餘部位執行底線=None；剩餘部位底線來源=not_available；批次曾達標股數=70/200；批次已回吐股數=70/200；完整退出條件=尚未觸發。 此為持倉生命週期與價格行為整合後的最終規則；不得再引用舊狀態名稱或以等待下一交易日取代既有賣出權限。",
+                "guardrail": "禁止追價或攤平。若收盤跌破 315.5 元，應重新評估風險。",
+                "final_sell_trigger_price": 424.03,
+                "final_sell_trigger_type": "profit_target_permission",
+                "risk_advisory_trigger_price": null,
                 "effective_today_action_zone": {
                     "zone_type": "no_rebound_reduce_zone",
                     "action": "未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。"
@@ -2250,7 +2262,7 @@
                     "default": 0
                 },
                 "next_day_analysis_required_for_sell_permission": false,
-                "original_ai_action_for_reference": "觀察 / 等待 Second Entry 或確認 K 棒；原始AI建議僅供參考：Hold existing position",
+                "original_ai_action_for_reference": "觀察 / 等待 Second Entry 或確認 K 棒；原始AI建議僅供參考：Hold",
                 "historical_profit_protection_floor_price": null,
                 "active_profit_protection_floor_price": null,
                 "remaining_position_exit_floor_price": null,
@@ -2488,7 +2500,6 @@
                 "price_action_advisory_only": false,
                 "risk_override_allowed": false,
                 "risk_override_trigger_price": null,
-                "risk_advisory_trigger_price": null,
                 "target_objective_conflict_status": "aligned",
                 "target_vs_price_action_conflict_summary": {
                     "status": "aligned",
@@ -2506,18 +2517,8 @@
                     "trigger_semantics_consistency_status": "pass"
                 },
                 "final_decision_reason_consistency_status": "pass",
-                "final_sell_trigger_price": 424.03,
-                "final_sell_trigger_type": "profit_target_permission",
                 "trigger_semantics_consistency_status": "pass"
-            },
-            "final_execution_priority": "structured_lifecycle_decision",
-            "price_action_advisory_only": false,
-            "risk_override_allowed": false,
-            "risk_override_trigger_price": null,
-            "risk_advisory_trigger_price": null,
-            "target_objective_conflict_status": "aligned",
-            "final_sell_trigger_price": 424.03,
-            "final_sell_trigger_type": "profit_target_permission"
+            }
         },
         "entry_permission_guardrail": {
             "status": "triggered",
