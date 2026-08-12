@@ -1,0 +1,55 @@
+{
+  "schema_version": "integratedforecast_trade_card_chain_v1",
+  "trade_card_schema_version": "integratedforecast_trade_card_chain_v1",
+  "version": "bootstrap_user_confirmed_trade_card",
+  "current_rule_family": "bootstrap",
+  "updated_at": "2026-08-12T18:08:00",
+  "timezone": "Asia/Taipei",
+  "state_writer": "user_confirmed_bootstrap",
+  "description": "首次跨日決策鏈 seed。此檔保存使用者確認的前一有效交易卡；價位是可更新狀態，不是 Python 永久硬規則。",
+  "cards": {
+    "3081": {
+      "stock_code": "3081",
+      "stock_name": "聯亞",
+      "effective_card": {
+        "card_schema_version": "premarket_trade_card_v1",
+        "formed_at": "2026-08-12",
+        "effective_for_date": "2026-08-13",
+        "position_shares": 60,
+        "decision": "conditional_hold_with_breakout_management",
+        "source": "user_confirmed_trade_card",
+        "levels": {
+          "hold_above": 2500.0,
+          "profit_review_zone": [2716.88, 2728.0],
+          "breakout_hold_above": 2728.0,
+          "target_1": 3000.0,
+          "target_2": [3150.0, 3300.0],
+          "defense_reference": 2377.0
+        },
+        "rules": [
+          {"id": "hold_above_2500", "condition": "price >= 2500", "action": "hold_60", "text": "2,500以上：60股抱。"},
+          {"id": "profit_review_zone", "condition": "2716.88 <= price <= 2728", "action": "observe_attack_quality", "automatic_sell": false, "text": "2,716.88～2,728：不是自動賣；觀察攻擊品質。"},
+          {"id": "failed_breakout_reduce", "condition": "2728攻不上且結構轉弱", "action": "sell_20_hold_40", "sell_shares": 20, "remaining_shares": 40, "text": "2,728攻不上＋轉弱：賣20，留40。"},
+          {"id": "valid_breakout_hold", "condition": "2728有效突破", "action": "hold_60_target_3000", "text": "2,728有效突破：60股全抱，第一目標3,000。"},
+          {"id": "target_3000_extension", "condition": "3000有效突破", "action": "hold_and_watch_3150_3300", "text": "3,000突破：續看3,150～3,300。"},
+          {"id": "below_2500_alert", "condition": "price < 2500", "action": "raise_alert", "text": "跌回2,500以下：提高警戒。"},
+          {"id": "defense_reference", "condition": "approach 2377", "action": "important_defense_reference", "text": "2,377附近是目前模型的重要防守線。"}
+        ],
+        "display_lines": [
+          "3081聯亞｜60股",
+          "2,500以上：60股抱。",
+          "2,716.88～2,728：不是自動賣；觀察攻擊品質。",
+          "2,728攻不上＋轉弱：賣20，留40。",
+          "2,728有效突破：60股全抱，第一目標3,000。",
+          "3,000突破：續看3,150～3,300。",
+          "跌回2,500以下：提高警戒；2,377附近是目前模型的重要防守線。"
+        ],
+        "dynamic_revalidation_required": true,
+        "note": "所有價位必須由下一次最新 IntegratedForecast / Portfolio / 市場證據重新驗證，可維持、上移、下移、取消或標記已觸發。"
+      },
+      "previous_effective_card": null,
+      "history_tail": [],
+      "continuity_status": "bootstrap_waiting_for_latest_model_update"
+    }
+  }
+}
