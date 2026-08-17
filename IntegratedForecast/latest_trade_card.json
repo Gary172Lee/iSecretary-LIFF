@@ -1,500 +1,89 @@
 {
-    "schema_version": "integratedforecast_trade_card_chain_v1",
-    "trade_card_schema_version": "integratedforecast_trade_card_chain_v1",
-    "version": "Integrated_Forecast_v7.25k3.3_TargetPriorityTradeChain_Edition",
-    "current_rule_family": "v7.25k3.3",
-    "updated_at": "2026-08-17T08:15:14",
-    "timezone": "Asia/Taipei",
-    "state_writer": "IntegratedForecast.py",
-    "prior_state_source": "github_exact_path",
-    "description": "跨交易日決策狀態。IntegratedForecast只刷新model_update；effective_card由盤前分析依最新證據重新驗證後更新。",
-    "cards": {
-        "2382": {
-            "stock_code": "2382",
-            "stock_name": "廣達",
-            "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-08-13T08:30:51+08:00",
-                "effective_for_date": "2026-08-13",
-                "position_shares": 200,
-                "decision": "hold_below_profit_target",
-                "source": "IntegratedForecast_v7.25k3.2_20260813",
-                "levels": {
-                    "profit_target": 424.03,
-                    "gap_support": 315.5,
-                    "gap_midpoint": 316.25,
-                    "gap_mm_target": 353.5
-                },
-                "rules": [
-                    {
-                        "id": "hold_below_target",
-                        "condition": "price < 424.03 and no risk-first trigger",
-                        "action": "hold_200",
-                        "text": "未達424.03基本獲利門檻且未出現risk-first觸發：續抱200股。"
-                    },
-                    {
-                        "id": "gap_support_alert",
-                        "condition": "close < 315.5 or 316.25 gap midpoint lost and cannot recover",
-                        "action": "raise_alert",
-                        "text": "315.5～316.25為目前缺口支撐/失效觀察區；失守則降低波段信心。"
-                    },
-                    {
-                        "id": "gap_mm_reference",
-                        "condition": "price approaches 353.5",
-                        "action": "observe_reaction",
-                        "automatic_sell": false,
-                        "text": "353.5為目前缺口MM參考，不是自動賣出價。"
-                    },
-                    {
-                        "id": "profit_target_permission",
-                        "condition": "price >= 424.03",
-                        "action": "open_sell_evaluation",
-                        "automatic_sell": false,
-                        "text": "424.03達基本獲利門檻後開啟賣出評估。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
-            "previous_effective_card": null,
-            "history_tail": [],
-            "model_update": {
-                "stock_code": "2382",
-                "position_shares": 200,
-                "position_avg_cost": 353.355,
-                "model_version": "Integrated_Forecast_v7.25k3.3_TargetPriorityTradeChain_Edition",
-                "current_rule_family": "v7.25k3.3",
-                "generated_at": "2026-08-17T08:15:14",
-                "actual_latest_trade_date": "2026-08-14",
-                "expected_latest_trade_date": "2026-08-14",
-                "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
-                "price_data_source": "FUGLEAPI",
-                "price_data_is_stale": false,
-                "current_close": 327.5,
-                "portfolio_unrealized_pnl_pct": -7.32,
-                "target_criterion": "嚴格遵守價格行為",
-                "target_objective": "達到 \"基本獲利門檻%\" 賣出",
-                "target_goal_status": "configured",
-                "target_goal_alignment": {
-                    "status": "aligned",
-                    "conflicts": [],
-                    "conflict_count": 0,
-                    "resolution": "aligned",
-                    "resolution_text": "標的目標、準則與目前最終決策一致。",
-                    "entry_goal_state": "not_specified",
-                    "criterion_precedence": "準則是同一筆標的目標設定的最高執行約束；最終操作不得與準則宣告的優先順序相反。"
-                },
-                "target_goal_effective_action": {
-                    "position_action": "follow_aligned_structured_decision",
-                    "can_sell_now": false,
-                    "recommended_immediate_sell_ratio_pct": 0,
-                    "conditional_additional_sell_ratio_pct": 0,
-                    "new_entry_action": "not_specified",
-                    "price_action_role": "effective_decision",
-                    "reason": "標的目標、準則與目前最終決策一致。",
-                    "final_execution_schema_version": "v7.25k3.1_trigger_semantics_v2",
-                    "final_execution_priority": "structured_lifecycle_decision",
-                    "price_action_advisory_only": false,
-                    "risk_override_allowed": false,
-                    "risk_override_trigger_price": null,
-                    "risk_advisory_trigger_price": null,
-                    "target_objective_conflict_status": "aligned",
-                    "final_sell_trigger_price": 424.03,
-                    "final_sell_trigger_type": "profit_target_permission",
-                    "trigger_semantics_consistency_status": "pass"
-                },
-                "position_lifecycle_state": "BelowTargetHoldUntilPriceTrigger",
-                "sell_now_permission": false,
-                "recommended_immediate_sell_ratio_pct": 0,
-                "conditional_additional_sell_ratio_pct": 0,
-                "portfolio_action_priority": "observe_or_reduce",
-                "risk_first_action": false,
-                "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
-                "current_support": {
-                    "price": 315.5,
-                    "role": "current_support_below_market",
-                    "basis": "gap_invalidation_price_below_market",
-                    "note": "目前股價下方較接近的可量化支撐/風控參考。"
-                },
-                "rebound_resistance": null,
-                "gap_invalidation_price": {
-                    "price": 315.5,
-                    "role": "gap_invalidation_price",
-                    "basis": "gap_failure_condition.price",
-                    "note": "若收盤跌破缺口下緣 315.5，或快速回補缺口中點 316.25 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。"
-                },
-                "rebound_reduce_zone": null,
-                "breakout_context_type": "FailedBreakout",
-                "breakout_entry_permission": "FadeBreakout",
-                "true_breakout_quality_score": 25,
-                "breakout_follow_through_quality": "Poor",
-                "second_leg_no_add_guardrail": true,
-                "final_execution_priority": "structured_lifecycle_decision",
-                "price_action_advisory_only": false,
-                "risk_override_allowed": false,
-                "risk_advisory_trigger_price": null,
-                "final_sell_trigger_price": 424.03,
-                "final_sell_trigger_type": "profit_target_permission",
-                "final_sell_trigger_action": null,
-                "target_review_mode": null,
-                "target_review_trigger_price": null,
-                "target_review_trigger_reached": null,
-                "target_review_action": null
-            },
-            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation"
-        },
-        "3081": {
-            "stock_code": "3081",
-            "stock_name": "聯亞",
-            "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-08-13T08:30:51+08:00",
-                "effective_for_date": "2026-08-13",
-                "position_shares": 60,
-                "decision": "conditional_hold_at_profit_threshold_with_breakout_management",
-                "source": "prior_user_card_revalidated_by_IntegratedForecast_v7.25k3.2_20260813",
-                "levels": {
-                    "hold_above": 2500.0,
-                    "profit_review_zone": [
-                        2716.88,
-                        2728.0
-                    ],
-                    "breakout_hold_above": 2728.0,
-                    "target_1": 3000.0,
-                    "target_2": [
-                        3150.0,
-                        3300.0
-                    ],
-                    "defense_reference": 2480.0,
-                    "gap_midpoint": 2520.0,
-                    "model_gap_mm_target": 2997.5
-                },
-                "rules": [
-                    {
-                        "id": "hold_above_2500",
-                        "condition": "price >= 2500",
-                        "action": "hold_60_conditionally",
-                        "text": "2,500以上維持60股，但已進入基本獲利門檻區，需同步觀察2716.88～2728攻擊品質。"
-                    },
-                    {
-                        "id": "profit_review_zone",
-                        "condition": "2716.88 <= price <= 2728",
-                        "action": "observe_attack_quality",
-                        "automatic_sell": false,
-                        "text": "2,716.88～2,728維持為獲利/攻擊品質評估區，不是自動賣。"
-                    },
-                    {
-                        "id": "failed_breakout_reduce",
-                        "condition": "2728攻不上且結構轉弱",
-                        "action": "sell_20_hold_40",
-                        "sell_shares": 20,
-                        "remaining_shares": 40,
-                        "text": "2,728攻不上且轉弱：賣20，留40。"
-                    },
-                    {
-                        "id": "valid_breakout_hold",
-                        "condition": "2728有效突破且後續確認",
-                        "action": "hold_60_target_3000",
-                        "text": "2,728有效突破並確認：60股續抱，第一目標約3,000。"
-                    },
-                    {
-                        "id": "target_3000_extension",
-                        "condition": "3000有效突破",
-                        "action": "hold_and_watch_3150_3300",
-                        "text": "3,000有效突破後，續看3,150～3,300；每日重驗。"
-                    },
-                    {
-                        "id": "below_2500_alert",
-                        "condition": "price < 2500",
-                        "action": "raise_alert",
-                        "text": "跌回2,500以下提高警戒。"
-                    },
-                    {
-                        "id": "defense_reference",
-                        "condition": "close < 2480 or gap midpoint 2520 lost and cannot recover",
-                        "action": "major_structure_warning",
-                        "text": "防守參考由舊2,377上移至2,480；2,520為缺口中點，失守後無法站回則多方缺口假設降權。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
-            "previous_effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-08-12",
-                "effective_for_date": "2026-08-13",
-                "position_shares": 60,
-                "decision": "conditional_hold_with_breakout_management",
-                "source": "user_confirmed_trade_card",
-                "levels": {
-                    "hold_above": 2500.0,
-                    "profit_review_zone": [
-                        2716.88,
-                        2728.0
-                    ],
-                    "breakout_hold_above": 2728.0,
-                    "target_1": 3000.0,
-                    "target_2": [
-                        3150.0,
-                        3300.0
-                    ],
-                    "defense_reference": 2377.0
-                },
-                "dynamic_revalidation_required": true
-            },
-            "history_tail": [
-                {
-                    "formed_at": "2026-08-12",
-                    "source": "user_confirmed_trade_card",
-                    "levels": {
-                        "hold_above": 2500.0,
-                        "profit_review_zone": [
-                            2716.88,
-                            2728.0
-                        ],
-                        "breakout_hold_above": 2728.0,
-                        "target_1": 3000.0,
-                        "target_2": [
-                            3150.0,
-                            3300.0
-                        ],
-                        "defense_reference": 2377.0
-                    }
-                }
-            ],
-            "model_update": {
-                "stock_code": "3081",
-                "position_shares": 60,
-                "position_avg_cost": 2264.066667,
-                "model_version": "Integrated_Forecast_v7.25k3.3_TargetPriorityTradeChain_Edition",
-                "current_rule_family": "v7.25k3.3",
-                "generated_at": "2026-08-17T08:15:14",
-                "actual_latest_trade_date": "2026-08-14",
-                "expected_latest_trade_date": "2026-08-14",
-                "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
-                "price_data_source": "FUGLEAPI",
-                "price_data_is_stale": false,
-                "current_close": 2540.0,
-                "portfolio_unrealized_pnl_pct": 12.19,
-                "target_criterion": "嚴格遵守價格行為",
-                "target_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
-                "target_goal_status": "configured",
-                "target_goal_alignment": {
-                    "status": "aligned",
-                    "conflicts": [],
-                    "conflict_count": 0,
-                    "resolution": "aligned",
-                    "resolution_text": "標的目標、準則與目前最終決策一致。",
-                    "entry_goal_state": "not_specified",
-                    "criterion_precedence": "準則是同一筆標的目標設定的最高執行約束；最終操作不得與準則宣告的優先順序相反。"
-                },
-                "target_goal_effective_action": {
-                    "position_action": "follow_aligned_structured_decision",
-                    "can_sell_now": true,
-                    "recommended_immediate_sell_ratio_pct": 50,
-                    "conditional_additional_sell_ratio_pct": 50,
-                    "new_entry_action": "not_specified",
-                    "price_action_role": "effective_decision",
-                    "reason": "標的目標、準則與目前最終決策一致。",
-                    "final_execution_schema_version": "v7.25k3.1_trigger_semantics_v2",
-                    "final_execution_priority": "structured_lifecycle_decision",
-                    "price_action_advisory_only": false,
-                    "risk_override_allowed": false,
-                    "risk_override_trigger_price": null,
-                    "risk_advisory_trigger_price": null,
-                    "target_objective_conflict_status": "aligned",
-                    "final_sell_trigger_price": 2540.0,
-                    "final_sell_trigger_type": "structured_lifecycle_sell_permission",
-                    "trigger_semantics_consistency_status": "pass"
-                },
-                "position_lifecycle_state": "ProfitTargetReachedThenGiveback",
-                "sell_now_permission": true,
-                "recommended_immediate_sell_ratio_pct": 50,
-                "conditional_additional_sell_ratio_pct": 50,
-                "portfolio_action_priority": "protect_profit_exit",
-                "risk_first_action": false,
-                "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
-                "current_support": {
-                    "price": 2480.0,
-                    "role": "current_support_below_market",
-                    "basis": "gap_invalidation_price_below_market",
-                    "note": "目前股價下方較接近的可量化支撐/風控參考。"
-                },
-                "rebound_resistance": {
-                    "lower_price": 2480.0,
-                    "upper_price": 2520.0,
-                    "main_price": 2480.0,
-                    "role": "rebound_resistance_and_reduce_zone",
-                    "basis": "gap_midpoint_to_gap_failure_price",
-                    "note": "這是反彈壓力與減碼區，不是目前股價下方的多單停損支撐。"
-                },
-                "gap_invalidation_price": {
-                    "price": 2480.0,
-                    "role": "gap_invalidation_price",
-                    "basis": "gap_failure_condition.price",
-                    "note": "若收盤跌破缺口下緣 2480.0，或快速回補缺口中點 2520.0 後無法站回，則 Measuring(測量型缺口候選) 多方缺口假設失效。"
-                },
-                "rebound_reduce_zone": {
-                    "lower_price": 2480.0,
-                    "upper_price": 2520.0,
-                    "source": "gap_midpoint_to_gap_failure_price",
-                    "action": "反彈至此區間以減碼 / 降風險優先，不作為攤平買點。",
-                    "reason": "高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。"
-                },
-                "breakout_context_type": "FailedBreakout",
-                "breakout_entry_permission": "FadeBreakout",
-                "true_breakout_quality_score": 76,
-                "breakout_follow_through_quality": "Poor",
-                "second_leg_no_add_guardrail": true,
-                "final_execution_priority": "structured_lifecycle_decision",
-                "price_action_advisory_only": false,
-                "risk_override_allowed": false,
-                "risk_advisory_trigger_price": null,
-                "final_sell_trigger_price": 2540.0,
-                "final_sell_trigger_type": "structured_lifecycle_sell_permission",
-                "final_sell_trigger_action": null,
-                "target_review_mode": null,
-                "target_review_trigger_price": null,
-                "target_review_trigger_reached": null,
-                "target_review_action": null
-            },
-            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation"
-        },
-        "7917": {
-            "stock_code": "7917",
-            "stock_name": "源傑科技",
-            "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-08-13T08:30:51+08:00",
-                "effective_for_date": "2026-08-13",
-                "position_shares": 1000,
-                "decision": "hold_for_target_objective_review_with_pa_advisory_only",
-                "source": "Portfolio_target_priority_with_k3.2_semantic_correction",
-                "levels": {
-                    "target_review_trigger": 1000.0,
-                    "down_gap_upper": 740.0,
-                    "down_gap_midpoint": 739.0
-                },
-                "rules": [
-                    {
-                        "id": "target_priority_hold",
-                        "condition": "price <= 1000",
-                        "action": "hold_1000_unless_user_changes_objective",
-                        "text": "依Portfolio準則，價格未高於1,000前以持有為主；PA僅作風險警示。"
-                    },
-                    {
-                        "id": "target_review_trigger",
-                        "condition": "price > 1000",
-                        "action": "reevaluate_sale_not_automatic_sell",
-                        "automatic_sell": false,
-                        "text": "價格>1,000只進入賣出重新評估，不是自動賣出。"
-                    },
-                    {
-                        "id": "pa_risk_advisory",
-                        "condition": "price structure weakens",
-                        "action": "risk_warning_only",
-                        "automatic_sell": false,
-                        "text": "PA結構只作風險警示，不覆蓋target-priority。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
-            "previous_effective_card": null,
-            "history_tail": [],
-            "model_update": {
-                "stock_code": "7917",
-                "position_shares": 1000,
-                "position_avg_cost": 700.998,
-                "model_version": "Integrated_Forecast_v7.25k3.3_TargetPriorityTradeChain_Edition",
-                "current_rule_family": "v7.25k3.3",
-                "generated_at": "2026-08-17T08:15:14",
-                "actual_latest_trade_date": "2026-08-14",
-                "expected_latest_trade_date": "2026-08-14",
-                "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
-                "price_data_source": "FUGLEAPI",
-                "price_data_is_stale": false,
-                "current_close": 578.0,
-                "portfolio_unrealized_pnl_pct": -17.55,
-                "target_criterion": "以標的目標優先，價格行為僅作風險警示",
-                "target_objective": "價格 > 1000 再評估賣出",
-                "target_goal_status": "configured",
-                "target_goal_alignment": {
-                    "status": "aligned",
-                    "conflicts": [],
-                    "conflict_count": 0,
-                    "resolution": "target_objective_primary_review_only_price_action_advisory",
-                    "resolution_text": "依準則『以標的目標優先，價格行為僅作風險警示』；價格>1000只開啟重新評估，不自動賣出。",
-                    "entry_goal_state": "not_specified",
-                    "criterion_precedence": "準則是同一筆標的目標設定的最高執行約束；最終操作不得與準則宣告的優先順序相反。"
-                },
-                "target_goal_effective_action": {
-                    "position_action": "hold_until_target_review_trigger",
-                    "can_sell_now": false,
-                    "recommended_immediate_sell_ratio_pct": 0,
-                    "conditional_additional_sell_ratio_pct": 0,
-                    "new_entry_action": "not_specified",
-                    "price_action_role": "risk_warning_only",
-                    "reason": "依準則『以標的目標優先，價格行為僅作風險警示』；價格>1000只開啟重新評估，不自動賣出。",
-                    "final_execution_schema_version": "v7.25k3.1_trigger_semantics_v2",
-                    "final_execution_priority": "structured_lifecycle_decision",
-                    "price_action_advisory_only": false,
-                    "risk_override_allowed": false,
-                    "risk_override_trigger_price": null,
-                    "risk_advisory_trigger_price": null,
-                    "target_objective_conflict_status": "aligned",
-                    "final_sell_trigger_price": 1002.43,
-                    "final_sell_trigger_type": "profit_target_permission",
-                    "trigger_semantics_consistency_status": "pass",
-                    "risk_warning_active": false,
-                    "target_review_trigger_price": 1000.0,
-                    "target_review_trigger_operator": ">",
-                    "target_review_trigger_reached": false,
-                    "target_review_action": "wait_until_target_review_trigger"
-                },
-                "position_lifecycle_state": "TargetObjectiveReviewPending",
-                "sell_now_permission": false,
-                "recommended_immediate_sell_ratio_pct": 0,
-                "conditional_additional_sell_ratio_pct": 0,
-                "portfolio_action_priority": "target_objective_review_pending",
-                "risk_first_action": false,
-                "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
-                "current_support": {
-                    "price": 520.2,
-                    "role": "current_support_below_market",
-                    "basis": "limit_down_10_pct",
-                    "note": "目前股價下方較接近的可量化支撐/風控參考。"
-                },
-                "rebound_resistance": {
-                    "lower_price": 739.0,
-                    "upper_price": 740.0,
-                    "main_price": 740.0,
-                    "role": "rebound_resistance_and_reduce_zone",
-                    "basis": "gap_midpoint_to_gap_failure_price",
-                    "note": "這是反彈壓力與減碼區，不是目前股價下方的多單停損支撐。"
-                },
-                "gap_invalidation_price": {
-                    "price": 740.0,
-                    "role": "gap_invalidation_price",
-                    "basis": "gap_failure_condition.price",
-                    "note": "若收盤站回缺口上緣 740.0，或快速回補缺口中點 739.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。"
-                },
-                "rebound_reduce_zone": null,
-                "breakout_context_type": "NoClearBreakout",
-                "breakout_entry_permission": "Wait",
-                "true_breakout_quality_score": 0,
-                "breakout_follow_through_quality": "None",
-                "second_leg_no_add_guardrail": false,
-                "final_execution_priority": "target_objective_review",
-                "price_action_advisory_only": true,
-                "risk_override_allowed": false,
-                "risk_advisory_trigger_price": null,
-                "final_sell_trigger_price": 1000.0,
-                "final_sell_trigger_type": "target_objective_review_permission",
-                "final_sell_trigger_action": "enter_sell_reevaluation_only_not_automatic_order",
-                "target_review_mode": true,
-                "target_review_trigger_price": 1000.0,
-                "target_review_trigger_reached": false,
-                "target_review_action": "wait_until_target_review_trigger"
-            },
-            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation"
-        }
+  "schema_version": "integratedforecast_trade_card_chain_v1",
+  "trade_card_schema_version": "integratedforecast_trade_card_chain_v1",
+  "version": "Integrated_Forecast_v7.25k3.3_TargetPriorityTradeChain_Edition",
+  "current_rule_family": "v7.25k3.3",
+  "updated_at": "2026-08-17T08:30:55+08:00",
+  "timezone": "Asia/Taipei",
+  "state_writer": "台股盤前分析",
+  "prior_state_source": "github_exact_path",
+  "description": "跨交易日決策狀態；effective_card 已由 2026-08-17 盤前分析依最新 model_update 重驗。",
+  "cards": {
+    "2382": {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "previous_effective_card": {"formed_at":"2026-08-13T08:30:51+08:00","effective_for_date":"2026-08-13","position_shares":200,"decision":"hold_below_profit_target","levels":{"profit_target":424.03,"gap_support":315.5,"gap_midpoint":316.25,"gap_mm_target":353.5},"dynamic_revalidation_required":true},
+      "effective_card": {
+        "card_schema_version": "premarket_trade_card_v1",
+        "formed_at": "2026-08-17T08:30:55+08:00",
+        "as_of": "2026-08-14",
+        "effective_for_date": "2026-08-17",
+        "position_shares": 200,
+        "decision": "hold_below_profit_target",
+        "source": "IntegratedForecast_v7.25k3.3_20260817",
+        "levels": {"profit_target":424.03,"gap_support":315.5,"gap_midpoint":316.25,"gap_mm_target":353.5},
+        "rules": [
+          {"id":"hold_below_target","condition":"price < 424.03 and no risk-first trigger","action":"hold_200","text":"未達424.03且未出現risk-first觸發：續抱200股。"},
+          {"id":"gap_support_alert","condition":"close < 315.5 or 316.25 midpoint lost and cannot recover","action":"raise_alert","text":"315.5～316.25缺口支撐區失守且不能站回，降低波段信心。"},
+          {"id":"gap_mm_reference","condition":"price approaches 353.5","action":"observe_reaction","automatic_sell":false,"text":"353.5為缺口MM參考，不是自動賣價。"},
+          {"id":"profit_target_permission","condition":"price >= 424.03","action":"open_sell_evaluation","automatic_sell":false,"text":"424.03開啟賣出評估。"}
+        ],
+        "dynamic_revalidation_required": true
+      },
+      "history_tail": [{"formed_at":"2026-08-13T08:30:51+08:00","effective_for_date":"2026-08-13","decision":"hold_below_profit_target","levels":{"profit_target":424.03,"gap_support":315.5,"gap_midpoint":316.25,"gap_mm_target":353.5}}],
+      "model_update": {"stock_code":"2382","position_shares":200,"position_avg_cost":353.355,"model_version":"Integrated_Forecast_v7.25k3.3_TargetPriorityTradeChain_Edition","current_rule_family":"v7.25k3.3","generated_at":"2026-08-17T08:15:14","actual_latest_trade_date":"2026-08-14","expected_latest_trade_date":"2026-08-14","expected_latest_trade_date_basis":"conservative_previous_weekday_until_same_day_bar_observed","price_data_source":"FUGLEAPI","price_data_is_stale":false,"current_close":327.5,"target_criterion":"嚴格遵守價格行為","target_objective":"達到基本獲利門檻%賣出","position_lifecycle_state":"BelowTargetHoldUntilPriceTrigger","sell_now_permission":false,"recommended_immediate_sell_ratio_pct":0,"conditional_additional_sell_ratio_pct":0,"final_execution_priority":"structured_lifecycle_decision","price_action_advisory_only":false,"risk_override_allowed":false,"final_sell_trigger_price":424.03,"final_sell_trigger_type":"profit_target_permission","trigger_semantics_consistency_status":"pass","current_support":315.5,"gap_midpoint":316.25,"gap_mm_target":353.5,"breakout_context_type":"FailedBreakout","breakout_follow_through_quality":"Poor","decision_delivery_candidate_date":"2026-08-17"},
+      "continuity_status": "premarket_revalidated_effective"
+    },
+    "3081": {
+      "stock_code": "3081",
+      "stock_name": "聯亞",
+      "previous_effective_card": {"formed_at":"2026-08-13T08:30:51+08:00","effective_for_date":"2026-08-13","position_shares":60,"decision":"conditional_hold_at_profit_threshold_with_breakout_management","levels":{"hold_above":2500.0,"profit_review_zone":[2716.88,2728.0],"breakout_hold_above":2728.0,"target_1":3000.0,"target_2":[3150.0,3300.0],"defense_reference":2480.0,"gap_midpoint":2520.0,"model_gap_mm_target":2997.5},"dynamic_revalidation_required":true},
+      "effective_card": {
+        "card_schema_version": "premarket_trade_card_v1",
+        "formed_at": "2026-08-17T08:30:55+08:00",
+        "as_of": "2026-08-14",
+        "effective_for_date": "2026-08-17",
+        "position_shares": 60,
+        "decision": "protect_profit_sell_50pct_then_manage_remainder",
+        "source": "IntegratedForecast_v7.25k3.3_20260817",
+        "levels": {"current_close":2540.0,"historical_profit_floor":2716.88,"gap_midpoint":2520.0,"remaining_exit_floor":2480.0,"gap_mm_target":2794.0},
+        "rules": [
+          {"id":"immediate_reduce_50","condition":"ProfitTargetReachedThenGiveback and sell_now_permission=true","action":"sell_30_hold_30_if_filled","sell_shares":30,"remaining_shares_if_filled":30,"text":"今日Final Execution取得50%減碼許可；以Portfolio Actual成交為準。"},
+          {"id":"remaining_floor","condition":"after 50% reduction, close < 2480 or rebound cannot recover 10% threshold","action":"exit_remaining_30_if_prior_sale_filled","text":"剩餘部位收盤跌破2480，或反彈仍無法收復10%門檻價，退出其餘部位。"},
+          {"id":"no_average_down","condition":"price remains below recovered gap structure","action":"no_add","text":"高價高波動題材股不得把2480～2520當攤平買點。"}
+        ],
+        "dynamic_revalidation_required": true
+      },
+      "history_tail": [
+        {"formed_at":"2026-08-12","source":"user_confirmed_trade_card","levels":{"hold_above":2500.0,"profit_review_zone":[2716.88,2728.0],"breakout_hold_above":2728.0,"target_1":3000.0,"target_2":[3150.0,3300.0],"defense_reference":2377.0}},
+        {"formed_at":"2026-08-13T08:30:51+08:00","effective_for_date":"2026-08-13","decision":"conditional_hold_at_profit_threshold_with_breakout_management","levels":{"hold_above":2500.0,"profit_review_zone":[2716.88,2728.0],"breakout_hold_above":2728.0,"target_1":3000.0,"target_2":[3150.0,3300.0],"defense_reference":2480.0,"gap_midpoint":2520.0,"model_gap_mm_target":2997.5}}
+      ],
+      "model_update": {"stock_code":"3081","position_shares":60,"position_avg_cost":2264.066667,"model_version":"Integrated_Forecast_v7.25k3.3_TargetPriorityTradeChain_Edition","current_rule_family":"v7.25k3.3","generated_at":"2026-08-17T08:15:14","actual_latest_trade_date":"2026-08-14","expected_latest_trade_date":"2026-08-14","expected_latest_trade_date_basis":"conservative_previous_weekday_until_same_day_bar_observed","price_data_source":"FUGLEAPI","price_data_is_stale":false,"current_close":2540.0,"portfolio_unrealized_pnl_pct":12.19,"target_criterion":"嚴格遵守價格行為","position_lifecycle_state":"ProfitTargetReachedThenGiveback","sell_now_permission":true,"recommended_immediate_sell_ratio_pct":50,"conditional_additional_sell_ratio_pct":50,"final_execution_priority":"structured_lifecycle_decision","price_action_advisory_only":false,"risk_override_allowed":false,"final_sell_trigger_price":2540.0,"final_sell_trigger_type":"structured_lifecycle_sell_permission","trigger_semantics_consistency_status":"pass","historical_profit_protection_floor_price":2716.88,"historical_profit_protection_breached":true,"remaining_position_exit_floor_price":2480.0,"gap_midpoint":2520.0,"gap_mm_target":2794.0,"breakout_context_type":"FailedBreakout","breakout_follow_through_quality":"Poor","decision_delivery_candidate_date":"2026-08-17"},
+      "continuity_status": "premarket_revalidated_effective"
+    },
+    "7917": {
+      "stock_code": "7917",
+      "stock_name": "源傑科技",
+      "previous_effective_card": {"formed_at":"2026-08-13T08:30:51+08:00","effective_for_date":"2026-08-13","position_shares":1000,"decision":"hold_for_target_objective_review_with_pa_advisory_only","levels":{"target_review_trigger":1000.0,"gap_midpoint_advisory":739.0,"gap_invalidation_advisory":740.0},"dynamic_revalidation_required":true},
+      "effective_card": {
+        "card_schema_version": "premarket_trade_card_v1",
+        "formed_at": "2026-08-17T08:30:55+08:00",
+        "as_of": "2026-08-14",
+        "effective_for_date": "2026-08-17",
+        "position_shares": 1000,
+        "decision": "hold_for_target_objective_review_with_pa_advisory_only",
+        "source": "IntegratedForecast_v7.25k3.3_20260817_root_final_execution",
+        "levels": {"target_review_trigger":1000.0,"gap_midpoint_advisory":739.0,"gap_invalidation_advisory":740.0},
+        "rules": [
+          {"id":"hold_until_target_review","condition":"price <= 1000","action":"hold_1000","text":"價格未高於1000：續抱1000股。"},
+          {"id":"target_review_permission","condition":"price > 1000","action":"enter_sell_reevaluation_only","automatic_sell":false,"text":"價格>1000只開啟重新評估賣出，不自動賣。"},
+          {"id":"pa_advisory_only","condition":"PA risk levels change","action":"risk_warning_only","automatic_sell":false,"text":"PA僅風險警示，不得覆蓋Target Objective Final Execution。"}
+        ],
+        "dynamic_revalidation_required": true
+      },
+      "history_tail": [{"formed_at":"2026-08-13T08:30:51+08:00","effective_for_date":"2026-08-13","decision":"hold_for_target_objective_review_with_pa_advisory_only","levels":{"target_review_trigger":1000.0,"gap_midpoint_advisory":739.0,"gap_invalidation_advisory":740.0}}],
+      "model_update": {"stock_code":"7917","position_shares":1000,"model_version":"Integrated_Forecast_v7.25k3.3_TargetPriorityTradeChain_Edition","current_rule_family":"v7.25k3.3","generated_at":"2026-08-17T08:15:14","actual_latest_trade_date":"2026-08-14","expected_latest_trade_date":"2026-08-14","expected_latest_trade_date_basis":"conservative_previous_weekday_until_same_day_bar_observed","price_data_source":"FUGLEAPI","price_data_is_stale":false,"current_close":578.0,"portfolio_unrealized_pnl_pct":-17.55,"target_criterion":"以標的目標優先，價格行為僅作風險警示","target_objective":"價格 > 1000 再評估賣出","position_lifecycle_state":"TargetObjectiveReviewPending","sell_now_permission":false,"recommended_immediate_sell_ratio_pct":0,"conditional_additional_sell_ratio_pct":0,"final_execution_priority":"target_objective_review","price_action_advisory_only":true,"risk_override_allowed":false,"final_sell_trigger_price":1000.0,"final_sell_trigger_type":"target_objective_review_permission","final_sell_trigger_action":"enter_sell_reevaluation_only_not_automatic_order","target_review_mode":true,"target_review_trigger_price":1000.0,"target_review_trigger_reached":false,"target_review_action":"wait_until_target_review_trigger","price_history_mode":"limited_history_new_listing","price_history_rows":13,"full_model_min_rows":220,"full_model_eligible":false,"yfinance_fallback_allowed":false,"gap_midpoint_advisory":739.0,"gap_invalidation_advisory":740.0,"decision_delivery_candidate_date":"2026-08-17"},
+      "continuity_status": "premarket_revalidated_effective"
     }
+  }
 }
