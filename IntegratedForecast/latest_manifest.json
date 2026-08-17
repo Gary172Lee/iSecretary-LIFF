@@ -1,7 +1,7 @@
 {
-    "version": "Integrated_Forecast_v7.25k3.4b_IntradayEmergingBoardPropagationFix_Edition",
+    "version": "Integrated_Forecast_v7.25k3.4c_IntradayEmergingMMHardGuard_Edition",
     "minimum_supported_version": "v7.25d1",
-    "current_rule_family": "v7.25k3.4b",
+    "current_rule_family": "v7.25k3.4c",
     "backward_compatible_with": [
         "v7.25d1",
         "v7.25e",
@@ -27,10 +27,11 @@
         "v7.25k3.2",
         "v7.25k3.3",
         "v7.25k3.4",
-        "v7.25k3.4a"
+        "v7.25k3.4a",
+        "v7.25k3.4b"
     ],
     "version_policy": "minimum_supported_version",
-    "updated_at": "2026-08-17T11:48:57",
+    "updated_at": "2026-08-17T12:02:19",
     "timezone": "Asia/Taipei",
     "description": "固定入口檔。ChatGPT 排程請先讀取本檔，再依 files[].analysis_json 與 files[].chart_png 讀取當日最新資料。",
     "github_repo": "Gary172Lee/iSecretary-LIFF",
@@ -52,7 +53,7 @@
     "files": [
         {
             "minimum_supported_version": "v7.25d1",
-            "current_rule_family": "v7.25k3.4b",
+            "current_rule_family": "v7.25k3.4c",
             "backward_compatible_with": [
                 "v7.25d1",
                 "v7.25e",
@@ -78,13 +79,14 @@
                 "v7.25k3.2",
                 "v7.25k3.3",
                 "v7.25k3.4",
-                "v7.25k3.4a"
+                "v7.25k3.4a",
+                "v7.25k3.4b"
             ],
             "version_policy": "minimum_supported_version",
             "stock_code": "2382",
             "stock_name": "廣達",
             "ticker": "2382.TW",
-            "run_datetime": "2026-08-17T11:46:15",
+            "run_datetime": "2026-08-17T11:59:29",
             "file_date": "2026-08-17",
             "daily_output_tag": "20260817",
             "output_naming_policy": "daily_stable_overwrite",
@@ -1210,7 +1212,7 @@
             },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-08-17T11:46:15",
+                "decision_generated_at": "2026-08-17T11:59:29",
                 "decision_market_data_date": "2026-08-14",
                 "decision_delivery_candidate_date": "2026-08-18",
                 "decision_delivery_date": null,
@@ -1254,7 +1256,7 @@
                 "cohort_t1_t5_metrics": {
                     "T+1": {
                         "date": "2026-08-17",
-                        "close_return_pct": 0.0,
+                        "close_return_pct": -0.1499,
                         "cumulative_mfe_pct": 1.6492,
                         "cumulative_mae_pct": -0.8996,
                         "source": "yfinance:2382.TW"
@@ -1269,7 +1271,7 @@
             "chart_png": "IntegratedForecast/png/2382_廣達_Chart_20260817.png",
             "raw_ohlcv": "IntegratedForecast/raw_ohlcv/2382_廣達_20260817_ohlcv.json",
             "pdf_file": "2382_廣達_PA_Analysis_20260817.pdf",
-            "json_sha": "02c6b416d4ad88fc1237d2de2f50e4619de3bd4c8c690fd727f4ba363a5a5384",
+            "json_sha": "13ce3712b3a5f872e683935ac65a41bbc5d89ab43c08a89f3b386ceb38cb0a09",
             "png_sha": "bf5d74d93ffd3a30387ba9dd16ca407d87a6e332e93b9287b9dadc2243c1f018",
             "chart_read_status": "success",
             "profile_risk_triggered_summary": "未觸發標的專屬風險規則",
@@ -1286,11 +1288,11 @@
             "target_review_trigger_reached": null,
             "target_review_action": null,
             "final_sell_trigger_action": null,
-            "intraday_policy_version": "intraday_live_overlay_v1.2",
+            "intraday_policy_version": "intraday_live_overlay_v1.3",
             "market_phase": "regular_intraday_window",
             "current_market_price": 333.5,
             "current_price_basis": "fugle_intraday_last_trade",
-            "current_price_as_of": "2026-08-17T11:46:15",
+            "current_price_as_of": "2026-08-17T11:59:27",
             "intraday_price_override_applied": true,
             "intraday_fetch_status": "live_intraday_ok",
             "json_local_validation_status": "pass",
@@ -1300,8 +1302,8 @@
             "json_fetch_validation_status": "pass",
             "json_remote_fetch_validation_status": "pass",
             "json_fetch_http_status": 200,
-            "json_remote_blob_sha": "b6f6d7342fdaf2c6f49e75c7dc963a910f57b9fc",
-            "json_remote_content_sha256": "02c6b416d4ad88fc1237d2de2f50e4619de3bd4c8c690fd727f4ba363a5a5384",
+            "json_remote_blob_sha": "171a27aa106098c407269ffebc00a9a4ae12541e",
+            "json_remote_content_sha256": "13ce3712b3a5f872e683935ac65a41bbc5d89ab43c08a89f3b386ceb38cb0a09",
             "json_sha256_match": true,
             "png_local_validation_status": "pass",
             "png_sync_queued": true,
@@ -1322,20 +1324,20 @@
             "pdf_github_sync_enabled": false,
             "pdf_remote_fetch_validation_status": "not_applicable_pdf_not_synced_to_github",
             "artifact_validation_phase": "candidate_commit_remote_validation_completed",
-            "artifact_validation_ref": "e325b019187fd9f10d3e62f87ed09c1ae8f246eb",
+            "artifact_validation_ref": "cdc47fdf3b55a7c3df54c26a8bdf2d74f9326074",
             "artifact_validation_summary": {
                 "status": "pass",
                 "json": "pass",
                 "png": "pass",
                 "raw_ohlcv": "pass",
                 "pdf": "pass",
-                "validated_ref": "e325b019187fd9f10d3e62f87ed09c1ae8f246eb",
+                "validated_ref": "cdc47fdf3b55a7c3df54c26a8bdf2d74f9326074",
                 "path_encoding": "utf8_percent_encoded_contents_api"
             }
         },
         {
             "minimum_supported_version": "v7.25d1",
-            "current_rule_family": "v7.25k3.4b",
+            "current_rule_family": "v7.25k3.4c",
             "backward_compatible_with": [
                 "v7.25d1",
                 "v7.25e",
@@ -1361,13 +1363,14 @@
                 "v7.25k3.2",
                 "v7.25k3.3",
                 "v7.25k3.4",
-                "v7.25k3.4a"
+                "v7.25k3.4a",
+                "v7.25k3.4b"
             ],
             "version_policy": "minimum_supported_version",
             "stock_code": "3081",
             "stock_name": "聯亞",
             "ticker": "3081.TWO",
-            "run_datetime": "2026-08-17T11:47:09",
+            "run_datetime": "2026-08-17T12:00:28",
             "file_date": "2026-08-17",
             "daily_output_tag": "20260817",
             "output_naming_policy": "daily_stable_overwrite",
@@ -2532,7 +2535,7 @@
             },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-08-17T11:47:09",
+                "decision_generated_at": "2026-08-17T12:00:28",
                 "decision_market_data_date": "2026-08-14",
                 "decision_delivery_candidate_date": "2026-08-18",
                 "decision_delivery_date": null,
@@ -2577,13 +2580,13 @@
                 "cohort_t1_t5_metrics": {
                     "T+1": {
                         "date": "2026-08-17",
-                        "close_return_pct": -1.9713,
-                        "cumulative_mfe_pct": -1.2545,
+                        "close_return_pct": 0.0,
+                        "cumulative_mfe_pct": 0.0,
                         "cumulative_mae_pct": -5.914,
                         "source": "yfinance:3081.TWO"
                     }
                 },
-                "cohort_mfe_5d_pct": -1.2545,
+                "cohort_mfe_5d_pct": 0.0,
                 "cohort_mae_5d_pct": -5.914,
                 "pullback_zone_touch_status": "not_touched_in_observed_window",
                 "pullback_zone_first_touch_date": null
@@ -2592,7 +2595,7 @@
             "chart_png": "IntegratedForecast/png/3081_聯亞_Chart_20260817.png",
             "raw_ohlcv": "IntegratedForecast/raw_ohlcv/3081_聯亞_20260817_ohlcv.json",
             "pdf_file": "3081_聯亞_PA_Analysis_20260817.pdf",
-            "json_sha": "46210a0e12d2dab838364b6ddeea103f5bfaf13e67ab9bd97580b7088322205f",
+            "json_sha": "4cad420f5dcfde981475b2dd791905562ba45e8ac175e52f32062a4777728c9c",
             "png_sha": "1a1fe6fd9f49177362c438309b905b42fee9e3350323f137c0c3d2b9a71ad98c",
             "chart_read_status": "success",
             "profile_risk_triggered_summary": "未觸發標的專屬風險規則",
@@ -2609,11 +2612,11 @@
             "target_review_trigger_reached": null,
             "target_review_action": null,
             "final_sell_trigger_action": null,
-            "intraday_policy_version": "intraday_live_overlay_v1.2",
+            "intraday_policy_version": "intraday_live_overlay_v1.3",
             "market_phase": "regular_intraday_window",
             "current_market_price": 2790.0,
             "current_price_basis": "fugle_intraday_last_trade",
-            "current_price_as_of": "2026-08-17T11:46:36",
+            "current_price_as_of": "2026-08-17T12:00:18",
             "intraday_price_override_applied": true,
             "intraday_fetch_status": "live_intraday_ok",
             "json_local_validation_status": "pass",
@@ -2623,8 +2626,8 @@
             "json_fetch_validation_status": "pass",
             "json_remote_fetch_validation_status": "pass",
             "json_fetch_http_status": 200,
-            "json_remote_blob_sha": "117cb79b5758366de1053de27bcab93beb671021",
-            "json_remote_content_sha256": "46210a0e12d2dab838364b6ddeea103f5bfaf13e67ab9bd97580b7088322205f",
+            "json_remote_blob_sha": "792ff5f272486da4b0b9aca4c246e91816270635",
+            "json_remote_content_sha256": "4cad420f5dcfde981475b2dd791905562ba45e8ac175e52f32062a4777728c9c",
             "json_sha256_match": true,
             "png_local_validation_status": "pass",
             "png_sync_queued": true,
@@ -2645,20 +2648,20 @@
             "pdf_github_sync_enabled": false,
             "pdf_remote_fetch_validation_status": "not_applicable_pdf_not_synced_to_github",
             "artifact_validation_phase": "candidate_commit_remote_validation_completed",
-            "artifact_validation_ref": "e325b019187fd9f10d3e62f87ed09c1ae8f246eb",
+            "artifact_validation_ref": "cdc47fdf3b55a7c3df54c26a8bdf2d74f9326074",
             "artifact_validation_summary": {
                 "status": "pass",
                 "json": "pass",
                 "png": "pass",
                 "raw_ohlcv": "pass",
                 "pdf": "pass",
-                "validated_ref": "e325b019187fd9f10d3e62f87ed09c1ae8f246eb",
+                "validated_ref": "cdc47fdf3b55a7c3df54c26a8bdf2d74f9326074",
                 "path_encoding": "utf8_percent_encoded_contents_api"
             }
         },
         {
             "minimum_supported_version": "v7.25d1",
-            "current_rule_family": "v7.25k3.4b",
+            "current_rule_family": "v7.25k3.4c",
             "backward_compatible_with": [
                 "v7.25d1",
                 "v7.25e",
@@ -2684,13 +2687,14 @@
                 "v7.25k3.2",
                 "v7.25k3.3",
                 "v7.25k3.4",
-                "v7.25k3.4a"
+                "v7.25k3.4a",
+                "v7.25k3.4b"
             ],
             "version_policy": "minimum_supported_version",
             "stock_code": "7917",
             "stock_name": "源傑科技",
             "ticker": "7917",
-            "run_datetime": "2026-08-17T11:47:56",
+            "run_datetime": "2026-08-17T12:01:14",
             "file_date": "2026-08-17",
             "daily_output_tag": "20260817",
             "output_naming_policy": "daily_stable_overwrite",
@@ -3703,7 +3707,7 @@
             },
             "execution_backtest_summary": {
                 "execution_basis_version": "v7.25j1_execution_basis_v2",
-                "decision_generated_at": "2026-08-17T11:47:56",
+                "decision_generated_at": "2026-08-17T12:01:14",
                 "decision_market_data_date": "2026-08-14",
                 "decision_delivery_candidate_date": "2026-08-18",
                 "decision_delivery_date": null,
@@ -3754,7 +3758,7 @@
             "chart_png": null,
             "raw_ohlcv": "IntegratedForecast/raw_ohlcv/7917_源傑科技_20260817_ohlcv.json",
             "pdf_file": "7917_源傑科技_PA_Analysis_20260817.pdf",
-            "json_sha": "f839eaee20cee5a9aa93d636bb4ed4d465717461ab601638572ffa7ce8097610",
+            "json_sha": "4309e8233dd8f20ffdb869b26f7dd8e3281bee019101907576c2c56971d2d7c0",
             "png_sha": null,
             "chart_read_status": "missing",
             "profile_risk_triggered_summary": "未觸發標的專屬風險規則",
@@ -3771,11 +3775,11 @@
             "target_review_trigger_reached": false,
             "target_review_action": "wait_until_target_review_trigger",
             "final_sell_trigger_action": "enter_sell_reevaluation_only_not_automatic_order",
-            "intraday_policy_version": "intraday_live_overlay_v1.2",
+            "intraday_policy_version": "intraday_live_overlay_v1.3",
             "market_phase": "regular_intraday_window",
             "current_market_price": 620.0,
             "current_price_basis": "fugle_intraday_last_trade",
-            "current_price_as_of": "2026-08-17T11:36:34",
+            "current_price_as_of": "2026-08-17T11:56:43",
             "intraday_price_override_applied": true,
             "intraday_fetch_status": "live_intraday_ok",
             "json_local_validation_status": "pass",
@@ -3785,8 +3789,8 @@
             "json_fetch_validation_status": "pass",
             "json_remote_fetch_validation_status": "pass",
             "json_fetch_http_status": 200,
-            "json_remote_blob_sha": "6f64ad7fff6caeacf6ce009b5ad9d59f981f0a51",
-            "json_remote_content_sha256": "f839eaee20cee5a9aa93d636bb4ed4d465717461ab601638572ffa7ce8097610",
+            "json_remote_blob_sha": "450a472391d557a8669ad4cab28841b12c9b4bb3",
+            "json_remote_content_sha256": "4309e8233dd8f20ffdb869b26f7dd8e3281bee019101907576c2c56971d2d7c0",
             "json_sha256_match": true,
             "png_local_validation_status": "not_applicable",
             "png_sync_queued": false,
@@ -3807,14 +3811,14 @@
             "pdf_github_sync_enabled": false,
             "pdf_remote_fetch_validation_status": "not_applicable_pdf_not_synced_to_github",
             "artifact_validation_phase": "candidate_commit_remote_validation_completed",
-            "artifact_validation_ref": "e325b019187fd9f10d3e62f87ed09c1ae8f246eb",
+            "artifact_validation_ref": "cdc47fdf3b55a7c3df54c26a8bdf2d74f9326074",
             "artifact_validation_summary": {
                 "status": "pass",
                 "json": "pass",
                 "png": "not_applicable_no_png",
                 "raw_ohlcv": "pass",
                 "pdf": "pass",
-                "validated_ref": "e325b019187fd9f10d3e62f87ed09c1ae8f246eb",
+                "validated_ref": "cdc47fdf3b55a7c3df54c26a8bdf2d74f9326074",
                 "path_encoding": "utf8_percent_encoded_contents_api"
             }
         }
@@ -3825,14 +3829,14 @@
     "trade_card_prior_state_source": "github_exact_path",
     "trade_card_path_exists": true,
     "trade_card_sync_queued": true,
-    "intraday_policy_version": "intraday_live_overlay_v1.2",
+    "intraday_policy_version": "intraday_live_overlay_v1.3",
     "intraday_design": "completed_daily_structure_plus_live_intraday_overlay",
     "intraday_current_price_semantics": "during a fresh intraday quote, current_close/current_market_price use Fugle last traded price while daily PA remains completed-bars-only",
     "manifest_schema_version": "v7.25k3_execution_and_artifact_validation_v1",
     "artifact_path_validation_version": "v7.25k3_remote_path_validation_v1",
     "artifact_path_validation_status": "pass",
-    "artifact_path_validation_ref": "e325b019187fd9f10d3e62f87ed09c1ae8f246eb",
+    "artifact_path_validation_ref": "cdc47fdf3b55a7c3df54c26a8bdf2d74f9326074",
     "artifact_path_validation_phase": "candidate_commit_remote_validation_completed",
     "artifact_path_validation_method": "GitHub Contents API exact UTF-8 path readback against candidate commit",
-    "artifact_path_validation_candidate_commit": "e325b019187fd9f10d3e62f87ed09c1ae8f246eb"
+    "artifact_path_validation_candidate_commit": "cdc47fdf3b55a7c3df54c26a8bdf2d74f9326074"
 }

@@ -1,8 +1,8 @@
 {
     "metadata": {
-        "version": "Integrated_Forecast_v7.25k3.4b_IntradayEmergingBoardPropagationFix_Edition",
+        "version": "Integrated_Forecast_v7.25k3.4c_IntradayEmergingMMHardGuard_Edition",
         "minimum_supported_version": "v7.25d1",
-        "current_rule_family": "v7.25k3.4b",
+        "current_rule_family": "v7.25k3.4c",
         "backward_compatible_with": [
             "v7.25d1",
             "v7.25e",
@@ -28,11 +28,12 @@
             "v7.25k3.2",
             "v7.25k3.3",
             "v7.25k3.4",
-            "v7.25k3.4a"
+            "v7.25k3.4a",
+            "v7.25k3.4b"
         ],
         "version_policy": "minimum_supported_version",
-        "intraday_policy_version": "intraday_live_overlay_v1.2",
-        "run_datetime": "2026-08-17T11:47:56",
+        "intraday_policy_version": "intraday_live_overlay_v1.3",
+        "run_datetime": "2026-08-17T12:01:14",
         "daily_output_tag": "20260817",
         "output_naming_policy": "daily_stable_overwrite",
         "stock_code": "7917",
@@ -188,7 +189,7 @@
             }
         ],
         "daily_pa_market_board": "EMERGING",
-        "daily_pa_market_board_source": "df_attrs",
+        "daily_pa_market_board_source": "runtime_override",
         "daily_pa_emerging_limit_semantics_applied": true,
         "daily_pa_legal_limit_guard_status": "emerging_unbounded_technical_targets",
         "limit_up_10_pct": 635.8,
@@ -241,8 +242,8 @@
             "condition": "若收盤站回缺口上緣 740.0，或快速回補缺口中點 739.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。",
             "action_hint": "空方缺口失效時，應降低續跌權重。"
         },
-        "gap_MM_Target_Up": null,
-        "gap_MM_Target_Down": 635.8,
+        "gap_MM_Target_Up": "不適用",
+        "gap_MM_Target_Down": 710.0,
         "gap_support_resistance_level": 740.0,
         "near_gap_target_flag": false,
         "countertrend_forbidden_flag": true,
@@ -403,6 +404,16 @@
         "long_window_indicator_interpretation": "insufficient_history_do_not_claim_validation",
         "yfinance_fallback_allowed": false,
         "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
+        "emerging_gap_mm_before_guard": {
+            "up": null,
+            "down": 635.8
+        },
+        "emerging_gap_mm_after_guard": {
+            "up": "不適用",
+            "down": 710.0
+        },
+        "emerging_gap_mm_legacy_reference_collision_detected": false,
+        "emerging_gap_mm_hard_guard_status": "pass_recomputed_unbounded",
         "us_peer_avg_pct": NaN,
         "tw_peer_avg_pct": NaN,
         "institutional_net_buy": -8.0,
@@ -410,9 +421,9 @@
         "gap_consistency_status": "pass_unfilled_gap_consistent",
         "gap_consistency_rule": "v7.24：未回補缺口不得輸出已回補/中性；Measuring Gap 必須說明測量目標與失敗條件。",
         "gap_text_cleanup_status": "pass_no_residual_gap_text",
-        "intraday_policy_version": "intraday_live_overlay_v1.2",
+        "intraday_policy_version": "intraday_live_overlay_v1.3",
         "intraday_market_snapshot": {
-            "intraday_policy_version": "intraday_live_overlay_v1.2",
+            "intraday_policy_version": "intraday_live_overlay_v1.3",
             "market_phase_window": "regular_intraday_window",
             "market_board": "EMERGING",
             "is_emerging": true,
@@ -420,7 +431,7 @@
             "scheduled_close_time": "15:00",
             "delayed_close_supported_until": null,
             "session_date": "2026-08-17",
-            "evaluated_at": "2026-08-17T11:47:56",
+            "evaluated_at": "2026-08-17T12:01:14",
             "intraday_fetch_expected": true,
             "price_limit_applicable": false,
             "legal_price_limit_rule": "no_daily_price_limit",
@@ -451,14 +462,14 @@
             "best_ask": 620.0,
             "bid_ask_spread": 10.0,
             "bid_ask_spread_pct": 1.626,
-            "trade_volume": 220238.0,
-            "trade_value": 135574541.0,
-            "transaction_count": 309.0,
-            "trade_volume_at_bid": 77858.0,
-            "trade_volume_at_ask": 129137.0,
-            "last_trade_time": "2026-08-17T11:36:34",
-            "freshness_age_seconds": 682,
-            "freshness_status": "aging",
+            "trade_volume": 220347.0,
+            "trade_value": 135641041.0,
+            "transaction_count": 311.0,
+            "trade_volume_at_bid": 77966.0,
+            "trade_volume_at_ask": 129138.0,
+            "last_trade_time": "2026-08-17T11:56:43",
+            "freshness_age_seconds": 271,
+            "freshness_status": "fresh",
             "is_usable_for_current_price": true,
             "is_trial": false,
             "is_open": null,
@@ -472,24 +483,15 @@
             "session_return_from_open_pct": 7.266,
             "distance_to_session_avg_pct": 0.718,
             "session_range_position_0_1": 0.667,
-            "candles_count": 24,
+            "candles_count": 25,
             "candle_volume_unit": "shares",
             "last_15m_return_pct": 0.0,
-            "intraday_5m_trend": "sideways",
-            "intraday_5m_slope_per_bar": 0.0571,
+            "intraday_5m_trend": "up",
+            "intraday_5m_slope_per_bar": 0.5714,
             "opening_range_15m_high": 590.0,
             "opening_range_15m_low": 570.0,
             "opening_range_status": "above_opening_range",
             "candles_tail": [
-                {
-                    "date": "2026-08-17T10:20:00+0800",
-                    "open": 632,
-                    "high": 644,
-                    "low": 628,
-                    "close": 644,
-                    "volume": 10366,
-                    "average": 609.42
-                },
                 {
                     "date": "2026-08-17T10:25:00+0800",
                     "open": 635,
@@ -588,6 +590,15 @@
                     "close": 620,
                     "volume": 1,
                     "average": 615.58
+                },
+                {
+                    "date": "2026-08-17T11:55:00+0800",
+                    "open": 610,
+                    "high": 620,
+                    "low": 610,
+                    "close": 620,
+                    "volume": 109,
+                    "average": 615.58
                 }
             ]
         },
@@ -598,17 +609,17 @@
         "daily_completed_trade_date": "2026-08-14",
         "current_market_price": 620.0,
         "current_price_basis": "fugle_intraday_last_trade",
-        "current_price_as_of": "2026-08-17T11:36:34",
+        "current_price_as_of": "2026-08-17T11:56:43",
         "intraday_price_override_applied": true,
         "intraday_execution_reference_allowed": true,
         "intraday_behavior_summary": {
-            "freshness_status": "aging",
-            "freshness_age_seconds": 682,
+            "freshness_status": "fresh",
+            "freshness_age_seconds": 271,
             "vs_previous_close_pct": 7.266,
             "session_return_from_open_pct": 7.266,
             "distance_to_session_avg_pct": 0.718,
             "session_range_position_0_1": 0.667,
-            "intraday_5m_trend": "sideways",
+            "intraday_5m_trend": "up",
             "last_15m_return_pct": 0.0,
             "opening_range_status": "above_opening_range",
             "best_bid": 610.0,
@@ -699,7 +710,7 @@
         "portfolio_action_priority": "target_objective_review_pending",
         "action_zone_summary": "最終操作優先級=target_objective_review；價格>1000尚未觸發重新評估；PriceAction只作風險警示。",
         "minimum_supported_version": "v7.25d1",
-        "current_rule_family": "v7.25k3.4b",
+        "current_rule_family": "v7.25k3.4c",
         "backward_compatible_with": [
             "v7.25d1",
             "v7.25e",
@@ -725,12 +736,13 @@
             "v7.25k3.2",
             "v7.25k3.3",
             "v7.25k3.4",
-            "v7.25k3.4a"
+            "v7.25k3.4a",
+            "v7.25k3.4b"
         ],
         "manifest_version_policy": {
             "mode": "minimum_supported_version",
             "minimum_supported_version": "v7.25d1",
-            "current_rule_family": "v7.25k3.4b",
+            "current_rule_family": "v7.25k3.4c",
             "backward_compatible_with": [
                 "v7.25d1",
                 "v7.25e",
@@ -756,7 +768,8 @@
                 "v7.25k3.2",
                 "v7.25k3.3",
                 "v7.25k3.4",
-                "v7.25k3.4a"
+                "v7.25k3.4a",
+                "v7.25k3.4b"
             ],
             "note": "排程不得再以 version 字串完全相等作為唯一判斷；高於最低相容版本且欄位齊全者，應依 current_rule_family 套用規則。"
         },
@@ -1566,7 +1579,7 @@
         "final_sell_trigger_action": "enter_sell_reevaluation_only_not_automatic_order",
         "execution_backtest_summary": {
             "execution_basis_version": "v7.25j1_execution_basis_v2",
-            "decision_generated_at": "2026-08-17T11:47:56",
+            "decision_generated_at": "2026-08-17T12:01:14",
             "decision_market_data_date": "2026-08-14",
             "decision_delivery_candidate_date": "2026-08-18",
             "decision_delivery_date": null,
@@ -1654,18 +1667,18 @@
         "target_goal_warnings": []
     },
     "prediction_tracker": {
-        "version": "Integrated_Forecast_v7.25k3.4b_IntradayEmergingBoardPropagationFix_Edition",
+        "version": "Integrated_Forecast_v7.25k3.4c_IntradayEmergingMMHardGuard_Edition",
         "stock_code": "7917",
         "stock_name": "源傑科技",
         "ticker": "7917",
-        "run_datetime": "2026-08-17T11:47:56",
+        "run_datetime": "2026-08-17T12:01:14",
         "base_date": "2026-08-14",
         "base_close": 620.0,
         "status": "pending",
         "items": {
             "T+1": {
-                "prediction_price": null,
-                "prediction_direction": null,
+                "prediction_price": 630.0,
+                "prediction_direction": "Up",
                 "actual_date": null,
                 "actual_close": null,
                 "actual_direction": null,
@@ -1677,8 +1690,8 @@
                 "updated_at": null
             },
             "T+2": {
-                "prediction_price": null,
-                "prediction_direction": null,
+                "prediction_price": 635.0,
+                "prediction_direction": "Up",
                 "actual_date": null,
                 "actual_close": null,
                 "actual_direction": null,
@@ -1690,8 +1703,8 @@
                 "updated_at": null
             },
             "T+3": {
-                "prediction_price": null,
-                "prediction_direction": null,
+                "prediction_price": 635.0,
+                "prediction_direction": "Up",
                 "actual_date": null,
                 "actual_close": null,
                 "actual_direction": null,
@@ -1772,7 +1785,7 @@
             "status": "pending_actuals",
             "purpose": "以實際買賣紀錄優先、下一交易日開盤基準次之，回測立即賣出比例、剩餘部位底線、反彈區與完整退出條件。",
             "execution_basis_version": "v7.25j1_execution_basis_v2",
-            "decision_generated_at": "2026-08-17T11:47:56",
+            "decision_generated_at": "2026-08-17T12:01:14",
             "decision_market_data_date": "2026-08-14",
             "decision_timezone": "Asia/Taipei",
             "decision_delivery_rule": "next_not_missed_08_20_schedule_after_decision_generation_and_after_market_data_date",
@@ -1852,7 +1865,7 @@
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
             "future_ohlcv_observed_count": 0,
             "eligible_execution_ohlcv_observed_count": 0,
-            "last_execution_backfill_at": "2026-08-17T11:48:55",
+            "last_execution_backfill_at": "2026-08-17T12:02:18",
             "execution_pending_stage": "before_delivery_candidate_date",
             "execution_pending_stage_description": "尚未到08:20送達候選日。",
             "cohort_observed_trading_days": 0,
@@ -1864,7 +1877,7 @@
             "pullback_zone_first_touch_t_index": null,
             "pullback_zone_post_touch_metrics": {},
             "grouped_backtest_sample_interpretation": "僅作分組資料蒐集；任一cohort完成樣本少於30筆時，不得宣稱策略有效。",
-            "cohort_metrics_updated_at": "2026-08-17T11:48:55"
+            "cohort_metrics_updated_at": "2026-08-17T12:02:18"
         },
         "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
         "backtest_cohort_tags": [
@@ -1900,63 +1913,42 @@
         "target_review_action": "wait_until_target_review_trigger"
     },
     "news": {
-        "news_report_title": "源傑科技(7917)興櫃概況：聚焦矽基光學引擎，高波動與流動性需留意",
-        "overall_sentiment": "Neutral with Caution",
+        "news_report_title": "源傑科技 (7917) 興櫃初期動態：矽基平台光學引擎前景與市場波動觀察",
+        "overall_sentiment": "Neutral to Cautious",
         "key_takeaways": [
-            "源傑科技(7917)核心業務為矽基平台光學引擎，深耕光通訊與矽光子產業，具備長期發展潛力。",
-            "作為新登錄興櫃標的，其市場特性為高波動性、流動性風險較高，且買賣價差可能較大，市場評價資料與歷史行情樣本均不足。",
-            "近期股價表現顯示波動，目前存在未回補的向下實體缺口，技術訊號尚未完整，建議投資人採取觀察或小部位策略。",
-            "考量興櫃流動性與價格發現階段，應避免追價，並優先確認成交可得性與最大可承受損失。"
+            "源傑科技 (7917) 為興櫃新登錄標的，核心業務聚焦於矽基平台光學引擎，搭上光通訊與矽光子產業趨勢。",
+            "作為興櫃新股，其市場評價資料尚不完整，歷史行情樣本極短，導致價格發現尚未穩定，波動性較高。",
+            "興櫃市場流動性風險需特別留意，撮合與成交可得性可能較低，買賣價差可能較大。",
+            "投資人應採取謹慎策略，建議縮小部位、避免追價，並優先確認成交可得性與最大可承受損失。",
+            "目前技術面觀察顯示存在未回補的向下實體缺口，且股價位於短期均線之上，但缺乏長期趨勢判斷依據。"
         ],
         "events_summary": [
-            "**公司概況：** 源傑科技(7917)專注於矽基平台光學引擎的研發與製造，為光通訊及矽光子領域的關鍵參與者，其技術被視為未來高速通訊發展的重要基石。",
-            "**興櫃市場動態：** 源傑科技近期登錄興櫃市場，目前股價為620.0元，20日均線為551.25元。由於歷史交易數據有限，市場正處於價格發現階段，成交量與買賣價差是主要觀察指標。",
-            "**技術面觀察：** 圖表顯示目前存在一個未回補的向下實體缺口，此為測量型缺口候選，其缺口失敗價位參考為740.0元。整體技術訊號尚未完整，市場走勢仍待進一步確認。",
-            "**投資風險提示：** 鑑於其興櫃新登錄、高波動性及流動性不足的特性，投資人應審慎評估風險，建議採取保守的交易策略，避免市價追價，並密切關注公司公告及光通訊族群的整體表現。"
+            "源傑科技 (7917) 於2026年07月29日開始在興櫃市場買賣，為市場新進者，其股價表現受限於短暫的歷史數據。",
+            "公司專注於矽基平台光學引擎的研發與應用，此為光通訊及矽光子領域的關鍵技術，具備產業成長潛力。",
+            "由於上市時間短暫，目前缺乏足夠的歷史交易數據以進行傳統的長期技術分析，市場評價仍處於探索階段，不適用成熟上市櫃股票的長週期判斷。",
+            "根據最新數據，目前收盤價為620.0元，高於20日均線(EMA20)的551.25元，顯示短期內股價表現相對強勢。",
+            "圖表分析指出存在一個測量型向下實體缺口，其缺口失敗價位參考為740.0元，需留意後續回補或壓力測試。",
+            "興櫃市場的特性決定了其流動性可能不足，投資者在交易時應將成交量與買賣價差納入考量，並密切關注公司公告及光通訊族群的整體動態，避免市價追價。"
         ]
     },
     "price": {
         "prediction_T+1": {
-            "price_range": {
-                "lower": 570.0,
-                "upper": 680.0
-            },
-            "rationale": "源傑科技為興櫃新登錄標的，波動性高且歷史資料有限，預測難度較大。目前盤中價620.0元，較前日收盤578.0元有顯著上漲。短線可能延續盤中動能，但上方739.0-740.0元存在未回補的測量型缺口壓力區。考量興櫃流動性與波動，預計在570.0元至680.0元區間震盪，漲跌幅受限於技術參考的±10%範圍 (520.2元至635.8元)，但興櫃無實際漲跌停限制，故給出稍寬鬆的技術預測區間。若能站穩620.0元，有機會挑戰635.8元附近的缺口測量目標下緣。",
-            "confidence_score": 3,
-            "factors": [
-                "興櫃新登錄標的，波動性高，歷史K棒不足，長週期指標無效。",
-                "盤中價620.0元較前日收盤578.0元上漲7.266%，顯示短線動能。",
-                "EMA20為551.25元，股價站上EMA20，且MAG指標為多頭10根。",
-                "上方739.0-740.0元有未回補的Down向實體缺口，形成反彈壓力區。",
-                "缺口測量目標下緣為635.8元，可能為短線壓力或吸引力。"
-            ]
+            "date": "2026-08-18",
+            "price_range": "610.0 - 650.0",
+            "bias": "中性偏多",
+            "rationale": "7917為興櫃新登錄標的，歷史K線資料有限，長週期技術指標參考性低。目前股價620.0元，今日盤中表現強勢（較前收盤上漲7.266%），短線動能偏多，且站上EMA20（551.25元）。然而，上方740.0元存在未回補的測量型缺口壓力，且動能評分仍為『弱』(12分)，缺乏明確的突破跟隨訊號。考量興櫃流動性風險與高波動特性，預期明日可能延續今日盤中動能，但上檔壓力將逐漸顯現。預測區間維持在當前價格±10%的技術參考範圍內。"
         },
         "prediction_T+2": {
-            "price_range": {
-                "lower": 550.0,
-                "upper": 700.0
-            },
-            "rationale": "若T+1能維持在620.0元以上，T+2可能繼續測試上方壓力，特別是739.0-740.0元的缺口區。然而，由於缺乏明確的突破訊號和第二段進場結構，且興櫃流動性風險較高，追價動能可能受限。若未能有效突破壓力區，則可能出現獲利了結或回檔整理。預計在550.0元至700.0元區間震盪。",
-            "confidence_score": 2,
-            "factors": [
-                "缺乏明確的突破與跟隨訊號，動能延續性存疑。",
-                "739.0-740.0元為Price Action判定的反彈減碼區，可能引發賣壓。",
-                "興櫃流動性風險高，買賣價差可能擴大，影響價格穩定性。",
-                "標的目標優先，價格行為僅作風險警示，不作為主要操作依據。"
-            ]
+            "date": "2026-08-19",
+            "price_range": "600.0 - 670.0",
+            "bias": "中性",
+            "rationale": "在缺乏足夠歷史資料與明確價格行為結構下，7917的走勢將持續受市場情緒與短期資金流動影響。若能有效突破並站穩今日高點，則有機會挑戰更高價位，但740.0元的缺口壓力仍是重要關卡。若短線動能未能延續，則可能回測600元附近支撐。整體走勢預期仍將呈現高波動的震盪格局。預測區間維持在當前價格±10%的技術參考範圍內。"
         },
         "prediction_T+3": {
-            "price_range": {
-                "lower": 530.0,
-                "upper": 720.0
-            },
-            "rationale": "在T+3，源傑科技的走勢將取決於前兩個交易日對739.0-740.0元缺口壓力的反應。若能有效突破並站穩，則可能開啟新的上漲空間；反之，若受阻回落，則可能回到較低區間盤整。整體而言，在未達到標的目標1000元前，預期仍將維持高波動的價格發現過程，區間震盪為主。預計在530.0元至720.0元區間震盪。",
-            "confidence_score": 2,
-            "factors": [
-                "標的目標為價格>1000元再評估賣出，在此之前主要為持有。",
-                "興櫃新股價格發現尚未穩定，短期走勢受市場情緒和流動性影響大。",
-                "Price Action訊號（如三推楔型、突破）品質低，無法提供明確方向指引。"
-            ]
+            "date": "2026-08-20",
+            "price_range": "590.0 - 680.0",
+            "bias": "中性",
+            "rationale": "興櫃新股的價格發現過程通常較為漫長且波動劇烈。在未有明確基本面消息或強勁技術突破訊號前，股價預計將在當前區間內尋求平衡。740.0元的缺口壓力與551.25元的EMA20支撐將是觀察重點。由於標的特性為『興櫃新登錄高波動標的』，且『不適用成熟上市櫃股票的長週期判斷』，長期預測信心度較低，需密切關注每日量價變化。預測區間維持在當前價格±10%的技術參考範圍內。"
         },
         "portfolio_advice": {
             "layout_strategy": {
@@ -1968,26 +1960,6 @@
                 },
                 "stop_loss": null,
                 "rationale": "價格 > 1000 再評估賣出；今日結構化PriceAction只提供風險警示，不得覆蓋target_objective_review最終優先級。",
-                "guardrail": "依準則『以標的目標優先，價格行為僅作風險警示』；價格>1000只開啟重新評估，不自動賣出。PriceAction原始風控建議僅作風險警示，不是最終交易命令。",
-                "target_criterion": "以標的目標優先，價格行為僅作風險警示",
-                "target_objective": "價格 > 1000 再評估賣出",
-                "target_goal_alignment": {
-                    "status": "aligned",
-                    "conflicts": [],
-                    "conflict_count": 0,
-                    "resolution": "target_objective_primary_review_only_price_action_advisory",
-                    "resolution_text": "依準則『以標的目標優先，價格行為僅作風險警示』；價格>1000只開啟重新評估，不自動賣出。",
-                    "entry_goal_state": "not_specified",
-                    "criterion_precedence": "準則是同一筆標的目標設定的最高執行約束；最終操作不得與準則宣告的優先順序相反。"
-                },
-                "final_execution_priority": "target_objective_review",
-                "price_action_advisory_only": true,
-                "risk_override_allowed": false,
-                "risk_override_trigger_price": null,
-                "risk_advisory_trigger_price": null,
-                "final_sell_trigger_price": 1000.0,
-                "final_sell_trigger_type": "target_objective_review_permission",
-                "final_sell_trigger_action": "enter_sell_reevaluation_only_not_automatic_order",
                 "effective_today_action_zone": {
                     "zone_type": "target_objective_review_only",
                     "action": "到達目標價只進入重新評估，不自動賣出；PriceAction價位僅保留於price_action_risk_advisory。"
@@ -2349,7 +2321,7 @@
                     "default": 0
                 },
                 "next_day_analysis_required_for_sell_permission": false,
-                "original_ai_action_for_reference": "觀察 / 等待 Second Entry 或確認 K 棒；原始AI建議僅供參考：Hold",
+                "original_ai_action_for_reference": "觀察 / 等待 Second Entry 或確認 K 棒；原始AI建議僅供參考：維持持有",
                 "historical_profit_protection_floor_price": null,
                 "active_profit_protection_floor_price": null,
                 "remaining_position_exit_floor_price": null,
@@ -2361,7 +2333,18 @@
                 "remaining_position_exit_floor_basis": null,
                 "position_lifecycle_state": "TargetObjectiveReviewPending",
                 "exit_decision_summary": "持倉狀態=TargetObjectiveReviewPending；目前報酬=-11.55%；基本門檻=43.0% / 1002.43元；標的目標重新評估觸發=>1000元；觸發狀態=False；現在可賣=False；立即賣出=0%；條件式追加賣出=0%；到價只重新評估，不自動賣出。",
+                "target_criterion": "以標的目標優先，價格行為僅作風險警示",
+                "target_objective": "價格 > 1000 再評估賣出",
                 "target_goal_status": "configured",
+                "target_goal_alignment": {
+                    "status": "aligned",
+                    "conflicts": [],
+                    "conflict_count": 0,
+                    "resolution": "target_objective_primary_review_only_price_action_advisory",
+                    "resolution_text": "依準則『以標的目標優先，價格行為僅作風險警示』；價格>1000只開啟重新評估，不自動賣出。",
+                    "entry_goal_state": "not_specified",
+                    "criterion_precedence": "準則是同一筆標的目標設定的最高執行約束；最終操作不得與準則宣告的優先順序相反。"
+                },
                 "target_goal_summary": "準則=以標的目標優先，價格行為僅作風險警示；核心目標=價格 > 1000 再評估賣出；基本獲利門檻=43.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。",
                 "target_objective_is_core": true,
                 "target_goal_effective_action": {
@@ -2562,7 +2545,12 @@
                     "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。"
                 },
                 "final_execution_schema_version": "v7.25k3.3_target_review_trade_chain_v1",
+                "final_execution_priority": "target_objective_review",
                 "final_execution_reason": "標的目標優先；價格>1000只進入賣出重新評估，PriceAction僅作風險警示。",
+                "price_action_advisory_only": true,
+                "risk_override_allowed": false,
+                "risk_override_trigger_price": null,
+                "risk_advisory_trigger_price": null,
                 "target_objective_conflict_status": "aligned",
                 "target_vs_price_action_conflict_summary": {
                     "status": "aligned",
@@ -2581,12 +2569,55 @@
                     "final_sell_trigger_action": "enter_sell_reevaluation_only_not_automatic_order"
                 },
                 "final_decision_reason_consistency_status": "pass",
+                "final_sell_trigger_price": 1000.0,
+                "final_sell_trigger_type": "target_objective_review_permission",
                 "trigger_semantics_consistency_status": "pass",
+                "final_sell_trigger_action": "enter_sell_reevaluation_only_not_automatic_order",
                 "target_review_mode": true,
                 "target_review_trigger_price": 1000.0,
                 "target_review_trigger_operator": ">",
                 "target_review_trigger_reached": false,
                 "target_review_action": "wait_until_target_review_trigger"
+            },
+            "current_position_details": {
+                "shares_held": 1000,
+                "average_cost": 700.998,
+                "current_price": 620.0,
+                "unrealized_pnl_pct": -11.55,
+                "base_profit_target_pct": 43.0,
+                "base_profit_target_price": 1002.43,
+                "profit_target_ever_reached": false,
+                "momentum_hold_score": 12,
+                "momentum_extension_eligible": false
+            },
+            "position_lifecycle_decision": {
+                "can_sell_now": false,
+                "state": "TargetObjectiveReviewPending",
+                "action_priority": "target_objective_review",
+                "recommended_immediate_sell_ratio_pct": 0,
+                "conditional_additional_sell_ratio_pct": 0,
+                "final_sell_trigger_price": 1000.0,
+                "final_sell_trigger_type": "target_objective_review_permission",
+                "final_sell_trigger_action": "enter_sell_reevaluation_only_not_automatic_order",
+                "risk_advisory_trigger_price": null,
+                "reasons": [
+                    "標的目標優先：價格>1000再評估賣出",
+                    "PriceAction原始風控建議僅作風險警示，不是最終交易命令"
+                ],
+                "hold_conditions": [
+                    "尚未到達重新評估觸發價，依標的目標維持持有。"
+                ]
+            },
+            "price_action_risk_advisory": {
+                "role": "price_action_risk_advisory_before_target_override",
+                "rebound_reduce_zone": {
+                    "lower_price": 739.0,
+                    "upper_price": 740.0,
+                    "action": "反彈至此區間以減碼 / 降風險優先，不作為攤平買點。",
+                    "reason": "高價高波動題材股尚未站回缺口上緣前，反彈優先降低風險。"
+                },
+                "risk_first_action": false,
+                "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。"
             }
         },
         "entry_permission_guardrail": {
