@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-08-18 16:25:25",
+    "last_updated": "2026-08-18 17:58:12",
     "timezone": "Asia/Taipei",
     "policy_version": "v4.0_Swing_Buy_20D",
     "engine_generation": "fetch_and_filter_v4.0_swing_buy_20d",
-    "total_records": 139,
-    "tracking_records": 139,
+    "total_records": 144,
+    "tracking_records": 144,
     "completed_records": 0,
     "sample_status": {
         "min_completed_sample": 30,
@@ -208,7 +208,10 @@
         "time_horizon_trading_days": 20,
         "t5_t10_t15_t20_metrics": true,
         "extension_momentum_observation_only": true,
-        "extension_momentum_does_not_change_qualification": true
+        "extension_momentum_does_not_change_qualification": true,
+        "forward_entry_decision_does_not_change_v4_0_qualification": true,
+        "formal_swing_buy_list_requires_buy_now": true,
+        "extension_momentum_is_auxiliary": true
     },
     "extension_momentum_version": "swing_extension_momentum_observation_v1",
     "by_extension_momentum_state": {
@@ -255,6 +258,54 @@
         "hypothesis": "Strong > Moderate/Weak on T+20 return, MFE and win rate",
         "minimum_total_completed_sample": 30,
         "evaluation_status": "not_evaluable_until_total_completed_30",
+        "claim_allowed": false,
+        "metrics": [
+            "win_rate",
+            "avg_return_20d_pct",
+            "avg_mfe_20d_pct",
+            "avg_mae_20d_pct",
+            "target_hit_rate",
+            "stop_first_rate"
+        ]
+    },
+    "forward_entry_policy_version": "swing_forward_entry_edge_v1",
+    "by_forward_entry_decision": {
+        "Reject": {
+            "completed": 0,
+            "win_rate": null,
+            "target_hit_rate": null,
+            "stop_first_rate": null,
+            "avg_return_20d_pct": null,
+            "avg_mfe_20d_pct": null,
+            "avg_mae_20d_pct": null
+        },
+        "Unknown": {
+            "completed": 0,
+            "win_rate": null,
+            "target_hit_rate": null,
+            "stop_first_rate": null,
+            "avg_return_20d_pct": null,
+            "avg_mfe_20d_pct": null,
+            "avg_mae_20d_pct": null
+        },
+        "WaitPullback": {
+            "completed": 0,
+            "win_rate": null,
+            "target_hit_rate": null,
+            "stop_first_rate": null,
+            "avg_return_20d_pct": null,
+            "avg_mfe_20d_pct": null,
+            "avg_mae_20d_pct": null
+        }
+    },
+    "forward_entry_hypothesis": {
+        "objective": "profit_from_current_entry_price",
+        "hypothesis": "BuyNow should outperform WaitPullback/Reject on T+20 return, MFE and win rate from the exact D0 close.",
+        "d0_baseline_contract": "signal-day close is immutable; no retrospective repricing",
+        "minimum_completed_buy_now_sample": 30,
+        "buy_now_total_records": 0,
+        "buy_now_completed_records": 0,
+        "evaluation_status": "not_evaluable_until_completed_buy_now_30",
         "claim_allowed": false,
         "metrics": [
             "win_rate",
