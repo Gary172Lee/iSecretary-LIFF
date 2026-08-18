@@ -41,7 +41,10 @@
         "ticker": "2382.TW",
         "raw_ohlcv_file": "2382_廣達_20260817_ohlcv.json",
         "chart_file": "2382_廣達_Chart_20260817.png",
-        "pdf_file": "2382_廣達_PA_Analysis_20260817.pdf"
+        "pdf_file": "2382_廣達_PA_Analysis_20260817.pdf",
+        "last_tracker_update": "2026-08-18T08:12:27",
+        "tracker_backfill_source": "GitHub",
+        "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
     "stock_profile": {
         "stock_type": "大型權值波段股",
@@ -1861,9 +1864,9 @@
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
             "future_ohlcv_observed_count": 1,
             "eligible_execution_ohlcv_observed_count": 0,
-            "last_execution_backfill_at": "2026-08-17T14:11:28",
-            "execution_pending_stage": "before_delivery_candidate_date",
-            "execution_pending_stage_description": "尚未到08:20送達候選日。",
+            "last_execution_backfill_at": "2026-08-18T08:12:27",
+            "execution_pending_stage": "candidate_day_before_08_20_delivery",
+            "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
             "cohort_observed_trading_days": 1,
             "cohort_t1_t5_metrics": {
                 "T+1": {
@@ -1871,7 +1874,7 @@
                     "close_return_pct": 1.8321,
                     "cumulative_mfe_pct": 3.5115,
                     "cumulative_mae_pct": 0.916,
-                    "source": "yfinance:2382.TW"
+                    "source": "FUGLEAPI:2382"
                 }
             },
             "cohort_mfe_5d_pct": 3.5115,
@@ -1881,7 +1884,7 @@
             "pullback_zone_first_touch_t_index": null,
             "pullback_zone_post_touch_metrics": {},
             "grouped_backtest_sample_interpretation": "僅作分組資料蒐集；任一cohort完成樣本少於30筆時，不得宣稱策略有效。",
-            "cohort_metrics_updated_at": "2026-08-17T14:11:28"
+            "cohort_metrics_updated_at": "2026-08-18T08:12:27"
         },
         "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
         "backtest_cohort_tags": [
