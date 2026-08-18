@@ -1,6 +1,6 @@
 # 盤後選股分析
 
-> 報告狀態：**完成**｜產生時間：2026-08-18 15:57:03（Asia/Taipei）
+> 報告狀態：**完成**｜產生時間：2026-08-18 16:25:28（Asia/Taipei）
 
 ## 1. 今日結論
 
@@ -12,9 +12,9 @@ Swing Buy 20D：11 檔合格；依 Extension Momentum 作第二層排序，v4.0 
 ## 2. 資料日期、版本、工具讀取結果、P0安全與歷史來源稽核
 
 - 報告版本：`daily_after_market_report_v3_swing_extension_momentum`
-- 產生時間：2026-08-18 15:57:03（Asia/Taipei）
-- latest_indicators：2026-08-18 15:56:53
-- gate_diagnostics：2026-08-18 15:56:59
+- 產生時間：2026-08-18 16:25:28（Asia/Taipei）
+- latest_indicators：2026-08-18 16:25:16
+- gate_diagnostics：2026-08-18 16:25:22
 - 資料為今日：是
 - 策略與引擎版本相容：是
 - Diagnostic版本：`gate_diagnostics_v21_swing_buy_20d`
@@ -122,7 +122,7 @@ Swing Buy v4.0 qualification Gate 維持不變；Extension Momentum 只作第二
 - **2887 台新金｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 14.76；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
 - **2360 致茂｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 2.10；目標 未載明；原因：Tradeable Second Leg path 未通過：資料、流動性與滑價 | Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
 - **2368 金像電｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 1.01；目標 未載明；原因：Tradeable Second Leg path 未通過：資料、流動性與滑價 | Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **1504 東元｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 35.50；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **2891 中信金｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 4.64；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
 
 ## 9. 最值得追蹤1～3檔
 
