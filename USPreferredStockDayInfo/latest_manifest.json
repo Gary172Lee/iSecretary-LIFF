@@ -1,14 +1,14 @@
 {
   "manifest_type": "USPreferredStockDayInfoLatestManifest",
   "manifest_schema_version": "1.3",
-  "manifest_patch_version": "1.3.6",
+  "manifest_patch_version": "1.3.7",
   "status": "complete",
   "source_mode": "new_report_generation",
-  "published_at_taipei": "2026-08-19 08:22:57",
-  "report_date": "20260819",
-  "report_time": "082254",
-  "generated_at_taipei": "2026-08-19 08:22:54",
-  "report_stem": "Stock_News_Report_20260819_082254",
+  "published_at_taipei": "2026-08-20 08:20:57",
+  "report_date": "20260820",
+  "report_time": "082049",
+  "generated_at_taipei": "2026-08-20 08:20:49",
+  "report_stem": "Stock_News_Report_20260820_082049",
   "preferred_file_type": "summary",
   "preferred_read_order": [
     "summary",
@@ -21,30 +21,34 @@
   "github_target_dir": "USPreferredStockDayInfo",
   "manifest_path": "USPreferredStockDayInfo/latest_manifest.json",
   "metrics_history_path": "USPreferredStockDayInfo/metrics_history.jsonl",
-  "latest_summary": "Stock_News_Report_20260819_082254_summary.json",
-  "latest_summary_path": "USPreferredStockDayInfo/Stock_News_Report_20260819_082254_summary.json",
-  "latest_json": "Stock_News_Report_20260819_082254.json",
-  "latest_json_path": "USPreferredStockDayInfo/Stock_News_Report_20260819_082254.json",
-  "latest_md": "Stock_News_Report_20260819_082254.md",
-  "latest_md_path": "USPreferredStockDayInfo/Stock_News_Report_20260819_082254.md",
-  "latest_pdf": "Stock_News_Report_20260819_082254.pdf",
-  "latest_pdf_path": "USPreferredStockDayInfo/Stock_News_Report_20260819_082254.pdf",
+  "latest_summary": "Stock_News_Report_20260820_082049_summary.json",
+  "latest_summary_path": "USPreferredStockDayInfo/Stock_News_Report_20260820_082049_summary.json",
+  "latest_json": "Stock_News_Report_20260820_082049.json",
+  "latest_json_path": "USPreferredStockDayInfo/Stock_News_Report_20260820_082049.json",
+  "latest_md": "Stock_News_Report_20260820_082049.md",
+  "latest_md_path": "USPreferredStockDayInfo/Stock_News_Report_20260820_082049.md",
+  "latest_pdf": "Stock_News_Report_20260820_082049.pdf",
+  "latest_pdf_path": "USPreferredStockDayInfo/Stock_News_Report_20260820_082049.pdf",
   "files": {
     "summary": {
-      "filename": "Stock_News_Report_20260819_082254_summary.json",
-      "path": "USPreferredStockDayInfo/Stock_News_Report_20260819_082254_summary.json"
+      "filename": "Stock_News_Report_20260820_082049_summary.json",
+      "path": "USPreferredStockDayInfo/Stock_News_Report_20260820_082049_summary.json"
     },
     "json": {
-      "filename": "Stock_News_Report_20260819_082254.json",
-      "path": "USPreferredStockDayInfo/Stock_News_Report_20260819_082254.json"
+      "filename": "Stock_News_Report_20260820_082049.json",
+      "path": "USPreferredStockDayInfo/Stock_News_Report_20260820_082049.json"
     },
     "md": {
-      "filename": "Stock_News_Report_20260819_082254.md",
-      "path": "USPreferredStockDayInfo/Stock_News_Report_20260819_082254.md"
+      "filename": "Stock_News_Report_20260820_082049.md",
+      "path": "USPreferredStockDayInfo/Stock_News_Report_20260820_082049.md"
     },
     "pdf": {
-      "filename": "Stock_News_Report_20260819_082254.pdf",
-      "path": "USPreferredStockDayInfo/Stock_News_Report_20260819_082254.pdf"
+      "filename": "Stock_News_Report_20260820_082049.pdf",
+      "path": "USPreferredStockDayInfo/Stock_News_Report_20260820_082049.pdf"
+    },
+    "market_quotes": {
+      "filename": "latest_market_quotes.json",
+      "path": "USPreferredStockDayInfo/latest_market_quotes.json"
     }
   },
   "report_metadata": {
@@ -55,13 +59,13 @@
     "summary_max_lines": 1,
     "quant_framework_version": "1.0",
     "date_source_quality_patch_version": "1.2.2",
-    "latest_manifest_patch_version": "1.3.6",
+    "latest_manifest_patch_version": "1.3.7",
     "data_integrity_patch_version": "1.3.1",
-    "report_payload_patch_version": "1.3.6",
+    "report_payload_patch_version": "1.3.7",
     "ctgg_fcf_lock_version": "1.3.3",
     "event_dedup_patch_version": "1.3.3",
     "summary_budget_patch_version": "1.3.4",
-    "summary_connector_patch_version": "1.3.6",
+    "summary_connector_patch_version": "1.3.7",
     "core_metric_priority_version": "1.3.4",
     "stage2_resilience_patch_version": "1.3.2",
     "metrics_history_schema_version": "1.1",
@@ -71,12 +75,18 @@
     "metric_definition_patch_version": "1.3.6",
     "cross_run_metric_consistency_version": "1.3.6",
     "source_period_alignment_version": "1.3.6",
-    "live_validation_patch_version": "1.3.6"
+    "live_validation_patch_version": "1.3.6",
+    "market_quote_patch_version": "1.3.7",
+    "market_quote_schema_version": "1.0",
+    "market_quote_provider": "Yahoo Finance v8 chart"
   },
   "read_instructions": {
     "first_step": "Fetch exact path USPreferredStockDayInfo/latest_manifest.json",
     "second_step": "Read files.summary.path by exact path",
     "fallback": "If summary is unavailable, read files.json.path by exact path",
-    "do_not_use": "Do not use wildcard paths or rely only on GitHub Code Search"
-  }
+    "do_not_use": "Do not use wildcard paths or rely only on GitHub Code Search",
+    "market_quotes": "For BHFAL/UZD price, read exact path USPreferredStockDayInfo/latest_market_quotes.json; fresh deterministic quote takes priority over web-search cache."
+  },
+  "latest_market_quotes": "latest_market_quotes.json",
+  "latest_market_quotes_path": "USPreferredStockDayInfo/latest_market_quotes.json"
 }
