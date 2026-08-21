@@ -38,7 +38,7 @@
         ],
         "version_policy": "minimum_supported_version",
         "intraday_policy_version": "intraday_live_overlay_v1.4",
-        "run_datetime": "2026-08-21T14:01:50",
+        "run_datetime": "2026-08-21T14:13:52",
         "daily_output_tag": "20260821",
         "output_naming_policy": "daily_stable_overwrite",
         "stock_code": "3081",
@@ -448,7 +448,7 @@
             "scheduled_close_time": "13:30",
             "delayed_close_supported_until": "13:33",
             "session_date": "2026-08-21",
-            "evaluated_at": "2026-08-21T14:01:49",
+            "evaluated_at": "2026-08-21T14:13:52",
             "intraday_fetch_expected": true,
             "quote_usage_mode": "post_close_same_day_last_trade",
             "price_limit_applicable": true,
@@ -486,7 +486,7 @@
             "trade_volume_at_bid": 2059.0,
             "trade_volume_at_ask": 2635.0,
             "last_trade_time": "2026-08-21T13:30:00",
-            "freshness_age_seconds": 1909,
+            "freshness_age_seconds": 2632,
             "freshness_status": "post_close_same_day_last_trade",
             "is_usable_for_current_price": true,
             "post_close_same_day_quote_used": true,
@@ -633,7 +633,7 @@
         "intraday_execution_reference_allowed": true,
         "intraday_behavior_summary": {
             "freshness_status": "post_close_same_day_last_trade",
-            "freshness_age_seconds": 1909,
+            "freshness_age_seconds": 2632,
             "vs_previous_close_pct": 5.036,
             "session_return_from_open_pct": 2.636,
             "distance_to_session_avg_pct": 2.364,
@@ -1417,7 +1417,7 @@
         "extension_revalidation_outcome": "extension_not_confirmed_hold_under_existing_final_protection",
         "execution_backtest_summary": {
             "execution_basis_version": "v7.25j1_execution_basis_v2",
-            "decision_generated_at": "2026-08-21T14:01:50",
+            "decision_generated_at": "2026-08-21T14:13:52",
             "decision_market_data_date": "2026-08-20",
             "decision_delivery_candidate_date": "2026-08-24",
             "decision_delivery_date": null,
@@ -1531,7 +1531,7 @@
         "stock_code": "3081",
         "stock_name": "聯亞",
         "ticker": "3081.TWO",
-        "run_datetime": "2026-08-21T14:01:50",
+        "run_datetime": "2026-08-21T14:13:52",
         "base_date": "2026-08-20",
         "base_close": 2920.0,
         "status": "pending",
@@ -1547,7 +1547,7 @@
                 "price_error": null,
                 "price_error_pct": null,
                 "direction_hit": null,
-                "updated_at": "2026-08-21T14:02:32"
+                "updated_at": "2026-08-21T14:15:03"
             },
             "T+2": {
                 "prediction_price": null,
@@ -1650,7 +1650,7 @@
             "status": "ready_for_aggregation",
             "purpose": "以實際買賣紀錄優先、下一交易日開盤基準次之，回測立即賣出比例、剩餘部位底線、反彈區與完整退出條件。",
             "execution_basis_version": "v7.25j1_execution_basis_v2",
-            "decision_generated_at": "2026-08-21T14:01:50",
+            "decision_generated_at": "2026-08-21T14:13:52",
             "decision_market_data_date": "2026-08-20",
             "decision_timezone": "Asia/Taipei",
             "decision_delivery_rule": "next_not_missed_08_20_schedule_after_decision_generation_and_after_market_data_date",
@@ -1759,7 +1759,7 @@
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
             "future_ohlcv_observed_count": 1,
             "eligible_execution_ohlcv_observed_count": 0,
-            "last_execution_backfill_at": "2026-08-21T14:02:32",
+            "last_execution_backfill_at": "2026-08-21T14:15:03",
             "execution_pending_stage": "before_delivery_candidate_date",
             "execution_pending_stage_description": "尚未到08:20送達候選日。",
             "cohort_observed_trading_days": 1,
@@ -1779,7 +1779,7 @@
             "pullback_zone_first_touch_t_index": null,
             "pullback_zone_post_touch_metrics": {},
             "grouped_backtest_sample_interpretation": "僅作分組資料蒐集；任一cohort完成樣本少於30筆時，不得宣稱策略有效。",
-            "cohort_metrics_updated_at": "2026-08-21T14:02:32"
+            "cohort_metrics_updated_at": "2026-08-21T14:15:03"
         },
         "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
         "backtest_cohort_tags": [
@@ -1825,21 +1825,64 @@
         "execution_consistency_policy_version": "actual_execution_surface_convergence_v1"
     },
     "news": {
-        "news_report_title": "聯亞(3081)矽光子題材續受關注，股價高檔震盪並帶有測量型缺口，操作宜審慎",
-        "overall_sentiment": "Neutral-to-Positive with High Caution",
+        "news_report_title": "聯亞 (3081) 矽光子題材續熱，高波動特性與測量型缺口引關注",
+        "overall_sentiment": "中性偏多，但需高度警惕高價股特有風險與題材退潮壓力",
         "key_takeaways": [
-            "**核心業務與題材動能：** 聯亞作為光通訊磊晶片、雷射二極體LD及矽光子關鍵供應商，持續受惠於相關產業趨勢與市場資金關注。",
-            "**股價高波動特性：** 該股屬中小型高波動題材股，股價易受市場情緒、族群資金流向及美股同業表現影響，波動劇烈，容易出現跳空、長黑長紅與快速反轉。",
-            "**技術面觀察：** 目前股價處於高檔，並帶有未回補的向上實體缺口，被判斷為測量型缺口候選，顯示短期多方動能。然而，考量股價已接近潛在測量目標，順勢追價的風險相對提高。",
-            "**流動性與風險管理：** 聯亞為高價股，需特別留意流動性不足、滑價風險，並應嚴格執行停損。在題材降溫或族群資金退潮時，估值與股價易快速修正。",
-            "**操作建議：** 考量其高波動與高價特性，建議投資人採取小部位、分批限價單策略，避免一次性滿倉追價，並以防守與風險控制為優先考量。"
+            "聯亞 (3081) 作為光通訊磊晶片、雷射二極體 (LD) 及矽光子領域的關鍵業者，持續受惠於矽光子與CPO等前瞻技術題材。",
+            "該股屬中小型高波動題材股，股價活潑且易受美股光通訊及台股矽光子族群資金流向影響，具備快速上漲潛力，但也伴隨高回檔風險。",
+            "技術面顯示股價目前位於20日EMA之上，並存在一個未回補的向上實體缺口，被評估為『測量型缺口候選』，顯示短期動能強勁，但需留意缺口回補風險。",
+            "由於聯亞為高價股，交易時需特別注意流動性、滑價風險，並嚴格執行停損。不建議追高，應以防守優先，並避免以大型權值股的邏輯進行低接操作。",
+            "資金面需密切關注三大法人與融資餘額變化。若法人賣超而融資增加，可能代表籌碼擁擠，反彈時應優先考慮降低風險。",
+            "題材股易受市場情緒影響，若矽光子族群資金降溫或題材退潮，股價與估值可能面臨快速修正壓力。"
         ],
-        "events_summary": "近期聯亞(3081)股價表現活躍，主要受惠於市場對矽光子與光通訊產業前景的樂觀預期，其核心業務如光通訊磊晶片、雷射二極體LD及矽光子技術持續受到關注。技術面上，股價目前處於高檔區間，並觀察到一個向上未回補的實體缺口，此缺口被視為測量型缺口的候選，暗示短期內多方動能仍在。然而，鑑於聯亞為高價股且已接近潛在的測量目標，市場觀察者建議投資人應審慎評估追價風險，並注意其高波動性可能帶來的快速反轉。目前流動性雖通過檢測，但高價股的特性仍需警惕潛在的滑價風險。資金流向方面，聯亞作為中小型題材股，其股價走勢將持續受台股矽光子族群資金動能及美股相關概念股表現的影響。"
+        "events_summary": [
+            "聯亞 (3081) 近期股價表現強勢，收盤價2920.0元，顯著高於20日EMA (2382.51元)，顯示短期多頭趨勢明確。",
+            "圖表分析顯示，股價存在一個未回補的向上實體缺口，目前被歸類為『測量型缺口候選』。該缺口下緣或失敗價位約在2750.0元，為重要的支撐與停損參考點。",
+            "儘管市場流動性評估為通過，但作為高價股，仍存在中等程度的滑價風險，建議投資人應優先使用分批限價單，避免一次性滿倉追價。",
+            "當前操作建議為『等待 (Wait)』模式，且在接近測量目標時，順勢追價的權重應降低，顯示市場對當前價位持謹慎態度。",
+            "整體而言，聯亞的市場方向仍偏多 (Long)，但其高波動、高價位以及題材股的特性，要求投資人採取極為謹慎的交易策略，嚴格控制風險。"
+        ]
     },
     "price": {
-        "prediction_T+1": "聯亞目前處於強勢多頭趨勢，股價遠高於短期均線，並存在一個測量型缺口（Measuring Gap）指向 3058.0 元。然而，最新的突破被判定為失敗突破（FailedBreakout），且後續跟隨動能不足（Poor follow-through），對手方（空方）仍有解套或獲利空間（counterparty_profitability_score=70）。此外，法人呈現賣超。儘管整體趨勢向上，但短期內追價動能受到質疑。預計股價可能在 2850.0 至 2980.0 元區間震盪，嘗試挑戰缺口目標，但上漲阻力將增加。",
-        "prediction_T+2": "在缺乏明確的強勢跟隨動能下，聯亞可能進入盤整或小幅回調。若未能有效站穩並突破近期高點，則失敗突破的影響將更為顯著。下檔支撐仍關注缺口失效價 2750.0 元。若市場資金持續流入矽光子族群，或美股同業表現強勁，仍有機會推升股價，但需警惕高波動性與快速反轉風險。預計交易區間可能在 2800.0 至 3000.0 元。",
-        "prediction_T+3": "若股價能守住 2750.0 元的關鍵支撐，並出現新的買盤動能，則有望再次挑戰 3058.0 元的測量型缺口目標。反之，若跌破 2750.0 元，則多方缺口假設失效，可能引發停損賣壓，股價將面臨較大的修正風險。考量到中小型高波動題材股的特性，操作上應保持謹慎，避免追高。預計股價波動區間可能擴大至 2700.0 至 3058.0 元。",
+        "prediction_T+1": {
+            "price_range": {
+                "lower": 2900.0,
+                "upper": 3000.0
+            },
+            "trend_bias": "Neutral to Slightly Up",
+            "rationale": "聯亞為高波動中小型題材股，目前股價處於強勢多頭趨勢，站穩EMA20上方，且SMA均線呈現多頭排列。然而，近期突破被判定為『FailedBreakout』且跟隨品質『Poor』，對手方仍有解套空間（counterparty_profitability_score=70），顯示市場追價動能不足。儘管整體趨勢向上，但短線缺乏強勁的突破延續力道。預期T+1交易日股價可能在2900元附近盤整，或嘗試溫和上攻至3000元關卡，但需留意上方壓力。",
+            "key_drivers": [
+                "美股與台股矽光子族群資金流向",
+                "突破跟隨品質不佳的影響",
+                "盤中量價變化與收盤強度"
+            ]
+        },
+        "prediction_T+2": {
+            "price_range": {
+                "lower": 2850.0,
+                "upper": 3058.0
+            },
+            "trend_bias": "Consolidation / Potential Test of Resistance",
+            "rationale": "若T+1未能有效突破，T+2可能延續盤整格局，或在2900-3000元區間震盪。上檔測量型缺口目標價3058.0元仍為潛在壓力與再評估點，但由於動能延伸未被確認（extension_momentum_confirmed_v2=False），預期達到此價位後，獲利了結賣壓可能增加。若未能有效站穩3000元，股價可能回測2850元附近的支撐。",
+            "key_drivers": [
+                "3058.0元測量目標的市場反應",
+                "法人籌碼變化",
+                "整體題材股資金動能"
+            ]
+        },
+        "prediction_T+3": {
+            "price_range": {
+                "lower": 2800.0,
+                "upper": 3000.0
+            },
+            "trend_bias": "Consolidation / Moderate Pullback",
+            "rationale": "考量到『FailedBreakout』的警示，即使股價嘗試挑戰3058.0元，也可能面臨較大阻力。若無法突破並站穩3058.0元，T+3交易日可能出現溫和回檔或持續在2800-3000元區間內整理。下方2750.0元為重要的缺口失效價與剩餘部位執行底線，將提供關鍵支撐。高價股的特性也意味著一旦動能減弱，修正速度可能加快。",
+            "key_drivers": [
+                "2750.0元支撐的有效性",
+                "市場對矽光子題材的熱度",
+                "美股同業表現"
+            ]
+        },
         "portfolio_advice": {
             "layout_strategy": {
                 "action": "核心目標：達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？；準則：遵守價格行為。 尚未達基本10%獲利門檻；股價到達 2643.77 元即開啟賣出權限，不必等待下一交易日分析。",
@@ -1964,7 +2007,7 @@
                     "default": 0
                 },
                 "next_day_analysis_required_for_sell_permission": false,
-                "original_ai_action_for_reference": "觀察 / 等待 Second Entry 或確認 K 棒；原始AI建議僅供參考：續抱剩餘部位，嚴格遵守風控底線",
+                "original_ai_action_for_reference": "觀察 / 等待 Second Entry 或確認 K 棒；原始AI建議僅供參考：Hold Remaining Position",
                 "historical_profit_protection_floor_price": 2643.77,
                 "active_profit_protection_floor_price": 2643.77,
                 "remaining_position_exit_floor_price": 2750.0,
@@ -2145,20 +2188,78 @@
                 "target_review_trigger_operator": null,
                 "target_review_trigger_reached": null,
                 "target_review_action": null
+            },
+            "position_exit_decision": {
+                "can_sell_now": false,
+                "sell_now_permission": false,
+                "state": "ProfitTargetInitialTrancheExecutedHoldRemaining",
+                "action_priority": "hold_remaining_after_actual_partial_exit",
+                "recommended_sell_ratio_pct": {
+                    "lower": 0,
+                    "upper": 0,
+                    "default": 0
+                },
+                "recommended_immediate_sell_ratio_pct": 0,
+                "recommended_immediate_sell_shares": 0,
+                "conditional_additional_sell_ratio_pct": 0,
+                "conditional_additional_sell_shares": 0,
+                "remaining_full_exit_ratio_pct_if_triggered": 100,
+                "remaining_full_exit_shares_if_triggered": 30,
+                "current_price": 2920.0,
+                "current_profit_pct": 32.54,
+                "base_profit_target_pct": 20.0,
+                "base_profit_target_price": 2643.77,
+                "sell_trigger_price": 2750.0,
+                "final_sell_trigger_price": 2750.0,
+                "final_sell_trigger_type": "remaining_position_exit_floor_after_actual_partial_exit",
+                "final_sell_trigger_action": "conditional_exit_remaining_if_floor_triggered",
+                "profit_protection_floor_price": 2643.77,
+                "historical_profit_protection_floor_price": 2643.77,
+                "active_profit_protection_floor_price": 2643.77,
+                "remaining_position_exit_floor_price": 2750.0,
+                "remaining_position_exit_floor_basis": {
+                    "source": "current_support",
+                    "price": 2750.0,
+                    "note": "gap_invalidation_price_below_market"
+                },
+                "effective_remaining_exit_trigger_price": 2750.0,
+                "effective_remaining_exit_trigger_source": "remaining_position_structural_floor",
+                "full_exit_condition": "跌破剩餘部位執行底線 2750.00 元，退出剩餘部位。",
+                "sell_permission_basis": "ActualExecutionSatisfiedInitialProfitTranche",
+                "actual_execution_ack_status": "initial_tranche_fulfilled_hold_remaining",
+                "execution_consistency_status": "pass",
+                "position_cycle_buy_shares": 60,
+                "position_cycle_sell_shares": 30,
+                "remaining_position_shares": 30,
+                "reasons": [
+                    "目前報酬已達基本門檻 20.00%",
+                    "Actual 已完成 30/30 股 initial tranche；剩餘 30 股改由新的 remaining-position trigger 管理。"
+                ],
+                "hold_conditions": [
+                    "Portfolio Actual 已完成本輪初始獲利減碼；不得在同一 position cycle 重複套用相同 initial tranche。"
+                ],
+                "plain_language": "持倉狀態=ProfitTargetInitialTrancheExecutedHoldRemaining；本 position cycle 初始買進=60股；Actual 已完成初始減碼=30股；目前剩餘=30股；現在可賣=False；不得重複套用原始 50% tranche；下一個可執行退出條件=跌破剩餘部位執行底線 2750.00 元，退出剩餘部位。",
+                "exit_decision_summary": "持倉狀態=ProfitTargetInitialTrancheExecutedHoldRemaining；本 position cycle 初始買進=60股；Actual 已完成初始減碼=30股；目前剩餘=30股；現在可賣=False；不得重複套用原始 50% tranche；下一個可執行退出條件=跌破剩餘部位執行底線 2750.00 元，退出剩餘部位。",
+                "execution_consistency_conflict_count": 0,
+                "target_revalidation_mode": true,
+                "target_revalidation_trigger_price": 2643.77,
+                "target_revalidation_triggered": true,
+                "target_revalidation_status": "extension_not_confirmed_hold_under_existing_final_protection",
+                "extension_momentum_score_v2": 65,
+                "extension_momentum_state_v2": "Moderate",
+                "extension_momentum_hard_failures_v2": [
+                    "confirmed_failed_breakout_with_poor_follow_through"
+                ],
+                "extension_momentum_confirmed_v2": false,
+                "extension_effective_state_v2": "BlockedByExtensionFailure",
+                "extension_revalidation_outcome": "extension_not_confirmed_hold_under_existing_final_protection",
+                "next_extension_reference_price": 3058.0,
+                "extension_reference_semantics": "revalidation_reference_not_automatic_sell"
             }
         },
         "price_action_engine_version": "0.1.4b",
         "price_action_knowledge_version": "1.6",
-        "final_execution_schema_version": "v7.25k3.1_trigger_semantics_v2",
-        "final_execution_priority": "structured_lifecycle_decision",
-        "price_action_advisory_only": false,
-        "risk_override_allowed": false,
-        "risk_override_trigger_price": null,
-        "risk_advisory_trigger_price": null,
-        "target_objective_conflict_status": "aligned",
-        "final_sell_trigger_price": 2750.0,
-        "final_sell_trigger_type": "remaining_position_exit_floor_after_actual_partial_exit",
-        "trigger_semantics_consistency_status": "pass",
+        "run_datetime": "2026-08-21T14:13:52",
         "entry_permission_guardrail": {
             "status": "triggered",
             "reason": "v7.25e structural output guardrail",
