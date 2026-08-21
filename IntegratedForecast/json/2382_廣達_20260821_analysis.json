@@ -37,7 +37,7 @@
         ],
         "version_policy": "minimum_supported_version",
         "intraday_policy_version": "intraday_live_overlay_v1.4",
-        "run_datetime": "2026-08-21T08:12:34",
+        "run_datetime": "2026-08-21T13:35:05",
         "daily_output_tag": "20260821",
         "output_naming_policy": "daily_stable_overwrite",
         "stock_code": "2382",
@@ -135,7 +135,7 @@
             "method": "data_pipeline_consistency_check",
             "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
             "chart_read_status": "success",
-            "current_close": 327.0,
+            "current_close": 321.5,
             "ema20": 323.33,
             "gap_type": "Measuring(測量型缺口候選)",
             "gap_status": "有未回補Down向實體缺口",
@@ -151,7 +151,7 @@
                 {
                     "item": "current_close",
                     "status": "pass",
-                    "json_value": 327.0
+                    "json_value": 321.5
                 },
                 {
                     "item": "ema20",
@@ -187,7 +187,7 @@
         "runtime_trading_range_edge_flag": false
     },
     "analysis_data": {
-        "current_close": 327.0,
+        "current_close": 321.5,
         "latest_trade_date": "2026-08-20",
         "price_data_source": "FUGLEAPI",
         "price_data_ticker": "2382",
@@ -434,11 +434,11 @@
         "SMCI_pct": -0.22,
         "DELL_pct": -0.63,
         "HPE_pct": -0.45,
-        "tw_peer_avg_pct": -0.59,
-        "2317_pct": 0.61,
-        "3231_pct": -1.1,
-        "2356_pct": -1.07,
-        "6669_pct": -0.78,
+        "tw_peer_avg_pct": -0.54,
+        "2317_pct": -0.61,
+        "3231_pct": -2.22,
+        "2356_pct": 1.71,
+        "6669_pct": -1.03,
         "institutional_net_buy": -560.9,
         "margin_balance_change": 0.0,
         "gap_consistency_status": "pass_unfilled_gap_consistent",
@@ -447,51 +447,211 @@
         "intraday_policy_version": "intraday_live_overlay_v1.4",
         "intraday_market_snapshot": {
             "intraday_policy_version": "intraday_live_overlay_v1.4",
-            "market_phase_window": "pre_market",
+            "market_phase_window": "post_close_window",
             "market_board": "LISTED_OR_OTC",
             "is_emerging": false,
             "scheduled_open_time": "09:00",
             "scheduled_close_time": "13:30",
             "delayed_close_supported_until": "13:33",
             "session_date": "2026-08-21",
-            "evaluated_at": "2026-08-21T08:12:34",
-            "intraday_fetch_expected": false,
-            "quote_usage_mode": "not_applicable",
+            "evaluated_at": "2026-08-21T13:35:04",
+            "intraday_fetch_expected": true,
+            "quote_usage_mode": "post_close_same_day_last_trade",
             "price_limit_applicable": true,
             "legal_price_limit_rule": "listed_otc_reference_price_limit_rules_apply",
             "source": "FUGLE_MARKETDATA",
-            "fetch_status": "not_requested",
-            "quote_status": "not_requested",
-            "candles_status": "not_requested",
-            "current_session_bar_complete": false,
+            "fetch_status": "post_close_same_day_quote_ok",
+            "quote_status": "ok",
+            "candles_status": "ok",
+            "current_session_bar_complete": true,
             "daily_pa_uses_completed_bars_only": true,
-            "candle_timeframe_minutes": 5
+            "candle_timeframe_minutes": 5,
+            "quote_date": "2026-08-21",
+            "exchange": "TWSE",
+            "market": "TSE",
+            "symbol": "2382",
+            "name": "廣達",
+            "reference_price": 327.0,
+            "previous_close": 327.0,
+            "open_price": 327.5,
+            "high_price": 327.5,
+            "low_price": 320.5,
+            "last_trade_price": 321.5,
+            "last_indicative_price": 321.5,
+            "avg_price": 322.59,
+            "change": -5.5,
+            "change_percent": -1.68,
+            "amplitude": 2.14,
+            "best_bid": 321.5,
+            "best_ask": 322.0,
+            "bid_ask_spread": 0.5,
+            "bid_ask_spread_pct": 0.1554,
+            "trade_volume": 8462.0,
+            "trade_value": 2729763000.0,
+            "transaction_count": 1942.0,
+            "trade_volume_at_bid": 4322.0,
+            "trade_volume_at_ask": 4078.0,
+            "last_trade_time": "2026-08-21T13:30:00",
+            "freshness_age_seconds": 304,
+            "freshness_status": "post_close_same_day_last_trade",
+            "is_usable_for_current_price": true,
+            "post_close_same_day_quote_used": true,
+            "is_trial": false,
+            "is_open": null,
+            "is_close": true,
+            "is_delayed_open": false,
+            "is_delayed_close": false,
+            "trading_halt": null,
+            "is_limit_up_price": null,
+            "is_limit_down_price": null,
+            "vs_previous_close_pct": -1.682,
+            "session_return_from_open_pct": -1.832,
+            "distance_to_session_avg_pct": -0.338,
+            "session_range_position_0_1": 0.143,
+            "candles_count": 54,
+            "candle_volume_unit": "lots",
+            "last_15m_return_pct": 0.0,
+            "intraday_5m_trend": "sideways",
+            "intraday_5m_slope_per_bar": -0.1,
+            "opening_range_15m_high": 327.5,
+            "opening_range_15m_low": 322.5,
+            "opening_range_status": "below_opening_range",
+            "candles_tail": [
+                {
+                    "date": "2026-08-21T12:30:00+0800",
+                    "open": 321.0,
+                    "high": 321.5,
+                    "low": 321.0,
+                    "close": 321.0,
+                    "volume": 28,
+                    "average": 323.04
+                },
+                {
+                    "date": "2026-08-21T12:35:00+0800",
+                    "open": 321.0,
+                    "high": 321.5,
+                    "low": 321.0,
+                    "close": 321.0,
+                    "volume": 24,
+                    "average": 323.03
+                },
+                {
+                    "date": "2026-08-21T12:40:00+0800",
+                    "open": 321.5,
+                    "high": 322.0,
+                    "low": 321.0,
+                    "close": 322.0,
+                    "volume": 112,
+                    "average": 323.0
+                },
+                {
+                    "date": "2026-08-21T12:45:00+0800",
+                    "open": 321.5,
+                    "high": 322.0,
+                    "low": 321.5,
+                    "close": 322.0,
+                    "volume": 30,
+                    "average": 323.0
+                },
+                {
+                    "date": "2026-08-21T12:50:00+0800",
+                    "open": 322.0,
+                    "high": 322.0,
+                    "low": 321.5,
+                    "close": 321.5,
+                    "volume": 29,
+                    "average": 322.99
+                },
+                {
+                    "date": "2026-08-21T12:55:00+0800",
+                    "open": 322.0,
+                    "high": 322.0,
+                    "low": 321.5,
+                    "close": 322.0,
+                    "volume": 23,
+                    "average": 322.99
+                },
+                {
+                    "date": "2026-08-21T13:00:00+0800",
+                    "open": 322.0,
+                    "high": 322.0,
+                    "low": 321.5,
+                    "close": 322.0,
+                    "volume": 82,
+                    "average": 322.97
+                },
+                {
+                    "date": "2026-08-21T13:05:00+0800",
+                    "open": 322.0,
+                    "high": 322.5,
+                    "low": 321.5,
+                    "close": 322.0,
+                    "volume": 218,
+                    "average": 322.93
+                },
+                {
+                    "date": "2026-08-21T13:10:00+0800",
+                    "open": 322.0,
+                    "high": 322.5,
+                    "low": 321.5,
+                    "close": 321.5,
+                    "volume": 276,
+                    "average": 322.9
+                },
+                {
+                    "date": "2026-08-21T13:15:00+0800",
+                    "open": 321.5,
+                    "high": 322.0,
+                    "low": 321.5,
+                    "close": 322.0,
+                    "volume": 174,
+                    "average": 322.86
+                },
+                {
+                    "date": "2026-08-21T13:20:00+0800",
+                    "open": 321.5,
+                    "high": 322.5,
+                    "low": 321.5,
+                    "close": 321.5,
+                    "volume": 327,
+                    "average": 322.82
+                },
+                {
+                    "date": "2026-08-21T13:30:00+0800",
+                    "open": 321.5,
+                    "high": 321.5,
+                    "low": 321.5,
+                    "close": 321.5,
+                    "volume": 1469,
+                    "average": 322.59
+                }
+            ]
         },
-        "market_phase": "pre_market",
+        "market_phase": "post_close_window",
         "daily_pa_uses_completed_bars_only": true,
-        "current_session_bar_complete": false,
+        "current_session_bar_complete": true,
         "daily_completed_close": 327.0,
         "daily_completed_trade_date": "2026-08-20",
-        "current_market_price": 327.0,
-        "current_price_basis": "completed_daily_close",
-        "current_price_as_of": "2026-08-20",
-        "intraday_price_override_applied": false,
-        "intraday_execution_reference_allowed": false,
+        "current_market_price": 321.5,
+        "current_price_basis": "fugle_post_close_last_trade",
+        "current_price_as_of": "2026-08-21T13:30:00",
+        "intraday_price_override_applied": true,
+        "intraday_execution_reference_allowed": true,
         "intraday_behavior_summary": {
-            "freshness_status": null,
-            "freshness_age_seconds": null,
-            "vs_previous_close_pct": null,
-            "session_return_from_open_pct": null,
-            "distance_to_session_avg_pct": null,
-            "session_range_position_0_1": null,
-            "intraday_5m_trend": null,
-            "last_15m_return_pct": null,
-            "opening_range_status": null,
-            "best_bid": null,
-            "best_ask": null,
-            "bid_ask_spread_pct": null,
+            "freshness_status": "post_close_same_day_last_trade",
+            "freshness_age_seconds": 304,
+            "vs_previous_close_pct": -1.682,
+            "session_return_from_open_pct": -1.832,
+            "distance_to_session_avg_pct": -0.338,
+            "session_range_position_0_1": 0.143,
+            "intraday_5m_trend": "sideways",
+            "last_15m_return_pct": 0.0,
+            "opening_range_status": "below_opening_range",
+            "best_bid": 321.5,
+            "best_ask": 322.0,
+            "bid_ask_spread_pct": 0.1554,
             "trading_halt": null,
-            "is_trial": null
+            "is_trial": false
         },
         "stock_profile_risk_triggered": false,
         "stock_profile_risk_details": [],
@@ -501,7 +661,7 @@
             "method": "data_pipeline_consistency_check",
             "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
             "chart_read_status": "success",
-            "current_close": 327.0,
+            "current_close": 321.5,
             "ema20": 323.33,
             "gap_type": "Measuring(測量型缺口候選)",
             "gap_status": "有未回補Down向實體缺口",
@@ -517,7 +677,7 @@
                 {
                     "item": "current_close",
                     "status": "pass",
-                    "json_value": 327.0
+                    "json_value": 321.5
                 },
                 {
                     "item": "ema20",
@@ -544,8 +704,8 @@
                 }
             ]
         },
-        "portfolio_unrealized_pnl_pct": -7.46,
-        "portfolio_unrealized_pnl_value": -5271.0,
+        "portfolio_unrealized_pnl_pct": -9.02,
+        "portfolio_unrealized_pnl_value": -6371.0,
         "current_support": {
             "price": 294.3,
             "role": "current_support_below_market",
@@ -581,7 +741,7 @@
         "risk_first_action": false,
         "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
         "portfolio_action_priority": "hold_until_target_revalidation_or_risk",
-        "action_zone_summary": "操作優先級=observe_or_reduce；帳面損益=-7.46%；多單停損/風控={'price': 294.3, 'role': 'long_position_stop_below_market', 'basis': 'gap_MM_Target_Down', 'note': '多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。'}；目前支撐={'price': 294.3, 'role': 'current_support_below_market', 'basis': 'gap_MM_Target_Down', 'note': '目前股價下方較接近的可量化支撐/風控參考。'}；反彈壓力={'price': 332.0, 'role': 'rebound_resistance_above_market', 'basis': 'gap_failure_condition.price', 'note': '現價上方反彈壓力或缺口失效確認價，不是多單停損支撐。'}；缺口失效確認價={'price': 332.0, 'role': 'gap_invalidation_price', 'basis': 'gap_failure_condition.price', 'note': '若收盤站回缺口上緣 332.0，或快速回補缺口中點 331.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。'}；反彈減碼區=N/A；今日可達=None；今日最近有效操作價=None；最快到達結構區天數=None；今日有效操作區={'zone_type': 'no_rebound_reduce_zone', 'action': '未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。'}；禁止追價/攤平原因=breakout_entry_permission=FadeBreakout；突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。。；PositionLifecycle：持倉狀態=BelowTargetHoldUntilRevalidation；目前尚未到達 424.03 元；目標價角色=延伸動能重驗，不是sell trigger；現在可賣=False；FinalSellTrigger=None（除非獨立風控形成）。",
+        "action_zone_summary": "操作優先級=observe_or_reduce；帳面損益=-9.02%；多單停損/風控={'price': 294.3, 'role': 'long_position_stop_below_market', 'basis': 'gap_MM_Target_Down', 'note': '多單停損/風控應使用目前股價下方價位；不得把上方反彈壓力誤當多單停損支撐。'}；目前支撐={'price': 294.3, 'role': 'current_support_below_market', 'basis': 'gap_MM_Target_Down', 'note': '目前股價下方較接近的可量化支撐/風控參考。'}；反彈壓力={'price': 332.0, 'role': 'rebound_resistance_above_market', 'basis': 'gap_failure_condition.price', 'note': '現價上方反彈壓力或缺口失效確認價，不是多單停損支撐。'}；缺口失效確認價={'price': 332.0, 'role': 'gap_invalidation_price', 'basis': 'gap_failure_condition.price', 'note': '若收盤站回缺口上緣 332.0，或快速回補缺口中點 331.0 後續強，則 Measuring(測量型缺口候選) 空方缺口假設失效。'}；反彈減碼區=N/A；今日可達=None；今日最近有效操作價=None；最快到達結構區天數=None；今日有效操作區={'zone_type': 'no_rebound_reduce_zone', 'action': '未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。'}；禁止追價/攤平原因=breakout_entry_permission=FadeBreakout；突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。。；PositionLifecycle：持倉狀態=BelowTargetHoldUntilRevalidation；目前尚未到達 424.03 元；目標價角色=延伸動能重驗，不是sell trigger；現在可賣=False；FinalSellTrigger=None（除非獨立風控形成）。",
         "minimum_supported_version": "v7.25d1",
         "current_rule_family": "v7.25k3.4g",
         "backward_compatible_with": [
@@ -683,22 +843,21 @@
         "profit_target_ever_reached": false,
         "first_profit_target_reached_date": null,
         "days_since_profit_target_reached": null,
-        "current_position_profit_pct": -7.46,
+        "current_position_profit_pct": -9.02,
         "highest_price_since_entry": 393.0,
         "lowest_price_since_entry": 279.0,
         "max_profit_since_entry_pct": 11.22,
         "max_adverse_excursion_since_entry_pct": -21.04,
-        "profit_giveback_from_peak_pct_points": 18.68,
-        "drawdown_from_post_entry_high_pct": -16.79,
+        "profit_giveback_from_peak_pct_points": 20.23,
+        "drawdown_from_post_entry_high_pct": -18.19,
         "anchored_vwap_since_entry": 331.77,
         "momentum_hold_score": 0,
         "momentum_hold_state": "Weak",
         "momentum_extension_allowed_by_user": true,
         "momentum_extension_eligible": false,
-        "momentum_extension_positive_reasons": [
-            "股價站上 EMA20"
-        ],
+        "momentum_extension_positive_reasons": [],
         "momentum_extension_blockers": [
+            "股價未站上 EMA20",
             "Follow-through=Poor",
             "breakout_context_type=FailedBreakout",
             "breakout_entry_permission=FadeBreakout",
@@ -757,8 +916,8 @@
             "conditional_additional_sell_shares": 0,
             "remaining_full_exit_ratio_pct_if_triggered": 0,
             "remaining_full_exit_shares_if_triggered": 0,
-            "current_price": 327.0,
-            "current_profit_pct": -7.46,
+            "current_price": 321.5,
+            "current_profit_pct": -9.02,
             "base_profit_target_pct": 20.0,
             "base_profit_target_price": 424.03,
             "sell_trigger_price": null,
@@ -793,7 +952,7 @@
             "target_revalidation_triggered": false,
             "target_revalidation_trigger_price": 424.03,
             "target_revalidation_status": "waiting_for_target_revalidation",
-            "extension_momentum_score_v2": 23,
+            "extension_momentum_score_v2": 0,
             "extension_momentum_state_v2": "Weak",
             "extension_momentum_hard_failures_v2": [
                 "confirmed_failed_breakout_with_poor_follow_through"
@@ -842,10 +1001,9 @@
         "momentum_price_action_evidence": {
             "score": 0,
             "state": "Weak",
-            "positive_reasons": [
-                "股價站上 EMA20"
-            ],
+            "positive_reasons": [],
             "blockers": [
+                "股價未站上 EMA20",
                 "Follow-through=Poor",
                 "breakout_context_type=FailedBreakout",
                 "breakout_entry_permission=FadeBreakout",
@@ -884,7 +1042,7 @@
                 "target_price": 385.75,
                 "target_reached": true,
                 "first_target_reached_date": "2026-06-02",
-                "current_profit_pct": 1.72,
+                "current_profit_pct": 0.01,
                 "highest_price_since_lot_entry": 438.0,
                 "lowest_price_since_lot_entry": 279.0,
                 "max_profit_since_lot_entry_pct": 36.25
@@ -897,7 +1055,7 @@
                 "target_price": 444.64,
                 "target_reached": false,
                 "first_target_reached_date": null,
-                "current_profit_pct": -11.75,
+                "current_profit_pct": -13.23,
                 "highest_price_since_lot_entry": 393.0,
                 "lowest_price_since_lot_entry": 279.0,
                 "max_profit_since_lot_entry_pct": 6.06
@@ -1022,8 +1180,8 @@
                 "conditional_additional_sell_shares": 0,
                 "remaining_full_exit_ratio_pct_if_triggered": 0,
                 "remaining_full_exit_shares_if_triggered": 0,
-                "current_price": 327.0,
-                "current_profit_pct": -7.46,
+                "current_price": 321.5,
+                "current_profit_pct": -9.02,
                 "base_profit_target_pct": 20.0,
                 "base_profit_target_price": 424.03,
                 "sell_trigger_price": null,
@@ -1058,7 +1216,7 @@
                 "target_revalidation_triggered": false,
                 "target_revalidation_trigger_price": 424.03,
                 "target_revalidation_status": "waiting_for_target_revalidation",
-                "extension_momentum_score_v2": 23,
+                "extension_momentum_score_v2": 0,
                 "extension_momentum_state_v2": "Weak",
                 "extension_momentum_hard_failures_v2": [
                     "confirmed_failed_breakout_with_poor_follow_through"
@@ -1185,15 +1343,15 @@
         "next_extension_reference_source": null,
         "extension_reference_semantics": "revalidation_reference_not_automatic_sell",
         "extension_reference_recompute_required": false,
-        "extension_momentum_score_v2": 23,
+        "extension_momentum_score_v2": 0,
         "extension_momentum_state_v2": "Weak",
-        "extension_momentum_positive_reasons_v2": [
-            "price_above_ema20"
-        ],
+        "extension_momentum_positive_reasons_v2": [],
         "extension_momentum_cautions_v2": [
+            "price_below_ema20",
             "follow_through_Poor",
             "FailedBreakout",
             "weak_close",
+            "below_opening_range",
             "no_add_guardrail_blocks_adding_not_holding",
             "entry_permission_FadeBreakout_does_not_by_itself_force_exit"
         ],
@@ -1214,15 +1372,15 @@
         "execution_consistency_conflict_count": 0,
         "execution_backtest_summary": {
             "execution_basis_version": "v7.25j1_execution_basis_v2",
-            "decision_generated_at": "2026-08-21T08:12:34",
+            "decision_generated_at": "2026-08-21T13:35:05",
             "decision_market_data_date": "2026-08-20",
-            "decision_delivery_candidate_date": "2026-08-21",
+            "decision_delivery_candidate_date": "2026-08-24",
             "decision_delivery_date": null,
             "decision_delivery_datetime": null,
             "execution_eligibility_datetime": null,
             "execution_status": "pending_delivery_trading_day_ohlcv",
-            "execution_pending_stage": "candidate_day_before_08_20_delivery",
-            "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
+            "execution_pending_stage": "before_delivery_candidate_date",
+            "execution_pending_stage_description": "尚未到08:20送達候選日。",
             "limit_up_down_fill_status": null,
             "benchmark_execution_date": null,
             "benchmark_execution_price": null,
@@ -1254,11 +1412,19 @@
             "backtest_cohort_tags": [
                 "near_measured_move_target_false"
             ],
-            "grouped_backtest_status": "pending_future_ohlcv",
-            "cohort_t1_t5_metrics": {},
-            "cohort_mfe_5d_pct": null,
-            "cohort_mae_5d_pct": null,
-            "pullback_zone_touch_status": "pending_future_ohlcv",
+            "grouped_backtest_status": "partial_observation",
+            "cohort_t1_t5_metrics": {
+                "T+1": {
+                    "date": "2026-08-21",
+                    "close_return_pct": 0.0,
+                    "cumulative_mfe_pct": 1.8663,
+                    "cumulative_mae_pct": -0.311,
+                    "source": "yfinance:2382.TW"
+                }
+            },
+            "cohort_mfe_5d_pct": 1.8663,
+            "cohort_mae_5d_pct": -0.311,
+            "pullback_zone_touch_status": "not_touched_in_observed_window",
             "pullback_zone_first_touch_date": null
         }
     },
@@ -1319,26 +1485,26 @@
         "stock_code": "2382",
         "stock_name": "廣達",
         "ticker": "2382.TW",
-        "run_datetime": "2026-08-21T08:12:34",
+        "run_datetime": "2026-08-21T13:35:05",
         "base_date": "2026-08-20",
-        "base_close": 327.0,
+        "base_close": 321.5,
         "status": "pending",
         "items": {
             "T+1": {
-                "prediction_price": 325.0,
+                "prediction_price": 317.5,
                 "prediction_direction": "Down",
-                "actual_date": null,
-                "actual_close": null,
-                "actual_direction": null,
-                "actual_source": null,
-                "actual_return_pct": null,
-                "price_error": null,
-                "price_error_pct": null,
-                "direction_hit": null,
-                "updated_at": null
+                "actual_date": "2026-08-21",
+                "actual_close": 321.5,
+                "actual_direction": "Flat",
+                "actual_source": "yfinance:2382.TW",
+                "actual_return_pct": 0.0,
+                "price_error": 4.0,
+                "price_error_pct": 1.24,
+                "direction_hit": false,
+                "updated_at": "2026-08-21T13:35:53"
             },
             "T+2": {
-                "prediction_price": 320.0,
+                "prediction_price": 312.5,
                 "prediction_direction": "Down",
                 "actual_date": null,
                 "actual_close": null,
@@ -1351,7 +1517,7 @@
                 "updated_at": null
             },
             "T+3": {
-                "prediction_price": 312.5,
+                "prediction_price": 305.0,
                 "prediction_direction": "Down",
                 "actual_date": null,
                 "actual_close": null,
@@ -1391,14 +1557,14 @@
             }
         },
         "summary": {
-            "available_count": 0,
+            "available_count": 1,
             "direction_hit_count": 0,
-            "direction_hit_rate": null,
-            "avg_abs_price_error_pct": null,
-            "observed_return_count": 0,
-            "avg_return_pct": null,
-            "mfe_5d_pct": null,
-            "mae_5d_pct": null
+            "direction_hit_rate": 0.0,
+            "avg_abs_price_error_pct": 1.24,
+            "observed_return_count": 1,
+            "avg_return_pct": 0.0,
+            "mfe_5d_pct": 0.0,
+            "mae_5d_pct": 0.0
         },
         "breakout_backtest": {
             "version": "v7.25d_breakout_t1_t5",
@@ -1408,8 +1574,13 @@
             "counterparty_profitability_score": 70,
             "counterparty_trapped_flag": false,
             "fade_high_counterparty_flag": true,
-            "status": "pending_actuals",
-            "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。"
+            "status": "ready_for_aggregation",
+            "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。",
+            "observed_return_count": 1,
+            "avg_return_pct": 0.0,
+            "mfe_5d_pct": 0.0,
+            "mae_5d_pct": 0.0,
+            "analysis_hint": "用於後續彙總比較 breakout_follow_through_score、FadeBreakout、counterparty_profitability_score>=70 之 T+1~T+5 平均報酬與最大回撤。"
         },
         "position_lifecycle_backtest": {
             "version": "v7.25j1_position_lifecycle_execution_t1_t5",
@@ -1427,20 +1598,20 @@
             "momentum_hold_score": 0,
             "momentum_extension_eligible": false,
             "profit_protection_floor_price": null,
-            "current_position_profit_pct": -7.46,
+            "current_position_profit_pct": -9.02,
             "max_profit_since_entry_pct": 11.22,
             "max_adverse_excursion_since_entry_pct": -21.04,
-            "status": "pending_actuals",
+            "status": "ready_for_aggregation",
             "purpose": "以實際買賣紀錄優先、下一交易日開盤基準次之，回測立即賣出比例、剩餘部位底線、反彈區與完整退出條件。",
             "execution_basis_version": "v7.25j1_execution_basis_v2",
-            "decision_generated_at": "2026-08-21T08:12:34",
+            "decision_generated_at": "2026-08-21T13:35:05",
             "decision_market_data_date": "2026-08-20",
             "decision_timezone": "Asia/Taipei",
             "decision_delivery_rule": "next_not_missed_08_20_schedule_after_decision_generation_and_after_market_data_date",
             "execution_eligibility_rule": "resolved_delivery_trading_day_market_open_at_09_00",
             "decision_position_shares": 200,
             "decision_avg_cost": 353.36,
-            "decision_base_close": 327.0,
+            "decision_base_close": 321.5,
             "decision_limit_up_price": 359.7,
             "decision_limit_down_price": 294.3,
             "decision_price_limit_applicable": true,
@@ -1461,7 +1632,7 @@
             "benchmark_execution_price_definition": "決策產生後下一個未錯過的08:20排程所對應交易日09:00開盤價；不得回溯使用決策產生前的開盤價。",
             "actual_user_execution_price_definition": "只有Portfolio.xlsx『買賣紀錄』的實際賣出交易價，才可稱為actual_user_execution_price。",
             "execution_status": "pending_delivery_trading_day_ohlcv",
-            "decision_delivery_candidate_date": "2026-08-21",
+            "decision_delivery_candidate_date": "2026-08-24",
             "decision_delivery_candidate_note": "候選日依08:20截止時間計算；國定假日由後續OHLCV第一個實際交易日校正。",
             "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
             "backtest_cohort_tags": [
@@ -1496,7 +1667,7 @@
                 "preferred_action": "等待結構確認，不得因觸及50%回調價而加碼。",
                 "observation_role": "observation_only_no_fill_assumption"
             },
-            "grouped_backtest_status": "pending_future_ohlcv",
+            "grouped_backtest_status": "partial_observation",
             "final_execution_schema_version": "v7.25k3.1_trigger_semantics_v2",
             "final_execution_priority": "structured_lifecycle_decision",
             "final_execution_reason": "標的目標與結構化生命週期決策一致，依目前結構化決策執行。",
@@ -1529,22 +1700,34 @@
             "target_review_trigger_operator": null,
             "target_review_trigger_reached": null,
             "target_review_action": null,
+            "observed_return_count": 1,
+            "avg_return_pct_after_decision": 0.0,
+            "mfe_5d_pct_after_decision": 0.0,
+            "mae_5d_pct_after_decision": 0.0,
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
-            "future_ohlcv_observed_count": 0,
+            "future_ohlcv_observed_count": 1,
             "eligible_execution_ohlcv_observed_count": 0,
-            "last_execution_backfill_at": "2026-08-21T08:13:40",
-            "execution_pending_stage": "candidate_day_before_08_20_delivery",
-            "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。",
-            "cohort_observed_trading_days": 0,
-            "cohort_t1_t5_metrics": {},
-            "cohort_mfe_5d_pct": null,
-            "cohort_mae_5d_pct": null,
-            "pullback_zone_touch_status": "pending_future_ohlcv",
+            "last_execution_backfill_at": "2026-08-21T13:35:53",
+            "execution_pending_stage": "before_delivery_candidate_date",
+            "execution_pending_stage_description": "尚未到08:20送達候選日。",
+            "cohort_observed_trading_days": 1,
+            "cohort_t1_t5_metrics": {
+                "T+1": {
+                    "date": "2026-08-21",
+                    "close_return_pct": 0.0,
+                    "cumulative_mfe_pct": 1.8663,
+                    "cumulative_mae_pct": -0.311,
+                    "source": "yfinance:2382.TW"
+                }
+            },
+            "cohort_mfe_5d_pct": 1.8663,
+            "cohort_mae_5d_pct": -0.311,
+            "pullback_zone_touch_status": "not_touched_in_observed_window",
             "pullback_zone_first_touch_date": null,
             "pullback_zone_first_touch_t_index": null,
             "pullback_zone_post_touch_metrics": {},
             "grouped_backtest_sample_interpretation": "僅作分組資料蒐集；任一cohort完成樣本少於30筆時，不得宣稱策略有效。",
-            "cohort_metrics_updated_at": "2026-08-21T08:13:40"
+            "cohort_metrics_updated_at": "2026-08-21T13:35:53"
         },
         "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
         "backtest_cohort_tags": [
@@ -1588,59 +1771,51 @@
         "target_review_action": null
     },
     "news": {
-        "news_report_title": "廣達 (2382) 盤前觀察：AI伺服器龍頭地位穩固，短期操作宜審慎觀望",
+        "news_report_title": "廣達 (2382) 市場觀察：AI伺服器動能持續，權值股走勢待觀察",
         "overall_sentiment": "Neutral",
         "key_takeaways": [
-            "廣達作為全球AI伺服器與筆記型電腦代工龍頭，其核心業務表現與AI產業趨勢高度連動，市場地位穩固。",
-            "股價走勢主要受NVIDIA、美股AI伺服器同業（如DELL、HPE、SMCI）、外資買賣超及台股整體資金流向影響。",
-            "技術面顯示，目前股價接近測量型缺口目標，且存在未回補的向下實體缺口，短期操作上建議觀察或小部位布局，避免追高。",
-            "考量其大型權值股特性，適合分批布局與波段操作，不宜頻繁短打，應順勢而為。",
-            "盤前需特別留意美股AI伺服器同業表現，若DELL、HPE、SMCI平均跌幅逾3%，應降低追價權重，審慎評估風險。"
+            "**核心業務穩健**：廣達作為全球AI伺服器與筆記型電腦代工龍頭，其核心業務涵蓋AI伺服器、雲端資料中心、筆記型電腦代工及車用電子，基本面具備長期成長潛力。",
+            "**AI伺服器動能**：受惠於全球AI趨勢，AI伺服器業務為主要成長引擎，走勢與NVIDIA及美系CSP（雲端服務供應商）資本支出高度相關，為外資關注的指標股。",
+            "**市場操作建議**：目前技術訊號未完整，建議投資人保持觀察或採小部位分批布局策略，避免追高或一次性滿倉。尤其在股價接近測量目標時，順勢追價權重應降低，進場時機建議等待更明確訊號。",
+            "**外部因素影響**：股價易受外資買賣超、美股AI伺服器同業（如NVDA, SMCI, DELL, HPE）表現及整體大盤資金流向影響。若美股AI供應鏈轉弱，或同業平均跌幅逾3%，應避免追高。"
         ],
-        "events_summary": [
-            "廣達近期股價呈現中高波動，但作為大型權值股，其穩定性通常優於中小型題材股，流動性佳。",
-            "技術分析指出，目前股價位於EMA20之上（327.0 vs 323.33），但圖表上存在一個未回補的向下實體測量型缺口，顯示市場可能處於測量或整理階段，需留意缺口回補狀況。",
-            "鑑於當前訊號未完全確立，且股價接近測量目標，市場建議採取觀望或小部位試單策略，並降低順勢追價的權重，避免一次性滿倉。",
-            "外資買賣超與美股AI供應鏈（特別是NVIDIA）的動態，將持續是影響廣達股價表現的關鍵因素，投資人應密切關注。",
-            "根據風險規則，盤前應特別關注美股AI伺服器同業如DELL、HPE、SMCI的表現，若其單日平均跌幅逾3%，將觸發追價降權的風險提示。"
-        ]
+        "events_summary": "近期市場對廣達 (2382) 的關注主要聚焦於其AI伺服器業務的發展潛力，此為公司長期成長的核心動能。儘管AI趨勢為公司帶來長期成長機會，但考量到目前技術面訊號顯示「未完整」，且進場時機建議為「等待 (Wait)」，市場操作上宜保持謹慎。\n\n技術觀察顯示，廣達股價目前略低於20日均線 (EMA20: 323.33，收盤價: 321.5)，且存在一個「測量型缺口候選」的未回補向下實體缺口。這暗示股價可能處於整理或尋求方向的階段，投資人應避免追價。\n\n此外，廣達作為大型權值股，其走勢高度受外資動向及美股AI伺服器同業表現影響。根據風險提示，若美股AI供應鏈轉弱，或美股AI伺服器同業（如DELL/HPE/SMCI）單日平均跌幅逾3%，盤前追價應降權。目前標的專屬風險規則尚未觸發，但投資人仍需密切關注外部市場變化。\n\n整體而言，廣達基本面穩健，但短期操作上，建議投資人耐心等待更明確的進場訊號，並採取分批、順勢的策略，避免頻繁短打。"
     },
     "price": {
         "prediction_T+1": {
-            "date": "2026-08-21",
-            "price_range": "320.0 - 330.0",
-            "direction_bias": "Neutral to Slightly Bearish",
-            "rationale": "廣達在經歷向下假突破後，動能偏弱，預計將在 320.0 - 330.0 區間震盪，並可能測試 EMA20 (323.33) 支撐。上方壓力為缺口上緣 332.0。美股AI伺服器同業盤前表現略為疲軟，且外資呈現賣超，短期內缺乏強勁上攻動能。",
+            "direction": "Neutral_to_Down",
+            "price_range": "310.0 - 325.0",
+            "rationale": "廣達今日收盤下跌，股價位於EMA20下方，且出現向下測量型缺口，測量目標指向294.3元。近期突破被判定為失敗突破且缺乏有效跟隨，對手方（空方）仍有解套或獲利空間，顯示多方動能不足。美股AI伺服器同業及台股同業普遍走弱，外資亦呈現賣超，加劇短期下行壓力。預期明日可能在317.5元（Higher Low候選）附近尋求支撐，若失守則可能進一步測試下方區間。",
             "key_levels": {
-                "support": 323.33,
-                "resistance": 332.0
+                "support": 317.5,
+                "resistance": 323.33,
+                "gap_invalidation": 332.0
             }
         },
         "prediction_T+2": {
-            "date": "2026-08-22",
-            "price_range": "315.0 - 325.0",
-            "direction_bias": "Bearish",
-            "rationale": "若未能站穩 320.0 元，則可能進一步下探，接近測量型缺口下行目標 294.3 元。若能守穩，則可能在 315.0 - 325.0 區間盤整。假突破的負面影響持續，市場信心偏弱。",
+            "direction": "Neutral_to_Down",
+            "price_range": "305.0 - 320.0",
+            "rationale": "若T+1未能有效站穩317.5元，或市場整體氛圍持續偏空，廣達可能繼續向下探底。測量型缺口的下行目標294.3元將成為關鍵支撐區。在缺乏強勁動能和法人買盤支持下，反彈空間有限，上方EMA20（約323.33元）及缺口上緣（332.0元）將形成壓力。操作上仍需等待明確的底部訊號或二次進場確認。",
             "key_levels": {
-                "support": 317.5,
-                "resistance": 327.0
+                "support": 294.3,
+                "resistance": 323.33,
+                "gap_invalidation": 332.0
             }
         },
         "prediction_T+3": {
-            "date": "2026-08-23",
-            "price_range": "305.0 - 320.0",
-            "direction_bias": "Bearish",
-            "rationale": "預計在 305.0 - 320.0 區間尋求方向。若美股 AI 伺服器同業持續疲軟或外資賣超加劇，則下行風險增高，294.3 元的支撐將面臨嚴峻考驗。需警惕跌停價與停損點重合帶來的滑價風險。",
+            "direction": "Neutral_to_Down",
+            "price_range": "295.0 - 315.0",
+            "rationale": "未來三日廣達走勢偏弱，若跌破294.3元（測量型缺口目標及多單停損參考價），將確認空方趨勢並可能加速下行。即使出現反彈，也應視為減碼或降低風險的機會，而非追價買入。整體而言，在未見到強勢反轉訊號、法人由賣轉買、或美股AI供應鏈止穩前，廣達仍將承受壓力。需密切關注294.3元的防守情況，以及332.0元的缺口回補狀況以判斷趨勢轉變。",
             "key_levels": {
                 "support": 294.3,
-                "resistance": 320.0
+                "resistance": 332.0
             }
         },
         "portfolio_advice": {
             "layout_strategy": {
                 "action": "核心目標：達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？；準則：遵守價格行為。 尚未達基本10%獲利門檻；股價到達 424.03 元即開啟賣出權限，不必等待下一交易日分析。",
                 "suggested_price_range": {
-                    "current_price": 327.0,
+                    "current_price": 321.5,
                     "base_profit_target_price": 424.03,
                     "sell_trigger_price": null
                 },
@@ -1654,8 +1829,11 @@
                     "limit_down_10_pct": 294.3
                 },
                 "rationale": "準則=遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。 持倉狀態=BelowTargetHoldUntilRevalidation；目前尚未到達 424.03 元；目標價角色=延伸動能重驗，不是sell trigger；現在可賣=False；FinalSellTrigger=None（除非獨立風控形成）。 此為持倉生命週期與價格行為整合後的最終規則；不得再引用舊狀態名稱或以等待下一交易日取代既有賣出權限。",
-                "guardrail": "禁止追價或攤平，50% 回調區 (317.0元) 僅作觀察，不構成買點或加碼點。若跌破 303.14 元，應優先考慮降低風險部位。",
+                "final_sell_trigger_price": null,
+                "final_sell_trigger_type": "no_sell_trigger_before_target_revalidation_or_risk",
                 "risk_advisory_trigger_price": null,
+                "risk_advisory_trigger_type": "executable_pre_stop_zone_upper_bound",
+                "risk_advisory_trigger_reason": "若盤中反彈失敗且跌破此區，應優先降風險；不要等到跌停理論停損價才第一次執行。",
                 "effective_today_action_zone": {
                     "zone_type": "no_rebound_reduce_zone",
                     "action": "未定義反彈減碼區；依一般支撐/壓力與 guardrail 判斷。"
@@ -1700,8 +1878,8 @@
                     "conditional_additional_sell_shares": 0,
                     "remaining_full_exit_ratio_pct_if_triggered": 0,
                     "remaining_full_exit_shares_if_triggered": 0,
-                    "current_price": 327.0,
-                    "current_profit_pct": -7.46,
+                    "current_price": 321.5,
+                    "current_profit_pct": -9.02,
                     "base_profit_target_pct": 20.0,
                     "base_profit_target_price": 424.03,
                     "sell_trigger_price": null,
@@ -1736,7 +1914,7 @@
                     "target_revalidation_triggered": false,
                     "target_revalidation_trigger_price": 424.03,
                     "target_revalidation_status": "waiting_for_target_revalidation",
-                    "extension_momentum_score_v2": 23,
+                    "extension_momentum_score_v2": 0,
                     "extension_momentum_state_v2": "Weak",
                     "extension_momentum_hard_failures_v2": [
                         "confirmed_failed_breakout_with_poor_follow_through"
@@ -1753,7 +1931,7 @@
                     "default": 0
                 },
                 "next_day_analysis_required_for_sell_permission": false,
-                "original_ai_action_for_reference": "觀察 / 等待 Second Entry 或確認 K 棒；原始AI建議僅供參考：Hold (續抱)",
+                "original_ai_action_for_reference": "觀察 / 等待 Second Entry 或確認 K 棒；原始AI建議僅供參考：Hold_and_Observe_Risk",
                 "historical_profit_protection_floor_price": null,
                 "active_profit_protection_floor_price": null,
                 "remaining_position_exit_floor_price": null,
@@ -1844,8 +2022,8 @@
                         "conditional_additional_sell_shares": 0,
                         "remaining_full_exit_ratio_pct_if_triggered": 0,
                         "remaining_full_exit_shares_if_triggered": 0,
-                        "current_price": 327.0,
-                        "current_profit_pct": -7.46,
+                        "current_price": 321.5,
+                        "current_profit_pct": -9.02,
                         "base_profit_target_pct": 20.0,
                         "base_profit_target_price": 424.03,
                         "sell_trigger_price": null,
@@ -1880,7 +2058,7 @@
                         "target_revalidation_triggered": false,
                         "target_revalidation_trigger_price": 424.03,
                         "target_revalidation_status": "waiting_for_target_revalidation",
-                        "extension_momentum_score_v2": 23,
+                        "extension_momentum_score_v2": 0,
                         "extension_momentum_state_v2": "Weak",
                         "extension_momentum_hard_failures_v2": [
                             "confirmed_failed_breakout_with_poor_follow_through"
@@ -1913,8 +2091,6 @@
                     "trigger_semantics_consistency_status": "pass"
                 },
                 "final_decision_reason_consistency_status": "pass",
-                "final_sell_trigger_price": null,
-                "final_sell_trigger_type": "no_sell_trigger_before_target_revalidation_or_risk",
                 "trigger_semantics_consistency_status": "pass",
                 "final_sell_trigger_action": "hold_until_target_revalidation_or_independent_risk",
                 "target_review_mode": null,
@@ -1924,106 +2100,77 @@
                 "target_review_action": null
             },
             "position_lifecycle_state": "BelowTargetHoldUntilRevalidation",
-            "current_position_profit_pct": -7.46,
-            "base_profit_target_price": 424.03,
-            "final_sell_trigger_price": null,
-            "final_sell_trigger_type": "no_sell_trigger_before_target_revalidation_or_risk",
+            "sell_now_permission": false,
+            "recommended_sell_ratio_pct": {
+                "lower": 0,
+                "upper": 0,
+                "default": 0
+            },
             "recommended_immediate_sell_ratio_pct": 0,
             "conditional_additional_sell_ratio_pct": 0,
-            "portfolio_unrealized_pnl_pct": -7.46,
-            "portfolio_action_priority": "hold_until_target_revalidation_or_risk",
-            "risk_first_action": false,
-            "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
-            "price_action_risk_advisory": {
-                "role": "price_action_risk_advisory_before_target_override",
-                "position_lifecycle_state": "BelowTargetHoldUntilRevalidation",
+            "target_objective_summary": "準則=遵守價格行為；核心目標=達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？；基本獲利門檻=20.0%；允許動能延伸=True；目標與原始價格行為決策=aligned；最終處理原則=標的目標、準則與目前最終決策一致。",
+            "position_exit_decision": {
+                "can_sell_now": false,
                 "sell_now_permission": false,
-                "sell_permission_basis": "TargetIsRevalidationNotSellTrigger",
-                "recommended_immediate_sell_ratio_pct": 0,
-                "conditional_additional_sell_ratio_pct": 0,
+                "state": "BelowTargetHoldUntilRevalidation",
+                "action_priority": "hold_until_target_revalidation_or_risk",
                 "recommended_sell_ratio_pct": {
                     "lower": 0,
                     "upper": 0,
                     "default": 0
                 },
+                "recommended_immediate_sell_ratio_pct": 0,
+                "recommended_immediate_sell_shares": 0,
+                "conditional_additional_sell_ratio_pct": 0,
+                "conditional_additional_sell_shares": 0,
+                "remaining_full_exit_ratio_pct_if_triggered": 0,
+                "remaining_full_exit_shares_if_triggered": 0,
+                "current_price": 321.5,
+                "current_profit_pct": -9.02,
+                "base_profit_target_pct": 20.0,
+                "base_profit_target_price": 424.03,
                 "sell_trigger_price": null,
+                "final_sell_trigger_price": null,
+                "final_sell_trigger_type": "no_sell_trigger_before_target_revalidation_or_risk",
+                "final_sell_trigger_action": "hold_until_target_revalidation_or_independent_risk",
+                "profit_protection_floor_price": null,
+                "historical_profit_protection_floor_price": null,
+                "active_profit_protection_floor_price": null,
                 "remaining_position_exit_floor_price": null,
                 "remaining_position_exit_floor_basis": {
                     "source": "not_available",
                     "price": null,
                     "note": "目前沒有可量化的剩餘部位執行底線。"
                 },
-                "rebound_reduce_zone": null,
+                "effective_remaining_exit_trigger_price": null,
+                "effective_remaining_exit_trigger_source": null,
                 "full_exit_condition": null,
-                "portfolio_action_priority": "hold_until_target_revalidation_or_risk",
-                "risk_first_action": false,
-                "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
-                "position_exit_decision": {
-                    "can_sell_now": false,
-                    "sell_now_permission": false,
-                    "state": "BelowTargetHoldUntilRevalidation",
-                    "action_priority": "hold_until_target_revalidation_or_risk",
-                    "recommended_sell_ratio_pct": {
-                        "lower": 0,
-                        "upper": 0,
-                        "default": 0
-                    },
-                    "recommended_immediate_sell_ratio_pct": 0,
-                    "recommended_immediate_sell_shares": 0,
-                    "conditional_additional_sell_ratio_pct": 0,
-                    "conditional_additional_sell_shares": 0,
-                    "remaining_full_exit_ratio_pct_if_triggered": 0,
-                    "remaining_full_exit_shares_if_triggered": 0,
-                    "current_price": 327.0,
-                    "current_profit_pct": -7.46,
-                    "base_profit_target_pct": 20.0,
-                    "base_profit_target_price": 424.03,
-                    "sell_trigger_price": null,
-                    "final_sell_trigger_price": null,
-                    "final_sell_trigger_type": "no_sell_trigger_before_target_revalidation_or_risk",
-                    "final_sell_trigger_action": "hold_until_target_revalidation_or_independent_risk",
-                    "profit_protection_floor_price": null,
-                    "historical_profit_protection_floor_price": null,
-                    "active_profit_protection_floor_price": null,
-                    "remaining_position_exit_floor_price": null,
-                    "remaining_position_exit_floor_basis": {
-                        "source": "not_available",
-                        "price": null,
-                        "note": "目前沒有可量化的剩餘部位執行底線。"
-                    },
-                    "effective_remaining_exit_trigger_price": null,
-                    "effective_remaining_exit_trigger_source": null,
-                    "full_exit_condition": null,
-                    "sell_permission_basis": "TargetIsRevalidationNotSellTrigger",
-                    "actual_execution_ack_status": "not_applicable",
-                    "execution_consistency_status": "not_applicable",
-                    "position_cycle_buy_shares": 200,
-                    "position_cycle_sell_shares": 0,
-                    "remaining_position_shares": 200,
-                    "reasons": [],
-                    "hold_conditions": [
-                        "價格到達 424.03 元只進入延伸動能重驗，不等於賣出。",
-                        "若先觸發獨立risk-first或結構性風控，仍由Final Execution風控優先。"
-                    ],
-                    "plain_language": "持倉狀態=BelowTargetHoldUntilRevalidation；目前尚未到達 424.03 元；目標價角色=延伸動能重驗，不是sell trigger；現在可賣=False；FinalSellTrigger=None（除非獨立風控形成）。",
-                    "exit_decision_summary": "持倉狀態=BelowTargetHoldUntilRevalidation；目前尚未到達 424.03 元；目標價角色=延伸動能重驗，不是sell trigger；現在可賣=False；FinalSellTrigger=None（除非獨立風控形成）。",
-                    "target_revalidation_triggered": false,
-                    "target_revalidation_trigger_price": 424.03,
-                    "target_revalidation_status": "waiting_for_target_revalidation",
-                    "extension_momentum_score_v2": 23,
-                    "extension_momentum_state_v2": "Weak",
-                    "extension_momentum_hard_failures_v2": [
-                        "confirmed_failed_breakout_with_poor_follow_through"
-                    ],
-                    "extension_effective_state_v2": "BlockedByExtensionFailure",
-                    "extension_revalidation_outcome": "waiting_for_target_revalidation",
-                    "extension_reference_semantics": "revalidation_reference_not_automatic_sell"
-                }
+                "sell_permission_basis": "TargetIsRevalidationNotSellTrigger",
+                "actual_execution_ack_status": "not_applicable",
+                "execution_consistency_status": "not_applicable",
+                "position_cycle_buy_shares": 200,
+                "position_cycle_sell_shares": 0,
+                "remaining_position_shares": 200,
+                "reasons": [],
+                "hold_conditions": [
+                    "價格到達 424.03 元只進入延伸動能重驗，不等於賣出。",
+                    "若先觸發獨立risk-first或結構性風控，仍由Final Execution風控優先。"
+                ],
+                "plain_language": "持倉狀態=BelowTargetHoldUntilRevalidation；目前尚未到達 424.03 元；目標價角色=延伸動能重驗，不是sell trigger；現在可賣=False；FinalSellTrigger=None（除非獨立風控形成）。",
+                "exit_decision_summary": "持倉狀態=BelowTargetHoldUntilRevalidation；目前尚未到達 424.03 元；目標價角色=延伸動能重驗，不是sell trigger；現在可賣=False；FinalSellTrigger=None（除非獨立風控形成）。",
+                "target_revalidation_triggered": false,
+                "target_revalidation_trigger_price": 424.03,
+                "target_revalidation_status": "waiting_for_target_revalidation",
+                "extension_momentum_score_v2": 0,
+                "extension_momentum_state_v2": "Weak",
+                "extension_momentum_hard_failures_v2": [
+                    "confirmed_failed_breakout_with_poor_follow_through"
+                ],
+                "extension_effective_state_v2": "BlockedByExtensionFailure",
+                "extension_revalidation_outcome": "waiting_for_target_revalidation",
+                "extension_reference_semantics": "revalidation_reference_not_automatic_sell"
             }
         },
-        "price_action_engine_version": "0.1.4b",
-        "price_action_knowledge_version": "1.6",
-        "run_datetime": "2026-08-21T08:12:34",
         "entry_permission_guardrail": {
             "status": "triggered",
             "reason": "v7.25e structural output guardrail",
@@ -2150,8 +2297,8 @@
                     "conditional_additional_sell_shares": 0,
                     "remaining_full_exit_ratio_pct_if_triggered": 0,
                     "remaining_full_exit_shares_if_triggered": 0,
-                    "current_price": 327.0,
-                    "current_profit_pct": -7.46,
+                    "current_price": 321.5,
+                    "current_profit_pct": -9.02,
                     "base_profit_target_pct": 20.0,
                     "base_profit_target_price": 424.03,
                     "sell_trigger_price": null,
@@ -2186,7 +2333,7 @@
                     "target_revalidation_triggered": false,
                     "target_revalidation_trigger_price": 424.03,
                     "target_revalidation_status": "waiting_for_target_revalidation",
-                    "extension_momentum_score_v2": 23,
+                    "extension_momentum_score_v2": 0,
                     "extension_momentum_state_v2": "Weak",
                     "extension_momentum_hard_failures_v2": [
                         "confirmed_failed_breakout_with_poor_follow_through"
@@ -2305,8 +2452,8 @@
                     "conditional_additional_sell_shares": 0,
                     "remaining_full_exit_ratio_pct_if_triggered": 0,
                     "remaining_full_exit_shares_if_triggered": 0,
-                    "current_price": 327.0,
-                    "current_profit_pct": -7.46,
+                    "current_price": 321.5,
+                    "current_profit_pct": -9.02,
                     "base_profit_target_pct": 20.0,
                     "base_profit_target_price": 424.03,
                     "sell_trigger_price": null,
@@ -2341,7 +2488,7 @@
                     "target_revalidation_triggered": false,
                     "target_revalidation_trigger_price": 424.03,
                     "target_revalidation_status": "waiting_for_target_revalidation",
-                    "extension_momentum_score_v2": 23,
+                    "extension_momentum_score_v2": 0,
                     "extension_momentum_state_v2": "Weak",
                     "extension_momentum_hard_failures_v2": [
                         "confirmed_failed_breakout_with_poor_follow_through"
@@ -2419,8 +2566,8 @@
                     "conditional_additional_sell_shares": 0,
                     "remaining_full_exit_ratio_pct_if_triggered": 0,
                     "remaining_full_exit_shares_if_triggered": 0,
-                    "current_price": 327.0,
-                    "current_profit_pct": -7.46,
+                    "current_price": 321.5,
+                    "current_profit_pct": -9.02,
                     "base_profit_target_pct": 20.0,
                     "base_profit_target_price": 424.03,
                     "sell_trigger_price": null,
@@ -2455,7 +2602,7 @@
                     "target_revalidation_triggered": false,
                     "target_revalidation_trigger_price": 424.03,
                     "target_revalidation_status": "waiting_for_target_revalidation",
-                    "extension_momentum_score_v2": 23,
+                    "extension_momentum_score_v2": 0,
                     "extension_momentum_state_v2": "Weak",
                     "extension_momentum_hard_failures_v2": [
                         "confirmed_failed_breakout_with_poor_follow_through"
