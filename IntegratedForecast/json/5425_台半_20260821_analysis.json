@@ -1,8 +1,8 @@
 {
     "metadata": {
-        "version": "Integrated_Forecast_v7.25k3.4h_WatchlistCandidate_Edition",
+        "version": "Integrated_Forecast_v7.25k3.4h1_FinalTriggerPersistence_Edition",
         "minimum_supported_version": "v7.25d1",
-        "current_rule_family": "v7.25k3.4h",
+        "current_rule_family": "v7.25k3.4h1",
         "backward_compatible_with": [
             "v7.25d1",
             "v7.25e",
@@ -34,15 +34,16 @@
             "v7.25k3.4d",
             "v7.25k3.4e",
             "v7.25k3.4f",
-            "v7.25k3.4g"
+            "v7.25k3.4g",
+            "v7.25k3.4h"
         ],
         "version_policy": "minimum_supported_version",
-        "run_datetime": "2026-08-21T14:15:04",
+        "run_datetime": "2026-08-21T15:37:01",
         "daily_output_tag": "20260821",
         "output_naming_policy": "daily_stable_overwrite",
         "stock_code": "5425",
         "stock_name": "台半",
-        "ticker": "5425.TW",
+        "ticker": "5425.TWO",
         "analysis_role": "watchlist_candidate",
         "card_role": "watchlist_candidate",
         "raw_ohlcv_file": "5425_台半_20260821_ohlcv.json",
@@ -76,15 +77,15 @@
         "stock_code": "5425",
         "stock_name": "台半",
         "stock_eng_name": "5425",
-        "ticker": "5425.TW",
+        "ticker": "5425.TWO",
         "core_business": "未設定，請補入 STOCK_CONFIGS.stock_profile 以提升分析品質。",
         "industry_context": "尚未在 STOCK_CONFIGS 設定完整產業脈絡，僅能依價格行為、籌碼與圖形判斷。",
         "us_peer_name": "未設定",
         "tw_peer_name": "未設定",
         "negative_keywords": [],
-        "profile_source": "DEFAULT_PROFILE_NEEDS_REVIEW",
+        "profile_source": "STOCK_CONFIGS",
         "runtime_liquidity_filter_pass": true,
-        "runtime_avg_turnover_value": 1058006711.0,
+        "runtime_avg_turnover_value": 1121343549.0,
         "runtime_volatility_climax_flag": 0,
         "runtime_gap_type": "Breakaway(突破型缺口)",
         "runtime_parabolic_wedge_flag": false,
@@ -106,7 +107,7 @@
             "direction": null,
             "details": "沒有強 Signal Bar，暫不檢查後續延續。"
         },
-        "runtime_gap_atr_ratio": 0.19,
+        "runtime_gap_atr_ratio": 0.28,
         "runtime_stock_profile_risk_triggered": false,
         "runtime_profile_risk_triggered_summary": "未觸發標的專屬風險規則",
         "runtime_chart_validation_summary": {
@@ -115,12 +116,12 @@
             "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
             "chart_read_status": "success",
             "current_close": 88.2,
-            "ema20": 88.69,
+            "ema20": 88.64,
             "gap_type": "Breakaway(突破型缺口)",
             "gap_status": "有未回補Up向實體缺口",
             "body_gap_status": "未回補Up實體缺口",
             "wick_gap_status": "近期影線缺口已回補",
-            "support_resistance_reference": 89.9,
+            "support_resistance_reference": 81.6,
             "checks": [
                 {
                     "item": "chart_file",
@@ -135,7 +136,7 @@
                 {
                     "item": "ema20",
                     "status": "pass",
-                    "json_value": 88.69
+                    "json_value": 88.64
                 },
                 {
                     "item": "gap",
@@ -144,7 +145,7 @@
                     "gap_status": "有未回補Up向實體缺口",
                     "body_gap_status": "未回補Up實體缺口",
                     "wick_gap_status": "近期影線缺口已回補",
-                    "gap_failure_price": 89.9
+                    "gap_failure_price": 81.6
                 },
                 {
                     "item": "price_limit_or_technical_reference",
@@ -152,8 +153,8 @@
                     "price_limit_applicable": true,
                     "legal_price_limit_rule": "listed_otc_reference_price_limit_rules_apply",
                     "technical_10pct_reference_only_not_legal_limit": false,
-                    "limit_up_10_pct": 99.33,
-                    "limit_down_10_pct": 81.27
+                    "limit_up_10_pct": 97.02,
+                    "limit_down_10_pct": 79.38
                 }
             ]
         },
@@ -162,53 +163,53 @@
             "level": "Medium",
             "basis": "wedge_quality_score + signal_bar_quality + second_entry_signal + trading_range_edge_flag - countertrend/narrow_channel_penalty"
         },
-        "runtime_always_in_direction": "Long",
+        "runtime_always_in_direction": "Neutral",
         "runtime_trading_range_edge_flag": false
     },
     "analysis_data": {
         "current_close": 88.2,
-        "latest_trade_date": "2026-08-20",
+        "latest_trade_date": "2026-08-21",
         "price_data_source": "FUGLEAPI",
         "price_data_ticker": "5425",
-        "expected_latest_trade_date": "2026-08-20",
-        "actual_latest_trade_date": "2026-08-20",
+        "expected_latest_trade_date": "2026-08-21",
+        "actual_latest_trade_date": "2026-08-21",
         "price_data_is_stale": false,
         "price_data_warning": null,
         "price_source_attempts": [
             {
                 "source": "FUGLEAPI",
                 "status": "ok",
-                "rows": 239,
+                "rows": 240,
                 "min_required_rows": 220,
-                "latest_trade_date": "2026-08-20",
+                "latest_trade_date": "2026-08-21",
                 "is_stale": false,
                 "from": "2025-08-26",
                 "to": "2026-08-21",
                 "history_mode": "full_history"
             }
         ],
-        "daily_pa_market_board": "UNKNOWN",
-        "daily_pa_market_board_source": "unknown",
+        "daily_pa_market_board": "OTC",
+        "daily_pa_market_board_source": "runtime_override",
         "daily_pa_emerging_limit_semantics_applied": false,
         "daily_pa_legal_limit_guard_status": "listed_otc_legal_limit_bounds_enabled",
-        "limit_up_10_pct": 99.33,
-        "limit_down_10_pct": 81.27,
-        "technical_up_10pct_reference": 99.33,
-        "technical_down_10pct_reference": 81.27,
+        "limit_up_10_pct": 97.02,
+        "limit_down_10_pct": 79.38,
+        "technical_up_10pct_reference": 97.02,
+        "technical_down_10pct_reference": 79.38,
         "market_price_limit_applicable": true,
         "legal_price_limit_rule": "listed_otc_reference_price_limit_rules_apply",
         "technical_10pct_reference_only_not_legal_limit": false,
-        "sma_5": 89.8,
-        "sma_10": 87.72999999999999,
-        "sma_20": 83.06,
-        "sma_50": 100.936,
-        "sma_200": 73.0415,
-        "ema_20": 88.69,
+        "sma_5": 90.34,
+        "sma_10": 88.3,
+        "sma_20": 83.22,
+        "sma_50": 100.954,
+        "sma_200": 73.168,
+        "ema_20": 88.64,
         "mag_bar_count": 0,
         "mag_direction": "None",
-        "closing_strength_CLV": 0.29,
-        "volume_ratio": 1.13,
-        "price_action_overlap_ratio": 0.46,
+        "closing_strength_CLV": 0.04,
+        "volume_ratio": 0.7,
+        "price_action_overlap_ratio": 0.47,
         "volatility_climax_flag": 0,
         "pa_push_count": 3,
         "ema20_gap": "無/區間震盪",
@@ -218,10 +219,10 @@
         "truncated_structure": "正常",
         "gap_mm_legal_limit_bounds_enabled": true,
         "gap_any_type": true,
-        "gap_density_score": 0.15,
+        "gap_density_score": 0.1,
         "gap_direction": "Up",
-        "gap_size_pct": 1.45,
-        "gap_midpoint": 90.55,
+        "gap_size_pct": 2.33,
+        "gap_midpoint": 82.55,
         "wick_gap_status": "近期影線缺口已回補",
         "wick_gap_fill_status": "已回補",
         "body_gap_status": "未回補Up實體缺口",
@@ -229,22 +230,22 @@
         "close_confirmed_gap_flag": true,
         "line_chart_gap_flag": true,
         "gap_status": "有未回補Up向實體缺口",
-        "gap_fill_speed": null,
+        "gap_fill_speed": 3,
         "opposite_gap_created_flag": false,
-        "exhaustion_gap_flag": false,
+        "exhaustion_gap_flag": true,
         "gap_type": "Breakaway(突破型缺口)",
-        "gap_classification_reason": "Up向實體缺口，缺口尚未回補，且出現 EMA20 位置轉換或高重疊區突破跡象；暫列突破型缺口候選。缺口大小約 1.45%。",
+        "gap_classification_reason": "Up向實體缺口已快速回補，fill_speed=3，且搭配 volatility_climax_flag=0 或 pa_push_count=3；暫列竭盡型缺口候選。",
         "gap_failure_condition": {
             "direction": "Up",
-            "price": 89.9,
-            "midpoint": 90.55,
-            "condition": "若收盤跌破缺口下緣 89.9，或快速回補缺口中點 90.55 後無法站回，則 Breakaway(突破型缺口) 多方缺口假設失效。",
+            "price": 81.6,
+            "midpoint": 82.55,
+            "condition": "若收盤跌破缺口下緣 81.6，或快速回補缺口中點 82.55 後無法站回，則 Breakaway(突破型缺口) 多方缺口假設失效。",
             "action_hint": "多方缺口失效時，應降低追價權重。"
         },
-        "gap_MM_Target_Up": 99.33,
+        "gap_MM_Target_Up": 97.02,
         "gap_MM_Target_Down": null,
-        "gap_support_resistance_level": 89.9,
-        "near_gap_target_flag": true,
+        "gap_support_resistance_level": 81.6,
+        "near_gap_target_flag": false,
         "countertrend_forbidden_flag": false,
         "broad_channel_flag": false,
         "channel_start_target": "不適用",
@@ -252,9 +253,9 @@
         "first_reversal_warning": "無明顯第一次反轉警示",
         "second_entry_signal": "可能多方 Second Entry / Higher Low",
         "second_entry_reason": "最近第二個有效低點 83.3 高於前一低點 80.1，屬 Higher Low 二次進場候選；仍需後續 K 棒確認。",
-        "neckline_break_gap_flag": true,
+        "neckline_break_gap_flag": false,
         "gap_retest_support_flag": true,
-        "avg_turnover_value": 1058006711.0,
+        "avg_turnover_value": 1121343549.0,
         "liquidity_filter_pass": true,
         "parabolic_wedge_flag": false,
         "climax_type": "None",
@@ -265,34 +266,34 @@
             "action_hint": "不適用"
         },
         "climax_bar_flag": false,
-        "climax_bar_body_ratio": 0.99,
-        "slope_acceleration_score": 60,
+        "climax_bar_body_ratio": 0.87,
+        "slope_acceleration_score": 0,
         "post_climax_mode": "None",
         "post_climax_pullback_pct": null,
-        "parabolic_wedge_reason": "未觸發拋物線楔型候選；trend=Up, body_ratio=0.99, CLV=0.29, slope_score=60, push=3, gap_type=Breakaway(突破型缺口)。",
+        "parabolic_wedge_reason": "trend=Sideways, body_ratio=0.87, CLV=0.04, slope_score=0, push=3, gap_type=Exhaustion(竭盡型缺口/快速回補)。",
         "wedge_quality_score": 70,
         "wedge_overlap_quality": "High",
         "narrow_channel_wedge_invalid_flag": false,
         "signal_bar_quality": "None",
-        "push_direction": "Up",
+        "push_direction": "Sideways",
         "push_magnitude_shrinking_flag": false,
         "failed_breakout_flag": false,
         "wedge_failure_measured_move_target": {
-            "target": 99.33,
-            "direction": "Up",
-            "basis": "近20日區間MM估算"
+            "target": null,
+            "direction": null,
+            "basis": "未觸發"
         },
         "stop_loss_reference": {
-            "price": 89.9,
+            "price": 81.6,
             "basis": "gap_failure_condition",
-            "condition": "若收盤跌破缺口下緣 89.9，或快速回補缺口中點 90.55 後無法站回，則 Breakaway(突破型缺口) 多方缺口假設失效。"
+            "condition": "若收盤跌破缺口下緣 81.6，或快速回補缺口中點 82.55 後無法站回，則 Breakaway(突破型缺口) 多方缺口假設失效。"
         },
         "counterparty_profitability_flag": true,
         "nested_wedge_flag": false,
-        "wedge_line_fit_quality": "High",
+        "wedge_line_fit_quality": "Unknown",
         "wedge_context_type": "Reversal Candidate",
-        "trend_age_bars": 4,
-        "risk_reward_ratio": 22.58,
+        "trend_age_bars": 1,
+        "risk_reward_ratio": null,
         "position_sizing_hint": "訊號未完整，建議觀察或小部位，避免追價與一次滿倉。",
         "slippage_warning": "Low/Normal",
         "fundamental_quality_required": false,
@@ -313,7 +314,7 @@
         "mode": "swing",
         "direction_bias": "long",
         "gap_primary_basis": "latest_unfilled_gap",
-        "gap_atr_ratio": 0.19,
+        "gap_atr_ratio": 0.28,
         "breakout_context_type": "FailedBreakout",
         "breakout_direction": "Up",
         "breakout_follow_through_score": 0,
@@ -322,21 +323,21 @@
             "strong_close_count": 0,
             "weak_same_direction_count": 0,
             "overlap_back_inside_count": 3,
-            "opposite_strong_count": 1,
+            "opposite_strong_count": 2,
             "first_follow_through_bar_index": null,
             "follow_through_timing": "None",
             "follow_through_quality": "Poor",
-            "prior_high": 97.0,
+            "prior_high": 97.9,
             "prior_low": 66.2,
-            "details": "Up breakout; strong_close=0, weak_same_direction=0, overlap_back_inside=3, opposite_strong=1, true_quality=26."
+            "details": "Up breakout; strong_close=0, weak_same_direction=0, overlap_back_inside=3, opposite_strong=2, true_quality=18."
         },
         "breakout_follow_through_quality": "Poor",
         "breakout_follow_through_timing": "None",
-        "true_breakout_quality_score": 26,
+        "true_breakout_quality_score": 18,
         "breakout_bar_strength_score": 40,
-        "breakout_close_extreme_score": 29,
+        "breakout_close_extreme_score": 4,
         "breakout_displacement_score": 0,
-        "breakout_bars_broken_count": 16,
+        "breakout_bars_broken_count": 12,
         "breakout_urgency_score": 0,
         "breakout_urgency_reason": "突破方向存在未回補缺口，逆勢方承壓。；突破後多次回到被突破區間內，急迫感下降。；出現反向強 K，突破急迫感被破壞。",
         "breakout_gap_pressure_flag": true,
@@ -347,8 +348,8 @@
         "breakout_entry_permission": "FadeBreakout",
         "breakout_failure_warning": "突破跟隨不足、對手方仍可解套或屬第二段陷阱，不得列為強突破追價。",
         "measured_move_context": "TradingRange",
-        "measured_move_target_up": 99.33,
-        "measured_move_target_down": 81.27,
+        "measured_move_target_up": 97.02,
+        "measured_move_target_down": 79.38,
         "measured_move_probability_hint": "Measure Move 僅為參考目標，非精準預測。",
         "near_measured_move_target_flag": false,
         "measured_move_target_reaction": "NoReaction",
@@ -385,8 +386,8 @@
         "second_leg_no_add_guardrail": true,
         "second_leg_trap_action": "NoChaseNoAdd",
         "trading_range_second_leg_risk": "High",
-        "trap_reversal_1r_target": 82.54,
-        "trap_reversal_2r_target": 81.27,
+        "trap_reversal_1r_target": 80.36,
+        "trap_reversal_2r_target": 79.38,
         "trap_reversal_profit_protection_hint": "震盪區間第二段陷阱若反轉，可用 1R/2R 作停利參考；已有利潤者至少保護部分利潤。",
         "timeframe_alignment_hint": "目前僅使用本週期資料；若小週期窄通道對應大週期強突破，第二段預期可提高，但本系統尚未直接驗證多週期。",
         "higher_timeframe_second_leg_bias": "NotAvailable",
@@ -399,18 +400,18 @@
         "second_leg_entry_permission": "BlockedByGuardrail",
         "second_leg_risk_reward_quality": "Blocked",
         "trading_range_edge_flag": false,
-        "always_in_direction": "Long",
+        "always_in_direction": "Neutral",
         "wedge_context_confidence": {
             "score": 55,
             "level": "Medium",
             "basis": "wedge_quality_score + signal_bar_quality + second_entry_signal + trading_range_edge_flag - countertrend/narrow_channel_penalty"
         },
         "price_action_engine_status": "success",
-        "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
+        "expected_latest_trade_date_basis": "post_close_same_day_bar_observed",
         "emerging_gap_mm_hard_guard_status": "not_applicable",
         "us_peer_avg_pct": NaN,
         "tw_peer_avg_pct": NaN,
-        "institutional_net_buy": -5565.4,
+        "institutional_net_buy": -1647.5,
         "margin_balance_change": 0.0,
         "gap_consistency_status": "pass_unfilled_gap_consistent",
         "gap_consistency_rule": "v7.24：未回補缺口不得輸出已回補/中性；Measuring Gap 必須說明測量目標與失敗條件。",
@@ -419,13 +420,13 @@
         "intraday_market_snapshot": {
             "intraday_policy_version": "intraday_live_overlay_v1.4",
             "market_phase_window": "post_close_window",
-            "market_board": "LISTED_OR_OTC",
+            "market_board": "OTC",
             "is_emerging": false,
             "scheduled_open_time": "09:00",
             "scheduled_close_time": "13:30",
             "delayed_close_supported_until": "13:33",
             "session_date": "2026-08-21",
-            "evaluated_at": "2026-08-21T14:15:04",
+            "evaluated_at": "2026-08-21T15:37:01",
             "intraday_fetch_expected": true,
             "quote_usage_mode": "post_close_same_day_last_trade",
             "price_limit_applicable": true,
@@ -463,7 +464,7 @@
             "trade_volume_at_bid": 10369.0,
             "trade_volume_at_ask": 8445.0,
             "last_trade_time": "2026-08-21T13:30:00",
-            "freshness_age_seconds": 2704,
+            "freshness_age_seconds": 7621,
             "freshness_status": "post_close_same_day_last_trade",
             "is_usable_for_current_price": true,
             "post_close_same_day_quote_used": true,
@@ -601,8 +602,8 @@
         "market_phase": "post_close_window",
         "daily_pa_uses_completed_bars_only": true,
         "current_session_bar_complete": true,
-        "daily_completed_close": 90.3,
-        "daily_completed_trade_date": "2026-08-20",
+        "daily_completed_close": 88.2,
+        "daily_completed_trade_date": "2026-08-21",
         "current_market_price": 88.2,
         "current_price_basis": "fugle_post_close_last_trade",
         "current_price_as_of": "2026-08-21T13:30:00",
@@ -610,7 +611,7 @@
         "intraday_execution_reference_allowed": true,
         "intraday_behavior_summary": {
             "freshness_status": "post_close_same_day_last_trade",
-            "freshness_age_seconds": 2704,
+            "freshness_age_seconds": 7621,
             "vs_previous_close_pct": -2.326,
             "session_return_from_open_pct": -2.326,
             "distance_to_session_avg_pct": -1.902,
@@ -633,12 +634,12 @@
             "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
             "chart_read_status": "success",
             "current_close": 88.2,
-            "ema20": 88.69,
+            "ema20": 88.64,
             "gap_type": "Breakaway(突破型缺口)",
             "gap_status": "有未回補Up向實體缺口",
             "body_gap_status": "未回補Up實體缺口",
             "wick_gap_status": "近期影線缺口已回補",
-            "support_resistance_reference": 89.9,
+            "support_resistance_reference": 81.6,
             "checks": [
                 {
                     "item": "chart_file",
@@ -653,7 +654,7 @@
                 {
                     "item": "ema20",
                     "status": "pass",
-                    "json_value": 88.69
+                    "json_value": 88.64
                 },
                 {
                     "item": "gap",
@@ -662,7 +663,7 @@
                     "gap_status": "有未回補Up向實體缺口",
                     "body_gap_status": "未回補Up實體缺口",
                     "wick_gap_status": "近期影線缺口已回補",
-                    "gap_failure_price": 89.9
+                    "gap_failure_price": 81.6
                 },
                 {
                     "item": "price_limit_or_technical_reference",
@@ -670,13 +671,13 @@
                     "price_limit_applicable": true,
                     "legal_price_limit_rule": "listed_otc_reference_price_limit_rules_apply",
                     "technical_10pct_reference_only_not_legal_limit": false,
-                    "limit_up_10_pct": 99.33,
-                    "limit_down_10_pct": 81.27
+                    "limit_up_10_pct": 97.02,
+                    "limit_down_10_pct": 79.38
                 }
             ]
         },
         "minimum_supported_version": "v7.25d1",
-        "current_rule_family": "v7.25k3.4h",
+        "current_rule_family": "v7.25k3.4h1",
         "backward_compatible_with": [
             "v7.25d1",
             "v7.25e",
@@ -708,12 +709,13 @@
             "v7.25k3.4d",
             "v7.25k3.4e",
             "v7.25k3.4f",
-            "v7.25k3.4g"
+            "v7.25k3.4g",
+            "v7.25k3.4h"
         ],
         "manifest_version_policy": {
             "mode": "minimum_supported_version",
             "minimum_supported_version": "v7.25d1",
-            "current_rule_family": "v7.25k3.4h",
+            "current_rule_family": "v7.25k3.4h1",
             "backward_compatible_with": [
                 "v7.25d1",
                 "v7.25e",
@@ -745,7 +747,8 @@
                 "v7.25k3.4d",
                 "v7.25k3.4e",
                 "v7.25k3.4f",
-                "v7.25k3.4g"
+                "v7.25k3.4g",
+                "v7.25k3.4h"
             ],
             "note": "排程不得再以 version 字串完全相等作為唯一判斷；高於最低相容版本且欄位齊全者，應依 current_rule_family 套用規則。"
         },
@@ -764,9 +767,9 @@
         "user_watch_zone_position": "Above",
         "system_dynamic_entry_zone": {
             "status": "available",
-            "lower_price": 81.8141,
-            "upper_price": 84.7212,
-            "reference_price": 83.06,
+            "lower_price": 81.9717,
+            "upper_price": 84.8844,
+            "reference_price": 83.22,
             "sources": [
                 "sma_20"
             ],
@@ -781,17 +784,17 @@
         "current_entry_state": "ReversalAttempt",
         "trend_direction_transition": "NotYetWeakUp",
         "reversal_state": "ReversalAttempt",
-        "early_reversal_score": 70.0,
+        "early_reversal_score": 64.0,
         "early_reversal_score_components": {
             "reversal_structure": 30.0,
             "trend_transition": 15.0,
             "confirmation": 10.0,
-            "participation": 3.0,
-            "traceable_risk_reward": 12.0
+            "participation": 1.0,
+            "traceable_risk_reward": 8.0
         },
         "starter_buy_permission": false,
         "starter_buy_permission_basis": {
-            "score_gte_70": true,
+            "score_gte_70": false,
             "reversal_ok": false,
             "trend_ok": false,
             "hard_zone_ok": true,
@@ -805,25 +808,24 @@
         "follow_through_add_readiness": "Developing",
         "add_permission": "NotApplicableUntilActualHolding",
         "entry_invalidation": {
-            "price": 81.3988,
-            "basis": "system_dynamic_entry_zone_reference_minus_2pct",
-            "condition": "收盤有效跌破系統動態進場支撐後，早期反轉假設失效。"
+            "price": 81.6,
+            "basis": "gap_failure_condition.price",
+            "condition": "若收盤跌破缺口下緣 81.6，或快速回補缺口中點 82.55 後無法站回，則 Breakaway(突破型缺口) 多方缺口假設失效。"
         },
         "entry_risk_reference": {
-            "price": 81.3988,
-            "basis": "system_dynamic_entry_zone_reference_minus_2pct",
-            "condition": "收盤有效跌破系統動態進場支撐後，早期反轉假設失效。"
+            "price": 81.6,
+            "basis": "gap_failure_condition.price",
+            "condition": "若收盤跌破缺口下緣 81.6，或快速回補缺口中點 82.55 後無法站回，則 Breakaway(突破型缺口) 多方缺口假設失效。"
         },
         "expected_rr_or_rr_band": {
             "status": "available",
-            "rr": 1.64,
-            "target": 99.33,
+            "rr": 1.34,
+            "target": 97.02,
             "target_sources": [
                 "gap_MM_Target_Up",
-                "measured_move_target_up",
-                "wedge_failure_measured_move_target"
+                "measured_move_target_up"
             ],
-            "risk_price": 81.3988,
+            "risk_price": 81.6,
             "semantics": "traceable_reference_rr_not_forecast_probability"
         },
         "weak_uptrend_acceptable": true,
@@ -849,11 +851,11 @@
         "tracker_schema_version": "watchlist_candidate_entry_tracker_v1",
         "analysis_role": "watchlist_candidate",
         "stock_code": "5425",
-        "ticker": "5425.TW",
-        "base_date": "2026-08-20",
+        "ticker": "5425.TWO",
+        "base_date": "2026-08-21",
         "base_close": 88.2,
         "current_entry_state": "ReversalAttempt",
-        "early_reversal_score": 70.0,
+        "early_reversal_score": 64.0,
         "starter_buy_permission": false,
         "holding_execution_backtest": "NotApplicableUntilActualHolding"
     },
@@ -863,10 +865,10 @@
     "price": {
         "analysis_role": "watchlist_candidate",
         "current_entry_state": "ReversalAttempt",
-        "early_reversal_score": 70.0,
+        "early_reversal_score": 64.0,
         "starter_buy_permission": false,
         "starter_buy_permission_basis": {
-            "score_gte_70": true,
+            "score_gte_70": false,
             "reversal_ok": false,
             "trend_ok": false,
             "hard_zone_ok": true,
@@ -878,20 +880,19 @@
             "actual_buy_required_in_portfolio_ledger": true
         },
         "entry_invalidation": {
-            "price": 81.3988,
-            "basis": "system_dynamic_entry_zone_reference_minus_2pct",
-            "condition": "收盤有效跌破系統動態進場支撐後，早期反轉假設失效。"
+            "price": 81.6,
+            "basis": "gap_failure_condition.price",
+            "condition": "若收盤跌破缺口下緣 81.6，或快速回補缺口中點 82.55 後無法站回，則 Breakaway(突破型缺口) 多方缺口假設失效。"
         },
         "expected_rr_or_rr_band": {
             "status": "available",
-            "rr": 1.64,
-            "target": 99.33,
+            "rr": 1.34,
+            "target": 97.02,
             "target_sources": [
                 "gap_MM_Target_Up",
-                "measured_move_target_up",
-                "wedge_failure_measured_move_target"
+                "measured_move_target_up"
             ],
-            "risk_price": 81.3988,
+            "risk_price": 81.6,
             "semantics": "traceable_reference_rr_not_forecast_probability"
         },
         "automatic_buy": false
