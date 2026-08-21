@@ -1,8 +1,8 @@
 {
     "metadata": {
-        "version": "Integrated_Forecast_v7.25k3.4h1_FinalTriggerPersistence_Edition",
+        "version": "Integrated_Forecast_v7.25k3.4h2_ExplanatoryProvenanceProfile_Edition",
         "minimum_supported_version": "v7.25d1",
-        "current_rule_family": "v7.25k3.4h1",
+        "current_rule_family": "v7.25k3.4h2",
         "backward_compatible_with": [
             "v7.25d1",
             "v7.25e",
@@ -35,10 +35,11 @@
             "v7.25k3.4e",
             "v7.25k3.4f",
             "v7.25k3.4g",
-            "v7.25k3.4h"
+            "v7.25k3.4h",
+            "v7.25k3.4h1"
         ],
         "version_policy": "minimum_supported_version",
-        "run_datetime": "2026-08-21T15:37:01",
+        "run_datetime": "2026-08-21T16:38:44",
         "daily_output_tag": "20260821",
         "output_naming_policy": "daily_stable_overwrite",
         "stock_code": "5425",
@@ -51,38 +52,70 @@
         "pdf_file": null
     },
     "stock_profile": {
-        "stock_type": "未分類台股標的",
-        "market_cap_profile": "未知",
-        "liquidity_profile": "未知，需以成交量與成交值確認",
-        "volatility_profile": "未知，需依近期 ATR、K棒實體與缺口狀態判斷",
-        "trading_style_bias": "資料不足時以風控優先，不追高、不左側接刀",
-        "theme_tags": [],
+        "stock_type": "上櫃功率半導體／分離式元件股（集團含Auto-ID條碼印表機事業）",
+        "market_cap_profile": "上櫃半導體股；市值層級以當期市場資料動態判定",
+        "liquidity_profile": "上櫃股票；流動性以成交量、成交值與買賣價差動態確認",
+        "volatility_profile": "中高波動；除功率半導體景氣、車用/工控需求與庫存循環外，也需留意集團Auto-ID事業營運",
+        "trading_style_bias": "波段與早期反轉確認並重；避免因深度回撤直接左側接刀",
+        "theme_tags": [
+            "功率半導體",
+            "整流器",
+            "二極體",
+            "MOSFET",
+            "車用電子",
+            "工業控制",
+            "寬能隙半導體",
+            "條碼印表機",
+            "Auto-ID"
+        ],
         "key_drivers": [
-            "價格行為",
-            "三大法人",
-            "融資變化",
-            "成交量與缺口"
+            "車用與工業功率元件需求",
+            "整流器、MOSFET與電源管理產品組合",
+            "SiC/GaN寬能隙產品進展",
+            "半導體庫存與景氣循環",
+            "母公司半導體事業營收、毛利率與產能利用率",
+            "鼎翰科技條碼印表機／自動辨識事業營運與合併貢獻"
         ],
         "risk_rules": [
-            "stock_profile 資料不足，信心評等需下修",
-            "未確認產業驅動前，不可杜撰題材",
-            "若流動性不足，應縮小部位"
+            "深度回撤只提供觀察背景；沒有反轉確認不得直接視為買點",
+            "若 Higher Low / Second Entry 失敗或跌破結構低點，Starter Buy 維持禁止",
+            "若量價延續不足、FailedBreakout/Poor Follow-through 仍在，降低追價與加碼權重",
+            "不得把台半誤分類為晶圓代工、記憶體或光通訊磊晶股",
+            "分析合併營運時不得忽略鼎翰科技 Auto-ID／條碼印表機事業"
         ],
         "analysis_weighting": {
-            "price_action": 0.4,
-            "chip": 0.25,
-            "sector_momentum": 0.15,
-            "macro_us_peer": 0.2
+            "price_action": 0.35,
+            "chip": 0.2,
+            "sector_momentum": 0.3,
+            "macro_us_peer": 0.15
+        },
+        "profile_verified_at": "2026-08-21",
+        "profile_verification": "TPEX industry chain + Taiwan Semiconductor official product/company + group sustainability/consolidated materials",
+        "profile_sources": [
+            "https://ic.tpex.org.tw/company_chain.php?stk_code=5425",
+            "https://www.taiwansemi.com/zh_tw/products-and-services/",
+            "https://www.taiwansemi.com/en/company-profile/",
+            "https://www.taiwansemi.com/en/report-download/",
+            "https://www.taiwansemi.com/en/wp-content/uploads/2025/05/IR_Annual-Report_2024.pdf"
+        ],
+        "group_business_context": {
+            "parent_core": "rectifier/discrete-power semiconductor",
+            "consolidated_additional_business": "barcode printer / automatic identification via TSC Auto ID Technology",
+            "semantics": "separate_business_segments_not_one_product_line"
         },
         "stock_code": "5425",
         "stock_name": "台半",
-        "stock_eng_name": "5425",
+        "stock_eng_name": "Taiwan Semiconductor",
         "ticker": "5425.TWO",
-        "core_business": "未設定，請補入 STOCK_CONFIGS.stock_profile 以提升分析品質。",
-        "industry_context": "尚未在 STOCK_CONFIGS 設定完整產業脈絡，僅能依價格行為、籌碼與圖形判斷。",
-        "us_peer_name": "未設定",
-        "tw_peer_name": "未設定",
-        "negative_keywords": [],
+        "core_business": "母公司：整流器、保護二極體、MOSFET/功率電晶體、LED驅動與類比/電源管理IC、ESD/TVS、SiC/GaN 等寬能隙功率元件；合併集團另含鼎翰科技條碼印表機與自動辨識系統事業。",
+        "industry_context": "櫃買中心產業價值鏈將 5425 台半歸於『半導體 > 其他IC/二極體製造』。母公司半導體核心為離散功率整流器與功率元件，產品亦涵蓋保護二極體、MOSFET/功率電晶體、LED驅動與類比/電源管理IC、ESD/TVS，以及 SiC/GaN 等寬能隙元件，應用於車用、工業、電源供應、運算、消費與通訊。合併集團另包含鼎翰科技（TSC Auto ID Technology）之條碼印表機/自動辨識事業；投資分析需區分母公司半導體核心與集團 Auto-ID 事業，不得混為同一產品線。",
+        "us_peer_name": "功率半導體／分離式元件",
+        "tw_peer_name": "半導體／其他IC與二極體製造",
+        "negative_keywords": [
+            "晶圓代工",
+            "記憶體",
+            "光通訊磊晶"
+        ],
         "profile_source": "STOCK_CONFIGS",
         "runtime_liquidity_filter_pass": true,
         "runtime_avg_turnover_value": 1121343549.0,
@@ -426,7 +459,7 @@
             "scheduled_close_time": "13:30",
             "delayed_close_supported_until": "13:33",
             "session_date": "2026-08-21",
-            "evaluated_at": "2026-08-21T15:37:01",
+            "evaluated_at": "2026-08-21T16:38:43",
             "intraday_fetch_expected": true,
             "quote_usage_mode": "post_close_same_day_last_trade",
             "price_limit_applicable": true,
@@ -464,7 +497,7 @@
             "trade_volume_at_bid": 10369.0,
             "trade_volume_at_ask": 8445.0,
             "last_trade_time": "2026-08-21T13:30:00",
-            "freshness_age_seconds": 7621,
+            "freshness_age_seconds": 11323,
             "freshness_status": "post_close_same_day_last_trade",
             "is_usable_for_current_price": true,
             "post_close_same_day_quote_used": true,
@@ -611,7 +644,7 @@
         "intraday_execution_reference_allowed": true,
         "intraday_behavior_summary": {
             "freshness_status": "post_close_same_day_last_trade",
-            "freshness_age_seconds": 7621,
+            "freshness_age_seconds": 11323,
             "vs_previous_close_pct": -2.326,
             "session_return_from_open_pct": -2.326,
             "distance_to_session_avg_pct": -1.902,
@@ -677,7 +710,7 @@
             ]
         },
         "minimum_supported_version": "v7.25d1",
-        "current_rule_family": "v7.25k3.4h1",
+        "current_rule_family": "v7.25k3.4h2",
         "backward_compatible_with": [
             "v7.25d1",
             "v7.25e",
@@ -710,12 +743,13 @@
             "v7.25k3.4e",
             "v7.25k3.4f",
             "v7.25k3.4g",
-            "v7.25k3.4h"
+            "v7.25k3.4h",
+            "v7.25k3.4h1"
         ],
         "manifest_version_policy": {
             "mode": "minimum_supported_version",
             "minimum_supported_version": "v7.25d1",
-            "current_rule_family": "v7.25k3.4h1",
+            "current_rule_family": "v7.25k3.4h2",
             "backward_compatible_with": [
                 "v7.25d1",
                 "v7.25e",
@@ -748,7 +782,8 @@
                 "v7.25k3.4e",
                 "v7.25k3.4f",
                 "v7.25k3.4g",
-                "v7.25k3.4h"
+                "v7.25k3.4h",
+                "v7.25k3.4h1"
             ],
             "note": "排程不得再以 version 字串完全相等作為唯一判斷；高於最低相容版本且欄位齊全者，應依 current_rule_family 套用規則。"
         },
@@ -830,10 +865,51 @@
         },
         "weak_uptrend_acceptable": true,
         "requires_reversal_confirmation": true,
-        "fetch_candidate_evidence": {},
-        "signal_alignment": "NoFormalFetchDiscovery",
+        "fetch_candidate_evidence": {
+            "security_key": "TW:5425",
+            "stock_code": "5425",
+            "stock_name": "台半",
+            "symbol": "5425.TWO",
+            "candidate_date": null,
+            "candidate_currently_active": false,
+            "discovery_sources": [
+                {
+                    "source_strategy": "deep_recovery_3m",
+                    "source_role": "formal_candidate",
+                    "source_policy_version": "deep_recovery_3m_v1",
+                    "source_scanner_version": "deep_recovery_3m_scanner_v1",
+                    "candidate_status": "RecoveryLeading",
+                    "candidate_score": 81.8,
+                    "decision": "ObserveEarlyRecovery",
+                    "buy_signal": false,
+                    "candidate_reasons": [
+                        "63D最高收盤回撤 -37.3%",
+                        "Recovery Trend=ModerateUp",
+                        "Extension=76.0/Strong",
+                        "近期低點墊高",
+                        "相對大盤強度改善",
+                        "近5日量能高於20日均量"
+                    ],
+                    "risk_flags": [],
+                    "source_file": "data/deep_recovery_3m_candidates.json",
+                    "source_updated_at": "2026-08-20 14:22:03",
+                    "first_seen": "2026-08-20T14:22:03+08:00",
+                    "last_seen": "2026-08-20T14:22:03+08:00",
+                    "currently_active": false,
+                    "archive_role": "historical_machine_discovery",
+                    "candidate_event_key": "TW:5425|deep_recovery_3m|deep_recovery_3m_v1|2026-08-20"
+                }
+            ],
+            "context_states": {},
+            "historical_discovery_available": true
+        },
+        "signal_alignment": "HistoricalDiscoveryInactive",
         "holding_lifecycle_bypassed": true,
         "actual_execution_authority": "Portfolio.xlsx/買賣紀錄",
+        "active_fetch_discovery_count": 0,
+        "inactive_fetch_discovery_count": 1,
+        "historical_fetch_discovery_available": true,
+        "provenance_history_policy_version": "candidate_provenance_inactive_history_v1",
         "watchlist_wrapper_version": "integratedforecast_role_aware_wrapper_v1",
         "portfolio_projection_schema_version": "portfolio_state_v1",
         "portfolio_watch_selection_method": "manual_after_analysis_report",
