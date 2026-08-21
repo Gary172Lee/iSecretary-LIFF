@@ -1,0 +1,160 @@
+{
+  "schema_version": "candidate_provenance_history_v1",
+  "generated_at": "2026-08-21T16:24:30+08:00",
+  "timezone": "Asia/Taipei",
+  "source_system": "fetch_and_filter",
+  "retention_policy_version": "candidate_provenance_inactive_history_v1",
+  "bootstrap_migration": {
+    "reason": "candidate_provenance_feed_v1 was first activated after the 2026-08-20 Deep Recovery run, so prior machine discoveries need a one-time evidence-backed seed",
+    "source_repository": "Gary172Lee/iSecretary-LIFF",
+    "source_commit": "0851c82402e3c78e75a688f0ec7f6041ff8c98ae",
+    "source_path": "data/deep_recovery_3m_candidates.json",
+    "source_update_time": "2026-08-20 14:22:03"
+  },
+  "contract": {
+    "machine_discovery_only": true,
+    "inactive_history_does_not_reactivate_signal": true,
+    "does_not_write_portfolio_watching": true,
+    "does_not_change_strategy_truth": true
+  },
+  "candidate_count_active": 0,
+  "security_count": 3,
+  "historical_security_count": 3,
+  "candidates": [
+    {
+      "security_key": "TW:5425",
+      "stock_code": "5425",
+      "stock_name": "台半",
+      "symbol": "5425.TWO",
+      "candidate_date": null,
+      "candidate_currently_active": false,
+      "historical_discovery_available": true,
+      "discovery_sources": [
+        {
+          "source_strategy": "deep_recovery_3m",
+          "source_role": "formal_candidate",
+          "source_policy_version": "deep_recovery_3m_v1",
+          "source_scanner_version": "deep_recovery_3m_scanner_v1",
+          "candidate_status": "RecoveryLeading",
+          "candidate_score": 81.8,
+          "decision": "ObserveEarlyRecovery",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "63D最高收盤回撤 -37.3%",
+            "Recovery Trend=ModerateUp",
+            "Extension=76.0/Strong",
+            "近期低點墊高",
+            "相對大盤強度改善",
+            "近5日量能高於20日均量"
+          ],
+          "risk_flags": [],
+          "source_file": "data/deep_recovery_3m_candidates.json",
+          "source_updated_at": "2026-08-20 14:22:03",
+          "first_seen": "2026-08-20T14:22:03+08:00",
+          "last_seen": "2026-08-20T14:22:03+08:00",
+          "currently_active": false,
+          "archive_role": "historical_machine_discovery",
+          "candidate_event_key": "TW:5425|deep_recovery_3m|deep_recovery_3m_v1|2026-08-20"
+        }
+      ],
+      "context_states": {
+        "deep_recovery_3m": {
+          "candidate": true,
+          "score": 81.8,
+          "tier": "RecoveryLeading",
+          "trend_state": "ModerateUp",
+          "extension_score": 76.0,
+          "extension_state": "Strong",
+          "buy_signal": false
+        }
+      }
+    },
+    {
+      "security_key": "TW:2368",
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "symbol": "2368.TW",
+      "candidate_date": null,
+      "candidate_currently_active": false,
+      "historical_discovery_available": true,
+      "discovery_sources": [
+        {
+          "source_strategy": "deep_recovery_3m",
+          "source_role": "formal_candidate",
+          "source_policy_version": "deep_recovery_3m_v1",
+          "source_scanner_version": "deep_recovery_3m_scanner_v1",
+          "candidate_status": "RecoveryReady",
+          "candidate_score": 70.8,
+          "decision": "ObserveEarlyRecovery",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "63D最高收盤回撤 -31.4%",
+            "Recovery Trend=ModerateUp",
+            "Extension=66.0/Moderate",
+            "近期低點墊高"
+          ],
+          "risk_flags": [],
+          "source_file": "data/deep_recovery_3m_candidates.json",
+          "source_updated_at": "2026-08-20 14:22:03",
+          "first_seen": "2026-08-20T14:22:03+08:00",
+          "last_seen": "2026-08-20T14:22:03+08:00",
+          "currently_active": false,
+          "archive_role": "historical_machine_discovery",
+          "candidate_event_key": "TW:2368|deep_recovery_3m|deep_recovery_3m_v1|2026-08-20"
+        }
+      ],
+      "context_states": {
+        "deep_recovery_3m": {
+          "candidate": true,
+          "score": 70.8,
+          "tier": "RecoveryReady",
+          "trend_state": "ModerateUp",
+          "extension_score": 66.0,
+          "extension_state": "Moderate",
+          "buy_signal": false
+        }
+      }
+    },
+    {
+      "security_key": "TW:6488",
+      "stock_code": "6488",
+      "stock_name": "環球晶",
+      "symbol": "6488.TWO",
+      "candidate_date": null,
+      "candidate_currently_active": false,
+      "historical_discovery_available": true,
+      "discovery_sources": [
+        {
+          "source_strategy": "deep_recovery_3m",
+          "source_role": "formal_candidate",
+          "source_policy_version": "deep_recovery_3m_v1",
+          "source_scanner_version": "deep_recovery_3m_scanner_v1",
+          "candidate_status": "RecoveryEmerging",
+          "candidate_score": 69.3,
+          "decision": "ObserveEarlyRecovery",
+          "buy_signal": false,
+          "candidate_reasons": [],
+          "risk_flags": [],
+          "source_file": "data/deep_recovery_3m_candidates.json",
+          "source_updated_at": "2026-08-20 14:22:03",
+          "first_seen": "2026-08-20T14:22:03+08:00",
+          "last_seen": "2026-08-20T14:22:03+08:00",
+          "currently_active": false,
+          "archive_role": "historical_machine_discovery",
+          "candidate_event_key": "TW:6488|deep_recovery_3m|deep_recovery_3m_v1|2026-08-20"
+        }
+      ],
+      "context_states": {
+        "deep_recovery_3m": {
+          "candidate": true,
+          "score": 69.3,
+          "tier": "RecoveryEmerging",
+          "trend_state": "ModerateUp",
+          "extension_score": 61.0,
+          "extension_state": "Moderate",
+          "buy_signal": false
+        }
+      }
+    }
+  ]
+}
