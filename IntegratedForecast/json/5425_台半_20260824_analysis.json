@@ -1,8 +1,8 @@
 {
     "metadata": {
-        "version": "Integrated_Forecast_v7.25k3.4h3_PortfolioAuthoritySync_Edition",
+        "version": "Integrated_Forecast_v7.25k3.4h4_HistoricalFinalRevalidation_Edition",
         "minimum_supported_version": "v7.25d1",
-        "current_rule_family": "v7.25k3.4h3",
+        "current_rule_family": "v7.25k3.4h4",
         "backward_compatible_with": [
             "v7.25d1",
             "v7.25e",
@@ -37,10 +37,11 @@
             "v7.25k3.4g",
             "v7.25k3.4h",
             "v7.25k3.4h1",
-            "v7.25k3.4h2"
+            "v7.25k3.4h2",
+            "v7.25k3.4h3"
         ],
         "version_policy": "minimum_supported_version",
-        "run_datetime": "2026-08-24T08:14:47",
+        "run_datetime": "2026-08-24T09:08:28",
         "daily_output_tag": "20260824",
         "output_naming_policy": "daily_stable_overwrite",
         "stock_code": "5425",
@@ -149,7 +150,7 @@
             "method": "data_pipeline_consistency_check",
             "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
             "chart_read_status": "success",
-            "current_close": 88.2,
+            "current_close": 87.6,
             "ema20": 88.64,
             "gap_type": "Breakaway(突破型缺口)",
             "gap_status": "有未回補Up向實體缺口",
@@ -165,7 +166,7 @@
                 {
                     "item": "current_close",
                     "status": "pass",
-                    "json_value": 88.2
+                    "json_value": 87.6
                 },
                 {
                     "item": "ema20",
@@ -201,7 +202,7 @@
         "runtime_trading_range_edge_flag": false
     },
     "analysis_data": {
-        "current_close": 88.2,
+        "current_close": 87.6,
         "latest_trade_date": "2026-08-21",
         "price_data_source": "FUGLEAPI",
         "price_data_ticker": "5425",
@@ -453,51 +454,119 @@
         "intraday_policy_version": "intraday_live_overlay_v1.4",
         "intraday_market_snapshot": {
             "intraday_policy_version": "intraday_live_overlay_v1.4",
-            "market_phase_window": "pre_market",
+            "market_phase_window": "regular_intraday_window",
             "market_board": "OTC",
             "is_emerging": false,
             "scheduled_open_time": "09:00",
             "scheduled_close_time": "13:30",
             "delayed_close_supported_until": "13:33",
             "session_date": "2026-08-24",
-            "evaluated_at": "2026-08-24T08:14:47",
-            "intraday_fetch_expected": false,
-            "quote_usage_mode": "not_applicable",
+            "evaluated_at": "2026-08-24T09:08:27",
+            "intraday_fetch_expected": true,
+            "quote_usage_mode": "live_intraday",
             "price_limit_applicable": true,
             "legal_price_limit_rule": "listed_otc_reference_price_limit_rules_apply",
             "source": "FUGLE_MARKETDATA",
-            "fetch_status": "not_requested",
-            "quote_status": "not_requested",
-            "candles_status": "not_requested",
+            "fetch_status": "live_intraday_ok",
+            "quote_status": "ok",
+            "candles_status": "ok",
             "current_session_bar_complete": false,
             "daily_pa_uses_completed_bars_only": true,
-            "candle_timeframe_minutes": 5
+            "candle_timeframe_minutes": 5,
+            "quote_date": "2026-08-24",
+            "exchange": "TPEx",
+            "market": "OTC",
+            "symbol": "5425",
+            "name": "台半",
+            "reference_price": 88.2,
+            "previous_close": 88.2,
+            "open_price": 87.8,
+            "high_price": 88.4,
+            "low_price": 86.1,
+            "last_trade_price": 87.6,
+            "last_indicative_price": 87.6,
+            "avg_price": 87.48,
+            "change": -0.6,
+            "change_percent": -0.68,
+            "amplitude": 2.61,
+            "best_bid": 87.5,
+            "best_ask": 87.6,
+            "bid_ask_spread": 0.1,
+            "bid_ask_spread_pct": 0.1142,
+            "trade_volume": 2064.0,
+            "trade_value": 180564300.0,
+            "transaction_count": 531.0,
+            "trade_volume_at_bid": 1098.0,
+            "trade_volume_at_ask": 657.0,
+            "last_trade_time": "2026-08-24T09:08:27",
+            "freshness_age_seconds": 0,
+            "freshness_status": "fresh",
+            "is_usable_for_current_price": true,
+            "post_close_same_day_quote_used": false,
+            "is_trial": false,
+            "is_open": null,
+            "is_close": null,
+            "is_delayed_open": false,
+            "is_delayed_close": false,
+            "trading_halt": null,
+            "is_limit_up_price": null,
+            "is_limit_down_price": null,
+            "vs_previous_close_pct": -0.68,
+            "session_return_from_open_pct": -0.228,
+            "distance_to_session_avg_pct": 0.137,
+            "session_range_position_0_1": 0.652,
+            "candles_count": 2,
+            "candle_volume_unit": "lots",
+            "last_15m_return_pct": 0.69,
+            "opening_range_15m_high": 88.4,
+            "opening_range_15m_low": 86.1,
+            "opening_range_status": "inside_opening_range",
+            "candles_tail": [
+                {
+                    "date": "2026-08-24T09:00:00+0800",
+                    "open": 87.8,
+                    "high": 88.4,
+                    "low": 86.1,
+                    "close": 87.0,
+                    "volume": 1542,
+                    "average": 87.54
+                },
+                {
+                    "date": "2026-08-24T09:05:00+0800",
+                    "open": 86.9,
+                    "high": 88.2,
+                    "low": 86.8,
+                    "close": 87.6,
+                    "volume": 522,
+                    "average": 87.48
+                }
+            ]
         },
-        "market_phase": "pre_market",
+        "market_phase": "regular_intraday_window",
         "daily_pa_uses_completed_bars_only": true,
         "current_session_bar_complete": false,
         "daily_completed_close": 88.2,
         "daily_completed_trade_date": "2026-08-21",
-        "current_market_price": 88.2,
-        "current_price_basis": "completed_daily_close",
-        "current_price_as_of": "2026-08-21",
-        "intraday_price_override_applied": false,
-        "intraday_execution_reference_allowed": false,
+        "current_market_price": 87.6,
+        "current_price_basis": "fugle_intraday_last_trade",
+        "current_price_as_of": "2026-08-24T09:08:27",
+        "intraday_price_override_applied": true,
+        "intraday_execution_reference_allowed": true,
         "intraday_behavior_summary": {
-            "freshness_status": null,
-            "freshness_age_seconds": null,
-            "vs_previous_close_pct": null,
-            "session_return_from_open_pct": null,
-            "distance_to_session_avg_pct": null,
-            "session_range_position_0_1": null,
+            "freshness_status": "fresh",
+            "freshness_age_seconds": 0,
+            "vs_previous_close_pct": -0.68,
+            "session_return_from_open_pct": -0.228,
+            "distance_to_session_avg_pct": 0.137,
+            "session_range_position_0_1": 0.652,
             "intraday_5m_trend": null,
-            "last_15m_return_pct": null,
-            "opening_range_status": null,
-            "best_bid": null,
-            "best_ask": null,
-            "bid_ask_spread_pct": null,
+            "last_15m_return_pct": 0.69,
+            "opening_range_status": "inside_opening_range",
+            "best_bid": 87.5,
+            "best_ask": 87.6,
+            "bid_ask_spread_pct": 0.1142,
             "trading_halt": null,
-            "is_trial": null
+            "is_trial": false
         },
         "stock_profile_risk_triggered": false,
         "stock_profile_risk_details": [],
@@ -507,7 +576,7 @@
             "method": "data_pipeline_consistency_check",
             "note": "非OCR；確認PNG由同一份OHLCV資料產生，並列示JSON核心價位供多模態判讀交叉檢查。",
             "chart_read_status": "success",
-            "current_close": 88.2,
+            "current_close": 87.6,
             "ema20": 88.64,
             "gap_type": "Breakaway(突破型缺口)",
             "gap_status": "有未回補Up向實體缺口",
@@ -523,7 +592,7 @@
                 {
                     "item": "current_close",
                     "status": "pass",
-                    "json_value": 88.2
+                    "json_value": 87.6
                 },
                 {
                     "item": "ema20",
@@ -551,7 +620,7 @@
             ]
         },
         "minimum_supported_version": "v7.25d1",
-        "current_rule_family": "v7.25k3.4h3",
+        "current_rule_family": "v7.25k3.4h4",
         "backward_compatible_with": [
             "v7.25d1",
             "v7.25e",
@@ -586,12 +655,13 @@
             "v7.25k3.4g",
             "v7.25k3.4h",
             "v7.25k3.4h1",
-            "v7.25k3.4h2"
+            "v7.25k3.4h2",
+            "v7.25k3.4h3"
         ],
         "manifest_version_policy": {
             "mode": "minimum_supported_version",
             "minimum_supported_version": "v7.25d1",
-            "current_rule_family": "v7.25k3.4h3",
+            "current_rule_family": "v7.25k3.4h4",
             "backward_compatible_with": [
                 "v7.25d1",
                 "v7.25e",
@@ -626,7 +696,8 @@
                 "v7.25k3.4g",
                 "v7.25k3.4h",
                 "v7.25k3.4h1",
-                "v7.25k3.4h2"
+                "v7.25k3.4h2",
+                "v7.25k3.4h3"
             ],
             "note": "排程不得再以 version 字串完全相等作為唯一判斷；高於最低相容版本且欄位齊全者，應依 current_rule_family 套用規則。"
         },
@@ -662,13 +733,13 @@
         "current_entry_state": "ReversalAttempt",
         "trend_direction_transition": "NotYetWeakUp",
         "reversal_state": "ReversalAttempt",
-        "early_reversal_score": 64.0,
+        "early_reversal_score": 68.0,
         "early_reversal_score_components": {
             "reversal_structure": 30.0,
             "trend_transition": 15.0,
             "confirmation": 10.0,
             "participation": 1.0,
-            "traceable_risk_reward": 8.0
+            "traceable_risk_reward": 12.0
         },
         "starter_buy_permission": false,
         "starter_buy_permission_basis": {
@@ -697,7 +768,7 @@
         },
         "expected_rr_or_rr_band": {
             "status": "available",
-            "rr": 1.34,
+            "rr": 1.57,
             "target": 97.02,
             "target_sources": [
                 "gap_MM_Target_Up",
@@ -772,9 +843,9 @@
         "stock_code": "5425",
         "ticker": "5425.TWO",
         "base_date": "2026-08-21",
-        "base_close": 88.2,
+        "base_close": 87.6,
         "current_entry_state": "ReversalAttempt",
-        "early_reversal_score": 64.0,
+        "early_reversal_score": 68.0,
         "starter_buy_permission": false,
         "holding_execution_backtest": "NotApplicableUntilActualHolding"
     },
@@ -784,7 +855,7 @@
     "price": {
         "analysis_role": "watchlist_candidate",
         "current_entry_state": "ReversalAttempt",
-        "early_reversal_score": 64.0,
+        "early_reversal_score": 68.0,
         "starter_buy_permission": false,
         "starter_buy_permission_basis": {
             "score_gte_70": false,
@@ -805,7 +876,7 @@
         },
         "expected_rr_or_rr_band": {
             "status": "available",
-            "rr": 1.34,
+            "rr": 1.57,
             "target": 97.02,
             "target_sources": [
                 "gap_MM_Target_Up",
