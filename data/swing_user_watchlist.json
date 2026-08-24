@@ -1,9 +1,9 @@
 {
   "schema_version": "swing_user_watchlist_v1",
-  "updated_at": "2026-08-21T14:23:59+08:00",
+  "updated_at": "2026-08-24T14:21:12+08:00",
   "timezone": "Asia/Taipei",
-  "baseline_rule": "added_date_latest_completed_trading_close",
-  "state_authority": "user_explicit_add_remove",
+  "baseline_rule": "portfolio_selection_performance_locked_d0",
+  "state_authority": "portfolio_selection_performance_watchlist_projection",
   "tracking_policy_version": "swing_user_watchlist_tracking_v1",
   "active_count": 1,
   "active": [
@@ -17,8 +17,8 @@
       "pool_memberships": [
         "deep_recovery_3m"
       ],
-      "baseline_rule": "added_date_latest_completed_trading_close",
-      "baseline_close": 90.7,
+      "baseline_rule": "portfolio_selection_performance_locked_d0",
+      "baseline_close": 90.3,
       "baseline_close_locked": true,
       "initial_deep_recovery_snapshot": {
         "candidate_score": 84.7,
@@ -38,13 +38,7 @@
         ],
         "policy_version": "deep_recovery_3m_v1"
       },
-      "latest_performance": {
-        "tracking_policy_version": "swing_user_watchlist_tracking_v1",
-        "baseline_trade_date": "",
-        "baseline_close": 90.7,
-        "last_updated_at": "2026-08-21T14:23:58+08:00",
-        "tracking_error": "tracking_identity_missing"
-      },
+      "latest_performance": {},
       "latest_swing_snapshot_status": "not_in_today_qualified_candidates",
       "latest_fundamentals": {
         "updated_at": "2026-08-21T14:23:58+08:00",
@@ -111,8 +105,49 @@
       },
       "latest_deep_recovery_snapshot_updated_at": "2026-08-20T14:22:11+08:00",
       "max_recovery_score_after_entry": 81.8,
-      "latest_deep_recovery_snapshot_status": "not_in_today_deep_recovery_candidates"
+      "latest_deep_recovery_snapshot_status": "not_in_today_deep_recovery_candidates",
+      "ticker": "5425",
+      "symbol": "5425.TWO",
+      "baseline_trade_date": "2026-08-20",
+      "selection_method": "manual_after_analysis_report",
+      "selection_tracking_source": "portfolio_state.selection_performance_watchlist",
+      "selection_tracking_authority_policy_version": "portfolio_selection_tracking_authority_v1",
+      "portfolio_projection_source_workbook_sha256": "dfd60a81c9c59b6c6403e22c5daff131887777695dfb92471d8528f45200d16f",
+      "selection_tracking_sync_status": "ok",
+      "last_selection_authority_sync_at": "2026-08-24T14:21:12+08:00"
     }
   ],
-  "deep_recovery_overlay_version": "deep_recovery_watchlist_overlay_v1"
+  "deep_recovery_overlay_version": "deep_recovery_watchlist_overlay_v1",
+  "human_authority": "PC-local Portfolio.xlsx",
+  "authority_policy_version": "portfolio_selection_tracking_authority_v1",
+  "machine_projection_source": "private data/portfolio_state.json",
+  "portfolio_projection_source_workbook_sha256": "dfd60a81c9c59b6c6403e22c5daff131887777695dfb92471d8528f45200d16f",
+  "authority_migrations": [
+    {
+      "stock_code": "5425",
+      "policy_version": "portfolio_selection_tracking_authority_v1",
+      "migration_type": "legacy_public_tracker_to_portfolio_selection_performance_authority",
+      "migrated_at": "2026-08-24T14:21:12+08:00",
+      "old_baseline_trade_date": null,
+      "old_baseline_close": 90.7,
+      "new_baseline_trade_date": "2026-08-20",
+      "new_baseline_close": 90.3,
+      "legacy_latest_performance": {
+        "tracking_policy_version": "swing_user_watchlist_tracking_v1",
+        "baseline_trade_date": "",
+        "baseline_close": 90.7,
+        "last_updated_at": "2026-08-21T14:23:58+08:00",
+        "tracking_error": "tracking_identity_missing"
+      }
+    }
+  ],
+  "selection_tracking_sync_warnings": [],
+  "selection_tracking_reconciliation": {
+    "status": "ok",
+    "authority_policy_version": "portfolio_selection_tracking_authority_v1",
+    "synced_at": "2026-08-24T14:21:12+08:00",
+    "active_count": 1,
+    "migration_count": 1,
+    "warning_count": 0
+  }
 }
