@@ -52,7 +52,7 @@
         "raw_ohlcv_file": "3081_聯亞_20260824_ohlcv.json",
         "chart_file": "3081_聯亞_Chart_20260824.png",
         "pdf_file": "3081_聯亞_PA_Analysis_20260824.pdf",
-        "last_tracker_update": "2026-08-25T09:50:53",
+        "last_tracker_update": "2026-08-26T08:11:40",
         "tracker_backfill_source": "GitHub",
         "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
@@ -1805,27 +1805,27 @@
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
             "future_ohlcv_observed_count": 1,
             "eligible_execution_ohlcv_observed_count": 1,
-            "last_execution_backfill_at": "2026-08-25T09:50:53",
+            "last_execution_backfill_at": "2026-08-26T08:11:40",
             "execution_pending_stage": "not_pending",
             "execution_pending_stage_description": "目前不是等待成交候選日行情的狀態。",
             "cohort_observed_trading_days": 1,
             "cohort_t1_t5_metrics": {
                 "T+1": {
                     "date": "2026-08-25",
-                    "close_return_pct": -2.5316,
-                    "cumulative_mfe_pct": -1.2658,
+                    "close_return_pct": 7.0524,
+                    "cumulative_mfe_pct": 8.3183,
                     "cumulative_mae_pct": -4.34,
-                    "source": "yfinance:3081.TWO"
+                    "source": "FUGLEAPI:3081"
                 }
             },
-            "cohort_mfe_5d_pct": -1.2658,
+            "cohort_mfe_5d_pct": 8.3183,
             "cohort_mae_5d_pct": -4.34,
             "pullback_zone_touch_status": "touched",
             "pullback_zone_first_touch_date": "2026-08-25",
             "pullback_zone_first_touch_t_index": 1,
             "pullback_zone_post_touch_metrics": {},
             "grouped_backtest_sample_interpretation": "僅作分組資料蒐集；任一cohort完成樣本少於30筆時，不得宣稱策略有效。",
-            "cohort_metrics_updated_at": "2026-08-25T09:50:53",
+            "cohort_metrics_updated_at": "2026-08-26T08:11:40",
             "observed_return_count": 1,
             "avg_return_pct_after_decision": -2.53,
             "mfe_5d_pct_after_decision": -2.53,
@@ -1836,7 +1836,7 @@
             "assumed_execution_date": "2026-08-25",
             "benchmark_execution_date": "2026-08-25",
             "benchmark_execution_price": 2690.0,
-            "benchmark_execution_price_source": "yfinance:3081.TWO:Open",
+            "benchmark_execution_price_source": "FUGLEAPI:3081:Open",
             "remaining_position_ratio_pct": 100.0,
             "recommended_immediate_sell_shares": 0,
             "limit_up_down_fill_status": "not_applicable_no_immediate_sell",
@@ -1848,9 +1848,15 @@
                 "date": "2026-08-25",
                 "trigger_price": 2690.0,
                 "source": "gap_open_below_remaining_floor",
-                "ohlcv_source": "yfinance:3081.TWO"
+                "ohlcv_source": "FUGLEAPI:3081"
             },
-            "rebound_reduce_zone_hit": null,
+            "rebound_reduce_zone_hit": {
+                "date": "2026-08-25",
+                "benchmark_price": 2750.0,
+                "zone_lower": 2750.0,
+                "zone_upper": 2757.5,
+                "source": "daily_high_reached_rebound_reduce_zone"
+            },
             "rebound_rejection": null,
             "full_exit_trigger": {
                 "date": "2026-08-25",
@@ -1858,7 +1864,7 @@
                 "source": "gap_open_below_remaining_floor"
             },
             "remaining_floor_trigger_date": "2026-08-25",
-            "rebound_reduce_zone_hit_date": null,
+            "rebound_reduce_zone_hit_date": "2026-08-25",
             "full_exit_trigger_date": "2026-08-25",
             "full_exit_benchmark_price": 2690.0,
             "execution_metrics_status": "pending_or_unconfirmed_fill"
