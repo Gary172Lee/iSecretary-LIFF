@@ -1,0 +1,2911 @@
+# USPreferredStockDayInfo 每日情報報告
+
+- 生成時間（台灣）：2026-09-01 09:29:53
+- 對應 PDF：Stock_News_Report_20260901_092952.pdf
+- 用途：供 ChatGPT 排程讀取、查證消息、判斷美國特別股/交易所債/REIT 風險預警。
+
+## 使用者查詢範圍
+
+【目標標的】
+- NYSE: CTGG,Qwest Corp 6.500% Senior Notes due 2051
+- NASDAQ: BHFAL,Brighthouse Financial Junior Subordinated Debentures Exp 2058
+- OPI,Office Properties Income Trust
+- NYSE: AXS-E，Axis Cap 100 DS Representing 1 Pref Shs Series E
+- NYSE: F-B，福特汽車
+- UZD,United States Cellular Corporation - 6.25% NT REDEEM 01/09/2069 USD 25
+
+## 逐標的摘要
+
+### 1. CTGG
+
+- 事件總分：正向6 / 負向0 / 總分+6
+- 綜合分析：已排除低可信來源並合併重複事件；目前事件權重為偏正面（+6）。
+- 事件 1：2026-08-30｜Lumen擴展多雲閘道服務以增強AI連接能力｜recent_event
+  - 影響：正向｜嚴重性：3｜信心度：中
+  - 摘要：Lumen擴展Multi-Cloud Gateway，強化AI驅動的多雲環境連接。
+  - 來源：Simply Wall St
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 2：2026-08-27｜Lumen擴展多雲閘道，AI需求推動連接增長｜recent_event
+  - 影響：正向｜嚴重性：3｜信心度：中
+  - 摘要：Lumen擴展Multi-Cloud Gateway，受益於AI對私人連接織網(PCF)方案的需求。
+  - 來源：Zacks
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+
+### 2. BHFAL
+
+- 事件總分：正向0 / 負向10 / 總分-10
+- 綜合分析：已排除低可信來源並合併重複事件；目前事件權重為偏負面（-10）。
+- 事件 1：2026-08-30｜市場對Brighthouse Financial併購案監管審查擔憂加劇，股價波動｜recent_event
+  - 影響：負向｜嚴重性：4｜信心度：中
+  - 摘要：市場對Aquarian Capital收購Brighthouse Financial的監管審查擔憂加劇，導致近期股價波動。
+  - 來源：Seeking Alpha、TipRanks
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 2：2026-08-29｜Aquarian收購案監管審查引發市場擔憂與股價下跌｜recent_event
+  - 影響：負向｜嚴重性：3｜信心度：中
+  - 摘要：市場對Aquarian收購案監管審查進度擔憂，股價下跌13%，引發對交易完成風險的討論。
+  - 來源：SeekingAlpha
+  - 日期過濾：kept_recent｜來源品質：unknown｜驗證：unverified
+- 事件 3：2026-08-19｜德拉瓦州保險局更新Brighthouse Financial併購審查進度並強調嚴格評估｜recent_event
+  - 影響：中性｜嚴重性：3｜信心度：高
+  - 摘要：德拉瓦州保險局聲明正嚴格審查Aquarian Capital收購案，旨在保護保單持有人，審查進度未定。
+  - 來源：Seeking Alpha、Delaware Department of Insurance
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 4：2026-08-19｜特拉華州保險局對Aquarian收購案的審查導致股價波動｜recent_event
+  - 影響：負向｜嚴重性：3｜信心度：中
+  - 摘要：市場因特拉華州保險局對Aquarian收購案的持續審查而出現股價波動。
+  - 來源：MarketWatch
+  - 日期過濾：kept_recent｜來源品質：mainstream_media｜驗證：partially_verified
+
+### 3. OPI
+
+- 事件總分：正向6 / 負向9 / 總分-3
+- 綜合分析：已排除低可信來源並合併重複事件；目前事件權重為偏負面（-3）。
+- 事件 1：2026-08-31｜OPI空頭持倉近期下降6.19%，投資者情緒改善｜recent_event
+  - 影響：正向｜嚴重性：2｜信心度：中
+  - 摘要：OPI空頭持倉減少6.19%，顯示市場對其前景看法趨於樂觀。
+  - 來源：MarketBeat
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 2：2026-08-25｜分析師評估OPI Q2財報，多空因素並存｜recent_event
+  - 影響：負向｜嚴重性：3｜信心度：中
+  - 摘要：分析師稱OPI重整後債務削減，但FFO下滑、現金流與短期債務壓力仍存。
+  - 來源：Lumida、Seeking Alpha
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 3：2026-08-25｜Lumida報告分析OPI營運挑戰與重組進展｜recent_event
+  - 影響：中性｜嚴重性：2｜信心度：中
+  - 摘要：分析指出OPI面臨空置率、現金流挑戰，但也強調債務重組與資產出售的積極面。
+  - 來源：Lumida
+  - 日期過濾：kept_recent｜來源品質：unknown｜驗證：unverified
+- 事件 4：2026-08-24｜TipRanks分析OPI第二季財報電話會議，強調短期債務到期與空置壓力｜recent_event
+  - 影響：負向｜嚴重性：3｜信心度：中
+  - 摘要：Q2財報會議分析指出OPI短期債務再融資風險高，空置率壓力持續。
+  - 來源：TipRanks.com
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 5：2026-08-24｜TipRanks分析OPI重整後路徑，強調短期債務及空置率壓力｜recent_event
+  - 影響：負向｜嚴重性：3｜信心度：中
+  - 摘要：文章指出OPI重整後雖減債，但短期債務集中到期與高空置率仍為挑戰。
+  - 來源：TipRanks.com
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 6：2026-08-20｜Redwood Capital Management增加董事會權力與持股｜recent_event
+  - 影響：正向｜嚴重性：4｜信心度：高
+  - 摘要：Redwood Capital持股達18%，增強董事會影響力，有利重組後策略執行。
+  - 來源：SEC.gov、Stock Titan、MarketBeat
+  - 日期過濾：kept_recent｜來源品質：sec_filing｜驗證：verified
+
+### 4. AXS-E
+
+- 事件總分：正向2 / 負向10 / 總分-8
+- 綜合分析：已排除低可信來源並合併重複事件；目前事件權重為偏負面（-8）。
+- 事件 1：2026-08-29｜分析師認為AXS因財報未達預期且巨災損失增加，股價可能被低估｜recent_event
+  - 影響：負向｜嚴重性：3｜信心度：中
+  - 摘要：Q2營運收入未達預期，巨災損失增加致股價下跌，但分析師認為存在被低估可能。
+  - 來源：Simply Wall St、MarketBeat、Zacks、TradingView
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 2：2026-08-29｜分析師共識評級為「適度買入」｜recent_event
+  - 影響：正向｜嚴重性：2｜信心度：高
+  - 摘要：多家分析機構給予AXS「適度買入」共識評級，反映對其前景的看好。
+  - 來源：MarketBeat、Public.com、AmericanBankingNews.com
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 3：2026-08-27｜AXIS Capital Q2 盈利不及預期且巨災損失增加導致股價下跌｜recent_event
+  - 影響：負向｜嚴重性：4｜信心度：中
+  - 摘要：Q2 營運收入和 EPS 不及預期，受巨災損失增加影響，股價自報告後下跌5.6%。
+  - 來源：MarketBeat、Zacks Research
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 4：2026-08-27｜AXIS Capital股價在第二季度財報公布後下跌，因營運收入未達預期且巨災損失較高｜recent_event
+  - 影響：負向｜嚴重性：3｜信心度：高
+  - 摘要：AXS股價在Q2財報後下跌5.6%，因營運收入未達預期且巨災損失較高。
+  - 來源：Zacks Equity Research、MarketBeat
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 5：2026-08-19｜AXIS Capital任命Jim Rhyner為北美金融線、項目及加拿大業務主管｜recent_event
+  - 影響：中性｜嚴重性：2｜信心度：高
+  - 摘要：AXIS Capital任命Jim Rhyner為北美業務主管，旨在強化保險產品組合。
+  - 來源：AXIS Capital Investor Relations、PRNewswire、AXIS Investor Relations、Reinsurance News、GlobeNewswire
+  - 日期過濾：kept_recent｜來源品質：official_ir｜驗證：verified
+
+### 5. F-B
+
+- 事件總分：正向7 / 負向10 / 總分-3
+- 綜合分析：Stage 2 AI 合併未完成；已由程式保留高可信 Stage 1 近期事件，事件權重偏負面（-3）。
+- 事件 1：2026-08-31｜福特Ranger車型因安全氣囊缺陷在南非進行召回｜recent_event
+  - 影響：負向｜嚴重性：3｜信心度：高
+  - 摘要：福特南非召回2,275輛Ranger雙廂皮卡，因安全氣囊可能未能正確展開，構成安全風險。
+  - 來源：IOL、NovaNews、Newcastillian News
+  - 日期過濾：kept_recent｜來源品質：unknown｜驗證：unverified
+- 事件 2：2026-08-31｜福特召回2275輛Ranger皮卡因安全氣囊缺陷｜recent_event
+  - 影響：負向｜嚴重性：3｜信心度：高
+  - 摘要：福特因安全氣囊缺陷召回2275輛2026-2027年Ranger皮卡，B柱飾板恐變彈射物。
+  - 來源：NovaNews、Newcastillian News、IOL
+  - 日期過濾：kept_recent｜來源品質：unknown｜驗證：unverified
+- 事件 3：2026-08-27｜福特少數Explorer車型因引擎故障風險遭召回｜recent_event
+  - 影響：負向｜嚴重性：2｜信心度：中
+  - 摘要：少數2026年Explorer SUV因引擎連桿軸承問題存在引擎完全故障風險，NHTSA宣布召回。
+  - 來源：CarBuzz
+  - 日期過濾：kept_recent｜來源品質：unknown｜驗證：unverified
+- 事件 4：2026-08-27｜福特因引擎故障風險召回少量Explorer SUV｜recent_event
+  - 影響：負向｜嚴重性：2｜信心度：高
+  - 摘要：福特召回六輛2026年Explorer SUV，因引擎連桿軸承故障恐致引擎完全失效。
+  - 來源：CarBuzz
+  - 日期過濾：kept_recent｜來源品質：unknown｜驗證：unverified
+- 事件 5：2026-08-27｜福特宣布高階人事變動：新任Ford Energy總裁並有高管退休｜recent_event
+  - 影響：中性｜嚴重性：1｜信心度：高
+  - 摘要：福特宣布任命Dave Carroll為Ford Energy總裁，Lisa Drake將於年底退休。
+  - 來源：Ford Motor Company
+  - 日期過濾：kept_recent｜來源品質：unknown｜驗證：unverified
+- 事件 6：2026-08-25｜福特預覽2.5萬美元跨界休旅車，將採油電/燃油動力｜recent_event
+  - 影響：正向｜嚴重性：3｜信心度：中
+  - 摘要：福特向經銷商預覽2029年上市、約2.5萬美元跨界SUV，提供油電及燃油選項。
+  - 來源：Electrek
+  - 日期過濾：kept_recent｜來源品質：unknown｜驗證：unverified
+- 事件 7：2026-08-25｜分析師維持福特「持有」共識，平均目標價$15.68｜recent_event
+  - 影響：中性｜嚴重性：2｜信心度：中
+  - 摘要：分析師對福特維持「持有」評級共識，平均12個月目標價$15.68，略高於近期股價。
+  - 來源：MarketBeat.com、Price Target、Public.com、Barchart.com
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+- 事件 8：2026-08-21｜福特Q2財報超預期並上調全年財測後獲多家投行上調評級｜recent_event
+  - 影響：正向｜嚴重性：4｜信心度：高
+  - 摘要：福特Q2調整後EBIT、自由現金流超預期並上調全年指引，獲多家投行上調評級。
+  - 來源：FinanceBuzz、StocksToTrade、Seeking Alpha
+  - 日期過濾：kept_recent｜來源品質：secondary_site｜驗證：unverified
+
+### 6. UZD
+
+- 事件總分：正向4 / 負向0 / 總分+4
+- 綜合分析：Stage 2 AI 合併未完成；已由程式保留高可信 Stage 1 近期事件，事件權重偏正面（+4）。
+- 事件 1：2026-08-26｜TDS（Array母公司）公佈2026年第二季財報，Array營收大幅成長｜recent_event
+  - 影響：正向｜嚴重性：4｜信心度：高
+  - 摘要：TDS公佈Q2財報，Array營收年增90%達54.1M美元，淨利2.811億美元，截至6/30現金達21.9億美元。
+  - 來源：Telephone and Data Systems Investor Relations、Alpha Spread
+  - 日期過濾：kept_recent｜來源品質：official_ir｜驗證：verified
+- 事件 2：2026-08-19｜Array Digital Infrastructure 宣佈派發每股23美元特別股息，TDS將獲16.3億美元｜recent_event
+  - 影響：中性｜嚴重性：3｜信心度：中
+  - 摘要：Array董事會宣佈派發每股23美元特別股息，TDS預計收到約16.3億美元，同時TDS計劃贖回11億美元高成本債務。
+  - 來源：Alpha Spread
+  - 日期過濾：kept_recent｜來源品質：unknown｜驗證：unverified
+- 事件 3：2026-08-19｜TDS宣布2026年第三季度股息｜recent_event
+  - 影響：中性｜嚴重性：1｜信心度：高
+  - 摘要：母公司Telephone and Data Systems (TDS) 宣布普通股及優先股的季度股息。
+  - 來源：PRNewswire、Stock Titan、TDS Investor Relations
+  - 日期過濾：kept_recent｜來源品質：official_ir｜驗證：verified
+
+## 量化指標與資料缺口
+
+- 量化監控框架版本：1.0
+- 說明：v1 先建立每檔應追蹤指標與資料缺口；尚未取得官方數值時，會標示為「資料不足」。
+
+### CTGG 量化監控
+- Free cash flow｜狀態：已取得｜驗證：verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：FCF 轉負或展望下修需警戒。
+- Debt maturity and exchange offer terms｜狀態：已取得｜驗證：verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：distressed exchange、順位弱化或擔保改變需警戒。
+- Credit rating / outlook｜狀態：已取得｜驗證：verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：downgrade、negative outlook 或 selective default 評論需警戒。
+
+### BHFAL 量化監控
+- RBC ratio｜狀態：已取得｜驗證：verified｜來源品質：official_ir｜期間新鮮度：fresh｜門檻：低於 400% 黃燈；低於 350% 橙燈/紅燈；單季大幅下滑需警戒。
+- Statutory capital and surplus｜狀態：已取得｜驗證：verified｜來源品質：official_ir｜期間新鮮度：fresh｜門檻：連續下降或重大減損需警戒。
+- Holding company cash and liquid assets｜狀態：已取得｜驗證：verified｜來源品質：official_ir｜期間新鮮度：fresh｜門檻：低於未來 12 個月利息與固定支出覆蓋需求需警戒。
+- Financial leverage｜狀態：已取得｜驗證：unverified｜來源品質：secondary_site｜期間新鮮度：fresh｜門檻：槓桿升高或評等機構負面評論需警戒。
+- Credit rating / outlook｜狀態：已取得｜驗證：verified｜來源品質：rating_agency｜期間新鮮度：acceptable_recent｜門檻：negative outlook、downgrade 或 watch negative 需警戒。
+- BHFAL interest payment status｜狀態：已取得｜驗證：verified｜來源品質：official_ir｜期間新鮮度：fresh｜門檻：defer、suspend、delay、non-payment 立即紅燈。
+- Aquarian merger / change-of-control treatment｜狀態：已取得｜驗證：verified｜來源品質：rating_agency｜期間新鮮度：fresh｜門檻：未明確說明 BHFAL 存續、掛牌、贖回或付息條款時列資料不足。
+- 資料缺口：1 項，關鍵資料缺漏時不可判定為綠燈。
+
+### OPI 量化監控
+- Occupancy rate｜狀態：已取得｜驗證：verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：連續下降或低於同業顯著水準需警戒。
+- AFFO / FFO｜狀態：已取得｜驗證：partially_verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：AFFO/FFO 大幅下滑或為負需警戒。
+- Debt maturity schedule｜狀態：已取得｜驗證：partially_verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：12-24 個月內大量到期且流動性不足需紅燈。
+- Liquidity / cash availability｜狀態：已取得｜驗證：partially_verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：流動性不足或 covenant 壓力需警戒。
+- 資料缺口：3 項，關鍵資料缺漏時不可判定為綠燈。
+
+### AXS-E 量化監控
+- Combined ratio｜狀態：已取得｜驗證：verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：高於 100% 或明顯惡化需警戒。
+- Catastrophe losses｜狀態：已取得｜驗證：verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：重大巨災損失超預期需警戒。
+- Preferred dividend status｜狀態：已取得｜驗證：partially_verified｜來源品質：official_ir｜期間新鮮度：fresh｜門檻：defer、suspend、delay 立即紅燈。
+- AM Best Rating｜狀態：已取得｜驗證：verified｜來源品質：official_ir｜期間新鮮度：acceptable_recent｜門檻：評級下調需警戒。
+- S&P Rating｜狀態：已取得｜驗證：verified｜來源品質：official_ir｜期間新鮮度：acceptable_recent｜門檻：評級下調需警戒。
+
+### F-B 量化監控
+- Industrial free cash flow｜狀態：已取得｜驗證：partially_verified｜來源品質：official_ir｜期間新鮮度：fresh｜門檻：FCF 轉負或全年指引大幅下修需警戒。
+- Ford Credit delinquencies / credit losses｜狀態：資料不足｜驗證：data_missing｜來源品質：unknown｜期間新鮮度：unknown_period｜門檻：逾期率或信用損失準備明顯上升需警戒。
+- Recall / warranty cost｜狀態：資料不足｜驗證：data_missing｜來源品質：unknown｜期間新鮮度：unknown_period｜門檻：重大召回或保固成本升高需警戒。
+- 資料缺口：5 項，關鍵資料缺漏時不可判定為綠燈。
+
+### UZD 量化監控
+- Issuer / guarantor status｜狀態：已取得｜驗證：verified｜來源品質：sec_filing｜期間新鮮度：acceptable_recent｜門檻：發行人或擔保人不明確時列灰燈/黃燈，不可判定安全。
+- Asset sale proceeds and use of funds｜狀態：已取得｜驗證：partially_verified｜來源品質：sec_filing｜期間新鮮度：fresh｜門檻：出售所得若大量分配給股東而非減債需警戒。
+- Debt assumption / redemption status｜狀態：已取得｜驗證：partially_verified｜來源品質：sec_filing｜期間新鮮度：acceptable_recent｜門檻：未說明承擔、契約修改或贖回時列資料不足。
+- 資料缺口：2 項，關鍵資料缺漏時不可判定為綠燈。
+
+## 程式端日期過濾與來源驗證
+
+- 日期過濾版本：1.2.2
+- 最近事件保留天數：14 天
+- 說明：超出最近 14 日但命中 Chapter 11、收購、重整、退市、債務交換等重大關鍵字者，會保留為 background_risk_event；其他舊事件移至 dropped_old_events。
+
+- CTGG：recent=2，background=0，unknown_date=0，dropped_old=0
+- BHFAL：recent=4，background=0，unknown_date=0，dropped_old=0
+- OPI：recent=6，background=0，unknown_date=0，dropped_old=0
+- AXS-E：recent=5，background=0，unknown_date=0，dropped_old=0
+- F-B：recent=8，background=0，unknown_date=0，dropped_old=0
+- UZD：recent=3，background=0，unknown_date=0，dropped_old=0
+
+## 完整 JSON
+
+```json
+[
+  {
+    "target_name": "CTGG",
+    "events": [
+      {
+        "date": "2026-08-30",
+        "title": "Lumen擴展多雲閘道服務以增強AI連接能力",
+        "impact_direction": "正向",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "Lumen擴展Multi-Cloud Gateway，強化AI驅動的多雲環境連接。",
+        "links": [
+          "Simply Wall St"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 2,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-27",
+        "title": "Lumen擴展多雲閘道，AI需求推動連接增長",
+        "impact_direction": "正向",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "Lumen擴展Multi-Cloud Gateway，受益於AI對私人連接織網(PCF)方案的需求。",
+        "links": [
+          "Zacks"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 5,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      }
+    ],
+    "綜合分析": "已排除低可信來源並合併重複事件；目前事件權重為偏正面（+6）。",
+    "事件總分": "正向6 / 負向0 / 總分+6",
+    "new_sources_found": [],
+    "event_merge_source": "stage1_deterministic_fallback",
+    "excluded_low_trust_event_count": 2,
+    "merged_duplicate_event_count": 0,
+    "event_dedup_patch_version": "1.3.3",
+    "metric_data": [
+      {
+        "ticker": "CTGG",
+        "metric_name": "Free cash flow",
+        "metric_category": "現金流",
+        "value": "327 million",
+        "unit": "USD",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Lumen Technologies Q2 2026 Earnings Release / SEC 8-K Exhibit 99.1",
+        "source_url_or_name": "Lumen Investor Relations / SEC Filing",
+        "source_candidates": [
+          "Lumen Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Exchange offer documents",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "FCF 轉負或展望下修需警戒。",
+        "priority": "P0",
+        "risk_impact": "自由現金流不足會影響長債償付能力。",
+        "note": "Lumen 2026Q2 官方資料：Free Cash Flow 為 +$69M；Free Cash Flow excluding Special Items 為 +$327M。本監控沿用既有可比口徑，以 excluding Special Items 的 +$327M 作 canonical FCF。",
+        "rejected_candidate_reason": "CTGG 2026Q2 FCF official-source veto：Lumen Q2 2026 官方財報明列 Free Cash Flow=+$69M、Free Cash Flow excluding Special Items=+$327M；候選值 $327M 與兩個官方口徑均衝突，已拒絕。",
+        "rejected_candidate_value": "$327M",
+        "rejected_candidate_source": "Lumen Technologies 2026 Q2 Earnings Report",
+        "definition_scope": "Lumen Technologies consolidated",
+        "calculation_basis": "Free Cash Flow excluding Special Items",
+        "measurement_form": "point",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "official_lock_applied",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "definition_changed",
+        "cross_run_previous_value": "327 million",
+        "cross_run_previous_period": "2026 Q2",
+        "cross_run_previous_report_date": "20260826",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period 有前值，但 definition_scope / calculation_basis 不同，不互相覆寫。",
+        "reported_fcf_value": "69 million",
+        "reported_fcf_value_numeric": 69000000,
+        "value_excluding_special_items": "327 million",
+        "value_excluding_special_items_numeric": 327000000,
+        "ctgg_fcf_official_lock_applied": true,
+        "ctgg_fcf_official_lock_version": "1.3.8",
+        "official_source_regression_guard_version": "1.3.8",
+        "official_source_regression_guard_status": "official_q2_fcf_canonicalized",
+        "official_reference_date": "2026-08-04",
+        "official_reference_value": "327 million",
+        "official_reference_source": "Lumen Technologies Q2 2026 Earnings Release / SEC 8-K Exhibit 99.1"
+      },
+      {
+        "ticker": "CTGG",
+        "metric_name": "Debt maturity and exchange offer terms",
+        "metric_category": "債務結構",
+        "value": "Qwest Corporation已於2026年6月完成債務交換要約，將2056年及2057年到期票據交換為新的2051年及2052年到期票據。這些新票據為Qwest的高級無擔保債務，並由Lumen Technologies無條件擔保。",
+        "unit": "status/date/USD",
+        "period": "2026年6月",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Lumen Technologies Press Release / SEC Filing (8-K)",
+        "source_url_or_name": "BusinessWire / SEC Filing",
+        "source_candidates": [
+          "Lumen Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Exchange offer documents",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "distressed exchange、順位弱化或擔保改變需警戒。",
+        "priority": "P0",
+        "risk_impact": "可能削弱 CTGG 債權保護。",
+        "note": "CTGG本身是2051年到期的高級票據，受益於此債務交換重組帶來的債務結構優化。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "press_release"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "month_or_month_range",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "not_comparable",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "已完成交換要約，新票據由Lumen擔保",
+        "cross_run_previous_period": "2026年6月",
+        "cross_run_previous_report_date": "20260828",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 有前值，但數值型態無法安全比較。"
+      },
+      {
+        "ticker": "CTGG",
+        "metric_name": "Credit rating / outlook",
+        "metric_category": "信用評等",
+        "value": "Moody's: B2 (穩定); Fitch: B; S&P: B- (發行人信用評等); S&P: B (Qwest票據評等, 恢復評級2)",
+        "unit": "rating",
+        "period": "2026年2月 (主要評等調升); 2026年4月 (S&P Qwest票據評等)",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Business Wire, Telecompaper, S&P Global, Fitch Ratings, SEC Filing",
+        "source_url_or_name": "Lumen Ratings Upgraded by Top 3 Global Ratings Agencies (Business Wire), Lumen earns credit rating upgrade to B after selling consumer telecom business (Telecompaper), Qwest Corp.'s New Notes Rated 'B' (Recovery Ratin - S&P Global), Fitch Assigns Lumen's New Revolving Credit Facility 'BB'/'RR1'; Affirms IDR at 'B'; Outlook Stable (Fitch Ratings), lumn_arsx2026xwo29xedgar (SEC.gov)",
+        "source_candidates": [
+          "Lumen Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Exchange offer documents",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "downgrade、negative outlook 或 selective default 評論需警戒。",
+        "priority": "P0",
+        "risk_impact": "信評變化會影響債券流動性與再融資能力。",
+        "note": "Stage 1/Stage 2 已回填此量化指標。",
+        "semantic_match_status": "精確符合",
+        "issuer_scope": "Lumen Technologies, Inc. / Qwest Corporation",
+        "metric_value_type": "文本描述 (評級符號與展望)",
+        "definition_scope": "Credit ratings and outlooks from major agencies for Lumen and Qwest debt",
+        "calculation_basis": "Rating agency reports and company announcements",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "rating_agency",
+          "press_release"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-04-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "month_or_month_range",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "definition_changed",
+        "cross_run_previous_value": "Moody's B2 (穩定); S&P B- (高級無擔保B, 回復評級2); Fitch B (穩定)",
+        "cross_run_previous_period": "2026年2月-4月",
+        "cross_run_previous_report_date": "20260820",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period 有前值，但 definition_scope / calculation_basis 不同，不互相覆寫。"
+      }
+    ],
+    "metric_integrity_issues": [
+      {
+        "issue": "explicit_cross_ticker_row_rejected",
+        "parent_ticker": "CTGG",
+        "row_ticker": "LUMN/QWEST",
+        "metric_name": "Credit rating / outlook",
+        "value": "Moody's: Lumen CFR B2 (穩定展望)，Qwest高級無擔保票據 Caa1 (穩定展望)。Fitch: Lumen/Qwest IDR 'B' (穩定展望)。S&P: Lumen高級無擔保債務 'B'，發行人信用評級 'B-' (展望正向)。"
+      },
+      {
+        "issue": "ctgg_q2_fcf_official_source_veto",
+        "ticker": "CTGG",
+        "metric_name": "Free cash flow",
+        "rejected_candidate_value": "$327M",
+        "official_value": "327 million",
+        "official_reported_fcf": "69 million",
+        "guard_version": "1.3.8"
+      }
+    ],
+    "metric_alias_acceptances": [
+      {
+        "parent_ticker": "CTGG",
+        "accepted_alias": "LUMN",
+        "metric_name": "Free cash flow"
+      }
+    ],
+    "metric_merge_source": "stage1_deterministic_merge",
+    "stage2_resilience_patch_version": "1.3.2",
+    "risk_profile": {
+      "profile_found": true,
+      "risk_profile_version": "1.0",
+      "issuer": "Qwest Corporation / Lumen",
+      "security_type": "Long-dated exchange-traded senior note",
+      "sector": "Telecom",
+      "core_risk": "Lumen / Qwest 債務結構、自由現金流、利息覆蓋、交換要約與信評。",
+      "required_metric_count": 3,
+      "hard_warning_keywords": [
+        "exchange offer",
+        "distressed exchange",
+        "downgrade",
+        "negative free cash flow",
+        "asset sale",
+        "refinancing"
+      ]
+    },
+    "missing_data": [],
+    "dropped_old_events": [],
+    "event_date_filter_summary": {
+      "lookback_days": 14,
+      "cutoff_date": "2026-08-19",
+      "today": "2026-09-01",
+      "kept_recent": 2,
+      "kept_background": 0,
+      "kept_unknown_date": 0,
+      "dropped_old": 0
+    },
+    "metric_consistency_summary": {
+      "conflict_count": 0,
+      "conflicts": []
+    }
+  },
+  {
+    "target_name": "BHFAL",
+    "events": [
+      {
+        "date": "2026-08-30",
+        "title": "市場對Brighthouse Financial併購案監管審查擔憂加劇，股價波動",
+        "impact_direction": "負向",
+        "impact_severity": 4,
+        "confidence": "中",
+        "summary_30": "市場對Aquarian Capital收購Brighthouse Financial的監管審查擔憂加劇，導致近期股價波動。",
+        "links": [
+          "Seeking Alpha",
+          "TipRanks"
+        ],
+        "merged_duplicate_count": 2,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 2,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-29",
+        "title": "Aquarian收購案監管審查引發市場擔憂與股價下跌",
+        "impact_direction": "負向",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "市場對Aquarian收購案監管審查進度擔憂，股價下跌13%，引發對交易完成風險的討論。",
+        "links": [
+          "SeekingAlpha"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "unknown",
+        "event_source_quality_details": [
+          "unknown"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 3,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-19",
+        "title": "德拉瓦州保險局更新Brighthouse Financial併購審查進度並強調嚴格評估",
+        "impact_direction": "中性",
+        "impact_severity": 3,
+        "confidence": "高",
+        "summary_30": "德拉瓦州保險局聲明正嚴格審查Aquarian Capital收購案，旨在保護保單持有人，審查進度未定。",
+        "links": [
+          "Seeking Alpha",
+          "Delaware Department of Insurance"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 13,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-19",
+        "title": "特拉華州保險局對Aquarian收購案的審查導致股價波動",
+        "impact_direction": "負向",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "市場因特拉華州保險局對Aquarian收購案的持續審查而出現股價波動。",
+        "links": [
+          "MarketWatch"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "mainstream_media",
+        "event_source_quality_details": [
+          "mainstream_media"
+        ],
+        "event_verification_status": "partially_verified",
+        "event_days_old": 13,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      }
+    ],
+    "綜合分析": "已排除低可信來源並合併重複事件；目前事件權重為偏負面（-10）。",
+    "事件總分": "正向0 / 負向10 / 總分-10",
+    "new_sources_found": [],
+    "event_merge_source": "stage1_deterministic_fallback",
+    "excluded_low_trust_event_count": 0,
+    "merged_duplicate_event_count": 1,
+    "event_dedup_patch_version": "1.3.3",
+    "metric_data": [
+      {
+        "ticker": "BHFAL",
+        "metric_name": "RBC ratio",
+        "metric_category": "保險償付能力",
+        "value": "430%-450%",
+        "unit": "%",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Brighthouse Financial Investor Relations",
+        "source_url_or_name": "Brighthouse Financial Q2 2026 Earnings Release",
+        "source_candidates": [
+          "Brighthouse Financial Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Statutory filing",
+          "AM Best",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "低於 400% 黃燈；低於 350% 橙燈/紅燈；單季大幅下滑需警戒。",
+        "priority": "P0",
+        "risk_impact": "RBC 下滑可能代表保險子公司資本緩衝下降，影響次順位債付息與信用評等。",
+        "note": "為預估的合併風險資本比率，截至2026年6月30日，符合公司400%-450%的目標範圍。定義範圍為保險子公司整體。",
+        "definition_scope": "Estimated combined RBC ratio of insurance subsidiaries",
+        "calculation_basis": "Statutory basis",
+        "source_quality_primary": "official_ir",
+        "source_quality": "official_ir",
+        "source_quality_details": [
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "measurement_form": "range",
+        "source_period_alignment_status": "q2_asof_evidence_present",
+        "source_period_evidence": "Brighthouse Financial Investor Relations | Brighthouse Financial Q2 2026 Earnings Release | 為預估的合併風險資本比率，截至2026年6月30日，符合公司400%-450%的目標範圍。定義範圍為保險子公司整體。",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "definition_changed",
+        "cross_run_previous_value": "430%-450%",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260828",
+        "cross_run_previous_definition_scope": "Brighthouse insurance subsidiaries (combined)",
+        "cross_run_previous_calculation_basis": "NAIC combined risk-based capital ratio",
+        "cross_run_consistency_reason": "同 period 有前值，但 definition_scope / calculation_basis 不同，不互相覆寫。"
+      },
+      {
+        "ticker": "BHFAL",
+        "metric_name": "Statutory capital and surplus",
+        "metric_category": "法定資本",
+        "value": "4.9 billion",
+        "unit": "USD",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Brighthouse Financial Investor Relations",
+        "source_url_or_name": "Brighthouse Financial Q2 2026 Earnings Release",
+        "source_candidates": [
+          "Brighthouse Financial Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Statutory filing",
+          "AM Best",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "連續下降或重大減損需警戒。",
+        "priority": "P0",
+        "risk_impact": "法定資本下降會削弱保險子公司分派能力與控股公司資金來源。",
+        "note": "截至2026年6月30日，法定合併調整後總資本為49億美元，與2026年3月31日大致持平。",
+        "definition_scope": "Statutory combined total adjusted capital of insurance subsidiaries",
+        "calculation_basis": "Statutory basis",
+        "source_quality_primary": "official_ir",
+        "source_quality": "official_ir",
+        "source_quality_details": [
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "definition_changed",
+        "cross_run_previous_value": "$4.9 billion",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260826",
+        "cross_run_previous_definition_scope": "Statutory combined total adjusted capital",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period 有前值，但 definition_scope / calculation_basis 不同，不互相覆寫。"
+      },
+      {
+        "ticker": "BHFAL",
+        "metric_name": "Holding company cash and liquid assets",
+        "metric_category": "控股公司流動性",
+        "value": "0.9 billion",
+        "unit": "USD",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Brighthouse Financial Investor Relations",
+        "source_url_or_name": "Brighthouse Financial Q2 2026 Earnings Release",
+        "source_candidates": [
+          "Brighthouse Financial Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Statutory filing",
+          "AM Best",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "低於未來 12 個月利息與固定支出覆蓋需求需警戒。",
+        "priority": "P0",
+        "risk_impact": "控股公司流動性不足可能影響 BHFAL 利息支付。",
+        "note": "截至2026年6月30日，控股公司流動資產為9億美元。",
+        "definition_scope": "Liquid assets at holding company level (Brighthouse Financial, Inc., Brighthouse Holdings, LLC, and Brighthouse Services, LLC)",
+        "calculation_basis": "Cash and cash equivalents, short-term investments, publicly-traded securities (excluding pledged assets)",
+        "source_quality_primary": "official_ir",
+        "source_quality": "official_ir",
+        "source_quality_details": [
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "measurement_form": "point",
+        "source_period_alignment_status": "q2_asof_evidence_present",
+        "source_period_evidence": "Brighthouse Financial Investor Relations | Brighthouse Financial Q2 2026 Earnings Release | 截至2026年6月30日，控股公司流動資產為9億美元。",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "definition_changed",
+        "cross_run_previous_value": "$0.9 billion",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260826",
+        "cross_run_previous_definition_scope": "Holding company liquid assets",
+        "cross_run_previous_calculation_basis": "Comprised of cash and cash equivalents, short-term investments and publicly-traded securities, excluding pledged or committed assets.",
+        "cross_run_consistency_reason": "同 period 有前值，但 definition_scope / calculation_basis 不同，不互相覆寫。"
+      },
+      {
+        "ticker": "BHFAL",
+        "metric_name": "Financial leverage",
+        "metric_category": "槓桿",
+        "value": "0.48",
+        "unit": "%",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "中",
+        "source": "MarketBeat",
+        "source_url_or_name": "MarketBeat",
+        "source_candidates": [
+          "Brighthouse Financial Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Statutory filing",
+          "AM Best",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "槓桿升高或評等機構負面評論需警戒。",
+        "priority": "P1",
+        "risk_impact": "槓桿上升會削弱次順位債安全邊際。",
+        "note": "Brighthouse Financial 債務股本比率為0.48。Seeking Alpha文章評論公司財務狀況穩健。",
+        "definition_scope": "Brighthouse Financial, Inc. 合併基準的債務股本比率 (Debt-to-Equity ratio)。",
+        "source_quality_primary": "secondary_site",
+        "source_quality": "secondary_site",
+        "source_quality_details": [
+          "secondary_site"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": true,
+        "source_conflict_reason": "只有候選來源含官方資料，實際來源並非官方",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "unverified",
+        "metric_consistency_status": "conflict_with_missing_data",
+        "metric_consistency_reason": "本次搜尋未找到 2026Q2 官方或評級機構發布的最新明確財務槓桿百分比。",
+        "metric_consistency_missing_type": "metric_value",
+        "cross_run_consistency_status": "no_prior_same_period",
+        "calculation_basis": ""
+      },
+      {
+        "ticker": "BHFAL",
+        "metric_name": "Credit rating / outlook",
+        "metric_category": "信用評等",
+        "value": "bbb- / Under Review with Negative Implications",
+        "unit": "rating",
+        "period": "2026-07-29",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "AM Best 2026-07-29 rating action",
+        "source_url_or_name": "AM Best",
+        "source_candidates": [
+          "Brighthouse Financial Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Statutory filing",
+          "AM Best",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "negative outlook、downgrade 或 watch negative 需警戒。",
+        "priority": "P0",
+        "risk_impact": "評等惡化可能領先價格與流動性壓力。",
+        "note": "AM Best 2026-07-29 維持 Brighthouse 營運子公司 FSR A (Excellent) 與 Long-Term ICR a+ (Excellent) 為 Under Review with Negative Implications；Brighthouse Financial $375M 6.25% junior subordinated debentures due 2058 Long-Term IR 為 bbb-，同樣維持 Under Review with Negative Implications。",
+        "rejected_candidate_reason": "BHFAL AM Best official-action veto：2026-07-29 最新正式 rating action 維持 Under Review with Negative Implications；2058 6.25% junior subordinated debentures Long-Term IR=bbb-。stable outlook 候選不得採用。",
+        "rejected_candidate_value": "Under Review with Negative Implications (AM Best); BBB (IDR) with Stable outlook (Fitch)",
+        "rejected_candidate_source": "AM Best, Fitch Ratings, Brighthouse Financial Investor Relations",
+        "definition_scope": "Brighthouse Financial 6.25% junior subordinated debentures due 2058",
+        "calculation_basis": "AM Best Long-Term Issue Credit Rating / rating-action status",
+        "measurement_form": "categorical_rating",
+        "source_quality_primary": "rating_agency",
+        "source_quality": "rating_agency",
+        "source_quality_details": [
+          "rating_agency"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-07-29",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "date",
+        "metric_period_freshness": "acceptable_recent",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "definition_changed",
+        "cross_run_previous_value": "Under Review with Negative Implications",
+        "cross_run_previous_period": "2026-07-29",
+        "cross_run_previous_report_date": "20260828",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period 有前值，但 definition_scope / calculation_basis 不同，不互相覆寫。",
+        "official_source_regression_guard_version": "1.3.8",
+        "official_source_regression_guard_status": "ambest_latest_action_canonicalized",
+        "official_reference_date": "2026-07-29",
+        "official_reference_value": "bbb- / Under Review with Negative Implications",
+        "official_reference_source": "AM Best 2026-07-29 rating action",
+        "ambest_operating_fsr": "A (Excellent)",
+        "ambest_operating_icr": "a+ (Excellent)",
+        "ambest_issuer_icr": "bbb+ (Good)"
+      },
+      {
+        "ticker": "BHFAL",
+        "metric_name": "BHFAL interest payment status",
+        "metric_category": "付息狀態",
+        "value": "正常",
+        "unit": "status",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Brighthouse Financial Investor Relations",
+        "source_url_or_name": "Brighthouse Financial Q2 2026 Earnings Release",
+        "source_candidates": [
+          "Brighthouse Financial Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Statutory filing",
+          "AM Best",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "defer、suspend、delay、non-payment 立即紅燈。",
+        "priority": "P0",
+        "risk_impact": "直接影響退休現金流。",
+        "note": "公司第二季度財報和近期新聞中無任何關於BHFAL付息延遲、暫停或不支付的報告。",
+        "source_quality_primary": "official_ir",
+        "source_quality": "official_ir",
+        "source_quality_details": [
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "not_comparable",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "正常支付",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260901",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 有前值，但數值型態無法安全比較。"
+      },
+      {
+        "ticker": "BHFAL",
+        "metric_name": "Aquarian merger / change-of-control treatment",
+        "metric_category": "交易條款",
+        "value": "進行中 (預計現有債務將保持不變)",
+        "unit": "status",
+        "period": "2026-08-29",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "SeekingAlpha, Fitch Ratings",
+        "source_url_or_name": "Brighthouse Financial: Deal Fears Create Attractive Risk-Reward; Fitch Downgrades Brighthouse's Ratings; Outlook Stable",
+        "source_candidates": [
+          "Brighthouse Financial Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Statutory filing",
+          "AM Best",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "未明確說明 BHFAL 存續、掛牌、贖回或付息條款時列資料不足。",
+        "priority": "P0",
+        "risk_impact": "收購完成後可能影響掛牌、流動性與資本政策。",
+        "note": "Aquarian收購案仍待監管批准，預計於2026年完成。Fitch曾表示收購融資不涉及新增債務，現有債務和優先股預計保持不變。",
+        "source_quality_primary": "rating_agency",
+        "source_quality": "rating_agency",
+        "source_quality_details": [
+          "rating_agency"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-08-29",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "date",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "no_prior_same_period",
+        "definition_scope": "",
+        "calculation_basis": ""
+      }
+    ],
+    "missing_data": [
+      {
+        "ticker": "BHFAL",
+        "priority": "P1",
+        "missing_type": "metric_consistency",
+        "metric_name": "Financial leverage",
+        "reason": "本次搜尋未找到 2026Q2 官方或評級機構發布的最新明確財務槓桿百分比。",
+        "risk_impact": "財務槓桿數據是評估公司償債能力和次順位債安全邊際的重要指標，其缺失影響全面風險評估。",
+        "source_candidates": [
+          "SEC 10-Q",
+          "Earnings Supplement",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "acceptance_criteria": "下次需填入 value、period、source；若查無，需說明查詢過哪些來源",
+        "missing_type_original": "metric_value",
+        "conflict_with_metric_data": true,
+        "metric_value_present": "0.48",
+        "metric_source_present": "MarketBeat",
+        "metric_verification_after_reconcile": "unverified"
+      }
+    ],
+    "metric_integrity_issues": [],
+    "metric_alias_acceptances": [],
+    "metric_merge_source": "stage1_deterministic_merge",
+    "stage2_resilience_patch_version": "1.3.2",
+    "risk_profile": {
+      "profile_found": true,
+      "risk_profile_version": "1.0",
+      "issuer": "Brighthouse Financial",
+      "security_type": "Junior Subordinated Debenture",
+      "sector": "Life Insurance",
+      "core_risk": "保險公司資本適足性、控股公司流動性、收購後次順位債條款與付息能力。",
+      "required_metric_count": 7,
+      "hard_warning_keywords": [
+        "RBC ratio decline",
+        "capital deficiency",
+        "rating downgrade",
+        "interest deferral",
+        "change of control",
+        "delisting",
+        "regulatory approval delay"
+      ]
+    },
+    "dropped_old_events": [],
+    "event_date_filter_summary": {
+      "lookback_days": 14,
+      "cutoff_date": "2026-08-19",
+      "today": "2026-09-01",
+      "kept_recent": 4,
+      "kept_background": 0,
+      "kept_unknown_date": 0,
+      "dropped_old": 0
+    },
+    "metric_consistency_summary": {
+      "conflict_count": 1,
+      "conflicts": [
+        {
+          "ticker": "BHFAL",
+          "metric_name": "Financial leverage",
+          "metric_value": "0.48",
+          "missing_reason": "本次搜尋未找到 2026Q2 官方或評級機構發布的最新明確財務槓桿百分比。",
+          "verification_after_reconcile": "unverified",
+          "cross_run_consistency_status": "no_prior_same_period",
+          "definition_scope": "Brighthouse Financial, Inc. 合併基準的債務股本比率 (Debt-to-Equity ratio)。",
+          "calculation_basis": ""
+        }
+      ]
+    },
+    "market_quote": {
+      "ticker": "BHFAL",
+      "security_name_expected": "Brighthouse Financial 6.25% Junior Subordinated Debentures due 2058",
+      "exchange_expected": "NASDAQ",
+      "latest_price": 15.76,
+      "price_as_of": "2026-08-31",
+      "open": 15.649999618530273,
+      "high": 15.839900016784668,
+      "low": 15.520000457763672,
+      "volume": 38818,
+      "bid": null,
+      "ask": null,
+      "annual_interest": 1.5625,
+      "current_yield": 9.9143,
+      "quote_source": "Yahoo Finance chart (query1.finance.yahoo.com)",
+      "source_host": "query1.finance.yahoo.com",
+      "quote_status": "ok",
+      "freshness_status": "fresh",
+      "security_identity_status": "matched_symbol",
+      "source_timestamp": 1788183000,
+      "market_quote_patch_version": "1.3.7",
+      "returned_symbol": "BHFAL",
+      "currency": "USD",
+      "exchange_name": "NMS",
+      "instrument_type": "EQUITY",
+      "regular_market_price_meta": 15.76,
+      "regular_market_time_meta": 1788206401,
+      "reference_session_date": "2026-08-31",
+      "weekday_gap": 0,
+      "http_status": 200,
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/BHFAL",
+      "request_attempt": 1,
+      "attempts": [
+        {
+          "source_host": "query1.finance.yahoo.com",
+          "quote_status": "ok",
+          "freshness_status": "fresh",
+          "price_as_of": "2026-08-31",
+          "latest_price": 15.76,
+          "error": null
+        },
+        {
+          "source_host": "query2.finance.yahoo.com",
+          "quote_status": "ok",
+          "freshness_status": "fresh",
+          "price_as_of": "2026-08-31",
+          "latest_price": 15.76,
+          "error": null
+        }
+      ],
+      "source_validation": "cross_checked",
+      "source_crosscheck_price": 15.76,
+      "source_crosscheck_host": "query2.finance.yahoo.com",
+      "source_conflict_pct": 0.0
+    }
+  },
+  {
+    "target_name": "OPI",
+    "events": [
+      {
+        "date": "2026-08-31",
+        "title": "OPI空頭持倉近期下降6.19%，投資者情緒改善",
+        "impact_direction": "正向",
+        "impact_severity": 2,
+        "confidence": "中",
+        "summary_30": "OPI空頭持倉減少6.19%，顯示市場對其前景看法趨於樂觀。",
+        "links": [
+          "MarketBeat"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 1,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-25",
+        "title": "分析師評估OPI Q2財報，多空因素並存",
+        "impact_direction": "負向",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "分析師稱OPI重整後債務削減，但FFO下滑、現金流與短期債務壓力仍存。",
+        "links": [
+          "Lumida",
+          "Seeking Alpha"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 7,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-25",
+        "title": "Lumida報告分析OPI營運挑戰與重組進展",
+        "impact_direction": "中性",
+        "impact_severity": 2,
+        "confidence": "中",
+        "summary_30": "分析指出OPI面臨空置率、現金流挑戰，但也強調債務重組與資產出售的積極面。",
+        "links": [
+          "Lumida"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "unknown",
+        "event_source_quality_details": [
+          "unknown"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 7,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-24",
+        "title": "TipRanks分析OPI第二季財報電話會議，強調短期債務到期與空置壓力",
+        "impact_direction": "負向",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "Q2財報會議分析指出OPI短期債務再融資風險高，空置率壓力持續。",
+        "links": [
+          "TipRanks.com"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 8,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-24",
+        "title": "TipRanks分析OPI重整後路徑，強調短期債務及空置率壓力",
+        "impact_direction": "負向",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "文章指出OPI重整後雖減債，但短期債務集中到期與高空置率仍為挑戰。",
+        "links": [
+          "TipRanks.com"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 8,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-20",
+        "title": "Redwood Capital Management增加董事會權力與持股",
+        "impact_direction": "正向",
+        "impact_severity": 4,
+        "confidence": "高",
+        "summary_30": "Redwood Capital持股達18%，增強董事會影響力，有利重組後策略執行。",
+        "links": [
+          "SEC.gov",
+          "Stock Titan",
+          "MarketBeat"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "sec_filing",
+        "event_source_quality_details": [
+          "sec_filing",
+          "secondary_site"
+        ],
+        "event_verification_status": "verified",
+        "event_days_old": 12,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      }
+    ],
+    "綜合分析": "已排除低可信來源並合併重複事件；目前事件權重為偏負面（-3）。",
+    "事件總分": "正向6 / 負向9 / 總分-3",
+    "new_sources_found": [],
+    "event_merge_source": "stage1_deterministic_fallback",
+    "excluded_low_trust_event_count": 1,
+    "merged_duplicate_event_count": 0,
+    "event_dedup_patch_version": "1.3.3",
+    "metric_data": [
+      {
+        "ticker": "OPI",
+        "metric_name": "Occupancy rate",
+        "metric_category": "出租率",
+        "value": "77.9% (整體組合), 88.7% (同物業組合)",
+        "unit": "%",
+        "period": "2026 Q2 (截至6月30日)",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "OPI Investor Relations / SEC Filing (8-K)",
+        "source_url_or_name": "OPI Investor Relations",
+        "source_candidates": [
+          "OPI Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Bankruptcy court docket"
+        ],
+        "warning_threshold": "連續下降或低於同業顯著水準需警戒。",
+        "priority": "P0",
+        "risk_impact": "出租率下降會影響 NOI、AFFO 與償債能力。",
+        "note": "整體組合出租率偏低，顯示辦公室市場仍面臨挑戰。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "court_docket"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "consistent_with_prior_range",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "77.9% (整體投資組合); 88.7% (同物業投資組合)",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260901",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 數值表達不同，但目前值落在前一可信區間內。"
+      },
+      {
+        "ticker": "OPI",
+        "metric_name": "AFFO / FFO",
+        "metric_category": "現金流",
+        "value": "Normalized FFO (後重整期): $4.5 百萬, (重整前Q2): $15.1 百萬; FFO/股 (Q2): $-33.46",
+        "unit": "USD",
+        "period": "2026 Q2 (截至6月30日)",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "OPI Investor Relations / SEC Filing (8-K) / GuruFocus",
+        "source_url_or_name": "OPI Investor Relations",
+        "source_candidates": [
+          "OPI Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Bankruptcy court docket"
+        ],
+        "warning_threshold": "AFFO/FFO 大幅下滑或為負需警戒。",
+        "priority": "P0",
+        "risk_impact": "REIT 配息與債務服務能力核心指標。",
+        "note": "Q2 FFO/股為負值，顯示現金流狀況嚴峻，儘管重整後的Normalized FFO有所報告，但整體盈利能力仍受質疑。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "secondary_site"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "court_docket"
+        ],
+        "source_conflict_flag": true,
+        "source_conflict_reason": "實際來源混合官方與次級/AI來源",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "partially_verified",
+        "metric_consistency_status": "cross_run_conflict",
+        "metric_consistency_reason": "同 period / definition 前值=19.0，本次=Normalized FFO (後重整期): $4.5 百萬, (重整前Q2): $15.1 百萬; FFO/股 (Q2): $-33.46；區間不重疊。",
+        "cross_run_consistency_status": "value_changed_same_definition",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "19.0",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260818",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 前值=19.0，本次=Normalized FFO (後重整期): $4.5 百萬, (重整前Q2): $15.1 百萬; FFO/股 (Q2): $-33.46；區間不重疊。"
+      },
+      {
+        "ticker": "OPI",
+        "metric_name": "Debt maturity schedule",
+        "metric_category": "債務到期牆",
+        "value": "2027年1月29日到期：5.25億美元；2026年11月1日前：1500萬美元；2027年2月1日前：3000萬美元；2028年2月1日前：4500萬美元；2029年2月1日前：4500萬美元；2029年3月：3億美元；2029年12月：3.85億美元(新發行債務餘額)；2031年6月：4.2億美元。",
+        "unit": "USD/date",
+        "period": "2026Q2 (截至6月30日)",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Office Properties Income Trust Q2 2026 Financial Results / SEC 8-K / Earnings Presentation",
+        "source_url_or_name": "SEC Filing",
+        "source_candidates": [
+          "OPI Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Bankruptcy court docket"
+        ],
+        "warning_threshold": "12-24 個月內大量到期且流動性不足需紅燈。",
+        "priority": "P0",
+        "risk_impact": "再融資失敗可能導致重整或資產賤售。",
+        "note": "重組後總債務為17億美元。加權平均債務期限約三年。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "court_docket"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "partially_verified",
+        "metric_consistency_status": "cross_run_conflict",
+        "metric_consistency_reason": "同 period / definition 前值=425M (Jan 2027), 300M (Mar 2029), 385M (Dec 2029), 420M (Jun 2031)，本次=2027年1月29日到期：5.25億美元；2026年11月1日前：1500萬美元；2027年2月1日前：3000萬美元；2028年2月1日前：4500萬美元；2029年2月1日前：4500萬美元；2029年3月：3億美元；2029年12月：3.85億美元(新發行債務餘額)；2031年6月：4.2億美元。；區間不重疊。",
+        "cross_run_consistency_status": "value_changed_same_definition",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "425M (Jan 2027), 300M (Mar 2029), 385M (Dec 2029), 420M (Jun 2031)",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260817",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 前值=425M (Jan 2027), 300M (Mar 2029), 385M (Dec 2029), 420M (Jun 2031)，本次=2027年1月29日到期：5.25億美元；2026年11月1日前：1500萬美元；2027年2月1日前：3000萬美元；2028年2月1日前：4500萬美元；2029年2月1日前：4500萬美元；2029年3月：3億美元；2029年12月：3.85億美元(新發行債務餘額)；2031年6月：4.2億美元。；區間不重疊。"
+      },
+      {
+        "ticker": "OPI",
+        "metric_name": "Liquidity / cash availability",
+        "metric_category": "流動性",
+        "value": "非限制性現金: $5.1 千萬; 限制性現金: $5.3 千萬",
+        "unit": "USD",
+        "period": "2026 Q2 (截至6月30日)",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "OPI Investor Relations / SEC Filing (8-K)",
+        "source_url_or_name": "OPI Investor Relations",
+        "source_candidates": [
+          "OPI Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement",
+          "Bankruptcy court docket"
+        ],
+        "warning_threshold": "流動性不足或 covenant 壓力需警戒。",
+        "priority": "P0",
+        "risk_impact": "直接影響償債與營運彈性。",
+        "note": "相對於短期內大量到期債務，公司流動性顯得緊張。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "court_docket"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "partially_verified",
+        "metric_consistency_status": "cross_run_conflict",
+        "metric_consistency_reason": "同 period / definition 前值=51百萬美元 (非限制性現金)，本次=非限制性現金: $5.1 千萬; 限制性現金: $5.3 千萬；區間不重疊。",
+        "cross_run_consistency_status": "value_changed_same_definition",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "51百萬美元 (非限制性現金)",
+        "cross_run_previous_period": "2026Q2 (截至6月30日)",
+        "cross_run_previous_report_date": "20260828",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 前值=51百萬美元 (非限制性現金)，本次=非限制性現金: $5.1 千萬; 限制性現金: $5.3 千萬；區間不重疊。"
+      }
+    ],
+    "metric_integrity_issues": [],
+    "metric_alias_acceptances": [],
+    "metric_merge_source": "stage1_deterministic_merge",
+    "stage2_resilience_patch_version": "1.3.2",
+    "risk_profile": {
+      "profile_found": true,
+      "risk_profile_version": "1.0",
+      "issuer": "Office Properties Income Trust",
+      "security_type": "Office REIT / Post-reorganization equity",
+      "sector": "Office REIT",
+      "core_risk": "重整後辦公室 REIT 的 AFFO、出租率、債務到期與再融資壓力。",
+      "required_metric_count": 4,
+      "hard_warning_keywords": [
+        "Chapter 11",
+        "AFFO decline",
+        "occupancy decline",
+        "liquidity",
+        "debt maturity",
+        "dividend suspension"
+      ]
+    },
+    "missing_data": [
+      {
+        "ticker": "OPI",
+        "priority": "P0",
+        "missing_type": "metric_cross_run_consistency",
+        "metric_name": "AFFO / FFO",
+        "reason": "同 period / definition 前值=19.0，本次=Normalized FFO (後重整期): $4.5 百萬, (重整前Q2): $15.1 百萬; FFO/股 (Q2): $-33.46；區間不重疊。",
+        "risk_impact": "REIT 配息與債務服務能力核心指標。",
+        "previous_value": "19.0",
+        "current_value": "Normalized FFO (後重整期): $4.5 百萬, (重整前Q2): $15.1 百萬; FFO/股 (Q2): $-33.46",
+        "period": "2026 Q2 (截至6月30日)",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "acceptance_criteria": "以同一官方定義重新查核；若為不同口徑，改填不同 definition_scope / calculation_basis，不得覆寫。"
+      },
+      {
+        "ticker": "OPI",
+        "priority": "P0",
+        "missing_type": "metric_cross_run_consistency",
+        "metric_name": "Debt maturity schedule",
+        "reason": "同 period / definition 前值=425M (Jan 2027), 300M (Mar 2029), 385M (Dec 2029), 420M (Jun 2031)，本次=2027年1月29日到期：5.25億美元；2026年11月1日前：1500萬美元；2027年2月1日前：3000萬美元；2028年2月1日前：4500萬美元；2029年2月1日前：4500萬美元；2029年3月：3億美元；2029年12月：3.85億美元(新發行債務餘額)；2031年6月：4.2億美元。；區間不重疊。",
+        "risk_impact": "再融資失敗可能導致重整或資產賤售。",
+        "previous_value": "425M (Jan 2027), 300M (Mar 2029), 385M (Dec 2029), 420M (Jun 2031)",
+        "current_value": "2027年1月29日到期：5.25億美元；2026年11月1日前：1500萬美元；2027年2月1日前：3000萬美元；2028年2月1日前：4500萬美元；2029年2月1日前：4500萬美元；2029年3月：3億美元；2029年12月：3.85億美元(新發行債務餘額)；2031年6月：4.2億美元。",
+        "period": "2026Q2 (截至6月30日)",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "acceptance_criteria": "以同一官方定義重新查核；若為不同口徑，改填不同 definition_scope / calculation_basis，不得覆寫。"
+      },
+      {
+        "ticker": "OPI",
+        "priority": "P0",
+        "missing_type": "metric_cross_run_consistency",
+        "metric_name": "Liquidity / cash availability",
+        "reason": "同 period / definition 前值=51百萬美元 (非限制性現金)，本次=非限制性現金: $5.1 千萬; 限制性現金: $5.3 千萬；區間不重疊。",
+        "risk_impact": "直接影響償債與營運彈性。",
+        "previous_value": "51百萬美元 (非限制性現金)",
+        "current_value": "非限制性現金: $5.1 千萬; 限制性現金: $5.3 千萬",
+        "period": "2026 Q2 (截至6月30日)",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "acceptance_criteria": "以同一官方定義重新查核；若為不同口徑，改填不同 definition_scope / calculation_basis，不得覆寫。"
+      }
+    ],
+    "dropped_old_events": [],
+    "event_date_filter_summary": {
+      "lookback_days": 14,
+      "cutoff_date": "2026-08-19",
+      "today": "2026-09-01",
+      "kept_recent": 6,
+      "kept_background": 0,
+      "kept_unknown_date": 0,
+      "dropped_old": 0
+    },
+    "metric_consistency_summary": {
+      "conflict_count": 3,
+      "conflicts": [
+        {
+          "ticker": "OPI",
+          "metric_name": "AFFO / FFO",
+          "metric_value": "Normalized FFO (後重整期): $4.5 百萬, (重整前Q2): $15.1 百萬; FFO/股 (Q2): $-33.46",
+          "missing_reason": "同 period / definition 前值=19.0，本次=Normalized FFO (後重整期): $4.5 百萬, (重整前Q2): $15.1 百萬; FFO/股 (Q2): $-33.46；區間不重疊。",
+          "verification_after_reconcile": "partially_verified",
+          "cross_run_consistency_status": "value_changed_same_definition",
+          "definition_scope": "",
+          "calculation_basis": ""
+        },
+        {
+          "ticker": "OPI",
+          "metric_name": "Debt maturity schedule",
+          "metric_value": "2027年1月29日到期：5.25億美元；2026年11月1日前：1500萬美元；2027年2月1日前：3000萬美元；2028年2月1日前：4500萬美元；2029年2月1日前：4500萬美元；2029年3月：3億美元；2029年12月：3.85億美元(新發行債務餘額)；2031年6月：4.2億美元。",
+          "missing_reason": "同 period / definition 前值=425M (Jan 2027), 300M (Mar 2029), 385M (Dec 2029), 420M (Jun 2031)，本次=2027年1月29日到期：5.25億美元；2026年11月1日前：1500萬美元；2027年2月1日前：3000萬美元；2028年2月1日前：4500萬美元；2029年2月1日前：4500萬美元；2029年3月：3億美元；2029年12月：3.85億美元(新發行債務餘額)；2031年6月：4.2億美元。；區間不重疊。",
+          "verification_after_reconcile": "partially_verified",
+          "cross_run_consistency_status": "value_changed_same_definition",
+          "definition_scope": "",
+          "calculation_basis": ""
+        },
+        {
+          "ticker": "OPI",
+          "metric_name": "Liquidity / cash availability",
+          "metric_value": "非限制性現金: $5.1 千萬; 限制性現金: $5.3 千萬",
+          "missing_reason": "同 period / definition 前值=51百萬美元 (非限制性現金)，本次=非限制性現金: $5.1 千萬; 限制性現金: $5.3 千萬；區間不重疊。",
+          "verification_after_reconcile": "partially_verified",
+          "cross_run_consistency_status": "value_changed_same_definition",
+          "definition_scope": "",
+          "calculation_basis": ""
+        }
+      ]
+    }
+  },
+  {
+    "target_name": "AXS-E",
+    "events": [
+      {
+        "date": "2026-08-29",
+        "title": "分析師認為AXS因財報未達預期且巨災損失增加，股價可能被低估",
+        "impact_direction": "負向",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "Q2營運收入未達預期，巨災損失增加致股價下跌，但分析師認為存在被低估可能。",
+        "links": [
+          "Simply Wall St",
+          "MarketBeat",
+          "Zacks",
+          "TradingView"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 3,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-29",
+        "title": "分析師共識評級為「適度買入」",
+        "impact_direction": "正向",
+        "impact_severity": 2,
+        "confidence": "高",
+        "summary_30": "多家分析機構給予AXS「適度買入」共識評級，反映對其前景的看好。",
+        "links": [
+          "MarketBeat",
+          "Public.com",
+          "AmericanBankingNews.com"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 3,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-27",
+        "title": "AXIS Capital Q2 盈利不及預期且巨災損失增加導致股價下跌",
+        "impact_direction": "負向",
+        "impact_severity": 4,
+        "confidence": "中",
+        "summary_30": "Q2 營運收入和 EPS 不及預期，受巨災損失增加影響，股價自報告後下跌5.6%。",
+        "links": [
+          "MarketBeat",
+          "Zacks Research"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 5,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-27",
+        "title": "AXIS Capital股價在第二季度財報公布後下跌，因營運收入未達預期且巨災損失較高",
+        "impact_direction": "負向",
+        "impact_severity": 3,
+        "confidence": "高",
+        "summary_30": "AXS股價在Q2財報後下跌5.6%，因營運收入未達預期且巨災損失較高。",
+        "links": [
+          "Zacks Equity Research",
+          "MarketBeat"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 5,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-19",
+        "title": "AXIS Capital任命Jim Rhyner為北美金融線、項目及加拿大業務主管",
+        "impact_direction": "中性",
+        "impact_severity": 2,
+        "confidence": "高",
+        "summary_30": "AXIS Capital任命Jim Rhyner為北美業務主管，旨在強化保險產品組合。",
+        "links": [
+          "AXIS Capital Investor Relations",
+          "PRNewswire",
+          "AXIS Investor Relations",
+          "Reinsurance News",
+          "GlobeNewswire"
+        ],
+        "merged_duplicate_count": 3,
+        "event_source_quality": "official_ir",
+        "event_source_quality_details": [
+          "official_ir",
+          "press_release",
+          "specialized_media"
+        ],
+        "event_verification_status": "verified",
+        "event_days_old": 13,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      }
+    ],
+    "綜合分析": "已排除低可信來源並合併重複事件；目前事件權重為偏負面（-8）。",
+    "事件總分": "正向2 / 負向10 / 總分-8",
+    "new_sources_found": [],
+    "event_merge_source": "stage1_deterministic_fallback",
+    "excluded_low_trust_event_count": 0,
+    "merged_duplicate_event_count": 2,
+    "event_dedup_patch_version": "1.3.3",
+    "metric_data": [
+      {
+        "ticker": "AXS-E",
+        "metric_name": "Combined ratio",
+        "metric_category": "承保獲利",
+        "value": "93.1",
+        "unit": "%",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "AXIS Capital Investor Relations / SEC 10-Q",
+        "source_url_or_name": "AXIS Capital Investor Relations",
+        "source_candidates": [
+          "AXIS Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Release",
+          "AM Best",
+          "S&P"
+        ],
+        "warning_threshold": "高於 100% 或明顯惡化需警戒。",
+        "priority": "P1",
+        "risk_impact": "承保虧損會削弱資本與優先股安全邊際。",
+        "note": "2026年第二季度合併比率為93.1%，較2025年第二季度的88.9%有所惡化，主要由於巨災和天氣相關損失增加。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "consistent_same_definition",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "93.1",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260901",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 與前一可信值一致。"
+      },
+      {
+        "ticker": "AXS-E",
+        "metric_name": "Catastrophe losses",
+        "metric_category": "巨災損失",
+        "value": "80",
+        "unit": "USD",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "AXIS Capital Investor Relations / SEC 10-Q",
+        "source_url_or_name": "AXIS Capital Investor Relations",
+        "source_candidates": [
+          "AXIS Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Release",
+          "AM Best",
+          "S&P"
+        ],
+        "warning_threshold": "重大巨災損失超預期需警戒。",
+        "priority": "P1",
+        "risk_impact": "可能壓縮盈餘與資本。",
+        "note": "稅前巨災和天氣相關損失為80百萬美元，包括49百萬美元的自然巨災損失和31百萬美元的中東衝突相關損失。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "consistent_same_definition",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "80",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260901",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 與前一可信值一致。"
+      },
+      {
+        "ticker": "AXS-E",
+        "metric_name": "Preferred dividend status",
+        "metric_category": "配息狀態",
+        "value": "已宣告並支付",
+        "unit": "status",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "AXIS Capital Investor Relations / Market Chameleon",
+        "source_url_or_name": "AXIS Capital Investor Relations",
+        "source_candidates": [
+          "AXIS Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Release",
+          "AM Best",
+          "S&P"
+        ],
+        "warning_threshold": "defer、suspend、delay 立即紅燈。",
+        "priority": "P0",
+        "risk_impact": "直接影響退休現金流。",
+        "note": "最近一次優先股股息已於2026年7月15日支付，下次除息日預計在2026年9月底至10月初之間，目前無延遲、暫停或取消消息。",
+        "source_quality_primary": "official_ir",
+        "source_quality": "official_ir",
+        "source_quality_details": [
+          "official_ir",
+          "secondary_site"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": true,
+        "source_conflict_reason": "實際來源混合官方與次級/AI來源",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "partially_verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "not_comparable",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "正常宣告並支付",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260831",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 有前值，但數值型態無法安全比較。"
+      },
+      {
+        "ticker": "AXS-E",
+        "metric_name": "AM Best Rating",
+        "metric_category": "信用評級",
+        "value": "A (Excellent)",
+        "unit": "Rating",
+        "period": "2025 YE (Latest Affirmed: 2025-08-28)",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "AXIS Capital Holdings Limited Investor Relations / AM Best",
+        "source_url_or_name": "AXIS Investor Relations / AM Best",
+        "warning_threshold": "評級下調需警戒。",
+        "priority": "P2",
+        "risk_impact": "信用評級影響發行人融資成本及優先股感知風險。",
+        "note": "展望穩定。",
+        "metric_origin": "stage1_deterministic_merge",
+        "metric_integrity_status": "selected_from_stage1",
+        "source_quality_primary": "official_ir",
+        "source_quality": "official_ir",
+        "source_quality_details": [
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_candidate_quality_details": [
+          "unknown"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2025-08-28",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "date",
+        "metric_period_freshness": "acceptable_recent",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "no_prior_same_period",
+        "definition_scope": "",
+        "calculation_basis": ""
+      },
+      {
+        "ticker": "AXS-E",
+        "metric_name": "S&P Rating",
+        "metric_category": "信用評級",
+        "value": "A+ (Strong)",
+        "unit": "Rating",
+        "period": "2025 YE (Latest Affirmed: 2025-07-14 for A- LT)",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "AXIS Capital Holdings Limited Investor Relations / S&P Global Ratings",
+        "source_url_or_name": "AXIS Investor Relations / S&P Global Ratings",
+        "warning_threshold": "評級下調需警戒。",
+        "priority": "P2",
+        "risk_impact": "信用評級影響發行人融資成本及優先股感知風險。",
+        "note": "展望穩定。公司網站顯示A+，但S&P公開資料曾顯示A-長期信用評級。",
+        "metric_origin": "stage1_deterministic_merge",
+        "metric_integrity_status": "selected_from_stage1",
+        "source_quality_primary": "official_ir",
+        "source_quality": "official_ir",
+        "source_quality_details": [
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_candidate_quality_details": [
+          "unknown"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2025-07-14",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "date",
+        "metric_period_freshness": "acceptable_recent",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "no_prior_same_period",
+        "definition_scope": "",
+        "calculation_basis": ""
+      }
+    ],
+    "metric_integrity_issues": [],
+    "metric_alias_acceptances": [],
+    "metric_merge_source": "stage1_deterministic_merge",
+    "stage2_resilience_patch_version": "1.3.2",
+    "risk_profile": {
+      "profile_found": true,
+      "risk_profile_version": "1.0",
+      "issuer": "AXIS Capital Holdings",
+      "security_type": "Series E preferred stock",
+      "sector": "Insurance / Reinsurance",
+      "core_risk": "再保險承保週期、巨災損失、資本適足性、優先股配息。",
+      "required_metric_count": 3,
+      "hard_warning_keywords": [
+        "catastrophe loss",
+        "reserve strengthening",
+        "rating downgrade",
+        "preferred dividend"
+      ]
+    },
+    "missing_data": [],
+    "dropped_old_events": [],
+    "event_date_filter_summary": {
+      "lookback_days": 14,
+      "cutoff_date": "2026-08-19",
+      "today": "2026-09-01",
+      "kept_recent": 5,
+      "kept_background": 0,
+      "kept_unknown_date": 0,
+      "dropped_old": 0
+    },
+    "metric_consistency_summary": {
+      "conflict_count": 0,
+      "conflicts": []
+    }
+  },
+  {
+    "target_name": "F-B",
+    "events": [
+      {
+        "date": "2026-08-31",
+        "title": "福特Ranger車型因安全氣囊缺陷在南非進行召回",
+        "impact_direction": "負向",
+        "impact_severity": 3,
+        "confidence": "高",
+        "summary_30": "福特南非召回2,275輛Ranger雙廂皮卡，因安全氣囊可能未能正確展開，構成安全風險。",
+        "links": [
+          "IOL",
+          "NovaNews",
+          "Newcastillian News"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "unknown",
+        "event_source_quality_details": [
+          "unknown"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 1,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-31",
+        "title": "福特召回2275輛Ranger皮卡因安全氣囊缺陷",
+        "impact_direction": "負向",
+        "impact_severity": 3,
+        "confidence": "高",
+        "summary_30": "福特因安全氣囊缺陷召回2275輛2026-2027年Ranger皮卡，B柱飾板恐變彈射物。",
+        "links": [
+          "NovaNews",
+          "Newcastillian News",
+          "IOL"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "unknown",
+        "event_source_quality_details": [
+          "unknown"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 1,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-27",
+        "title": "福特少數Explorer車型因引擎故障風險遭召回",
+        "impact_direction": "負向",
+        "impact_severity": 2,
+        "confidence": "中",
+        "summary_30": "少數2026年Explorer SUV因引擎連桿軸承問題存在引擎完全故障風險，NHTSA宣布召回。",
+        "links": [
+          "CarBuzz"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "unknown",
+        "event_source_quality_details": [
+          "unknown"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 5,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-27",
+        "title": "福特因引擎故障風險召回少量Explorer SUV",
+        "impact_direction": "負向",
+        "impact_severity": 2,
+        "confidence": "高",
+        "summary_30": "福特召回六輛2026年Explorer SUV，因引擎連桿軸承故障恐致引擎完全失效。",
+        "links": [
+          "CarBuzz"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "unknown",
+        "event_source_quality_details": [
+          "unknown"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 5,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-27",
+        "title": "福特宣布高階人事變動：新任Ford Energy總裁並有高管退休",
+        "impact_direction": "中性",
+        "impact_severity": 1,
+        "confidence": "高",
+        "summary_30": "福特宣布任命Dave Carroll為Ford Energy總裁，Lisa Drake將於年底退休。",
+        "links": [
+          "Ford Motor Company"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "unknown",
+        "event_source_quality_details": [
+          "unknown"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 5,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-25",
+        "title": "福特預覽2.5萬美元跨界休旅車，將採油電/燃油動力",
+        "impact_direction": "正向",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "福特向經銷商預覽2029年上市、約2.5萬美元跨界SUV，提供油電及燃油選項。",
+        "links": [
+          "Electrek"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "unknown",
+        "event_source_quality_details": [
+          "unknown"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 7,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-25",
+        "title": "分析師維持福特「持有」共識，平均目標價$15.68",
+        "impact_direction": "中性",
+        "impact_severity": 2,
+        "confidence": "中",
+        "summary_30": "分析師對福特維持「持有」評級共識，平均12個月目標價$15.68，略高於近期股價。",
+        "links": [
+          "MarketBeat.com",
+          "Price Target",
+          "Public.com",
+          "Barchart.com"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 7,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-21",
+        "title": "福特Q2財報超預期並上調全年財測後獲多家投行上調評級",
+        "impact_direction": "正向",
+        "impact_severity": 4,
+        "confidence": "高",
+        "summary_30": "福特Q2調整後EBIT、自由現金流超預期並上調全年指引，獲多家投行上調評級。",
+        "links": [
+          "FinanceBuzz",
+          "StocksToTrade",
+          "Seeking Alpha"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "secondary_site",
+        "event_source_quality_details": [
+          "secondary_site"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 11,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      }
+    ],
+    "綜合分析": "Stage 2 AI 合併未完成；已由程式保留高可信 Stage 1 近期事件，事件權重偏負面（-3）。",
+    "事件總分": "正向7 / 負向10 / 總分-3",
+    "new_sources_found": [],
+    "event_merge_source": "stage1_deterministic_fallback",
+    "excluded_low_trust_event_count": 0,
+    "merged_duplicate_event_count": 0,
+    "event_dedup_patch_version": "1.3.3",
+    "metric_data": [
+      {
+        "ticker": "F-B",
+        "metric_name": "Industrial free cash flow",
+        "metric_category": "工業現金流",
+        "value": "2.1",
+        "unit": "USD",
+        "period": "2026Q2",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Ford Motor Company Q2 2026 Financial Results",
+        "source_url_or_name": "Ford Investor Relations",
+        "source_candidates": [
+          "Ford Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Ford Credit disclosures",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "FCF 轉負或全年指引大幅下修需警戒。",
+        "priority": "P0",
+        "risk_impact": "工業 FCF 是付息與維持信用評等的重要基礎。",
+        "note": "2026年全年調整後自由現金流指引上調至60-70億美元（原為50-60億美元）。",
+        "source_quality_primary": "official_ir",
+        "source_quality": "official_ir",
+        "source_quality_details": [
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "quarter",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "partially_verified",
+        "metric_consistency_status": "conflict_with_missing_data",
+        "metric_consistency_reason": "Q2 2026財報中僅提供「公司調整後自由現金流」，未明確列出「工業自由現金流」的單獨數值。",
+        "metric_consistency_missing_type": "metric_value",
+        "cross_run_consistency_status": "consistent_same_definition",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "2.1",
+        "cross_run_previous_period": "2026Q2",
+        "cross_run_previous_report_date": "20260828",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 與前一可信值一致。"
+      },
+      {
+        "ticker": "F-B",
+        "metric_name": "Ford Credit delinquencies / credit losses",
+        "metric_category": "金融子公司信用風險",
+        "value": null,
+        "unit": "%/USD",
+        "period": "latest",
+        "status": "資料不足",
+        "confidence": "低",
+        "source": "未取得",
+        "source_url_or_name": "",
+        "source_candidates": [
+          "Ford Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Ford Credit disclosures",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "逾期率或信用損失準備明顯上升需警戒。",
+        "priority": "P1",
+        "risk_impact": "汽車金融惡化可能放大景氣下行風險。",
+        "note": "量化監控框架 v1.2 已嘗試由 Stage 1 搜尋此指標；仍未取得官方數值。",
+        "source_quality_primary": "unknown",
+        "source_quality": "unknown",
+        "source_quality_details": [
+          "unknown"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": true,
+        "source_conflict_reason": "只有候選來源含官方資料，實際來源並非官方",
+        "metric_period_parsed_date": null,
+        "metric_period_parse_status": "unknown",
+        "metric_period_type": "unknown",
+        "metric_period_freshness": "unknown_period",
+        "metric_integrity_status": "semantic_rejected",
+        "metric_verification_status": "data_missing",
+        "semantic_match_status": "rejected",
+        "issuer_scope": "unknown / not explicitly Ford Credit",
+        "metric_value_type": "missing",
+        "rejected_candidate_reason": "Delinq reject-by-default：只接受明確 rate/percentage/bps；裸數字、金額或混合 %/USD 不得替代。；Delinq issuer scope 未明確指向 Ford Credit portfolio；metric_name/source_candidates 不可作為 scope 證據。",
+        "semantic_guard_version": "1.3.6",
+        "rejected_candidate_value": null,
+        "rejected_candidate_source": "未取得",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "definition_scope": "unknown / not explicitly Ford Credit",
+        "calculation_basis": "Ford Credit portfolio delinquency rate",
+        "cross_run_consistency_status": "current_missing"
+      },
+      {
+        "ticker": "F-B",
+        "metric_name": "Recall / warranty cost",
+        "metric_category": "品質成本",
+        "value": null,
+        "unit": "USD",
+        "period": "latest",
+        "status": "資料不足",
+        "confidence": "低",
+        "source": "未取得",
+        "source_url_or_name": "",
+        "source_candidates": [
+          "Ford Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Ford Credit disclosures",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "warning_threshold": "重大召回或保固成本升高需警戒。",
+        "priority": "P1",
+        "risk_impact": "品質成本會壓縮現金流與信用評等。",
+        "note": "量化監控框架 v1.2 已嘗試由 Stage 1 搜尋此指標；仍未取得官方數值。",
+        "source_quality_primary": "unknown",
+        "source_quality": "unknown",
+        "source_quality_details": [
+          "unknown"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "rating_agency"
+        ],
+        "source_conflict_flag": true,
+        "source_conflict_reason": "只有候選來源含官方資料，實際來源並非官方",
+        "metric_period_parsed_date": null,
+        "metric_period_parse_status": "unknown",
+        "metric_period_type": "unknown",
+        "metric_period_freshness": "unknown_period",
+        "metric_integrity_status": "semantic_rejected",
+        "metric_verification_status": "data_missing",
+        "semantic_match_status": "rejected",
+        "issuer_scope": "Ford Motor Company recall/warranty",
+        "metric_value_type": "missing",
+        "rejected_candidate_reason": "Recall 只接受明確 actual expense/accrual/cost 金額。；Recall 候選缺少明確 recall/warranty + actual expense/accrual/cost 語意。",
+        "semantic_guard_version": "1.3.6",
+        "rejected_candidate_value": null,
+        "rejected_candidate_source": "未取得",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "definition_scope": "Ford Motor Company recall/warranty",
+        "calculation_basis": "actual recall/warranty expense or accrual",
+        "cross_run_consistency_status": "current_missing"
+      }
+    ],
+    "missing_data": [
+      {
+        "ticker": "F-B",
+        "priority": "P1",
+        "missing_type": "metric_value",
+        "metric_name": "Ford Credit delinquencies / credit losses",
+        "reason": "Stage 1 已主動搜尋，但尚未取得官方量化數值。",
+        "risk_impact": "汽車金融惡化可能放大景氣下行風險。",
+        "source_candidates": [
+          "Ford Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Ford Credit disclosures",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "acceptance_criteria": "下次報告 metric_data 中 F-B / Ford Credit delinquencies / credit losses 應填入 value、period、source；若查無官方資料，需明確標示查詢來源與查無原因。",
+        "conflict_with_metric_data": false
+      },
+      {
+        "ticker": "F-B",
+        "priority": "P1",
+        "missing_type": "metric_value",
+        "metric_name": "Recall / warranty cost",
+        "reason": "Stage 1 已主動搜尋，但尚未取得官方量化數值。",
+        "risk_impact": "品質成本會壓縮現金流與信用評等。",
+        "source_candidates": [
+          "Ford Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Ford Credit disclosures",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "acceptance_criteria": "下次報告 metric_data 中 F-B / Recall / warranty cost 應填入 value、period、source；若查無官方資料，需明確標示查詢來源與查無原因。",
+        "conflict_with_metric_data": false
+      },
+      {
+        "ticker": "F-B",
+        "priority": "P0",
+        "missing_type": "metric_consistency",
+        "metric_name": "Industrial free cash flow",
+        "reason": "Q2 2026財報中僅提供「公司調整後自由現金流」，未明確列出「工業自由現金流」的單獨數值。",
+        "risk_impact": "工業自由現金流是判斷福特支付股息與維持信用評級的重要基礎，其缺失影響現金流健康度評估。",
+        "source_candidates": [
+          "Ford Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Earnings Supplement"
+        ],
+        "acceptance_criteria": "下次需填入 value、period、source；若查無，需說明查詢過哪些來源",
+        "missing_type_original": "metric_value",
+        "conflict_with_metric_data": true,
+        "metric_value_present": "2.1",
+        "metric_source_present": "Ford Motor Company Q2 2026 Financial Results",
+        "metric_verification_after_reconcile": "partially_verified"
+      },
+      {
+        "ticker": "F-B",
+        "priority": "P1",
+        "missing_type": "metric_semantic_rejection",
+        "metric_name": "Ford Credit delinquencies / credit losses",
+        "reason": "Delinq reject-by-default：只接受明確 rate/percentage/bps；裸數字、金額或混合 %/USD 不得替代。；Delinq issuer scope 未明確指向 Ford Credit portfolio；metric_name/source_candidates 不可作為 scope 證據。",
+        "risk_impact": "汽車金融惡化可能放大景氣下行風險。",
+        "source_candidates": [
+          "Ford Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Ford Credit disclosures",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "rejected_candidate_value": null,
+        "rejected_candidate_source": "未取得",
+        "acceptance_criteria": "F-B Delinq：只接受 Ford Credit portfolio 明確 rate/percentage/bps；F-B Recall：只接受明確 actual recall/warranty expense/accrual/cost。"
+      },
+      {
+        "ticker": "F-B",
+        "priority": "P1",
+        "missing_type": "metric_semantic_rejection",
+        "metric_name": "Recall / warranty cost",
+        "reason": "Recall 只接受明確 actual expense/accrual/cost 金額。；Recall 候選缺少明確 recall/warranty + actual expense/accrual/cost 語意。",
+        "risk_impact": "品質成本會壓縮現金流與信用評等。",
+        "source_candidates": [
+          "Ford Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Ford Credit disclosures",
+          "S&P",
+          "Moody's",
+          "Fitch"
+        ],
+        "rejected_candidate_value": null,
+        "rejected_candidate_source": "未取得",
+        "acceptance_criteria": "F-B Delinq：只接受 Ford Credit portfolio 明確 rate/percentage/bps；F-B Recall：只接受明確 actual recall/warranty expense/accrual/cost。"
+      }
+    ],
+    "metric_integrity_issues": [],
+    "metric_alias_acceptances": [],
+    "metric_merge_source": "stage1_deterministic_merge",
+    "stage2_resilience_patch_version": "1.3.2",
+    "risk_profile": {
+      "profile_found": true,
+      "risk_profile_version": "1.0",
+      "issuer": "Ford Motor Company",
+      "security_type": "Preferred / related income security",
+      "sector": "Automotive",
+      "core_risk": "Ford Credit、工業自由現金流、召回成本、EV 虧損、信用評等。",
+      "required_metric_count": 3,
+      "hard_warning_keywords": [
+        "recall",
+        "free cash flow decline",
+        "Ford Credit delinquencies",
+        "downgrade",
+        "dividend suspension"
+      ]
+    },
+    "dropped_old_events": [],
+    "event_date_filter_summary": {
+      "lookback_days": 14,
+      "cutoff_date": "2026-08-19",
+      "today": "2026-09-01",
+      "kept_recent": 8,
+      "kept_background": 0,
+      "kept_unknown_date": 0,
+      "dropped_old": 0
+    },
+    "metric_consistency_summary": {
+      "conflict_count": 1,
+      "conflicts": [
+        {
+          "ticker": "F-B",
+          "metric_name": "Industrial free cash flow",
+          "metric_value": "2.1",
+          "missing_reason": "Q2 2026財報中僅提供「公司調整後自由現金流」，未明確列出「工業自由現金流」的單獨數值。",
+          "verification_after_reconcile": "partially_verified",
+          "cross_run_consistency_status": "consistent_same_definition",
+          "definition_scope": "",
+          "calculation_basis": ""
+        }
+      ]
+    }
+  },
+  {
+    "target_name": "UZD",
+    "events": [
+      {
+        "date": "2026-08-26",
+        "title": "TDS（Array母公司）公佈2026年第二季財報，Array營收大幅成長",
+        "impact_direction": "正向",
+        "impact_severity": 4,
+        "confidence": "高",
+        "summary_30": "TDS公佈Q2財報，Array營收年增90%達54.1M美元，淨利2.811億美元，截至6/30現金達21.9億美元。",
+        "links": [
+          "Telephone and Data Systems Investor Relations",
+          "Alpha Spread"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "official_ir",
+        "event_source_quality_details": [
+          "official_ir"
+        ],
+        "event_verification_status": "verified",
+        "event_days_old": 6,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-19",
+        "title": "Array Digital Infrastructure 宣佈派發每股23美元特別股息，TDS將獲16.3億美元",
+        "impact_direction": "中性",
+        "impact_severity": 3,
+        "confidence": "中",
+        "summary_30": "Array董事會宣佈派發每股23美元特別股息，TDS預計收到約16.3億美元，同時TDS計劃贖回11億美元高成本債務。",
+        "links": [
+          "Alpha Spread"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "unknown",
+        "event_source_quality_details": [
+          "unknown"
+        ],
+        "event_verification_status": "unverified",
+        "event_days_old": 13,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      },
+      {
+        "date": "2026-08-19",
+        "title": "TDS宣布2026年第三季度股息",
+        "impact_direction": "中性",
+        "impact_severity": 1,
+        "confidence": "高",
+        "summary_30": "母公司Telephone and Data Systems (TDS) 宣布普通股及優先股的季度股息。",
+        "links": [
+          "PRNewswire",
+          "Stock Titan",
+          "TDS Investor Relations"
+        ],
+        "merged_duplicate_count": 1,
+        "event_source_quality": "official_ir",
+        "event_source_quality_details": [
+          "official_ir",
+          "press_release",
+          "secondary_site"
+        ],
+        "event_verification_status": "verified",
+        "event_days_old": 13,
+        "event_date_filter_status": "kept_recent",
+        "event_recency_type": "recent_event"
+      }
+    ],
+    "綜合分析": "Stage 2 AI 合併未完成；已由程式保留高可信 Stage 1 近期事件，事件權重偏正面（+4）。",
+    "事件總分": "正向4 / 負向0 / 總分+4",
+    "new_sources_found": [],
+    "event_merge_source": "stage1_deterministic_fallback",
+    "excluded_low_trust_event_count": 0,
+    "merged_duplicate_event_count": 0,
+    "event_dedup_patch_version": "1.3.3",
+    "metric_data": [
+      {
+        "ticker": "UZD",
+        "metric_name": "Issuer / guarantor status",
+        "metric_category": "法律實體",
+        "value": "Array Digital Infrastructure, Inc. (前身為United States Cellular Corporation)，由Telephone and Data Systems, Inc. (TDS) 控股。",
+        "unit": "status",
+        "period": "2025年8月1日 (實體變更), 2026年Q2 (最新控股資訊)",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Telephone and Data Systems (公司公告), Inside Towers, Wikipedia",
+        "source_url_or_name": "TDS Investor Relations / SEC Filings",
+        "source_candidates": [
+          "UScellular Investor Relations",
+          "TDS Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Transaction filings",
+          "Exchange notices"
+        ],
+        "warning_threshold": "發行人或擔保人不明確時列灰燈/黃燈，不可判定安全。",
+        "priority": "P0",
+        "risk_impact": "長債安全取決於法律債務人與擔保結構。",
+        "note": "United States Cellular Corporation於2025年8月1日完成無線業務出售後，更名為Array Digital Infrastructure, Inc.。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "official_ir"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "exchange_notice"
+        ],
+        "source_conflict_flag": false,
+        "source_conflict_reason": "",
+        "metric_period_parsed_date": "2025-08-01",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "date",
+        "metric_period_freshness": "acceptable_recent",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "verified",
+        "metric_consistency_status": "consistent",
+        "metric_consistency_reason": "",
+        "cross_run_consistency_status": "not_comparable",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "Array Digital Infrastructure, Inc. (原 United States Cellular Corporation)",
+        "cross_run_previous_period": "2025-08-01 (生效日)",
+        "cross_run_previous_report_date": "20260821",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 有前值，但數值型態無法安全比較。"
+      },
+      {
+        "ticker": "UZD",
+        "metric_name": "Asset sale proceeds and use of funds",
+        "metric_category": "資產出售",
+        "value": "總資產出售收入約 63.18 億美元 (T-Mobile交易4.3B，AT&T頻譜1.018B，Verizon頻譜1.0B)。T-Mobile承擔約17億美元債務，TDS計劃贖回11億美元高成本債務。Array已宣佈兩次特別股息 (每股11美元及23美元)。截至2026年Q2，現金和約當現金達21.9億美元。",
+        "unit": "USD/status",
+        "period": "T-Mobile交易(2025年8月1日完成)，AT&T交易(2024年11月7日)，Verizon交易(2024年10月18日/2026年6月1日完成)。特別股息(2026年6月/8月)。現金餘額(2026年6月30日)。",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Telephone and Data Systems (公司公告), PR Newswire, Inside Towers, Alpha Spread, MarketBeat",
+        "source_url_or_name": "TDS Investor Relations / SEC Filings",
+        "source_candidates": [
+          "UScellular Investor Relations",
+          "TDS Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Transaction filings",
+          "Exchange notices"
+        ],
+        "warning_threshold": "出售所得若大量分配給股東而非減債需警戒。",
+        "priority": "P0",
+        "risk_impact": "可能削弱債券資產覆蓋。",
+        "note": "TDS計畫贖回11億美元高成本債務預計將每年節省約8千萬美元利息。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "press_release",
+          "secondary_site"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "exchange_notice"
+        ],
+        "source_conflict_flag": true,
+        "source_conflict_reason": "實際來源混合官方與次級/AI來源",
+        "metric_period_parsed_date": "2026-06-30",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "date",
+        "metric_period_freshness": "fresh",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "partially_verified",
+        "metric_consistency_status": "cross_run_conflict",
+        "metric_consistency_reason": "同 period / definition 前值=T-Mobile交易：現金26億美元，承擔債務17億美元；Verizon頻譜：10億美元；AT&T頻譜：10億美元，本次=總資產出售收入約 63.18 億美元 (T-Mobile交易4.3B，AT&T頻譜1.018B，Verizon頻譜1.0B)。T-Mobile承擔約17億美元債務，TDS計劃贖回11億美元高成本債務。Array已宣佈兩次特別股息 (每股11美元及23美元)。截至2026年Q2，現金和約當現金達21.9億美元。；區間不重疊。",
+        "cross_run_consistency_status": "value_changed_same_definition",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "cross_run_previous_value": "T-Mobile交易：現金26億美元，承擔債務17億美元；Verizon頻譜：10億美元；AT&T頻譜：10億美元",
+        "cross_run_previous_period": "截至2026年6月30日",
+        "cross_run_previous_report_date": "20260901",
+        "cross_run_previous_definition_scope": "",
+        "cross_run_previous_calculation_basis": "",
+        "cross_run_consistency_reason": "同 period / definition 前值=T-Mobile交易：現金26億美元，承擔債務17億美元；Verizon頻譜：10億美元；AT&T頻譜：10億美元，本次=總資產出售收入約 63.18 億美元 (T-Mobile交易4.3B，AT&T頻譜1.018B，Verizon頻譜1.0B)。T-Mobile承擔約17億美元債務，TDS計劃贖回11億美元高成本債務。Array已宣佈兩次特別股息 (每股11美元及23美元)。截至2026年Q2，現金和約當現金達21.9億美元。；區間不重疊。"
+      },
+      {
+        "ticker": "UZD",
+        "metric_name": "Debt assumption / redemption status",
+        "metric_category": "債務處理",
+        "value": "T-Mobile已承擔約17億美元的UScellular債務。TDS計畫贖回約11億美元高成本債務。UZD債券發行人已從United States Cellular Corporation變更為Array Digital Infrastructure, Inc.。目前無直接關於UZD債券（6.25% NT REDEEM 01/09/2069）贖回或契約修改的消息。",
+        "unit": "status",
+        "period": "T-Mobile債務承擔 (2025年8月1日完成)。TDS贖債計劃 (2026年8月宣佈)。發行人變更 (2025年8月1日)。",
+        "status": "已取得",
+        "confidence": "高",
+        "source": "Telephone and Data Systems (公司公告), PR Newswire, Inside Towers, Alpha Spread, MarketBeat, Wikipedia",
+        "source_url_or_name": "TDS Investor Relations / SEC Filings",
+        "source_candidates": [
+          "UScellular Investor Relations",
+          "TDS Investor Relations",
+          "SEC 10-Q",
+          "SEC 10-K",
+          "Transaction filings",
+          "Exchange notices"
+        ],
+        "warning_threshold": "未說明承擔、契約修改或贖回時列資料不足。",
+        "priority": "P0",
+        "risk_impact": "直接影響未來付息與本金償付。",
+        "note": "TDS計劃贖回的11億美元高成本債務並未明確指明包含UZD債券。",
+        "source_quality_primary": "sec_filing",
+        "source_quality": "sec_filing",
+        "source_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "press_release",
+          "secondary_site"
+        ],
+        "source_candidate_quality_details": [
+          "sec_filing",
+          "official_ir",
+          "exchange_notice"
+        ],
+        "source_conflict_flag": true,
+        "source_conflict_reason": "實際來源混合官方與次級/AI來源",
+        "metric_period_parsed_date": "2025-08-01",
+        "metric_period_parse_status": "parsed",
+        "metric_period_type": "date",
+        "metric_period_freshness": "acceptable_recent",
+        "metric_integrity_status": "pass",
+        "metric_verification_status": "partially_verified",
+        "metric_consistency_status": "conflict_with_missing_data",
+        "metric_consistency_reason": "本次搜尋未找到明確說明UZD債券是否已被T-Mobile承擔或被TDS高成本債務贖回計劃包含的官方資訊。",
+        "metric_consistency_missing_type": "metric_value_specific_to_security",
+        "cross_run_consistency_status": "no_prior_same_period",
+        "definition_scope": "",
+        "calculation_basis": ""
+      }
+    ],
+    "missing_data": [
+      {
+        "ticker": "UZD",
+        "priority": "P0",
+        "missing_type": "metric_consistency",
+        "metric_name": "Debt assumption / redemption status",
+        "reason": "本次搜尋未找到明確說明UZD債券是否已被T-Mobile承擔或被TDS高成本債務贖回計劃包含的官方資訊。",
+        "risk_impact": "UZD債券的最終償付方及潛在贖回時間點不明確，影響其未來付息及本金安全判斷。",
+        "source_candidates": [
+          "SEC 8-K (T-Mobile交易相關申報)",
+          "UScellular Investor Relations (交易說明)",
+          "TDS Investor Relations (債務管理公告)",
+          "UZD債券契約文件"
+        ],
+        "acceptance_criteria": "下次需填入 value、period、source；若查無，需說明查詢過哪些來源。",
+        "missing_type_original": "metric_value_specific_to_security",
+        "conflict_with_metric_data": true,
+        "metric_value_present": "T-Mobile已承擔約17億美元的UScellular債務。TDS計畫贖回約11億美元高成本債務。UZD債券發行人已從United States Cellular Corporation變更為Array Digital Infrastructure, Inc.。目前無直接關於UZD債券（6.25% NT REDEEM 01/09/2069）贖回或契約修改的消息。",
+        "metric_source_present": "Telephone and Data Systems (公司公告), PR Newswire, Inside Towers, Alpha Spread, MarketBeat, Wikipedia",
+        "metric_verification_after_reconcile": "partially_verified"
+      },
+      {
+        "ticker": "UZD",
+        "priority": "P0",
+        "missing_type": "metric_cross_run_consistency",
+        "metric_name": "Asset sale proceeds and use of funds",
+        "reason": "同 period / definition 前值=T-Mobile交易：現金26億美元，承擔債務17億美元；Verizon頻譜：10億美元；AT&T頻譜：10億美元，本次=總資產出售收入約 63.18 億美元 (T-Mobile交易4.3B，AT&T頻譜1.018B，Verizon頻譜1.0B)。T-Mobile承擔約17億美元債務，TDS計劃贖回11億美元高成本債務。Array已宣佈兩次特別股息 (每股11美元及23美元)。截至2026年Q2，現金和約當現金達21.9億美元。；區間不重疊。",
+        "risk_impact": "可能削弱債券資產覆蓋。",
+        "previous_value": "T-Mobile交易：現金26億美元，承擔債務17億美元；Verizon頻譜：10億美元；AT&T頻譜：10億美元",
+        "current_value": "總資產出售收入約 63.18 億美元 (T-Mobile交易4.3B，AT&T頻譜1.018B，Verizon頻譜1.0B)。T-Mobile承擔約17億美元債務，TDS計劃贖回11億美元高成本債務。Array已宣佈兩次特別股息 (每股11美元及23美元)。截至2026年Q2，現金和約當現金達21.9億美元。",
+        "period": "T-Mobile交易(2025年8月1日完成)，AT&T交易(2024年11月7日)，Verizon交易(2024年10月18日/2026年6月1日完成)。特別股息(2026年6月/8月)。現金餘額(2026年6月30日)。",
+        "definition_scope": "",
+        "calculation_basis": "",
+        "acceptance_criteria": "以同一官方定義重新查核；若為不同口徑，改填不同 definition_scope / calculation_basis，不得覆寫。"
+      }
+    ],
+    "metric_integrity_issues": [],
+    "metric_alias_acceptances": [],
+    "metric_merge_source": "stage1_deterministic_merge",
+    "stage2_resilience_patch_version": "1.3.2",
+    "risk_profile": {
+      "profile_found": true,
+      "risk_profile_version": "1.0",
+      "issuer": "United States Cellular / Array Digital Infrastructure",
+      "security_type": "Long-dated note",
+      "sector": "Telecom / Infrastructure",
+      "core_risk": "發行實體、資產出售後現金流、債務承擔、特別股息與是否贖回。",
+      "required_metric_count": 3,
+      "hard_warning_keywords": [
+        "asset sale",
+        "special dividend",
+        "issuer change",
+        "delisting",
+        "redemption",
+        "debt assumption"
+      ]
+    },
+    "dropped_old_events": [],
+    "event_date_filter_summary": {
+      "lookback_days": 14,
+      "cutoff_date": "2026-08-19",
+      "today": "2026-09-01",
+      "kept_recent": 3,
+      "kept_background": 0,
+      "kept_unknown_date": 0,
+      "dropped_old": 0
+    },
+    "metric_consistency_summary": {
+      "conflict_count": 2,
+      "conflicts": [
+        {
+          "ticker": "UZD",
+          "metric_name": "Asset sale proceeds and use of funds",
+          "metric_value": "總資產出售收入約 63.18 億美元 (T-Mobile交易4.3B，AT&T頻譜1.018B，Verizon頻譜1.0B)。T-Mobile承擔約17億美元債務，TDS計劃贖回11億美元高成本債務。Array已宣佈兩次特別股息 (每股11美元及23美元)。截至2026年Q2，現金和約當現金達21.9億美元。",
+          "missing_reason": "同 period / definition 前值=T-Mobile交易：現金26億美元，承擔債務17億美元；Verizon頻譜：10億美元；AT&T頻譜：10億美元，本次=總資產出售收入約 63.18 億美元 (T-Mobile交易4.3B，AT&T頻譜1.018B，Verizon頻譜1.0B)。T-Mobile承擔約17億美元債務，TDS計劃贖回11億美元高成本債務。Array已宣佈兩次特別股息 (每股11美元及23美元)。截至2026年Q2，現金和約當現金達21.9億美元。；區間不重疊。",
+          "verification_after_reconcile": "partially_verified",
+          "cross_run_consistency_status": "value_changed_same_definition",
+          "definition_scope": "",
+          "calculation_basis": ""
+        },
+        {
+          "ticker": "UZD",
+          "metric_name": "Debt assumption / redemption status",
+          "metric_value": "T-Mobile已承擔約17億美元的UScellular債務。TDS計畫贖回約11億美元高成本債務。UZD債券發行人已從United States Cellular Corporation變更為Array Digital Infrastructure, Inc.。目前無直接關於UZD債券（6.25% NT REDEEM 01/09/2069）贖回或契約修改的消息。",
+          "missing_reason": "本次搜尋未找到明確說明UZD債券是否已被T-Mobile承擔或被TDS高成本債務贖回計劃包含的官方資訊。",
+          "verification_after_reconcile": "partially_verified",
+          "cross_run_consistency_status": "no_prior_same_period",
+          "definition_scope": "",
+          "calculation_basis": ""
+        }
+      ]
+    },
+    "market_quote": {
+      "ticker": "UZD",
+      "security_name_expected": "Array Digital Infrastructure / former United States Cellular 6.25% Senior Notes due 2069",
+      "exchange_expected": "NYSE",
+      "latest_price": 19.0,
+      "price_as_of": "2026-08-31",
+      "open": 18.68000030517578,
+      "high": 19.020000457763672,
+      "low": 18.795000076293945,
+      "volume": 24446,
+      "bid": null,
+      "ask": null,
+      "annual_interest": 1.5625,
+      "current_yield": 8.2237,
+      "quote_source": "Yahoo Finance chart (query1.finance.yahoo.com)",
+      "source_host": "query1.finance.yahoo.com",
+      "quote_status": "ok",
+      "freshness_status": "fresh",
+      "security_identity_status": "matched_symbol",
+      "source_timestamp": 1788183000,
+      "market_quote_patch_version": "1.3.7",
+      "returned_symbol": "UZD",
+      "currency": "USD",
+      "exchange_name": "NYQ",
+      "instrument_type": "EQUITY",
+      "regular_market_price_meta": 19.0,
+      "regular_market_time_meta": 1788206394,
+      "reference_session_date": "2026-08-31",
+      "weekday_gap": 0,
+      "http_status": 200,
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/UZD",
+      "request_attempt": 1,
+      "attempts": [
+        {
+          "source_host": "query1.finance.yahoo.com",
+          "quote_status": "ok",
+          "freshness_status": "fresh",
+          "price_as_of": "2026-08-31",
+          "latest_price": 19.0,
+          "error": null
+        },
+        {
+          "source_host": "query2.finance.yahoo.com",
+          "quote_status": "ok",
+          "freshness_status": "fresh",
+          "price_as_of": "2026-08-31",
+          "latest_price": 19.0,
+          "error": null
+        }
+      ],
+      "source_validation": "cross_checked",
+      "source_crosscheck_price": 19.0,
+      "source_crosscheck_host": "query2.finance.yahoo.com",
+      "source_conflict_pct": 0.0
+    }
+  }
+]
+```
