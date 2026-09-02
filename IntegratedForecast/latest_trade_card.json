@@ -3,45 +3,16 @@
     "trade_card_schema_version": "integratedforecast_trade_card_chain_v1",
     "version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
     "current_rule_family": "v7.25k3.4h7",
-    "updated_at": "2026-09-02T08:32:50+08:00",
+    "updated_at": "2026-09-02T11:37:38",
     "timezone": "Asia/Taipei",
     "state_writer": "IntegratedForecast.py",
-    "prior_state_source": "github_exact_path",
+    "prior_state_source": "local_runtime_state",
     "description": "跨交易日決策狀態。IntegratedForecast只刷新model_update；effective_card由盤前分析依最新證據重新驗證後更新。",
     "cards": {
         "2382": {
             "stock_code": "2382",
             "stock_name": "廣達",
             "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-09-02T08:32:50+08:00",
-                "effective_for_date": "2026-09-02",
-                "position_shares": 200,
-                "decision": "hold_below_target_revalidation_risk_first_no_sell",
-                "source": "台股盤前分析_h7_premarket_effective_card_merge_v1",
-                "levels": {
-                    "target_revalidation": 424.03,
-                    "risk_advisory": 315.5
-                },
-                "rules": [
-                    {
-                        "id": "current_final_hold",
-                        "condition": "target_revalidation_triggered=false and sell_now_permission=false",
-                        "action": "hold_200_no_add",
-                        "automatic_sell": false,
-                        "text": "未達424.03 target revalidation；risk-first仍有效但目前沒有deterministic executable SELL，續抱200股且不加碼。"
-                    },
-                    {
-                        "id": "profit_exit_inactive",
-                        "condition": "profit_exit.eligible=false and profit_exit.state=Inactive",
-                        "action": "no_profit_exit_sell",
-                        "automatic_sell": false,
-                        "text": "Profit-Exit仍Inactive；315.5僅為deterministic風險/Trailing reference，不由effective card自行產生SELL。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
-            "previous_effective_card": {
                 "card_schema_version": "premarket_trade_card_v1",
                 "formed_at": "2026-08-13T08:30:51+08:00",
                 "effective_for_date": "2026-08-13",
@@ -84,65 +55,22 @@
                 ],
                 "dynamic_revalidation_required": true
             },
-            "history_tail": [
-                {
-                    "card_schema_version": "premarket_trade_card_v1",
-                    "formed_at": "2026-08-13T08:30:51+08:00",
-                    "effective_for_date": "2026-08-13",
-                    "position_shares": 200,
-                    "decision": "hold_below_profit_target",
-                    "source": "IntegratedForecast_v7.25k3.2_20260813",
-                    "levels": {
-                        "profit_target": 424.03,
-                        "gap_support": 315.5,
-                        "gap_midpoint": 316.25,
-                        "gap_mm_target": 353.5
-                    },
-                    "rules": [
-                        {
-                            "id": "hold_below_target",
-                            "condition": "price < 424.03 and no risk-first trigger",
-                            "action": "hold_200",
-                            "text": "未達424.03基本獲利門檻且未出現risk-first觸發：續抱200股。"
-                        },
-                        {
-                            "id": "gap_support_alert",
-                            "condition": "close < 315.5 or 316.25 gap midpoint lost and cannot recover",
-                            "action": "raise_alert",
-                            "text": "315.5～316.25為目前缺口支撐/失效觀察區；失守則降低波段信心。"
-                        },
-                        {
-                            "id": "gap_mm_reference",
-                            "condition": "price approaches 353.5",
-                            "action": "observe_reaction",
-                            "automatic_sell": false,
-                            "text": "353.5為目前缺口MM參考，不是自動賣出價。"
-                        },
-                        {
-                            "id": "profit_target_permission",
-                            "condition": "price >= 424.03",
-                            "action": "open_sell_evaluation",
-                            "automatic_sell": false,
-                            "text": "424.03達基本獲利門檻後開啟賣出評估。"
-                        }
-                    ],
-                    "dynamic_revalidation_required": true
-                }
-            ],
+            "previous_effective_card": null,
+            "history_tail": [],
             "model_update": {
                 "stock_code": "2382",
                 "position_shares": 200,
                 "position_avg_cost": 353.355,
                 "model_version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "current_rule_family": "v7.25k3.4h7",
-                "generated_at": "2026-09-02T08:14:40",
+                "generated_at": "2026-09-02T11:37:38",
                 "actual_latest_trade_date": "2026-09-01",
                 "expected_latest_trade_date": "2026-09-01",
                 "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
                 "price_data_source": "FUGLEAPI",
                 "price_data_is_stale": false,
-                "current_close": 342.0,
-                "portfolio_unrealized_pnl_pct": -3.21,
+                "current_close": 336.5,
+                "portfolio_unrealized_pnl_pct": -4.77,
                 "target_criterion": "遵守價格行為",
                 "target_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
                 "target_goal_status": "configured",
@@ -222,51 +150,211 @@
                 "target_review_trigger_reached": null,
                 "target_review_action": null,
                 "intraday_policy_version": "intraday_live_overlay_v1.4",
-                "market_phase": "pre_market",
-                "current_market_price": 342.0,
-                "current_price_basis": "completed_daily_close",
-                "current_price_as_of": "2026-09-01",
+                "market_phase": "regular_intraday_window",
+                "current_market_price": 336.5,
+                "current_price_basis": "fugle_intraday_last_trade",
+                "current_price_as_of": "2026-09-02T11:35:32",
                 "daily_completed_close": 342.0,
                 "daily_completed_trade_date": "2026-09-01",
-                "intraday_price_override_applied": false,
-                "intraday_execution_reference_allowed": false,
+                "intraday_price_override_applied": true,
+                "intraday_execution_reference_allowed": true,
                 "intraday_behavior_summary": {
-                    "freshness_status": null,
-                    "freshness_age_seconds": null,
-                    "vs_previous_close_pct": null,
-                    "session_return_from_open_pct": null,
-                    "distance_to_session_avg_pct": null,
-                    "session_range_position_0_1": null,
-                    "intraday_5m_trend": null,
-                    "last_15m_return_pct": null,
-                    "opening_range_status": null,
-                    "best_bid": null,
-                    "best_ask": null,
-                    "bid_ask_spread_pct": null,
+                    "freshness_status": "fresh",
+                    "freshness_age_seconds": 0,
+                    "vs_previous_close_pct": -1.608,
+                    "session_return_from_open_pct": -0.444,
+                    "distance_to_session_avg_pct": -0.461,
+                    "session_range_position_0_1": 0.091,
+                    "intraday_5m_trend": "sideways",
+                    "last_15m_return_pct": -0.148,
+                    "opening_range_status": "below_opening_range",
+                    "best_bid": 336.5,
+                    "best_ask": 337.0,
+                    "bid_ask_spread_pct": 0.1485,
                     "trading_halt": null,
-                    "is_trial": null
+                    "is_trial": false
                 },
                 "intraday_market_snapshot": {
                     "intraday_policy_version": "intraday_live_overlay_v1.4",
-                    "market_phase_window": "pre_market",
+                    "market_phase_window": "regular_intraday_window",
                     "market_board": "LISTED_OR_OTC",
                     "is_emerging": false,
                     "scheduled_open_time": "09:00",
                     "scheduled_close_time": "13:30",
                     "delayed_close_supported_until": "13:33",
                     "session_date": "2026-09-02",
-                    "evaluated_at": "2026-09-02T08:12:20",
-                    "intraday_fetch_expected": false,
-                    "quote_usage_mode": "not_applicable",
+                    "evaluated_at": "2026-09-02T11:35:32",
+                    "intraday_fetch_expected": true,
+                    "quote_usage_mode": "live_intraday",
                     "price_limit_applicable": true,
                     "legal_price_limit_rule": "listed_otc_reference_price_limit_rules_apply",
                     "source": "FUGLE_MARKETDATA",
-                    "fetch_status": "not_requested",
-                    "quote_status": "not_requested",
-                    "candles_status": "not_requested",
+                    "fetch_status": "live_intraday_ok",
+                    "quote_status": "ok",
+                    "candles_status": "ok",
                     "current_session_bar_complete": false,
                     "daily_pa_uses_completed_bars_only": true,
-                    "candle_timeframe_minutes": 5
+                    "candle_timeframe_minutes": 5,
+                    "quote_date": "2026-09-02",
+                    "exchange": "TWSE",
+                    "market": "TSE",
+                    "symbol": "2382",
+                    "name": "廣達",
+                    "reference_price": 342.0,
+                    "previous_close": 342.0,
+                    "open_price": 338.0,
+                    "high_price": 341.5,
+                    "low_price": 336.0,
+                    "last_trade_price": 336.5,
+                    "last_indicative_price": 336.5,
+                    "avg_price": 338.06,
+                    "change": -5.5,
+                    "change_percent": -1.61,
+                    "amplitude": 1.61,
+                    "best_bid": 336.5,
+                    "best_ask": 337.0,
+                    "bid_ask_spread": 0.5,
+                    "bid_ask_spread_pct": 0.1485,
+                    "trade_volume": 4662.0,
+                    "trade_value": 1576054500.0,
+                    "transaction_count": 1284.0,
+                    "trade_volume_at_bid": 2872.0,
+                    "trade_volume_at_ask": 1546.0,
+                    "last_trade_time": "2026-09-02T11:35:32",
+                    "freshness_age_seconds": 0,
+                    "freshness_status": "fresh",
+                    "is_usable_for_current_price": true,
+                    "post_close_same_day_quote_used": false,
+                    "is_trial": false,
+                    "is_open": null,
+                    "is_close": null,
+                    "is_delayed_open": false,
+                    "is_delayed_close": false,
+                    "trading_halt": null,
+                    "is_limit_up_price": null,
+                    "is_limit_down_price": null,
+                    "vs_previous_close_pct": -1.608,
+                    "session_return_from_open_pct": -0.444,
+                    "distance_to_session_avg_pct": -0.461,
+                    "session_range_position_0_1": 0.091,
+                    "candles_count": 32,
+                    "candle_volume_unit": "lots",
+                    "last_15m_return_pct": -0.148,
+                    "intraday_5m_trend": "sideways",
+                    "intraday_5m_slope_per_bar": -0.1143,
+                    "opening_range_15m_high": 341.5,
+                    "opening_range_15m_low": 337.0,
+                    "opening_range_status": "below_opening_range",
+                    "candles_tail": [
+                        {
+                            "date": "2026-09-02T10:40:00+0800",
+                            "open": 338.0,
+                            "high": 339.0,
+                            "low": 337.5,
+                            "close": 338.5,
+                            "volume": 154,
+                            "average": 338.26
+                        },
+                        {
+                            "date": "2026-09-02T10:45:00+0800",
+                            "open": 338.5,
+                            "high": 338.5,
+                            "low": 338.0,
+                            "close": 338.0,
+                            "volume": 70,
+                            "average": 338.27
+                        },
+                        {
+                            "date": "2026-09-02T10:50:00+0800",
+                            "open": 337.5,
+                            "high": 338.0,
+                            "low": 337.0,
+                            "close": 337.0,
+                            "volume": 125,
+                            "average": 338.25
+                        },
+                        {
+                            "date": "2026-09-02T10:55:00+0800",
+                            "open": 337.5,
+                            "high": 337.5,
+                            "low": 337.0,
+                            "close": 337.0,
+                            "volume": 57,
+                            "average": 338.23
+                        },
+                        {
+                            "date": "2026-09-02T11:00:00+0800",
+                            "open": 337.0,
+                            "high": 337.5,
+                            "low": 337.0,
+                            "close": 337.0,
+                            "volume": 105,
+                            "average": 338.2
+                        },
+                        {
+                            "date": "2026-09-02T11:05:00+0800",
+                            "open": 336.5,
+                            "high": 337.0,
+                            "low": 336.5,
+                            "close": 336.5,
+                            "volume": 81,
+                            "average": 338.17
+                        },
+                        {
+                            "date": "2026-09-02T11:10:00+0800",
+                            "open": 336.5,
+                            "high": 337.0,
+                            "low": 336.5,
+                            "close": 337.0,
+                            "volume": 107,
+                            "average": 338.14
+                        },
+                        {
+                            "date": "2026-09-02T11:15:00+0800",
+                            "open": 337.0,
+                            "high": 337.5,
+                            "low": 337.0,
+                            "close": 337.0,
+                            "volume": 53,
+                            "average": 338.13
+                        },
+                        {
+                            "date": "2026-09-02T11:20:00+0800",
+                            "open": 337.0,
+                            "high": 337.5,
+                            "low": 337.0,
+                            "close": 337.0,
+                            "volume": 61,
+                            "average": 338.11
+                        },
+                        {
+                            "date": "2026-09-02T11:25:00+0800",
+                            "open": 337.5,
+                            "high": 337.5,
+                            "low": 337.0,
+                            "close": 337.0,
+                            "volume": 62,
+                            "average": 338.1
+                        },
+                        {
+                            "date": "2026-09-02T11:30:00+0800",
+                            "open": 337.0,
+                            "high": 337.0,
+                            "low": 336.5,
+                            "close": 336.5,
+                            "volume": 102,
+                            "average": 338.07
+                        },
+                        {
+                            "date": "2026-09-02T11:35:00+0800",
+                            "open": 336.5,
+                            "high": 336.5,
+                            "low": 336.5,
+                            "close": 336.5,
+                            "volume": 14,
+                            "average": 338.06
+                        }
+                    ]
                 },
                 "market_price_limit_applicable": true,
                 "legal_price_limit_rule": "listed_otc_reference_price_limit_rules_apply",
@@ -347,41 +435,13 @@
                     }
                 }
             },
-            "continuity_status": "effective_card_refreshed_by_premarket_merge",
+            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
             "card_role": "active_holding"
         },
         "7917": {
             "stock_code": "7917",
             "stock_name": "源傑科技",
             "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-09-02T08:32:50+08:00",
-                "effective_for_date": "2026-09-02",
-                "position_shares": 1000,
-                "decision": "hold_for_target_objective_review_pa_profit_exit_advisory_only",
-                "source": "台股盤前分析_h7_premarket_effective_card_merge_v1",
-                "levels": {
-                    "target_review_trigger": 1000.0
-                },
-                "rules": [
-                    {
-                        "id": "target_priority_hold",
-                        "condition": "price <= 1000 and target objective unchanged",
-                        "action": "hold_1000",
-                        "automatic_sell": false,
-                        "text": "依Local DB target objective，價格未高於1,000前持有；PA與Profit-Exit不得覆蓋target-priority。"
-                    },
-                    {
-                        "id": "target_review_trigger",
-                        "condition": "price > 1000",
-                        "action": "enter_sell_reevaluation_only_not_automatic_order",
-                        "automatic_sell": false,
-                        "text": "價格>1,000只進入賣出重新評估，不是自動賣出。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
-            "previous_effective_card": {
                 "card_schema_version": "premarket_trade_card_v1",
                 "formed_at": "2026-08-13T08:30:51+08:00",
                 "effective_for_date": "2026-08-13",
@@ -417,58 +477,22 @@
                 ],
                 "dynamic_revalidation_required": true
             },
-            "history_tail": [
-                {
-                    "card_schema_version": "premarket_trade_card_v1",
-                    "formed_at": "2026-08-13T08:30:51+08:00",
-                    "effective_for_date": "2026-08-13",
-                    "position_shares": 1000,
-                    "decision": "hold_for_target_objective_review_with_pa_advisory_only",
-                    "source": "Portfolio_target_priority_with_k3.2_semantic_correction",
-                    "levels": {
-                        "target_review_trigger": 1000.0,
-                        "down_gap_upper": 740.0,
-                        "down_gap_midpoint": 739.0
-                    },
-                    "rules": [
-                        {
-                            "id": "target_priority_hold",
-                            "condition": "price <= 1000",
-                            "action": "hold_1000_unless_user_changes_objective",
-                            "text": "依Portfolio準則，價格未高於1,000前以持有為主；PA僅作風險警示。"
-                        },
-                        {
-                            "id": "target_review_trigger",
-                            "condition": "price > 1000",
-                            "action": "reevaluate_sale_not_automatic_sell",
-                            "automatic_sell": false,
-                            "text": "價格>1,000只進入賣出重新評估，不是自動賣出。"
-                        },
-                        {
-                            "id": "pa_risk_advisory",
-                            "condition": "price structure weakens",
-                            "action": "risk_warning_only",
-                            "automatic_sell": false,
-                            "text": "PA結構只作風險警示，不覆蓋target-priority。"
-                        }
-                    ],
-                    "dynamic_revalidation_required": true
-                }
-            ],
+            "previous_effective_card": null,
+            "history_tail": [],
             "model_update": {
                 "stock_code": "7917",
                 "position_shares": 1000,
                 "position_avg_cost": 700.998,
                 "model_version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "current_rule_family": "v7.25k3.4h7",
-                "generated_at": "2026-09-02T08:14:40",
+                "generated_at": "2026-09-02T11:37:38",
                 "actual_latest_trade_date": "2026-09-01",
                 "expected_latest_trade_date": "2026-09-01",
                 "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
                 "price_data_source": "FUGLEAPI",
                 "price_data_is_stale": false,
-                "current_close": 678.0,
-                "portfolio_unrealized_pnl_pct": -3.28,
+                "current_close": 657.0,
+                "portfolio_unrealized_pnl_pct": -6.28,
                 "target_criterion": "以標的目標優先，價格行為僅作風險警示",
                 "target_objective": "價格 > 1000 再評估賣出",
                 "target_goal_status": "configured",
@@ -552,51 +576,211 @@
                 "target_review_trigger_reached": false,
                 "target_review_action": "wait_until_target_review_trigger",
                 "intraday_policy_version": "intraday_live_overlay_v1.4",
-                "market_phase": "pre_market",
-                "current_market_price": 678.0,
-                "current_price_basis": "completed_daily_close",
-                "current_price_as_of": "2026-09-01",
+                "market_phase": "regular_intraday_window",
+                "current_market_price": 657.0,
+                "current_price_basis": "fugle_intraday_last_trade",
+                "current_price_as_of": "2026-09-02T11:36:17",
                 "daily_completed_close": 678.0,
                 "daily_completed_trade_date": "2026-09-01",
-                "intraday_price_override_applied": false,
-                "intraday_execution_reference_allowed": false,
+                "intraday_price_override_applied": true,
+                "intraday_execution_reference_allowed": true,
                 "intraday_behavior_summary": {
-                    "freshness_status": null,
-                    "freshness_age_seconds": null,
-                    "vs_previous_close_pct": null,
-                    "session_return_from_open_pct": null,
-                    "distance_to_session_avg_pct": null,
-                    "session_range_position_0_1": null,
-                    "intraday_5m_trend": null,
-                    "last_15m_return_pct": null,
-                    "opening_range_status": null,
-                    "best_bid": null,
-                    "best_ask": null,
-                    "bid_ask_spread_pct": null,
+                    "freshness_status": "fresh",
+                    "freshness_age_seconds": 12,
+                    "vs_previous_close_pct": -3.097,
+                    "session_return_from_open_pct": 0.305,
+                    "distance_to_session_avg_pct": 0.866,
+                    "session_range_position_0_1": 0.583,
+                    "intraday_5m_trend": "down",
+                    "last_15m_return_pct": -1.794,
+                    "opening_range_status": "inside_opening_range",
+                    "best_bid": 649.0,
+                    "best_ask": 657.0,
+                    "bid_ask_spread_pct": 1.2251,
                     "trading_halt": null,
-                    "is_trial": null
+                    "is_trial": false
                 },
                 "intraday_market_snapshot": {
                     "intraday_policy_version": "intraday_live_overlay_v1.4",
-                    "market_phase_window": "pre_market",
+                    "market_phase_window": "regular_intraday_window",
                     "market_board": "EMERGING",
                     "is_emerging": true,
                     "scheduled_open_time": "09:00",
                     "scheduled_close_time": "15:00",
                     "delayed_close_supported_until": null,
                     "session_date": "2026-09-02",
-                    "evaluated_at": "2026-09-02T08:13:29",
-                    "intraday_fetch_expected": false,
-                    "quote_usage_mode": "not_applicable",
+                    "evaluated_at": "2026-09-02T11:36:30",
+                    "intraday_fetch_expected": true,
+                    "quote_usage_mode": "live_intraday",
                     "price_limit_applicable": false,
                     "legal_price_limit_rule": "no_daily_price_limit",
                     "source": "FUGLE_MARKETDATA",
-                    "fetch_status": "not_requested",
-                    "quote_status": "not_requested",
-                    "candles_status": "not_requested",
+                    "fetch_status": "live_intraday_ok",
+                    "quote_status": "ok",
+                    "candles_status": "ok",
                     "current_session_bar_complete": false,
                     "daily_pa_uses_completed_bars_only": true,
-                    "candle_timeframe_minutes": 5
+                    "candle_timeframe_minutes": 5,
+                    "quote_date": "2026-09-02",
+                    "exchange": "TPEx",
+                    "market": "ESB",
+                    "symbol": "7917",
+                    "name": "源傑科技",
+                    "reference_price": 651.04,
+                    "previous_close": 678.0,
+                    "open_price": 655.0,
+                    "high_price": 677.0,
+                    "low_price": 629.0,
+                    "last_trade_price": 657.0,
+                    "last_indicative_price": 657.0,
+                    "avg_price": 651.36,
+                    "change": 5.96,
+                    "change_percent": 0.92,
+                    "amplitude": 7.37,
+                    "best_bid": 649.0,
+                    "best_ask": 657.0,
+                    "bid_ask_spread": 8.0,
+                    "bid_ask_spread_pct": 1.2251,
+                    "trade_volume": 313925.0,
+                    "trade_value": 204478533.0,
+                    "transaction_count": 371.0,
+                    "trade_volume_at_bid": 168745.0,
+                    "trade_volume_at_ask": 142985.0,
+                    "last_trade_time": "2026-09-02T11:36:17",
+                    "freshness_age_seconds": 12,
+                    "freshness_status": "fresh",
+                    "is_usable_for_current_price": true,
+                    "post_close_same_day_quote_used": false,
+                    "is_trial": false,
+                    "is_open": null,
+                    "is_close": null,
+                    "is_delayed_open": false,
+                    "is_delayed_close": false,
+                    "trading_halt": null,
+                    "is_limit_up_price": null,
+                    "is_limit_down_price": null,
+                    "vs_previous_close_pct": -3.097,
+                    "session_return_from_open_pct": 0.305,
+                    "distance_to_session_avg_pct": 0.866,
+                    "session_range_position_0_1": 0.583,
+                    "candles_count": 31,
+                    "candle_volume_unit": "shares",
+                    "last_15m_return_pct": -1.794,
+                    "intraday_5m_trend": "down",
+                    "intraday_5m_slope_per_bar": -1.3429,
+                    "opening_range_15m_high": 677.0,
+                    "opening_range_15m_low": 629.0,
+                    "opening_range_status": "inside_opening_range",
+                    "candles_tail": [
+                        {
+                            "date": "2026-09-02T10:35:00+0800",
+                            "open": 645,
+                            "high": 645,
+                            "low": 645,
+                            "close": 645,
+                            "volume": 1025,
+                            "average": 647.05
+                        },
+                        {
+                            "date": "2026-09-02T10:40:00+0800",
+                            "open": 645,
+                            "high": 653,
+                            "low": 645,
+                            "close": 653,
+                            "volume": 1045,
+                            "average": 647.08
+                        },
+                        {
+                            "date": "2026-09-02T10:45:00+0800",
+                            "open": 653,
+                            "high": 654,
+                            "low": 650,
+                            "close": 654,
+                            "volume": 3845,
+                            "average": 647.17
+                        },
+                        {
+                            "date": "2026-09-02T10:50:00+0800",
+                            "open": 651,
+                            "high": 663,
+                            "low": 651,
+                            "close": 663,
+                            "volume": 4969,
+                            "average": 647.32
+                        },
+                        {
+                            "date": "2026-09-02T10:55:00+0800",
+                            "open": 663,
+                            "high": 677,
+                            "low": 660,
+                            "close": 666,
+                            "volume": 24353,
+                            "average": 648.79
+                        },
+                        {
+                            "date": "2026-09-02T11:00:00+0800",
+                            "open": 677,
+                            "high": 677,
+                            "low": 665,
+                            "close": 670,
+                            "volume": 28473,
+                            "average": 650.75
+                        },
+                        {
+                            "date": "2026-09-02T11:05:00+0800",
+                            "open": 670,
+                            "high": 670,
+                            "low": 661,
+                            "close": 661,
+                            "volume": 12046,
+                            "average": 651.22
+                        },
+                        {
+                            "date": "2026-09-02T11:10:00+0800",
+                            "open": 666,
+                            "high": 666,
+                            "low": 660,
+                            "close": 660,
+                            "volume": 211,
+                            "average": 651.23
+                        },
+                        {
+                            "date": "2026-09-02T11:15:00+0800",
+                            "open": 659,
+                            "high": 669,
+                            "low": 659,
+                            "close": 669,
+                            "volume": 1001,
+                            "average": 651.26
+                        },
+                        {
+                            "date": "2026-09-02T11:20:00+0800",
+                            "open": 669,
+                            "high": 669,
+                            "low": 660,
+                            "close": 660,
+                            "volume": 1186,
+                            "average": 651.29
+                        },
+                        {
+                            "date": "2026-09-02T11:30:00+0800",
+                            "open": 660,
+                            "high": 660,
+                            "low": 654,
+                            "close": 654,
+                            "volume": 6612,
+                            "average": 651.36
+                        },
+                        {
+                            "date": "2026-09-02T11:35:00+0800",
+                            "open": 657,
+                            "high": 657,
+                            "low": 657,
+                            "close": 657,
+                            "volume": 20,
+                            "average": 651.36
+                        }
+                    ]
                 },
                 "market_price_limit_applicable": false,
                 "legal_price_limit_rule": "no_daily_price_limit",
@@ -682,7 +866,7 @@
                     }
                 }
             },
-            "continuity_status": "effective_card_refreshed_by_premarket_merge",
+            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
             "card_role": "active_holding"
         }
     },
@@ -695,7 +879,7 @@
             "stock_name": "聯亞",
             "effective_entry_card": {
                 "card_schema_version": "watchlist_candidate_entry_card_v1",
-                "formed_at": "2026-09-02T08:14:40+08:00",
+                "formed_at": "2026-09-02T11:37:38+08:00",
                 "effective_for_date": "2026-09-02",
                 "source": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "analysis_role": "watchlist_candidate",
@@ -738,7 +922,7 @@
                 },
                 "expected_rr_or_rr_band": {
                     "status": "available",
-                    "rr": 0.74,
+                    "rr": 0.55,
                     "target": 3767.5,
                     "target_sources": [
                         "gap_MM_Target_Up",
@@ -759,12 +943,12 @@
             "stock_name": "台半",
             "effective_entry_card": {
                 "card_schema_version": "watchlist_candidate_entry_card_v1",
-                "formed_at": "2026-09-02T08:14:40+08:00",
+                "formed_at": "2026-09-02T11:37:38+08:00",
                 "effective_for_date": "2026-09-02",
                 "source": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "analysis_role": "watchlist_candidate",
                 "current_entry_state": "EarlyUptrendCandidate",
-                "early_reversal_score": 78.0,
+                "early_reversal_score": 81.0,
                 "starter_buy_permission": false,
                 "starter_buy_permission_basis": {
                     "score_gte_70": true,
@@ -787,7 +971,7 @@
                 "system_dynamic_entry_zone": {
                     "status": "available",
                     "lower_price": 89.8221,
-                    "upper_price": 93.0138,
+                    "upper_price": 92.8,
                     "reference_price": 91.19,
                     "sources": [
                         "ema_20"
@@ -801,7 +985,7 @@
                 },
                 "expected_rr_or_rr_band": {
                     "status": "available",
-                    "rr": 1.63,
+                    "rr": 3.47,
                     "target": 104.72,
                     "target_sources": [
                         "measured_move_target_up",
@@ -821,17 +1005,17 @@
             "stock_name": "環球晶",
             "effective_entry_card": {
                 "card_schema_version": "watchlist_candidate_entry_card_v1",
-                "formed_at": "2026-09-02T08:14:40+08:00",
+                "formed_at": "2026-09-02T11:37:38+08:00",
                 "effective_for_date": "2026-09-02",
                 "source": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "analysis_role": "watchlist_candidate",
                 "current_entry_state": "ReversalAttempt",
-                "early_reversal_score": 55.0,
+                "early_reversal_score": 45.0,
                 "starter_buy_permission": false,
                 "starter_buy_permission_basis": {
                     "score_gte_70": false,
                     "reversal_ok": false,
-                    "trend_ok": true,
+                    "trend_ok": false,
                     "hard_zone_ok": true,
                     "rr_ok": true,
                     "structural_failures": [],
@@ -848,27 +1032,27 @@
                 },
                 "system_dynamic_entry_zone": {
                     "status": "available",
-                    "lower_price": 960.7591,
-                    "upper_price": 994.0,
-                    "reference_price": 975.39,
+                    "lower_price": 938.6558,
+                    "upper_price": 962.0,
+                    "reference_price": 952.95,
                     "sources": [
-                        "ema_20"
+                        "sma_20"
                     ],
                     "semantics": "system_pre_entry_observation_zone_not_automatic_buy"
                 },
                 "entry_invalidation": {
-                    "price": 955.8822,
+                    "price": 933.891,
                     "basis": "system_dynamic_entry_zone_reference_minus_2pct",
                     "condition": "收盤有效跌破系統動態進場支撐後，早期反轉假設失效。"
                 },
                 "expected_rr_or_rr_band": {
                     "status": "available",
-                    "rr": 2.26,
+                    "rr": 4.2,
                     "target": 1080.0,
                     "target_sources": [
                         "bar_body_MM_Target_Up"
                     ],
-                    "risk_price": 955.8822,
+                    "risk_price": 933.891,
                     "semantics": "traceable_reference_rr_not_forecast_probability"
                 },
                 "signal_alignment": "HistoricalDiscoveryInactive",
@@ -878,9 +1062,5 @@
         }
     },
     "watch_card_schema_version": "watchlist_candidate_entry_card_v1",
-    "analysis_role_policy_version": "analysis_role_v1",
-    "effective_card_merge_policy_version": "premarket_effective_card_merge_v1",
-    "effective_card_state_writer": "chatgpt_premarket_analysis",
-    "effective_card_updated_at": "2026-09-02T08:32:50+08:00",
-    "effective_card_effective_for_date": "2026-09-02"
+    "analysis_role_policy_version": "analysis_role_v1"
 }
