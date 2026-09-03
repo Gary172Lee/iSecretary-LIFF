@@ -54,7 +54,10 @@
         "card_role": "watchlist_candidate",
         "raw_ohlcv_file": "6182_合晶_20260902_ohlcv.json",
         "chart_file": "6182_合晶_Chart_20260902.png",
-        "pdf_file": null
+        "pdf_file": null,
+        "last_tracker_update": "2026-09-03T08:10:59",
+        "tracker_backfill_source": "GitHub",
+        "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
     "stock_profile": {
         "stock_type": "未分類台股標的",
@@ -923,7 +926,27 @@
         "current_entry_state": "EarlyUptrendCandidate",
         "early_reversal_score": 79.0,
         "starter_buy_permission": false,
-        "holding_execution_backtest": "NotApplicableUntilActualHolding"
+        "holding_execution_backtest": "NotApplicableUntilActualHolding",
+        "position_lifecycle_backtest": {
+            "version": "v7.25j1_position_lifecycle_execution_t1_t5",
+            "execution_basis_version": "v7.25j1_execution_basis_v2",
+            "decision_generated_at": null,
+            "decision_market_data_date": "2026-09-02",
+            "decision_timezone": "Asia/Taipei",
+            "decision_delivery_rule": "next_not_missed_08_20_schedule_after_decision_generation_and_after_market_data_date",
+            "decision_delivery_candidate_date": "2026-09-03",
+            "decision_delivery_candidate_note": "候選日依08:20截止時間計算；國定假日由後續OHLCV第一個實際交易日校正。",
+            "execution_eligibility_rule": "resolved_delivery_trading_day_market_open_at_09_00",
+            "benchmark_execution_price_definition": "決策產生後下一個未錯過的08:20排程所對應交易日09:00開盤價；不得回溯使用決策產生前的開盤價。",
+            "actual_user_execution_price_definition": "只有Portfolio.xlsx『買賣紀錄』的實際賣出交易價，才可稱為actual_user_execution_price。",
+            "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
+            "future_ohlcv_observed_count": 0,
+            "eligible_execution_ohlcv_observed_count": 0,
+            "execution_status": "pending_delivery_trading_day_ohlcv",
+            "last_execution_backfill_at": "2026-09-03T08:10:59",
+            "execution_pending_stage": "candidate_day_before_08_20_delivery",
+            "execution_pending_stage_description": "已到候選日，但尚未到08:20排程送達時間。"
+        }
     },
     "news": {
         "status": "not_requested_in_deterministic_watchlist_pipeline_v1"
