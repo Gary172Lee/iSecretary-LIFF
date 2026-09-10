@@ -54,7 +54,7 @@
         "raw_ohlcv_file": "7917_源傑科技_20260908_ohlcv.json",
         "chart_file": null,
         "pdf_file": "7917_源傑科技_PA_Analysis_20260908.pdf",
-        "last_tracker_update": "2026-09-09T08:11:54",
+        "last_tracker_update": "2026-09-10T08:11:04",
         "tracker_backfill_source": "GitHub",
         "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
@@ -1736,15 +1736,15 @@
             "T+2": {
                 "prediction_price": null,
                 "prediction_direction": null,
-                "actual_date": null,
-                "actual_close": null,
-                "actual_direction": null,
-                "actual_source": null,
-                "actual_return_pct": null,
+                "actual_date": "2026-09-09",
+                "actual_close": 639.0,
+                "actual_direction": "Down",
+                "actual_source": "FUGLEAPI:7917",
+                "actual_return_pct": -0.78,
                 "price_error": null,
                 "price_error_pct": null,
                 "direction_hit": null,
-                "updated_at": null
+                "updated_at": "2026-09-10T08:11:04"
             },
             "T+3": {
                 "prediction_price": null,
@@ -1787,11 +1787,11 @@
             }
         },
         "summary": {
-            "available_count": 1,
+            "available_count": 2,
             "direction_hit_count": 0,
             "direction_hit_rate": null,
             "avg_abs_price_error_pct": null,
-            "observed_return_count": 1,
+            "observed_return_count": 2,
             "avg_return_pct": -0.78,
             "mfe_5d_pct": -0.78,
             "mae_5d_pct": -0.78
@@ -1806,7 +1806,7 @@
             "fade_high_counterparty_flag": true,
             "status": "ready_for_aggregation",
             "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。",
-            "observed_return_count": 1,
+            "observed_return_count": 2,
             "avg_return_pct": -0.78,
             "mfe_5d_pct": -0.78,
             "mae_5d_pct": -0.78,
@@ -1912,12 +1912,12 @@
             "target_review_trigger_reached": false,
             "target_review_action": "wait_until_target_review_trigger",
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
-            "future_ohlcv_observed_count": 1,
-            "eligible_execution_ohlcv_observed_count": 1,
-            "last_execution_backfill_at": "2026-09-09T08:11:54",
+            "future_ohlcv_observed_count": 2,
+            "eligible_execution_ohlcv_observed_count": 2,
+            "last_execution_backfill_at": "2026-09-10T08:11:04",
             "execution_pending_stage": "not_pending",
             "execution_pending_stage_description": "目前不是等待成交候選日行情的狀態。",
-            "cohort_observed_trading_days": 1,
+            "cohort_observed_trading_days": 2,
             "cohort_t1_t5_metrics": {
                 "T+1": {
                     "date": "2026-09-08",
@@ -1925,17 +1925,24 @@
                     "cumulative_mfe_pct": 1.5528,
                     "cumulative_mae_pct": -2.9503,
                     "source": "FUGLEAPI:7917"
+                },
+                "T+2": {
+                    "date": "2026-09-09",
+                    "close_return_pct": -0.7764,
+                    "cumulative_mfe_pct": 1.5528,
+                    "cumulative_mae_pct": -4.3478,
+                    "source": "FUGLEAPI:7917"
                 }
             },
             "cohort_mfe_5d_pct": 1.5528,
-            "cohort_mae_5d_pct": -2.9503,
+            "cohort_mae_5d_pct": -4.3478,
             "pullback_zone_touch_status": "not_applicable_no_zone",
             "pullback_zone_first_touch_date": null,
             "pullback_zone_first_touch_t_index": null,
             "pullback_zone_post_touch_metrics": {},
             "grouped_backtest_sample_interpretation": "僅作分組資料蒐集；任一cohort完成樣本少於30筆時，不得宣稱策略有效。",
-            "cohort_metrics_updated_at": "2026-09-09T08:11:54",
-            "observed_return_count": 1,
+            "cohort_metrics_updated_at": "2026-09-10T08:11:04",
+            "observed_return_count": 2,
             "avg_return_pct_after_decision": -0.78,
             "mfe_5d_pct_after_decision": -0.78,
             "mae_5d_pct_after_decision": -0.78,
