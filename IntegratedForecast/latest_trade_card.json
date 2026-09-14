@@ -3,7 +3,7 @@
     "trade_card_schema_version": "integratedforecast_trade_card_chain_v1",
     "version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
     "current_rule_family": "v7.25k3.4h7",
-    "updated_at": "2026-09-14T08:20:53",
+    "updated_at": "2026-09-14T08:34:00+08:00",
     "timezone": "Asia/Taipei",
     "state_writer": "IntegratedForecast.py",
     "prior_state_source": "local_runtime_state",
@@ -13,6 +13,36 @@
             "stock_code": "2382",
             "stock_name": "廣達",
             "effective_card": {
+                "card_schema_version": "premarket_trade_card_v1",
+                "formed_at": "2026-09-14T08:34:00+08:00",
+                "effective_for_date": "2026-09-14",
+                "position_shares": 200,
+                "decision": "hold_200_no_add_below_target_revalidation_no_sell",
+                "source": "台股盤前分析_h7_premarket_effective_card_merge_v1",
+                "levels": {
+                    "target_revalidation": 424.03,
+                    "trailing_reference": 345.0,
+                    "rebound_resistance": 347.5
+                },
+                "rules": [
+                    {
+                        "id": "current_final_hold",
+                        "condition": "target_revalidation_triggered=false and sell_now_permission=false",
+                        "action": "hold_200_no_add",
+                        "automatic_sell": false,
+                        "text": "未達424.03 target revalidation，且目前沒有deterministic executable SELL；續抱200股，FailedBreakout/Poor follow-through下不加碼。"
+                    },
+                    {
+                        "id": "profit_exit_inactive",
+                        "condition": "profit_exit.eligible=false and profit_exit.state=Inactive",
+                        "action": "no_profit_exit_sell",
+                        "automatic_sell": false,
+                        "text": "345為保留Trailing reference；eligible=false、structural_confirmation=false、triggered=false時不得由effective card產生SELL。"
+                    }
+                ],
+                "dynamic_revalidation_required": true
+            },
+            "previous_effective_card": {
                 "card_schema_version": "premarket_trade_card_v1",
                 "formed_at": "2026-08-13T08:30:51+08:00",
                 "effective_for_date": "2026-08-13",
@@ -55,8 +85,51 @@
                 ],
                 "dynamic_revalidation_required": true
             },
-            "previous_effective_card": null,
-            "history_tail": [],
+            "history_tail": [
+                {
+                    "card_schema_version": "premarket_trade_card_v1",
+                    "formed_at": "2026-08-13T08:30:51+08:00",
+                    "effective_for_date": "2026-08-13",
+                    "position_shares": 200,
+                    "decision": "hold_below_profit_target",
+                    "source": "IntegratedForecast_v7.25k3.2_20260813",
+                    "levels": {
+                        "profit_target": 424.03,
+                        "gap_support": 315.5,
+                        "gap_midpoint": 316.25,
+                        "gap_mm_target": 353.5
+                    },
+                    "rules": [
+                        {
+                            "id": "hold_below_target",
+                            "condition": "price < 424.03 and no risk-first trigger",
+                            "action": "hold_200",
+                            "text": "未達424.03基本獲利門檻且未出現risk-first觸發：續抱200股。"
+                        },
+                        {
+                            "id": "gap_support_alert",
+                            "condition": "close < 315.5 or 316.25 gap midpoint lost and cannot recover",
+                            "action": "raise_alert",
+                            "text": "315.5～316.25為目前缺口支撐/失效觀察區；失守則降低波段信心。"
+                        },
+                        {
+                            "id": "gap_mm_reference",
+                            "condition": "price approaches 353.5",
+                            "action": "observe_reaction",
+                            "automatic_sell": false,
+                            "text": "353.5為目前缺口MM參考，不是自動賣出價。"
+                        },
+                        {
+                            "id": "profit_target_permission",
+                            "condition": "price >= 424.03",
+                            "action": "open_sell_evaluation",
+                            "automatic_sell": false,
+                            "text": "424.03達基本獲利門檻後開啟賣出評估。"
+                        }
+                    ],
+                    "dynamic_revalidation_required": true
+                }
+            ],
             "model_update": {
                 "stock_code": "2382",
                 "position_shares": 200,
@@ -275,13 +348,30 @@
                     }
                 }
             },
-            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
+            "continuity_status": "effective_card_refreshed_by_premarket_merge",
             "card_role": "active_holding"
         },
         "3081": {
             "stock_code": "3081",
             "stock_name": "聯亞",
-            "effective_card": null,
+            "effective_card": {
+                "card_schema_version": "premarket_trade_card_v1",
+                "formed_at": "2026-09-14T08:34:00+08:00",
+                "effective_for_date": "2026-09-14",
+                "position_shares": 6,
+                "decision": "hold_6_profit_exit_warning_no_sell",
+                "source": "台股盤前分析_h7_premarket_effective_card_merge_v1",
+                "rules": [
+                    {
+                        "id": "profit_exit_warning_not_triggered",
+                        "condition": "profit_exit.eligible=true and profit_exit.armed=true and profit_exit.triggered=false",
+                        "action": "hold_6_monitor_structure",
+                        "automatic_sell": false,
+                        "text": "Profit-Exit已進入Warning，但structural_confirmation=false、trailing reference=null、SellNow=false，維持6股並等待deterministic觸發。"
+                    }
+                ],
+                "dynamic_revalidation_required": true
+            },
             "previous_effective_card": null,
             "history_tail": [],
             "model_update": {
@@ -506,13 +596,41 @@
                     }
                 }
             },
-            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
+            "continuity_status": "effective_card_refreshed_by_premarket_merge",
             "card_role": "active_holding"
         },
         "3481": {
             "stock_code": "3481",
             "stock_name": "群創",
-            "effective_card": null,
+            "effective_card": {
+                "card_schema_version": "premarket_trade_card_v1",
+                "formed_at": "2026-09-14T08:34:00+08:00",
+                "effective_for_date": "2026-09-14",
+                "position_shares": 2000,
+                "decision": "hold_2000_below_basic_target_fail_closed_no_sell",
+                "source": "台股盤前分析_h7_premarket_effective_card_merge_v1",
+                "levels": {
+                    "target_revalidation": 52.93,
+                    "gap_repair": 49.35
+                },
+                "rules": [
+                    {
+                        "id": "current_final_hold",
+                        "condition": "target_revalidation_triggered=false and sell_now_permission=false",
+                        "action": "hold_2000",
+                        "automatic_sell": false,
+                        "text": "Local DB Actual為2,000股；52.93尚未觸發，且目前沒有deterministic executable SELL。"
+                    },
+                    {
+                        "id": "criterion_ambiguity_fail_closed",
+                        "condition": "profit_exit.criterion_allows_execution=false",
+                        "action": "no_profit_exit_sell",
+                        "automatic_sell": false,
+                        "text": "標的目標列缺失時Profit-Exit採advisory-only fail closed；effective card不得自行產生SELL。"
+                    }
+                ],
+                "dynamic_revalidation_required": true
+            },
             "previous_effective_card": null,
             "history_tail": [],
             "model_update": {
@@ -731,13 +849,34 @@
                     }
                 }
             },
-            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
+            "continuity_status": "effective_card_refreshed_by_premarket_merge",
             "card_role": "active_holding"
         },
         "5425": {
             "stock_code": "5425",
             "stock_name": "台半",
-            "effective_card": null,
+            "effective_card": {
+                "card_schema_version": "premarket_trade_card_v1",
+                "formed_at": "2026-09-14T08:34:00+08:00",
+                "effective_for_date": "2026-09-14",
+                "position_shares": 1000,
+                "decision": "hold_1000_no_add_below_target_revalidation_no_sell",
+                "source": "台股盤前分析_h7_premarket_effective_card_merge_v1",
+                "levels": {
+                    "target_revalidation": 105.03,
+                    "gap_repair": 89.3
+                },
+                "rules": [
+                    {
+                        "id": "current_final_hold",
+                        "condition": "target_revalidation_triggered=false and sell_now_permission=false",
+                        "action": "hold_1000_no_add",
+                        "automatic_sell": false,
+                        "text": "未達105.03 target revalidation，目前沒有deterministic executable SELL；價格結構偏弱時不自行加碼。"
+                    }
+                ],
+                "dynamic_revalidation_required": true
+            },
             "previous_effective_card": null,
             "history_tail": [],
             "model_update": {
@@ -956,13 +1095,41 @@
                     }
                 }
             },
-            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
+            "continuity_status": "effective_card_refreshed_by_premarket_merge",
             "card_role": "active_holding"
         },
         "6182": {
             "stock_code": "6182",
             "stock_name": "合晶",
-            "effective_card": null,
+            "effective_card": {
+                "card_schema_version": "premarket_trade_card_v1",
+                "formed_at": "2026-09-14T08:34:00+08:00",
+                "effective_for_date": "2026-09-14",
+                "position_shares": 1000,
+                "decision": "hold_1000_below_target_revalidation_fail_closed_no_sell",
+                "source": "台股盤前分析_h7_premarket_effective_card_merge_v1",
+                "levels": {
+                    "target_revalidation": 118.42,
+                    "gap_repair": 108.5
+                },
+                "rules": [
+                    {
+                        "id": "current_final_hold",
+                        "condition": "target_revalidation_triggered=false and sell_now_permission=false",
+                        "action": "hold_1000",
+                        "automatic_sell": false,
+                        "text": "未達118.42 target revalidation，目前沒有deterministic executable SELL，維持1,000股。"
+                    },
+                    {
+                        "id": "criterion_ambiguity_fail_closed",
+                        "condition": "profit_exit.criterion_allows_execution=false",
+                        "action": "no_profit_exit_sell",
+                        "automatic_sell": false,
+                        "text": "標的目標列缺失時Profit-Exit採advisory-only fail closed；effective card不得自行產生SELL。"
+                    }
+                ],
+                "dynamic_revalidation_required": true
+            },
             "previous_effective_card": null,
             "history_tail": [],
             "model_update": {
@@ -1181,13 +1348,42 @@
                     }
                 }
             },
-            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
+            "continuity_status": "effective_card_refreshed_by_premarket_merge",
             "card_role": "active_holding"
         },
         "7917": {
             "stock_code": "7917",
             "stock_name": "源傑科技",
             "effective_card": {
+                "card_schema_version": "premarket_trade_card_v1",
+                "formed_at": "2026-09-14T08:34:00+08:00",
+                "effective_for_date": "2026-09-14",
+                "position_shares": 1000,
+                "decision": "hold_1000_target_objective_review_pa_profit_exit_advisory_only",
+                "source": "台股盤前分析_h7_premarket_effective_card_merge_v1",
+                "levels": {
+                    "target_review_trigger": 1000.0,
+                    "gap_repair": 631.0
+                },
+                "rules": [
+                    {
+                        "id": "target_priority_hold",
+                        "condition": "price <= 1000 and target objective unchanged",
+                        "action": "hold_1000",
+                        "automatic_sell": false,
+                        "text": "價格未高於1,000前持有；PA與Profit-Exit不得覆蓋target-priority。"
+                    },
+                    {
+                        "id": "target_review_trigger",
+                        "condition": "price > 1000",
+                        "action": "enter_sell_reevaluation_only_not_automatic_order",
+                        "automatic_sell": false,
+                        "text": "價格>1,000只進入賣出重新評估，不是自動賣出。"
+                    }
+                ],
+                "dynamic_revalidation_required": true
+            },
+            "previous_effective_card": {
                 "card_schema_version": "premarket_trade_card_v1",
                 "formed_at": "2026-08-13T08:30:51+08:00",
                 "effective_for_date": "2026-08-13",
@@ -1223,8 +1419,44 @@
                 ],
                 "dynamic_revalidation_required": true
             },
-            "previous_effective_card": null,
-            "history_tail": [],
+            "history_tail": [
+                {
+                    "card_schema_version": "premarket_trade_card_v1",
+                    "formed_at": "2026-08-13T08:30:51+08:00",
+                    "effective_for_date": "2026-08-13",
+                    "position_shares": 1000,
+                    "decision": "hold_for_target_objective_review_with_pa_advisory_only",
+                    "source": "Portfolio_target_priority_with_k3.2_semantic_correction",
+                    "levels": {
+                        "target_review_trigger": 1000.0,
+                        "down_gap_upper": 740.0,
+                        "down_gap_midpoint": 739.0
+                    },
+                    "rules": [
+                        {
+                            "id": "target_priority_hold",
+                            "condition": "price <= 1000",
+                            "action": "hold_1000_unless_user_changes_objective",
+                            "text": "依Portfolio準則，價格未高於1,000前以持有為主；PA僅作風險警示。"
+                        },
+                        {
+                            "id": "target_review_trigger",
+                            "condition": "price > 1000",
+                            "action": "reevaluate_sale_not_automatic_sell",
+                            "automatic_sell": false,
+                            "text": "價格>1,000只進入賣出重新評估，不是自動賣出。"
+                        },
+                        {
+                            "id": "pa_risk_advisory",
+                            "condition": "price structure weakens",
+                            "action": "risk_warning_only",
+                            "automatic_sell": false,
+                            "text": "PA結構只作風險警示，不覆蓋target-priority。"
+                        }
+                    ],
+                    "dynamic_revalidation_required": true
+                }
+            ],
             "model_update": {
                 "stock_code": "7917",
                 "position_shares": 1000,
@@ -1452,7 +1684,7 @@
                     }
                 }
             },
-            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
+            "continuity_status": "effective_card_refreshed_by_premarket_merge",
             "card_role": "active_holding"
         }
     },
@@ -1518,5 +1750,9 @@
         }
     },
     "watch_card_schema_version": "watchlist_candidate_entry_card_v1",
-    "analysis_role_policy_version": "analysis_role_v1"
+    "analysis_role_policy_version": "analysis_role_v1",
+    "effective_card_merge_policy_version": "premarket_effective_card_merge_v1",
+    "effective_card_state_writer": "chatgpt_premarket_analysis",
+    "effective_card_updated_at": "2026-09-14T08:34:00+08:00",
+    "effective_card_effective_for_date": "2026-09-14"
 }
