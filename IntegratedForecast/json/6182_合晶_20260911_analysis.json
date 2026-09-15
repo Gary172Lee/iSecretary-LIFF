@@ -54,7 +54,7 @@
         "raw_ohlcv_file": "6182_合晶_20260911_ohlcv.json",
         "chart_file": "6182_合晶_Chart_20260911.png",
         "pdf_file": "6182_合晶_PA_Analysis_20260911.pdf",
-        "last_tracker_update": "2026-09-14T08:14:18",
+        "last_tracker_update": "2026-09-15T08:10:59",
         "tracker_backfill_source": "GitHub",
         "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
@@ -1371,15 +1371,15 @@
             "T+2": {
                 "prediction_price": 108.25,
                 "prediction_direction": "Down",
-                "actual_date": null,
-                "actual_close": null,
-                "actual_direction": null,
-                "actual_source": null,
-                "actual_return_pct": null,
-                "price_error": null,
-                "price_error_pct": null,
-                "direction_hit": null,
-                "updated_at": null
+                "actual_date": "2026-09-14",
+                "actual_close": 103.5,
+                "actual_direction": "Down",
+                "actual_source": "FUGLEAPI:6182",
+                "actual_return_pct": -4.61,
+                "price_error": -4.75,
+                "price_error_pct": -4.59,
+                "direction_hit": true,
+                "updated_at": "2026-09-15T08:10:59"
             },
             "T+3": {
                 "prediction_price": 107.75,
@@ -1422,14 +1422,14 @@
             }
         },
         "summary": {
-            "available_count": 1,
-            "direction_hit_count": 0,
-            "direction_hit_rate": 0.0,
-            "avg_abs_price_error_pct": 4.31,
-            "observed_return_count": 1,
-            "avg_return_pct": -3.69,
+            "available_count": 2,
+            "direction_hit_count": 1,
+            "direction_hit_rate": 0.5,
+            "avg_abs_price_error_pct": 4.45,
+            "observed_return_count": 2,
+            "avg_return_pct": -4.15,
             "mfe_5d_pct": -3.69,
-            "mae_5d_pct": -3.69
+            "mae_5d_pct": -4.61
         },
         "breakout_backtest": {
             "version": "v7.25d_breakout_t1_t5",
@@ -1441,10 +1441,10 @@
             "fade_high_counterparty_flag": true,
             "status": "ready_for_aggregation",
             "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。",
-            "observed_return_count": 1,
-            "avg_return_pct": -3.69,
+            "observed_return_count": 2,
+            "avg_return_pct": -4.15,
             "mfe_5d_pct": -3.69,
-            "mae_5d_pct": -3.69,
+            "mae_5d_pct": -4.61,
             "analysis_hint": "用於後續彙總比較 breakout_follow_through_score、FadeBreakout、counterparty_profitability_score>=70 之 T+1~T+5 平均報酬與最大回撤。"
         },
         "position_lifecycle_backtest": {
@@ -1566,12 +1566,12 @@
             "target_review_trigger_reached": null,
             "target_review_action": null,
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
-            "future_ohlcv_observed_count": 1,
-            "eligible_execution_ohlcv_observed_count": 1,
-            "last_execution_backfill_at": "2026-09-14T08:14:18",
+            "future_ohlcv_observed_count": 2,
+            "eligible_execution_ohlcv_observed_count": 2,
+            "last_execution_backfill_at": "2026-09-15T08:10:59",
             "execution_pending_stage": "not_pending",
             "execution_pending_stage_description": "目前不是等待成交候選日行情的狀態。",
-            "cohort_observed_trading_days": 1,
+            "cohort_observed_trading_days": 2,
             "cohort_t1_t5_metrics": {
                 "T+1": {
                     "date": "2026-09-11",
@@ -1579,20 +1579,27 @@
                     "cumulative_mfe_pct": -2.3041,
                     "cumulative_mae_pct": -4.6083,
                     "source": "FUGLEAPI:6182"
+                },
+                "T+2": {
+                    "date": "2026-09-14",
+                    "close_return_pct": -4.6083,
+                    "cumulative_mfe_pct": -2.3041,
+                    "cumulative_mae_pct": -7.8341,
+                    "source": "FUGLEAPI:6182"
                 }
             },
             "cohort_mfe_5d_pct": -2.3041,
-            "cohort_mae_5d_pct": -4.6083,
+            "cohort_mae_5d_pct": -7.8341,
             "pullback_zone_touch_status": "not_touched_in_observed_window",
             "pullback_zone_first_touch_date": null,
             "pullback_zone_first_touch_t_index": null,
             "pullback_zone_post_touch_metrics": {},
             "grouped_backtest_sample_interpretation": "僅作分組資料蒐集；任一cohort完成樣本少於30筆時，不得宣稱策略有效。",
-            "cohort_metrics_updated_at": "2026-09-14T08:14:18",
-            "observed_return_count": 1,
-            "avg_return_pct_after_decision": -3.69,
+            "cohort_metrics_updated_at": "2026-09-15T08:10:59",
+            "observed_return_count": 2,
+            "avg_return_pct_after_decision": -4.15,
             "mfe_5d_pct_after_decision": -3.69,
-            "mae_5d_pct_after_decision": -3.69,
+            "mae_5d_pct_after_decision": -4.61,
             "decision_delivery_date": "2026-09-11",
             "decision_delivery_datetime": "2026-09-11T08:20:00+08:00",
             "execution_eligibility_datetime": "2026-09-11T09:00:00+08:00",
