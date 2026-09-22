@@ -3,7 +3,7 @@
     "trade_card_schema_version": "integratedforecast_trade_card_chain_v1",
     "version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
     "current_rule_family": "v7.25k3.4h7",
-    "updated_at": "2026-09-21T08:28:59+08:00",
+    "updated_at": "2026-09-22T08:16:28",
     "timezone": "Asia/Taipei",
     "state_writer": "IntegratedForecast.py",
     "prior_state_source": "local_runtime_state",
@@ -13,23 +13,6 @@
             "stock_code": "2382",
             "stock_name": "廣達",
             "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-09-21T08:28:59+08:00",
-                "effective_for_date": "2026-09-21",
-                "position_shares": 200,
-                "decision": "hold_200_no_add",
-                "source": "台股盤前分析_h7",
-                "rules": [
-                    {
-                        "id": "authority_guard",
-                        "action": "hold_200_no_add",
-                        "automatic_sell": false,
-                        "text": "依最新deterministic Final/Profit-Exit續抱200股；research不得創造SELL。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
-            "previous_effective_card": {
                 "card_schema_version": "premarket_trade_card_v1",
                 "formed_at": "2026-08-13T08:30:51+08:00",
                 "effective_for_date": "2026-08-13",
@@ -72,65 +55,22 @@
                 ],
                 "dynamic_revalidation_required": true
             },
-            "history_tail": [
-                {
-                    "card_schema_version": "premarket_trade_card_v1",
-                    "formed_at": "2026-08-13T08:30:51+08:00",
-                    "effective_for_date": "2026-08-13",
-                    "position_shares": 200,
-                    "decision": "hold_below_profit_target",
-                    "source": "IntegratedForecast_v7.25k3.2_20260813",
-                    "levels": {
-                        "profit_target": 424.03,
-                        "gap_support": 315.5,
-                        "gap_midpoint": 316.25,
-                        "gap_mm_target": 353.5
-                    },
-                    "rules": [
-                        {
-                            "id": "hold_below_target",
-                            "condition": "price < 424.03 and no risk-first trigger",
-                            "action": "hold_200",
-                            "text": "未達424.03基本獲利門檻且未出現risk-first觸發：續抱200股。"
-                        },
-                        {
-                            "id": "gap_support_alert",
-                            "condition": "close < 315.5 or 316.25 gap midpoint lost and cannot recover",
-                            "action": "raise_alert",
-                            "text": "315.5～316.25為目前缺口支撐/失效觀察區；失守則降低波段信心。"
-                        },
-                        {
-                            "id": "gap_mm_reference",
-                            "condition": "price approaches 353.5",
-                            "action": "observe_reaction",
-                            "automatic_sell": false,
-                            "text": "353.5為目前缺口MM參考，不是自動賣出價。"
-                        },
-                        {
-                            "id": "profit_target_permission",
-                            "condition": "price >= 424.03",
-                            "action": "open_sell_evaluation",
-                            "automatic_sell": false,
-                            "text": "424.03達基本獲利門檻後開啟賣出評估。"
-                        }
-                    ],
-                    "dynamic_revalidation_required": true
-                }
-            ],
+            "previous_effective_card": null,
+            "history_tail": [],
             "model_update": {
                 "stock_code": "2382",
                 "position_shares": 200,
                 "position_avg_cost": 353.355,
                 "model_version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "current_rule_family": "v7.25k3.4h7",
-                "generated_at": "2026-09-21T08:17:06",
-                "actual_latest_trade_date": "2026-09-18",
-                "expected_latest_trade_date": "2026-09-18",
+                "generated_at": "2026-09-22T08:16:28",
+                "actual_latest_trade_date": "2026-09-21",
+                "expected_latest_trade_date": "2026-09-21",
                 "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
-                "price_data_source": "FUGLEAPI",
+                "price_data_source": "yfinance",
                 "price_data_is_stale": false,
-                "current_close": 343.0,
-                "portfolio_unrealized_pnl_pct": -2.93,
+                "current_close": 344.5,
+                "portfolio_unrealized_pnl_pct": -2.51,
                 "target_criterion": "遵守價格行為",
                 "target_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
                 "target_goal_status": "configured",
@@ -188,7 +128,7 @@
                 "rebound_reduce_zone": null,
                 "breakout_context_type": "FailedBreakout",
                 "breakout_entry_permission": "FadeBreakout",
-                "true_breakout_quality_score": 30,
+                "true_breakout_quality_score": 38,
                 "breakout_follow_through_quality": "Poor",
                 "second_leg_no_add_guardrail": true,
                 "final_execution_priority": "structured_lifecycle_decision",
@@ -204,11 +144,11 @@
                 "target_review_action": null,
                 "intraday_policy_version": "intraday_live_overlay_v1.4",
                 "market_phase": "pre_market",
-                "current_market_price": 343.0,
+                "current_market_price": 344.5,
                 "current_price_basis": "completed_daily_close",
-                "current_price_as_of": "2026-09-18",
-                "daily_completed_close": 343.0,
-                "daily_completed_trade_date": "2026-09-18",
+                "current_price_as_of": "2026-09-21",
+                "daily_completed_close": 344.5,
+                "daily_completed_trade_date": "2026-09-21",
                 "intraday_price_override_applied": false,
                 "intraday_execution_reference_allowed": false,
                 "intraday_behavior_summary": {
@@ -235,8 +175,8 @@
                     "scheduled_open_time": "09:00",
                     "scheduled_close_time": "13:30",
                     "delayed_close_supported_until": "13:33",
-                    "session_date": "2026-09-21",
-                    "evaluated_at": "2026-09-21T08:11:50",
+                    "session_date": "2026-09-22",
+                    "evaluated_at": "2026-09-22T08:11:58",
                     "intraday_fetch_expected": false,
                     "quote_usage_mode": "not_applicable",
                     "price_limit_applicable": true,
@@ -282,18 +222,20 @@
                     "execution_mode": "executable",
                     "criterion_allows_execution": true,
                     "criterion_execution_basis": "portfolio_criterion_allows_price_action_execution",
-                    "risk_score": 30,
+                    "risk_score": 60,
                     "warning_reasons": [
                         "failed_breakout",
-                        "poor_follow_through"
+                        "poor_follow_through",
+                        "structural_support_loss",
+                        "reference_breached"
                     ],
                     "structural_confirmation": false,
                     "structural_confirmation_pattern": null,
                     "trigger_candidate": false,
                     "triggered": false,
-                    "trailing_effective_reference": 340.5,
+                    "trailing_effective_reference": 345.0,
                     "trailing_reference_source": "confirmed_up_gap_support",
-                    "trailing_ratchet_status": "ratcheted_up",
+                    "trailing_ratchet_status": "held_previous_reference",
                     "sell_now_permission": false,
                     "execution_scope": "then_remaining_position",
                     "execution_scope_shares": 200,
@@ -310,7 +252,7 @@
                     "target_achieved": false,
                     "extension_phase_active": false,
                     "configured_meaningful_profit_achieved": false,
-                    "evaluation_trade_date": "2026-09-18",
+                    "evaluation_trade_date": "2026-09-21",
                     "execution_consistency_status": "pass",
                     "execution_consistency_conflicts": [],
                     "surface_convergence_policy_version": "profit_exit_surface_convergence_v1.1",
@@ -328,28 +270,13 @@
                     }
                 }
             },
-            "continuity_status": "effective_card_refreshed_by_premarket_merge",
+            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
             "card_role": "active_holding"
         },
         "3081": {
             "stock_code": "3081",
             "stock_name": "聯亞",
-            "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-09-21T08:28:59+08:00",
-                "effective_for_date": "2026-09-21",
-                "position_shares": 6,
-                "decision": "follow_deterministic_exit_remaining_6",
-                "source": "台股盤前分析_h7",
-                "rules": [
-                    {
-                        "id": "authority_guard",
-                        "action": "defer_to_deterministic_final_execution",
-                        "text": "deterministic Final已觸發剩餘6股退出；effective-card僅鏡射較高authority，不自行創造SELL。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
+            "effective_card": null,
             "previous_effective_card": null,
             "history_tail": [],
             "model_update": {
@@ -358,14 +285,14 @@
                 "position_avg_cost": 2002.85455,
                 "model_version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "current_rule_family": "v7.25k3.4h7",
-                "generated_at": "2026-09-21T08:17:06",
-                "actual_latest_trade_date": "2026-09-18",
-                "expected_latest_trade_date": "2026-09-18",
+                "generated_at": "2026-09-22T08:16:28",
+                "actual_latest_trade_date": "2026-09-21",
+                "expected_latest_trade_date": "2026-09-21",
                 "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
                 "price_data_source": "FUGLEAPI",
                 "price_data_is_stale": false,
-                "current_close": 2880.0,
-                "portfolio_unrealized_pnl_pct": 43.79,
+                "current_close": 2875.0,
+                "portfolio_unrealized_pnl_pct": 43.55,
                 "target_criterion": "遵守價格行為",
                 "target_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
                 "target_goal_status": "configured",
@@ -393,7 +320,7 @@
                     "risk_override_trigger_price": null,
                     "risk_advisory_trigger_price": null,
                     "target_objective_conflict_status": "aligned",
-                    "final_sell_trigger_price": 3041.07,
+                    "final_sell_trigger_price": 3057.14,
                     "final_sell_trigger_type": "active_profit_protection_floor_after_actual_partial_exit",
                     "trigger_semantics_consistency_status": "pass",
                     "final_sell_trigger_action": "conditional_exit_remaining_if_floor_triggered"
@@ -441,7 +368,7 @@
                 "price_action_advisory_only": false,
                 "risk_override_allowed": false,
                 "risk_advisory_trigger_price": null,
-                "final_sell_trigger_price": 3041.07,
+                "final_sell_trigger_price": 3057.14,
                 "final_sell_trigger_type": "active_profit_protection_floor_after_actual_partial_exit",
                 "final_sell_trigger_action": "conditional_exit_remaining_if_floor_triggered",
                 "target_review_mode": null,
@@ -450,11 +377,11 @@
                 "target_review_action": null,
                 "intraday_policy_version": "intraday_live_overlay_v1.4",
                 "market_phase": "pre_market",
-                "current_market_price": 2880.0,
+                "current_market_price": 2875.0,
                 "current_price_basis": "completed_daily_close",
-                "current_price_as_of": "2026-09-18",
-                "daily_completed_close": 2880.0,
-                "daily_completed_trade_date": "2026-09-18",
+                "current_price_as_of": "2026-09-21",
+                "daily_completed_close": 2875.0,
+                "daily_completed_trade_date": "2026-09-21",
                 "intraday_price_override_applied": false,
                 "intraday_execution_reference_allowed": false,
                 "intraday_behavior_summary": {
@@ -481,8 +408,8 @@
                     "scheduled_open_time": "09:00",
                     "scheduled_close_time": "13:30",
                     "delayed_close_supported_until": "13:33",
-                    "session_date": "2026-09-21",
-                    "evaluated_at": "2026-09-21T08:14:05",
+                    "session_date": "2026-09-22",
+                    "evaluated_at": "2026-09-22T08:13:11",
                     "intraday_fetch_expected": false,
                     "quote_usage_mode": "not_applicable",
                     "price_limit_applicable": true,
@@ -504,7 +431,7 @@
                 "execution_consistency_policy_version": "actual_execution_surface_convergence_v1",
                 "execution_consistency_status": "pass",
                 "execution_consistency_conflict_count": 0,
-                "effective_remaining_exit_trigger_price": 3041.07,
+                "effective_remaining_exit_trigger_price": 3057.14,
                 "effective_remaining_exit_trigger_source": "active_profit_protection_floor",
                 "remaining_structural_floor_price": 2800.0,
                 "remaining_full_exit_ratio_pct_if_triggered": 100,
@@ -553,7 +480,7 @@
                     "target_achieved": true,
                     "extension_phase_active": true,
                     "configured_meaningful_profit_achieved": true,
-                    "evaluation_trade_date": "2026-09-18",
+                    "evaluation_trade_date": "2026-09-21",
                     "execution_consistency_status": "pass",
                     "execution_consistency_conflicts": [],
                     "surface_convergence_policy_version": "profit_exit_surface_convergence_v1.1",
@@ -563,7 +490,7 @@
                         "risk_override_allowed": false,
                         "risk_override_trigger_price": null,
                         "risk_advisory_trigger_price": null,
-                        "final_sell_trigger_price": 3041.07,
+                        "final_sell_trigger_price": 3057.14,
                         "final_sell_trigger_type": "active_profit_protection_floor_after_actual_partial_exit",
                         "final_sell_trigger_action": "conditional_exit_remaining_if_floor_triggered",
                         "trigger_semantics_consistency_status": "pass",
@@ -571,29 +498,13 @@
                     }
                 }
             },
-            "continuity_status": "effective_card_refreshed_by_premarket_merge",
+            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
             "card_role": "active_holding"
         },
         "3481": {
             "stock_code": "3481",
             "stock_name": "群創",
-            "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-09-21T08:28:59+08:00",
-                "effective_for_date": "2026-09-21",
-                "position_shares": 2000,
-                "decision": "hold_2000_deterministic_execution_only",
-                "source": "台股盤前分析_h7",
-                "rules": [
-                    {
-                        "id": "authority_guard",
-                        "action": "hold_2000",
-                        "automatic_sell": false,
-                        "text": "research不得創造BUY/SELL。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
+            "effective_card": null,
             "previous_effective_card": null,
             "history_tail": [],
             "model_update": {
@@ -602,14 +513,14 @@
                 "position_avg_cost": 48.1185,
                 "model_version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "current_rule_family": "v7.25k3.4h7",
-                "generated_at": "2026-09-21T08:17:06",
-                "actual_latest_trade_date": "2026-09-18",
-                "expected_latest_trade_date": "2026-09-18",
+                "generated_at": "2026-09-22T08:16:28",
+                "actual_latest_trade_date": "2026-09-21",
+                "expected_latest_trade_date": "2026-09-21",
                 "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
                 "price_data_source": "FUGLEAPI",
                 "price_data_is_stale": false,
-                "current_close": 48.25,
-                "portfolio_unrealized_pnl_pct": 0.27,
+                "current_close": 50.4,
+                "portfolio_unrealized_pnl_pct": 4.74,
                 "target_criterion": "",
                 "target_objective": "",
                 "target_goal_status": "missing_target_row",
@@ -667,7 +578,7 @@
                 "rebound_reduce_zone": null,
                 "breakout_context_type": "FailedBreakout",
                 "breakout_entry_permission": "FadeBreakout",
-                "true_breakout_quality_score": 18,
+                "true_breakout_quality_score": 46,
                 "breakout_follow_through_quality": "Poor",
                 "second_leg_no_add_guardrail": true,
                 "final_execution_priority": "structured_lifecycle_decision",
@@ -683,11 +594,11 @@
                 "target_review_action": null,
                 "intraday_policy_version": "intraday_live_overlay_v1.4",
                 "market_phase": "pre_market",
-                "current_market_price": 48.25,
+                "current_market_price": 50.4,
                 "current_price_basis": "completed_daily_close",
-                "current_price_as_of": "2026-09-18",
-                "daily_completed_close": 48.25,
-                "daily_completed_trade_date": "2026-09-18",
+                "current_price_as_of": "2026-09-21",
+                "daily_completed_close": 50.4,
+                "daily_completed_trade_date": "2026-09-21",
                 "intraday_price_override_applied": false,
                 "intraday_execution_reference_allowed": false,
                 "intraday_behavior_summary": {
@@ -714,8 +625,8 @@
                     "scheduled_open_time": "09:00",
                     "scheduled_close_time": "13:30",
                     "delayed_close_supported_until": "13:33",
-                    "session_date": "2026-09-21",
-                    "evaluated_at": "2026-09-21T08:14:55",
+                    "session_date": "2026-09-22",
+                    "evaluated_at": "2026-09-22T08:14:07",
                     "intraday_fetch_expected": false,
                     "quote_usage_mode": "not_applicable",
                     "price_limit_applicable": true,
@@ -789,7 +700,7 @@
                     "target_achieved": false,
                     "extension_phase_active": false,
                     "configured_meaningful_profit_achieved": false,
-                    "evaluation_trade_date": "2026-09-18",
+                    "evaluation_trade_date": "2026-09-21",
                     "execution_consistency_status": "pass",
                     "execution_consistency_conflicts": [],
                     "surface_convergence_policy_version": "profit_exit_surface_convergence_v1.1",
@@ -807,29 +718,13 @@
                     }
                 }
             },
-            "continuity_status": "effective_card_refreshed_by_premarket_merge",
+            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
             "card_role": "active_holding"
         },
         "5425": {
             "stock_code": "5425",
             "stock_name": "台半",
-            "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-09-21T08:28:59+08:00",
-                "effective_for_date": "2026-09-21",
-                "position_shares": 1000,
-                "decision": "hold_1000_deterministic_execution_only",
-                "source": "台股盤前分析_h7",
-                "rules": [
-                    {
-                        "id": "authority_guard",
-                        "action": "hold_1000",
-                        "automatic_sell": false,
-                        "text": "research不得創造BUY/SELL。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
+            "effective_card": null,
             "previous_effective_card": null,
             "history_tail": [],
             "model_update": {
@@ -838,14 +733,14 @@
                 "position_avg_cost": 87.525,
                 "model_version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "current_rule_family": "v7.25k3.4h7",
-                "generated_at": "2026-09-21T08:17:06",
-                "actual_latest_trade_date": "2026-09-18",
-                "expected_latest_trade_date": "2026-09-18",
+                "generated_at": "2026-09-22T08:16:28",
+                "actual_latest_trade_date": "2026-09-21",
+                "expected_latest_trade_date": "2026-09-21",
                 "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
                 "price_data_source": "FUGLEAPI",
                 "price_data_is_stale": false,
-                "current_close": 92.6,
-                "portfolio_unrealized_pnl_pct": 5.8,
+                "current_close": 93.3,
+                "portfolio_unrealized_pnl_pct": 6.6,
                 "target_criterion": "遵守價格行為",
                 "target_objective": "達到 \"基本獲利門檻%\" 評估賣出。評估價格行為、基本面、消息面、法人目標價等因素，是否還有上漲空間，預估目標價多少？",
                 "target_goal_status": "configured",
@@ -888,7 +783,7 @@
                 "risk_first_action": false,
                 "risk_first_action_reason": "未同時觸發標的專屬風險與持股虧損。",
                 "current_support": {
-                    "price": 83.34,
+                    "price": 83.97,
                     "role": "current_support_below_market",
                     "basis": "gap_MM_Target_Down",
                     "note": "目前股價下方較接近的可量化支撐/風控參考。"
@@ -908,7 +803,7 @@
                 "rebound_reduce_zone": null,
                 "breakout_context_type": "FailedBreakout",
                 "breakout_entry_permission": "FadeBreakout",
-                "true_breakout_quality_score": 26,
+                "true_breakout_quality_score": 10,
                 "breakout_follow_through_quality": "Poor",
                 "second_leg_no_add_guardrail": true,
                 "final_execution_priority": "structured_lifecycle_decision",
@@ -924,11 +819,11 @@
                 "target_review_action": null,
                 "intraday_policy_version": "intraday_live_overlay_v1.4",
                 "market_phase": "pre_market",
-                "current_market_price": 92.6,
+                "current_market_price": 93.3,
                 "current_price_basis": "completed_daily_close",
-                "current_price_as_of": "2026-09-18",
-                "daily_completed_close": 92.6,
-                "daily_completed_trade_date": "2026-09-18",
+                "current_price_as_of": "2026-09-21",
+                "daily_completed_close": 93.3,
+                "daily_completed_trade_date": "2026-09-21",
                 "intraday_price_override_applied": false,
                 "intraday_execution_reference_allowed": false,
                 "intraday_behavior_summary": {
@@ -955,8 +850,8 @@
                     "scheduled_open_time": "09:00",
                     "scheduled_close_time": "13:30",
                     "delayed_close_supported_until": "13:33",
-                    "session_date": "2026-09-21",
-                    "evaluated_at": "2026-09-21T08:15:41",
+                    "session_date": "2026-09-22",
+                    "evaluated_at": "2026-09-22T08:14:47",
                     "intraday_fetch_expected": false,
                     "quote_usage_mode": "not_applicable",
                     "price_limit_applicable": true,
@@ -1030,7 +925,7 @@
                     "target_achieved": false,
                     "extension_phase_active": false,
                     "configured_meaningful_profit_achieved": false,
-                    "evaluation_trade_date": "2026-09-18",
+                    "evaluation_trade_date": "2026-09-21",
                     "execution_consistency_status": "pass",
                     "execution_consistency_conflicts": [],
                     "surface_convergence_policy_version": "profit_exit_surface_convergence_v1.1",
@@ -1048,29 +943,13 @@
                     }
                 }
             },
-            "continuity_status": "effective_card_refreshed_by_premarket_merge",
+            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
             "card_role": "active_holding"
         },
         "6182": {
             "stock_code": "6182",
             "stock_name": "合晶",
-            "effective_card": {
-                "card_schema_version": "premarket_trade_card_v1",
-                "formed_at": "2026-09-21T08:28:59+08:00",
-                "effective_for_date": "2026-09-21",
-                "position_shares": 1000,
-                "decision": "hold_1000_deterministic_execution_only",
-                "source": "台股盤前分析_h7",
-                "rules": [
-                    {
-                        "id": "authority_guard",
-                        "action": "hold_1000",
-                        "automatic_sell": false,
-                        "text": "research不得創造BUY/SELL。"
-                    }
-                ],
-                "dynamic_revalidation_required": true
-            },
+            "effective_card": null,
             "previous_effective_card": null,
             "history_tail": [],
             "model_update": {
@@ -1079,14 +958,14 @@
                 "position_avg_cost": 107.653,
                 "model_version": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "current_rule_family": "v7.25k3.4h7",
-                "generated_at": "2026-09-21T08:17:06",
-                "actual_latest_trade_date": "2026-09-18",
-                "expected_latest_trade_date": "2026-09-18",
+                "generated_at": "2026-09-22T08:16:28",
+                "actual_latest_trade_date": "2026-09-21",
+                "expected_latest_trade_date": "2026-09-21",
                 "expected_latest_trade_date_basis": "conservative_previous_weekday_until_same_day_bar_observed",
                 "price_data_source": "FUGLEAPI",
                 "price_data_is_stale": false,
-                "current_close": 116.0,
-                "portfolio_unrealized_pnl_pct": 7.75,
+                "current_close": 115.0,
+                "portfolio_unrealized_pnl_pct": 6.82,
                 "target_criterion": "",
                 "target_objective": "",
                 "target_goal_status": "missing_target_row",
@@ -1144,7 +1023,7 @@
                 "rebound_reduce_zone": null,
                 "breakout_context_type": "FailedBreakout",
                 "breakout_entry_permission": "FadeBreakout",
-                "true_breakout_quality_score": 33,
+                "true_breakout_quality_score": 25,
                 "breakout_follow_through_quality": "Poor",
                 "second_leg_no_add_guardrail": true,
                 "final_execution_priority": "structured_lifecycle_decision",
@@ -1160,11 +1039,11 @@
                 "target_review_action": null,
                 "intraday_policy_version": "intraday_live_overlay_v1.4",
                 "market_phase": "pre_market",
-                "current_market_price": 116.0,
+                "current_market_price": 115.0,
                 "current_price_basis": "completed_daily_close",
-                "current_price_as_of": "2026-09-18",
-                "daily_completed_close": 116.0,
-                "daily_completed_trade_date": "2026-09-18",
+                "current_price_as_of": "2026-09-21",
+                "daily_completed_close": 115.0,
+                "daily_completed_trade_date": "2026-09-21",
                 "intraday_price_override_applied": false,
                 "intraday_execution_reference_allowed": false,
                 "intraday_behavior_summary": {
@@ -1191,8 +1070,8 @@
                     "scheduled_open_time": "09:00",
                     "scheduled_close_time": "13:30",
                     "delayed_close_supported_until": "13:33",
-                    "session_date": "2026-09-21",
-                    "evaluated_at": "2026-09-21T08:16:24",
+                    "session_date": "2026-09-22",
+                    "evaluated_at": "2026-09-22T08:15:38",
                     "intraday_fetch_expected": false,
                     "quote_usage_mode": "not_applicable",
                     "price_limit_applicable": true,
@@ -1210,7 +1089,7 @@
                 "technical_10pct_reference_only_not_legal_limit": false,
                 "actual_execution_ack_policy_version": "actual_partial_exit_idempotency_v2",
                 "actual_execution_ack_applied": false,
-                "actual_execution_ack_status": "not_applicable",
+                "actual_execution_ack_status": "partial_or_not_fulfilled",
                 "execution_consistency_policy_version": "actual_execution_surface_convergence_v1",
                 "execution_consistency_status": "pass",
                 "execution_consistency_conflict_count": 0,
@@ -1221,10 +1100,10 @@
                 "remaining_full_exit_shares_if_triggered": null,
                 "position_cycle_buy_shares": 1000,
                 "position_cycle_sell_shares": 0,
-                "actual_execution_qualifying_sell_shares": null,
-                "planned_initial_sell_shares_of_cycle": null,
-                "initial_sell_tranche_fulfilled_shares": null,
-                "initial_sell_tranche_remaining_shares": null,
+                "actual_execution_qualifying_sell_shares": 0,
+                "planned_initial_sell_shares_of_cycle": 500,
+                "initial_sell_tranche_fulfilled_shares": 0,
+                "initial_sell_tranche_remaining_shares": 500,
                 "recommended_immediate_sell_shares": 0,
                 "conditional_additional_sell_shares": 0,
                 "conditional_additional_sell_ratio_pct_of_current_remaining": null,
@@ -1232,9 +1111,9 @@
                 "profit_exit": {
                     "policy_version": "profit_exit_trailing_v1",
                     "applicable": true,
-                    "eligible": false,
-                    "armed": false,
-                    "state": "Inactive",
+                    "eligible": true,
+                    "armed": true,
+                    "state": "Warning",
                     "execution_mode": "advisory_only",
                     "criterion_allows_execution": false,
                     "criterion_execution_basis": "ambiguous_criterion_fail_closed",
@@ -1263,10 +1142,10 @@
                     "fulfilled": false,
                     "evidence_basis": "completed_daily",
                     "intraday_warning_only": true,
-                    "target_achieved": false,
+                    "target_achieved": true,
                     "extension_phase_active": false,
                     "configured_meaningful_profit_achieved": false,
-                    "evaluation_trade_date": "2026-09-18",
+                    "evaluation_trade_date": "2026-09-21",
                     "execution_consistency_status": "pass",
                     "execution_consistency_conflicts": [],
                     "surface_convergence_policy_version": "profit_exit_surface_convergence_v1.1",
@@ -1284,7 +1163,7 @@
                     }
                 }
             },
-            "continuity_status": "effective_card_refreshed_by_premarket_merge",
+            "continuity_status": "model_update_refreshed_waiting_premarket_revalidation",
             "card_role": "active_holding"
         }
     },
@@ -1297,17 +1176,17 @@
             "stock_name": "環球晶",
             "effective_entry_card": {
                 "card_schema_version": "watchlist_candidate_entry_card_v1",
-                "formed_at": "2026-09-21T08:17:06+08:00",
-                "effective_for_date": "2026-09-21",
+                "formed_at": "2026-09-22T08:16:28+08:00",
+                "effective_for_date": "2026-09-22",
                 "source": "Integrated_Forecast_v7.25k3.4h7_LocalDbPortfolio_Production_Edition",
                 "analysis_role": "watchlist_candidate",
                 "current_entry_state": "ReversalAttempt",
-                "early_reversal_score": 46.0,
+                "early_reversal_score": 38.0,
                 "starter_buy_permission": false,
                 "starter_buy_permission_basis": {
                     "score_gte_70": false,
                     "reversal_ok": false,
-                    "trend_ok": true,
+                    "trend_ok": false,
                     "hard_zone_ok": true,
                     "rr_ok": true,
                     "structural_failures": [],
@@ -1324,11 +1203,11 @@
                 },
                 "system_dynamic_entry_zone": {
                     "status": "available",
-                    "lower_price": 929.771,
-                    "upper_price": 944.0,
-                    "reference_price": 943.93,
+                    "lower_price": 886.5,
+                    "upper_price": 918.0,
+                    "reference_price": 900.0,
                     "sources": [
-                        "ema_20"
+                        "gap_failure_condition"
                     ],
                     "semantics": "system_pre_entry_observation_zone_not_automatic_buy"
                 },
@@ -1339,7 +1218,7 @@
                 },
                 "expected_rr_or_rr_band": {
                     "status": "available",
-                    "rr": 1.8,
+                    "rr": 2.97,
                     "target": 1023.0,
                     "target_sources": [
                         "gap_MM_Target_Up"
@@ -1354,9 +1233,5 @@
         }
     },
     "watch_card_schema_version": "watchlist_candidate_entry_card_v1",
-    "analysis_role_policy_version": "analysis_role_v1",
-    "effective_card_merge_policy_version": "premarket_effective_card_merge_v1",
-    "effective_card_state_writer": "chatgpt_premarket_analysis",
-    "effective_card_updated_at": "2026-09-21T08:28:59+08:00",
-    "effective_card_effective_for_date": "2026-09-21"
+    "analysis_role_policy_version": "analysis_role_v1"
 }
