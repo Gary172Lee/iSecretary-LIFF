@@ -1,6 +1,6 @@
 {
   "schema_version": "candidate_provenance_history_v1",
-  "generated_at": "2026-10-01T14:26:45+08:00",
+  "generated_at": "2026-10-02T14:25:06+08:00",
   "timezone": "Asia/Taipei",
   "source_system": "fetch_and_filter",
   "retention_policy_version": "candidate_provenance_inactive_history_v1",
@@ -10,16 +10,16 @@
     "does_not_write_portfolio_watching": true,
     "does_not_change_strategy_truth": true
   },
-  "candidate_count_active": 23,
-  "security_count": 85,
-  "historical_security_count": 84,
+  "candidate_count_active": 19,
+  "security_count": 86,
+  "historical_security_count": 85,
   "candidates": [
     {
       "security_key": "TW:1303",
       "stock_code": "1303",
       "stock_name": "南亞",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -28,21 +28,23 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 70.38,
+          "candidate_score": 79.6,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
             "20日趨勢與均線結構偏多",
             "個股相對大盤／產業具領先強度",
+            "價格行為結構具可延續性",
+            "量價動能改善且收盤位置健康",
             "大盤／產業環境支持中期持有"
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:1303|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:1303|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -375,18 +377,41 @@
           "currently_active": false,
           "candidate_event_key": "TW:1303|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 70.38,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:1303|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 70.38,
+          "score": 79.6,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 51.45,
+          "edge_score": 45.5,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -399,7 +424,7 @@
       "stock_code": "2303",
       "stock_name": "聯電",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -408,7 +433,7 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 76.59,
+          "candidate_score": 79.15,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -419,11 +444,11 @@
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-08-31T14:25:12+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:2303|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:2303|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -688,18 +713,42 @@
           "currently_active": false,
           "candidate_event_key": "TW:2303|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 76.59,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-31T14:25:12+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:2303|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 76.59,
+          "score": 79.15,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 53.8,
+          "edge_score": 58.11,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -712,7 +761,7 @@
       "stock_code": "2347",
       "stock_name": "聯強",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -720,8 +769,8 @@
           "source_role": "formal_candidate",
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 79.55,
+          "candidate_status": "swing_buy_confirmed",
+          "candidate_score": 80.05,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -732,11 +781,11 @@
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-09-18T14:24:18+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:2347|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:2347|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -857,40 +906,14 @@
           "currently_active": false,
           "candidate_event_key": "TW:2347|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
-        }
-      ],
-      "context_states": {
-        "swing_v40": {
-          "setup_detected": true,
-          "qualified": true,
-          "score": 79.55,
-          "stage": "swing_accumulation_ready"
         },
-        "forward_entry": {
-          "decision": "WaitPullback",
-          "edge_score": 50.43,
-          "edge_state": "Low",
-          "buy_now_signal": false,
-          "blocker": true
-        }
-      },
-      "historical_discovery_available": true
-    },
-    {
-      "security_key": "TW:2379",
-      "stock_code": "2379",
-      "stock_name": "瑞昱",
-      "symbol": null,
-      "candidate_date": "2026-10-01",
-      "candidate_currently_active": true,
-      "discovery_sources": [
         {
           "source_strategy": "swing_v40",
           "source_role": "formal_candidate",
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 70.57,
+          "candidate_score": 79.55,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -902,34 +925,36 @@
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
           "source_updated_at": "2026-10-01 14:26:36",
-          "first_seen": "2026-10-01T14:26:45+08:00",
+          "first_seen": "2026-09-18T14:24:18+08:00",
           "last_seen": "2026-10-01T14:26:45+08:00",
-          "currently_active": true,
-          "candidate_event_key": "TW:2379|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "currently_active": false,
+          "candidate_event_key": "TW:2347|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 70.57,
-          "stage": "swing_accumulation_ready"
+          "score": 80.05,
+          "stage": "swing_buy_confirmed"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 59.88,
+          "edge_score": 59.3,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
         }
-      }
+      },
+      "historical_discovery_available": true
     },
     {
       "security_key": "TW:2409",
       "stock_code": "2409",
       "stock_name": "友達",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -938,22 +963,23 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 78.96,
+          "candidate_score": 81.86,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
             "20日趨勢與均線結構偏多",
             "個股相對大盤／產業具領先強度",
+            "價格行為結構具可延續性",
             "量價動能改善且收盤位置健康",
             "大盤／產業環境支持中期持有"
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-09-10T14:25:28+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:2409|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:2409|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -1098,18 +1124,42 @@
           "currently_active": false,
           "candidate_event_key": "TW:2409|swing_v40|v4.0_Swing_Buy_20D|2026-09-29",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 78.96,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-09-10T14:25:28+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:2409|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 78.96,
+          "score": 81.86,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 49.11,
+          "edge_score": 41.24,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -1122,7 +1172,7 @@
       "stock_code": "2412",
       "stock_name": "中華電",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -1131,7 +1181,7 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.15,
+          "candidate_score": 74.0,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -1142,11 +1192,11 @@
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-09-11T14:26:58+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:2412|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:2412|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -1196,171 +1246,29 @@
           "currently_active": false,
           "candidate_event_key": "TW:2412|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
           "archive_role": "historical_machine_discovery"
-        }
-      ],
-      "context_states": {
-        "swing_v40": {
-          "setup_detected": true,
-          "qualified": true,
-          "score": 75.15,
-          "stage": "swing_accumulation_ready"
         },
-        "forward_entry": {
-          "decision": "WaitPullback",
-          "edge_score": 62.39,
-          "edge_state": "Moderate",
-          "buy_now_signal": false,
-          "blocker": true
-        }
-      },
-      "historical_discovery_available": true
-    },
-    {
-      "security_key": "TW:2449",
-      "stock_code": "2449",
-      "stock_name": "京元電子",
-      "symbol": null,
-      "candidate_date": "2026-10-01",
-      "candidate_currently_active": true,
-      "discovery_sources": [
         {
           "source_strategy": "swing_v40",
           "source_role": "formal_candidate",
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 71.89,
+          "candidate_score": 75.15,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
             "20日趨勢與均線結構偏多",
+            "量價動能改善且收盤位置健康",
             "進場延伸與初始停損距離可控",
             "大盤／產業環境支持中期持有"
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
           "source_updated_at": "2026-10-01 14:26:36",
-          "first_seen": "2026-08-31T14:25:12+08:00",
+          "first_seen": "2026-09-11T14:26:58+08:00",
           "last_seen": "2026-10-01T14:26:45+08:00",
-          "currently_active": true,
-          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 72.19,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-08-31 14:25:03",
-          "first_seen": "2026-08-31T14:25:12+08:00",
-          "last_seen": "2026-08-31T14:25:12+08:00",
           "currently_active": false,
-          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-08-31",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 70.19,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-07 14:24:34",
-          "first_seen": "2026-08-31T14:25:12+08:00",
-          "last_seen": "2026-09-07T14:24:43+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-09-07",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 73.25,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-23 14:24:58",
-          "first_seen": "2026-08-31T14:25:12+08:00",
-          "last_seen": "2026-09-23T14:25:07+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 76.56,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-24 14:25:01",
-          "first_seen": "2026-08-31T14:25:12+08:00",
-          "last_seen": "2026-09-24T14:25:10+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-09-24",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 72.89,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "進場延伸與初始停損距離可控",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-30 14:23:46",
-          "first_seen": "2026-08-31T14:25:12+08:00",
-          "last_seen": "2026-09-30T14:23:55+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
+          "candidate_event_key": "TW:2412|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
           "archive_role": "historical_machine_discovery"
         }
       ],
@@ -1368,13 +1276,13 @@
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 71.89,
+          "score": 74.0,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 53.51,
-          "edge_state": "Low",
+          "edge_score": 62.35,
+          "edge_state": "Moderate",
           "buy_now_signal": false,
           "blocker": true
         }
@@ -1386,7 +1294,7 @@
       "stock_code": "2454",
       "stock_name": "聯發科",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -1395,7 +1303,7 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 74.49,
+          "candidate_score": 72.54,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -1405,11 +1313,11 @@
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-09-03T14:23:34+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:2454|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:2454|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -1719,362 +1627,28 @@
           "currently_active": false,
           "candidate_event_key": "TW:2454|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
-        }
-      ],
-      "context_states": {
-        "swing_v40": {
-          "setup_detected": true,
-          "qualified": true,
-          "score": 74.49,
-          "stage": "swing_accumulation_ready"
         },
-        "forward_entry": {
-          "decision": "WaitPullback",
-          "edge_score": 56.63,
-          "edge_state": "Low",
-          "buy_now_signal": false,
-          "blocker": true
-        }
-      },
-      "historical_discovery_available": true
-    },
-    {
-      "security_key": "TW:3017",
-      "stock_code": "3017",
-      "stock_name": "奇鋐",
-      "symbol": null,
-      "candidate_date": "2026-10-01",
-      "candidate_currently_active": true,
-      "discovery_sources": [
         {
           "source_strategy": "swing_v40",
           "source_role": "formal_candidate",
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 71.39,
+          "candidate_score": 74.49,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
             "20日趨勢與均線結構偏多",
-            "量價動能改善且收盤位置健康",
             "進場延伸與初始停損距離可控",
             "大盤／產業環境支持中期持有"
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
           "source_updated_at": "2026-10-01 14:26:36",
-          "first_seen": "2026-08-27T14:24:21+08:00",
+          "first_seen": "2026-09-03T14:23:34+08:00",
           "last_seen": "2026-10-01T14:26:45+08:00",
-          "currently_active": true,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 76.76,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-08-27 14:24:12",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-08-27T14:24:21+08:00",
           "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-08-27",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.76,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-08-28 14:23:28",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-08-28T14:23:37+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-08-28",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 79.73,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-08-31 14:25:03",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-08-31T14:25:12+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-08-31",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 76.43,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-01 14:23:14",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-01T14:23:23+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-01",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 83.16,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-04 14:24:09",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-04T14:24:17+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-04",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.87,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-07 14:24:34",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-07T14:24:43+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-07",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 77.34,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-08 14:22:55",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-08T14:23:04+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-08",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 76.65,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-10 14:25:20",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-10T14:25:28+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-10",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 77.79,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-18 14:24:10",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-18T14:24:18+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-18",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 72.24,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "進場延伸與初始停損距離可控",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-21 14:25:26",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-21T14:25:34+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-21",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.04,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "進場延伸與初始停損距離可控",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-22 14:25:11",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-22T14:25:20+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-22",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 74.19,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "進場延伸與初始停損距離可控",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-23 14:24:58",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-23T14:25:07+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 70.04,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "量價動能改善且收盤位置健康",
-            "進場延伸與初始停損距離可控",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-24 14:25:01",
-          "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-09-24T14:25:10+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-24",
+          "candidate_event_key": "TW:2454|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
           "archive_role": "historical_machine_discovery"
         }
       ],
@@ -2082,13 +1656,13 @@
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 71.39,
+          "score": 72.54,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 60.31,
-          "edge_state": "Moderate",
+          "edge_score": 57.02,
+          "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
         }
@@ -2100,7 +1674,7 @@
       "stock_code": "3035",
       "stock_name": "智原",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -2109,22 +1683,21 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 77.62,
+          "candidate_score": 75.81,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
             "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
             "量價動能改善且收盤位置健康",
             "大盤／產業環境支持中期持有"
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:3035|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:3035|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -2269,18 +1842,42 @@
           "currently_active": false,
           "candidate_event_key": "TW:3035|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 77.62,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3035|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 77.62,
+          "score": 75.81,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 52.69,
+          "edge_score": 51.96,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -2293,7 +1890,7 @@
       "stock_code": "3037",
       "stock_name": "欣興",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -2302,7 +1899,7 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 78.24,
+          "candidate_score": 81.54,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -2313,11 +1910,11 @@
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-08-26T14:23:56+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:3037|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:3037|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -2413,55 +2010,6 @@
           "currently_active": false,
           "candidate_event_key": "TW:3037|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
-        }
-      ],
-      "context_states": {
-        "swing_v40": {
-          "setup_detected": true,
-          "qualified": true,
-          "score": 78.24,
-          "stage": "swing_accumulation_ready"
-        },
-        "forward_entry": {
-          "decision": "WaitPullback",
-          "edge_score": 48.06,
-          "edge_state": "Low",
-          "buy_now_signal": false,
-          "blocker": true
-        }
-      },
-      "historical_discovery_available": true
-    },
-    {
-      "security_key": "TW:3105",
-      "stock_code": "3105",
-      "stock_name": "穩懋",
-      "symbol": null,
-      "candidate_date": "2026-10-01",
-      "candidate_currently_active": true,
-      "discovery_sources": [
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 76.68,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "價格行為結構具可延續性",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
-          "currently_active": true,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
         },
         {
           "source_strategy": "swing_v40",
@@ -2469,388 +2017,7 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 71.37,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-08-28 14:23:28",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-08-28T14:23:37+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-08-28",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 74.74,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-08-31 14:25:03",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-08-31T14:25:12+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-08-31",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 70.21,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-02 14:23:48",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-02T14:23:56+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-02",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 71.19,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-04 14:24:09",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-04T14:24:17+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-04",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 70.79,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-07 14:24:34",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-07T14:24:43+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-07",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 70.74,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "進場延伸與初始停損距離可控",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-08 14:22:55",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-08T14:23:04+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-08",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.14,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-10 14:25:20",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-10T14:25:28+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-10",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 74.95,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-16 14:22:08",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-16T14:22:16+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-16",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.74,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-17 14:26:22",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-17T14:26:30+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-17",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.25,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-18 14:24:10",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-18T14:24:18+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-18",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 72.67,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-21 14:25:26",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-21T14:25:34+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-21",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.09,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-22 14:25:11",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-22T14:25:20+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-22",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 73.14,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-23 14:24:58",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-23T14:25:07+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 74.14,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-24 14:25:01",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-24T14:25:10+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-24",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 77.8,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "進場延伸與初始停損距離可控",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-29 14:24:28",
-          "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-09-29T14:24:37+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-29",
-          "archive_role": "historical_machine_discovery"
-        }
-      ],
-      "context_states": {
-        "swing_v40": {
-          "setup_detected": true,
-          "qualified": true,
-          "score": 76.68,
-          "stage": "swing_accumulation_ready"
-        },
-        "forward_entry": {
-          "decision": "WaitPullback",
-          "edge_score": 47.74,
-          "edge_state": "Low",
-          "buy_now_signal": false,
-          "blocker": true
-        }
-      },
-      "historical_discovery_available": true
-    },
-    {
-      "security_key": "TW:3189",
-      "stock_code": "3189",
-      "stock_name": "景碩",
-      "symbol": null,
-      "candidate_date": "2026-10-01",
-      "candidate_currently_active": true,
-      "discovery_sources": [
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 81.21,
+          "candidate_score": 78.24,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -2864,8 +2031,58 @@
           "source_updated_at": "2026-10-01 14:26:36",
           "first_seen": "2026-08-26T14:23:56+08:00",
           "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3037|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
+        }
+      ],
+      "context_states": {
+        "swing_v40": {
+          "setup_detected": true,
+          "qualified": true,
+          "score": 81.54,
+          "stage": "swing_accumulation_ready"
+        },
+        "forward_entry": {
+          "decision": "WaitPullback",
+          "edge_score": 46.16,
+          "edge_state": "Low",
+          "buy_now_signal": false,
+          "blocker": true
+        }
+      },
+      "historical_discovery_available": true
+    },
+    {
+      "security_key": "TW:3189",
+      "stock_code": "3189",
+      "stock_name": "景碩",
+      "symbol": null,
+      "candidate_date": "2026-10-02",
+      "candidate_currently_active": true,
+      "discovery_sources": [
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 78.67,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-02 14:24:57",
+          "first_seen": "2026-08-26T14:23:56+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:3189|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:3189|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -2963,18 +2180,42 @@
           "currently_active": false,
           "candidate_event_key": "TW:3189|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 81.21,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-26T14:23:56+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3189|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 81.21,
+          "score": 78.67,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 45.07,
+          "edge_score": 42.31,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -2987,7 +2228,7 @@
       "stock_code": "3443",
       "stock_name": "創意",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -2996,7 +2237,7 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 73.49,
+          "candidate_score": 70.08,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -3006,11 +2247,11 @@
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-08-21T14:23:51+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:3443|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:3443|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -3467,40 +2708,14 @@
           "currently_active": false,
           "candidate_event_key": "TW:3443|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
-        }
-      ],
-      "context_states": {
-        "swing_v40": {
-          "setup_detected": true,
-          "qualified": true,
-          "score": 73.49,
-          "stage": "swing_accumulation_ready"
         },
-        "forward_entry": {
-          "decision": "WaitPullback",
-          "edge_score": 44.86,
-          "edge_state": "Low",
-          "buy_now_signal": false,
-          "blocker": true
-        }
-      },
-      "historical_discovery_available": true
-    },
-    {
-      "security_key": "TW:3529",
-      "stock_code": "3529",
-      "stock_name": "力旺",
-      "symbol": null,
-      "candidate_date": "2026-10-01",
-      "candidate_currently_active": true,
-      "discovery_sources": [
         {
           "source_strategy": "swing_v40",
           "source_role": "formal_candidate",
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 70.59,
+          "candidate_score": 73.49,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -3511,154 +2726,10 @@
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
           "source_updated_at": "2026-10-01 14:26:36",
-          "first_seen": "2026-09-18T14:24:18+08:00",
+          "first_seen": "2026-08-21T14:23:51+08:00",
           "last_seen": "2026-10-01T14:26:45+08:00",
-          "currently_active": true,
-          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.49,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-18 14:24:10",
-          "first_seen": "2026-09-18T14:24:18+08:00",
-          "last_seen": "2026-09-18T14:24:18+08:00",
           "currently_active": false,
-          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-18",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 70.69,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-21 14:25:26",
-          "first_seen": "2026-09-18T14:24:18+08:00",
-          "last_seen": "2026-09-21T14:25:34+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-21",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 81.17,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-23 14:24:58",
-          "first_seen": "2026-09-18T14:24:18+08:00",
-          "last_seen": "2026-09-23T14:25:07+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 79.17,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "價格行為結構具可延續性",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-24 14:25:01",
-          "first_seen": "2026-09-18T14:24:18+08:00",
-          "last_seen": "2026-09-24T14:25:10+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-24",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 84.51,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "價格行為結構具可延續性",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-29 14:24:28",
-          "first_seen": "2026-09-18T14:24:18+08:00",
-          "last_seen": "2026-09-29T14:24:37+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-29",
-          "archive_role": "historical_machine_discovery"
-        },
-        {
-          "source_strategy": "swing_v40",
-          "source_role": "formal_candidate",
-          "source_policy_version": "v4.0_Swing_Buy_20D",
-          "source_scanner_version": "swing_buy_20d_scanner_v40",
-          "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 75.79,
-          "decision": "WaitPullback",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "20日趨勢與均線結構偏多",
-            "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
-            "大盤／產業環境支持中期持有"
-          ],
-          "risk_flags": [],
-          "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-09-30 14:23:46",
-          "first_seen": "2026-09-18T14:24:18+08:00",
-          "last_seen": "2026-09-30T14:23:55+08:00",
-          "currently_active": false,
-          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
+          "candidate_event_key": "TW:3443|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
           "archive_role": "historical_machine_discovery"
         }
       ],
@@ -3666,12 +2737,12 @@
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 70.59,
+          "score": 70.08,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 48.56,
+          "edge_score": 45.19,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -3684,7 +2755,7 @@
       "stock_code": "3532",
       "stock_name": "台勝科",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -3693,7 +2764,7 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 74.85,
+          "candidate_score": 75.25,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -3704,11 +2775,11 @@
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-08-27T14:24:21+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:3532|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:3532|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "deep_recovery_3m",
@@ -4089,18 +3160,42 @@
           "currently_active": false,
           "candidate_event_key": "TW:3532|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 74.85,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3532|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 74.85,
+          "score": 75.25,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 49.79,
+          "edge_score": 49.43,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -4113,7 +3208,7 @@
       "stock_code": "3711",
       "stock_name": "日月光投控",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -4122,22 +3217,21 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 74.75,
+          "candidate_score": 74.51,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
             "20日趨勢與均線結構偏多",
             "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
             "大盤／產業環境支持中期持有"
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:3711|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:3711|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -4232,18 +3326,42 @@
           "currently_active": false,
           "candidate_event_key": "TW:3711|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 74.75,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3711|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 74.75,
+          "score": 74.51,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 52.88,
+          "edge_score": 53.5,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -4256,7 +3374,7 @@
       "stock_code": "5347",
       "stock_name": "世界",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -4265,7 +3383,7 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 81.26,
+          "candidate_score": 78.53,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -4276,11 +3394,11 @@
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-09-18T14:24:18+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:5347|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:5347|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -4402,18 +3520,42 @@
           "currently_active": false,
           "candidate_event_key": "TW:5347|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 81.26,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-09-18T14:24:18+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:5347|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 81.26,
+          "score": 78.53,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 48.4,
+          "edge_score": 47.45,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -4426,55 +3568,30 @@
       "stock_code": "5425",
       "stock_name": "台半",
       "symbol": "5425.TWO",
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
-        {
-          "source_strategy": "deep_recovery_3m",
-          "source_role": "formal_candidate",
-          "source_policy_version": "deep_recovery_3m_v1",
-          "source_scanner_version": "deep_recovery_3m_scanner_v1",
-          "candidate_status": "RecoveryLeading",
-          "candidate_score": 80.1,
-          "decision": "ObserveEarlyRecovery",
-          "buy_signal": false,
-          "candidate_reasons": [
-            "63D最高收盤回撤 -32.3%",
-            "Recovery Trend=ModerateUp",
-            "Extension=77.0/Strong",
-            "近期低點墊高",
-            "相對大盤強度改善"
-          ],
-          "risk_flags": [],
-          "source_file": "data/deep_recovery_3m_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:44",
-          "first_seen": "2026-08-20T14:22:03+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
-          "currently_active": true,
-          "candidate_event_key": "TW:5425|deep_recovery_3m|deep_recovery_3m_v1|2026-10-01"
-        },
         {
           "source_strategy": "swing_v40",
           "source_role": "formal_candidate",
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 71.05,
+          "candidate_score": 78.34,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
             "20日趨勢與均線結構偏多",
             "量價動能改善且收盤位置健康",
-            "進場延伸與初始停損距離可控",
             "大盤／產業環境支持中期持有"
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-10-01T14:26:45+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:5425|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:5425|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "deep_recovery_3m",
@@ -4823,30 +3940,70 @@
           "currently_active": false,
           "candidate_event_key": "TW:5425|deep_recovery_3m|deep_recovery_3m_v1|2026-09-30",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "deep_recovery_3m",
+          "source_role": "formal_candidate",
+          "source_policy_version": "deep_recovery_3m_v1",
+          "source_scanner_version": "deep_recovery_3m_scanner_v1",
+          "candidate_status": "RecoveryLeading",
+          "candidate_score": 80.1,
+          "decision": "ObserveEarlyRecovery",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "63D最高收盤回撤 -32.3%",
+            "Recovery Trend=ModerateUp",
+            "Extension=77.0/Strong",
+            "近期低點墊高",
+            "相對大盤強度改善"
+          ],
+          "risk_flags": [],
+          "source_file": "data/deep_recovery_3m_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:44",
+          "first_seen": "2026-08-20T14:22:03+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:5425|deep_recovery_3m|deep_recovery_3m_v1|2026-10-01",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 71.05,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "量價動能改善且收盤位置健康",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:5425|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 71.05,
+          "score": 78.34,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 58.69,
+          "edge_score": 47.42,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
-        },
-        "deep_recovery_3m": {
-          "candidate": true,
-          "score": 80.1,
-          "tier": "RecoveryLeading",
-          "trend_state": "ModerateUp",
-          "extension_score": 77.0,
-          "extension_state": "Strong",
-          "buy_signal": false
         }
       },
       "historical_discovery_available": true
@@ -4856,7 +4013,7 @@
       "stock_code": "6138",
       "stock_name": "茂達",
       "symbol": "6138.TWO",
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -4865,23 +4022,23 @@
           "source_policy_version": "deep_recovery_3m_v1",
           "source_scanner_version": "deep_recovery_3m_scanner_v1",
           "candidate_status": "RecoveryReady",
-          "candidate_score": 79.0,
+          "candidate_score": 79.9,
           "decision": "ObserveEarlyRecovery",
           "buy_signal": false,
           "candidate_reasons": [
-            "63D最高收盤回撤 -35.6%",
+            "63D最高收盤回撤 -35.3%",
             "Recovery Trend=ModerateUp",
-            "Extension=70.0/Moderate",
+            "Extension=73.0/Moderate",
             "近期低點墊高",
             "相對大盤強度改善"
           ],
           "risk_flags": [],
           "source_file": "data/deep_recovery_3m_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:44",
+          "source_updated_at": "2026-10-02 14:25:06",
           "first_seen": "2026-08-31T14:25:12+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:6138|deep_recovery_3m|deep_recovery_3m_v1|2026-10-01"
+          "candidate_event_key": "TW:6138|deep_recovery_3m|deep_recovery_3m_v1|2026-10-02"
         },
         {
           "source_strategy": "deep_recovery_3m",
@@ -4957,15 +4114,40 @@
           "currently_active": false,
           "candidate_event_key": "TW:6138|deep_recovery_3m|deep_recovery_3m_v1|2026-09-24",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "deep_recovery_3m",
+          "source_role": "formal_candidate",
+          "source_policy_version": "deep_recovery_3m_v1",
+          "source_scanner_version": "deep_recovery_3m_scanner_v1",
+          "candidate_status": "RecoveryReady",
+          "candidate_score": 79.0,
+          "decision": "ObserveEarlyRecovery",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "63D最高收盤回撤 -35.6%",
+            "Recovery Trend=ModerateUp",
+            "Extension=70.0/Moderate",
+            "近期低點墊高",
+            "相對大盤強度改善"
+          ],
+          "risk_flags": [],
+          "source_file": "data/deep_recovery_3m_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:44",
+          "first_seen": "2026-08-31T14:25:12+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:6138|deep_recovery_3m|deep_recovery_3m_v1|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "deep_recovery_3m": {
           "candidate": true,
-          "score": 79.0,
+          "score": 79.9,
           "tier": "RecoveryReady",
           "trend_state": "ModerateUp",
-          "extension_score": 70.0,
+          "extension_score": 73.0,
           "extension_state": "Moderate",
           "buy_signal": false
         }
@@ -4977,7 +4159,7 @@
       "stock_code": "6147",
       "stock_name": "頎邦",
       "symbol": "6147.TWO",
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -4986,22 +4168,21 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 77.24,
+          "candidate_score": 70.89,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
             "20日趨勢與均線結構偏多",
             "個股相對大盤／產業具領先強度",
-            "量價動能改善且收盤位置健康",
             "大盤／產業環境支持中期持有"
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
+          "source_updated_at": "2026-10-02 14:24:57",
           "first_seen": "2026-08-28T14:23:37+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:6147|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:6147|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "deep_recovery_3m",
@@ -5516,18 +4697,42 @@
           "currently_active": false,
           "candidate_event_key": "TW:6147|swing_v40|v4.0_Swing_Buy_20D|2026-09-24",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 77.24,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:6147|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 77.24,
+          "score": 70.89,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 50.1,
+          "edge_score": 54.28,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -5540,32 +4745,32 @@
       "stock_code": "6182",
       "stock_name": "合晶",
       "symbol": "6182.TWO",
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
-          "source_strategy": "deep_recovery_3m",
+          "source_strategy": "swing_v40",
           "source_role": "formal_candidate",
-          "source_policy_version": "deep_recovery_3m_v1",
-          "source_scanner_version": "deep_recovery_3m_scanner_v1",
-          "candidate_status": "RecoveryLeading",
-          "candidate_score": 81.3,
-          "decision": "ObserveEarlyRecovery",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 78.61,
+          "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
-            "63D最高收盤回撤 -31.4%",
-            "Recovery Trend=ModerateUp",
-            "Extension=81.0/Strong",
-            "近期低點墊高",
-            "近5日量能高於20日均量"
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "價格行為結構具可延續性",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
           ],
           "risk_flags": [],
-          "source_file": "data/deep_recovery_3m_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:44",
-          "first_seen": "2026-09-02T14:23:56+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-02 14:24:57",
+          "first_seen": "2026-09-24T14:25:10+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:6182|deep_recovery_3m|deep_recovery_3m_v1|2026-10-01"
+          "candidate_event_key": "TW:6182|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "deep_recovery_3m",
@@ -5765,6 +4970,31 @@
           "archive_role": "historical_machine_discovery"
         },
         {
+          "source_strategy": "deep_recovery_3m",
+          "source_role": "formal_candidate",
+          "source_policy_version": "deep_recovery_3m_v1",
+          "source_scanner_version": "deep_recovery_3m_scanner_v1",
+          "candidate_status": "RecoveryLeading",
+          "candidate_score": 81.3,
+          "decision": "ObserveEarlyRecovery",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "63D最高收盤回撤 -31.4%",
+            "Recovery Trend=ModerateUp",
+            "Extension=81.0/Strong",
+            "近期低點墊高",
+            "近5日量能高於20日均量"
+          ],
+          "risk_flags": [],
+          "source_file": "data/deep_recovery_3m_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:44",
+          "first_seen": "2026-09-02T14:23:56+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:6182|deep_recovery_3m|deep_recovery_3m_v1|2026-10-01",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
           "source_strategy": "swing_v40",
           "source_role": "formal_candidate",
           "source_policy_version": "v4.0_Swing_Buy_20D",
@@ -5812,24 +5042,28 @@
         }
       ],
       "context_states": {
-        "deep_recovery_3m": {
-          "candidate": true,
-          "score": 81.3,
-          "tier": "RecoveryLeading",
-          "trend_state": "ModerateUp",
-          "extension_score": 81.0,
-          "extension_state": "Strong",
-          "buy_signal": false
+        "swing_v40": {
+          "setup_detected": true,
+          "qualified": true,
+          "score": 78.61,
+          "stage": "swing_accumulation_ready"
+        },
+        "forward_entry": {
+          "decision": "WaitPullback",
+          "edge_score": 43.73,
+          "edge_state": "Low",
+          "buy_now_signal": false,
+          "blocker": true
         }
       },
       "historical_discovery_available": true
     },
     {
-      "security_key": "TW:8046",
-      "stock_code": "8046",
-      "stock_name": "南電",
+      "security_key": "TW:6274",
+      "stock_code": "6274",
+      "stock_name": "台燿",
       "symbol": null,
-      "candidate_date": "2026-10-01",
+      "candidate_date": "2026-10-02",
       "candidate_currently_active": true,
       "discovery_sources": [
         {
@@ -5838,7 +5072,7 @@
           "source_policy_version": "v4.0_Swing_Buy_20D",
           "source_scanner_version": "swing_buy_20d_scanner_v40",
           "candidate_status": "swing_accumulation_ready",
-          "candidate_score": 73.99,
+          "candidate_score": 76.92,
           "decision": "WaitPullback",
           "buy_signal": false,
           "candidate_reasons": [
@@ -5849,11 +5083,59 @@
           ],
           "risk_flags": [],
           "source_file": "data/swing_buy_20d_candidates.json",
-          "source_updated_at": "2026-10-01 14:26:36",
-          "first_seen": "2026-09-01T14:23:23+08:00",
-          "last_seen": "2026-10-01T14:26:45+08:00",
+          "source_updated_at": "2026-10-02 14:24:57",
+          "first_seen": "2026-10-02T14:25:06+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
           "currently_active": true,
-          "candidate_event_key": "TW:8046|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+          "candidate_event_key": "TW:6274|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
+        }
+      ],
+      "context_states": {
+        "swing_v40": {
+          "setup_detected": true,
+          "qualified": true,
+          "score": 76.92,
+          "stage": "swing_accumulation_ready"
+        },
+        "forward_entry": {
+          "decision": "WaitPullback",
+          "edge_score": 42.92,
+          "edge_state": "Low",
+          "buy_now_signal": false,
+          "blocker": true
+        }
+      }
+    },
+    {
+      "security_key": "TW:8046",
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "symbol": null,
+      "candidate_date": "2026-10-02",
+      "candidate_currently_active": true,
+      "discovery_sources": [
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 78.48,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-02 14:24:57",
+          "first_seen": "2026-09-01T14:23:23+08:00",
+          "last_seen": "2026-10-02T14:25:06+08:00",
+          "currently_active": true,
+          "candidate_event_key": "TW:8046|swing_v40|v4.0_Swing_Buy_20D|2026-10-02"
         },
         {
           "source_strategy": "swing_v40",
@@ -5901,18 +5183,42 @@
           "currently_active": false,
           "candidate_event_key": "TW:8046|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
           "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 73.99,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-09-01T14:23:23+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:8046|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {
         "swing_v40": {
           "setup_detected": true,
           "qualified": true,
-          "score": 73.99,
+          "score": 78.48,
           "stage": "swing_accumulation_ready"
         },
         "forward_entry": {
           "decision": "WaitPullback",
-          "edge_score": 40.85,
+          "edge_score": 44.46,
           "edge_state": "Low",
           "buy_now_signal": false,
           "blocker": true
@@ -8247,6 +7553,41 @@
       "historical_discovery_available": true
     },
     {
+      "security_key": "TW:2379",
+      "stock_code": "2379",
+      "stock_name": "瑞昱",
+      "symbol": null,
+      "candidate_date": null,
+      "candidate_currently_active": false,
+      "discovery_sources": [
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 70.57,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "量價動能改善且收盤位置健康",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-10-01T14:26:45+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:2379|swing_v40|v4.0_Swing_Buy_20D|2026-10-01"
+        }
+      ],
+      "context_states": {},
+      "historical_discovery_available": true
+    },
+    {
       "security_key": "TW:2382",
       "stock_code": "2382",
       "stock_name": "廣達",
@@ -8938,6 +8279,159 @@
           "last_seen": "2026-09-02T14:23:56+08:00",
           "currently_active": false,
           "candidate_event_key": "TW:2408|swing_v40|v4.0_Swing_Buy_20D|2026-09-02",
+          "archive_role": "historical_machine_discovery"
+        }
+      ],
+      "context_states": {},
+      "historical_discovery_available": true
+    },
+    {
+      "security_key": "TW:2449",
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "symbol": null,
+      "candidate_date": null,
+      "candidate_currently_active": false,
+      "discovery_sources": [
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 72.19,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-08-31 14:25:03",
+          "first_seen": "2026-08-31T14:25:12+08:00",
+          "last_seen": "2026-08-31T14:25:12+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-08-31",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 70.19,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-07 14:24:34",
+          "first_seen": "2026-08-31T14:25:12+08:00",
+          "last_seen": "2026-09-07T14:24:43+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-09-07",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 73.25,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-23 14:24:58",
+          "first_seen": "2026-08-31T14:25:12+08:00",
+          "last_seen": "2026-09-23T14:25:07+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 76.56,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-24 14:25:01",
+          "first_seen": "2026-08-31T14:25:12+08:00",
+          "last_seen": "2026-09-24T14:25:10+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-09-24",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 72.89,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-30 14:23:46",
+          "first_seen": "2026-08-31T14:25:12+08:00",
+          "last_seen": "2026-09-30T14:23:55+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 71.89,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-31T14:25:12+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:2449|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
           "archive_role": "historical_machine_discovery"
         }
       ],
@@ -13321,6 +12815,350 @@
       "historical_discovery_available": true
     },
     {
+      "security_key": "TW:3017",
+      "stock_code": "3017",
+      "stock_name": "奇鋐",
+      "symbol": null,
+      "candidate_date": null,
+      "candidate_currently_active": false,
+      "discovery_sources": [
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 76.76,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-08-27 14:24:12",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-08-27T14:24:21+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-08-27",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 75.76,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-08-28 14:23:28",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-08-28T14:23:37+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-08-28",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 79.73,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-08-31 14:25:03",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-08-31T14:25:12+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-08-31",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 76.43,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-01 14:23:14",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-01T14:23:23+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-01",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 83.16,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-04 14:24:09",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-04T14:24:17+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-04",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 75.87,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-07 14:24:34",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-07T14:24:43+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-07",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 77.34,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-08 14:22:55",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-08T14:23:04+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-08",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 76.65,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-10 14:25:20",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-10T14:25:28+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-10",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 77.79,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-18 14:24:10",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-18T14:24:18+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-18",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 72.24,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-21 14:25:26",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-21T14:25:34+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-21",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 75.04,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-22 14:25:11",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-22T14:25:20+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-22",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 74.19,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-23 14:24:58",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-23T14:25:07+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 70.04,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "量價動能改善且收盤位置健康",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-24 14:25:01",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-09-24T14:25:10+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-09-24",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 71.39,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "量價動能改善且收盤位置健康",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-27T14:24:21+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3017|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
+        }
+      ],
+      "context_states": {},
+      "historical_discovery_available": true
+    },
+    {
       "security_key": "TW:3034",
       "stock_code": "3034",
       "stock_name": "聯詠",
@@ -14217,6 +14055,397 @@
           "last_seen": "2026-09-07T14:24:43+08:00",
           "currently_active": false,
           "candidate_event_key": "TW:3081|swing_v40|v4.0_Swing_Buy_20D|2026-09-07",
+          "archive_role": "historical_machine_discovery"
+        }
+      ],
+      "context_states": {},
+      "historical_discovery_available": true
+    },
+    {
+      "security_key": "TW:3105",
+      "stock_code": "3105",
+      "stock_name": "穩懋",
+      "symbol": null,
+      "candidate_date": null,
+      "candidate_currently_active": false,
+      "discovery_sources": [
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 71.37,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-08-28 14:23:28",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-08-28T14:23:37+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-08-28",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 74.74,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-08-31 14:25:03",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-08-31T14:25:12+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-08-31",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 70.21,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-02 14:23:48",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-02T14:23:56+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-02",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 71.19,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-04 14:24:09",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-04T14:24:17+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-04",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 70.79,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-07 14:24:34",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-07T14:24:43+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-07",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 70.74,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-08 14:22:55",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-08T14:23:04+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-08",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 75.14,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-10 14:25:20",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-10T14:25:28+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-10",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 74.95,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-16 14:22:08",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-16T14:22:16+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-16",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 75.74,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-17 14:26:22",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-17T14:26:30+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-17",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 75.25,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-18 14:24:10",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-18T14:24:18+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-18",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 72.67,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-21 14:25:26",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-21T14:25:34+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-21",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 75.09,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-22 14:25:11",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-22T14:25:20+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-22",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 73.14,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-23 14:24:58",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-23T14:25:07+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 74.14,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-24 14:25:01",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-24T14:25:10+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-24",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 77.8,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "進場延伸與初始停損距離可控",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-29 14:24:28",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-09-29T14:24:37+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-09-29",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 76.68,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "價格行為結構具可延續性",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-08-28T14:23:37+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3105|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
           "archive_role": "historical_machine_discovery"
         }
       ],
@@ -15253,6 +15482,186 @@
           "last_seen": "2026-09-21T14:25:34+08:00",
           "currently_active": false,
           "candidate_event_key": "TW:3481|swing_v40|v4.0_Swing_Buy_20D|2026-09-21"
+        }
+      ],
+      "context_states": {},
+      "historical_discovery_available": true
+    },
+    {
+      "security_key": "TW:3529",
+      "stock_code": "3529",
+      "stock_name": "力旺",
+      "symbol": null,
+      "candidate_date": null,
+      "candidate_currently_active": false,
+      "discovery_sources": [
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 75.49,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-18 14:24:10",
+          "first_seen": "2026-09-18T14:24:18+08:00",
+          "last_seen": "2026-09-18T14:24:18+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-18",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 70.69,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-21 14:25:26",
+          "first_seen": "2026-09-18T14:24:18+08:00",
+          "last_seen": "2026-09-21T14:25:34+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-21",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 81.17,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-23 14:24:58",
+          "first_seen": "2026-09-18T14:24:18+08:00",
+          "last_seen": "2026-09-23T14:25:07+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-23",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 79.17,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "價格行為結構具可延續性",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-24 14:25:01",
+          "first_seen": "2026-09-18T14:24:18+08:00",
+          "last_seen": "2026-09-24T14:25:10+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-24",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 84.51,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "價格行為結構具可延續性",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-29 14:24:28",
+          "first_seen": "2026-09-18T14:24:18+08:00",
+          "last_seen": "2026-09-29T14:24:37+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-29",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 75.79,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "量價動能改善且收盤位置健康",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-09-30 14:23:46",
+          "first_seen": "2026-09-18T14:24:18+08:00",
+          "last_seen": "2026-09-30T14:23:55+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-09-30",
+          "archive_role": "historical_machine_discovery"
+        },
+        {
+          "source_strategy": "swing_v40",
+          "source_role": "formal_candidate",
+          "source_policy_version": "v4.0_Swing_Buy_20D",
+          "source_scanner_version": "swing_buy_20d_scanner_v40",
+          "candidate_status": "swing_accumulation_ready",
+          "candidate_score": 70.59,
+          "decision": "WaitPullback",
+          "buy_signal": false,
+          "candidate_reasons": [
+            "20日趨勢與均線結構偏多",
+            "個股相對大盤／產業具領先強度",
+            "大盤／產業環境支持中期持有"
+          ],
+          "risk_flags": [],
+          "source_file": "data/swing_buy_20d_candidates.json",
+          "source_updated_at": "2026-10-01 14:26:36",
+          "first_seen": "2026-09-18T14:24:18+08:00",
+          "last_seen": "2026-10-01T14:26:45+08:00",
+          "currently_active": false,
+          "candidate_event_key": "TW:3529|swing_v40|v4.0_Swing_Buy_20D|2026-10-01",
+          "archive_role": "historical_machine_discovery"
         }
       ],
       "context_states": {},
