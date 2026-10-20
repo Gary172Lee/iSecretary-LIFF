@@ -54,7 +54,7 @@
         "raw_ohlcv_file": "6182_合晶_20261015_ohlcv.json",
         "chart_file": "6182_合晶_Chart_20261015.png",
         "pdf_file": "6182_合晶_PA_Analysis_20261015.pdf",
-        "last_tracker_update": "2026-10-19T08:13:16",
+        "last_tracker_update": "2026-10-20T08:12:15",
         "tracker_backfill_source": "GitHub",
         "tracker_backfill_version": "v7.25j1_ExecutionScheduleAndIdempotentBackfill"
     },
@@ -1746,15 +1746,26 @@
             "T+3": {
                 "prediction_price": 112.5,
                 "prediction_direction": "Down",
-                "actual_date": null,
-                "actual_close": null,
-                "actual_direction": null,
-                "actual_source": null,
-                "actual_return_pct": null,
-                "price_error": null,
-                "price_error_pct": null,
-                "direction_hit": null,
-                "updated_at": null
+                "actual_date": "2026-10-19",
+                "actual_close": 107.5,
+                "actual_direction": "Down",
+                "actual_source": "FUGLEAPI:6182",
+                "actual_return_pct": -9.66,
+                "price_error": -5.0,
+                "price_error_pct": -4.65,
+                "direction_hit": true,
+                "updated_at": "2026-10-20T08:12:15",
+                "lifecycle_execution": {
+                    "effective_execution_price": 112.5,
+                    "immediate_sell_ratio_pct": 50.0,
+                    "remaining_position_ratio_pct": 50.0,
+                    "sold_leg_opportunity_cost_pct": -4.44,
+                    "sold_leg_interpretation": "正值代表賣出後股價續漲，屬賣飛幅度；負值代表賣出避免後續下跌。",
+                    "remaining_leg_return_from_execution_pct": -4.44,
+                    "all_hold_return_from_decision_close_pct": -9.66,
+                    "partial_exit_strategy_return_from_decision_close_pct": -7.56,
+                    "partial_exit_advantage_vs_all_hold_pct_points": 2.1
+                }
             },
             "T+4": {
                 "prediction_price": null,
@@ -1784,14 +1795,14 @@
             }
         },
         "summary": {
-            "available_count": 2,
-            "direction_hit_count": 2,
+            "available_count": 3,
+            "direction_hit_count": 3,
             "direction_hit_rate": 1.0,
-            "avg_abs_price_error_pct": 2.04,
-            "observed_return_count": 2,
-            "avg_return_pct": -7.35,
+            "avg_abs_price_error_pct": 2.91,
+            "observed_return_count": 3,
+            "avg_return_pct": -8.12,
             "mfe_5d_pct": -7.14,
-            "mae_5d_pct": -7.56
+            "mae_5d_pct": -9.66
         },
         "breakout_backtest": {
             "version": "v7.25d_breakout_t1_t5",
@@ -1803,10 +1814,10 @@
             "fade_high_counterparty_flag": true,
             "status": "ready_for_aggregation",
             "purpose": "追蹤 breakout_follow_through_score 與 FadeBreakout + counterparty_profitability_score>=70 的 T+1~T+5 報酬 / MFE / MAE。",
-            "observed_return_count": 2,
-            "avg_return_pct": -7.35,
+            "observed_return_count": 3,
+            "avg_return_pct": -8.12,
             "mfe_5d_pct": -7.14,
-            "mae_5d_pct": -7.56,
+            "mae_5d_pct": -9.66,
             "analysis_hint": "用於後續彙總比較 breakout_follow_through_score、FadeBreakout、counterparty_profitability_score>=70 之 T+1~T+5 平均報酬與最大回撤。"
         },
         "position_lifecycle_backtest": {
@@ -1928,12 +1939,12 @@
             "target_review_trigger_reached": null,
             "target_review_action": null,
             "execution_priority": "actual_user_trade_over_non_lookahead_benchmark_open",
-            "future_ohlcv_observed_count": 2,
-            "eligible_execution_ohlcv_observed_count": 2,
-            "last_execution_backfill_at": "2026-10-19T08:13:16",
+            "future_ohlcv_observed_count": 3,
+            "eligible_execution_ohlcv_observed_count": 3,
+            "last_execution_backfill_at": "2026-10-20T08:12:15",
             "execution_pending_stage": "not_pending",
             "execution_pending_stage_description": "目前不是等待成交候選日行情的狀態。",
-            "cohort_observed_trading_days": 2,
+            "cohort_observed_trading_days": 3,
             "cohort_t1_t5_metrics": {
                 "T+1": {
                     "date": "2026-10-15",
@@ -1948,20 +1959,27 @@
                     "cumulative_mfe_pct": -3.3613,
                     "cumulative_mae_pct": -9.2437,
                     "source": "FUGLEAPI:6182"
+                },
+                "T+3": {
+                    "date": "2026-10-19",
+                    "close_return_pct": -9.6639,
+                    "cumulative_mfe_pct": -3.3613,
+                    "cumulative_mae_pct": -13.0252,
+                    "source": "FUGLEAPI:6182"
                 }
             },
             "cohort_mfe_5d_pct": -3.3613,
-            "cohort_mae_5d_pct": -9.2437,
+            "cohort_mae_5d_pct": -13.0252,
             "pullback_zone_touch_status": "not_touched_in_observed_window",
             "pullback_zone_first_touch_date": null,
             "pullback_zone_first_touch_t_index": null,
             "pullback_zone_post_touch_metrics": {},
             "grouped_backtest_sample_interpretation": "僅作分組資料蒐集；任一cohort完成樣本少於30筆時，不得宣稱策略有效。",
-            "cohort_metrics_updated_at": "2026-10-19T08:13:16",
-            "observed_return_count": 2,
-            "avg_return_pct_after_decision": -7.35,
+            "cohort_metrics_updated_at": "2026-10-20T08:12:15",
+            "observed_return_count": 3,
+            "avg_return_pct_after_decision": -8.12,
             "mfe_5d_pct_after_decision": -7.14,
-            "mae_5d_pct_after_decision": -7.56,
+            "mae_5d_pct_after_decision": -9.66,
             "decision_delivery_date": "2026-10-15",
             "decision_delivery_datetime": "2026-10-15T08:20:00+08:00",
             "execution_eligibility_datetime": "2026-10-15T09:00:00+08:00",
@@ -2000,10 +2018,10 @@
             "full_exit_benchmark_price": 112.5,
             "immediate_leg_pnl_pct_vs_cost": 4.51,
             "post_execution_mfe_5d_pct": 2.22,
-            "post_execution_mae_5d_pct": -4.0,
+            "post_execution_mae_5d_pct": -8.0,
             "sold_leg_max_sell_too_early_pct": -1.78,
-            "sold_leg_max_drawdown_avoided_pct": 2.22,
-            "partial_exit_max_advantage_vs_all_hold_pct_points": 1.05,
+            "sold_leg_max_drawdown_avoided_pct": 4.44,
+            "partial_exit_max_advantage_vs_all_hold_pct_points": 2.1,
             "execution_metrics_status": "ready_for_aggregation"
         },
         "backtest_cohort_version": "v7.25k3_grouped_backtest_v1",
