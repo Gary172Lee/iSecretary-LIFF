@@ -1,22 +1,22 @@
 # 盤後選股分析
 
-> 報告狀態：**完成**｜產生時間：2026-11-23 14:23:30（Asia/Taipei）
+> 報告狀態：**完成**｜產生時間：2026-11-24 14:23:23（Asia/Taipei）
 
 ## 1. 今日結論
 
 **今日無可直接買進標的。**
-Raw候選 59 檔；舊路徑退役觀察 0 檔；新假設v2.1預先登記觀察 0 檔。
+Raw候選 20 檔；舊路徑退役觀察 0 檔；新假設v2.1預先登記觀察 0 檔。
 Full Validation已由使用者暫緩，不會自動執行，也不會耗用七年驗證的Actions額度。
-Swing Buy 20D：1 檔合格；依 Extension Momentum 作第二層排序，v4.0 Gate 不變。
-Swing Buy 20D：候選池 1；正式 Buy Now 0。正式名單以現價 Forward Entry Edge 為準。
-Deep Recovery v2：0 檔評估候選；v1 strict 同日對照 0 檔；均不是BuyNow。
+Swing Buy 20D：0 檔合格；依 Extension Momentum 作第二層排序，v4.0 Gate 不變。
+Swing Buy 20D：候選池 0；正式 Buy Now 0。正式名單以現價 Forward Entry Edge 為準。
+Deep Recovery v2：1 檔評估候選；v1 strict 同日對照 0 檔；均不是BuyNow。
 
 ## 2. 資料日期、版本、工具讀取結果、P0安全與歷史來源稽核
 
 - 報告版本：`daily_after_market_report_v6_deep_recovery_transition_v2`
-- 產生時間：2026-11-23 14:23:30（Asia/Taipei）
-- latest_indicators：2026-11-23 14:23:14
-- gate_diagnostics：2026-11-23 14:23:24
+- 產生時間：2026-11-24 14:23:23（Asia/Taipei）
+- latest_indicators：2026-11-24 14:23:01
+- gate_diagnostics：2026-11-24 14:23:15
 - 資料為今日：是
 - 策略與引擎版本相容：是
 - Diagnostic版本：`gate_diagnostics_v21_swing_buy_20d`
@@ -45,10 +45,8 @@ Deep Recovery v2：0 檔評估候選；v1 strict 同日對照 0 檔；均不是B
 核心目標：找『以今天現價買進，未來5～20交易日仍有足夠獲利空間』，不是找最近漲最強的股票。
 - v4.0 qualified 只作候選池；Direct Buy真值與v4.0 Gate不變。
 - Extension Momentum 降為 15% 輔助；最終正式 Swing 買進名單只接受 `swing_forward_entry_decision=BuyNow`。
-- 今日候選池：1；Buy Now：0；Wait Pullback：1；Reject：0。
+- 今日候選池：0；Buy Now：0；Wait Pullback：0；Reject：0。
 **今日 Buy Now = 0 檔。寧可沒有標的，也不把已過度延伸的強勢股當成現在可追價。**
-**Wait Pullback（股票可強，但現價不是好買點；不列正式買進）**
-- 2412 中華電｜**Wait Pullback**：現價進場優勢 50.90；剩餘空間 9.4%；Forward RR 1.76；Pullback參考 未載明；原因：forward_entry_edge_score_below_80、forward_rr_below_1_8、traceable_headroom_below_12pct。
 - Forward Entry policy：`swing_forward_entry_edge_v1`。
 - 驗證狀態：not_evaluable_until_completed_buy_now_30；以每次 BuyNow 當日現價固定為D0，驗證T+20報酬、MFE、勝率與先停損率。
 
@@ -59,14 +57,14 @@ Deep Recovery v2：0 檔評估候選；v1 strict 同日對照 0 檔；均不是B
 - v2 不再要求『目前價格仍低於63D高點30%』；因此真正回升到 -29%、-25% 等位置的股票不會只因復甦本身而被淘汰。
 - 仍維持 WeakUp 以上、Extension ≥55、Candidate Score ≥60；沒有降低分數或趨勢門檻。
 - 一旦完全收復事件高點，視為 recovery transition 已完成，不再列入本池。
-- 今日 v2 評估候選：0 檔；v1 strict 同日對照：0 檔。
-**Deep Recovery v2：0 檔正式評估候選。下方列出最接近者與第一失敗 Gate，避免 0 檔時失去診斷資訊。**
+- 今日 v2 評估候選：1 檔；v1 strict 同日對照：0 檔。
+- **3661 世芯-KY｜Deep Recovery v2**：現價 3915.00；事件高點 4395.00（2026-10-12）；事件低點 2830.00（2026-11-06）；事件最大回撤 -35.6%；目前距事件高點 -10.9%；自低點回升 +38.3%；復甦進度 69.3%；Recovery ModerateUp；延伸動能 80.0／Strong；候選分 77.00／RecoveryReady；題材 `semiconductor/asic`；基本面/消息面：待ChatGPT排程即時健康審核。
 **Near Miss / 第一失敗 Gate：**
-- 3661 世芯-KY｜第一失敗 Gate=`extension_score_below_55`；事件回撤 -35.6%；目前距事件高點 -19.0%；自低點回升 +25.8%；Trend=ModerateUp；Extension=50.0；Score=未載明。
-- 6274 台燿｜第一失敗 Gate=`weakup_gate_not_met`；事件回撤 -65.0%；目前距事件高點 -61.5%；自低點回升 +10.0%；Trend=NotUp；Extension=未載明；Score=未載明。
-- 6488 環球晶｜第一失敗 Gate=`weakup_gate_not_met`；事件回撤 -63.7%；目前距事件高點 -62.1%；自低點回升 +4.3%；Trend=NotUp；Extension=未載明；Score=未載明。
-- 3081 聯亞｜第一失敗 Gate=`weakup_gate_not_met`；事件回撤 -61.3%；目前距事件高點 -60.6%；自低點回升 +1.8%；Trend=NotUp；Extension=未載明；Score=未載明。
-- 3037 欣興｜第一失敗 Gate=`weakup_gate_not_met`；事件回撤 -59.5%；目前距事件高點 -57.9%；自低點回升 +3.9%；Trend=NotUp；Extension=未載明；Score=未載明。
+- 3532 台勝科｜第一失敗 Gate=`weakup_gate_not_met`；事件回撤 -67.3%；目前距事件高點 -64.0%；自低點回升 +9.8%；Trend=NotUp；Extension=未載明；Score=未載明。
+- 6274 台燿｜第一失敗 Gate=`weakup_gate_not_met`；事件回撤 -65.0%；目前距事件高點 -57.7%；自低點回升 +20.9%；Trend=NotUp；Extension=未載明；Score=未載明。
+- 6488 環球晶｜第一失敗 Gate=`weakup_gate_not_met`；事件回撤 -63.7%；目前距事件高點 -58.4%；自低點回升 +14.6%；Trend=NotUp；Extension=未載明；Score=未載明。
+- 2360 致茂｜第一失敗 Gate=`weakup_gate_not_met`；事件回撤 -62.0%；目前距事件高點 -58.4%；自低點回升 +9.5%；Trend=NotUp；Extension=未載明；Score=未載明。
+- 3081 聯亞｜第一失敗 Gate=`weakup_gate_not_met`；事件回撤 -61.3%；目前距事件高點 -56.8%；自低點回升 +11.7%；Trend=NotUp；Extension=未載明；Score=未載明。
 - 基本面 Healthy/Caution/Risk 與 News Risk Low/Medium/High 不在 scanner 杜撰，交由 ChatGPT 排程依當日官方/可靠來源即時補充。
 
 ## 4. 舊Confirmed Breakout退役觀察
@@ -93,62 +91,62 @@ Deep Recovery v2：0 檔評估候選；v1 strict 同日對照 0 檔；均不是B
 ## 7. Gate與主要失敗原因
 
 - Universe：125
-- Volume通過：100
-- PA成功：100
-- Raw候選：59
+- Volume通過：101
+- PA成功：101
+- Raw候選：20
 - 正式Direct Buy：0
 - 研究退役觀察：0
 - 新假設候選：0
 - 主要排除原因：
-  - Confirmed Breakout path 未通過：做多方向一致：29檔
-  - Confirmed Breakout path 未通過：型態與分數品質：29檔
-  - Confirmed Breakout path 未通過：進場確認：29檔
-  - Tradeable Second Leg path 未通過：做多方向一致：29檔
-  - Tradeable Second Leg path 未通過：型態與分數品質：29檔
-  - Tradeable Second Leg path 未通過：進場確認：29檔
-  - Tradeable Second Leg path 未通過：合法突破情境：29檔
-  - Tradeable Second Leg path 未通過：突破跟隨：29檔
+  - Tradeable Second Leg path 未通過：做多方向一致：12檔
+  - Tradeable Second Leg path 未通過：型態與分數品質：12檔
+  - Tradeable Second Leg path 未通過：進場確認：12檔
+  - Tradeable Second Leg path 未通過：合法突破情境：12檔
+  - Tradeable Second Leg path 未通過：突破跟隨：12檔
+  - Tradeable Second Leg path 未通過：對手方被困：12檔
+  - Tradeable Second Leg path 未通過：True Breakout 品質：12檔
+  - Tradeable Second Leg path 未通過：可交易第二段：12檔
 - Candidate Stage：
-  - setup_observation：59
+  - setup_observation：20
 
 ## 8. True Breakout／Follow-through／停損與no-add風險
 
 - True Breakout：
-  - Low：37
-  - Medium：37
-  - High：26
-  - Unknown：25
+  - Low：93
+  - Unknown：23
+  - High：6
+  - Medium：3
 - Follow-through：
-  - Poor：59
-  - StrongImmediate：25
-  - Unknown：25
-  - WeakButAcceptable：13
-  - None：3
+  - Poor：87
+  - Unknown：23
+  - WeakButAcceptable：8
+  - DelayedStrong：3
+  - StrongImmediate：2
+  - None：2
 - Second Leg Trap：
-  - True：47
-  - False：12
+  - True：20
 - Stop Execution Blocker：
-  - False：100
-  - Unknown：25
-- 候選資料中的no-add guardrail：67檔；停損執行阻擋：0檔。
+  - False：102
+  - Unknown：23
+- 候選資料中的no-add guardrail：40檔；停損執行阻擋：0檔。
 - no-add=true時，任何pullback zone只可作`observation_only`，不得作買點或加碼點。
-- **2301 光寶科｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 0.00；RR 2.32；目標 136.93%；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **5904 寶雅｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 0.00；RR 16.77；目標 33.83%；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **1504 東元｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 未載明；RR 1.62；目標 未載明；原因：Confirmed Breakout path 未通過：做多方向一致 | Confirmed Breakout path 未通過：型態與分數品質 | Confirmed Breakout path 未通過：進場確認 | Confirmed Breakout path 未通過：目標報酬至少 10% | Confirmed Breakout path 未通過：突破進場許可
-- **2377 微星｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 未載明；RR 4.05；目標 未載明；原因：Confirmed Breakout path 未通過：做多方向一致 | Confirmed Breakout path 未通過：型態與分數品質 | Confirmed Breakout path 未通過：進場確認 | Confirmed Breakout path 未通過：目標報酬至少 10% | Confirmed Breakout path 未通過：突破進場許可
-- **1101 台泥｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 未載明；RR 1.95；目標 未載明；原因：Confirmed Breakout path 未通過：做多方向一致 | Confirmed Breakout path 未通過：型態與分數品質 | Confirmed Breakout path 未通過：進場確認 | Confirmed Breakout path 未通過：目標報酬至少 10% | Confirmed Breakout path 未通過：突破跟隨 | Confirmed Breakout path 未通過：突破進場許可
+- **2412 中華電｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 未載明；RR 未載明；目標 未載明；原因：Confirmed Breakout path 未通過：做多方向一致 | Confirmed Breakout path 未通過：型態與分數品質 | Confirmed Breakout path 未通過：進場確認 | Confirmed Breakout path 未通過：目標報酬至少 10% | Confirmed Breakout path 未通過：風險報酬比至少 1.5 | Confirmed Breakout path 未通過：合法突破情境 | Confirmed Breakout path 未通過：突破跟隨 | Confirmed Breakout path 未通過：對手方被困 | Confirmed Breakout path 未通過：突破進場許可 | Confirmed Breakout path 未通過：True Breakout 品質
+- **1476 儒鴻｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 未載明；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **2618 長榮航｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 未載明；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **2610 華航｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 未載明；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **1605 華新｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 0.00；RR 1.10；目標 79.45%；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
 
 ## 9. 最值得追蹤1～3檔
 
-- **2301 光寶科｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 0.00；RR 2.32；目標 136.93%；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **5904 寶雅｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 0.00；RR 16.77；目標 33.83%；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
-- **1504 東元｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 未載明；RR 1.62；目標 未載明；原因：Confirmed Breakout path 未通過：做多方向一致 | Confirmed Breakout path 未通過：型態與分數品質 | Confirmed Breakout path 未通過：進場確認 | Confirmed Breakout path 未通過：目標報酬至少 10% | Confirmed Breakout path 未通過：突破進場許可
+- **2412 中華電｜不可買**：階段 `setup_observation`；類型 `confirmed_breakout`；分數 未載明；RR 未載明；目標 未載明；原因：Confirmed Breakout path 未通過：做多方向一致 | Confirmed Breakout path 未通過：型態與分數品質 | Confirmed Breakout path 未通過：進場確認 | Confirmed Breakout path 未通過：目標報酬至少 10% | Confirmed Breakout path 未通過：風險報酬比至少 1.5 | Confirmed Breakout path 未通過：合法突破情境 | Confirmed Breakout path 未通過：突破跟隨 | Confirmed Breakout path 未通過：對手方被困 | Confirmed Breakout path 未通過：突破進場許可 | Confirmed Breakout path 未通過：True Breakout 品質
+- **1476 儒鴻｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 未載明；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
+- **2618 長榮航｜不可買**：階段 `setup_observation`；類型 `tradeable_second_leg`；分數 未載明；RR 未載明；目標 未載明；原因：Tradeable Second Leg path 未通過：做多方向一致 | Tradeable Second Leg path 未通過：型態與分數品質 | Tradeable Second Leg path 未通過：進場確認 | Tradeable Second Leg path 未通過：目標報酬至少 10% | Tradeable Second Leg path 未通過：風險報酬比至少 1.5 | Tradeable Second Leg path 未通過：合法突破情境 | Tradeable Second Leg path 未通過：突破跟隨 | Tradeable Second Leg path 未通過：對手方被困 | Tradeable Second Leg path 未通過：True Breakout 品質 | Tradeable Second Leg path 未通過：可交易第二段
 本節全部是觀察資料，逐檔均為**不可買**，不得替代正式Direct Buy。
 
 ## 10. Performance Summary、Smoke限制與Full Validation狀態
 
-- Performance完成樣本：1167；正式Direct Buy完成樣本：0。
-- 被拒絕候選整體勝率：42.67%；T+5平均報酬：-0.79%；MFE：4.73%；MAE：-5.33%。
+- Performance完成樣本：1182；正式Direct Buy完成樣本：0。
+- 被拒絕候選整體勝率：42.30%；T+5平均報酬：-0.82%；MFE：4.73%；MAE：-5.46%。
 - 上述績效主要來自被拒絕候選，不代表正式Direct Buy或新假設有效。
 - Smoke：事件數 3；正式買進洩漏 0。Smoke只證明程式與候選生成正常。
 - Full Validation狀態：已由使用者暫緩。
