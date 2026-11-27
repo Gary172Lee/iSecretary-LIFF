@@ -1,11 +1,11 @@
 {
-  "update_time": "2026-11-26 14:23:34",
+  "update_time": "2026-11-27 14:23:43",
   "timezone": "Asia/Taipei",
   "policy": {
     "version": "deep_recovery_3m_v1",
     "scanner_version": "deep_recovery_3m_scanner_v1",
     "objective": "deep_drawdown_then_early_recovery_with_upward_extension",
-    "update_time": "2026-11-26 14:23:34",
+    "update_time": "2026-11-27 14:23:43",
     "lookback_trading_days": 63,
     "drawdown_gate_pct": -30.0,
     "minimum_trend_state": "WeakUp",
@@ -19,20 +19,22 @@
       "recovery_structure": 10.0,
       "market_sector_environment": 10.0
     },
-    "candidate_count": 0,
-    "tier_counts": {},
+    "candidate_count": 1,
+    "tier_counts": {
+      "RecoveryReady": 1
+    },
     "stage_counts": {
       "mother_universe": 125,
       "theme_whitelist": 72,
       "data_valid": 72,
-      "drawdown_30pct": 40,
-      "weakup_or_better": 0,
-      "extension_55_or_better": 0,
-      "score_60_or_better": 0
+      "drawdown_30pct": 41,
+      "weakup_or_better": 1,
+      "extension_55_or_better": 1,
+      "score_60_or_better": 1
     },
     "failure_buckets": {
       "weakup_gate_not_met": 40,
-      "drawdown_gate_not_met": 32
+      "drawdown_gate_not_met": 31
     },
     "drawdown_is_gate_not_positive_score": true,
     "fundamental_and_news_review": "ChatGPT_schedule_time",
@@ -42,7 +44,7 @@
     "version": "deep_recovery_3m_v1",
     "scanner_version": "deep_recovery_3m_scanner_v1",
     "objective": "deep_drawdown_then_early_recovery_with_upward_extension",
-    "update_time": "2026-11-26 14:23:34",
+    "update_time": "2026-11-27 14:23:43",
     "lookback_trading_days": 63,
     "drawdown_gate_pct": -30.0,
     "minimum_trend_state": "WeakUp",
@@ -56,24 +58,108 @@
       "recovery_structure": 10.0,
       "market_sector_environment": 10.0
     },
-    "candidate_count": 0,
-    "tier_counts": {},
+    "candidate_count": 1,
+    "tier_counts": {
+      "RecoveryReady": 1
+    },
     "stage_counts": {
       "mother_universe": 125,
       "theme_whitelist": 72,
       "data_valid": 72,
-      "drawdown_30pct": 40,
-      "weakup_or_better": 0,
-      "extension_55_or_better": 0,
-      "score_60_or_better": 0
+      "drawdown_30pct": 41,
+      "weakup_or_better": 1,
+      "extension_55_or_better": 1,
+      "score_60_or_better": 1
     },
     "failure_buckets": {
       "weakup_gate_not_met": 40,
-      "drawdown_gate_not_met": 32
+      "drawdown_gate_not_met": 31
     },
     "drawdown_is_gate_not_positive_score": true,
     "fundamental_and_news_review": "ChatGPT_schedule_time",
     "existing_logic_unchanged": true
   },
-  "deep_recovery_3m_candidates": []
+  "deep_recovery_3m_candidates": [
+    {
+      "ticker": "6669",
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "symbol": "6669.TW",
+      "deep_recovery_policy_version": "deep_recovery_3m_v1",
+      "deep_recovery_scanner_version": "deep_recovery_3m_scanner_v1",
+      "deep_recovery_candidate_source": "independent_deep_recovery_3m_scanner_v1",
+      "deep_recovery_observation_only": true,
+      "deep_recovery_buy_signal": false,
+      "deep_recovery_candidate": true,
+      "deep_recovery_candidate_score": 72.0,
+      "deep_recovery_candidate_tier": "RecoveryReady",
+      "deep_recovery_score_min": 60.0,
+      "deep_recovery_theme_tags": [
+        "computer_peripheral",
+        "ai_server"
+      ],
+      "deep_recovery_current_close": 1670.0,
+      "deep_recovery_peak_close_63d": 2614.9973,
+      "deep_recovery_peak_close_date": "2026-09-01",
+      "deep_recovery_peak_high_63d": 2875.0,
+      "deep_recovery_drawdown_3m_pct": -36.1376,
+      "deep_recovery_room_to_peak_pct": 56.5867,
+      "deep_recovery_post_peak_low_close": 1325.0,
+      "deep_recovery_post_peak_low_date": "2026-11-20",
+      "deep_recovery_recovery_from_low_pct": 26.0377,
+      "deep_recovery_trend_state": "WeakUp",
+      "deep_recovery_ema10": 1529.5665,
+      "deep_recovery_ema20": 1595.5093,
+      "deep_recovery_ema10_slope5_pct": 0.8792,
+      "deep_recovery_ema20_slope5_pct": -2.824,
+      "deep_recovery_return_5d_pct": 26.0377,
+      "deep_recovery_return_10d_pct": 2.1407,
+      "deep_recovery_return_20d_pct": -7.7348,
+      "deep_recovery_higher_low": true,
+      "deep_recovery_no_new_20d_close_low": true,
+      "deep_recovery_extension_score": 65.0,
+      "deep_recovery_extension_state": "Moderate",
+      "deep_recovery_market_rs_5d_pct": 16.9495,
+      "deep_recovery_market_rs_10d_pct": 12.1396,
+      "deep_recovery_market_rs_20d_pct": 5.3232,
+      "deep_recovery_market_rs_improvement": 11.6263,
+      "deep_recovery_sector_group": "semiconductor",
+      "deep_recovery_sector_return_20d_pct": -14.7708,
+      "deep_recovery_sector_rs_20d_pct": 7.036,
+      "deep_recovery_volume_ratio_5d_vs_20d": 1.0309,
+      "deep_recovery_avg_volume_20d": 4244826.75,
+      "deep_recovery_avg_turnover_20d": 6661107701.75,
+      "deep_recovery_close_location_20d": 0.6991,
+      "deep_recovery_market_regime": "BearTrend",
+      "deep_recovery_market_return_20d_pct": -13.058,
+      "deep_recovery_score_components": {
+        "upward_extension_momentum": 19.5,
+        "recovery_trend_quality": 17.5,
+        "relative_strength_improvement": 15.0,
+        "volume_participation": 6.0,
+        "recovery_structure": 10.0,
+        "market_sector_environment": 4.0
+      },
+      "deep_recovery_reasons": [
+        "63D最高收盤回撤 -36.1%",
+        "Recovery Trend=WeakUp",
+        "Extension=65.0/Moderate",
+        "近期低點墊高",
+        "相對大盤強度改善"
+      ],
+      "deep_recovery_fundamental_health_status": "NotEvaluatedInScanner",
+      "deep_recovery_news_risk_status": "NotEvaluatedInScanner",
+      "deep_recovery_risk_review_required": true,
+      "deep_recovery_contract": {
+        "independent_of_direct_buy": true,
+        "independent_of_swing_v4_0": true,
+        "independent_of_forward_entry": true,
+        "drawdown_is_gate_not_positive_score": true,
+        "minimum_trend_state": "WeakUp",
+        "minimum_extension_state": "Moderate",
+        "not_a_buy_signal": true,
+        "fundamental_and_news_review": "ChatGPT_schedule_time"
+      }
+    }
+  ]
 }
